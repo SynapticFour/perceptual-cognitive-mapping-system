@@ -1,0 +1,104 @@
+{
+  "welcome": {
+    "title": "Wo nim wo ho",
+    "subtitle": "Ɛyɛ dwumadi a ɛboa yɛn ahu adwene ne akwan a nnipa foforo so dwen no mu yɛɛteɛne. [NEEDS_REVIEW: validate natural Twi for ‘research tool for cognitive diversity’]"
+  },
+  "consent": {
+    "title": "Ɔmanfo dwumadi ho gyinae [NEEDS_REVIEW: consent / research participation title]",
+    "agree": "Me de aba"
+  },
+  "questionnaire": {
+    "question": "Asemmisa"
+  },
+  "results": {
+    "title": "Wo nkomo mu nsem",
+    "sms_code_copy": "Copy SMS profile code",
+    "sms_code_copied": "Code copied."
+  },
+  "dims": {
+    "F": {
+      "title": "Ahwehwɛ a ɛyɛ den [NEEDS_REVIEW]",
+      "short_label": "Ahwehwɛ",
+      "low_label": "Da so ara wɔ adwene mu [NEEDS_REVIEW: easily distracted]",
+      "high_label": "Tumi a wotumi de ahwehwɛ to baabi ara [NEEDS_REVIEW: deep focus]",
+      "description": "Ɛkyerɛ sɛnea wode ahwehwɛ to dwuma baako so sen sɛnea wobɛsesa bere a ahintasɛm ba. [NEEDS_REVIEW]"
+    },
+    "P": {
+      "title": "Nhwɛso ne mfonini adwene [NEEDS_REVIEW: pattern processing]",
+      "short_label": "Nhwɛso",
+      "low_label": "Adwene a ɛyɛ konkrete, akwan so [NEEDS_REVIEW]",
+      "high_label": "Ahunu a ɛwɔ mfonini ne nhyehyɛe mu [NEEDS_REVIEW]",
+      "description": "Ɛkasa ho dwuma a ɛyɛ konkrete ne bere a wohunu nhyehyɛe ne mmara a ɛda adi no ho. [NEEDS_REVIEW]"
+    },
+    "S": {
+      "title": "Asɛm a ɛfiri honam ne adwene so [NEEDS_REVIEW: sensory sensitivity]",
+      "short_label": "Asɛm",
+      "low_label": "Honam nnyegyeɛ a ɛyɛ ketewa [NEEDS_REVIEW]",
+      "high_label": "Honam nnyegyeɛ a ɛyɛ den [NEEDS_REVIEW]",
+      "description": "Kwan a kwan pa, ɔkasa, ne nea wode ka ho dwuma no bɔ wo ahosuo anaa w’adwene. [NEEDS_REVIEW]"
+    },
+    "E": {
+      "title": "Bɔ a ɛfiri nnipa nkabom mu (Ubuntu: ‘me yɛ ɛnam ɔfoforo so’) [NEEDS_REVIEW: title register]",
+      "short_label": "Nnipa",
+      "low_label": "Nnipa dodoɔ ma me tumi [NEEDS_REVIEW: energised by groups — Ubuntu: shared life gives strength]",
+      "high_label": "Sɛ me ne nnipa tena hɔ a, me kra brɛ [NEEDS_REVIEW: prolonged social contact drains]",
+      "description": "Wɔ Ghana ne Afrika Anaafoɔ mu, nnipa yɛ nkɔsoɔ: yɛte sɛ ‘me yɛ ɛnam ɔfoforo so’ (Ubuntu). Saa dwumadi yi nso hwehwɛ sɛnea wo kra ne nnipa nkabom bɔ: sɛ nnipa ma wo ahoɔden anaa sɛ bere tenten a, w’ahia aduanan bere. Eyi nyɛ sɛ wommɔ obi kwan — ɛyɛ ho adwene a ɛfa honam ne bere ho. [NEEDS_REVIEW]"
+    },
+    "R": {
+      "title": "Ɔkwan a wopɛ a ɛyɛ hyehyɛ ne bere [NEEDS_REVIEW: structure preference]",
+      "short_label": "Hyehyɛ",
+      "low_label": "Mepɛ sɛ me si akwan so bere a ɛsesa [NEEDS_REVIEW: flexible / improvising]",
+      "high_label": "Mepɛ bere a wɔahyɛ ato mu ne adwuma a ato hɔ [NEEDS_REVIEW: routine and plans]",
+      "description": "Wɔ sunsum mu ne aduanan bere mu, ‘Ghana bere’ ne nkabom dwuma tumi ma adwene pa fifiri ‘bere a wɔde ato hɔ’ ho kɔ ‘bere a Onyankopɔn de ma’ so. Saa nkabom yi bɛtumi ayɛ hyehyɛ a ɛyɛ mmerɛwae sen klɔk nko ara. Saa dwumadi yi bisae sɛnea wopɛ hyehyɛ a ɛda adi sen sɛnea wogye tom kwan a ɛsesa. [NEEDS_REVIEW]"
+    },
+    "C": {
+      "title": "Adwene a ɛtumi sesa [NEEDS_REVIEW: cognitive flexibility]",
+      "short_label": "Sesɛ",
+      "low_label": "Mepɛ mmuaeɛ a ɛyɛ daadaa [NEEDS_REVIEW]",
+      "high_label": "Metumi ne nea ɛnyɛ daadaa ne nsesa di nkɔmmɔ [NEEDS_REVIEW]",
+      "description": "Sɛnea wotumi sesa w’adwene bere a nsɛm nni mu anaa ɛsesa. [NEEDS_REVIEW]"
+    },
+    "T": {
+      "title": "Bere ne bere nhwehwɛmu [NEEDS_REVIEW: temporal processing]",
+      "short_label": "Bere",
+      "low_label": "Bere tumi ma me nnu hɔ [NEEDS_REVIEW: in-the-moment]",
+      "high_label": "Mete bere anim yiye [NEEDS_REVIEW: precise time sense]",
+      "description": "Sɛnea wote bere anim anaa wode wo ho to bere a ɛrekɔ so no so. [NEEDS_REVIEW]"
+    },
+    "I": {
+      "title": "Nimdeɛ a ɛfiri honam mu [NEEDS_REVIEW: interoceptive]",
+      "short_label": "Honam",
+      "low_label": "Nimdeɛ a ɛfiri honam mu no ketewa [NEEDS_REVIEW]",
+      "high_label": "Nimdeɛ a ɛfiri honam mu no den [NEEDS_REVIEW]",
+      "description": "Sɛnea wuhu sɛnea wo honam te — akoma, akɔn, brɛ. [NEEDS_REVIEW]"
+    },
+    "A": {
+      "title": "Adwene a ɛde nsem bom [NEEDS_REVIEW: associative]",
+      "short_label": "Nkabom",
+      "low_label": "Akwan so, baako so [NEEDS_REVIEW: linear]",
+      "high_label": "Nkabom a ɛtrɛw, adwene pa bebree [NEEDS_REVIEW: divergent]",
+      "description": "Sɛnea ideɛ no bɔ ho anaa ɛte baabi foforo so. [NEEDS_REVIEW]"
+    },
+    "V": {
+      "title": "Ɔkasae ne mfonini adwene [NEEDS_REVIEW: verbal–visual]",
+      "short_label": "Ɔkasae / mfonini",
+      "low_label": "Ɔkasae ne bere so [NEEDS_REVIEW]",
+      "high_label": "Mfonini ne beae a ɛwɔ honam so [NEEDS_REVIEW: visuo-spatial]",
+      "description": "Sɛnea ɔkasae anaa mfonini di kan wɔ w’adwene mu. [NEEDS_REVIEW]"
+    }
+  },
+  "nav": {
+    "sms_profile": "SMS code"
+  },
+  "sms_profile": {
+    "title": "Profile from SMS code",
+    "intro": "Paste compact code from results page. Approximate deciles; not clinical.",
+    "code_label": "Code",
+    "invalid": "Invalid code.",
+    "dim_heading": "Approximate scores (%)",
+    "twilio_note": "SMS needs Twilio backend — not in this repo."
+  },
+  "language": {
+    "wo": "Wolof"
+  }
+}

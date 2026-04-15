@@ -1,0 +1,19 @@
+{
+  "name": "Perceptual & Cognitive Mapping System",
+  "short_name": "PCMS",
+  "description": "Research questionnaire for cognitive diversity — not a diagnostic tool.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#eef2ff",
+  "theme_color": "#312e81",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/globe.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

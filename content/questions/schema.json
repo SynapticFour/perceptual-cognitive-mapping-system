@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/perceptual-cognitive-mapping/question-bank.schema.json",
+  "title": "QuestionBankFile",
+  "description": "JSON array of research question entries loaded from content/questions/{universal|ghana}/*.json",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/questionEntry"
+  },
+  "$defs": {
+    "questionEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "text",
+        "dimension_weights",
+        "type",
+        "difficulty",
+        "tags",
+        "culturalContext",
+        "informationGain",
+        "reverseScored"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dimension_weights": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "F": { "type": "number", "minimum": 0, "maximum": 1 },
+            "P": { "type": "number", "minimum": 0, "maximum": 1 },
+            "S": { "type": "number", "minimum": 0, "maximum": 1 },
+            "E": { "type": "number", "minimum": 0, "maximum": 1 },
+            "R": { "type": "number", "minimum": 0, "maximum": 1 },
+            "C": { "type": "number", "minimum": 0, "maximum": 1 },
+            "T": { "type": "number", "minimum": 0, "maximum": 1 },
+            "I": { "type": "number", "minimum": 0, "maximum": 1 },
+            "A": { "type": "number", "minimum": 0, "maximum": 1 },
+            "V": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "type": {
+          "type": "string",
+          "enum": ["core", "refinement"]
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": ["broad", "specific"]
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "culturalContext": {
+          "type": "string",
+          "enum": ["universal", "ghana", "western"]
+        },
+        "informationGain": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reverseScored": {
+          "type": "boolean"
+        },
+        "irt_a": {
+          "type": ["number", "null"],
+          "description": "Item discrimination parameter (IRT 2PL model). Null until calibrated on pilot data.",
+          "minimum": 0.5,
+          "maximum": 4.0
+        },
+        "irt_b": {
+          "type": ["number", "null"],
+          "description": "Item difficulty/location parameter (IRT 2PL model, logit scale). Null until calibrated.",
+          "minimum": -4.0,
+          "maximum": 4.0
+        }
+      }
+    }
+  }
+}

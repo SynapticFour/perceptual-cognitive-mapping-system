@@ -1,0 +1,398 @@
+{
+  "results": {
+    "loading": "Ergebnisse werden geladen…",
+    "no_results_title": "Keine Ergebnisse gefunden",
+    "no_results_body": "Bitte führen Sie zuerst den Fragebogen aus.",
+    "start_questionnaire": "Fragebogen starten",
+    "page_title": "Ihr kognitives Profil",
+    "page_subtitle": "Basierend auf {count} Antworten · Abgeschlossen am {date}",
+    "retake": "Erneut testen",
+    "share": "Zusammenfassung teilen",
+    "download": "Daten herunterladen",
+    "share_copied": "Link zur Zusammenfassung in die Zwischenablage kopiert.",
+    "share_title": "Bewertungszusammenfassung",
+    "share_text": "Zusammenfassung aus dem Perceptual & Cognitive Mapping System (nicht-klinisches Forschungsinstrument).",
+    "footer_line1": "Perceptual & Cognitive Mapping System · Forschungsplattform",
+    "footer_line2": "Dies ist kein medizinisches oder diagnostisches Instrument. Bei gesundheitlichen Fragen wenden Sie sich an qualifizierte Anbieter.",
+    "overview_heading": "Was diese Sitzung zeigt",
+    "patterns_heading": "Auffällige Muster",
+    "notes_heading": "Hinweise",
+    "patterns_empty": "Aus den Statistiken dieser Sitzung wurden keine besonderen Muster hervorgehoben.",
+    "notes_empty": "Für diese Sitzung wurden keine zusätzlichen Verhaltenshinweise erfasst.",
+    "overview_sr_only_lang": "Automatisierte Sitzungsnarration (Deutsch).",
+    "download_filename": "pipeline-session-{date}.json",
+    "sms_code_copy": "SMS-Profilcode kopieren",
+    "sms_code_copied": "Kurzcode kopiert — grobe Werte nur für SMS-Weitergabe.",
+    "research_heading": "Beitrag zur Forschung",
+    "research_body": "Vielen Dank für Ihren Beitrag zur kognitiven Forschung. Ihre anonyme Sitzung hilft uns, Antwortmuster statistisch zu untersuchen — nicht als klinisches oder diagnostisches Maß.",
+    "research_questions_label": "Beantwortete Fragen",
+    "research_interpretation_confidence": "Vertrauen in die Interpretation",
+    "research_embedding_confidence": "Vertrauen in die Repräsentation",
+    "research_consent_note": "Ihre Daten wurden anonym gespeichert und können für wissenschaftliche Forschung genutzt werden. Es wurden keine personenbezogenen Daten über Ihre ausdrückliche Einwilligung hinaus erfasst.",
+    "revision_notice": "Dies ist Revision {n} Ihrer Bewertung.",
+    "max_length_notice": "Maximale Bewertungslänge erreicht. Die Ergebnisse basieren auf allen gegebenen Antworten.",
+    "title": "Ihr kognitives Profil"
+  },
+  "banner": {
+    "all_met": "Forschungsnahes Vertrauen auf allen Dimensionen erreicht.",
+    "most_met": "Hohes Vertrauen auf den meisten Dimensionen. Tippen Sie auf „Weiter“, um die übrigen zu stärken.",
+    "low_met": "Die Bewertung ist nur indikativ. Wir empfehlen, den Fragebogen fortzusetzen, um zuverlässigere Dimensionsscores zu erhalten.",
+    "continue_cta": "Bewertung fortsetzen",
+    "continue_hint": "Bringt Sie zurück zum Fragebogen, um weitere Antworten zu ergänzen."
+  },
+  "questionnaire": {
+    "session_mismatch": "Dieser Link passt nicht zur in diesem Browser gespeicherten Sitzung. Öffnen Sie die Ergebnisse auf diesem Gerät oder starten Sie mit „Erneut testen“ neu.",
+    "refinement_badge": "Verfeinerungsmodus · Vertrauen wird weiter gestärkt für: {dims}",
+    "refinement_badge_generic": "Verfeinerungsmodus · Routing-Vertrauen wird weiter gestärkt.",
+    "refinement_live_heading": "Live-Vertrauen",
+    "question": "Frage"
+  },
+  "radar": {
+    "caption": "Radar: Rohwerte (äußerer Ring) und vertrauensbereinigte Werte (innerer Ring). Eine große Lücke auf einer Achse bedeutet geringere Sicherheit auf dieser Dimension.",
+    "caption_high": "Ein Punkt nahe außen bedeutet stärkere Zustimmung zum hohen Ende der Skala dieser Dimension.",
+    "caption_low": "Ein Punkt näher zur Mitte bedeutet, dass Antworten zum niedrigen Ende dieser Dimension tendierten.",
+    "aria": "Radar mit zehn kognitiven Routing-Dimensionen, Roh- und vertrauensbereinigten Werten",
+    "tooltip_raw": "Rohwert",
+    "tooltip_weighted": "Vertrauensbereinigter Wert",
+    "tooltip_confidence": "Dimensionsvertrauen",
+    "tooltip_items": "Beitragende Items",
+    "legend_raw": "Rohwert (0–100)",
+    "legend_inner": "Bereinigt um Unsicherheit (innen)",
+    "label_pair": "{low} ↔ {high}"
+  },
+  "bars": {
+    "caption": "Jeder Balken zeigt Ihren Wert zwischen den verständlichen Niedrig- und Hoch-Labels. Der helle Schweif zeigt, wie hoch der Wert bei höherem Vertrauen plausibel werden könnte.",
+    "aria": "Zehn horizontale Balken mit Werten und Unsicherheitsschweifen pro Dimension",
+    "confidence_line": "Vertrauen: {pct}% · {n} beantwortete Items",
+    "tail_explainer": "Gestreifter Bereich: plausibles oberes Intervall bei höherem Vertrauen (kein statistisches Konfidenzintervall).",
+    "progressbar_aria": "{title}: {raw} Prozent Rohwert; plausibles oberes Ende nahe {upper} Prozent"
+  },
+  "insights": {
+    "caption": "Kurze Interpretationen je Dimension. Kursiv oder gedämpft = geringeres Vertrauen — mit Maus oder Fokus sehen Sie den Grund.",
+    "aria": "Raster mit Einblickskarten für jede kognitive Dimension",
+    "confidence_note_generic": "Auf dieser Dimension sind wir noch nicht vollständig sicher — beantworten Sie mehr Fragen zu diesem Bereich.",
+    "confidence_note_sample": "Für forschungsnahes Vertrauen bräuchten wir mehr stark ladende Antworten.",
+    "deemphasized_tooltip": "Geringeres Vertrauen: Karte bleibt gedämpft, bis konsistentere Antworten vorliegen.",
+    "confidence_compact": "{pct}% Vertrauen"
+  },
+  "a11y": {
+    "confidence_badge_high": "Hohes Vertrauen",
+    "confidence_badge_mid": "Mittleres Vertrauen",
+    "confidence_badge_low": "Geringes Vertrauen"
+  },
+  "dims": {
+    "F": {
+      "title": "Fokusintensität",
+      "short_label": "Fokus",
+      "low_label": "Leicht ablenkbar",
+      "high_label": "Starke Tiefenaufmerksamkeit",
+      "description": "Wie stark Sie Aufmerksamkeit auf einen Informationsstrom halten versus bei Ablenkungen wechseln."
+    },
+    "P": {
+      "title": "Musterverarbeitung",
+      "short_label": "Muster",
+      "low_label": "Konkret, schrittweise",
+      "high_label": "Abstrakte Mustererkennung",
+      "description": "Vorliebe für konkrete Abläufe versus Erkennen von Regeln, Regelmäßigkeiten und abstrakter Struktur."
+    },
+    "S": {
+      "title": "Sensorische Sensibilität",
+      "short_label": "Sensorik",
+      "low_label": "Geringe sensorische Reaktivität",
+      "high_label": "Hohe sensorische Sensibilität",
+      "description": "Wie stark Licht, Geräusche, Textur und andere sensorische Last Komfort und Konzentration beeinflussen."
+    },
+    "E": {
+      "title": "Soziale Energie",
+      "short_label": "Sozial",
+      "low_label": "Gruppen geben Energie",
+      "high_label": "Längerer Sozialkontakt kostet Energie",
+      "description": "Wie soziale Interaktion Ihre Energie beeinflusst — Anregung durch andere versus Erholungsbedarf nach Gruppen."
+    },
+    "R": {
+      "title": "Strukturpräferenz",
+      "short_label": "Struktur",
+      "low_label": "Flexibel, improvisierend",
+      "high_label": "Starke Vorliebe für Routinen und Pläne",
+      "description": "Wohlbefinden bei festen Plänen und Rhythmen versus Improvisation, wenn sich Termine oder Erwartungen ändern."
+    },
+    "C": {
+      "title": "Kognitive Flexibilität",
+      "short_label": "Flexibilität",
+      "low_label": "Klare, stabile Antworten bevorzugt",
+      "high_label": "Mit Mehrdeutigkeit und Wandel vertraut",
+      "description": "Leichtigkeit, mentale Modelle zu revidieren, wenn Informationen unvollständig, widersprüchlich oder wechselnd sind."
+    },
+    "T": {
+      "title": "Zeitliche Verarbeitung",
+      "short_label": "Zeit",
+      "low_label": "Zeit vergeht unbemerkt / im Moment",
+      "high_label": "Sehr präzises Zeitempfinden",
+      "description": "Bewusstsein für Dauer, Tempo und Fristen versus Eintauchen, bei dem die Uhrzeit in den Hintergrund tritt."
+    },
+    "I": {
+      "title": "Interozeptive Wahrnehmung",
+      "short_label": "Körper",
+      "low_label": "Geringe Körperwahrnehmung",
+      "high_label": "Hohe Körperwahrnehmung",
+      "description": "Wie klar innere Signale — Anspannung, Müdigkeit, Hunger — ins bewusste Erleben gelangen."
+    },
+    "A": {
+      "title": "Assoziatives Denken",
+      "short_label": "Assoziativ",
+      "low_label": "Linear / konvergent",
+      "high_label": "Stark assoziativ / divergent",
+      "description": "Tendenz zu engen Schritt-für-Schritt-Verknüpfungen versus weiten, metaphorischen oder tangentialen Ideen."
+    },
+    "V": {
+      "title": "Verbal–visuelle Verarbeitung",
+      "short_label": "Sprache / Raum",
+      "low_label": "Verbal / sequenziell",
+      "high_label": "Visuell-räumlich / ganzheitlich",
+      "description": "Gewicht von Sprache und geordneten Schritten versus Bildern, Layout und räumlichen Ganzen beim Denken."
+    }
+  },
+  "interp": {
+    "F": {
+      "high": "Sie halten Aufmerksamkeit eher aufrecht, wenn etwas packt, und Ablenkungen lassen sich relativ leicht zurückstellen.",
+      "mid": "Ihr Fokus wechselt mit dem Kontext — mal tief, mal stärker von der Umgebung gezogen.",
+      "low": "Sie nehmen konkurrierende Ansprüche an Ihre Aufmerksamkeit oft wahr und wechseln Aufgaben oder Reize leichter."
+    },
+    "P": {
+      "high": "Abstrakte Rahmungen sind Ihnen vertraut; Sie suchen oft Struktur oder Regeln hinter Oberflächendetails.",
+      "mid": "Sie mischen konkrete Beispiele mit gelegentlichem Mustersuchen, je nach Aufgabe.",
+      "low": "Sie bevorzugen greifbare Schritte und vertraute Abläufe gegenüber offener Abstraktion."
+    },
+    "S": {
+      "high": "Sensorische Reize wie Lärm, Licht oder Textur prägen Komfort und Konzentration stark.",
+      "mid": "Manche Umgebungen sind in Ordnung, andere — besonders hektische — ermüden Sie schneller.",
+      "low": "Typische sensorische Alltagslast stört Sie in der Regel wenig."
+    },
+    "E": {
+      "high": "Soziale Zeit kostet eher Energie; Sie erholen sich am besten danach in ruhiger Einzelzeit.",
+      "mid": "Sozialkontakt gefällt Ihnen, aber lieber in dosierten Portionen als als Dauerreiz.",
+      "low": "Sie schöpfen Energie aus Menschen und Aktivitäten um Sie herum und vertragen längere soziale Phasen gut."
+    },
+    "R": {
+      "high": "Vorhersehbare Routinen und klare Pläne helfen Ihnen meist, sich geerdet und wirksam zu fühlen.",
+      "mid": "Struktur gefällt Ihnen, aber Sie können flexen, wenn Pläne kurzfristig wechseln müssen.",
+      "low": "Sie passen sich schnell an, wenn sich Tagesordnungen ändern, und sind selten auf starre Rhythmen angewiesen."
+    },
+    "C": {
+      "high": "Sie revidieren Ansichten oder schalten mentale Gänge relativ leicht um, wenn neue Information kommt.",
+      "mid": "Sie können sich anpassen, auch wenn schnelle Mehrdeutigkeit oder Kurswechsel manchmal anstrengend sind.",
+      "low": "Sie bevorzugen stabile Antworten und klare Erwartungen gegenüber langanhaltender Unsicherheit."
+    },
+    "T": {
+      "high": "Sie nehmen Tempo, Intervalle und Fristen schärfer wahr, als dass Ihnen die Zeit entgleitet.",
+      "mid": "Ihr Zeitempfinden wechselt mit dem Kontext — mal präzise, mal stärker gegenwartsbezogen.",
+      "low": "Stunden können unbemerkt zusammenschrumpfen oder sich strecken; Sie leben oft mehr im Jetzt als an der Uhr."
+    },
+    "I": {
+      "high": "Innere Signale wie Hunger, Müdigkeit oder Anspannung treten Ihnen meist klar ins Bewusstsein.",
+      "mid": "Manche Körpersignale sind klar, andere erst, wenn sie schon stark sind.",
+      "low": "Körperliche Zustände können sich anbahnen, bevor Sie sie bewusst bemerken."
+    },
+    "A": {
+      "high": "Ideen lösen oft weitreichende Verknüpfungen aus — Metaphern, Analogien oder Abschweifungen kommen leicht.",
+      "mid": "Sie verbinden geradlinige Pfade mit gelegentlichen Sprüngen, wenn die Aufgabe Kreativität einlädt.",
+      "low": "Sie bleiben meist bei direkten, schrittweisen Verknüpfungen statt bei weiten assoziativen Sprüngen."
+    },
+    "V": {
+      "high": "Räumliche Anordnungen, Diagramme oder innere Bilder wiegen oft schwerer als lange verbale Ketten.",
+      "mid": "Sie wechseln zwischen Wörtern und Bildern, je nachdem, was die Aufgabe belohnt.",
+      "low": "Sprache und geordnete Schritte sind Ihr typischer Zugang zu neuen Informationen."
+    }
+  },
+  "landscape": {
+    "hero_title": "Nicht ein Schubladentitel — viele Denkneigungen zugleich",
+    "hero_body": "Ihre Antworten wirken auf mehrere Denkneigungen gleichzeitig ein. Jede Neigung erscheint als eigener Punkt. Punkte, die nah beieinander liegen, sind im Modell einander etwas ähnlich. Dieses Bild ist keine Note, kein Ranking und keine medizinische Diagnose.",
+    "map_heading": "Ihre kognitive Konstellation",
+    "map_caption": "Jeder Punkt steht für eine Denkneigung (Größe und Klarheit zeigen, wie stark sie hier ausgeprägt ist). Zarte Linien verbinden verwandte Neigungen; Kreise fassen nahe Punkte zusammen. Die Beschriftung in der Mitte ist der Balancepunkt Ihres Musters — kein einzelner „Typ“.",
+    "map_aria": "Bild mit mehreren Denkneigungen zugleich und einfachen Beispielprofilen",
+    "constellation_centroid": "Balancepunkt Ihres Musters",
+    "constellation_weight": "Relative Stärke hier",
+    "cluster_pattern": "{domain} · {count} Neigungen",
+    "pattern_banner": "Häufige Kombination (nur dieser Browser): {traits} · zusammen nach {support} Durchläufen hier (~{pct}% der in diesem Browser gespeicherten Kurzprofile) · Übereinstimmung mit Ihnen: {score}%",
+    "map_you": "Sie",
+    "map_top_signals": "Stärkste Routing-Signale",
+    "map_density_hint": "Die weiche Farbe zeigt, wo sich Neigungen im Bild häufen — kein Punkte- oder Rangdiagramm.",
+    "map_density_on": "Dichte einblenden",
+    "map_density_off": "Dichte ausblenden",
+    "view_map": "Karte",
+    "view_density": "Dichte",
+    "view_vector": "Merkmale & Zahlen",
+    "view_switcher_aria": "Eine andere Ansicht desselben Bildes wählen",
+    "view_vector_activation_heading": "Merkmalsaktivierungen",
+    "view_vector_activation_caption": "Jede Zeile ist eine Denkneigung in Ihrer Konstellation. Der Balken zeigt die relative Stärke in dieser Sitzung — keine Schulnote und kein Ranking.",
+    "view_vector_blend_heading": "Gemischte Zusammenfassung (technisch)",
+    "view_vector_blend_caption": "Ein Vektor aus Ihren Aktivierungen für Export und Forschungstools. Diese Koordinaten entsprechen nicht den farbigen Dimensionsbalken.",
+    "view_vector_caption": "Zuerst Merkmalsaktivierungen; optional darunter der gemischte Vektor.",
+    "view_vector_aria": "Liste der Merkmalsaktivierungen und optional gemischte Einbettungskoordinaten",
+    "constellation_note": "Das weiche Leuchten markiert den gemeinsamen Balancepunkt aller Punkte — kein eigener Score und kein Personentyp.",
+    "map_proxy_note": "Dieser Link enthielt keine vollständig gespeicherte Auswertung; das Bild nutzt eine sorgfältige Schätzung nur aus den geteilten Dimensionswerten.",
+    "export_png": "Diagramm herunterladen (PNG)",
+    "export_json": "Profil herunterladen (JSON)",
+    "copy_share_url": "Teilbaren Link kopieren",
+    "share_copied": "Teilbarer Link in die Zwischenablage kopiert.",
+    "export_png_error": "PNG-Export nicht möglich (Browser blockiert Bildexport). Versuchen Sie einen Screenshot.",
+    "bars_heading": "Dimensionsbalken",
+    "bars_caption": "Jeder Balken nutzt die Dimensionsfarbe; Deckkraft spiegelt Routing-Vertrauen wider. Zeigen Sie eine Zeile mit Maus oder langem Druck für die kurze wissenschaftliche Beschreibung.",
+    "url_profile": {
+      "summary": "Diese Ansicht wurde über einen geteilten Link geöffnet. Sie zeigt nur Dimensionsscores — keine vollständig gespeicherte Sitzung."
+    }
+  },
+  "pipeline": {
+    "pattern": {
+      "answer_consistency_high": "Hohe Antwortkonsistenz über ähnliche Prompts hinweg",
+      "answer_consistency_low": "Höhere Variabilität zwischen ähnlichen Prompts"
+    },
+    "note": {
+      "response_time_variance": "Reaktionszeiten schwanken stark zwischen den Items.",
+      "entropy_high": "Die Antwortsequenz zeigt stärkere Exploration über Skalenpositionen."
+    },
+    "summary": {
+      "confident": "Die Sitzung unterstützt eine mäßig vertrauenswürdige Merkmalszusammenfassung.",
+      "limited": "Merkmalsvertrauen ist begrenzt; mit Vorsicht interpretieren.",
+      "preliminary": "Begrenztes Antwortsignal; Muster nur vorläufig betrachten."
+    },
+    "patterns_fallback": "Aus dieser Sitzung wurden keine starken kategorialen Muster erkannt.",
+    "notes_fallback": "Dies ist eine beschreibende Zusammenfassung, keine Diagnose oder klinische Bewertung."
+  },
+  "welcome": {
+    "title": "Perceptual & Cognitive Mapping System",
+    "subtitle": "Ein forschungsnahes Angebot, um verschiedene Denk- und Lernstile zu erkunden"
+  },
+  "consent": {
+    "title": "Einwilligung in die Forschungsteilnahme",
+    "agree": "Ich nehme teil (Einwilligung)",
+    "about_heading": "Worum es in dieser Forschung geht",
+    "about_body": "Wir untersuchen, wie Menschen unterschiedlich denken und Informationen verarbeiten. Die Forschung zeigt, dass jede Person anders „tickt“ — manche lieben detaillierte Pläne, andere spontane Abläufe. Ihre Teilnahme hilft uns, bessere Werkzeuge zur Selbsteinschätzung zu entwickeln.",
+    "do_heading": "Was Sie tun",
+    "do_1": "Fragen zu Denkweise und typischen Verhaltensweisen beantworten (10–15 Minuten)",
+    "do_2": "Ein persönliches Profil mit Ihrem Denkstil erhalten",
+    "do_3": "Hilfreiche Hinweise zu kognitiven Stärken erhalten",
+    "privacy_heading": "Datenschutz und Ihre Rechte",
+    "privacy_anonymous_label": "Vollständig anonym:",
+    "privacy_anonymous_body": "Wir erfragen weder Namen noch E-Mail noch andere personenbezogene Daten",
+    "privacy_stop_label": "Jederzeit abbrechen:",
+    "privacy_stop_body": "Sie können die Teilnahme ohne Angabe von Gründen beenden",
+    "privacy_secure_label": "Sichere Daten:",
+    "privacy_secure_body": "Ihre Antworten werden geschützt und sicher gespeichert",
+    "privacy_research_label": "Nur Forschung:",
+    "privacy_research_body": "Daten werden nur zur Untersuchung von Denkmustern verwendet",
+    "important_heading": "Wichtige Hinweise",
+    "important_medical": "Dies ist KEIN medizinischer Test. Das Instrument dient der Selbsterkenntnis und der Forschung. Es kann keine Erkrankungen diagnostizieren oder behandeln.",
+    "important_help": "Bei psychischen Problemen wenden Sie sich bitte an Ärztinnen, Therapeutinnen oder andere qualifizierte Fachpersonen.",
+    "helps_heading": "Wozu Ihre Daten beitragen",
+    "helps_body": "Ihre anonymen Antworten — zusammen mit vielen anderen — helfen Forschenden zu verstehen, wie unterschiedlich Menschen denken. Ergebnisse können in wissenschaftlichen Publikationen erscheinen, um Lehrende, Forschende und die Öffentlichkeit zu informieren.",
+    "age_heading": "Altersvoraussetzung",
+    "age_body": "Sie müssen mindestens 18 Jahre alt sein. Unter 18 bitten wir, diese Information mit einer Bezugsperson zu besprechen.",
+    "checkbox_intro": "Ich habe verstanden und stimme zu:",
+    "checkbox_body": "Ich bin mindestens 18 Jahre alt. Ich habe alle obigen Informationen gelesen und verstanden. Ich nehme freiwillig teil. Ich kann jederzeit abbrechen. Meine Antworten bleiben anonym und werden nur für Forschungszwecke genutzt.",
+    "footer_contact": "Fragen? Kontakt: research@pcms.example",
+    "footer_ethics": "Die Studie orientiert sich an ethischen Grundsätzen für die Forschung am Menschen."
+  },
+  "post_consent": {
+    "hero_subtitle": "Erkunden Sie, wie Sie typischerweise denken und lernen — beschreibend, nicht diagnostisch",
+    "card_evidence_title": "Evidenzbasiert",
+    "card_evidence_body": "Stützt sich auf Kognitionsforschung und Dimensionsmodelle — kein medizinischer Test",
+    "card_adaptive_title": "Adaptive Bewertung",
+    "card_adaptive_body": "Fragen passen sich Ihren Antworten an für passendere Einblicke",
+    "card_insights_title": "Personalisierte Einblicke",
+    "card_insights_body": "Alltagstaugliche Ideen, die zu Ihrem Stil passen könnten — Vorschläge, keine Vorschriften",
+    "diff_heading": "Was dies unterscheidet",
+    "diff_traditional_heading": "Traditionelle Ansätze",
+    "diff_traditional_1": "Kategorische Etiketten und Diagnosen",
+    "diff_traditional_2": "Einheitsbewertungen für alle",
+    "diff_traditional_3": "Stigma und festgefahrene Selbstbilder",
+    "diff_ours_heading": "Unser Ansatz",
+    "diff_ours_1": "Kontinuierliches dimensionsbasiertes Profil",
+    "diff_ours_2": "Adaptive, personalisierte Fragen",
+    "diff_ours_3": "Wachstumsorientierte Einblicke",
+    "start_cta": "Bewertung starten",
+    "start_meta": "Etwa 10–15 Minuten · Vollständig anonym · Beitrag zur Forschung"
+  },
+  "nav": {
+    "home": "Start",
+    "questionnaire": "Fragebogen",
+    "results": "Ergebnisse",
+    "introduction": "Einführung",
+    "consent": "Einwilligung",
+    "sms_profile": "SMS-Code"
+  },
+  "sms_profile": {
+    "title": "Profil aus SMS-Code",
+    "intro": "Fügen Sie einen kompakten Code ein (z. B. F7P8S3…), wie er auf der Ergebnisseite erzeugt wird. Dezilen sind näherungsweise; kein klinischer Befund.",
+    "code_label": "Code",
+    "invalid": "Code unlesbar — alle zehn Dimensionen müssen enthalten sein.",
+    "dim_heading": "Näherungsweise Routing-Scores (%)",
+    "twilio_note": "SMS-Versand erfordert ein Twilio- oder vergleichbares Backend — nicht in diesem Repository enthalten."
+  },
+  "language": {
+    "label": "Sprache",
+    "en": "English",
+    "de": "Deutsch",
+    "tw": "Twi",
+    "wo": "Wolof"
+  },
+  "landing": {
+    "lead": "Diese Plattform erfasst anonyme Antworten für die kognitionswissenschaftliche Forschung. Bitte lesen Sie die mehrstufige Einwilligung, bevor Sie starten.",
+    "cta_consent": "Einwilligung prüfen & fortfahren",
+    "cta_intro": "Zuerst die Einführung lesen"
+  },
+  "ethics_consent": {
+    "progress": "Schritt {n} von {total}",
+    "confirm_label": "Ich habe diesen Abschnitt sorgfältig gelesen und verstanden.",
+    "next": "Weiter",
+    "back": "Zurück",
+    "finish": "Einwilligung abschließen & zum Fragebogen",
+    "research_title": "Was dieses System ist",
+    "research_body": "Dies ist ein nicht-klinischer Forschungsfragebogen. Er erfasst selbstberichtete Tendenzen auf kontinuierlichen Dimensionen. Es handelt sich nicht um eine klinische Leistung; es gibt keine Behandlung oder medizinische Beratung.",
+    "measured_title": "Was gemessen wird",
+    "measured_intro": "Der Fragebogen erfragt Präferenzen und typische Verhaltensweisen. Zehn Dimensionen fassen Muster zusammen (z. B. Fokus, sensorische Empfindlichkeit oder Planungsstil). Jeder Wert ist eine Tendenz auf einer Skala — keine Leistungsnote und kein medizinisches Etikett.",
+    "limits_title": "Was nicht gemessen wird",
+    "limits_body": "Dieses Werkzeug misst keinen IQ, stellt keine medizinische oder psychiatrische Diagnose und bewertet Menschen nicht als gut oder schlecht. Es gibt kein Bestehen oder Nichtbestehen. Bei gesundheitlichen Fragen wenden Sie sich an Fachpersonen.",
+    "privacy_title": "Was gespeichert wird",
+    "privacy_body": "Wir speichern eine anonyme Sitzungskennung, Zeitstempel, Ihre Antworten, Reaktionszeiten und abgeleitete statistische Zusammenfassungen für die Forschung. In diesem Ablauf erfassen wir keinen Namen, keine E-Mail und keine Postadresse, sofern Sie nicht separat Kontakt aufnehmen.",
+    "rights_title": "Ihre Rechte",
+    "rights_body": "Sie können jederzeit ohne Nachteil abbrechen. Sie können die Löschung der mit Ihrer Sitzungs-ID verknüpften Daten verlangen, soweit technisch möglich. Kontaktieren Sie das Forschungsteam über die in den Materialien genannte Adresse. Betroffenenrechte können nach geltendem Recht bearbeitet werden.",
+    "ghana_title": "Ghana / medizinischer Kontext",
+    "ghana_body": "Dieser Fragebogen ersetzt keinen Arzt, keine Pflegekraft, keinen Psychologen und keinen Community-Gesundheitsdienst. Er kann keine Erkrankung erkennen oder behandeln. In Ghana und anderswo nutzen Sie qualifizierte Fachpersonen für medizinische Entscheidungen."
+  },
+  "ethics_assent": {
+    "title": "Bevor Sie Ihre Ergebnisse sehen",
+    "intro": "Bitte bestätigen Sie die beabsichtigte Nutzung und die Grenzen dieser Auswertung.",
+    "cultural_label": "Kultureller Rahmen",
+    "cultural_western": "Westlich (Standardformulierungen)",
+    "cultural_ghana": "Ghana / Westafrika",
+    "cultural_universal": "Universal / gemischt",
+    "use_label": "Beabsichtigte Nutzung",
+    "use_self": "Persönliche Selbsteinschätzung",
+    "use_research": "Teilnahme an Forschung",
+    "use_education": "Lehre / Bildung",
+    "use_other": "Sonstiges",
+    "chk_nondiagnostic": "Ich verstehe, dass diese Ergebnisse keine Diagnose und kein medizinischer Test sind.",
+    "chk_research": "Ich verstehe, dass dieses Instrument der Forschung und Selbstreflexion dient — nicht der klinischen Versorgung.",
+    "submit": "Ergebnisse anzeigen",
+    "error_incomplete": "Bitte alle Felder ausfüllen und beide Bestätigungen ankreuzen."
+  },
+  "ethics_results": {
+    "banner_title": "Wichtige Grenzen",
+    "non_medical": "Dies ist kein medizinischer Test.",
+    "non_diagnosis": "Diese Ergebnisse sind keine Diagnose.",
+    "non_judgement": "Ihr Profil ist weder gut noch schlecht — es beschreibt Tendenzen, nicht Ihren Wert.",
+    "ghana_medical": "Diese Bewertung ersetzt keinen Arzt, keine Pflegekraft, keinen Berater oder eine traditionelle Heilerin, wenn Sie professionelle Hilfe brauchen.",
+    "delete_label": "Meine Daten löschen",
+    "delete_help": "Entfernt serverseitige Einträge zu Ihrer Sitzungs-ID (falls konfiguriert) und leert diese Browser-Sitzung."
+  },
+  "ethics_delete": {
+    "button": "Meine Daten löschen",
+    "confirm_title": "Gespeicherte Daten löschen?",
+    "confirm_body": "Fordert die Löschung serverseitiger Daten zu Ihrer Sitzung an (falls eingerichtet) und entfernt lokale Ergebnisse in diesem Browser.",
+    "confirm_action": "Ja, löschen",
+    "cancel": "Abbrechen",
+    "done": "Löschung abgeschlossen. Lokale Daten wurden entfernt.",
+    "error": "Löschung fehlgeschlagen. Sie können dennoch die Browser-Daten in den Seiteneinstellungen leeren."
+  }
+}

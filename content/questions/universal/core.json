@@ -1,0 +1,512 @@
+[
+  {
+    "id": "F-core-001",
+    "text": "When working on something that genuinely interests you, you can keep your attention on it for a long stretch without your mind wandering.",
+    "dimension_weights": {
+      "F": 0.82,
+      "S": 0.12,
+      "T": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": false
+  },
+  {
+    "id": "F-core-002",
+    "text": "Background noise, people moving, or small interruptions usually derail your concentration completely.",
+    "dimension_weights": {
+      "F": 0.8,
+      "S": 0.14,
+      "E": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true
+  },
+  {
+    "id": "F-core-003",
+    "text": "Within a few minutes of starting a focused task, you often catch yourself doing something else without planning to.",
+    "dimension_weights": {
+      "F": 0.78,
+      "A": 0.12,
+      "C": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true
+  },
+  {
+    "id": "P-core-001",
+    "text": "You are comfortable spotting rules, regularities, or hidden structure behind concrete examples.",
+    "dimension_weights": {
+      "P": 0.84,
+      "F": 0.08,
+      "R": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": false
+  },
+  {
+    "id": "P-core-002",
+    "text": "Abstract diagrams or purely symbolic explanations rarely feel clear unless tied to a concrete example.",
+    "dimension_weights": {
+      "P": 0.8,
+      "V": 0.12,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": true
+  },
+  {
+    "id": "P-core-003",
+    "text": "You prefer instructions that list exact steps over explanations that stress the “big idea” behind them.",
+    "dimension_weights": {
+      "P": 0.78,
+      "R": 0.14,
+      "V": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": true
+  },
+  {
+    "id": "S-core-001",
+    "text": "Bright lights, strong smells, or crowded noisy spaces can quickly feel overwhelming.",
+    "dimension_weights": {
+      "S": 0.85,
+      "E": 0.08,
+      "F": 0.07
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": false
+  },
+  {
+    "id": "S-core-002",
+    "text": "You hardly notice typical everyday sensory stimulation in busy shared spaces; it rarely bothers you.",
+    "dimension_weights": {
+      "S": 0.82,
+      "F": 0.1,
+      "E": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.73,
+    "reverseScored": true
+  },
+  {
+    "id": "S-core-003",
+    "text": "Loud overlapping conversations feel like neutral background; they rarely drain your energy.",
+    "dimension_weights": {
+      "S": 0.8,
+      "E": 0.12,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": true
+  },
+  {
+    "id": "E-core-001",
+    "text": "After several hours in lively group settings, you usually need quiet time alone to recharge.",
+    "dimension_weights": {
+      "E": 0.84,
+      "S": 0.1,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.77,
+    "reverseScored": false
+  },
+  {
+    "id": "E-core-002",
+    "text": "Being around many people for a long time tends to energise you rather than wear you down.",
+    "dimension_weights": {
+      "E": 0.82,
+      "F": 0.1,
+      "S": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.73,
+    "reverseScored": true
+  },
+  {
+    "id": "E-core-003",
+    "text": "You look forward to back-to-back social events on the same day and rarely feel “peopled out”.",
+    "dimension_weights": {
+      "E": 0.8,
+      "R": 0.12,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.71,
+    "reverseScored": true
+  },
+  {
+    "id": "R-core-001",
+    "text": "Knowing the plan in advance and having predictable routines helps you feel settled and effective.",
+    "dimension_weights": {
+      "R": 0.84,
+      "C": 0.1,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.75,
+    "reverseScored": false
+  },
+  {
+    "id": "R-core-002",
+    "text": "You are comfortable improvising when schedules change at the last minute and rarely find that stressful.",
+    "dimension_weights": {
+      "R": 0.82,
+      "C": 0.12,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true
+  },
+  {
+    "id": "R-core-003",
+    "text": "You prefer open-ended days with few fixed commitments over days blocked into timed slots.",
+    "dimension_weights": {
+      "R": 0.8,
+      "T": 0.12,
+      "C": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": true
+  },
+  {
+    "id": "C-core-001",
+    "text": "When new information contradicts what you believed, you can revise your view without much inner resistance.",
+    "dimension_weights": {
+      "C": 0.84,
+      "R": 0.08,
+      "P": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": false
+  },
+  {
+    "id": "C-core-002",
+    "text": "Once you have decided on an answer, you find it uncomfortable to revisit it even if someone raises a good counterpoint.",
+    "dimension_weights": {
+      "C": 0.82,
+      "R": 0.1,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true
+  },
+  {
+    "id": "C-core-003",
+    "text": "Ambiguous situations where there is no single “right” interpretation feel irritating rather than interesting.",
+    "dimension_weights": {
+      "C": 0.8,
+      "P": 0.12,
+      "R": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true
+  },
+  {
+    "id": "T-core-001",
+    "text": "You usually have a clear sense of how long tasks will take and rarely lose track of time when deadlines matter.",
+    "dimension_weights": {
+      "T": 0.84,
+      "R": 0.1,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": false
+  },
+  {
+    "id": "T-core-002",
+    "text": "Hours can pass in what feels like minutes when you are absorbed; you often underestimate how much time went by.",
+    "dimension_weights": {
+      "T": 0.82,
+      "F": 0.12,
+      "A": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": true
+  },
+  {
+    "id": "T-core-003",
+    "text": "You frequently run late or need alarms because internal time sense is weak compared to what the clock shows.",
+    "dimension_weights": {
+      "T": 0.8,
+      "R": 0.12,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true
+  },
+  {
+    "id": "I-core-001",
+    "text": "You notice early when you are hungry, thirsty, tired, or physically tense before it becomes severe.",
+    "dimension_weights": {
+      "I": 0.84,
+      "S": 0.1,
+      "E": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.77,
+    "reverseScored": false
+  },
+  {
+    "id": "I-core-002",
+    "text": "You are often surprised by sudden hunger, fatigue, or tension because earlier signals were easy to miss.",
+    "dimension_weights": {
+      "I": 0.82,
+      "F": 0.1,
+      "S": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.73,
+    "reverseScored": true
+  },
+  {
+    "id": "I-core-003",
+    "text": "Physical cues from your body feel vague or “far away” compared to what is happening in your surroundings.",
+    "dimension_weights": {
+      "I": 0.8,
+      "S": 0.12,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.71,
+    "reverseScored": true
+  },
+  {
+    "id": "A-core-001",
+    "text": "One idea often sparks many side connections, analogies, or tangents you did not plan in advance.",
+    "dimension_weights": {
+      "A": 0.84,
+      "P": 0.1,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.79,
+    "reverseScored": false
+  },
+  {
+    "id": "A-core-002",
+    "text": "Your thinking usually stays close to the task at hand; wide associative hops feel rare or unhelpful.",
+    "dimension_weights": {
+      "A": 0.82,
+      "R": 0.1,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true
+  },
+  {
+    "id": "A-core-003",
+    "text": "You prefer sticking to a linear outline rather than following interesting but off-topic mental branches.",
+    "dimension_weights": {
+      "A": 0.8,
+      "C": 0.12,
+      "P": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": true
+  },
+  {
+    "id": "V-core-001",
+    "text": "Diagrams, maps, or mental imagery often help you understand faster than long verbal explanations alone.",
+    "dimension_weights": {
+      "V": 0.84,
+      "P": 0.1,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": false
+  },
+  {
+    "id": "V-core-002",
+    "text": "You rely mainly on spoken or written language; pictures feel optional rather than central to how you think.",
+    "dimension_weights": {
+      "V": 0.82,
+      "F": 0.12,
+      "P": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true
+  },
+  {
+    "id": "V-core-003",
+    "text": "When learning something new, you prefer a clear verbal sequence over spatial or pictorial layouts.",
+    "dimension_weights": {
+      "V": 0.8,
+      "R": 0.12,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true
+  }
+]

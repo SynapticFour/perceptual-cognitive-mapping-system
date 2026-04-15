@@ -1,0 +1,257 @@
+[
+  {
+    "id": "GH-F-core-001",
+    "text": "When you help prepare food for a large family gathering, how often can you stay with one task (chopping, stirring) without drifting to conversations around you?",
+    "dimension_weights": {
+      "F": 0.8,
+      "S": 0.12,
+      "E": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.76,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-F-core-002",
+    "text": "At an outdoor market with many sellers calling out and music nearby, unrelated sights and sounds often pull your attention away from what you came to buy.",
+    "dimension_weights": {
+      "F": 0.78,
+      "S": 0.14,
+      "E": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.74,
+    "reverseScored": true
+  },
+  {
+    "id": "GH-P-core-001",
+    "text": "When an elder explains a proverb, you easily notice how it connects to other sayings or situations you have heard before.",
+    "dimension_weights": {
+      "P": 0.82,
+      "E": 0.1,
+      "R": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.73,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-S-core-001",
+    "text": "During a long church or community programme with heat, crowded benches, and strong incense or perfume, the sensory load becomes hard to ignore.",
+    "dimension_weights": {
+      "S": 0.84,
+      "E": 0.1,
+      "I": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.78,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-E-core-001",
+    "text": "After a full day visiting relatives house-to-house, you usually need quiet time alone or with only your household before you feel restored.",
+    "dimension_weights": {
+      "E": 0.82,
+      "R": 0.1,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.75,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-E-core-002",
+    "text": "Community funerals, weddings, or naming ceremonies that stretch late into the night tend to energise you more than drain you.",
+    "dimension_weights": {
+      "E": 0.8,
+      "R": 0.12,
+      "S": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.72,
+    "reverseScored": true
+  },
+  {
+    "id": "GH-R-core-001",
+    "text": "When the family plans travel or a funeral contribution, knowing who is responsible for each step early on helps you feel calm.",
+    "dimension_weights": {
+      "R": 0.82,
+      "E": 0.1,
+      "T": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.74,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-C-core-001",
+    "text": "If the head of the household changes a decision after consulting others, you can adjust your expectations without prolonged frustration.",
+    "dimension_weights": {
+      "C": 0.8,
+      "R": 0.12,
+      "E": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.72,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-T-core-001",
+    "text": "When shared taxis or tro-tros run on flexible schedules, you still arrive roughly when you intended without constant clock-watching.",
+    "dimension_weights": {
+      "T": 0.8,
+      "R": 0.12,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.71,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-I-core-001",
+    "text": "During a busy market day you notice thirst, heat, or muscle ache early enough to rest, drink, or find shade before you feel unwell.",
+    "dimension_weights": {
+      "I": 0.82,
+      "S": 0.12,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.73,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-A-core-001",
+    "text": "During storytelling at home, your mind links the tale to other memories or proverbs in ways that surprise even you.",
+    "dimension_weights": {
+      "A": 0.8,
+      "P": 0.12,
+      "E": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.74,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-V-core-001",
+    "text": "When someone gives directions using landmarks (“turn at the mango tree”), you form a clear mental map faster than from street names alone.",
+    "dimension_weights": {
+      "V": 0.82,
+      "T": 0.1,
+      "P": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.72,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-S-core-002",
+    "text": "Children playing loudly nearby rarely disrupt your reading, studying, or quiet work at home.",
+    "dimension_weights": {
+      "S": 0.78,
+      "F": 0.14,
+      "E": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.68,
+    "reverseScored": true
+  },
+  {
+    "id": "GH-R-core-002",
+    "text": "You are comfortable when community meetings shift topic or time at short notice and rarely depend on a fixed agenda.",
+    "dimension_weights": {
+      "R": 0.78,
+      "C": 0.14,
+      "E": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.69,
+    "reverseScored": true
+  },
+  {
+    "id": "GH-school-001",
+    "text": "When several people speak at once in a shared learning setting, you can still follow the main point without losing the thread.",
+    "dimension_weights": {
+      "F": 0.72,
+      "E": 0.16,
+      "S": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.68,
+    "reverseScored": false
+  }
+]

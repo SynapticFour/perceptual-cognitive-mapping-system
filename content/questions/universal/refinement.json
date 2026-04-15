@@ -1,0 +1,342 @@
+[
+  {
+    "id": "F-ref-001",
+    "text": "You can return to a complex task after an interruption and pick up roughly where you left off.",
+    "dimension_weights": {
+      "F": 0.72,
+      "C": 0.18,
+      "S": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false
+  },
+  {
+    "id": "F-ref-002",
+    "text": "Switching tasks frequently feels more natural than blocking long uninterrupted stretches.",
+    "dimension_weights": {
+      "F": 0.7,
+      "A": 0.18,
+      "C": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true
+  },
+  {
+    "id": "P-ref-001",
+    "text": "You enjoy puzzles or games that reward noticing subtle patterns others overlook.",
+    "dimension_weights": {
+      "P": 0.74,
+      "A": 0.16,
+      "F": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false
+  },
+  {
+    "id": "P-ref-002",
+    "text": "You rarely look for a deeper rule once a procedure “works well enough”.",
+    "dimension_weights": {
+      "P": 0.72,
+      "R": 0.18,
+      "C": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.65,
+    "reverseScored": true
+  },
+  {
+    "id": "S-ref-001",
+    "text": "Layered textures, perfumes, or fluorescent flicker can linger in your awareness long after exposure.",
+    "dimension_weights": {
+      "S": 0.74,
+      "I": 0.16,
+      "F": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.71,
+    "reverseScored": false
+  },
+  {
+    "id": "S-ref-002",
+    "text": "You can tune out sensory clutter for hours without feeling drained.",
+    "dimension_weights": {
+      "S": 0.7,
+      "F": 0.2,
+      "E": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": true
+  },
+  {
+    "id": "E-ref-001",
+    "text": "One-to-one conversations feel easier to sustain than free-flowing group banter.",
+    "dimension_weights": {
+      "E": 0.72,
+      "F": 0.16,
+      "S": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "social"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.67,
+    "reverseScored": false
+  },
+  {
+    "id": "E-ref-002",
+    "text": "You seek out large gatherings when you need a mood lift rather than when you need rest.",
+    "dimension_weights": {
+      "E": 0.7,
+      "A": 0.18,
+      "F": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "social"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true
+  },
+  {
+    "id": "R-ref-001",
+    "text": "Checklists and written timelines reduce your anxiety more than verbal reminders alone.",
+    "dimension_weights": {
+      "R": 0.74,
+      "V": 0.14,
+      "T": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.69,
+    "reverseScored": false
+  },
+  {
+    "id": "R-ref-002",
+    "text": "Strict agendas feel suffocating even when they would make coordination easier.",
+    "dimension_weights": {
+      "R": 0.72,
+      "C": 0.18,
+      "E": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.65,
+    "reverseScored": true
+  },
+  {
+    "id": "C-ref-001",
+    "text": "You can hold two plausible interpretations of the same situation without forcing an immediate choice.",
+    "dimension_weights": {
+      "C": 0.74,
+      "P": 0.16,
+      "R": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false
+  },
+  {
+    "id": "C-ref-002",
+    "text": "Changing a habit feels almost as hard as solving a technical problem from scratch.",
+    "dimension_weights": {
+      "C": 0.7,
+      "R": 0.2,
+      "F": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.63,
+    "reverseScored": true
+  },
+  {
+    "id": "T-ref-001",
+    "text": "You segment your day mentally into “before / after” anchor events rather than watching the clock constantly.",
+    "dimension_weights": {
+      "T": 0.72,
+      "R": 0.16,
+      "F": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false
+  },
+  {
+    "id": "T-ref-002",
+    "text": "You rarely think about how long something took until someone asks you afterwards.",
+    "dimension_weights": {
+      "T": 0.7,
+      "I": 0.18,
+      "A": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": true
+  },
+  {
+    "id": "I-ref-001",
+    "text": "Noticing your breathing or heartbeat helps you gauge stress before it peaks.",
+    "dimension_weights": {
+      "I": 0.74,
+      "S": 0.14,
+      "F": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false
+  },
+  {
+    "id": "I-ref-002",
+    "text": "You discover you are exhausted mainly from behaviour changes (irritability) rather than early body cues.",
+    "dimension_weights": {
+      "I": 0.72,
+      "E": 0.16,
+      "F": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true
+  },
+  {
+    "id": "A-ref-001",
+    "text": "Metaphors and analogies come to mind automatically when you explain ideas to others.",
+    "dimension_weights": {
+      "A": 0.74,
+      "V": 0.14,
+      "P": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.71,
+    "reverseScored": false
+  },
+  {
+    "id": "A-ref-002",
+    "text": "You edit your speech to remove “too many” side threads before you say them out loud.",
+    "dimension_weights": {
+      "A": 0.7,
+      "R": 0.18,
+      "C": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": true
+  },
+  {
+    "id": "V-ref-001",
+    "text": "You can rotate or rearrange objects in your mind when judging whether they would fit in a space.",
+    "dimension_weights": {
+      "V": 0.74,
+      "P": 0.16,
+      "F": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false
+  },
+  {
+    "id": "V-ref-002",
+    "text": "Written lists are your first tool; sketching or spatial models feel like an extra step.",
+    "dimension_weights": {
+      "V": 0.72,
+      "R": 0.16,
+      "F": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.65,
+    "reverseScored": true
+  }
+]

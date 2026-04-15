@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "released": "2026-04-12",
+  "revisionHistory": [
+    {
+      "version": "1.0.0",
+      "date": "2026-04-12",
+      "summary": "Structured banks under universal/ and ghana/; Ajv + research validators in src/lib/question-validator.ts."
+    }
+  ]
+}

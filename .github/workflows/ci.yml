@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - name: Validate question bank
+        run: npm run validate-questions
+      - name: Type-check
+        run: npx tsc --noEmit
+      - run: npm run test:unit
+      - name: Build
+        run: npm run build
+      - run: npx playwright install chromium --with-deps
+      - name: End-to-end tests (includes seeded /results screenshots and axe accessibility)
+        run: npm run test:e2e
+        env:
+          PW_REUSE_BUILD: "1"

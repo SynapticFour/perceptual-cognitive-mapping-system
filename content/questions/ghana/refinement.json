@@ -1,0 +1,172 @@
+[
+  {
+    "id": "GH-F-ref-001",
+    "text": "When many people talk at once during a family meeting, you can track who said what without confusion.",
+    "dimension_weights": {
+      "F": 0.7,
+      "E": 0.18,
+      "S": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.66,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-P-ref-001",
+    "text": "You notice when two different versions of a community story no longer line up in their details.",
+    "dimension_weights": {
+      "P": 0.72,
+      "E": 0.16,
+      "C": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.65,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-E-ref-001",
+    "text": "Rotating savings groups (susu) or communal labour feel socially light for you rather than heavy obligations.",
+    "dimension_weights": {
+      "E": 0.7,
+      "R": 0.18,
+      "F": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "social"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.64,
+    "reverseScored": true
+  },
+  {
+    "id": "GH-T-ref-001",
+    "text": "You estimate how long farm or market work will take using sun position or routine cues as reliably as a watch.",
+    "dimension_weights": {
+      "T": 0.72,
+      "R": 0.16,
+      "I": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.66,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-I-ref-001",
+    "text": "During fasting periods or long outdoor work, you feel clear body signals before headaches or dizziness set in.",
+    "dimension_weights": {
+      "I": 0.74,
+      "R": 0.14,
+      "S": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.68,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-A-ref-001",
+    "text": "When a pastor or teacher gives one verse, several applications come to mind that connect to everyday life.",
+    "dimension_weights": {
+      "A": 0.72,
+      "V": 0.14,
+      "P": 0.14
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.67,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-V-ref-001",
+    "text": "You remember routes to a relative’s compound mainly as a sequence of turns told in words rather than as a picture.",
+    "dimension_weights": {
+      "V": 0.7,
+      "T": 0.18,
+      "R": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.64,
+    "reverseScored": true
+  },
+  {
+    "id": "GH-C-ref-001",
+    "text": "If seating or speaking order at a gathering changes at the last minute, you adjust without dwelling on the old plan.",
+    "dimension_weights": {
+      "C": 0.72,
+      "R": 0.16,
+      "E": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.65,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-S-ref-003",
+    "text": "Strong cooking smells from neighbouring compounds rarely bother you while you study or rest.",
+    "dimension_weights": {
+      "S": 0.7,
+      "I": 0.18,
+      "F": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.62,
+    "reverseScored": true
+  },
+  {
+    "id": "GH-E-ref-002",
+    "text": "You prefer short neighbourly visits spread across the week over one very long open-house where everyone stays late.",
+    "dimension_weights": {
+      "E": 0.72,
+      "R": 0.14,
+      "T": 0.14
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "social"
+    ],
+    "culturalContext": "ghana",
+    "informationGain": 0.66,
+    "reverseScored": false
+  }
+]

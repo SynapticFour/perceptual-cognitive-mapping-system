@@ -1,0 +1,398 @@
+{
+  "results": {
+    "loading": "Yebum ngi lay jëkk jàng njàngale bi…",
+    "no_results_title": "Gisul benn njàngale",
+    "no_results_body": "Tàmbali lammiñ yi jëkk ba pare.",
+    "start_questionnaire": "Tàmbali lammiñ yi",
+    "page_title": "Sa profil bu xalaat ak xel",
+    "page_subtitle": "Ci {count} tontu · Pare ci {date}",
+    "retake": "Defaat jëmm",
+    "share": "Limu sa xibaar yi",
+    "download": "Yeb xibaar yi",
+    "share_copied": "Lëkkaloo biñu lim dafay ci sa panneau.",
+    "share_title": "Lim bu jëmm gi",
+    "share_text": "Lim bu jëm gi ci Sistem bu Màppu Xalaat ak Xel (buntu ci seetlu, du dawtal).",
+    "footer_line1": "Sistem bu Màppu Xalaat ak Xel · Dalub seetlu",
+    "footer_line2": "Bunu dawtal walla benn ndigal medsin. Ngir wallu yaram walla xel, wax ak benn kenn ci ñetti yaram yu am ndigal.",
+    "overview_heading": "Lan mooy wax sa séans bi",
+    "patterns_heading": "Yoon yi nu gis",
+    "notes_heading": "Tontu yi",
+    "patterns_empty": "Amul benn yoon bu leer ci lim yi ci séans bi.",
+    "notes_empty": "Amul benn tontu bu ñu yokk ci séans bi.",
+    "overview_sr_only_lang": "Waxtaan bu otomatik ci séans bi (Angale).",
+    "download_filename": "pipeline-session-{date}.json",
+    "sms_code_copy": "Duppi koodu profil SMS",
+    "sms_code_copied": "Kood bi duppi na — lim yu leer yu SMS rekk.",
+    "research_heading": "Sa jëf ci seetlu gi",
+    "research_body": "Jërejëf ci sa jëf ci seetlu xalaat gi. Sa séans bu kenn xam du wax nu mën a xool yoon yi ci lim — du dawtal.",
+    "research_questions_label": "Lammiñ yi tontu",
+    "research_interpretation_confidence": "Yëg-yëg ci waxin gi",
+    "research_embedding_confidence": "Yëg-yëg ci màpp gi",
+    "research_consent_note": "Sa xibaar dinañu denc ci sirri te mën nañu ko jëfandikoo ci seetlu. Amul benn xibaar bu ñu joxe lu ñu ma wax nga jëfandikoo.",
+    "revision_notice": "Lii mooy yeesal {n} ci sa jëmm gi.",
+    "max_length_notice": "Jëmm gi pare na ci gën a gudd. Njàngale bi ci lim yi ci tontu yi lépp.",
+    "title": "Sa profil bu xalaat ak xel"
+  },
+  "banner": {
+    "all_met": "Yëg-yëg bu seetlu am na ci yoon yi lépp.",
+    "most_met": "Yëg-yëg bu kawe ci yoon yi bari. Bësal «Kontine jëmm gi» ngir yëg yi ci yeneen yoon yi.",
+    "low_met": "Jëmm gi rekk mooy wax. Nu la tàmmat a kontine lammiñ yi ngir lim yu wuute yi ci yoon yi.",
+    "continue_cta": "Kontine jëmm gi",
+    "continue_hint": "Dellu ci lammiñ yi ngir yokk tontu."
+  },
+  "questionnaire": {
+    "session_mismatch": "Lëkkaloo bi du mel ni séans bi ci sa navigatëër. Ubbi njàngale ci bii aparëy walla nga def «Defaat» ngir tàmbali ku ne.",
+    "refinement_badge": "Yoon bu yeesal · Ñu kontine ngir yëg yi ci: {dims}",
+    "refinement_badge_generic": "Yoon bu yeesal · Ñu kontine ngir yëg yi ci yoon gi.",
+    "refinement_live_heading": "Yëg-yëg bu lees",
+    "question": "Lammiñ"
+  },
+  "radar": {
+    "caption": "Graf radar bi lim lim yi yu leer (biti bi bax) ak lim yi ñu yëg (biti bi ci biir). Ndaw bu rëy ci benn yoon dafay wax ne yëg yi du leer ci yoon bi.",
+    "caption_high": "Benn buy mel ni ci biti bi bax dafay wax ne tontu yi yëg nañu ci yoon bi buy toll ci lim bi.",
+    "caption_low": "Benn buy ci digg bi dafay wax ne tontu yi toll nañu ci suufu lim bi ci yoon bi.",
+    "aria": "Graf radar bu ñaar fukki yoon ci lim yi yu leer ak yi ñu yëg",
+    "tooltip_raw": "Lim bu leer",
+    "tooltip_weighted": "Lim bu ñu yëg",
+    "tooltip_confidence": "Yëg-yëg ci yoon bi",
+    "tooltip_items": "Lammiñ yi jëkk ci lii",
+    "legend_raw": "Lim bu leer (0–100)",
+    "legend_inner": "Yëg ci luñu xamul (biti bi ci biir)",
+    "label_pair": "{low} ↔ {high}"
+  },
+  "bars": {
+    "caption": "Benn bar bu ne mooy lim bi ci suufu ak kawu waxin yi. Ndaw bu leer mooy lan mën na toll ci lim bi su fekk yëg yi yokk.",
+    "aria": "Ñaar fukki bar yu njëkk ci lim yi ak ndaw yu yëg ci yoon bu ne",
+    "confidence_line": "Yëg-yëg: {pct}% · {n} lammiñ tontu",
+    "tail_explainer": "Ndaw bu rënd: tolluwaay bu mën ci su fekk yëg yi yokk (du interval statistik).",
+    "progressbar_aria": "{title}: {raw} ci téeméeri lim bu leer; toll bu mën ci kaw ci {upper} ci téeméeri"
+  },
+  "insights": {
+    "caption": "Waxin yu gëtt ci yoon bu ne. Kaar yi ci waxin bu italik du leer — tax mu ci kaar bi ngir xam lu tax.",
+    "aria": "Kaar yi ci waxin ci yoon bu ne",
+    "confidence_note_generic": "Yëg yi du leer ci yoon bi — tàmmat a tontu lammiñ yi ci mbir mi.",
+    "confidence_note_sample": "Dañu soxla tontu yu bari yu leer ngir am yëg bu seetlu bu mat ci fii.",
+    "deemphasized_tooltip": "Yëg yi suuf: kaar bi dafay toll ci melo suuf ba tontu yi di toll ci yoon bu ne.",
+    "confidence_compact": "Yëg-yëg {pct}%"
+  },
+  "a11y": {
+    "confidence_badge_high": "Yëg bu kawe",
+    "confidence_badge_mid": "Yëg bu digg",
+    "confidence_badge_low": "Yëg bu suuf"
+  },
+  "dims": {
+    "F": {
+      "title": "Xare ci lu ñu taxawal",
+      "short_label": "Xare",
+      "low_label": "Mën nañu la sonal yomb",
+      "high_label": "Mën a taxawal ci lu am solo",
+      "description": "Ndax sa xare dafay toll ci benn mbir walla nga leen ci lu sonal la ci biir?"
+    },
+    "P": {
+      "title": "Xool yoon yi ci mbir yi",
+      "short_label": "Yoon",
+      "low_label": "Xalaat bu njëkk ci tànk yi",
+      "high_label": "Gis yoon yi ci lu abstra",
+      "description": "Ndax nga bëgg tànk yi ci loxo walla nga gis ay yoon, ay regle, ak ay melokaan?"
+    },
+    "S": {
+      "title": "Xel ci lu ñu mend",
+      "short_label": "Mend-mend",
+      "low_label": "Yaram du sonal lu mend yi",
+      "high_label": "Yaram sonal na lu mend yi",
+      "description": "Ndax leer, wax, melo walla lu mend yi am solo di la tax ci sa noppalu ak sa xare?"
+    },
+    "E": {
+      "title": "Enerji ci ñooñu",
+      "short_label": "Ñooñu",
+      "low_label": "Mbooloo ma na ma yëngu",
+      "high_label": "Waññi na ma ci waxtaan bu gudd",
+      "description": "Ndax wax ak ñooñu di la tax ci sa enerji — nga bëgg waxtaan walla nga soxla noppalu ci sa bopp?"
+    },
+    "R": {
+      "title": "Bëgg a am yoon walla waxtu",
+      "short_label": "Yoon",
+      "low_label": "Mën nañu leen ci lu bees",
+      "high_label": "Bëgg a am waxtu ak yoon bu set",
+      "description": "Ndax nga am noppalu ak yoon bu ñu wax walla nga mën a leen ci lu bees su fekk waxtu bi walla li nga xaar di sopp?"
+    },
+    "C": {
+      "title": "Mën a soppi xalaat",
+      "short_label": "Soppi",
+      "low_label": "Bëgg tontu yu leer",
+      "high_label": "Mën nañu leen ci luñu xamul",
+      "description": "Ndax nga mën a soppi sa xalaat su fekk xibaar bi du leer walla di sopp?"
+    },
+    "T": {
+      "title": "Xel ci waxtu",
+      "short_label": "Waxtu",
+      "low_label": "Waxtu di dem ci kaw sa xel",
+      "high_label": "Xel bu leer ci waxtu",
+      "description": "Ndax nga xam waxtu, jëmm, walla nga toll ci waxtaan bi nga ci biir?"
+    },
+    "I": {
+      "title": "Xam sa yaram ci biir",
+      "short_label": "Yaram",
+      "low_label": "Du xam lu yaram di wax",
+      "high_label": "Xam na lu yaram di wax",
+      "description": "Ndax nga xam leegi ndax nga mer, nga son, walla nga xiif?"
+    },
+    "A": {
+      "title": "Xalaat bu bokk ide yi",
+      "short_label": "Bokk",
+      "low_label": "Ci benn yoon rekk",
+      "high_label": "Ide yi bokk yu bari",
+      "description": "Ndax ide yi toll ci tànk walla nga bëgg metafor, melokaan, walla yeneen mbir?"
+    },
+    "V": {
+      "title": "Kàddu walla melo",
+      "short_label": "Kàddu / melo",
+      "low_label": "Kàddu ak tànk",
+      "high_label": "Melo ak biir-biir",
+      "description": "Ndax kàddu ak tànk walla melo, biir, ak bëgg-bëgg di toll ci sa xalaat?"
+    }
+  },
+  "interp": {
+    "F": {
+      "high": "Danga mën a taxawal su fekk mbir mi neex la, son yi du la sonal yomb.",
+      "mid": "Sa xare di soppi ci mbir mi — waaw toll, waaw son yomb.",
+      "low": "Danga gis yeneen mbir yi di la tax ci sa xare te mën nga soppi lu la taxawal."
+    },
+    "P": {
+      "high": "Danga am noppalu ak xalaat bu abstra te nga bëgg gis yoon yi ci suufu mbir mi.",
+      "mid": "Danga bokk tànku yu leer ak seet yoon yi ci lu la taxawal.",
+      "low": "Danga bëgg tànk yi ci loxo ak yoon yu xam walla lu abstra bu ñu ubbi."
+    },
+    "S": {
+      "high": "Leer, wax, melo walla lu mend yi mën nañu la tax ci sa noppalu ak sa xare.",
+      "mid": "Beneen biir yomb la waaye beneen — buy bari walla buy metit — di la sonal yu yomb.",
+      "low": "Mend-mend yu ci biir danga leen ci yomb ci sa bés bi."
+    },
+    "E": {
+      "high": "Waxtaan ak ñooñu mën nañu tax sa enerji; noppalu ci sa bopp mooy gën a tax.",
+      "mid": "Danga bëgg waxtaan waaw nga bëgg ko ci tàll, du ci waxtaan bu toll ci kaw.",
+      "low": "Ñooñu ak mbir yi ci kaw sa bopp di la tax ci sa enerji; mën nga toll ci waxtaan bu gudd."
+    },
+    "R": {
+      "high": "Yoon yu set ak waxtu yu leer nañu la tax ci sa noppalu ak sa jëf.",
+      "mid": "Danga bëgg yoon waaw nga mën a soppi su fekk waxtu bi di soppi.",
+      "low": "Danga mën a leen yu yomb su fekk li nga wax di soppi te du la soxla waxtu bu set ngir am noppalu."
+    },
+    "C": {
+      "high": "Danga am noppalu ngir soppi sa xalaat walla sa yoon su fekk am xibaar bu bees.",
+      "mid": "Danga mën a soppi su la soxla, waaw luñu xamul walla lu di soppi yu yomb mën na la sonal.",
+      "low": "Danga bëgg tontu yu set ak li nga xaar walla luñu xamul bu toll."
+    },
+    "T": {
+      "high": "Danga xam waxtu, jëmm, ak waxtu yu ñu taxawal ci kaw sa xel.",
+      "mid": "Sa xel ci waxtu di soppi ci mbir mi — waaw leer, waaw ci waxtaan bi.",
+      "low": "Waxtu mën na dem ci kaw sa xel; danga bëgg ci waxtaan bi ci kaw saat bu leer."
+    },
+    "I": {
+      "high": "Xiif, son, walla metit ci yaram di xam leegi ci sa xel.",
+      "mid": "Beneen tànk ci yaram leer la waaye beneen du gis su fekk toll na.",
+      "low": "Yaram mën na la tax ci kaw sa xel su fekk du nga xam ko leegi."
+    },
+    "A": {
+      "high": "Ide yi bokk yu bari — metafor, melokaan — di nañu leen yu yomb.",
+      "mid": "Danga bokk yoon bu njëkk ak yu leer su fekk lammiñ bi di la tax ci sa xalaat.",
+      "low": "Danga bëgg yoon bu njëkk ci tànk walla du ide yu bari yu bokk."
+    },
+    "V": {
+      "high": "Biir-biir, graf, walla melo ci sa xel di toll ci kaw kàddu yu gudd.",
+      "mid": "Danga soppi ci kàddu ak melo ci lu la taxawal.",
+      "low": "Kàddu ak tànk mooy li nga bëgg jëkk ci xibaar bu bees."
+    }
+  },
+  "landscape": {
+    "hero_title": "Du benn taxawaay rekk — yëg yu bari ci xalaat bi",
+    "hero_body": "Sa tont yi tax yëg yu bari ci xalaat bi ci benn waxtu. Benn buntu mooy benn yëg. Buntu yu toll ci kaw ñu mel na ñu mel ni mel. Lii du lim, du rang, du dawtal.",
+    "map_heading": "Sa melokaan ci xalaat bi",
+    "map_caption": "Benn buntu mooy benn yëg (mënet ak mboq wax na doole ci fi nga toll). Yoon yu feeñ yu bëri ñu leen bokk; serkil yi toll nañu buntu yi ci kaw. Mbind mi ci digg mooy digg bu ndawal ci sa melokaan — du benn taxawaay rekk.",
+    "map_aria": "Nataalu yëg yu bari ci benn waxtu, ak melokaan yu tànk",
+    "constellation_centroid": "Digg bu ndawal ci sa melokaan",
+    "constellation_weight": "Doole ci fi nga toll",
+    "cluster_pattern": "{domain} · {count} yëg",
+    "pattern_banner": "Bokk bu ñu gis na (ci browser bi rekk): {traits} · ñu leen gis ci {support} yeneen (~{pct}% ci profil yi ñu aar ci browser bi) · sa mel {score}%",
+    "map_you": "Yaw",
+    "map_top_signals": "Yëg yi ci routing bi ñu gën a xam",
+    "map_density_hint": "Melow bi ci ginnaaw wax na fu yëg yi toll ci nataal bi — du lim walla rang.",
+    "map_density_on": "Wone toll",
+    "map_density_off": "Neenal toll",
+    "view_map": "Kart",
+    "view_density": "Toll",
+    "view_vector": "Yëg ak lim",
+    "view_switcher_aria": "Tann lu mel ni fu nga xool doole bi ci biir xalaat bi",
+    "view_vector_activation_heading": "Yëg yi toll",
+    "view_vector_activation_caption": "Benn rëdd mooy benn yëg ci sa melokaan. Bar bi wax doole ci séans bi — du lim bu taxaw walla rang.",
+    "view_vector_blend_heading": "Lim bu toll (teknik)",
+    "view_vector_blend_caption": "Benn vektor bu ñu def ci sa yëg ngir yeb ak buntu ci seetlu. Lim yii du mel ni bar yi yu melo.",
+    "view_vector_caption": "Jëkk yëg yi toll; su fekk vektor bu toll ci suuf.",
+    "view_vector_aria": "Lim yu yëg yi toll ak lim yu vektor bu toll su fekk",
+    "constellation_note": "Melow mi feeñ mooy digg bu toll ci buntu yépp — du lim walla benn taxawaay bu nit.",
+    "map_proxy_note": "Lëkkaloo bi amul lim bu mat bu ñu aar; kart bi jëfandikoo benn toll ci lim yi nga lim rekk.",
+    "export_png": "Yeb graf bi (PNG)",
+    "export_json": "Yeb profil bi (JSON)",
+    "copy_share_url": "Duppi lëkkaloo bu mën a lim",
+    "share_copied": "Lëkkaloo bi duppi na ci sa panneau.",
+    "export_png_error": "Mënul a yeb PNG (navigatëër bi). Jëfandikoo benn screenshot.",
+    "bars_heading": "Bar yi ci yoon yi",
+    "bars_caption": "Benn bar mooy melo ci yoon bi; toll wax na yëg yi. Tax mu walla nga tax ci kaw benn rëdd ngir waxin bu gëtt gi.",
+    "url_profile": {
+      "summary": "Lii lëkkaloo bu ñu lim la ubbi. Lim yu yoon yi rekk la wax — du séans bu mat."
+    }
+  },
+  "pipeline": {
+    "pattern": {
+      "answer_consistency_high": "Tontu yi yu mel ni toll ci lammiñ yu mel ni.",
+      "answer_consistency_low": "Yoon yu wuute ci tontu yi ci lammiñ yu mel ni."
+    },
+    "note": {
+      "response_time_variance": "Waxtu yi ci tontu yi am nañu yoon yu wuute.",
+      "entropy_high": "Tontu yi toll nañu ci lim yi yu bari ci biir skaal bi."
+    },
+    "summary": {
+      "confident": "Séans bi mën na wax lim yu leer ci yoon yi.",
+      "limited": "Yëg yi suuf — wax ko ak taxawaay.",
+      "preliminary": "Tontu yi suuf — wax yoon yi ni li ñu tàmbali."
+    },
+    "patterns_fallback": "Amul benn yoon bu leer ci séans bi.",
+    "notes_fallback": "Lii mooy lim bu wax rekk — du dawtal walla jëmm bu dawtal."
+  },
+  "welcome": {
+    "title": "Sistem bu Màppu Xalaat ak Xel (PCMS)",
+    "subtitle": "Buntu ngir xool yoon yu wuute ci xalaat ak jàng (du dawtal)"
+  },
+  "consent": {
+    "title": "Dëggal ci seetlu gi",
+    "agree": "Waaw, ma bëgg a jëf",
+    "about_heading": "Lan mooy seetlu bi",
+    "about_body": "Ñu la seetlu ci yoon yu nit ñu xalaate ak yoon yu ñu jëfandikoo xibaar. Seetlu bi tax na ñu xam ne xel bu nit ku ne mooy wuute — am ku bëgg yoon yu detay, am ku bëgg lu bees. Sa jëf di la tax ngir soppi buntu yi ci xam sa bopp.",
+    "do_heading": "Lan nga def",
+    "do_1": "Tontu lammiñ ci sa xalaat ak sa bëgg-bëgg (10–15 simili)",
+    "do_2": "Am profil bu la tax ci sa yoon bu xalaat",
+    "do_3": "Jox la waxin yu tax ci sa yoon yu rafet",
+    "privacy_heading": "Sa sirri ak sa hakkee",
+    "privacy_anonymous_label": "Sirri bu mat:",
+    "privacy_anonymous_body": "Nu la laaj sa tur, sa i-meel, walla xibaar bu la tax",
+    "privacy_stop_label": "Mën nga lekk ci biir:",
+    "privacy_stop_body": "Mën nga lekk ci biir benn saat, amul benn laaj",
+    "privacy_secure_label": "Xibaar yu aar:",
+    "privacy_secure_body": "Sa tontu ñu aar leen te ñu denc leen ci anam bu set",
+    "privacy_research_label": "Seetlu rekk:",
+    "privacy_research_body": "Xibaar bi ñu jëfandikoo rekk ngir xam yoon yi ci xalaat",
+    "important_heading": "Xibaar bu am solo",
+    "important_medical": "Bunu dawtal. Buntu mooy ngir xam sa bopp ak jëf ci seetlu. Mënul a wax dawtal walla jëfandikoo yaram.",
+    "important_help": "Su fekk nga soxla wallu ci xel walla yaram, wax ak dawtal, wallu-kat, walla kenn ci ñetti yaram yu am ndigal.",
+    "helps_heading": "Lan sa xibaar di tax",
+    "helps_body": "Sa tontu yu sirri, ci kaw tontu yu bari, di tax seetkat yi ngir xam yoon yu nit ñu xalaate. Seetlu bi mën nañu ko lim ci ay jëf ci seetlu ngir tax jàngkat yi, seetkat yi, ak nit ñu bëri.",
+    "age_heading": "At",
+    "age_body": "War nga am 18 at walla ci kaw ngir jëf. Su fekk du nga 18, laaj sa waajur walla kenn ci sa kër ngir wax ak yaw.",
+    "checkbox_intro": "Ma xam te ma nangu:",
+    "checkbox_body": "Ma am 18 at walla ci kaw. Ma jàng te ma xam li lépp ci kaw. Ma bëgg a jëf ci seetlu gi ci sama bopp. Ma xam ne mën naa lekk ci biir benn saat. Ma xam ne sa tontu dinañu denc ci sirri te ñu jëfandikoo ko rekk ci seetlu.",
+    "footer_contact": "Laaj? Ñu la joxe: research@pcms.example",
+    "footer_ethics": "Seetlu bi toll ci yoon yu etik ci seetlu ak nit."
+  },
+  "post_consent": {
+    "hero_subtitle": "Xool fu nga toll ci xalaat ak jàng — lim rekk, du dawtal",
+    "card_evidence_title": "Ci xibaar yi",
+    "card_evidence_body": "Ci seetlu xalaat ak yoon yi — du jëmm bu dawtal",
+    "card_adaptive_title": "Jëmm bu ubbi",
+    "card_adaptive_body": "Lammiñ yi di soppi ci sa tontu ngir waxin yu la tax",
+    "card_insights_title": "Waxin yu la tax",
+    "card_insights_body": "Waxin yu mën a toll ci sa yoon — tànn rekk, du yoon bu mat",
+    "diff_heading": "Lan mooy wuute ci lii",
+    "diff_traditional_heading": "Yoon yu njëkk yi",
+    "diff_traditional_1": "Taxawaay ak dawtal",
+    "diff_traditional_2": "Jëmm bu benn ci nit ñu bëri",
+    "diff_traditional_3": "Stigma ak xalaat bu taxaw",
+    "diff_ours_heading": "Sunu yoon",
+    "diff_ours_1": "Màppu bu toll ci yoon yi",
+    "diff_ours_2": "Lammiñ yu ubbi yu la tax",
+    "diff_ours_3": "Waxin yu tax ci yokk",
+    "start_cta": "Tàmbali sa jëmm",
+    "start_meta": "Ci 10–15 simili • Sirri bu mat • Jëf ci seetlu"
+  },
+  "nav": {
+    "home": "Kër",
+    "questionnaire": "Lammiñ yi",
+    "results": "Njàngale",
+    "introduction": "Leeral",
+    "consent": "Dëggal",
+    "sms_profile": "Kood SMS"
+  },
+  "sms_profile": {
+    "title": "Profil ci kood SMS",
+    "intro": "Taf kood bu gëtt (misal F7P8S3…) bu ñu def ci xët wi njàngale. Lim yi toll rekk — du denc bu dawtal.",
+    "code_label": "Kood",
+    "invalid": "Mënul a jàng kood bi. Seetal ne ñaar fukki yoon yépp am nañu.",
+    "dim_heading": "Lim yu toll ci yoon gi (%)",
+    "twilio_note": "Yónnee SMS soxla benn backend (Twilio walla mel ni) — du ci jëf yii."
+  },
+  "language": {
+    "label": "Làkk",
+    "en": "Angale",
+    "de": "Almaa",
+    "tw": "Twi",
+    "wo": "Wolof"
+  },
+  "landing": {
+    "lead": "Dalub bi dafay denc tontu yu sirri ci seetlu xalaat. Tàmbali dëggal bu bari jëkk.",
+    "cta_consent": "Jàng dëggal bi te kontine",
+    "cta_intro": "Jàng tàmbali bi jëkk"
+  },
+  "ethics_consent": {
+    "progress": "Tànk {n} ci {total}",
+    "confirm_label": "Ma jàng wàll bi ci taxawaay te ma dëggal ne ma xam ko.",
+    "next": "Kontine",
+    "back": "Dellu",
+    "finish": "Pare dëggal bi te kontine ci lammiñ yi",
+    "research_title": "Lan mooy sistem bi",
+    "research_body": "Lii mooy lammiñ yu seetlu yu du dawtal. Dafay lim yoon yu ne ci sa bopp ci yoon yu toll ngir xam yoon yu wuute ci xalaat. Du dawtal te du jox ndigal walla jëf.",
+    "measured_title": "Lan lañu lim",
+    "measured_intro": "Jëmm bi laaj ci sa bëgg-bëgg ak sa jëf yu mel ni. Ñaar fukki yoon di leen lim yu yoon (misal xare, noppalu mend-mend, walla yoon bu waxtu). Benn lim mooy yoon bu ne ci skaal bi — du at bu jëf walla taxawaay bu dawtal.",
+    "limits_title": "Lan duñu lim",
+    "limits_body": "Buntu bi du lim IQ, du wax dawtal yaram walla xel, du def lim bu rafet walla bu bon ci nit. Amul «pass» walla «fail». Su fekk nga am laaj ci yaram, joxe ak kenn ci ñetti yaram yu am ndigal.",
+    "privacy_title": "Lan lañu denc",
+    "privacy_body": "Ñu denc benn ID bu sirri ci séans bi, waxtu yi, sa tontu, waxtu ci tontu yi, ak lim yu statistik yu soxla seetlu. Nu la laaj sa tur, i-meel, walla adres ci yoon yii su fekk du nga wax ak ekipp bi ci bopp sa bopp.",
+    "rights_title": "Sa hakkee",
+    "rights_body": "Mën nga lekk ci biir benn saat amul laaj. Mën nga laaj ne ñu màbb xibaar yu bokk ak ID séans bi su fekk mën nañu ko ci teknoloji. Joxe ak ekipp seetlu bi ci adres bi ci dëggal bi. Laaj yu dati (EU/UK) mën nañu leen lim.",
+    "ghana_title": "Ghana / yaram",
+    "ghana_body": "Lammiñ yii du tax dawtal, garde, sikològ, walla kenn ci wallu yaram ci mboot. Mënul a gis walla a jëf yaram. Ci Ghana ak yeneen biir, jëfandikoo ñetti yaram yu am ndigal ci laaj yi ci yaram."
+  },
+  "ethics_assent": {
+    "title": "Ci jëkk nga gis njàngale bi",
+    "intro": "Dëggal lan nga bëgg a def ak njàngale yii te xam seeni tànk.",
+    "cultural_label": "Melokaan bu dëkk",
+    "cultural_western": "Sëriñ (waxin bu njëkk)",
+    "cultural_ghana": "Ghana / Afrika sowwu-jant",
+    "cultural_universal": "Bëri / bokk",
+    "use_label": "Lan nga bëgg a def",
+    "use_self": "Xam sa bopp",
+    "use_research": "Jëf ci seetlu",
+    "use_education": "Jàng walla jàngale",
+    "use_other": "Yeneen",
+    "chk_nondiagnostic": "Ma xam ne njàngale yii du dawtal walla jëmm bu dawtal.",
+    "chk_research": "Ma xam ne buntu mooy ci seetlu ak xam sa bopp, du dawtal.",
+    "submit": "Gis njàngale bi",
+    "error_incomplete": "Tontu lépp te tànn ñaar yi ci dëggal."
+  },
+  "ethics_results": {
+    "banner_title": "Tànk yu am solo",
+    "non_medical": "Bunu jëmm bu dawtal.",
+    "non_diagnosis": "Njàngale yii du dawtal.",
+    "non_judgement": "Sa profil du rafet du bon — dafay wax yoon yi, du sa solo.",
+    "ghana_medical": "Jëmm gi du tax dawtal, garde, wallu-kat, walla fajkat bu tradisyon su la soxla wallu bu am ndigal.",
+    "delete_label": "Màbb sama xibaar",
+    "delete_help": "Màbb xibaar ci serëër (su laaj) te màbb ci navigatëër bi."
+  },
+  "ethics_delete": {
+    "button": "Màbb sama xibaar",
+    "confirm_title": "Màbb xibaar yi?",
+    "confirm_body": "Dina laaj ne ñu màbb xibaar ci serëër (su laaj) te màbb njàngale ci navigatëër bi.",
+    "confirm_action": "Waaw, màbb",
+    "cancel": "Neen",
+    "done": "Laaj bi pare na. Xibaar ci navigatëër bi màbb nañu.",
+    "error": "Màbb bi mënul pare. Mën nga màbb ci parametër yi ci dal bi."
+  }
+}

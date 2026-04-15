@@ -1,0 +1,400 @@
+{
+  "results": {
+    "loading": "Loading your results…",
+    "no_results_title": "No results found",
+    "no_results_body": "Please complete the questionnaire first.",
+    "start_questionnaire": "Start questionnaire",
+    "page_title": "Your cognitive profile",
+    "page_subtitle": "Based on {count} responses · Completed {date}",
+    "retake": "Retake assessment",
+    "share": "Share summary",
+    "download": "Download data",
+    "share_copied": "Summary link copied to clipboard.",
+    "share_title": "Assessment summary",
+    "share_text": "Summary from the Perceptual & Cognitive Mapping System (non-clinical research tool).",
+    "footer_line1": "Perceptual & Cognitive Mapping System · Research platform",
+    "footer_line2": "This is not a medical or diagnostic tool. For professional support, consult qualified healthcare providers.",
+    "overview_heading": "What this session shows",
+    "patterns_heading": "Patterns we noticed",
+    "notes_heading": "Notes",
+    "patterns_empty": "No standout patterns were flagged from this session’s statistics.",
+    "notes_empty": "No extra behavioural notes were added for this session.",
+    "overview_sr_only_lang": "Automated session narrative (English).",
+    "download_filename": "pipeline-session-{date}.json",
+    "sms_code_copy": "Copy SMS profile code",
+    "sms_code_copied": "Short code copied — coarse scores for SMS relay only.",
+    "research_heading": "Research contribution",
+    "research_body": "Thank you for contributing to cognitive science research. Your anonymous session helps us study response patterns at a statistical level — not as a clinical or diagnostic measure.",
+    "research_questions_label": "Questions answered",
+    "research_interpretation_confidence": "Interpretation confidence",
+    "research_embedding_confidence": "Representation confidence",
+    "research_consent_note": "Your data has been stored anonymously and may be used for scientific research. No personal information was collected beyond what you explicitly consented to.",
+    "revision_notice": "This is revision {n} of your assessment.",
+    "max_length_notice": "Maximum assessment length reached. Results are based on all answers provided.",
+    "title": "Your cognitive profile"
+  },
+  "banner": {
+    "all_met": "Research-grade confidence achieved across all dimensions.",
+    "most_met": "High confidence on most dimensions. Tap Continue assessment to strengthen the remaining ones.",
+    "low_met": "Assessment is indicative only. We recommend continuing the questionnaire for more reliable dimension scores.",
+    "continue_cta": "Continue assessment",
+    "continue_hint": "Returns you to the questionnaire to add more responses."
+  },
+  "questionnaire": {
+    "session_mismatch": "That link does not match this browser’s saved session. Open results from this device, or use Retake to start fresh.",
+    "refinement_badge": "Refinement mode · Continuing to improve confidence on: {dims}",
+    "refinement_badge_generic": "Refinement mode · Continuing to strengthen routing confidence.",
+    "refinement_live_heading": "Live confidence",
+    "question": "Question"
+  },
+  "radar": {
+    "caption": "Radar chart comparing your raw scores (outer ring) with confidence-adjusted scores (inner ring). A wide gap on a spoke means we are less certain on that dimension.",
+    "caption_high": "A point near the outside means stronger endorsement on that dimension’s high end of the scale.",
+    "caption_low": "A point closer to the centre means responses leaned toward the low end of that dimension.",
+    "aria": "Radar chart of ten cognitive routing dimensions with raw and confidence-adjusted scores",
+    "tooltip_raw": "Raw score",
+    "tooltip_weighted": "Confidence-adjusted score",
+    "tooltip_confidence": "Dimension confidence",
+    "tooltip_items": "Items contributing",
+    "legend_raw": "Raw score (0–100)",
+    "legend_inner": "Adjusted for uncertainty (inner)",
+    "label_pair": "{low} ↔ {high}"
+  },
+  "bars": {
+    "caption": "Each bar shows your score between the low and high plain-language labels. The pale tail shows how high the score could plausibly reach given current uncertainty.",
+    "aria": "Ten horizontal bars showing scores and uncertainty tails per dimension",
+    "confidence_line": "Confidence: {pct}% · {n} items answered",
+    "tail_explainer": "Striped segment: plausible upper range if confidence increased (not a statistical CI).",
+    "progressbar_aria": "{title}: {raw} percent raw score; plausible upper near {upper} percent"
+  },
+  "insights": {
+    "caption": "Short interpretations for each dimension. Cards with italic text are less certain — hover or focus the card for why.",
+    "aria": "Grid of insight cards for each cognitive dimension",
+    "confidence_note_generic": "We are not yet fully confident on this dimension — consider answering more questions that touch this area.",
+    "confidence_note_sample": "We would need more high-loading answers to reach full research-grade confidence here.",
+    "deemphasized_tooltip": "Lower confidence: this card is shown muted until more consistent responses are collected.",
+    "confidence_compact": "{pct}% confidence"
+  },
+  "a11y": {
+    "confidence_badge_high": "High confidence",
+    "confidence_badge_mid": "Moderate confidence",
+    "confidence_badge_low": "Low confidence"
+  },
+  "dims": {
+    "F": {
+      "title": "Focus Intensity",
+      "short_label": "Focus",
+      "low_label": "Easily distracted",
+      "high_label": "Deep focus capability",
+      "description": "How strongly you sustain attention on one stream of information versus shifting when distractions appear."
+    },
+    "P": {
+      "title": "Pattern Processing",
+      "short_label": "Pattern",
+      "low_label": "Concrete, step-by-step thinking",
+      "high_label": "Abstract pattern spotting",
+      "description": "Preference for concrete procedures versus spotting rules, regularities, and abstract structure."
+    },
+    "S": {
+      "title": "Sensory Sensitivity",
+      "short_label": "Sensory",
+      "low_label": "Low sensory reactivity",
+      "high_label": "High sensory sensitivity",
+      "description": "How strongly light, sound, texture, and other sensory load affect comfort and concentration."
+    },
+    "E": {
+      "title": "Social Energy",
+      "short_label": "Social",
+      "low_label": "Energised by groups",
+      "high_label": "Drained by prolonged social contact",
+      "description": "How social interaction affects your energy—drawing stimulation from others versus needing recovery time after groups."
+    },
+    "R": {
+      "title": "Structure Preference",
+      "short_label": "Structure",
+      "low_label": "Flexible, improvising style",
+      "high_label": "Strong preference for routine and plans",
+      "description": "Comfort with fixed plans and predictable rhythms versus improvising when schedules or expectations shift."
+    },
+    "C": {
+      "title": "Cognitive Flexibility",
+      "short_label": "Flexibility",
+      "low_label": "Prefers clear, stable answers",
+      "high_label": "Comfortable with ambiguity and change",
+      "description": "Ease of revising mental models when information is incomplete, contradictory, or changing."
+    },
+    "T": {
+      "title": "Temporal Processing",
+      "short_label": "Time",
+      "low_label": "Time-forgetting / in-the-moment",
+      "high_label": "Highly precise time sense",
+      "description": "Awareness of duration, pacing, and deadlines versus immersion where clock time fades into the background."
+    },
+    "I": {
+      "title": "Interoceptive Awareness",
+      "short_label": "Body",
+      "low_label": "Low body awareness",
+      "high_label": "High body awareness",
+      "description": "How clearly internal bodily signals—tension, fatigue, hunger—reach conscious attention."
+    },
+    "A": {
+      "title": "Associative Thinking",
+      "short_label": "Associative",
+      "low_label": "Linear / convergent",
+      "high_label": "Strongly associative / divergent",
+      "description": "Tendency toward tight stepwise links versus wide, metaphor-rich, or tangential idea connections."
+    },
+    "V": {
+      "title": "Verbal–Visual Processing",
+      "short_label": "Verbal / visual",
+      "low_label": "Verbal / sequential",
+      "high_label": "Visuo-spatial / holistic",
+      "description": "Relative weight of language and ordered steps versus imagery, layout, and spatial wholes when thinking."
+    }
+  },
+  "interp": {
+    "F": {
+      "high": "You tend to sustain attention when something grips you, and distractions are relatively easy to set aside.",
+      "mid": "Your focus shifts with context—sometimes deep, sometimes more easily pulled by what is around you.",
+      "low": "You often notice competing demands on your attention and may switch tasks or stimuli more readily."
+    },
+    "P": {
+      "high": "You are comfortable with abstract framing and often look for structure or rules beneath surface details.",
+      "mid": "You mix concrete examples with occasional pattern-seeking, depending on the task at hand.",
+      "low": "You prefer tangible steps and familiar procedures over open-ended abstraction."
+    },
+    "S": {
+      "high": "Sensory inputs such as noise, light, or texture can strongly shape comfort and concentration.",
+      "mid": "Some environments feel fine while others—especially busy or intense ones—wear on you faster.",
+      "low": "You are generally unbothered by typical sensory load in everyday settings."
+    },
+    "E": {
+      "high": "Social time tends to cost energy, and you recover best with quieter solo space afterwards.",
+      "mid": "You enjoy some social contact but prefer it in measured doses rather than constant stimulation.",
+      "low": "You draw energy from people and activities around you and tolerate longer social stretches well."
+    },
+    "R": {
+      "high": "Predictable routines and clear plans usually help you feel settled and effective.",
+      "mid": "You like some structure but can flex when plans need to change at short notice.",
+      "low": "You adapt quickly when agendas shift and rarely depend on a fixed rhythm to feel okay."
+    },
+    "C": {
+      "high": "You are relatively comfortable revising views or switching mental gears when new information appears.",
+      "mid": "You can adjust when needed, though rapid ambiguity or reversals may feel tiring at times.",
+      "low": "You prefer stable answers and clear expectations over prolonged uncertainty."
+    },
+    "T": {
+      "high": "You tend to notice pacing, intervals, and deadlines more sharply than losing track of time.",
+      "mid": "Your sense of time shifts with context—sometimes precise, sometimes more present-focused.",
+      "low": "Hours can compress or stretch unnoticed; you often live more in the present than on a clock."
+    },
+    "I": {
+      "high": "Internal cues like hunger, fatigue, or tension tend to register clearly in awareness.",
+      "mid": "Some body signals are clear while others arrive only after they are quite strong.",
+      "low": "Physical states can sneak up on you before you consciously notice them."
+    },
+    "A": {
+      "high": "Ideas often spark far-reaching links—metaphors, analogies, or tangents arrive readily.",
+      "mid": "You blend straightforward paths with occasional leaps when a prompt invites creativity.",
+      "low": "You usually keep to direct, stepwise links rather than wide associative hops."
+    },
+    "V": {
+      "high": "Spatial layouts, diagrams, or mental imagery often carry weight over long verbal chains.",
+      "mid": "You switch between words and images depending on what the task rewards.",
+      "low": "Language and ordered steps tend to be your default handle on new information."
+    }
+  },
+  "landscape": {
+    "hero_title": "Not one label — many thinking tendencies at once",
+    "hero_body": "Your answers shape several thinking tendencies together. Each one appears as its own dot. Dots that sit close together are somewhat alike in the model we use. This picture is not a grade, rank, or health diagnosis.",
+    "map_heading": "Your cognitive constellation",
+    "map_caption": "Each dot is one thinking tendency (size and clarity show how strong it is here). Faint lines link related tendencies; circles group nearby ones. The centre label is the balance point of your pattern—not a single “type”.",
+    "map_aria": "Picture of several thinking tendencies at once, with simple reference examples",
+    "constellation_centroid": "Balance point of your pattern",
+    "constellation_weight": "Relative strength here",
+    "cluster_pattern": "{domain} · {count} tendencies",
+    "pattern_banner": "Common combination (this device): {traits} · seen together after {support} completions here (~{pct}% of summaries stored in this browser) · overlap with you: {score}%",
+    "map_you": "You",
+    "map_top_signals": "Strongest routing signals",
+    "map_density_hint": "The soft coloured wash shows where tendencies cluster in the picture; it is not a score chart or league table.",
+    "map_density_on": "Show density",
+    "map_density_off": "Hide density",
+    "view_map": "Map",
+    "view_density": "Density",
+    "view_field": "Cognitive Field",
+    "view_vector": "Traits & numbers",
+    "view_switcher_aria": "Choose another way to look at the same picture",
+    "view_vector_activation_heading": "Trait activations",
+    "view_vector_activation_caption": "Each row is one tendency in your constellation. The bar shows how strong it is in this session—not a school grade or rank.",
+    "view_vector_blend_heading": "Blended summary (technical)",
+    "view_vector_blend_caption": "One vector derived from your activations for export and research tools. These coordinates are not the same as the coloured dimension bars.",
+    "view_vector_caption": "Trait activations first; optional blended vector below for technical use.",
+    "view_vector_aria": "List of trait activations and optional blended embedding coordinates",
+    "field_caption": "A continuous cognitive field built from all activations. Peaks indicate multiple active regions, gradients show transitions between them.",
+    "constellation_note": "The soft glow marks the balance point of all your tendency dots together—not a separate score or person type.",
+    "map_proxy_note": "This link did not include a full saved summary; the picture uses a careful estimate from the shared scores only.",
+    "export_png": "Download chart (PNG)",
+    "export_json": "Download profile (JSON)",
+    "copy_share_url": "Copy shareable link",
+    "share_copied": "Shareable link copied to the clipboard.",
+    "export_png_error": "Could not export PNG (browser blocked image export). Try a screenshot instead.",
+    "bars_heading": "Dimensional bars",
+    "bars_caption": "Each bar uses colour for the dimension; opacity reflects routing confidence. Hover or long-press a row for the short scientific description.",
+    "url_profile": {
+      "summary": "This view was opened from a shared link. It shows dimension scores only — not a full saved session."
+    }
+  },
+  "pipeline": {
+    "pattern": {
+      "answer_consistency_high": "High answer consistency across similar prompts",
+      "answer_consistency_low": "Higher variability between similar prompts"
+    },
+    "note": {
+      "response_time_variance": "Response times vary substantially across items.",
+      "entropy_high": "Response sequence shows higher exploration across scale positions."
+    },
+    "summary": {
+      "confident": "The session supports a moderately confident feature summary.",
+      "limited": "Feature confidence is limited; interpret with caution.",
+      "preliminary": "Limited response signal; treat any patterns as preliminary."
+    },
+    "patterns_fallback": "No strong categorical patterns detected from this session.",
+    "notes_fallback": "This is a descriptive summary, not a diagnosis or clinical assessment."
+  },
+  "welcome": {
+    "title": "Perceptual & Cognitive Mapping System",
+    "subtitle": "A research-friendly way to explore different styles of thinking and learning"
+  },
+  "consent": {
+    "title": "Research Consent Form",
+    "agree": "I Agree to Participate",
+    "about_heading": "What This Research Is About",
+    "about_body": "We're studying how people think and process information in different ways. This research helps us understand that everyone's mind works uniquely, like how some people love detailed plans while others prefer to be spontaneous. Your participation helps us create better tools for self-understanding.",
+    "do_heading": "What You'll Do",
+    "do_1": "Answer questions about how you think and prefer to do things (10-15 minutes)",
+    "do_2": "Get a personal profile showing your unique thinking style",
+    "do_3": "Receive helpful insights about your cognitive strengths",
+    "privacy_heading": "Your Privacy & Rights",
+    "privacy_anonymous_label": "Completely Anonymous:",
+    "privacy_anonymous_body": "We don't ask for your name, email, or any personal information",
+    "privacy_stop_label": "Stop Anytime:",
+    "privacy_stop_body": "You can quit at any moment, no questions asked",
+    "privacy_secure_label": "Secure Data:",
+    "privacy_secure_body": "Your answers are protected and stored safely",
+    "privacy_research_label": "Research Only:",
+    "privacy_research_body": "Information used only to understand thinking patterns",
+    "important_heading": "Important Information",
+    "important_medical": "This is NOT a medical test. This tool is for learning about yourself and contributing to research. It cannot diagnose or treat any health condition.",
+    "important_help": "If you need help with mental health, please talk to a doctor, counselor, or trusted healthcare professional.",
+    "helps_heading": "How Your Information Helps",
+    "helps_body": "Your anonymous answers, combined with many others, help scientists understand how different people think. This research may be shared in scientific papers to help educators, researchers, and people everywhere better understand cognitive diversity.",
+    "age_heading": "Age Requirement",
+    "age_body": "You must be 18 years or older to participate. If you're under 18, please ask a parent or guardian to review this with you.",
+    "checkbox_intro": "I understand and agree:",
+    "checkbox_body": "I am 18 years or older. I have read and understand all the information above. I freely choose to participate in this research. I know I can stop at any time. I understand my answers will be kept anonymous and used only for research.",
+    "footer_contact": "Questions? Contact us at research@pcms.example",
+    "footer_ethics": "This research follows ethical guidelines for human subjects research."
+  },
+  "post_consent": {
+    "hero_subtitle": "Explore how you tend to think and learn—descriptive, not diagnostic",
+    "card_evidence_title": "Evidence-Based",
+    "card_evidence_body": "Draws on cognitive science and dimensional summaries (not medical testing)",
+    "card_adaptive_title": "Adaptive Assessment",
+    "card_adaptive_body": "Questions adapt based on your responses for personalized insights",
+    "card_insights_title": "Personalized Insights",
+    "card_insights_body": "See plain-language ideas that may fit your style—suggestions only, not prescriptions",
+    "diff_heading": "What Makes This Different",
+    "diff_traditional_heading": "Traditional Approaches",
+    "diff_traditional_1": "Categorical labels and diagnoses",
+    "diff_traditional_2": "One-size-fits-all assessments",
+    "diff_traditional_3": "Stigma and fixed mindsets",
+    "diff_ours_heading": "Our Approach",
+    "diff_ours_1": "Continuous dimensional profiling",
+    "diff_ours_2": "Adaptive, personalized questions",
+    "diff_ours_3": "Growth-oriented insights",
+    "start_cta": "Start Your Assessment",
+    "start_meta": "Approximately 10-15 minutes • Completely anonymous • Research contribution"
+  },
+  "nav": {
+    "home": "Home",
+    "questionnaire": "Questionnaire",
+    "results": "Results",
+    "introduction": "Introduction",
+    "consent": "Consent",
+    "sms_profile": "SMS code"
+  },
+  "sms_profile": {
+    "title": "Profile from SMS code",
+    "intro": "Paste a compact code (e.g. F7P8S3…) produced on the results page. Deciles are approximate; this is not a clinical record.",
+    "code_label": "Code",
+    "invalid": "Could not read this code. Check all ten dimensions are present.",
+    "dim_heading": "Approximate routing scores (%)",
+    "twilio_note": "Sending SMS requires a Twilio (or similar) backend — not bundled in this repository."
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "de": "Deutsch",
+    "tw": "Twi",
+    "wo": "Wolof"
+  },
+  "landing": {
+    "lead": "This platform collects anonymous responses for cognitive-science research. Please review the multi-step consent before you begin.",
+    "cta_consent": "Review consent & continue",
+    "cta_intro": "Read introduction first"
+  },
+  "ethics_consent": {
+    "progress": "Step {n} of {total}",
+    "confirm_label": "I have read this section carefully and confirm my understanding.",
+    "next": "Continue",
+    "back": "Back",
+    "finish": "Complete consent & continue to questionnaire",
+    "research_title": "What this system is",
+    "research_body": "This is a non-clinical research questionnaire. It measures self-reported tendencies on continuous dimensions for scientific understanding of cognitive diversity. It is not a clinical service and does not provide treatment or advice.",
+    "measured_title": "What is measured",
+    "measured_intro": "The assessment asks about preferences and typical behaviours. Ten dimensions summarise patterns (for example focus, sensory comfort, or planning style). Each score is a tendency on a scale — not an ability grade and not a medical label.",
+    "limits_title": "What is not measured",
+    "limits_body": "This tool does not measure IQ, does not diagnose any medical or psychiatric condition, and does not rank people as good or bad. There are no pass/fail outcomes. If you have health concerns, contact a qualified professional.",
+    "privacy_title": "What we store",
+    "privacy_body": "We store an anonymous session identifier, timestamps, your answers, response times, and derived statistical summaries needed for research. We do not collect your name, email, or postal address in this flow unless you separately contact the research team.",
+    "rights_title": "Your rights",
+    "rights_body": "You may stop at any time without penalty. You may request deletion of data linked to your session ID where technically possible. Contact the research team using the address shown in the consent materials. EU/UK-style data-subject requests can be logged for processing where applicable.",
+    "ghana_title": "Ghana / medical context",
+    "ghana_body": "This questionnaire does not replace a doctor, nurse, psychologist, or community health worker. It cannot detect or treat illness. In Ghana and elsewhere, use licensed professionals for medical decisions."
+  },
+  "ethics_assent": {
+    "title": "Before you view your results",
+    "intro": "Please confirm how you will use these results and acknowledge their limits.",
+    "cultural_label": "Cultural framing",
+    "cultural_western": "Western (default wording)",
+    "cultural_ghana": "Ghana / West Africa",
+    "cultural_universal": "Universal / mixed",
+    "use_label": "Intended use",
+    "use_self": "Personal self-understanding",
+    "use_research": "Participating in research",
+    "use_education": "Education / teaching",
+    "use_other": "Other",
+    "chk_nondiagnostic": "I understand these results are not a diagnosis and not a medical test.",
+    "chk_research": "I understand this tool is for research and self-reflection, not clinical care.",
+    "submit": "View results",
+    "error_incomplete": "Please answer all fields and tick both confirmations."
+  },
+  "ethics_results": {
+    "banner_title": "Important limitations",
+    "non_medical": "This is not a medical test.",
+    "non_diagnosis": "These results are not a diagnosis.",
+    "non_judgement": "Your profile is neither good nor bad — it describes tendencies, not worth.",
+    "ghana_medical": "This assessment does not replace a doctor, nurse, counsellor, or traditional healer where you need professional care.",
+    "delete_label": "Delete my data",
+    "delete_help": "Removes server-side rows for your session ID (where configured) and clears this browser."
+  },
+  "ethics_delete": {
+    "button": "Delete my data",
+    "confirm_title": "Delete stored data?",
+    "confirm_body": "This will request deletion of remote data for your session (if the server is configured) and clear local results in this browser.",
+    "confirm_action": "Yes, delete",
+    "cancel": "Cancel",
+    "done": "Deletion request completed. Local data cleared.",
+    "error": "Deletion could not be completed. You can still clear this browser’s storage from site settings."
+  }
+}
