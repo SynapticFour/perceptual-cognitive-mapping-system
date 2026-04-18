@@ -45,6 +45,7 @@ export default function CohortInsightsDashboard({
     <div className="space-y-10">
       <header className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
         <h1 className="text-xl font-semibold text-slate-900">{strings['cohortInsights.page_title']}</h1>
+        <p className="mt-2 text-sm font-medium text-indigo-900/90">{strings['cohortInsights.guidance_tagline']}</p>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">{strings['cohortInsights.page_intro']}</p>
         <p className="mt-2 text-xs text-slate-500">{strings['cohortInsights.aggregate_only']}</p>
       </header>

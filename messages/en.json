@@ -36,7 +36,8 @@
     "group_insights_hint": "Opens aggregate, non-identifying guidance if your program has enabled cohort insights."
   },
   "cohortInsights": {
-    "page_title": "Cohort insights",
+    "page_title": "Cohort Insights",
+    "guidance_tagline": "Insight → action · Guidance for human environments—not a clinical report or scorecard.",
     "page_intro": "This view turns pooled patterns into practical ideas for environments and facilitation. It is guidance—not a report card, score, or diagnosis.",
     "aggregate_only": "No individual results appear here; only group-level shapes and suggestions.",
     "section_landscape": "Cognitive landscape",

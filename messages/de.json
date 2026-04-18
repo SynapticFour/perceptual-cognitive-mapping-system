@@ -37,6 +37,7 @@
   },
   "cohortInsights": {
     "page_title": "Kohorten-Einblicke",
+    "guidance_tagline": "Einblick → Handlung · Orientierung für menschliche Umgebungen—kein klinischer Bericht oder Score.",
     "page_intro": "Diese Ansicht macht zusammengefasste Muster zu praktischen Ideen für Umgebung und Moderation. Es ist Orientierung—kein Bericht, keine Bewertung, keine Diagnose.",
     "aggregate_only": "Keine Einzelergebnisse; nur Gruppenformen und Vorschläge.",
     "section_landscape": "Kognitive Landschaft",

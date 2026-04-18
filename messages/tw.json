@@ -18,7 +18,8 @@
     "group_insights_hint": "Opens aggregate guidance when cohort insights are enabled."
   },
   "cohortInsights": {
-    "page_title": "Cohort insights",
+    "page_title": "Cohort Insights",
+    "guidance_tagline": "Insight → action · Guidance for human environments—not a clinical report.",
     "page_intro": "Pooled patterns as practical guidance—not diagnosis.",
     "aggregate_only": "No individual results; group-level only.",
     "section_landscape": "Cognitive landscape",

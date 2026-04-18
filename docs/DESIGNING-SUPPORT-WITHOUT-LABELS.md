@@ -2,6 +2,10 @@
 
 This document explains how the Perceptual & Cognitive Mapping System (PCMS) guidance layer stays **supportive**, **non-diagnostic**, and **useful in real environments**—without turning into a clinical or labeling tool.
 
+## Guidance system, not a reporting dashboard
+
+The cohort and support UX is intentionally a **guidance layer**: it turns statistical field shapes into **understandable insights**, **safe recommendations**, and **actionable ideas** for human environments (schedules, sensory conditions, communication norms). It is **not** an analytics product for sorting or labeling people, **not** a clinical report, and **not** a substitute for professional judgment. Where uncertainty matters, the UI shows **confidence bands** and copy reminds users that patterns are **probabilistic**.
+
 ## Why the system avoids diagnosis
 
 - **Scope**: The instrument measures self-reported response patterns for research and reflection. It is not a medical device and does not establish clinical conditions.

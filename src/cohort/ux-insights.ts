@@ -35,12 +35,13 @@ export function describeCohortRegionForTooltip(
   };
 }
 
+/** Short action-leaning titles; copy stays optional / non-prescriptive in descriptions. */
 const REC_TITLE: Record<string, string> = {
-  sensory_load: 'Consider steadier sensory conditions',
-  interruption_load: 'Consider clearer boundaries around interruptions',
-  uninterrupted_blocks: 'Consider protecting focus blocks',
-  group_interaction_load: 'Consider explicit communication norms',
-  structure_predictability: 'Consider visible structure and sequencing',
+  sensory_load: 'Reduce sudden noise changes',
+  interruption_load: 'Soften abrupt interruptions',
+  uninterrupted_blocks: 'Protect uninterrupted focus blocks',
+  group_interaction_load: 'Clarify communication norms',
+  structure_predictability: 'Prefer predictable structure',
 };
 
 function recommendationFromSignal(s: EnvironmentSignal): GuidanceRecommendation {
