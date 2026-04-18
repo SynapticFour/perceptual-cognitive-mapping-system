@@ -5,6 +5,8 @@ import { buildCohortCognitiveMap } from '@/cohort/cohort-cognitive-map';
 import { deriveEnvironmentSignals } from '@/cohort/environment-signals';
 import { mapInteractionFriction } from '@/cohort/interaction-friction';
 import {
+  validateAggregateStructure,
+  validateCohortIntelligenceBundle,
   validateCohortModelView,
   validateCohortPayloadCopy,
   validateEnvironmentSignals,
@@ -80,6 +82,22 @@ describe('environment + validation', () => {
 
   it('documents banned terms', () => {
     expect(BANNED_DIAGNOSTIC_TERMS.length).toBeGreaterThan(3);
+  });
+
+  it('validateAggregateStructure passes for built cohort maps', () => {
+    const cm = buildCohortCognitiveMap([makeModel(8), makeModel(9)]);
+    const s = validateAggregateStructure(cm);
+    expect(s.passesDistributionCheck).toBe(true);
+    expect(s.issues).toHaveLength(0);
+  });
+
+  it('validateCohortIntelligenceBundle combines checks', () => {
+    const cm = buildCohortCognitiveMap([makeModel(10)]);
+    const env = deriveEnvironmentSignals(cm);
+    const friction = mapInteractionFriction(cm);
+    const bundle = validateCohortIntelligenceBundle(cm, env, friction);
+    expect(bundle.passesNonDiagnosticLanguage).toBe(true);
+    expect(bundle.passesAggregateOnly).toBe(true);
   });
 });
 

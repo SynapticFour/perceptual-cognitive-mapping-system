@@ -42,8 +42,7 @@ export default function CohortIntelligencePanel({
   const [tab, setTab] = useState<Tab>('map');
 
   const mapSvg = useMemo(() => {
-    const pts = cohortModel.cohortPoints;
-    if (pts.length === 0) {
+    if (cohortModel.regions.length === 0) {
       return <p className="text-sm text-slate-600">{cohortModel.summaryExplanation}</p>;
     }
     const w = 320;
@@ -65,15 +64,6 @@ export default function CohortIntelligencePanel({
             r={8 + 14 * Math.min(1, r.weight / (cohortModel.regions[0]?.weight || 1))}
             fill={`hsla(${200 + i * 28}, 55%, 78%, 0.55)`}
             stroke="rgba(15,23,42,0.25)"
-          />
-        ))}
-        {pts.map((p, i) => (
-          <circle
-            key={`p-${i}`}
-            cx={pad + p.x * (w - 2 * pad)}
-            cy={pad + (1 - p.y) * (h - 2 * pad)}
-            r={2.2}
-            fill="rgba(51,65,85,0.55)"
           />
         ))}
       </svg>

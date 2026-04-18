@@ -31,7 +31,36 @@
     "research_consent_note": "Sa xibaar dinañu denc ci sirri te mën nañu ko jëfandikoo ci seetlu. Amul benn xibaar bu ñu joxe lu ñu ma wax nga jëfandikoo.",
     "revision_notice": "Lii mooy yeesal {n} ci sa jëmm gi.",
     "max_length_notice": "Jëmm gi pare na ci gën a gudd. Njàngale bi ci lim yi ci tontu yi lépp.",
-    "title": "Sa profil bu xalaat ak xel"
+    "title": "Sa profil bu xalaat ak xel",
+    "group_insights_link": "Xool xew-xew bu mbooloo mi",
+    "group_insights_hint": "Ubbi xew-xew bu ñu boole, buñu jot na ci kohort bi."
+  },
+  "cohortInsights": {
+    "page_title": "Xew-xew bu mbooloo mi",
+    "page_intro": "Yoon yi dinañu jëfandikoo ngir yombul ak mbooloo mi. Du dawtal, du lim, du benn ndigal.",
+    "aggregate_only": "Amul benn njàngale bu nit ku nekk; rekk mbooloo ak yëg-yëg.",
+    "section_landscape": "Dëkk bu xalaat",
+    "landscape_hint": "Dëkk yi waxandeer nañu fu mbooloo mi di jëkk a taxaw (du nit ku nekk).",
+    "landscape_aria": "Dëkk bu mbooloo mi ak yu taxaw rekk",
+    "section_insights": "Yëg-yëg yu mag",
+    "section_environment": "Yëg-yëg ci dëkk bi",
+    "env_optional_lead": "Yëg-yëg yu wóorul — mën nga leen jëfandikoo lu nekk ci sa mbir mi.",
+    "rationale_label": "Lu tax mu am solo:",
+    "section_dynamics": "Mbooloo mi ak yëg-yëg",
+    "dynamics_lead": "Waxin bu nekkul solo ci wuute yi mën nañu nekk ci benn béréb — jëkk a wax ci melokaan, du solo.",
+    "why_seeing": "Lu tax ma gis loolu?",
+    "confidence_tooltip": "Yëg-yëg yii dañu leen joxe ci yoon yi ñu gis — du benn waxin bu jeex.",
+    "pattern_library_note": "Jëmm ci biir yoon yi",
+    "pattern_library_body": "Yoon yu kenn xam du wax mbooloo mi rekk — du ay kategori ci nit ñi.",
+    "footer_uncertainty": "Jëfandikoo leen ngir waxtaan ak tànn yu ndaw — du leen joxe solo bu mag ci liggéey bi walla ci dawtal."
+  },
+  "supportInsights": {
+    "heading": "Yëg-yëg ci ndimbal",
+    "private_note": "Rekk ci séans bii — du ci xew-xew bu mbooloo mi.",
+    "intro": "Yëg-yëg yu ndaw yu nekkul dawtal, ci sa tontu yi — yëg yu nga mën a seet, du lay wax nga war a def.",
+    "observed": "Lan lañuy gis",
+    "may_help": "Lan mën na dimmali",
+    "signal_label": "Tontu bu ndimbal"
   },
   "banner": {
     "all_met": "Yëg-yëg bu seetlu am na ci yoon yi lépp.",

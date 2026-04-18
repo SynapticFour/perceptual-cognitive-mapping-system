@@ -69,3 +69,80 @@ export function validateFrictionSignals(signals: FrictionSignal[]): CohortValida
   const texts = signals.flatMap((s) => [s.explanation, s.suggestion, ...s.traits]);
   return validateCohortPayloadCopy(texts);
 }
+
+/**
+ * Distribution / shape check: cohort outputs should reflect pooled activations only
+ * (aligned point/weight arrays; regional trait mass normalized where present).
+ */
+export function validateAggregateStructure(model: CohortModel): {
+  passesDistributionCheck: boolean;
+  issues: string[];
+} {
+  const issues: string[] = [];
+  if (model.cohortPoints.length !== model.cohortWeights.length) {
+    issues.push('cohortPoints and cohortWeights must have the same length (one weight per pooled activation).');
+  }
+  for (const r of model.regions) {
+    const vals = Object.values(r.traitDistribution);
+    if (vals.length === 0) continue;
+    const sum = vals.reduce((a, b) => a + b, 0);
+    if (Math.abs(sum - 1) > 0.08) {
+      issues.push(`Region ${r.id}: trait mass should be approximately normalized (sum ${sum.toFixed(3)}).`);
+    }
+  }
+  return { passesDistributionCheck: issues.length === 0, issues };
+}
+
+/**
+ * Run structure + language checks on a cohort model and optional derived signals.
+ * Use before publishing aggregate payloads or rendering public cohort views.
+ */
+export function validateCohortIntelligenceBundle(
+  model: CohortModel,
+  environmentSignals?: EnvironmentSignal[],
+  frictionSignals?: FrictionSignal[]
+): CohortValidationResult {
+  const structural = validateAggregateStructure(model);
+  const modelView = validateCohortModelView(model);
+  const envResult = environmentSignals?.length ? validateEnvironmentSignals(environmentSignals) : null;
+  const frResult = frictionSignals?.length ? validateFrictionSignals(frictionSignals) : null;
+
+  const bannedTermHits = [
+    ...new Set([
+      ...modelView.bannedTermHits,
+      ...(envResult?.bannedTermHits ?? []),
+      ...(frResult?.bannedTermHits ?? []),
+    ]),
+  ];
+
+  const issues = [
+    ...modelView.issues,
+    ...(structural.passesDistributionCheck ? [] : structural.issues),
+    ...(envResult?.issues ?? []),
+    ...(frResult?.issues ?? []),
+  ];
+  const uniqueIssues = [...new Set(issues)];
+
+  return {
+    passesNoIndividualExposure:
+      modelView.passesNoIndividualExposure &&
+      (envResult?.passesNoIndividualExposure ?? true) &&
+      (frResult?.passesNoIndividualExposure ?? true),
+    passesNonDiagnosticLanguage:
+      modelView.passesNonDiagnosticLanguage &&
+      (envResult?.passesNonDiagnosticLanguage ?? true) &&
+      (frResult?.passesNonDiagnosticLanguage ?? true),
+    /** True when pooled structure is valid and optional signal copy passes checks. */
+    passesAggregateOnly:
+      structural.passesDistributionCheck &&
+      modelView.passesAggregateOnly &&
+      (envResult?.passesAggregateOnly ?? true) &&
+      (frResult?.passesAggregateOnly ?? true),
+    bannedTermHits,
+    issues: uniqueIssues,
+    interpretabilityNotes: [
+      ...modelView.interpretabilityNotes,
+      ...(structural.passesDistributionCheck ? [] : ['Verify cohort build used pooled activations only.']),
+    ],
+  };
+}

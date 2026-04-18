@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useRouter } from '@/i18n/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
 import type { StoredPipelineSession } from '@/types/pipeline-session';
 import type { CognitiveProfilePublic } from '@/types/profile-public';
 import { ROUTING_WEIGHT_KEYS } from '@/adaptive/routing-tags';
@@ -30,6 +30,9 @@ import EthicsResultsBanner from '@/components/ethics/EthicsResultsBanner';
 import ResultsAssentGate from '@/components/ethics/ResultsAssentGate';
 import DeleteMyDataButton from '@/components/ethics/DeleteMyDataButton';
 import { encodeProfileVectorCode } from '@/lib/sms-export';
+import { computeEarlySupportSignals } from '@/cohort';
+import { buildCognitiveModel } from '@/core/cognitive-pipeline';
+import SupportInsightsSection from '@/components/cohort/SupportInsightsSection';
 
 const PIPELINE_STORAGE_KEY = 'pcms-pipeline-result';
 
@@ -53,6 +56,7 @@ export default function ResultsPage() {
   const [loading, setLoading] = useState(true);
   const [assessmentCtx, setAssessmentCtx] = useState<AssessmentContext | null>(null);
   const [needsAssent, setNeedsAssent] = useState(false);
+  const [groupInsightsAvailable, setGroupInsightsAvailable] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -119,6 +123,22 @@ export default function ResultsPage() {
     setNeedsAssent(!ctx);
   }, [loading, session, urlShare]);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const q = new URLSearchParams(window.location.search);
+    if (q.get('groupInsights') === '1') {
+      setGroupInsightsAvailable(true);
+      return;
+    }
+    if (localStorage.getItem('pcms-show-group-insights') === '1') {
+      setGroupInsightsAvailable(true);
+      return;
+    }
+    if (process.env.NEXT_PUBLIC_PCMS_SHOW_COHORT_INSIGHTS === '1') {
+      setGroupInsightsAvailable(true);
+    }
+  }, []);
+
   const confidenceComponents: ConfidenceComponents | null = useMemo(() => {
     if (session) return session.scoringResult.confidenceComponents;
     if (urlShare) return confidenceComponentsFromSharePayload(urlShare);
@@ -139,6 +159,22 @@ export default function ResultsPage() {
     if (urlShare) return publicProfileFromShare(urlShare, ui);
     return null;
   }, [session, urlShare, ui]);
+
+  const cognitiveModelForSupport = useMemo(() => {
+    if (!session || !display || !confidenceComponents) return null;
+    return buildCognitiveModel({
+      embeddingVector: session.embedding.vector,
+      embeddingDimension: session.embedding.dimension,
+      display,
+      confidenceComponents,
+      strings: ui,
+    });
+  }, [session, display, confidenceComponents, ui]);
+
+  const supportSignals = useMemo(() => {
+    if (!cognitiveModelForSupport) return [];
+    return computeEarlySupportSignals(cognitiveModelForSupport, { maxSignals: 4 });
+  }, [cognitiveModelForSupport]);
 
   const handleRestart = useCallback(() => {
     localStorage.removeItem(PIPELINE_STORAGE_KEY);
@@ -323,6 +359,18 @@ export default function ResultsPage() {
           />
         </div>
 
+        {groupInsightsAvailable ? (
+          <div className="mb-6 text-center">
+            <Link
+              href="/cohort-insights"
+              className="inline-flex rounded-lg border border-indigo-200 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-900 shadow-sm hover:bg-indigo-100"
+            >
+              {ui['results.group_insights_link']}
+            </Link>
+            <p className="mx-auto mt-2 max-w-2xl text-xs text-slate-600">{ui['results.group_insights_hint']}</p>
+          </div>
+        ) : null}
+
         {session ? (
           <section
             className="mb-8 rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6"
@@ -378,6 +426,10 @@ export default function ResultsPage() {
             }
           />
         </div>
+
+        {session && supportSignals.length > 0 ? (
+          <SupportInsightsSection signals={supportSignals} strings={ui} />
+        ) : null}
 
         {session ? (
           <div className="mb-10 max-w-full">

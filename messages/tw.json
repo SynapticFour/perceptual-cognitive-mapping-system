@@ -13,7 +13,36 @@
   "results": {
     "title": "Wo nkomo mu nsem",
     "sms_code_copy": "Copy SMS profile code",
-    "sms_code_copied": "Code copied."
+    "sms_code_copied": "Code copied.",
+    "group_insights_link": "View group insights",
+    "group_insights_hint": "Opens aggregate guidance when cohort insights are enabled."
+  },
+  "cohortInsights": {
+    "page_title": "Cohort insights",
+    "page_intro": "Pooled patterns as practical guidance—not diagnosis.",
+    "aggregate_only": "No individual results; group-level only.",
+    "section_landscape": "Cognitive landscape",
+    "landscape_hint": "Regions show pooled emphasis clusters.",
+    "landscape_aria": "Cohort landscape with regional highlights",
+    "section_insights": "Key insights",
+    "section_environment": "Environment recommendations",
+    "env_optional_lead": "Optional ideas—adapt to your context.",
+    "rationale_label": "Why this may matter:",
+    "section_dynamics": "Interaction signals",
+    "dynamics_lead": "Neutral read on differences that may coexist.",
+    "why_seeing": "Why am I seeing this?",
+    "confidence_tooltip": "Probabilistic insights from patterns—not definitive conclusions.",
+    "pattern_library_note": "Pattern library overlap",
+    "pattern_library_body": "Anonymized aggregate context only.",
+    "footer_uncertainty": "For conversation and experiments—not a substitute for professional care."
+  },
+  "supportInsights": {
+    "heading": "Support insights",
+    "private_note": "Private to this session.",
+    "intro": "Early, non-diagnostic hints—suggestions to explore.",
+    "observed": "What we notice",
+    "may_help": "What may help",
+    "signal_label": "Support note"
   },
   "dims": {
     "F": {

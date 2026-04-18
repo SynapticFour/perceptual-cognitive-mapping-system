@@ -23,8 +23,8 @@ This document describes the **aggregate-only** cohort layer on top of individual
 ## Ethical Design Principles
 
 1. **No individual exposure**: cohort exports must not contain user ids, emails, or session handles. Use `validateCohortModelView` and `assertNoIndividualPayload` before publishing aggregate JSON.
-2. **Non-diagnostic language**: `BANNED_DIAGNOSTIC_TERMS` guards against clinical wording in public strings.
-3. **Distribution check**: all metrics are derived from **pooled** activations or regional mass—never from a single row labeled as a person in the cohort view.
+2. **Non-diagnostic language**: `BANNED_DIAGNOSTIC_TERMS` guards against clinical wording in public strings (`validateCohortPayloadCopy`, `validateEnvironmentSignals`, `validateFrictionSignals`).
+3. **Distribution check**: `validateAggregateStructure` verifies aligned `cohortPoints` / `cohortWeights` and normalized regional trait mass. Use **`validateCohortIntelligenceBundle`** to run structure + language checks on a `CohortModel` plus optional environment and friction signals before export or public UI.
 4. **Interpretability**: each signal type includes an `explanation` field describing what was measured in plain language.
 
 ## Pattern Library (Global)
@@ -40,5 +40,7 @@ This document describes the **aggregate-only** cohort layer on top of individual
 
 ## UI: Cohort Map · Environment Insights · Interaction Dynamics
 
-- `CohortIntelligencePanel` provides three tabs: aggregate map + metrics, environment narratives, interaction / pattern overlap.
-- All views are aggregate-only; individual-level hints are **not** included in this component.
+- **`CohortInsightsDashboard`** (`src/components/cohort/CohortInsightsDashboard.tsx`) is the guidance-oriented cohort view: regional landscape (no individual points), key insights (capped), optional environment recommendation cards, and neutral interaction signals—with confidence bands and “Why am I seeing this?” expanders.
+- `CohortIntelligencePanel` remains a compact three-tab aggregate panel for embedding.
+- Individual-only **Support insights** live in `SupportInsightsSection` on the private results page—not on cohort views.
+- See also [Designing for support without labels](./DESIGNING-SUPPORT-WITHOUT-LABELS.md).

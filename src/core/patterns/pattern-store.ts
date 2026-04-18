@@ -103,5 +103,5 @@ export function getPatternLibrarySnapshot(): PatternLibrarySnapshot {
 /** Return top patterns by support (descriptive co-activation, not diagnostic). */
 export function getTopPatterns(limit = 12): CognitivePattern[] {
   const snap = getPatternLibrarySnapshot();
-  return snap.patterns.slice(0, limit);
+  return [...snap.patterns].sort((a, b) => b.support - a.support || b.strength - a.strength).slice(0, limit);
 }

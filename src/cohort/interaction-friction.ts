@@ -57,9 +57,9 @@ export function mapInteractionFriction(
       traits: [a, b],
       strength,
       explanation:
-        'Different interaction styles appear strongly represented in separate aggregate regions, which may create friction in shared communication or pacing expectations.',
+        'Different interaction styles are strongly represented, which may lead to friction in communication expectations. At the aggregate level, these constructs concentrate in different regions—reflecting diverse norms, not conflict between named individuals.',
       suggestion:
-        'Team agreements that make norms explicit (channels, interruption rules, depth vs breadth of exploration) tend to help without singling anyone out.',
+        'Shared agreements that make norms explicit (channels, interruption rules, depth vs breadth of exploration) tend to help without singling anyone out.',
     });
   }
 

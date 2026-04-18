@@ -31,7 +31,36 @@
     "research_consent_note": "Ihre Daten wurden anonym gespeichert und können für wissenschaftliche Forschung genutzt werden. Es wurden keine personenbezogenen Daten über Ihre ausdrückliche Einwilligung hinaus erfasst.",
     "revision_notice": "Dies ist Revision {n} Ihrer Bewertung.",
     "max_length_notice": "Maximale Bewertungslänge erreicht. Die Ergebnisse basieren auf allen gegebenen Antworten.",
-    "title": "Ihr kognitives Profil"
+    "title": "Ihr kognitives Profil",
+    "group_insights_link": "Gruppeneinblicke",
+    "group_insights_hint": "Öffnet aggregierte, nicht identifizierende Hinweise, wenn Ihr Programm Kohortenansichten aktiviert hat."
+  },
+  "cohortInsights": {
+    "page_title": "Kohorten-Einblicke",
+    "page_intro": "Diese Ansicht macht zusammengefasste Muster zu praktischen Ideen für Umgebung und Moderation. Es ist Orientierung—kein Bericht, keine Bewertung, keine Diagnose.",
+    "aggregate_only": "Keine Einzelergebnisse; nur Gruppenformen und Vorschläge.",
+    "section_landscape": "Kognitive Landschaft",
+    "landscape_hint": "Regionen zeigen, wo Schwerpunkte im gemeinsamen Modell liegen (nicht einzelne Personen).",
+    "landscape_aria": "Kohorten-Landschaft nur mit regionalen Hervorhebungen",
+    "section_insights": "Kernaussagen",
+    "section_environment": "Umgebungsempfehlungen",
+    "env_optional_lead": "Optionale Ideen—keine Vorschriften. Passen Sie an Ihren Kontext an.",
+    "rationale_label": "Warum das relevant sein kann:",
+    "section_dynamics": "Interaktionssignale",
+    "dynamics_lead": "Neutrale Lesart von Unterschieden, die nebeneinander vorkommen können—Passung statt Schuld.",
+    "why_seeing": "Warum sehe ich das?",
+    "confidence_tooltip": "Diese Einblicke sind probabilistisch und auf beobachteten Mustern basierend—keine endgültigen Schlüsse.",
+    "pattern_library_note": "Musterbibliothek-Überlappung",
+    "pattern_library_body": "Anonymisierte Co-Aktivierungsmuster liefern Kontext für Aggregate, keine Kategorien für Personen.",
+    "footer_uncertainty": "Nutzen Sie diese Hinweise für Gespräche und kleine Experimente. Sie ersetzen kein professionelles Urteil oder klinische Versorgung."
+  },
+  "supportInsights": {
+    "heading": "Unterstützungshinweise",
+    "private_note": "Nur für diese Sitzung—nicht in Gruppenansichten.",
+    "intro": "Frühe, nicht-diagnostische Hinweise auf Basis Ihres Antwortfeldes—Vorschläge zum Erkunden, keine Anweisungen.",
+    "observed": "Was wir bemerken",
+    "may_help": "Was helfen kann",
+    "signal_label": "Hinweis"
   },
   "banner": {
     "all_met": "Forschungsnahes Vertrauen auf allen Dimensionen erreicht.",

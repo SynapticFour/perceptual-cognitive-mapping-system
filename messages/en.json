@@ -31,7 +31,36 @@
     "research_consent_note": "Your data has been stored anonymously and may be used for scientific research. No personal information was collected beyond what you explicitly consented to.",
     "revision_notice": "This is revision {n} of your assessment.",
     "max_length_notice": "Maximum assessment length reached. Results are based on all answers provided.",
-    "title": "Your cognitive profile"
+    "title": "Your cognitive profile",
+    "group_insights_link": "View group insights",
+    "group_insights_hint": "Opens aggregate, non-identifying guidance if your program has enabled cohort insights."
+  },
+  "cohortInsights": {
+    "page_title": "Cohort insights",
+    "page_intro": "This view turns pooled patterns into practical ideas for environments and facilitation. It is guidance—not a report card, score, or diagnosis.",
+    "aggregate_only": "No individual results appear here; only group-level shapes and suggestions.",
+    "section_landscape": "Cognitive landscape",
+    "landscape_hint": "Regions show where pooled emphasis clusters in a shared map (not individual locations).",
+    "landscape_aria": "Cohort cognitive landscape with regional highlights only",
+    "section_insights": "Key insights",
+    "section_environment": "Environment recommendations",
+    "env_optional_lead": "These are optional ideas to consider—not requirements. Adapt what fits your context.",
+    "rationale_label": "Why this may matter:",
+    "section_dynamics": "Interaction signals",
+    "dynamics_lead": "Neutral read on differences that may show up together—focus on fit, not fault.",
+    "why_seeing": "Why am I seeing this?",
+    "confidence_tooltip": "These insights are probabilistic and based on observed patterns, not definitive conclusions.",
+    "pattern_library_note": "Pattern library overlap",
+    "pattern_library_body": "When present, anonymized co-activation patterns add context. They describe tendencies in the aggregate, not categories for people.",
+    "footer_uncertainty": "Use these notes to prompt conversation and small experiments. They do not replace professional judgment or clinical care."
+  },
+  "supportInsights": {
+    "heading": "Support insights",
+    "private_note": "Private to this session — not shown in group views.",
+    "intro": "Early, non-diagnostic hints based on your response field. They are suggestions you might explore—not instructions.",
+    "observed": "What we notice",
+    "may_help": "What may help",
+    "signal_label": "Support note"
   },
   "banner": {
     "all_met": "Research-grade confidence achieved across all dimensions.",

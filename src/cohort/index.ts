@@ -9,6 +9,8 @@ export {
   validateCohortModelView,
   validateEnvironmentSignals,
   validateFrictionSignals,
+  validateAggregateStructure,
+  validateCohortIntelligenceBundle,
   assertNoIndividualPayload,
   BANNED_DIAGNOSTIC_TERMS,
 } from '@/cohort/cohort-validation';
@@ -30,9 +32,28 @@ export type {
   CohortValidationResult,
 } from '@/cohort/types';
 
+export type {
+  GuidanceInsight,
+  GuidanceRecommendation,
+  InteractionDynamicsItem,
+  InsightConfidenceBand,
+} from '@/cohort/ux-types';
+export { MAX_GUIDANCE_INSIGHTS, MAX_EARLY_SUPPORT_SIGNALS_UI } from '@/cohort/ux-types';
+export { sanitizeGuidanceText, clampInsightList } from '@/cohort/ux-copy-safety';
+export {
+  buildGuidanceInsights,
+  buildGuidanceRecommendations,
+  buildInteractionDynamics,
+  describeCohortRegionForTooltip,
+  numericToConfidenceBand,
+} from '@/cohort/ux-insights';
+
 export {
   getPatternLibrarySnapshot,
   getTopPatterns,
   recordUserSignatureWithContext,
   type PatternLibrarySnapshot,
 } from '@/core/patterns/pattern-store';
+
+/** Alias matching documentation: global pattern store snapshot (`patterns`, `lastUpdated`, `totalSignatures`). */
+export type { PatternLibrarySnapshot as PatternLibrary } from '@/core/patterns/pattern-store';
