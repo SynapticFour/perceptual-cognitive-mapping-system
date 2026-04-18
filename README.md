@@ -56,6 +56,7 @@ If a user does want to understand how their PCMS profile relates to common neuro
 - **Potential Stressors**: Identification of challenging situations (where configured in copy)
 - **Interactive visualization**: Results **cognitive landscape** — **constellation** of micro-trait activations (map / density / vector) over **one** shared latent projection (`src/core/cognitive-pipeline.ts`, `src/core/traits`, `src/ui/CognitiveViewSwitcher.tsx`); optional **emergent co-activation patterns** learned only from signatures recorded in the same browser session (`src/core/patterns`); dimensional bars and insight cards; **Recharts** on research dashboards (not the main results map)
 - **Cultural adaptation**: Multiple question banks and locales (e.g. universal and Ghana-tuned items in `content/questions/`)
+- **Cohort Intelligence Layer** (aggregate only): shared cognitive map, environment and interaction insights, global pattern library, validation — see [`docs/COHORT-INTELLIGENCE.md`](./docs/COHORT-INTELLIGENCE.md) (not classification analytics; no labels in group views)
 
 ### Research Infrastructure
 - **Publication-Ready Data**: Structured datasets for statistical analysis

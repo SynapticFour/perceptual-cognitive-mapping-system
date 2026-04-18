@@ -574,6 +574,12 @@ await supabase
   });
 ```
 
+### Cohort intelligence (derived, in-memory)
+
+Group-level **cohort** views are **not** a separate database table. They are **derived** in the client or tooling from multiple `CognitiveModel` instances: see `CohortModel` in `src/cohort/types.ts` and `buildCohortCognitiveMap` in `src/cohort/cohort-cognitive-map.ts`. Pooled activations are projected in one shared 2D space; **no** per-user keys belong in published cohort JSON (see `validateCohortIntelligenceBundle` in `src/cohort/cohort-validation.ts`).
+
+- **Full spec:** [COHORT-INTELLIGENCE.md](./COHORT-INTELLIGENCE.md)
+
 ### Conclusion
 
 The PCMS data model provides a robust, privacy-preserving foundation for cognitive research while maintaining the flexibility needed for future enhancements. The anonymous, session-based approach ensures participant privacy while enabling sophisticated research analyses.

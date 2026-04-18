@@ -2,7 +2,11 @@
 
 export { buildCohortCognitiveMap } from '@/cohort/cohort-cognitive-map';
 export { deriveEnvironmentSignals, cohortTraitShares } from '@/cohort/environment-signals';
-export { mapInteractionFriction, DEFAULT_FRICTION_PAIRS } from '@/cohort/interaction-friction';
+export {
+  mapInteractionFriction,
+  DEFAULT_FRICTION_PAIRS,
+  FRICTION_SCENARIOS,
+} from '@/cohort/interaction-friction';
 export { matchCohortToKnownPatterns } from '@/cohort/pattern-cohort-match';
 export {
   validateCohortPayloadCopy,
@@ -54,6 +58,8 @@ export {
   recordUserSignatureWithContext,
   type PatternLibrarySnapshot,
 } from '@/core/patterns/pattern-store';
+/** Spec name: alias of {@link getPatternLibrarySnapshot} (global pattern library; no PII). */
+export { getPatternLibrarySnapshot as getPatternLibrary } from '@/core/patterns/pattern-store';
 
 /** Alias matching documentation: global pattern store snapshot (`patterns`, `lastUpdated`, `totalSignatures`). */
 export type { PatternLibrarySnapshot as PatternLibrary } from '@/core/patterns/pattern-store';

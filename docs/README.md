@@ -15,6 +15,10 @@
 - **[Hypotheses](../lib/research/hypotheses.md)** - Research hypotheses and expected outcomes
 - **[Related Work](../lib/research/related_work.md)** - Literature review and theoretical background
 
+#### **Cohort intelligence (aggregate groups)**
+- **[Cohort Intelligence Layer](./COHORT-INTELLIGENCE.md)** - Cohort map, environment insights, interaction dynamics, global pattern library, private early-support signals, validation, non-goals
+- **[Designing for support without labels](./DESIGNING-SUPPORT-WITHOUT-LABELS.md)** - Guidance copy and why cohort views stay aggregate-only
+
 #### **Ethics and Compliance**
 - **[Ethics Framework v1.0](./ethics.md)** - Ethical guidelines and non-diagnostic clarifications
 - **GDPR tables** (after base schema): [`../supabase/migrations/20260413120000_ethics_gdpr.sql`](../supabase/migrations/20260413120000_ethics_gdpr.sql)

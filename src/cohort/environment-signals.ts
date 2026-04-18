@@ -2,7 +2,8 @@ import type { CohortModel, EnvironmentSignal } from '@/cohort/types';
 
 /**
  * Trait → environment construct: descriptive drivers, not medical claims.
- * Values are trait ids that lift the corresponding environment signal when their cohort share is high.
+ * Spec concepts map to PCMS `traitId`s (e.g. interruption load uses `attention_switching` for
+ * “distractibility”-style salience; sensory load uses `sensory_sensitivity` for noise/light variability).
  */
 const SIGNAL_DRIVERS: {
   id: string;
@@ -49,6 +50,30 @@ const SIGNAL_DRIVERS: {
       'This environment may benefit from predictable structure and visible sequencing when routine and system-oriented constructs dominate.',
     explanation:
       'Aggregate weight on structure-seeking constructs suggests value in stable cadence and explicit ordering of activities.',
+  },
+  {
+    id: 'temporal_cues',
+    traitIds: ['temporal_perception', 'steady_pacing'],
+    narrative:
+      'This environment may benefit from visible timing, rhythm, and advance notice of schedule shifts when time-salient and even-pacing constructs are strong in the aggregate.',
+    explanation:
+      'Pooled weight on temporal structure suggests that unannounced changes to timing may create unnecessary friction; calendars and countdown-to-transition cues help at the group level.',
+  },
+  {
+    id: 'affect_transition_space',
+    traitIds: ['emotional_reactivity', 'interoceptive_awareness'],
+    narrative:
+      'This environment may benefit from gentler transition pacing and fewer simultaneous demands when affect- and interoception-related constructs are salient in the group pattern.',
+    explanation:
+      'Aggregated regulatory constructs point to valuing space between context shifts—an environment design hint, not a comment on any individual.',
+  },
+  {
+    id: 'pathway_flexibility',
+    traitIds: ['exploratory_breadth', 'linear_inference'],
+    narrative:
+      'This environment may benefit from materials that offer both a clear default path and optional exploration branches when both breadth-first and stepwise patterns are well represented.',
+    explanation:
+      'Cohort mass on exploratory vs linear styles suggests value in parallel tracks (summary path plus optional deep dive) rather than a single format for everyone.',
   },
 ];
 

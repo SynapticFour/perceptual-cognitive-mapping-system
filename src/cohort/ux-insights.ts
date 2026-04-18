@@ -42,6 +42,9 @@ const REC_TITLE: Record<string, string> = {
   uninterrupted_blocks: 'Protect uninterrupted focus blocks',
   group_interaction_load: 'Clarify communication norms',
   structure_predictability: 'Prefer predictable structure',
+  temporal_cues: 'Make timing and transitions visible',
+  affect_transition_space: 'Ease transitions and co-occurring demands',
+  pathway_flexibility: 'Offer a clear path and optional branches',
 };
 
 function recommendationFromSignal(s: EnvironmentSignal): GuidanceRecommendation {

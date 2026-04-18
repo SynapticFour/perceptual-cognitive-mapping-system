@@ -1,3 +1,8 @@
+/**
+ * Cohort-level cognitive map: pools activations from many {@link CognitiveModel}s into one
+ * shared 2D projection and regional structure — aggregate only, not attributable to individuals.
+ * @see docs/COHORT-INTELLIGENCE.md
+ */
 import type { CognitiveModel } from '@/core/cognitive-pipeline';
 import type { CognitiveActivation } from '@/core/traits/types';
 import {

@@ -3,7 +3,7 @@ import { ROUTING_WEIGHT_KEYS } from '@/adaptive/routing-tags';
 import { buildCognitiveModel } from '@/core/cognitive-pipeline';
 import { buildCohortCognitiveMap } from '@/cohort/cohort-cognitive-map';
 import { deriveEnvironmentSignals } from '@/cohort/environment-signals';
-import { mapInteractionFriction } from '@/cohort/interaction-friction';
+import { FRICTION_SCENARIOS, mapInteractionFriction } from '@/cohort/interaction-friction';
 import {
   validateAggregateStructure,
   validateCohortIntelligenceBundle,
@@ -14,7 +14,8 @@ import {
 } from '@/cohort/cohort-validation';
 import { matchCohortToKnownPatterns } from '@/cohort/pattern-cohort-match';
 import { minePatterns } from '@/core/patterns/pattern-mining';
-import { getTopPatterns, recordUserSignatureWithContext, resetPatternStoreForTests } from '@/core/patterns/pattern-store';
+import { getPatternLibrary, getTopPatterns, recordUserSignatureWithContext } from '@/cohort';
+import { getPatternLibrarySnapshot, resetPatternStoreForTests } from '@/core/patterns/pattern-store';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
 import { defaultUiStrings } from '@/lib/ui-strings';
 import type { ConfidenceComponents } from '@/scoring';
@@ -72,7 +73,16 @@ describe('environment + validation', () => {
     const env = deriveEnvironmentSignals(cm);
     const v = validateEnvironmentSignals(env);
     expect(v.passesNonDiagnosticLanguage).toBe(true);
-    expect(env.length).toBeGreaterThan(0);
+    expect(env.length).toBe(8);
+  });
+
+  it('exports friction scenarios for each default pair', () => {
+    expect(FRICTION_SCENARIOS.length).toBeGreaterThanOrEqual(3);
+    for (const s of FRICTION_SCENARIOS) {
+      expect(s.pair.length).toBe(2);
+      expect(s.explanation.length).toBeGreaterThan(20);
+      expect(s.suggestion.length).toBeGreaterThan(20);
+    }
   });
 
   it('rejects banned diagnostic language', () => {
@@ -104,6 +114,10 @@ describe('environment + validation', () => {
 describe('pattern library + cohort match', () => {
   beforeEach(() => {
     resetPatternStoreForTests();
+  });
+
+  it('getPatternLibrary matches getPatternLibrarySnapshot', () => {
+    expect(getPatternLibrary()).toEqual(getPatternLibrarySnapshot());
   });
 
   it('matches cohort emphasis to mined patterns', () => {
