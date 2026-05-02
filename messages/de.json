@@ -34,7 +34,26 @@
     "max_length_notice": "Maximale Bewertungslänge erreicht. Die Ergebnisse basieren auf allen gegebenen Antworten.",
     "title": "Ihr kognitives Profil",
     "group_insights_link": "Gruppeneinblicke",
-    "group_insights_hint": "Öffnet aggregierte, nicht identifizierende Hinweise, wenn Ihr Programm Kohortenansichten aktiviert hat."
+    "group_insights_hint": "Öffnet aggregierte, nicht identifizierende Hinweise, wenn Ihr Programm Kohortenansichten aktiviert hat.",
+    "eight_constructs": {
+      "heading": "Acht Konstrukt-Skalen (diese Sitzung)",
+      "intro": "Diese Werte fassen Ihre Antworten aus der globalen Verhaltensbank zusammen. Sie sind getrennt von den zehn Routing-Dimensionen (F–V) für Motor und Landschaft—beide Ebenen werden aus Transparenz berichtet.",
+      "foot_note": "Reliabilität in der Population (ω, α) und IRT-Parameter werden in Kalibrationsstichproben geschätzt, nicht aus einer Einzelmessung. Streuung und Präzision beschreiben nur diese Sitzung. Siehe docs/EIGHT_CONSTRUCT_MODEL.md.",
+      "col_construct": "Konstrukt",
+      "col_score": "Wert (0–100)",
+      "col_n": "Items",
+      "col_spread": "Streuung (Items)",
+      "col_sem": "Präzision",
+      "na": "—",
+      "c_predictability_adaptivity": "Vorhersehbarkeit vs. Anpassung",
+      "c_sensory_processing": "Sensorische Verarbeitung",
+      "c_cognitive_framing": "Kognitive Rahmung",
+      "c_social_orientation": "Soziale Orientierung",
+      "c_information_load": "Informationslast",
+      "c_temporal_processing": "Zeitliche Verarbeitung",
+      "c_self_regulation": "Selbstregulation",
+      "c_motivation": "Motivation / Durchhalten"
+    }
   },
   "cohortInsights": {
     "page_title": "Kohorten-Einblicke",

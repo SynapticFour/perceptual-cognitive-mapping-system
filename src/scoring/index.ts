@@ -12,3 +12,4 @@ export type {
   ScoringResult,
   ScoringModelConfig,
 } from './scoring-model';
+export { computeEightConstructScores } from './eight-construct-scores';

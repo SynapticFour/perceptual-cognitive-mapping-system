@@ -3,6 +3,12 @@ import type { CognitiveProfilePublic } from '@/types/profile-public';
 import { ROUTING_WEIGHT_KEYS } from '@/adaptive/routing-tags';
 import { PIPELINE_STORAGE_VERSION, type StoredPipelineSession } from '@/types/pipeline-session';
 import type { ScoringResult } from '@/scoring';
+import {
+  EIGHT_CONSTRUCT_IDS,
+  type EightConstructId,
+} from '@/model/eight-constructs';
+import type { EightConstructOutcome, EightConstructScaleScore } from '@/types/eight-construct-outcome';
+import { EIGHT_CONSTRUCT_OUTCOME_VERSION } from '@/types/eight-construct-outcome';
 
 function isFiniteNumber(value: unknown): value is number {
   return typeof value === 'number' && Number.isFinite(value);
@@ -39,6 +45,28 @@ function isScoringResult(value: unknown): value is ScoringResult {
   return ROUTING_WEIGHT_KEYS.every((k) => isDimensionConfidenceComponent(cc[k]));
 }
 
+function isEightConstructScaleScore(value: unknown, construct: EightConstructId): value is EightConstructScaleScore {
+  if (!isRecord(value)) return false;
+  if (value.construct !== construct) return false;
+  if (!isFiniteNumber(value.nItems) || value.nItems < 0) return false;
+  if (value.mean01 !== null && !isFiniteNumber(value.mean01)) return false;
+  if (value.withinPersonItemSd !== null && !isFiniteNumber(value.withinPersonItemSd)) return false;
+  if (value.meanSemWithinPerson !== null && !isFiniteNumber(value.meanSemWithinPerson)) return false;
+  return true;
+}
+
+function isEightConstructOutcome(value: unknown): value is EightConstructOutcome {
+  if (!isRecord(value)) return false;
+  if (value.schemaVersion !== EIGHT_CONSTRUCT_OUTCOME_VERSION) return false;
+  if (value.bankId !== 'global_behavioral_v2') return false;
+  const scales = value.scales;
+  if (!isRecord(scales)) return false;
+  for (const id of EIGHT_CONSTRUCT_IDS) {
+    if (!isEightConstructScaleScore(scales[id], id)) return false;
+  }
+  return true;
+}
+
 /** Parse persisted pipeline JSON (localStorage / export). Returns null if shape is invalid. */
 export function parseStoredPipelineSession(raw: unknown): StoredPipelineSession | null {
   if (!isRecord(raw)) return null;
@@ -65,7 +93,7 @@ export function parseStoredPipelineSession(raw: unknown): StoredPipelineSession 
   const sessionId = typeof raw.sessionId === 'string' && raw.sessionId.length > 0 ? raw.sessionId : undefined;
   const revision = isFiniteNumber(raw.revision) ? raw.revision : undefined;
 
-  return {
+  const out: StoredPipelineSession = {
     version: PIPELINE_STORAGE_VERSION,
     sessionId,
     revision,
@@ -85,4 +113,11 @@ export function parseStoredPipelineSession(raw: unknown): StoredPipelineSession 
     },
     scoringResult: raw.scoringResult,
   };
+
+  if (raw.eightConstructScores !== undefined && raw.eightConstructScores !== null) {
+    if (!isEightConstructOutcome(raw.eightConstructScores)) return null;
+    out.eightConstructScores = raw.eightConstructScores;
+  }
+
+  return out;
 }

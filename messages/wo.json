@@ -34,7 +34,26 @@
     "max_length_notice": "Jëmm gi pare na ci gën a gudd. Njàngale bi ci lim yi ci tontu yi lépp.",
     "title": "Sa profil bu xalaat ak xel",
     "group_insights_link": "Xool xew-xew bu mbooloo mi",
-    "group_insights_hint": "Ubbi xew-xew bu ñu boole, buñu jot na ci kohort bi."
+    "group_insights_hint": "Ubbi xew-xew bu ñu boole, buñu jot na ci kohort bi.",
+    "eight_constructs": {
+      "heading": "Ñaar ñett yoon bu jëmm (séans bii)",
+      "intro": "Lim yii di leen lim ci bank bu jëmm bu àdduna. Duñu mel ni ñaar fukki yoon bu yoon gi (F–V) ci moteur ak kart bi—ñu leen wax ñaar yu bëre ngir yëg gi.",
+      "foot_note": "Yëg bu mbooloo mi (ω, α) ak IRT ñu lim ci sampu pilot, du ci benn séans. Xajj ak yëg bu gën a leer mooy séans bii rekk. Jàng docs/EIGHT_CONSTRUCT_MODEL.md.",
+      "col_construct": "Jëmm",
+      "col_score": "Lim (0–100)",
+      "col_n": "Lammiñ",
+      "col_spread": "Xajj (lammiñ)",
+      "col_sem": "Yëg bu leer",
+      "na": "—",
+      "c_predictability_adaptivity": "Xam lu di kontine vs. yëngu",
+      "c_sensory_processing": "Jëf bu xob",
+      "c_cognitive_framing": "Yoon bu xalaat",
+      "c_social_orientation": "Yoon bu mbooloo",
+      "c_information_load": "Lu bare ci xibaar",
+      "c_temporal_processing": "Yoon bu waxtu",
+      "c_self_regulation": "Yëngu ci bopp",
+      "c_motivation": "Yëngu / kontine"
+    }
   },
   "cohortInsights": {
     "page_title": "Xew-xew bu mbooloo mi",

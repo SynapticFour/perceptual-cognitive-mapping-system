@@ -9,7 +9,12 @@ import {
   ROUTING_WEIGHT_KEYS,
   type RoutingWeightKey,
 } from '@/adaptive';
-import { type AssessmentQuestion, type QuestionResponse, type LikertResponse } from '@/data/questions';
+import {
+  type AssessmentQuestion,
+  getAssessmentQuestions,
+  type QuestionResponse,
+  type LikertResponse,
+} from '@/data/questions';
 import { loadQuestions } from '@/data/question-loader-browser';
 import {
   buildScoringResultFromHistory,
@@ -18,6 +23,7 @@ import {
   runResearchPipeline,
   toStoredPipelineSession,
 } from '@/lib/cognitive-pipeline';
+import { computeEightConstructScores } from '@/scoring/eight-construct-scores';
 import { parseStoredPipelineSession } from '@/lib/parse-pipeline-session';
 import { readQuestionHistoryFromStorage } from '@/lib/question-history-storage';
 import { dimensionsBelowConfidenceThreshold } from '@/lib/below-threshold-dimensions';
@@ -196,12 +202,20 @@ export default function QuestionnairePage() {
         finalState.questionHistory,
         finalState.culturalContext
       );
+      const questionsById = new Map(
+        getAssessmentQuestions('all', finalState.culturalContext).map((q) => [q.id, q])
+      );
+      const eightConstructScores = computeEightConstructScores(finalState.questionHistory, questionsById);
       const stored = toStoredPipelineSession(
         pipeline,
         finalState.questionHistory.length,
         undefined,
         scoringResult,
-        { sessionId: pipelineSessionId, revision: nextRevision }
+        {
+          sessionId: pipelineSessionId,
+          revision: nextRevision,
+          eightConstructScores: eightConstructScores ?? undefined,
+        }
       );
 
       localStorage.setItem('pcms-pipeline-result', JSON.stringify(stored));

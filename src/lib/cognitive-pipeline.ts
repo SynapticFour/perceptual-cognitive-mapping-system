@@ -13,6 +13,7 @@ import type { CognitiveProfilePublic } from '@/types/profile-public';
 import { interpretCognitiveFeatures } from '@/lib/interpretation';
 import { defaultUiStrings } from '@/lib/ui-strings';
 import { PIPELINE_STORAGE_VERSION, type StoredPipelineSession } from '@/types/pipeline-session';
+import type { EightConstructOutcome } from '@/types/eight-construct-outcome';
 
 export function questionResponseToRawResponse(question: AssessmentQuestion, qr: QuestionResponse): RawResponse {
   const type = question.type;
@@ -104,10 +105,14 @@ export function toStoredPipelineSession(
   responseCount: number,
   completedAt: string = new Date().toISOString(),
   scoringResult: ScoringResult,
-  sessionMeta?: { sessionId?: string; revision?: number }
+  sessionMeta?: {
+    sessionId?: string;
+    revision?: number;
+    eightConstructScores?: EightConstructOutcome | null;
+  }
 ): StoredPipelineSession {
   const { embedding, publicProfile, features } = pipeline;
-  return {
+  const out: StoredPipelineSession = {
     version: PIPELINE_STORAGE_VERSION,
     sessionId: sessionMeta?.sessionId,
     revision: sessionMeta?.revision ?? 0,
@@ -127,4 +132,8 @@ export function toStoredPipelineSession(
     },
     scoringResult,
   };
+  if (sessionMeta?.eightConstructScores) {
+    out.eightConstructScores = sessionMeta.eightConstructScores;
+  }
+  return out;
 }

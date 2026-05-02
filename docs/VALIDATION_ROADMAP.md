@@ -2,7 +2,33 @@
 
 This document describes the empirical validation programme planned for PCMS. It follows the APA Standards for Educational and Psychological Testing (2014) and is intended to be converted into a pre-registration document on OSF before Phase 2 data collection.
 
-## Phase 2: Instrument Calibration (Target: n = 400+)
+## Phase 2a: Global behavioral bank (eight constructs, Likert-3)
+
+**Pre-requisite:** `NEXT_PUBLIC_PCMS_QUESTION_SOURCE=global_v2` deployments contribute responses to a dedicated calibration stream.
+
+### 2a.1 Confirmatory structure
+
+- **CFA:** Eight-factor model with items loading only on their intended factor (tag `g8:<construct>`); report RMSEA, CFI, SRMR; test nested models (correlated factors vs. higher-order).
+- **Minimum n:** 400+ **independent sessions** across at least three deployment contexts (not all one site).
+
+### 2a.2 IRT for 3-point items
+
+- **Model:** Graded response (2PL parameterisation) or 2PL with estimated category thresholds per item.
+- **Output:** Populate `irt_a`, `irt_b` (and category parameters) in `content/questions/schema.json` for each item.
+- **DIF:** By language and region; items with severe DIF flagged for rewrite or removal.
+
+### 2a.3 Reliability (sample level)
+
+- **McDonald's ω** and **Cronbach's α** per construct once factor structure is supported.
+- **Target:** ω ≥ 0.70 per construct after poor items are dropped or revised.
+
+### 2a.4 Link to F–V routing (secondary)
+
+- Correlational matrix between eight construct **scale scores** and F–V posteriors from the same sessions—**for interpretation only**, not to merge into one score for users without a separate hypothesis.
+
+---
+
+## Phase 2: Instrument Calibration (Target: n = 400+) — Legacy F–V bank
 
 ### 2.1 IRT Calibration
 

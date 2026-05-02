@@ -34,7 +34,26 @@
     "max_length_notice": "Maximum assessment length reached. Results are based on all answers provided.",
     "title": "Your cognitive profile",
     "group_insights_link": "View group insights",
-    "group_insights_hint": "Opens aggregate, non-identifying guidance if your program has enabled cohort insights."
+    "group_insights_hint": "Opens aggregate, non-identifying guidance if your program has enabled cohort insights.",
+    "eight_constructs": {
+      "heading": "Eight construct scales (this session)",
+      "intro": "These values summarise your answers on the global behavioral bank. They are reported separately from the ten routing dimensions (F–V) used for the adaptive engine and landscape—both layers are kept for scientific transparency.",
+      "foot_note": "Population reliability (ω, α) and IRT parameters are estimated in calibration samples, not from a single session. Within-person spread and item-mean precision are descriptive statistics for this administration only. See docs/EIGHT_CONSTRUCT_MODEL.md.",
+      "col_construct": "Construct",
+      "col_score": "Score (0–100)",
+      "col_n": "Items",
+      "col_spread": "Spread (items)",
+      "col_sem": "Precision",
+      "na": "—",
+      "c_predictability_adaptivity": "Predictability vs adaptivity",
+      "c_sensory_processing": "Sensory processing",
+      "c_cognitive_framing": "Cognitive framing",
+      "c_social_orientation": "Social orientation",
+      "c_information_load": "Information load",
+      "c_temporal_processing": "Temporal processing",
+      "c_self_regulation": "Self-regulation",
+      "c_motivation": "Motivation / persistence"
+    }
   },
   "cohortInsights": {
     "page_title": "Cohort Insights",

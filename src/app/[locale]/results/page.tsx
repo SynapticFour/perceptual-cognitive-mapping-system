@@ -27,6 +27,7 @@ import { loadQuestions } from '@/data/question-loader-browser';
 import type { ConfidenceComponents } from '@/scoring';
 import type { AssessmentContext } from '@/types/assessment-context';
 import { readAssessmentContextFromStorage } from '@/types/assessment-context';
+import EightConstructSummary from '@/components/results/EightConstructSummary';
 import EthicsResultsBanner from '@/components/ethics/EthicsResultsBanner';
 import ResultsAssentGate from '@/components/ethics/ResultsAssentGate';
 import DeleteMyDataButton from '@/components/ethics/DeleteMyDataButton';
@@ -415,6 +416,10 @@ export default function ResultsPage() {
               )}
             </div>
           </section>
+        ) : null}
+
+        {session?.eightConstructScores ? (
+          <EightConstructSummary outcome={session.eightConstructScores} strings={ui} />
         ) : null}
 
         <div className="mb-10 max-w-full">
