@@ -1,6 +1,11 @@
 # Perceptual & Cognitive Mapping System (PCMS) v1.0
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-map.synapticfour.com-6366f1)](https://map.synapticfour.com)
+
 **Research-Grade Adaptive Assessment Platform for Cognitive Diversity**
+
+**GitHub “About” description (copy into repository settings):**  
+`Research-grade adaptive assessment platform for cognitive diversity. Continuous dimensional profiling — not diagnosis, not labels. Next.js 16 · TypeScript · MIT.`
 
 A scientifically grounded web-based system for mapping human cognition into continuous multi-dimensional space, replacing categorical thinking with dimensional modeling for **research and educational self-understanding** (not clinical diagnosis).
 
