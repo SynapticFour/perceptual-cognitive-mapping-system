@@ -16,6 +16,7 @@ import {
 } from '@/lib/landscape-share-codec';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
 import type { UiStrings } from '@/lib/ui-strings';
+import { formatUiString } from '@/lib/ui-strings';
 import type { ConfidenceComponents } from '@/scoring';
 
 const MAX_MEMBERS = 6;
@@ -76,8 +77,8 @@ function buildMember(
 
 export default function GroupAnalysisClient({ strings }: { strings: UiStrings }) {
   const [rows, setRows] = useState(() => [
-    { label: 'Person 1', payload: '' },
-    { label: 'Person 2', payload: '' },
+    { label: strings['group_analysis.demo_row_1_label'], payload: '' },
+    { label: strings['group_analysis.demo_row_2_label'], payload: '' },
   ]);
   const [error, setError] = useState<string | null>(null);
   const [report, setReport] = useState<GroupCognitiveAnalysisReport | null>(null);
@@ -86,12 +87,12 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
     setError(null);
     const conf = mockConfidence();
     const members: GroupMemberInput[] = [
-      buildMember('m0', 'Demo A', makeDisplay(42), conf, 1),
-      buildMember('m1', 'Demo B', makeDisplay(58), conf, 2),
-      buildMember('m2', 'Demo C', makeDisplay(51), conf, 3),
+      buildMember('m0', strings['group_analysis.demo_profile_a'], makeDisplay(42), conf, 1),
+      buildMember('m1', strings['group_analysis.demo_profile_b'], makeDisplay(58), conf, 2),
+      buildMember('m2', strings['group_analysis.demo_profile_c'], makeDisplay(51), conf, 3),
     ];
     setReport(analyzeMultiProfileGroup(members));
-  }, []);
+  }, [strings]);
 
   const runAnalyze = useCallback(() => {
     setError(null);
@@ -108,7 +109,14 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
       const display = displayModelFromSharePayload(decoded);
       const confidence = confidenceComponentsFromSharePayload(decoded);
       members.push(
-        buildMember(`m${idx}`, row.label.trim() || `Person ${idx + 1}`, display, confidence, idx + 4)
+        buildMember(
+          `m${idx}`,
+          row.label.trim() ||
+            formatUiString(strings['group_analysis.default_person_label'], { n: idx + 1 }),
+          display,
+          confidence,
+          idx + 4
+        )
       );
       idx++;
     }
@@ -158,7 +166,9 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
                   setRows(next);
                 }}
               />
-              <label className="mt-2 block text-xs font-medium text-slate-600">Payload</label>
+              <label className="mt-2 block text-xs font-medium text-slate-600">
+                {strings['group_analysis.payload_label']}
+              </label>
               <textarea
                 className="mt-1 min-h-[4.5rem] w-full rounded border border-slate-200 px-2 py-1.5 font-mono text-xs"
                 placeholder={strings['group_analysis.payload_placeholder']}
@@ -185,7 +195,16 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
             type="button"
             className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:bg-slate-50"
             onClick={() => {
-              if (rows.length < MAX_MEMBERS) setRows([...rows, { label: `Person ${rows.length + 1}`, payload: '' }]);
+              if (rows.length < MAX_MEMBERS)
+                setRows([
+                  ...rows,
+                  {
+                    label: formatUiString(strings['group_analysis.default_person_label'], {
+                      n: rows.length + 1,
+                    }),
+                    payload: '',
+                  },
+                ]);
             }}
           >
             {strings['group_analysis.add_member']}
@@ -211,9 +230,15 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
             <section>
               <h2 className="text-lg font-semibold text-slate-900">{strings['group_analysis.diversity']}</h2>
               <p className="mt-2 text-sm text-slate-700">
-                Score: <span className="font-mono">{(report.diversity.score * 100).toFixed(1)}</span> / 100 (model scale)
+                {formatUiString(strings['group_analysis.diversity_score_line'], {
+                  score: (report.diversity.score * 100).toFixed(1),
+                })}
               </p>
-              <p className="mt-1 text-xs text-slate-500">Mean pairwise distance (normalized routing): {report.diversity.meanPairwiseDistance.toFixed(3)}</p>
+              <p className="mt-1 text-xs text-slate-500">
+                {formatUiString(strings['group_analysis.mean_pairwise'], {
+                  value: report.diversity.meanPairwiseDistance.toFixed(3),
+                })}
+              </p>
             </section>
 
             <section>
@@ -221,7 +246,11 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
               <ul className="mt-2 list-inside list-disc space-y-2 text-sm text-slate-700">
                 {report.clusters.map((c) => (
                   <li key={c.id}>
-                    <span className="font-medium">{c.id}</span> — members {c.memberIndices.map((i) => report.memberLabels[i]).join(', ')}. {c.summary}
+                    {formatUiString(strings['group_analysis.cluster_row'], {
+                      id: c.id,
+                      member_list: c.memberIndices.map((i) => report.memberLabels[i]).join(', '),
+                      summary: c.summary,
+                    })}
                   </li>
                 ))}
               </ul>
@@ -255,7 +284,11 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
               <ul className="mt-2 space-y-2 text-sm text-slate-700">
                 {report.frictionSignals.slice(0, 5).map((f, i) => (
                   <li key={i}>
-                    {f.traits.join(' ↔ ')} — strength {f.strength.toFixed(2)}: {f.suggestion}
+                    {formatUiString(strings['group_analysis.friction_line'], {
+                      traits: f.traits.join(' ↔ '),
+                      strength: f.strength.toFixed(2),
+                      suggestion: f.suggestion,
+                    })}
                   </li>
                 ))}
               </ul>
@@ -266,7 +299,11 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
               <ul className="mt-2 space-y-2 text-sm text-slate-700">
                 {report.environmentSignals.slice(0, 6).map((e) => (
                   <li key={e.id}>
-                    <span className="font-medium">{e.id}</span> ({e.intensity.toFixed(2)}): {e.narrative}
+                    {formatUiString(strings['group_analysis.environment_line'], {
+                      id: e.id,
+                      intensity: e.intensity.toFixed(2),
+                      narrative: e.narrative,
+                    })}
                   </li>
                 ))}
               </ul>

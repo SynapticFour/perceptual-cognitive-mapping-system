@@ -68,6 +68,7 @@
   },
   "cohortInsights": {
     "page_title": "Cohort Insights",
+    "meta_description": "Aggregate, probabilistic guidance for environments—no individual identification, not a diagnostic view.",
     "guidance_tagline": "Insight → action · Guidance for human environments—not a clinical report or scorecard.",
     "page_intro": "This view turns pooled patterns into practical ideas for environments and facilitation. It is guidance—not a report card, score, or diagnosis.",
     "aggregate_only": "No individual results appear here; only group-level shapes and suggestions.",
@@ -100,6 +101,12 @@
     "low_met": "Assessment is indicative only. We recommend continuing the questionnaire for more reliable dimension scores.",
     "continue_cta": "Continue assessment",
     "continue_hint": "Returns you to the questionnaire to add more responses."
+  },
+  "errorBoundary": {
+    "results_title": "Could not show results",
+    "results_body": "We could not load or parse your saved session. Try completing the questionnaire again from the home page.",
+    "questionnaire_title": "Something went wrong",
+    "questionnaire_body": "The questionnaire hit an unexpected error. You can return home and try again."
   },
   "questionnaire": {
     "session_mismatch": "That link does not match this browser’s saved session. Open results from this device, or use Retake to start fresh.",
@@ -167,7 +174,8 @@
     "likert3_mid_label": "Sometimes",
     "likert3_mid_desc": "It depends or is mixed",
     "likert3_high_label": "Like me",
-    "likert3_high_desc": "Often true for me"
+    "likert3_high_desc": "Often true for me",
+    "load_failed": "Could not load questions. Check your connection or try again."
   },
   "radar": {
     "caption": "Radar chart comparing your raw scores (outer ring) with confidence-adjusted scores (inner ring). A wide gap on a spoke means we are less certain on that dimension.",
@@ -403,10 +411,13 @@
     "import_csv_hint": "Header row required. Example: questionId,response,responseTimeMs,timestamp",
     "import_run": "Score and go to results",
     "import_empty": "No valid rows found.",
-    "bank_error_hint": "If you are offline with no prior visit: import the question bank JSON, use “Load bundled bank”, or open /data/question-bank-universal-all.json from this deployment."
+    "bank_error_hint": "If you are offline with no prior visit: import the question bank JSON, use “Load bundled bank”, or open /data/question-bank-universal-all.json from this deployment.",
+    "import_csv_placeholder": "questionId,response,responseTimeMs,timestamp",
+    "import_busy_ellipsis": "…"
   },
   "group_analysis": {
     "title": "Group cognitive overview",
+    "meta_description": "Optional multi-profile overview: diversity, environment signals, and facilitation hints from combined share payloads.",
     "lead": "Combine several shareable summaries (the same encoding as your results link) to explore diversity, environment fit, and facilitation ideas. This is an add-on: it does not replace your personal map or the separate cohort insights demo.",
     "instructions": "Paste one payload per person. You can paste the full share URL, or only the `p=` parameter, or the raw base64 block from the link.",
     "member_label": "Label",
@@ -424,7 +435,19 @@
     "narrative": "Readable summary",
     "friction": "Style contrasts",
     "environment": "Environment signals",
-    "disclaimer": "Aggregate, descriptive guidance only—not a diagnosis, grade, or hiring signal. Use only with appropriate consent when combining profiles."
+    "disclaimer": "Aggregate, descriptive guidance only—not a diagnosis, grade, or hiring signal. Use only with appropriate consent when combining profiles.",
+    "payload_label": "Payload",
+    "demo_row_1_label": "Person 1",
+    "demo_row_2_label": "Person 2",
+    "demo_profile_a": "Demo A",
+    "demo_profile_b": "Demo B",
+    "demo_profile_c": "Demo C",
+    "default_person_label": "Person {n}",
+    "mean_pairwise": "Mean pairwise distance (normalized routing): {value}",
+    "cluster_row": "{id} — members {member_list}. {summary}",
+    "diversity_score_line": "Score: {score} / 100 (model scale)",
+    "friction_line": "{traits} — strength {strength}: {suggestion}",
+    "environment_line": "{id} ({intensity}): {narrative}"
   },
   "pipeline": {
     "pattern": {

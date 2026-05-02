@@ -66,6 +66,7 @@
   },
   "cohortInsights": {
     "page_title": "Xew-xew bu mbooloo mi",
+    "meta_description": "Yëg-yëg bu mbooloo mi ci dëkk yi—du wax nit ku nekk, du dawtal.",
     "guidance_tagline": "Yëg-yëg → jëf · Yombul ci dëkk yu nit ñi di doon—du lim bu tabax walla bu klinik.",
     "page_intro": "Yoon yi dinañu jëfandikoo ngir yombul ak mbooloo mi. Du dawtal, du lim, du benn ndigal.",
     "aggregate_only": "Amul benn njàngale bu nit ku nekk; rekk mbooloo ak yëg-yëg.",
@@ -98,6 +99,12 @@
     "low_met": "Jëmm gi rekk mooy wax. Nu la tàmmat a kontine lammiñ yi ngir lim yu wuute yi ci yoon yi.",
     "continue_cta": "Kontine jëmm gi",
     "continue_hint": "Dellu ci lammiñ yi ngir yokk tontu."
+  },
+  "errorBoundary": {
+    "results_title": "Mënul wane njàngale yi",
+    "results_body": "Mënul nañu yeb walla jàng séans bi ci sa navigatëër. Dellu ci buntu ngir defaat lammiñ yi.",
+    "questionnaire_title": "Am na benn njumte",
+    "questionnaire_body": "Lammiñ bi am na benn njumte. Mën nga dellu ci buntu ngir jëfandikooaat."
   },
   "questionnaire": {
     "session_mismatch": "Lëkkaloo bi du mel ni séans bi ci sa navigatëër. Ubbi njàngale ci bii aparëy walla nga def «Defaat» ngir tàmbali ku ne.",
@@ -351,6 +358,7 @@
   },
   "group_analysis": {
     "title": "Xool mbooloo (xalaat)",
+    "meta_description": "Xool bu wóorul solo: yu bari, melow, ak yëg-yëg ci lim yu boole.",
     "lead": "Boole lim yu bari (mel ni lëkkaloo bi) ngir xool yu bari, melow, ak luy mën a def. Lii du taxaw ci sa kart bi walla kohort bi.",
     "instructions": "Benn lim ci benn nit: lëkkaloo bu mat, walla `p=` rekk, walla base64.",
     "member_label": "Tur",
@@ -368,7 +376,19 @@
     "narrative": "Xool bu gëtt",
     "friction": "Melokan yu wuute",
     "environment": "Melow bi biti",
-    "disclaimer": "Boole rekk, du lim walla taxawaay bu nit. Jëfandikoo ak yees ci sañ-sañ."
+    "disclaimer": "Boole rekk, du lim walla taxawaay bu nit. Jëfandikoo ak yees ci sañ-sañ.",
+    "payload_label": "Payload",
+    "demo_row_1_label": "Nit 1",
+    "demo_row_2_label": "Nit 2",
+    "demo_profile_a": "Demo A",
+    "demo_profile_b": "Demo B",
+    "demo_profile_c": "Demo C",
+    "default_person_label": "Nit {n}",
+    "mean_pairwise": "Misaal ci yoon yi (routing bu norme): {value}",
+    "cluster_row": "{id} — xarit yi: {member_list}. {summary}",
+    "diversity_score_line": "Score: {score} / 100 (skaal bu modèle bi)",
+    "friction_line": "{traits} — doole {strength}: {suggestion}",
+    "environment_line": "{id} ({intensity}): {narrative}"
   },
   "pipeline": {
     "pattern": {

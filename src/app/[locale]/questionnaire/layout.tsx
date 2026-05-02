@@ -1,11 +1,22 @@
 import type { ReactNode } from 'react';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ErrorBoundary from '@/components/error-boundary';
 
-export default function QuestionnaireLayout({ children }: { children: ReactNode }) {
+type Props = {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+};
+
+export default async function QuestionnaireLayout({ children, params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('errorBoundary');
+  const tQ = await getTranslations('questionnaire');
   return (
     <ErrorBoundary
-      title="Something went wrong"
-      body="The questionnaire hit an unexpected error. You can return home and try again."
+      title={t('questionnaire_title')}
+      body={t('questionnaire_body')}
+      returnHomeLabel={tQ('return_home')}
     >
       {children}
     </ErrorBoundary>

@@ -68,6 +68,7 @@
   },
   "cohortInsights": {
     "page_title": "Kohorten-Einblicke",
+    "meta_description": "Aggregierte, probabilistische Orientierung für Umgebungen—ohne Personenbezug, keine diagnostische Ansicht.",
     "guidance_tagline": "Einblick → Handlung · Orientierung für menschliche Umgebungen—kein klinischer Bericht oder Score.",
     "page_intro": "Diese Ansicht macht zusammengefasste Muster zu praktischen Ideen für Umgebung und Moderation. Es ist Orientierung—kein Bericht, keine Bewertung, keine Diagnose.",
     "aggregate_only": "Keine Einzelergebnisse; nur Gruppenformen und Vorschläge.",
@@ -100,6 +101,12 @@
     "low_met": "Die Bewertung ist nur indikativ. Wir empfehlen, den Fragebogen fortzusetzen, um zuverlässigere Dimensionsscores zu erhalten.",
     "continue_cta": "Bewertung fortsetzen",
     "continue_hint": "Bringt Sie zurück zum Fragebogen, um weitere Antworten zu ergänzen."
+  },
+  "errorBoundary": {
+    "results_title": "Ergebnisse konnten nicht angezeigt werden",
+    "results_body": "Wir konnten Ihre gespeicherte Sitzung nicht laden oder auswerten. Schließen Sie den Fragebogen erneut über die Startseite ab.",
+    "questionnaire_title": "Etwas ist schiefgelaufen",
+    "questionnaire_body": "Im Fragebogen ist ein unerwarteter Fehler aufgetreten. Sie können zur Startseite zurückkehren und es erneut versuchen."
   },
   "questionnaire": {
     "session_mismatch": "Dieser Link passt nicht zur in diesem Browser gespeicherten Sitzung. Öffnen Sie die Ergebnisse auf diesem Gerät oder starten Sie mit „Erneut testen“ neu.",
@@ -167,7 +174,8 @@
     "likert3_mid_label": "Manchmal",
     "likert3_mid_desc": "Kommt vor oder gemischt",
     "likert3_high_label": "Trifft oft zu",
-    "likert3_high_desc": "Häufig auf mich zutreffend"
+    "likert3_high_desc": "Häufig auf mich zutreffend",
+    "load_failed": "Fragen konnten nicht geladen werden. Verbindung prüfen oder erneut versuchen."
   },
   "radar": {
     "caption": "Radar: Rohwerte (äußerer Ring) und vertrauensbereinigte Werte (innerer Ring). Eine große Lücke auf einer Achse bedeutet geringere Sicherheit auf dieser Dimension.",
@@ -403,10 +411,13 @@
     "import_csv_hint": "Kopfzeile nötig. Beispiel: questionId,response,responseTimeMs,timestamp",
     "import_run": "Auswerten und zu Ergebnissen",
     "import_empty": "Keine gültigen Zeilen.",
-    "bank_error_hint": "Offline ohne früheren Besuch: Fragenbank-JSON importieren, „Gebündelte Bank laden“ oder die Datei unter /data/ dieser Installation öffnen."
+    "bank_error_hint": "Offline ohne früheren Besuch: Fragenbank-JSON importieren, „Gebündelte Bank laden“ oder die Datei unter /data/ dieser Installation öffnen.",
+    "import_csv_placeholder": "questionId,response,responseTimeMs,timestamp",
+    "import_busy_ellipsis": "…"
   },
   "group_analysis": {
     "title": "Gruppenübersicht (kognitiv)",
+    "meta_description": "Optionale Mehrpersonen-Übersicht: Diversität, Umfeld-Signale und Moderationshinweise aus kombinierten Freigabelinks.",
     "lead": "Kombinieren Sie mehrere teilbare Kurzprofile (dieselbe Kodierung wie im Ergebnislink), um Diversität, Umfeld-Passung und Moderationsideen zu sehen. Zusatzfunktion — ersetzt weder Ihre persönliche Karte noch die separate Kohorten-Demo.",
     "instructions": "Pro Person ein Payload einfügen: vollständiger Link, nur der `p=`-Wert oder der Base64-Block aus dem Link.",
     "member_label": "Bezeichnung",
@@ -424,7 +435,19 @@
     "narrative": "Lesbare Zusammenfassung",
     "friction": "Stilkontraste",
     "environment": "Umgebungssignale",
-    "disclaimer": "Nur beschreibende Aggregation — keine Diagnose, Note oder Einstellungsentscheidung. Profile nur mit angemessener Einwilligung kombinieren."
+    "disclaimer": "Nur beschreibende Aggregation — keine Diagnose, Note oder Einstellungsentscheidung. Profile nur mit angemessener Einwilligung kombinieren.",
+    "payload_label": "Payload",
+    "demo_row_1_label": "Person 1",
+    "demo_row_2_label": "Person 2",
+    "demo_profile_a": "Demo A",
+    "demo_profile_b": "Demo B",
+    "demo_profile_c": "Demo C",
+    "default_person_label": "Person {n}",
+    "mean_pairwise": "Mittlerer paarweiser Abstand (normalisiertes Routing): {value}",
+    "cluster_row": "{id} — Teilnehmende: {member_list}. {summary}",
+    "diversity_score_line": "Score: {score} / 100 (Modellskala)",
+    "friction_line": "{traits} — Stärke {strength}: {suggestion}",
+    "environment_line": "{id} ({intensity}): {narrative}"
   },
   "pipeline": {
     "pattern": {

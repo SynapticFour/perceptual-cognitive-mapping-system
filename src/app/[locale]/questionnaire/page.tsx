@@ -156,7 +156,10 @@ export default function QuestionnairePage() {
         setQuestionStartTime(Date.now());
       } catch (e) {
         if (!cancelled) {
-          setBankError(e instanceof Error ? e.message : 'Failed to load questions');
+          if (process.env.NODE_ENV === 'development' && e instanceof Error) {
+            console.warn('[PCMS] question bank load failed', e);
+          }
+          setBankError(uiRef.current['questionnaire.load_failed']);
         }
       }
     })();

@@ -69,7 +69,7 @@ export default function FieldImportClient({ strings }: { strings: UiStrings }) {
           className="mt-2 min-h-48 w-full rounded-lg border border-slate-200 p-3 font-mono text-xs"
           value={csvText}
           onChange={(e) => setCsvText(e.target.value)}
-          placeholder="questionId,response,responseTimeMs,timestamp"
+          placeholder={strings['field.import_csv_placeholder']}
         />
         <p className="mt-2 text-xs text-slate-500">{strings['field.import_csv_hint']}</p>
 
@@ -79,7 +79,7 @@ export default function FieldImportClient({ strings }: { strings: UiStrings }) {
           onClick={() => void run()}
           className="mt-4 min-h-11 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-60"
         >
-          {busy ? '…' : strings['field.import_run']}
+          {busy ? strings['field.import_busy_ellipsis'] : strings['field.import_run']}
         </button>
         {error ? <p className="mt-3 text-sm text-red-700">{error}</p> : null}
       </main>

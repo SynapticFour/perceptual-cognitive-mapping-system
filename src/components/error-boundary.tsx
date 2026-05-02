@@ -6,6 +6,8 @@ type ErrorBoundaryProps = {
   children: ReactNode;
   title: string;
   body: string;
+  /** Home button label (use `questionnaire.return_home` from messages). */
+  returnHomeLabel: string;
 };
 
 type ErrorBoundaryState = {
@@ -41,7 +43,7 @@ export default class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
               className="mt-4 rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
               onClick={() => window.location.assign('/')}
             >
-              Return home
+              {this.props.returnHomeLabel}
             </button>
           </div>
         </div>
