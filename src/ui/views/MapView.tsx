@@ -131,8 +131,8 @@ export default function MapView({ model, strings, userAccentColor, patternHighli
       const uy = prev.y + (sy / rect.height) * prev.h;
       const newW = Math.min(VIEW_BOX, Math.max(VIEW_MIN, prev.w * scale));
       const newH = newW;
-      let nx = ux - (sx / rect.width) * newW;
-      let ny = uy - (sy / rect.height) * newH;
+      const nx = ux - (sx / rect.width) * newW;
+      const ny = uy - (sy / rect.height) * newH;
       return clampViewBox({ x: nx, y: ny, w: newW, h: newH });
     });
   }, []);

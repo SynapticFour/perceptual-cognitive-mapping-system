@@ -356,6 +356,7 @@ export default function QuestionnairePage() {
               </div>
             ) : (
               <QuestionCard
+                key={currentQuestion.id}
                 question={currentQuestion}
                 onResponse={handleResponse}
                 questionNumber={questionNumber}

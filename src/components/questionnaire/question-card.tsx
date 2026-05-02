@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { type AssessmentQuestion, type LikertResponse } from '@/data/questions';
 
 interface QuestionCardProps {
@@ -12,9 +12,6 @@ interface QuestionCardProps {
 
 export default function QuestionCard({ question, onResponse, questionNumber, totalQuestions }: QuestionCardProps) {
   const [choiceLocked, setChoiceLocked] = useState(false);
-  useEffect(() => {
-    setChoiceLocked(false);
-  }, [question.id]);
 
   const likertOptions: { value: LikertResponse; label: string; description: string }[] = [
     { value: 1, label: 'Strongly Disagree', description: 'This does not describe me at all' },
