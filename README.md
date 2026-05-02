@@ -12,6 +12,10 @@ A scientifically grounded web-based system for mapping human cognition into cont
 >
 > [Why no labels? →](#design-philosophy)
 
+### Version labels
+
+Research documentation and stored assessments refer to protocol **v1.0** for reproducibility. The npm semver in `package.json` is maintained separately and may differ—pin **git commit** (or release tags, when published) for reproducible deployments, not the npm version alone.
+
 ## Design Philosophy
 
 ### Dimensions, not diagnoses
