@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import {
   AdaptiveQuestionnaireEngine,
@@ -38,10 +38,12 @@ import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
 import { seedConsentIfSkipMode } from '@/lib/ethics-flow-config';
 import { Link } from '@/i18n/navigation';
 import QuestionnaireOfflineTools from '@/components/questionnaire/QuestionnaireOfflineTools';
+import { resolveQuestionDisplayText } from '@/lib/resolve-question-display-text';
 
 export default function QuestionnairePage() {
   const router = useRouter();
   const locale = useLocale();
+  const tQ = useTranslations('questionnaire');
   const ui = useUiStrings();
   const uiRef = useRef(ui);
   uiRef.current = ui;
@@ -325,7 +327,7 @@ export default function QuestionnairePage() {
             className="mt-4 min-h-11 text-blue-600 underline"
             onClick={() => router.push('/')}
           >
-            Return home
+            {tQ('return_home')}
           </button>
           <p className="mt-4 text-xs">
             <Link href="/field-import" className="text-indigo-600 underline">
@@ -359,7 +361,7 @@ export default function QuestionnairePage() {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading questionnaire...</p>
+          <p className="text-gray-600">{tQ('loading')}</p>
         </div>
       </div>
     );
@@ -378,8 +380,8 @@ export default function QuestionnairePage() {
       <div className="container mx-auto px-4 py-8">
         <QuestionnaireOfflineTools strings={ui} />
         <header className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Cognitive Assessment</h1>
-          <p className="text-gray-600">Answer honestly based on your typical experiences</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">{tQ('page_title')}</h1>
+          <p className="text-gray-600">{tQ('page_subtitle')}</p>
           {uiMode === 'refinement' && refinementBadgeText ? (
             <p className="mt-3 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-indigo-300 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-950">
               {refinementBadgeText}
@@ -399,12 +401,13 @@ export default function QuestionnairePage() {
             {isLoading ? (
               <div className="bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto text-center">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                <p className="text-gray-600">Processing your response...</p>
+                <p className="text-gray-600">{tQ('processing')}</p>
               </div>
             ) : (
               <QuestionCard
                 key={currentQuestion.id}
                 question={currentQuestion}
+                displayText={resolveQuestionDisplayText(currentQuestion, locale)}
                 onResponse={handleResponse}
                 questionNumber={questionNumber}
                 totalQuestions={totalQuestionsForCard}
@@ -424,43 +427,44 @@ export default function QuestionnairePage() {
             />
 
             <div className="bg-white rounded-lg shadow-md p-6 mt-6">
-              <h3 className="text-lg font-semibold mb-4">Quick Stats</h3>
+              <h3 className="text-lg font-semibold mb-4">{tQ('quick_stats_heading')}</h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">Questions Answered:</span>
+                  <span className="text-sm text-gray-600">{tQ('stats_answered_label')}</span>
                   <span className="text-sm font-medium">{stats.questionsAnswered}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">Avg. Response Time:</span>
-                  <span className="text-sm font-medium">~8s</span>
+                  <span className="text-sm text-gray-600">{tQ('stats_avg_time_label')}</span>
+                  <span className="text-sm font-medium">{tQ('stats_avg_time_value')}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">Est. Time Remaining:</span>
+                  <span className="text-sm text-gray-600">{tQ('stats_time_left_label')}</span>
                   <span className="text-sm font-medium">
-                    ~{Math.ceil(stats.estimatedQuestionsRemaining * 0.5)} min
+                    {tQ('stats_time_left_value', { minutes: Math.ceil(stats.estimatedQuestionsRemaining * 0.5) })}
                   </span>
                 </div>
               </div>
             </div>
 
             <div className="bg-blue-50 rounded-lg p-6 mt-6">
-              <h3 className="text-sm font-semibold text-blue-900 mb-2">Need Help?</h3>
+              <h3 className="text-sm font-semibold text-blue-900 mb-2">{tQ('help_heading')}</h3>
               <div className="text-sm text-blue-800 space-y-2">
-                <p>• Answer based on your typical behavior</p>
-                <p>• There are no &ldquo;right&rdquo; or &ldquo;wrong&rdquo; answers</p>
-                <p>• Be honest for the most accurate profile</p>
-                <p>• You can withdraw at any time</p>
+                <p>• {tQ('help_bullet_1')}</p>
+                <p>• {tQ('help_bullet_2')}</p>
+                <p>• {tQ('help_bullet_3')}</p>
+                <p>• {tQ('help_bullet_4')}</p>
               </div>
               <button
+                type="button"
                 onClick={() => {
-                  if (confirm('Are you sure you want to withdraw? Your progress will be lost.')) {
+                  if (confirm(tQ('withdraw_confirm'))) {
                     localStorage.removeItem('pcms-consent-timestamp');
                     router.push('/');
                   }
                 }}
                 className="mt-4 text-sm text-blue-600 hover:text-blue-800 underline"
               >
-                Withdraw from Assessment
+                {tQ('withdraw')}
               </button>
             </div>
           </div>

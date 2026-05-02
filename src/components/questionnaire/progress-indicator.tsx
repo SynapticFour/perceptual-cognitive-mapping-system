@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { ROUTING_WEIGHT_KEYS, type TagCoverageVector } from '@/adaptive/coverage-model';
 import type { RoutingWeightKey } from '@/adaptive/routing-tags';
 import { getDimensionUi } from '@/lib/cognitive-dimensions-ui';
@@ -40,6 +41,8 @@ export default function ProgressIndicator({
   tagCoverage,
   averageTagCoverage,
 }: ProgressIndicatorProps) {
+  const t = useTranslations('questionnaire');
+
   const refinementPool =
     targetDimensions && targetDimensions.length > 0
       ? targetDimensions
@@ -59,14 +62,17 @@ export default function ProgressIndicator({
           (questionsAnswered / Math.max(1, questionsAnswered + estimatedQuestionsRemaining)) * 100
         );
 
+  const dimLabel = (tag: RoutingWeightKey) =>
+    strings ? getDimensionUi(tag, strings).shortLabel : tag;
+
   return (
     <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-      <h3 className="text-lg font-semibold mb-4">Assessment Progress</h3>
+      <h3 className="text-lg font-semibold mb-4">{t('progress_heading')}</h3>
 
       <div className="mb-6">
         <div className="flex justify-between items-center mb-2">
           <span className="text-sm font-medium text-gray-700">
-            {mode === 'refinement' ? 'Confidence toward goal' : 'Overall Progress'}
+            {mode === 'refinement' ? t('progress_confidence_goal') : t('progress_overall')}
           </span>
           <span className="text-sm text-gray-500">{Math.round(completionPercentage)}%</span>
         </div>
@@ -79,13 +85,13 @@ export default function ProgressIndicator({
         <div className="flex justify-between text-xs text-gray-500 mt-1">
           {mode === 'refinement' ? (
             <>
-              <span>Confidence reached (vs {Math.round(CONFIDENCE_GOAL * 100)}% goal)</span>
-              <span>~{estimatedQuestionsRemaining} question slots left</span>
+              <span>{t('progress_conf_reached', { goal: Math.round(CONFIDENCE_GOAL * 100) })}</span>
+              <span>{t('progress_slots_left', { n: estimatedQuestionsRemaining })}</span>
             </>
           ) : (
             <>
-              <span>{questionsAnswered} questions answered</span>
-              <span>~{estimatedQuestionsRemaining} remaining</span>
+              <span>{t('progress_answered', { n: questionsAnswered })}</span>
+              <span>{t('progress_remaining', { n: estimatedQuestionsRemaining })}</span>
             </>
           )}
         </div>
@@ -93,10 +99,8 @@ export default function ProgressIndicator({
 
       <div className="mb-6">
         <div className="flex justify-between items-center mb-3">
-          <span className="text-sm font-medium text-gray-700">Information coverage</span>
-          <span className="text-sm font-medium text-green-600">
-            {Math.round(averageTagCoverage * 100)}%
-          </span>
+          <span className="text-sm font-medium text-gray-700">{t('progress_coverage_label')}</span>
+          <span className="text-sm font-medium text-green-600">{Math.round(averageTagCoverage * 100)}%</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
@@ -104,24 +108,19 @@ export default function ProgressIndicator({
             style={{ width: `${averageTagCoverage * 100}%` }}
           />
         </div>
-        <p className="text-xs text-gray-500 mt-1">
-          Coverage reflects how many prompts have touched each routing band (internal bookkeeping, not a clinical score).
-        </p>
+        <p className="text-xs text-gray-500 mt-1">{t('progress_coverage_hint')}</p>
       </div>
 
       <div>
         <h4 className="text-sm font-medium text-gray-700 mb-3">
-          {mode === 'refinement' ? 'Target dimensions vs goal' : 'Per-band coverage'}
+          {mode === 'refinement' ? t('progress_bands_refinement') : t('progress_bands_initial')}
         </h4>
         <div className="space-y-2">
           {(mode === 'refinement' && refinementPool.length > 0 ? refinementPool : [...ROUTING_WEIGHT_KEYS]).map(
             (tag, i) => {
               const confidence = tagCoverage[tag];
               const color = BAND_COLORS[ROUTING_WEIGHT_KEYS.indexOf(tag)] ?? BAND_COLORS[i] ?? 'bg-gray-500';
-              const label =
-                mode === 'refinement' && strings
-                  ? getDimensionUi(tag, strings).shortLabel
-                  : `Band ${ROUTING_WEIGHT_KEYS.indexOf(tag) + 1}`;
+              const label = dimLabel(tag);
               const vsGoal = Math.min(100, (confidence / CONFIDENCE_GOAL) * 100);
               return (
                 <div key={tag} className="flex items-center space-x-3">
@@ -171,15 +170,9 @@ export default function ProgressIndicator({
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <div className="text-sm text-blue-800">
-            {averageTagCoverage < 0.5 && (
-              <p>Keep going! We&apos;re still gathering enough diverse responses for a stable summary.</p>
-            )}
-            {averageTagCoverage >= 0.5 && averageTagCoverage < 0.7 && (
-              <p>Good progress — coverage is building across routing bands.</p>
-            )}
-            {averageTagCoverage >= 0.7 && (
-              <p>Strong coverage — you can finish soon with a well-supported pipeline output.</p>
-            )}
+            {averageTagCoverage < 0.5 && <p>{t('progress_encourage_low')}</p>}
+            {averageTagCoverage >= 0.5 && averageTagCoverage < 0.7 && <p>{t('progress_encourage_mid')}</p>}
+            {averageTagCoverage >= 0.7 && <p>{t('progress_encourage_high')}</p>}
           </div>
         </div>
       </div>

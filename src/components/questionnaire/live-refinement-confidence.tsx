@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { ROUTING_WEIGHT_KEYS, type RoutingWeightKey } from '@/adaptive/routing-tags';
 import type { TagCoverageVector } from '@/adaptive/coverage-model';
 import { getDimensionUi } from '@/lib/cognitive-dimensions-ui';
@@ -21,6 +22,7 @@ export default function LiveRefinementConfidence({
   strings,
   heading,
 }: LiveRefinementConfidenceProps) {
+  const t = useTranslations('questionnaire');
   const dims =
     highlightDimensions && highlightDimensions.length > 0
       ? highlightDimensions
@@ -42,7 +44,7 @@ export default function LiveRefinementConfidence({
               <div className="flex justify-between text-xs text-slate-800">
                 <span className="font-medium">{meta.shortLabel}</span>
                 <span className="tabular-nums text-slate-600">
-                  {pct}% / {goalPct}% goal
+                  {t('refinement_live_row', { pct, goal: Math.round(goalPct) })}
                 </span>
               </div>
               <div className="relative h-2 w-full overflow-hidden rounded-full bg-slate-200">

@@ -4,16 +4,35 @@ import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { type AssessmentQuestion, type LikertResponse } from '@/data/questions';
 
+const CATEGORY_LABEL_KEY: Record<AssessmentQuestion['category'], 'category_focus' | 'category_pattern' | 'category_sensory' | 'category_social' | 'category_structure' | 'category_flexibility'> = {
+  focus: 'category_focus',
+  pattern: 'category_pattern',
+  sensory: 'category_sensory',
+  social: 'category_social',
+  structure: 'category_structure',
+  flexibility: 'category_flexibility',
+};
+
 interface QuestionCardProps {
   question: AssessmentQuestion;
+  /** Localized stem for display; scoring uses `question.text` / id in history. */
+  displayText: string;
   onResponse: (response: LikertResponse) => void;
   questionNumber: number;
   totalQuestions: number;
 }
 
-export default function QuestionCard({ question, onResponse, questionNumber, totalQuestions }: QuestionCardProps) {
+export default function QuestionCard({
+  question,
+  displayText,
+  onResponse,
+  questionNumber,
+  totalQuestions,
+}: QuestionCardProps) {
   const [choiceLocked, setChoiceLocked] = useState(false);
   const t = useTranslations('questionnaire');
+
+  const categoryLabel = t(CATEGORY_LABEL_KEY[question.category]);
 
   const likertOptions: { value: LikertResponse; label: string; description: string }[] = useMemo(() => {
     if (question.responseScale === 'likert3') {
@@ -24,11 +43,11 @@ export default function QuestionCard({ question, onResponse, questionNumber, tot
       ];
     }
     return [
-      { value: 1, label: 'Strongly Disagree', description: 'This does not describe me at all' },
-      { value: 2, label: 'Disagree', description: 'This rarely describes me' },
-      { value: 3, label: 'Neutral', description: 'This sometimes describes me' },
-      { value: 4, label: 'Agree', description: 'This often describes me' },
-      { value: 5, label: 'Strongly Agree', description: 'This describes me very well' },
+      { value: 1, label: t('likert5_strongly_disagree_label'), description: t('likert5_strongly_disagree_desc') },
+      { value: 2, label: t('likert5_disagree_label'), description: t('likert5_disagree_desc') },
+      { value: 3, label: t('likert5_neutral_label'), description: t('likert5_neutral_desc') },
+      { value: 4, label: t('likert5_agree_label'), description: t('likert5_agree_desc') },
+      { value: 5, label: t('likert5_strongly_agree_label'), description: t('likert5_strongly_agree_desc') },
     ];
   }, [question.responseScale, t]);
 
@@ -38,14 +57,12 @@ export default function QuestionCard({ question, onResponse, questionNumber, tot
       <div className="mb-6">
         <div className="flex justify-between items-center mb-4">
           <span className="text-sm font-medium text-gray-500">
-            Question {questionNumber} of {totalQuestions}
+            {t('card_progress', { current: questionNumber, total: totalQuestions })}
           </span>
-          <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-            {question.category.charAt(0).toUpperCase() + question.category.slice(1)}
-          </span>
+          <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">{categoryLabel}</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
-          <div 
+          <div
             className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-300"
             style={{ width: `${(questionNumber / totalQuestions) * 100}%` }}
           />
@@ -54,9 +71,7 @@ export default function QuestionCard({ question, onResponse, questionNumber, tot
 
       {/* Question Text */}
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-          {question.text}
-        </h2>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4">{displayText}</h2>
         <p className="text-gray-600 text-sm">
           {question.responseScale === 'likert3' ? t('prompt_likert3') : t('prompt_likert5')}
         </p>
@@ -85,12 +100,8 @@ export default function QuestionCard({ question, onResponse, questionNumber, tot
                 </div>
               </div>
               <div className="flex-1">
-                <div className="font-medium text-gray-900 mb-1">
-                  {option.label}
-                </div>
-                <div className="text-sm text-gray-600">
-                  {option.description}
-                </div>
+                <div className="font-medium text-gray-900 mb-1">{option.label}</div>
+                <div className="text-sm text-gray-600">{option.description}</div>
               </div>
             </div>
           </button>
@@ -100,11 +111,9 @@ export default function QuestionCard({ question, onResponse, questionNumber, tot
       {/* Dimension Weights Info (Research transparency) */}
       <div className="mt-8 p-4 bg-gray-50 rounded-lg">
         <details className="cursor-pointer">
-          <summary className="text-sm font-medium text-gray-700 hover:text-gray-900">
-            Research Information: How this question contributes to your profile
-          </summary>
+          <summary className="text-sm font-medium text-gray-700 hover:text-gray-900">{t('research_summary')}</summary>
           <div className="mt-3 text-xs text-gray-600 space-y-1">
-            <p>This question measures the following cognitive dimensions:</p>
+            <p>{t('research_measures')}</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2">
               {Object.entries(question.dimensionWeights)
                 .filter(([, weight]) => weight > 0.1)
@@ -115,9 +124,7 @@ export default function QuestionCard({ question, onResponse, questionNumber, tot
                   </div>
                 ))}
             </div>
-            <p className="mt-2 text-xs text-gray-500">
-              Information gain score: {question.informationGain.toFixed(2)}
-            </p>
+            <p className="mt-2 text-xs text-gray-500">{t('research_info_gain', { value: question.informationGain.toFixed(2) })}</p>
           </div>
         </details>
       </div>
