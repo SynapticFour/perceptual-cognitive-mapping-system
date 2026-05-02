@@ -180,6 +180,12 @@ npm run test:edge   # Optional edge-case suites (stricter/experimental)
 
 > **Note**: You can test the complete system without Supabase setup. Data collection features require Supabase configuration.
 
+### Production deployment (Vercel)
+
+- **Project:** connect this repo; Next.js is auto-detected. **`vercel.json`** sets `buildCommand` (`npm run build`), security headers, and caching for `/_next/static/*` vs HTML—no locale rewrites (next-intl keeps `/de`, `/wo`, `/tw` as normal routes).
+- **Environment:** copy variables from **`.env.example`** into the Vercel project (Production + Preview as needed). Set **`NEXT_PUBLIC_APP_URL`** to your canonical URL (e.g. `https://map.synapticfour.com`). Supabase keys remain optional: without them the app uses browser storage only.
+- **Domain:** attach **`map.synapticfour.com`** in Vercel → Domains (DNS at your registrar).
+
 ### Quick Test
 
 After setup, you can immediately test the system:

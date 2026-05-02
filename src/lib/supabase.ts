@@ -8,27 +8,36 @@ export const isSupabaseConfigured = (): boolean => isSupabaseEnvConfigured();
 
 let supabaseClient: PcmsSupabaseClient | null = null;
 
+function warnSupabaseMissing(): void {
+  const msg =
+    'Supabase not configured — using local storage only (set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to enable cloud sync).';
+  if (typeof window !== 'undefined') {
+    console.warn(msg);
+  } else if (process.env.NODE_ENV !== 'production') {
+    console.warn(msg);
+  }
+}
+
 export const getSupabaseClient = (): PcmsSupabaseClient | null => {
   if (!isSupabaseConfigured()) {
-    console.log('Supabase not configured - using local storage fallback');
+    warnSupabaseMissing();
     return null;
   }
 
-  const url = getSupabaseUrl()!;
-  const key = getSupabaseAnonKey()!;
+  const url = getSupabaseUrl();
+  const key = getSupabaseAnonKey();
+  if (!url || !key) {
+    warnSupabaseMissing();
+    return null;
+  }
 
   if (!supabaseClient) {
     try {
-      console.log('Creating Supabase client with:', {
-        url: `${url.substring(0, 20)}...`,
-        hasKey: !!key,
-      });
-
       supabaseClient = createClient<Database>(url, key);
-
-      console.log('Supabase client created successfully');
     } catch (error) {
-      console.error('Failed to create Supabase client:', error);
+      if (typeof window !== 'undefined' || process.env.NODE_ENV !== 'production') {
+        console.warn('Failed to create Supabase client — using local storage only:', error);
+      }
       return null;
     }
   }

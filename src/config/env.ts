@@ -22,3 +22,8 @@ export function isSupabaseEnvConfigured(): boolean {
   const key = getSupabaseAnonKey();
   return !!(url && key);
 }
+
+/** Public site URL for absolute links (optional). Example production: https://map.synapticfour.com */
+export function getPublicAppUrl(): string | undefined {
+  return readPublic('NEXT_PUBLIC_APP_URL');
+}

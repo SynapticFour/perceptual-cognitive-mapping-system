@@ -12,7 +12,7 @@ let adminClient: PcmsSupabaseAdmin | null = null;
  * URL is taken from NEXT_PUBLIC_SUPABASE_URL.
  */
 export function getSupabaseAdminClient(): PcmsSupabaseAdmin | null {
-  const url = getSupabaseServiceRoleKey() ? getSupabaseUrl() : undefined;
+  const url = getSupabaseUrl();
   const key = getSupabaseServiceRoleKey();
   if (!url || !key) return null;
 
