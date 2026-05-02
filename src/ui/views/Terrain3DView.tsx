@@ -222,9 +222,25 @@ export default function Terrain3DView({ model, strings, userAccentColor }: Terra
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [terrain, userAccentColor]);
 
+  const legendId = 'terrain3d-legend-heading';
+
   return (
     <div className="w-full">
       <p className="mb-2 text-xs leading-relaxed text-slate-600">{strings['landscape.view_terrain3d_caption']}</p>
+      <section
+        className="mb-3 rounded-lg border border-slate-200/90 bg-slate-50/90 px-3 py-2.5"
+        aria-labelledby={legendId}
+      >
+        <h3 id={legendId} className="text-xs font-semibold text-slate-800">
+          {strings['landscape.view_terrain3d_legend_title']}
+        </h3>
+        <ul className="mt-2 list-disc space-y-1.5 pl-4 text-xs leading-relaxed text-slate-600">
+          <li>{strings['landscape.view_terrain3d_legend_peak']}</li>
+          <li>{strings['landscape.view_terrain3d_legend_you']}</li>
+          <li>{strings['landscape.view_terrain3d_legend_rings']}</li>
+          <li>{strings['landscape.view_terrain3d_legend_layout']}</li>
+        </ul>
+      </section>
       <div className="mb-2 flex flex-wrap items-center gap-2">
         <span className="text-[11px] font-medium text-slate-500">{strings['landscape.view_terrain3d_mode_label']}</span>
         <div className="inline-flex rounded-md border border-slate-200 bg-slate-50 p-0.5">
@@ -268,7 +284,7 @@ export default function Terrain3DView({ model, strings, userAccentColor }: Terra
           </div>
         ) : null}
       </div>
-      <p className="mt-2 text-[11px] text-slate-500">{strings['landscape.view_terrain3d_hint']}</p>
+      <p className="mt-2 text-xs leading-relaxed text-slate-600">{strings['landscape.view_terrain3d_hint']}</p>
     </div>
   );
 }
