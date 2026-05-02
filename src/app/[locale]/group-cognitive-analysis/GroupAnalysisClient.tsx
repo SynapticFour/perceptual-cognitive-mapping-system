@@ -62,7 +62,6 @@ function buildMember(
   label: string,
   display: DimensionDisplayModel,
   confidence: ConfidenceComponents,
-  ui: UiStrings,
   seed: number
 ): GroupMemberInput {
   const model = buildCognitiveModel({
@@ -70,7 +69,6 @@ function buildMember(
     embeddingDimension: 32,
     display,
     confidenceComponents: confidence,
-    strings: ui,
     syntheticCount: 56,
   });
   return { id, label, model, display };
@@ -88,12 +86,12 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
     setError(null);
     const conf = mockConfidence();
     const members: GroupMemberInput[] = [
-      buildMember('m0', 'Demo A', makeDisplay(42), conf, strings, 1),
-      buildMember('m1', 'Demo B', makeDisplay(58), conf, strings, 2),
-      buildMember('m2', 'Demo C', makeDisplay(51), conf, strings, 3),
+      buildMember('m0', 'Demo A', makeDisplay(42), conf, 1),
+      buildMember('m1', 'Demo B', makeDisplay(58), conf, 2),
+      buildMember('m2', 'Demo C', makeDisplay(51), conf, 3),
     ];
     setReport(analyzeMultiProfileGroup(members));
-  }, [strings]);
+  }, []);
 
   const runAnalyze = useCallback(() => {
     setError(null);
@@ -110,7 +108,7 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
       const display = displayModelFromSharePayload(decoded);
       const confidence = confidenceComponentsFromSharePayload(decoded);
       members.push(
-        buildMember(`m${idx}`, row.label.trim() || `Person ${idx + 1}`, display, confidence, strings, idx + 4)
+        buildMember(`m${idx}`, row.label.trim() || `Person ${idx + 1}`, display, confidence, idx + 4)
       );
       idx++;
     }

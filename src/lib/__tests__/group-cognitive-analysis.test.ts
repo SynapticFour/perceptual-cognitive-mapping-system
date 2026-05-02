@@ -8,11 +8,6 @@ import {
   type GroupMemberInput,
 } from '@/lib/group-cognitive-analysis';
 import type { ConfidenceComponents } from '@/scoring';
-import type { UiStrings } from '@/lib/ui-strings';
-import { defaultUiStrings } from '@/lib/ui-strings';
-
-const ui: UiStrings = defaultUiStrings;
-
 function mockDisplay(value: number): DimensionDisplayModel {
   const rawPercent = Object.fromEntries(ROUTING_WEIGHT_KEYS.map((d) => [d, value])) as DimensionDisplayModel['rawPercent'];
   const weightedPercent = { ...rawPercent };
@@ -40,7 +35,6 @@ function makeMember(id: string, label: string, raw: number, seed: number): Group
     embeddingDimension: 32,
     display,
     confidenceComponents: mockConfidence,
-    strings: ui,
     syntheticCount: 48,
   });
   return { id, label, model, display };

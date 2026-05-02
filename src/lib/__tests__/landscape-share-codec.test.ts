@@ -4,10 +4,13 @@ import type { DimensionDisplayModel } from '@/lib/dimension-display';
 import type { ConfidenceComponents } from '@/scoring';
 import {
   buildSharePayload,
+  buildShareableResultsUrl,
   confidenceComponentsFromSharePayload,
   decodeLandscapeSharePayload,
   displayModelFromSharePayload,
   encodeLandscapeSharePayload,
+  MAX_SHARE_URL_LENGTH,
+  readShareEncodedPayloadFromWindow,
 } from '@/lib/landscape-share-codec';
 
 function makeDisplay(value = 50): DimensionDisplayModel {
@@ -63,5 +66,23 @@ describe('landscape-share-codec', () => {
     expect(display.weightedPercent.F).toBe(56);
     expect(conf.F.finalConfidence).toBe(1);
     expect(conf.P.finalConfidence).toBe(0);
+  });
+
+  it('buildShareableResultsUrl prefers query then hash under max length', () => {
+    const payload = buildSharePayload(makeDisplay(40), makeConfidence(0.7));
+    const encoded = encodeLandscapeSharePayload(payload);
+    const base = 'https://example.com/en/results';
+    const q = buildShareableResultsUrl(`${base}?foo=1`, encoded);
+    expect(q.ok).toBe(true);
+    if (!q.ok) throw new Error('expected url');
+    expect(q.url).toContain('?');
+    expect(q.url).toContain('p=');
+    expect(q.url.length).toBeLessThanOrEqual(MAX_SHARE_URL_LENGTH);
+  });
+
+  it('readShareEncodedPayloadFromWindow reads query or hash', () => {
+    const token = 'abc123';
+    expect(readShareEncodedPayloadFromWindow(`?p=${encodeURIComponent(token)}`, '')).toBe(token);
+    expect(readShareEncodedPayloadFromWindow('', `#p=${encodeURIComponent(token)}`)).toBe(token);
   });
 });

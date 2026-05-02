@@ -3,7 +3,6 @@ import { ROUTING_WEIGHT_KEYS } from '@/adaptive/routing-tags';
 import { buildCognitiveModel } from '@/core/cognitive-pipeline';
 import { activationSpatialDispersion } from '@/lib/cognitive-map-projection';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
-import { defaultUiStrings } from '@/lib/ui-strings';
 import type { ConfidenceComponents } from '@/scoring';
 
 const mockDisplay: DimensionDisplayModel = {
@@ -32,7 +31,6 @@ describe('buildCognitiveModel', () => {
       embeddingDimension: 32,
       display: mockDisplay,
       confidenceComponents: mockConfidence,
-      strings: defaultUiStrings,
       syntheticCount: 80,
     });
 
@@ -67,7 +65,6 @@ describe('buildCognitiveModel', () => {
       embeddingDimension: 32,
       display: mockDisplay,
       confidenceComponents: mockConfidence,
-      strings: defaultUiStrings,
       syntheticCount: 120,
     });
     const k = m.activations.length;

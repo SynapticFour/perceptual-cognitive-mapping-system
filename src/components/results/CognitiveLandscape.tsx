@@ -130,7 +130,6 @@ export default function CognitiveLandscape({
         embeddingDimension,
         display,
         confidenceComponents,
-        strings,
         extraPoints: mapExtraPoints,
       }),
     [confidenceComponents, display, embeddingDimension, embeddingVector, mapExtraPoints]

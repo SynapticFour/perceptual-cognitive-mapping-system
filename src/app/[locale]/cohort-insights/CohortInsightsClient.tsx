@@ -10,7 +10,6 @@ import { matchCohortToKnownPatterns } from '@/cohort/pattern-cohort-match';
 import { getTopPatterns } from '@/core/patterns/pattern-store';
 import CohortInsightsDashboard from '@/components/cohort/CohortInsightsDashboard';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
-import type { UiStrings } from '@/lib/ui-strings';
 import { useUiStrings } from '@/lib/use-ui-strings';
 import type { ConfidenceComponents } from '@/scoring';
 
@@ -33,13 +32,12 @@ const mockConfidence: ConfidenceComponents = Object.fromEntries(
   ])
 ) as ConfidenceComponents;
 
-function makeDemoModel(ui: UiStrings, seed: number) {
+function makeDemoModel(seed: number) {
   return buildCognitiveModel({
     embeddingVector: new Array(32).fill(0).map((_, i) => (((i + seed) % 10) + Math.sin(seed)) / 12),
     embeddingDimension: 32,
     display: mockDisplay,
     confidenceComponents: mockConfidence,
-    strings: ui,
     syntheticCount: 64,
   });
 }
@@ -49,13 +47,13 @@ export default function CohortInsightsClient() {
   const ui = useUiStrings();
 
   const { cohortModel, environmentSignals, frictionSignals, patternMatches } = useMemo(() => {
-    const models = [1, 2, 3].map((seed) => makeDemoModel(ui, seed));
+    const models = [1, 2, 3].map((seed) => makeDemoModel(seed));
     const cm = buildCohortCognitiveMap(models);
     const env = deriveEnvironmentSignals(cm);
     const friction = mapInteractionFriction(cm);
     const patterns = matchCohortToKnownPatterns(cm, getTopPatterns(48), 8);
     return { cohortModel: cm, environmentSignals: env, frictionSignals: friction, patternMatches: patterns };
-  }, [ui]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50/40">

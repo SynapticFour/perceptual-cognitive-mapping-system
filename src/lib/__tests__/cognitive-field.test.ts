@@ -2,7 +2,6 @@ import { describe, expect, it } from 'vitest';
 import { buildCognitiveModel } from '@/core/cognitive-pipeline';
 import { buildCognitiveFieldGrid } from '@/lib/cognitive-field';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
-import { defaultUiStrings } from '@/lib/ui-strings';
 import { ROUTING_WEIGHT_KEYS } from '@/adaptive/routing-tags';
 import type { ConfidenceComponents } from '@/scoring';
 
@@ -32,7 +31,6 @@ describe('cognitive-field', () => {
       embeddingDimension: 32,
       display: mockDisplay,
       confidenceComponents: mockConfidence,
-      strings: defaultUiStrings,
       syntheticCount: 100,
     });
     const f = buildCognitiveFieldGrid(m, 64, 64);

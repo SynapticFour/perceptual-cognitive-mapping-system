@@ -2,7 +2,6 @@ import { describe, expect, it, vi } from 'vitest';
 import { ROUTING_WEIGHT_KEYS } from '@/adaptive/routing-tags';
 import { buildCognitiveModel } from '@/core/cognitive-pipeline';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
-import { defaultUiStrings } from '@/lib/ui-strings';
 import type { ConfidenceComponents } from '@/scoring';
 
 vi.mock('@/core/traits/trait-mapping', async (importOriginal) => {
@@ -39,7 +38,6 @@ describe('buildCognitiveModel degenerate activations', () => {
       embeddingDimension: 32,
       display: mockDisplay,
       confidenceComponents: mockConfidence,
-      strings: defaultUiStrings,
       syntheticCount: 40,
     });
 

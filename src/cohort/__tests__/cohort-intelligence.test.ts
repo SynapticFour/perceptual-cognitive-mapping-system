@@ -17,7 +17,6 @@ import { minePatterns } from '@/core/patterns/pattern-mining';
 import { getPatternLibrary, getTopPatterns, recordUserSignatureWithContext } from '@/cohort';
 import { getPatternLibrarySnapshot, resetPatternStoreForTests } from '@/core/patterns/pattern-store';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
-import { defaultUiStrings } from '@/lib/ui-strings';
 import type { ConfidenceComponents } from '@/scoring';
 
 const mockDisplay: DimensionDisplayModel = {
@@ -45,7 +44,6 @@ function makeModel(seed: number) {
     embeddingDimension: 32,
     display: mockDisplay,
     confidenceComponents: mockConfidence,
-    strings: defaultUiStrings,
     syntheticCount: 64,
   });
 }

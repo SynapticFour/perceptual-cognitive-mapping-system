@@ -25,8 +25,6 @@ import type { CognitiveDimension } from '@/model/cognitive-dimensions';
 import type { TraitDomain } from '@/core/traits/trait-domains';
 import type { CognitiveActivation } from '@/core/traits/types';
 import type { ConfidenceComponents } from '@/scoring';
-import type { UiStrings } from '@/lib/ui-strings';
-
 /** Must match `VIEW_INNER` in `ui/views/map-layout.ts` (density bins align with plot). */
 const PLOT_INNER = 400 - 28 * 2;
 
@@ -162,7 +160,6 @@ export interface BuildCognitiveModelInput {
   embeddingDimension: number;
   display: DimensionDisplayModel;
   confidenceComponents: ConfidenceComponents;
-  strings: UiStrings;
   extraPoints?: CognitiveExtraPoint[];
   syntheticCount?: number;
 }
