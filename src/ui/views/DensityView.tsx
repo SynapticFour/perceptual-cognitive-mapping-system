@@ -427,7 +427,7 @@ export default function DensityView({
         onPointerMove={onCanvasPointerMove}
         onPointerLeave={() => setTip(null)}
       />
-      <p className="mt-1.5 px-1 text-center text-[10px] leading-snug text-slate-500">
+      <p className="mt-1.5 px-1 text-center text-xs leading-snug text-slate-600">
         {strings['landscape.constellation_note']}
       </p>
 
@@ -454,7 +454,7 @@ export default function DensityView({
           <div className="text-slate-600">
             {strings['landscape.constellation_weight']}: {(tip.weight * 100).toFixed(0)}%
           </div>
-          <div className="mt-0.5 font-mono text-[10px] text-slate-400">{tip.traitId}</div>
+          <div className="mt-0.5 font-mono text-xs text-slate-600">{tip.traitId}</div>
         </div>
       ) : null}
       {tip?.kind === 'region' ? (

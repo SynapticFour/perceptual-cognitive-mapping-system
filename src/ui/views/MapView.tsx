@@ -384,10 +384,10 @@ export default function MapView({ model, strings, userAccentColor, patternHighli
         ) : null}
       </svg>
 
-      <p className="mt-1.5 px-1 text-center text-[10px] leading-snug text-slate-500">
+      <p className="mt-1.5 px-1 text-center text-xs leading-snug text-slate-600">
         {strings['landscape.constellation_note']}
       </p>
-      <p className="mt-0.5 px-1 text-center text-[10px] leading-snug text-slate-400">
+      <p className="mt-0.5 px-1 text-center text-xs leading-snug text-slate-600">
         {strings['landscape.map_zoom_hint']}
       </p>
 
@@ -406,7 +406,7 @@ export default function MapView({ model, strings, userAccentColor, patternHighli
           <div className="text-slate-600">
             {strings['landscape.constellation_weight']}: {(tip.weight * 100).toFixed(0)}%
           </div>
-          <div className="mt-0.5 font-mono text-[10px] text-slate-400">{tip.traitId}</div>
+          <div className="mt-0.5 font-mono text-xs text-slate-600">{tip.traitId}</div>
         </div>
       ) : null}
 

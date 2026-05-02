@@ -192,7 +192,7 @@ export default function CognitiveFieldView({ model, strings }: CognitiveFieldVie
           setHoveredRegion(null);
         }}
       />
-      <p className="mt-1.5 px-1 text-center text-[10px] leading-snug text-slate-500">
+      <p className="mt-1.5 px-1 text-center text-xs leading-snug text-slate-600">
         {strings['landscape.field_caption'] ?? strings['landscape.map_density_hint']}
       </p>
       {tip ? (

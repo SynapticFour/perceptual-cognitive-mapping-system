@@ -102,7 +102,7 @@ export default function VectorView({ model, strings, topN = 14 }: VectorViewProp
             return (
               <section key={region.id} className="rounded-lg border border-slate-200/90 bg-white/60 p-3 shadow-sm">
                 <h4 className="text-xs font-semibold leading-snug text-slate-800">{region.label}</h4>
-                <p className="mt-0.5 text-[10px] text-slate-500">{formatTraitDomainLabel(region.primaryDomain)}</p>
+                <p className="mt-0.5 text-xs text-slate-600">{formatTraitDomainLabel(region.primaryDomain)}</p>
                 <ul className="mt-2.5 space-y-2.5">
                   {region.pointIndices.map((ai) => {
                     const row = traitByIndex.get(ai);
@@ -146,7 +146,7 @@ export default function VectorView({ model, strings, topN = 14 }: VectorViewProp
         <div className="space-y-4">
           {activationByDomain.map(([domainKey, rows]) => (
             <section key={domainKey} className="space-y-2">
-              <h4 className="text-[10px] font-medium uppercase tracking-wide text-slate-500">
+              <h4 className="text-xs font-medium uppercase tracking-wide text-slate-600">
                 {formatTraitDomainLabel(domainKey)}
               </h4>
               <ul className="space-y-2.5">

@@ -248,7 +248,7 @@ export default function Terrain3DView({ model, strings, userAccentColor }: Terra
           </button>
         </div>
         {terrain ? (
-          <span className="text-[11px] text-slate-400">
+          <span className="text-[11px] text-slate-600">
             {terrain.source === 'umap'
               ? strings['landscape.view_terrain3d_source_umap']
               : strings['landscape.view_terrain3d_source_pca']}
