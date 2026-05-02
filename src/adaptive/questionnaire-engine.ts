@@ -11,6 +11,10 @@ import {
   type RoutingWeightKey,
   type TagCoverageVector,
 } from '@/adaptive/coverage-model';
+import {
+  buildPerDimensionRoutingDiagnostics,
+  type PerDimensionRoutingDiagnostics,
+} from '@/adaptive/routing-diagnostics';
 import { ScoringModel, type CognitiveDimension } from '@/scoring';
 
 /** Research-defined maximum number of answered questions per assessment (including refinement). */
@@ -43,6 +47,12 @@ export interface ResearchAssessmentConfig {
   maxTotalQuestions: number;
   /** Override absolute answer cap (for automated tests only). */
   totalQuestionHardCap?: number;
+  /**
+   * When the refinement phase may stop globally (not focus mode):
+   * - `majority_dimensions` — ≥70% of F–V dimensions at/above threshold (default; fewer questions).
+   * - `all_dimensions` — every dimension must reach threshold (aligns with strict adaptive specs).
+   */
+  stoppingRule?: 'majority_dimensions' | 'all_dimensions';
 }
 
 export class AdaptiveQuestionnaireEngine {
@@ -88,6 +98,7 @@ export class AdaptiveQuestionnaireEngine {
     this.coverageModel = new CoverageModel({
       researchConfidenceThreshold: this.config.confidenceThreshold,
       maxQuestionsPerDimension: 5, // Maximum questions per dimension in refinement
+      stoppingRule: this.config.stoppingRule === 'all_dimensions' ? 'all' : 'majority',
     });
     this.scoringModel = new ScoringModel();
     
@@ -194,9 +205,10 @@ export class AdaptiveQuestionnaireEngine {
     if (availableCore.length === 0) return null;
 
     const counts = this.coverageModel.countQuestionsPerTag(this.state.questionHistory, this.questions);
+    const coverage = this.routingCoverage();
     const scoredQuestions = availableCore.map((q) => ({
       question: q,
-      score: this.calculateCoreQuestionScore(q, counts),
+      score: this.calculateCoreQuestionScore(q, counts, coverage),
     }));
 
     scoredQuestions.sort((a, b) => b.score - a.score);
@@ -235,8 +247,17 @@ export class AdaptiveQuestionnaireEngine {
     return scoredQuestions[0]!.question;
   }
 
-  private calculateCoreQuestionScore(question: AssessmentQuestion, counts: TagCoverageVector): number {
+  /**
+   * Core-phase score: information gain + balance (under-covered tags) + uncertainty reduction
+   * (favour items that load on dimensions with low current confidence).
+   */
+  private calculateCoreQuestionScore(
+    question: AssessmentQuestion,
+    counts: TagCoverageVector,
+    coverage: TagCoverageVector
+  ): number {
     let score = question.informationGain || 0.5;
+    const threshold = this.config.confidenceThreshold;
 
     for (const tag of ROUTING_WEIGHT_KEYS) {
       const weight = question.dimensionWeights[tag] ?? 0;
@@ -244,6 +265,8 @@ export class AdaptiveQuestionnaireEngine {
         const count = counts[tag];
         const balanceBonus = Math.max(0, (3 - count) * 0.2);
         score += weight * balanceBonus;
+        const confidenceGap = Math.max(0, threshold - coverage[tag]);
+        score += weight * confidenceGap * 0.35;
       }
     }
 
@@ -400,6 +423,8 @@ export class AdaptiveQuestionnaireEngine {
     refinementQuestionsAnswered: number;
     averageTagCoverage: number;
     tagCoverage: TagCoverageVector;
+    /** Per F–V dimension: mean, variance of weighted contributions, confidence (offline, deterministic). */
+    perDimensionRouting: Record<RoutingWeightKey, PerDimensionRoutingDiagnostics>;
     phase: 'core' | 'refinement' | 'complete';
     completionReason: string | null;
     estimatedQuestionsRemaining: number;
@@ -407,6 +432,8 @@ export class AdaptiveQuestionnaireEngine {
   } {
     const tagCoverage = this.routingCoverage();
     const thresholdStatus = this.coverageModel.meetsResearchThresholds(tagCoverage);
+    const questionsById = new Map(this.questions.map((q) => [q.id, q]));
+    const perDimensionRouting = buildPerDimensionRoutingDiagnostics(this.state.questionHistory, questionsById);
 
     return {
       questionsAnswered: this.state.questionHistory.length,
@@ -414,6 +441,7 @@ export class AdaptiveQuestionnaireEngine {
       refinementQuestionsAnswered: this.getRefinementQuestionsAnswered(),
       averageTagCoverage: this.coverageModel.averageCoverage(tagCoverage),
       tagCoverage,
+      perDimensionRouting,
       phase: this.state.phase,
       completionReason: this.state.completionReason,
       estimatedQuestionsRemaining: Math.max(

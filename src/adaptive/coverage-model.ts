@@ -18,11 +18,17 @@ export { ROUTING_WEIGHT_KEYS, type RoutingWeightKey, type TagCoverageVector, emp
 export interface ResearchCoverageConfig {
   researchConfidenceThreshold: number;
   maxQuestionsPerDimension: number;
+  /**
+   * `majority` (default): stop when ≥70% of routing dimensions meet the threshold (efficiency).
+   * `all`: every routing dimension must reach the threshold (stricter; more questions on average).
+   */
+  stoppingRule?: 'majority' | 'all';
 }
 
 const DEFAULT_CONFIG: ResearchCoverageConfig = {
   researchConfidenceThreshold: 0.75,
   maxQuestionsPerDimension: 5,
+  stoppingRule: 'majority',
 };
 
 export class CoverageModel {
@@ -78,7 +84,11 @@ export class CoverageModel {
     }
 
     const overallCoverage = tagsMet.length / ROUTING_WEIGHT_KEYS.length;
-    const meetsThreshold = overallCoverage >= 0.7;
+    const rule = this.config.stoppingRule ?? 'majority';
+    const meetsThreshold =
+      rule === 'all'
+        ? tagsBelowThreshold.length === 0
+        : overallCoverage >= 0.7;
 
     return { meetsThreshold, tagsMet, tagsBelowThreshold, overallCoverage };
   }

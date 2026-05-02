@@ -4,6 +4,7 @@ export {
   dimensionContribution,
   calculateResearchConfidence,
   tagCoverageFromScoringResult,
+  populationVariance,
 } from './scoring-model';
 export type {
   CognitiveDimension,
