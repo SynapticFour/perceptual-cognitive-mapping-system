@@ -388,8 +388,8 @@
     "notes_fallback": "This is a descriptive summary, not a diagnosis or clinical assessment."
   },
   "welcome": {
-    "title": "Perceptual & Cognitive Mapping System",
-    "subtitle": "A research-friendly way to explore different styles of thinking and learning"
+    "title": "How does your mind work?",
+    "subtitle": "A research tool that maps your cognitive style as a continuous profile — not a diagnosis, not a label. Just your pattern."
   },
   "consent": {
     "title": "Research Consent Form",
@@ -465,11 +465,33 @@
     "wo": "Wolof"
   },
   "landing": {
-    "lead": "This platform collects anonymous responses for cognitive-science research. Please review the multi-step consent before you begin.",
+    "lead": "About 10–15 minutes · No registration · Please read the short consent before you start.",
+    "not_heading": "What this is NOT",
+    "not_1": "🚫 Not an autism test",
+    "not_2": "🚫 Not a medical device",
+    "not_3": "🚫 Not a diagnosis",
+    "get_heading": "What you will get",
+    "get_1": "🗺️ A multi-dimensional map of your cognitive style",
+    "get_2": "🔒 Anonymous, private, no registration",
+    "get_3": "📥 Export as JSON",
     "cta_consent": "Review consent & continue",
     "cta_intro": "Read introduction first"
   },
+  "results_interpretation": {
+    "heading": "What does this mean?",
+    "para1": "Your profile shows how you weight focus, pattern processing, sensory sensitivity, social energy, structure preference, and cognitive flexibility. Everyone combines these dimensions in a unique way.",
+    "para2": "These patterns often overlap in research with concepts such as neurodiversity, high sensitivity, or autism spectrum profiles — but they are not interchangeable and cannot be used for diagnosis. For more on the research background, read the <research>PCMS research note on Synaptic Four</research>.",
+    "strengths_heading": "Strength correlates",
+    "strengths_sub": "Your three highest scores among the core six dimensions — descriptive strengths, not a verdict.",
+    "strength_F": "Deep concentration, detail precision",
+    "strength_P": "Systems thinking, pattern recognition",
+    "strength_S": "Fine-grained perception, aesthetic strengths",
+    "strength_E": "Empathy, collaboration in groups",
+    "strength_R": "Reliability, strong planning",
+    "strength_C": "Adaptability, creative problem-solving"
+  },
   "ethics_consent": {
+    "page_intro_cal": "You're about to explore your cognitive profile. Please take a moment to read what we collect and why.",
     "progress": "Step {n} of {total}",
     "confirm_label": "I have read this section carefully and confirm my understanding.",
     "next": "Continue",

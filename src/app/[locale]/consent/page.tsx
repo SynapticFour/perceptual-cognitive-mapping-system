@@ -169,6 +169,9 @@ export default function ConsentPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white px-4 py-10">
       <div className="mx-auto max-w-2xl">
+        <p className="mb-5 rounded-xl border border-slate-200/90 bg-white px-4 py-3 text-center text-base leading-relaxed text-slate-700 shadow-sm">
+          {t('page_intro_cal')}
+        </p>
         {runtimeMode === 'qa_all_steps' ? (
           <p className="mb-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-center text-sm text-amber-900">
             {t('qa_mode_banner')}

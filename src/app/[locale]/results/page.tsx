@@ -8,6 +8,7 @@ import type { CognitiveProfilePublic } from '@/types/profile-public';
 import { ROUTING_WEIGHT_KEYS } from '@/adaptive/routing-tags';
 import { ENGINE_HARD_CAP_TOTAL_QUESTIONS } from '@/adaptive';
 import CognitiveLandscapeGate from '@/components/results/CognitiveLandscapeGate';
+import ResultsInterpretationSection from '@/components/results/ResultsInterpretationSection';
 import ConfidenceSummaryBanner from '@/components/results/confidence-summary-banner';
 import InsightCards from '@/components/results/insight-cards';
 import {
@@ -496,6 +497,8 @@ export default function ResultsPage() {
             }
           />
         </div>
+
+        <ResultsInterpretationSection display={display} />
 
         {session && supportSignals.length > 0 ? (
           <SupportInsightsSection signals={supportSignals} strings={ui} />

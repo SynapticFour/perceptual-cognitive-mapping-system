@@ -388,8 +388,8 @@
     "notes_fallback": "Dies ist eine beschreibende Zusammenfassung, keine Diagnose oder klinische Bewertung."
   },
   "welcome": {
-    "title": "Perceptual & Cognitive Mapping System",
-    "subtitle": "Ein forschungsnahes Angebot, um verschiedene Denk- und Lernstile zu erkunden"
+    "title": "Wie arbeitet dein Geist?",
+    "subtitle": "Ein Forschungswerkzeug, das deinen Denkstil als kontinuierliches Profil abbildet — keine Diagnose, kein Label. Nur dein Muster."
   },
   "consent": {
     "title": "Einwilligung in die Forschungsteilnahme",
@@ -465,11 +465,33 @@
     "wo": "Wolof"
   },
   "landing": {
-    "lead": "Diese Plattform erfasst anonyme Antworten für die kognitionswissenschaftliche Forschung. Bitte lesen Sie die mehrstufige Einwilligung, bevor Sie starten.",
+    "lead": "Etwa 10–15 Minuten · Keine Registrierung · Bitte lies die kurze Einwilligung, bevor du startest.",
+    "not_heading": "Was das nicht ist",
+    "not_1": "🚫 Kein Autismus-Test",
+    "not_2": "🚫 Kein Medizinprodukt",
+    "not_3": "🚫 Keine Diagnose",
+    "get_heading": "Was du bekommst",
+    "get_1": "🗺️ Eine mehrdimensionale Karte deines Denkstils",
+    "get_2": "🔒 Anonym, privat, keine Registrierung",
+    "get_3": "📥 Export als JSON",
     "cta_consent": "Einwilligung prüfen & fortfahren",
     "cta_intro": "Zuerst die Einführung lesen"
   },
+  "results_interpretation": {
+    "heading": "Was bedeutet das?",
+    "para1": "Dein Profil zeigt, wie du Fokus, Musterwahrnehmung, sensorische Sensitivität, soziale Energie, Strukturpräferenz und kognitive Flexibilität gewichtest. Diese Dimensionen sind bei jedem Menschen einzigartig kombiniert.",
+    "para2": "Diese Muster überschneiden sich in der Forschung häufig mit Konzepten wie Neurodiversität, Hochsensibilität oder Autismus-Spektrum — aber sie sind weder gleichzusetzen noch diagnostisch verwertbar. Wenn du mehr über den Forschungshintergrund erfahren möchtest: <research>Forschungsnotiz zu PCMS auf Synaptic Four</research>.",
+    "strengths_heading": "Stärken-Korrelate",
+    "strengths_sub": "Deine drei höchsten Werte unter den sechs Kern-Dimensionen — beschreibende Stärken, kein Urteil.",
+    "strength_F": "Tiefe Konzentration, Detail-Präzision",
+    "strength_P": "Systemdenken, Mustererkennung",
+    "strength_S": "Feine Wahrnehmung, ästhetische Stärken",
+    "strength_E": "Empathie, Gruppenarbeit",
+    "strength_R": "Zuverlässigkeit, Planungsstärke",
+    "strength_C": "Adaptivität, kreative Problemlösung"
+  },
   "ethics_consent": {
+    "page_intro_cal": "Du bist dabei, dein kognitives Profil zu erkunden. Lies bitte kurz, was wir erheben und warum.",
     "progress": "Schritt {n} von {total}",
     "confirm_label": "Ich habe diesen Abschnitt sorgfältig gelesen und verstanden.",
     "next": "Weiter",

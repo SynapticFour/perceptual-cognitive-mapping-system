@@ -17,7 +17,30 @@ export default function LandingPage() {
         <div className="mx-auto max-w-2xl flex-1">
           <h1 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl">{tWelcome('title')}</h1>
           <p className="mb-2 text-xl text-gray-600">{tWelcome('subtitle')}</p>
-          <p className="mb-10 text-left text-base leading-relaxed text-gray-700">{tLanding('lead')}</p>
+          <p className="mb-8 text-left text-base leading-relaxed text-gray-700">{tLanding('lead')}</p>
+
+          <div className="mb-10 grid gap-6 text-left sm:grid-cols-2">
+            <div className="rounded-xl border border-rose-200/80 bg-rose-50/60 p-4 sm:p-5">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-rose-900/90">
+                {tLanding('not_heading')}
+              </h2>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-rose-950">
+                <li>{tLanding('not_1')}</li>
+                <li>{tLanding('not_2')}</li>
+                <li>{tLanding('not_3')}</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-teal-200/80 bg-teal-50/60 p-4 sm:p-5">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-teal-900/90">
+                {tLanding('get_heading')}
+              </h2>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-teal-950">
+                <li>{tLanding('get_1')}</li>
+                <li>{tLanding('get_2')}</li>
+                <li>{tLanding('get_3')}</li>
+              </ul>
+            </div>
+          </div>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
