@@ -54,9 +54,12 @@ If a user does want to understand how their PCMS profile relates to common neuro
 - **Dedicated consent flow**: `/consent` (multi-step checkboxes) before questionnaire/results — **institutions using this with minors or in classrooms must supply local ethics approval, assent/consent wording, and any age rules** (see [`docs/ethics.md`](./docs/ethics.md))
 - **Dynamic Insights**: Descriptive summaries based on response patterns (non-diagnostic)
 - **Potential Stressors**: Identification of challenging situations (where configured in copy)
-- **Interactive visualization**: Results **cognitive landscape** — **constellation** of micro-trait activations (map / density / vector) over **one** shared latent projection (`src/core/cognitive-pipeline.ts`, `src/core/traits`, `src/ui/CognitiveViewSwitcher.tsx`); optional **emergent co-activation patterns** learned only from signatures recorded in the same browser session (`src/core/patterns`); dimensional bars and insight cards; **Recharts** on research dashboards (not the main results map)
+- **Interactive visualization**: Results **cognitive landscape** — micro-trait activations (map, density, **cognitive field**, **3D terrain**, vector) over **one** shared latent projection (`src/core/cognitive-pipeline.ts`, `src/core/traits`, `src/ui/CognitiveViewSwitcher.tsx`); optional **emergent co-activation patterns** learned only from signatures recorded in the same browser session (`src/core/patterns`); dimensional bars and insight cards; **Recharts** on research dashboards (not the main results map); 3D pipeline notes in [`docs/COGNITIVE-TERRAIN-3D.md`](./docs/COGNITIVE-TERRAIN-3D.md)
 - **Cultural adaptation**: Multiple question banks and locales (e.g. universal and Ghana-tuned items in `content/questions/`)
 - **Cohort Intelligence Layer** (aggregate only): shared cognitive map, environment and interaction insights, global pattern library, validation — see [`docs/COHORT-INTELLIGENCE.md`](./docs/COHORT-INTELLIGENCE.md) (not classification analytics; no labels in group views)
+- **Offline-first & field workflows**: Bundled static question bank (`prebuild`), IndexedDB + optional service worker precache; paper/CSV replay at `/field-import` — [`docs/OFFLINE-AND-PAPER-ARCHITECTURE.md`](./docs/OFFLINE-AND-PAPER-ARCHITECTURE.md)
+- **Research session bundle**: Downloadable ZIP with manifest, long-form CSV, optional RO-Crate metadata — [`docs/RESEARCH-SESSION-EXPORT.md`](./docs/RESEARCH-SESSION-EXPORT.md)
+- **Optional multi-profile analysis**: `/group-cognitive-analysis` (paste several share payloads) — [`docs/GROUP-COGNITIVE-ANALYSIS.md`](./docs/GROUP-COGNITIVE-ANALYSIS.md)
 
 ### Research Infrastructure
 - **Publication-Ready Data**: Structured datasets for statistical analysis

@@ -38,6 +38,8 @@ import SupportInsightsSection from '@/components/cohort/SupportInsightsSection';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
 import { seedConsentIfSkipMode } from '@/lib/ethics-flow-config';
+import { buildResearchSessionZip, downloadUint8ArrayFile } from '@/lib/research-session-bundle';
+import ParticipantPrintSheet from '@/components/results/ParticipantPrintSheet';
 
 const PIPELINE_STORAGE_KEY = 'pcms-pipeline-result';
 
@@ -238,6 +240,30 @@ export default function ResultsPage() {
     URL.revokeObjectURL(url);
   }, [session, ui]);
 
+  const handleResearchBundle = useCallback(async () => {
+    if (!session) return;
+    const history = readQuestionHistoryFromStorage();
+    if (history.length === 0) {
+      window.alert(ui['results.research_bundle_no_history']);
+      return;
+    }
+    let bankItemCount = history.length;
+    try {
+      const { getAssessmentQuestions } = await import('@/data/questions');
+      bankItemCount = getAssessmentQuestions('all', 'universal').length;
+    } catch {
+      /* question bank not loaded in memory */
+    }
+    const zip = await buildResearchSessionZip({
+      stored: session,
+      history,
+      locale: String(locale),
+      consentTimestamp: typeof window !== 'undefined' ? localStorage.getItem('pcms-consent-timestamp') : null,
+      bankItemCount,
+    });
+    downloadUint8ArrayFile(zip, `pcms-research-${session.sessionId ?? 'session'}.zip`);
+  }, [session, locale, ui]);
+
   const handleCopySmsCode = useCallback(() => {
     if (!display) return;
     const code = encodeProfileVectorCode(display.rawPercent);
@@ -301,6 +327,14 @@ export default function ResultsPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
       <main id="main-content" className="container mx-auto max-w-6xl px-3 py-6 sm:px-4 sm:py-8">
         <EthicsResultsBanner context={assessmentCtx} />
+        {viewProfile ? (
+          <ParticipantPrintSheet
+            profile={viewProfile}
+            responseCount={responseCount}
+            completedLabel={new Date(completedAt).toLocaleDateString()}
+            strings={ui}
+          />
+        ) : null}
         <header className="mb-6 text-center">
           <h1 className="text-2xl font-bold text-gray-900 sm:text-4xl">{ui['results.page_title']}</h1>
           <p className="mt-2 text-sm text-gray-600 sm:text-base" suppressHydrationWarning>
@@ -346,9 +380,16 @@ export default function ResultsPage() {
               <button
                 type="button"
                 onClick={handleDownload}
-                className="rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-purple-700 sm:px-6"
+                className="min-h-11 rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-purple-700 sm:px-6"
               >
                 {ui['results.download']}
+              </button>
+              <button
+                type="button"
+                onClick={() => void handleResearchBundle()}
+                className="min-h-11 rounded-lg border border-slate-600 bg-slate-800 px-4 py-2 text-sm font-medium text-white shadow hover:bg-slate-900 sm:px-6"
+              >
+                {ui['results.research_bundle']}
               </button>
             </>
           ) : null}
@@ -380,6 +421,18 @@ export default function ResultsPage() {
               {ui['results.group_insights_link']}
             </Link>
             <p className="mx-auto mt-2 max-w-2xl text-xs text-slate-600">{ui['results.group_insights_hint']}</p>
+          </div>
+        ) : null}
+
+        {display ? (
+          <div className="mb-6 text-center">
+            <Link
+              href="/group-cognitive-analysis"
+              className="inline-flex rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:bg-slate-50"
+            >
+              {ui['results.group_analysis_link']}
+            </Link>
+            <p className="mx-auto mt-2 max-w-2xl text-xs text-slate-600">{ui['results.group_analysis_hint']}</p>
           </div>
         ) : null}
 

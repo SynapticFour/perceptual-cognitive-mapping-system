@@ -36,6 +36,8 @@ import ProgressIndicator from '@/components/questionnaire/progress-indicator';
 import LiveRefinementConfidence from '@/components/questionnaire/live-refinement-confidence';
 import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
 import { seedConsentIfSkipMode } from '@/lib/ethics-flow-config';
+import { Link } from '@/i18n/navigation';
+import QuestionnaireOfflineTools from '@/components/questionnaire/QuestionnaireOfflineTools';
 
 export default function QuestionnairePage() {
   const router = useRouter();
@@ -300,16 +302,23 @@ export default function QuestionnairePage() {
 
   if (bankError) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center px-4">
-        <div className="max-w-md rounded-lg bg-white p-6 text-center shadow-lg">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex flex-col items-center justify-center px-4 py-8">
+        <div className="max-w-lg rounded-lg bg-white p-6 text-center shadow-lg">
           <p className="text-red-700">{bankError}</p>
+          <p className="mt-3 text-sm text-slate-600">{ui['field.bank_error_hint']}</p>
+          <QuestionnaireOfflineTools strings={ui} />
           <button
             type="button"
-            className="mt-4 text-blue-600 underline"
+            className="mt-4 min-h-11 text-blue-600 underline"
             onClick={() => router.push('/')}
           >
             Return home
           </button>
+          <p className="mt-4 text-xs">
+            <Link href="/field-import" className="text-indigo-600 underline">
+              {ui['field.paper_csv_link']}
+            </Link>
+          </p>
         </div>
       </div>
     );
@@ -354,6 +363,7 @@ export default function QuestionnairePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
       <div className="container mx-auto px-4 py-8">
+        <QuestionnaireOfflineTools strings={ui} />
         <header className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Cognitive Assessment</h1>
           <p className="text-gray-600">Answer honestly based on your typical experiences</p>

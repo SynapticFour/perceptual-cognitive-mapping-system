@@ -29,8 +29,7 @@
 /out/
 /dist/
 
-# PWA (Workbox output from `npm run build` — regenerate in CI / release)
-/public/sw.js
+# PWA (Workbox build artifacts — not used by the hand-maintained `public/sw.js`)
 /public/workbox-*.js
 
 # production

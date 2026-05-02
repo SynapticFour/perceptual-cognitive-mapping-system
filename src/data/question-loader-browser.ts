@@ -1,30 +1,52 @@
 import { setQuestionBank } from './question-bank-state';
 import type { SupportedLocale } from './question-locale-types';
 import type { AssessmentQuestion } from './questions';
+import { assertAssessmentQuestionBank } from '@/lib/question-bank-import';
 import { getQuestionBankCache, putQuestionBankCache } from '@/lib/offline-storage';
 
 export type { SupportedLocale } from './question-locale-types';
 
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return typeof value === 'object' && value !== null && !Array.isArray(value);
-}
+/** Static banks shipped under `public/data/` (see `npm run export-public-bank`). */
+const STATIC_BANK_PATH: Partial<Record<SupportedLocale, string>> = {
+  universal: '/data/question-bank-universal-all.json',
+};
 
-/** Minimal structural check for `/api/questions` JSON (already validated on the server). */
-function assertAssessmentQuestionBank(data: unknown, label: string): asserts data is AssessmentQuestion[] {
-  if (!Array.isArray(data)) {
-    throw new Error(`${label}: expected array`);
-  }
-  for (const row of data) {
-    if (!isRecord(row)) throw new Error(`${label}: invalid row`);
-    if (typeof row.id !== 'string' || typeof row.text !== 'string') throw new Error(`${label}: invalid row`);
-    if (!isRecord(row.dimensionWeights)) throw new Error(`${label}: missing dimensionWeights`);
+async function tryLoadStaticBank(locale: SupportedLocale): Promise<AssessmentQuestion[] | null> {
+  const path = STATIC_BANK_PATH[locale];
+  if (!path) return null;
+  try {
+    const res = await fetch(path, { cache: 'force-cache' });
+    if (!res.ok) return null;
+    const data: unknown = await res.json();
+    assertAssessmentQuestionBank(data, `static ${path}`);
+    return data;
+  } catch {
+    return null;
   }
 }
 
 /**
- * Loads the question bank in the browser via `/api/questions` and primes the sync cache.
+ * Loads the question bank: `/api/questions` when available, else IndexedDB cache, else static JSON under `/data/`.
+ * Primes IndexedDB after successful API or static load.
  */
 export async function loadQuestions(locale: SupportedLocale): Promise<AssessmentQuestion[]> {
+  if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+    const cached = await getQuestionBankCache(locale, 'all');
+    if (cached && cached.length > 0) {
+      setQuestionBank(cached);
+      return cached;
+    }
+    const st = await tryLoadStaticBank(locale);
+    if (st && st.length > 0) {
+      setQuestionBank(st);
+      void putQuestionBankCache(locale, 'all', st);
+      return st;
+    }
+    throw new Error(
+      'OFFLINE_NO_BANK: No cached question bank. Connect once, import a bank JSON file on the questionnaire page, or use an install that includes /data/question-bank-universal-all.json.'
+    );
+  }
+
   const params = new URLSearchParams({ locale, type: 'all' });
   const url = `/api/questions?${params.toString()}`;
 
@@ -43,6 +65,12 @@ export async function loadQuestions(locale: SupportedLocale): Promise<Assessment
     if (cached && cached.length > 0) {
       setQuestionBank(cached);
       return cached;
+    }
+    const st = await tryLoadStaticBank(locale);
+    if (st && st.length > 0) {
+      setQuestionBank(st);
+      void putQuestionBankCache(locale, 'all', st);
+      return st;
     }
     throw e instanceof Error ? e : new Error(String(e));
   }

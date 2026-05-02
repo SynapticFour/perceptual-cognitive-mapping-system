@@ -2,6 +2,8 @@
 
 This document reflects **what exists in the repository today**, not a future `src/pipeline/` tree.
 
+For **offline deployment, local JSON storage, optional cloud sync, and paper-adjacent workflows**, see [`docs/OFFLINE-AND-PAPER-ARCHITECTURE.md`](docs/OFFLINE-AND-PAPER-ARCHITECTURE.md).
+
 ## Layers and source files
 
 | Layer | Responsibility | Canonical types | Implementation |

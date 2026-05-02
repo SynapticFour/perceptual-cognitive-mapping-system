@@ -74,7 +74,7 @@ export default function QuestionCard({ question, onResponse, questionNumber, tot
               setChoiceLocked(true);
               onResponse(option.value);
             }}
-            className="w-full text-left p-4 rounded-lg border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group disabled:pointer-events-none disabled:opacity-60"
+            className="w-full min-h-[44px] text-left p-4 rounded-lg border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group disabled:pointer-events-none disabled:opacity-60"
           >
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">

@@ -12,13 +12,14 @@ import DensityView from '@/ui/views/DensityView';
 import MapView from '@/ui/views/MapView';
 import type { CognitiveViewType } from '@/ui/views/types';
 import VectorView from '@/ui/views/VectorView';
+import Terrain3DView from '@/ui/views/Terrain3DView';
 
 const STORAGE_KEY = 'pcms-cognitive-view';
 
 function readStoredView(): CognitiveViewType {
   if (typeof window === 'undefined') return 'map';
   const s = localStorage.getItem(STORAGE_KEY);
-  if (s === 'map' || s === 'density' || s === 'field' || s === 'vector') return s;
+  if (s === 'map' || s === 'density' || s === 'field' || s === 'vector' || s === 'terrain3d') return s;
   return 'map';
 }
 
@@ -33,7 +34,7 @@ export interface CognitiveViewSwitcherProps {
   patternBannerText?: string | null;
 }
 
-const VIEWS: CognitiveViewType[] = ['map', 'density', 'field', 'vector'];
+const VIEWS: CognitiveViewType[] = ['map', 'density', 'field', 'vector', 'terrain3d'];
 
 export default function CognitiveViewSwitcher({
   model,
@@ -67,7 +68,8 @@ export default function CognitiveViewSwitcher({
     if (v === 'map') return strings['landscape.view_map'];
     if (v === 'density') return strings['landscape.view_density'];
     if (v === 'field') return strings['landscape.view_field'];
-    return strings['landscape.view_vector'];
+    if (v === 'vector') return strings['landscape.view_vector'];
+    return strings['landscape.view_terrain3d'];
   };
 
   return (
@@ -129,6 +131,9 @@ export default function CognitiveViewSwitcher({
           <VectorView model={model} strings={strings} />
         ) : null}
         {activeView === 'field' ? <CognitiveFieldView model={model} strings={strings} /> : null}
+        {activeView === 'terrain3d' ? (
+          <Terrain3DView model={model} strings={strings} userAccentColor={userAccentColor} />
+        ) : null}
       </div>
 
       <p className="mt-2 text-center text-[11px] text-slate-500">{strings['landscape.map_density_hint']}</p>

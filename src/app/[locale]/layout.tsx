@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import AppNav from '@/components/layout/AppNav';
 import HtmlLang from '@/components/i18n/HtmlLang';
 import LocaleFromStorage from '@/components/i18n/LocaleFromStorage';
+import LocaleOfflineChrome from '@/components/layout/LocaleOfflineChrome';
 
 type Props = {
   children: ReactNode;
@@ -29,6 +30,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <HtmlLang />
       <LocaleFromStorage />
       <AppNav />
+      <LocaleOfflineChrome />
       <div className="flex-1">{children}</div>
     </NextIntlClientProvider>
   );

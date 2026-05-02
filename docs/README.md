@@ -27,13 +27,21 @@
 #### **Internationalization**
 - **[I18N](./I18N.md)** - Locales, URLs, `messages/*.json`, and Twi review notes
 
+#### **Offline, export, and extended analysis**
+- **[Offline & paper-first architecture](./OFFLINE-AND-PAPER-ARCHITECTURE.md)** - Static question bank, service worker cache, IndexedDB, field workflows
+- **[Research session export (ZIP)](./RESEARCH-SESSION-EXPORT.md)** - Manifest, CSV, optional RO-Crate metadata in the downloadable bundle
+- **[Group cognitive analysis](./GROUP-COGNITIVE-ANALYSIS.md)** - Optional multi-profile aggregate view (not a replacement for cohort or personal results)
+- **[3D cognitive terrain](./COGNITIVE-TERRAIN-3D.md)** - UMAP/KDE heightmap view alongside map, density, and vector modes
+
 ### Quick Navigation
 
-#### **User Journey** (locale prefix `as-needed`: English has no `/en`; `de` and `tw` prefix routes)
+#### **User Journey** (locale prefix `as-needed`: English has no `/en`; `de`, `wo`, and `tw` prefix routes)
 1. **Landing**: `/` — introduction; links to consent and questionnaire
 2. **Consent**: `/consent` — multi-step informed consent (required before questionnaire/results)
 3. **Questionnaire**: `/questionnaire` — adaptive assessment (15 core + targeted refinements)
-4. **Results**: `/results` — landscape visualization; additional **assent** step before showing scores when applicable
+4. **Results**: `/results` — landscape (map, density, cognitive field, 3D terrain, vector); research ZIP export; print summary; additional **assent** step before showing scores when applicable
+5. **Field import** (optional): `/field-import` — paper/CSV replay into the same pipeline
+6. **Group analysis** (optional): `/group-cognitive-analysis` — paste multiple share payloads for aggregate patterns
 
 #### **Developer Resources**
 - **Setup Script**: `./setup.sh` - One-command setup for macOS
@@ -76,7 +84,7 @@
 ```
 perceptual-cognitive-mapping-system/
 README.md                           # Main project documentation
-messages/                           # next-intl strings (en, de, tw)
+messages/                           # next-intl strings (en default; de, wo full; tw merges over en)
 docs/                              # User and developer documentation
   README.md                        # This file - documentation index
   LOCAL_SETUP.md                   # Local development setup
@@ -167,7 +175,7 @@ npm run verify    # Alternative verification command
 4. **Pipeline** — Raw → features → latent space projection (pilot) → public interpretation (`src/lib/cognitive-pipeline.ts`); results 2D model for views: `src/core/cognitive-pipeline.ts` (`buildCognitiveModel`). See [`PIPELINE_ARCHITECTURE.md`](../PIPELINE_ARCHITECTURE.md)
 5. **Completion** — Stops per configured confidence / max-question rules
 6. **Persistence** — `profiles.cognitive_vector` stores a **`StoredPipelineSession`** JSON document when saved to Supabase; see [`data-model.md`](./data-model.md)
-7. **Results** — Landscape UI (`CognitiveViewSwitcher`: constellation map, density, vector) built from **`buildCognitiveModel`**; optional share URL (`?p=`), JSON/PNG download; in-browser **co-activation pattern** hints (`src/core/patterns`, session-local); ethics APIs for delete / audit where configured
+7. **Results** — Landscape UI (`CognitiveViewSwitcher`: map, density, cognitive field, 3D terrain, vector) from **`buildCognitiveModel`**; optional share URL (`?p=`), JSON/PNG, research ZIP (manifest + CSV + optional RO-Crate); print sheet; in-browser **co-activation pattern** hints (`src/core/patterns`, session-local); ethics APIs for delete / audit where configured
 
 ### Quality Assurance
 
@@ -189,6 +197,6 @@ npm run verify    # Alternative verification command
 
 ---
 
-**Last Updated**: April 12, 2026  
+**Last Updated**: May 2, 2026  
 **Version**: v1.0 (Research-Grade)  
 **Status**: Active development — run `npm test` (`npm run check` + unit tests) and `npm run build` before releases; use `npm run test:e2e` for Playwright smoke tests
