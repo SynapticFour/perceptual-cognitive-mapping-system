@@ -45,6 +45,9 @@
     "three": "^0.184.0",
     "umap-js": "^1.4.0"
   },
+  "overrides": {
+    "@swc/helpers": "0.5.21"
+  },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",
     "@next/bundle-analyzer": "^16.2.3",
