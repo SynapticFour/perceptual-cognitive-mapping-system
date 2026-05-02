@@ -130,5 +130,16 @@
   },
   "language": {
     "wo": "Wolof"
+  },
+  "ethics_consent": {
+    "storage_notice": "Ɛdwuma yi sie nhomasua wɔ wo browsers mu — na sɛ wo to mu a, wɔ ahokyere research server so (obiarɛ nnim). Ɛnhɔ nhomasua a ɛda wo ho adi pa ara wɔ nhwehwɛ yi mu.",
+    "privacy_body": "Synaptic Four (Stuttgart) sie ahokyere session ID, bere bere no, wo mmuaeɛ, bere a ɛfa mmuaeɛ ho, ne statistical summaries ma nhwehwɛ so. Yɛnnɔ wo din, email, anaa adrɛsi wɔ ɔhaw yi mu — gye sɛ wo ntɛm yɛn kwa (ɛno ara na ɛyɛ dwuma foforo). Nhomasua pa ara: hwɛ «Privacy» / ahodeɛ ho sɔkabɔ ho nhoma wɔ footer no mu anaa /privacy.",
+    "rights_body": "Wobɛtumi gyae bere biara a wopɛ a ɛnhɔ wo so. Wobɛtumi hwehwɛ sɛ epra nhomasua a ɛka wo session ID ho — fa «Delete my data» so wɔ nhomasua krataafa no so (sɛ wo de si mu). Ntɛm: contact@synapticfour.com. Ahodeɛ ho akwan — hwɛ Privacy nhoma no."
+  },
+  "site_footer": {
+    "nav_label": "La mbra ne ahodoɔ a wɔ fa baabi foforo",
+    "privacy": "Ahodeɛ ho sɔkabɔ",
+    "imprint": "Impressum",
+    "github": "GitHub"
   }
 }

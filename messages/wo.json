@@ -479,6 +479,7 @@
     "streamlined_safeguards_title": "Tëg, sutura ak sa hakke",
     "qa_mode_banner": "QA: dëggal bu yépp ci ay tànki wuute. Ngir yoon bu gëna gaaw, def NEXT_PUBLIC_PCMS_CONSENT_MODE=default.",
     "skip_redirect": "Dëggal bi di ko dindi (mod test)…",
+    "storage_notice": "Dalub bi dafay denc xibaar ci séans ci sa navigatëur bi te, su nga may koo, ci sirri ci serëër bu seetlu. CI lammiñ yii amul benn xibaar bu ñu mën a wax mo nga ci tur walla i-meel.",
     "research_title": "Lan mooy sistem bi",
     "research_body": "Lii mooy lammiñ yu seetlu yu du dawtal. Dafay lim yoon yu ne ci sa bopp ci yoon yu toll ngir xam yoon yu wuute ci xalaat. Du dawtal te du jox ndigal walla jëf.",
     "measured_title": "Lan lañu lim",
@@ -486,9 +487,9 @@
     "limits_title": "Lan duñu lim",
     "limits_body": "Buntu bi du lim IQ, du wax dawtal yaram walla xel, du def lim bu rafet walla bu bon ci nit. Amul «pass» walla «fail». Su fekk nga am laaj ci yaram, joxe ak kenn ci ñetti yaram yu am ndigal.",
     "privacy_title": "Lan lañu denc",
-    "privacy_body": "Ñu denc benn ID bu sirri ci séans bi, waxtu yi, sa tontu, waxtu ci tontu yi, ak lim yu statistik yu soxla seetlu. Nu la laaj sa tur, i-meel, walla adres ci yoon yii su fekk du nga wax ak ekipp bi ci bopp sa bopp.",
+    "privacy_body": "Synaptic Four (Stuttgart) dafay denc benn ID bu sirri ci séans bi, waxtu yi, sa tontu, waxtu ci tontu yi, ak lim yu statistik yu soxla seetlu. Nu la laaj sa tur, i-meel, walla adres ci yoon yii — su fekk du nga wax ak nu ci bopp sa bopp (leen mooy benn jëf bu wuute). Waxtaan bu mat ci sutura: li ci suuf «Sutura» walla /privacy.",
     "rights_title": "Sa hakkee",
-    "rights_body": "Mën nga lekk ci biir benn saat amul laaj. Mën nga laaj ne ñu màbb xibaar yu bokk ak ID séans bi su fekk mën nañu ko ci teknoloji. Joxe ak ekipp seetlu bi ci adres bi ci dëggal bi. Laaj yu dati (EU/UK) mën nañu leen lim.",
+    "rights_body": "Mën nga lekk ci biir benn saat amul laaj. Mën nga laaj ne ñu màbb xibaar yu bokk ak ID séans bi — ci njàngale bi, «Màbb sama xibaar», su fekk laaj bi si. Kontak: contact@synapticfour.com. Hakkee yi ci sutura — xool xët wi «Sutura».",
     "ghana_title": "Ghana / yaram",
     "ghana_body": "Lammiñ yii du tax dawtal, garde, sikològ, walla kenn ci wallu yaram ci mboot. Mënul a gis walla a jëf yaram. Ci Ghana ak yeneen biir, jëfandikoo ñetti yaram yu am ndigal ci laaj yi ci yaram."
   },
@@ -526,5 +527,11 @@
     "cancel": "Neen",
     "done": "Laaj bi pare na. Xibaar ci navigatëër bi màbb nañu.",
     "error": "Màbb bi mënul pare. Mën nga màbb ci parametër yi ci dal bi."
+  },
+  "site_footer": {
+    "nav_label": "Yëg-yëg ci laaj yi ak xëtu yi",
+    "privacy": "Sutura xibaar yi",
+    "imprint": "Impressum",
+    "github": "GitHub"
   }
 }
