@@ -32,6 +32,7 @@
     "research_consent_local_only": "Diese Sitzung liegt nur in Ihrem Browser. Es gab keinen Upload in eine Forschungsdatenbank, weil für dieses Deployment kein Cloud-Speicher konfiguriert ist.",
     "revision_notice": "Dies ist Revision {n} Ihrer Bewertung.",
     "max_length_notice": "Maximale Bewertungslänge erreicht. Die Ergebnisse basieren auf allen gegebenen Antworten.",
+    "sufficient_confidence_banner": "Ausreichendes Vertrauen wurde auf allen Routing-Dimensionen erreicht, bevor die übliche Anzahl Kernfragen beantwortet war — Ihr Profil basiert auf den gegebenen Antworten.",
     "title": "Ihr kognitives Profil",
     "group_insights_link": "Gruppeneinblicke",
     "group_insights_hint": "Öffnet aggregierte, nicht identifizierende Hinweise, wenn Ihr Programm Kohortenansichten aktiviert hat.",

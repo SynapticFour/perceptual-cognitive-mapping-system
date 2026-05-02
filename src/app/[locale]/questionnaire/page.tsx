@@ -232,6 +232,19 @@ export default function QuestionnairePage() {
       localStorage.setItem('pcms-question-history', JSON.stringify(finalState.questionHistory));
       localStorage.setItem('pcms-completion-reason', completionReason);
 
+      if (completionReason === 'confidence_met') {
+        const coreAnswered = finalState.questionHistory.filter((h) =>
+          getAssessmentQuestions('core', finalState.culturalContext).some((q) => q.id === h.questionId)
+        ).length;
+        if (coreAnswered > 0 && coreAnswered < 15) {
+          sessionStorage.setItem('pcms-sufficient-confidence-banner', '1');
+        } else {
+          sessionStorage.removeItem('pcms-sufficient-confidence-banner');
+        }
+      } else {
+        sessionStorage.removeItem('pcms-sufficient-confidence-banner');
+      }
+
       router.push('/results');
     },
     [router]

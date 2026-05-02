@@ -8,6 +8,11 @@ import { readAssessmentContextFromStorage } from '@/types/assessment-context';
 import { appendOfflineResponseRow, attachOfflineCompletion, questionResponsesToOfflineRows } from '@/lib/offline-storage';
 import { getQuestionBankSync } from '@/data/question-bank-state';
 
+function logSupabaseFailure(context: string, err: unknown): void {
+  if (process.env.NODE_ENV !== 'development') return;
+  console.warn(`[PCMS data-collection] ${context}`, err);
+}
+
 // RESEARCH-GRADE: Enhanced data structure for research integrity
 export interface ResearchAssessmentData {
   session_id: string;
@@ -56,7 +61,11 @@ export class DataCollectionService {
     }
 
     this.startTime = new Date();
-    await this.createOrUpdateSession();
+    try {
+      await this.createOrUpdateSession();
+    } catch (err) {
+      logSupabaseFailure('initializeSession', err);
+    }
   }
 
   private async createOrUpdateSession() {
@@ -75,20 +84,26 @@ export class DataCollectionService {
     };
 
     if (!isSupabaseConfigured()) {
-      console.warn('Supabase not configured, skipping session creation');
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('[PCMS data-collection] Supabase not configured, skipping session creation');
+      }
       return;
     }
 
     const client = getSupabaseClient();
     if (!client) return;
 
-    const { error } = await client
-      .from('sessions')
-      .upsert(sessionData, { onConflict: 'id' })
-      .select();
+    try {
+      const { error } = await client
+        .from('sessions')
+        .upsert(sessionData, { onConflict: 'id' })
+        .select();
 
-    if (error) {
-      console.error('Error creating/updating session:', error);
+      if (error) {
+        logSupabaseFailure('createOrUpdateSession/upsert', error);
+      }
+    } catch (err) {
+      logSupabaseFailure('createOrUpdateSession', err);
     }
   }
 
@@ -116,7 +131,9 @@ export class DataCollectionService {
     const culturalContext = readAssessmentContextFromStorage()?.culturalContext ?? 'universal';
 
     if (!client) {
-      console.warn('Supabase not configured, skipping database recording');
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('[PCMS data-collection] Supabase not configured, skipping database recording');
+      }
       return;
     }
 
@@ -145,22 +162,42 @@ export class DataCollectionService {
       return;
     }
 
-    const { error } = await client.from('question_responses').insert(responseData);
+    try {
+      const { error } = await client.from('question_responses').insert(responseData);
 
-    if (error) {
-      console.error('Error recording question response:', error);
-      await appendOfflineResponseRow(
-        this.sessionId,
-        {
-          questionId: response.questionId,
-          response: response.response,
-          responseTimeMs: response.responseTimeMs,
-          timestamp: response.timestamp.toISOString(),
-          questionCategory,
-          dimensionWeights,
-        },
-        { culturalContext }
-      );
+      if (error) {
+        logSupabaseFailure('recordQuestionResponse/insert', error);
+        await appendOfflineResponseRow(
+          this.sessionId,
+          {
+            questionId: response.questionId,
+            response: response.response,
+            responseTimeMs: response.responseTimeMs,
+            timestamp: response.timestamp.toISOString(),
+            questionCategory,
+            dimensionWeights,
+          },
+          { culturalContext }
+        );
+      }
+    } catch (err) {
+      logSupabaseFailure('recordQuestionResponse', err);
+      try {
+        await appendOfflineResponseRow(
+          this.sessionId,
+          {
+            questionId: response.questionId,
+            response: response.response,
+            responseTimeMs: response.responseTimeMs,
+            timestamp: response.timestamp.toISOString(),
+            questionCategory,
+            dimensionWeights,
+          },
+          { culturalContext }
+        );
+      } catch (queueErr) {
+        logSupabaseFailure('recordQuestionResponse/offline_queue', queueErr);
+      }
     }
   }
 
@@ -230,12 +267,19 @@ export class DataCollectionService {
 
         const client = getSupabaseClient();
         if (!client) {
-          console.warn('Supabase not configured, skipping profile database save');
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('[PCMS data-collection] Supabase not configured, skipping profile database save');
+          }
           remoteOk = false;
         } else if (remoteOk) {
-          const { error: profileError } = await client.from('profiles').insert(profileData);
-          if (profileError) {
-            console.error('Error saving profile:', profileError);
+          try {
+            const { error: profileError } = await client.from('profiles').insert(profileData);
+            if (profileError) {
+              logSupabaseFailure('saveFinalPipeline/profiles.insert', profileError);
+              remoteOk = false;
+            }
+          } catch (err) {
+            logSupabaseFailure('saveFinalPipeline/profiles.insert', err);
             remoteOk = false;
           }
         }
@@ -243,19 +287,24 @@ export class DataCollectionService {
         if (remoteOk) {
           const sessionClient = getSupabaseClient();
           if (sessionClient) {
-            const { error: sessionError } = await sessionClient
-              .from('sessions')
-              .update({
-                completed_at: new Date().toISOString(),
-                completion_status: completionStatus,
-                assessment_version: this.assessmentVersion,
-                question_path: this.questionPath,
-                duration_ms: durationMs,
-              })
-              .eq('id', this.sessionId);
+            try {
+              const { error: sessionError } = await sessionClient
+                .from('sessions')
+                .update({
+                  completed_at: new Date().toISOString(),
+                  completion_status: completionStatus,
+                  assessment_version: this.assessmentVersion,
+                  question_path: this.questionPath,
+                  duration_ms: durationMs,
+                })
+                .eq('id', this.sessionId);
 
-            if (sessionError) {
-              console.error('Error updating session:', sessionError);
+              if (sessionError) {
+                logSupabaseFailure('saveFinalPipeline/sessions.update', sessionError);
+                remoteOk = false;
+              }
+            } catch (err) {
+              logSupabaseFailure('saveFinalPipeline/sessions.update', err);
               remoteOk = false;
             }
           }
@@ -281,11 +330,15 @@ export class DataCollectionService {
             responseRows,
           });
         } catch (e) {
-          console.error('Failed to queue offline completion:', e);
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('[PCMS data-collection] Failed to queue offline completion', e);
+          }
         }
       }
     } else {
-      console.warn('Supabase not configured, skipping database operations');
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('[PCMS data-collection] Supabase not configured, skipping database operations');
+      }
       // Store research data locally as fallback
       localStorage.setItem(`pcms-research-${this.sessionId}`, JSON.stringify(researchData));
     }
@@ -305,7 +358,9 @@ export class DataCollectionService {
   /** @returns false when Supabase insert failed (caller should queue offline sync). */
   private async saveResearchData(researchData: ResearchAssessmentData): Promise<boolean> {
     if (!isSupabaseConfigured()) {
-      console.warn('Supabase not configured, storing research data locally');
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('[PCMS data-collection] Supabase not configured, storing research data locally');
+      }
       localStorage.setItem(`pcms-research-${this.sessionId}`, JSON.stringify(researchData));
       return true;
     }
@@ -313,7 +368,9 @@ export class DataCollectionService {
     try {
       const client = getSupabaseClient();
       if (!client) {
-        console.warn('Supabase not configured, storing research data locally');
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('[PCMS data-collection] Supabase not configured, storing research data locally');
+        }
         localStorage.setItem(`pcms-research-${this.sessionId}`, JSON.stringify(researchData));
         return false;
       }
@@ -321,13 +378,13 @@ export class DataCollectionService {
       const { error } = await client.from('research_assessments').insert(researchData);
 
       if (error) {
-        console.error('Error saving research data:', error);
+        logSupabaseFailure('saveResearchData/insert', error);
         localStorage.setItem(`pcms-research-${this.sessionId}`, JSON.stringify(researchData));
         return false;
       }
       return true;
     } catch (error) {
-      console.error('Failed to save research data:', error);
+      logSupabaseFailure('saveResearchData', error);
       localStorage.setItem(`pcms-research-${this.sessionId}`, JSON.stringify(researchData));
       return false;
     }
@@ -338,64 +395,80 @@ export class DataCollectionService {
 
     const client = getSupabaseClient();
     if (!client) {
-      console.warn('Supabase not configured, skipping abandonment recording');
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('[PCMS data-collection] Supabase not configured, skipping abandonment recording');
+      }
       return;
     }
 
-    const { error } = await client
-      .from('sessions')
-      .update({ 
-        completion_status: 'abandoned'
-      })
-      .eq('id', this.sessionId);
+    try {
+      const { error } = await client
+        .from('sessions')
+        .update({
+          completion_status: 'abandoned',
+        })
+        .eq('id', this.sessionId);
 
-    if (error) {
-      console.error('Error recording abandonment:', error);
+      if (error) {
+        logSupabaseFailure('recordAbandonment/update', error);
+      }
+    } catch (err) {
+      logSupabaseFailure('recordAbandonment', err);
     }
   }
 
   // For research analytics
   async getResearchStats() {
-    const client = getSupabaseClient();
-    if (!client) {
-      console.warn('Supabase not configured, returning mock stats');
+    try {
+      const client = getSupabaseClient();
+      if (!client) {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('[PCMS data-collection] Supabase not configured, returning mock stats');
+        }
+        return {
+          totalProfiles: 0,
+          averageCompletionTime: 0,
+          totalResponses: 0,
+        };
+      }
+
+      const { count: profileCount, error: countError } = await client
+        .from('profiles')
+        .select('id', { count: 'exact', head: true });
+
+      const { count: responseCount, error: responseCountError } = await client
+        .from('question_responses')
+        .select('id', { count: 'exact', head: true });
+
+      const { data: avgCompletionTime, error: timeError } = await client
+        .from('profiles')
+        .select('completion_time_seconds');
+
+      if (countError || timeError || responseCountError) {
+        logSupabaseFailure(
+          'getResearchStats/query',
+          countError || timeError || responseCountError
+        );
+        return null;
+      }
+
+      type ProfileTimeRow = { completion_time_seconds: number | null };
+
+      const rows = (avgCompletionTime ?? []) as ProfileTimeRow[];
+      const avgTime =
+        rows.length > 0
+          ? rows.reduce((sum, p) => sum + (p.completion_time_seconds ?? 0), 0) / rows.length
+          : 0;
+
       return {
-        totalProfiles: 0,
-        averageCompletionTime: 0,
-        totalResponses: 0
+        totalProfiles: profileCount ?? 0,
+        averageCompletionTime: Math.round(avgTime),
+        totalResponses: responseCount ?? 0,
       };
-    }
-
-    const { count: profileCount, error: countError } = await client
-      .from('profiles')
-      .select('id', { count: 'exact', head: true });
-
-    const { count: responseCount, error: responseCountError } = await client
-      .from('question_responses')
-      .select('id', { count: 'exact', head: true });
-
-    const { data: avgCompletionTime, error: timeError } = await client
-      .from('profiles')
-      .select('completion_time_seconds');
-
-    if (countError || timeError || responseCountError) {
-      console.error('Error fetching research stats:', countError || timeError || responseCountError);
+    } catch (err) {
+      logSupabaseFailure('getResearchStats', err);
       return null;
     }
-
-    type ProfileTimeRow = { completion_time_seconds: number | null };
-
-    const rows = (avgCompletionTime ?? []) as ProfileTimeRow[];
-    const avgTime =
-      rows.length > 0
-        ? rows.reduce((sum, p) => sum + (p.completion_time_seconds ?? 0), 0) / rows.length
-        : 0;
-
-    return {
-      totalProfiles: profileCount ?? 0,
-      averageCompletionTime: Math.round(avgTime),
-      totalResponses: responseCount ?? 0
-    };
   }
 
   // RESEARCH-GRADE: Get current assessment data for research purposes

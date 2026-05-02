@@ -321,6 +321,18 @@ export class AdaptiveQuestionnaireEngine {
 
   private shouldComplete(): boolean {
     const coverage = this.routingCoverage();
+    const threshold = this.config.confidenceThreshold;
+
+    if (
+      this.state.phase === 'core' &&
+      this.state.questionHistory.length > 0 &&
+      ROUTING_WEIGHT_KEYS.every((k) => coverage[k] >= threshold)
+    ) {
+      this.state.phase = 'complete';
+      this.state.completionReason = 'confidence_met';
+      return true;
+    }
+
     const thresholdStatus = this.coverageModel.meetsResearchThresholds(coverage);
 
     if (this.state.phase === 'core') {

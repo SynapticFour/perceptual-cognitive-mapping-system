@@ -32,6 +32,7 @@
     "research_consent_local_only": "This session is stored in your browser only. No research database upload ran because cloud storage is not configured for this deployment.",
     "revision_notice": "This is revision {n} of your assessment.",
     "max_length_notice": "Maximum assessment length reached. Results are based on all answers provided.",
+    "sufficient_confidence_banner": "Sufficient confidence was reached on all routing dimensions before the usual number of core questions — your profile is based on the answers you gave.",
     "title": "Your cognitive profile",
     "group_insights_link": "View group insights",
     "group_insights_hint": "Opens aggregate, non-identifying guidance if your program has enabled cohort insights.",

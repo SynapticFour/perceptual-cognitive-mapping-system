@@ -67,6 +67,7 @@ export default function ResultsPage() {
   const [assessmentCtx, setAssessmentCtx] = useState<AssessmentContext | null>(null);
   const [needsAssent, setNeedsAssent] = useState(false);
   const [groupInsightsAvailable, setGroupInsightsAvailable] = useState(false);
+  const [sufficientConfidenceBanner, setSufficientConfidenceBanner] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -152,6 +153,14 @@ export default function ResultsPage() {
     }
     if (process.env.NEXT_PUBLIC_PCMS_SHOW_COHORT_INSIGHTS === '1') {
       setGroupInsightsAvailable(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (sessionStorage.getItem('pcms-sufficient-confidence-banner') === '1') {
+      setSufficientConfidenceBanner(true);
+      sessionStorage.removeItem('pcms-sufficient-confidence-banner');
     }
   }, []);
 
@@ -329,6 +338,14 @@ export default function ResultsPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
       <main id="main-content" className="container mx-auto max-w-6xl px-3 py-6 sm:px-4 sm:py-8">
         <EthicsResultsBanner context={assessmentCtx} />
+        {sufficientConfidenceBanner ? (
+          <p
+            className="mx-auto mb-6 max-w-3xl rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-center text-sm text-emerald-950"
+            role="status"
+          >
+            {ui['results.sufficient_confidence_banner']}
+          </p>
+        ) : null}
         {viewProfile ? (
           <ParticipantPrintSheet
             profile={viewProfile}

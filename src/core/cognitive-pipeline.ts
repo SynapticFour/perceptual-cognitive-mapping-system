@@ -258,12 +258,17 @@ export function buildCognitiveModel(input: BuildCognitiveModelInput): CognitiveM
     ? Math.max(embeddingDimension, embeddingVector!.length, 32)
     : Math.max(embeddingDimension, 32);
 
-  const activations = mapAnswersToActivations({
+  let activations = mapAnswersToActivations({
     rawPercent: display.rawPercent,
     confidenceComponents,
     embeddingDimension: dim,
     sessionEmbedding: hasSession ? embeddingVector! : null,
   });
+  activations = activations.filter((a) => a.weight > 1e-12);
+  const weightSum = activations.reduce((s, a) => s + a.weight, 0);
+  if (activations.length === 0 || weightSum < 1e-14) {
+    activations = [];
+  }
 
   const activationRows = activations.map((a) => a.vector);
   const k = activationRows.length;
