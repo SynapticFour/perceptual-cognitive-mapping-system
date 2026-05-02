@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import { useTranslations } from 'next-intl';
 import { type AssessmentQuestion, type LikertResponse } from '@/data/questions';
 
 interface QuestionCardProps {
@@ -12,14 +13,24 @@ interface QuestionCardProps {
 
 export default function QuestionCard({ question, onResponse, questionNumber, totalQuestions }: QuestionCardProps) {
   const [choiceLocked, setChoiceLocked] = useState(false);
+  const t = useTranslations('questionnaire');
 
-  const likertOptions: { value: LikertResponse; label: string; description: string }[] = [
-    { value: 1, label: 'Strongly Disagree', description: 'This does not describe me at all' },
-    { value: 2, label: 'Disagree', description: 'This rarely describes me' },
-    { value: 3, label: 'Neutral', description: 'This sometimes describes me' },
-    { value: 4, label: 'Agree', description: 'This often describes me' },
-    { value: 5, label: 'Strongly Agree', description: 'This describes me very well' }
-  ];
+  const likertOptions: { value: LikertResponse; label: string; description: string }[] = useMemo(() => {
+    if (question.responseScale === 'likert3') {
+      return [
+        { value: 1, label: t('likert3_low_label'), description: t('likert3_low_desc') },
+        { value: 2, label: t('likert3_mid_label'), description: t('likert3_mid_desc') },
+        { value: 3, label: t('likert3_high_label'), description: t('likert3_high_desc') },
+      ];
+    }
+    return [
+      { value: 1, label: 'Strongly Disagree', description: 'This does not describe me at all' },
+      { value: 2, label: 'Disagree', description: 'This rarely describes me' },
+      { value: 3, label: 'Neutral', description: 'This sometimes describes me' },
+      { value: 4, label: 'Agree', description: 'This often describes me' },
+      { value: 5, label: 'Strongly Agree', description: 'This describes me very well' },
+    ];
+  }, [question.responseScale, t]);
 
   return (
     <div className="bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto">
@@ -47,7 +58,7 @@ export default function QuestionCard({ question, onResponse, questionNumber, tot
           {question.text}
         </h2>
         <p className="text-gray-600 text-sm">
-          Please rate how much this statement describes you in your daily life.
+          {question.responseScale === 'likert3' ? t('prompt_likert3') : t('prompt_likert5')}
         </p>
       </div>
 

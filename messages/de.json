@@ -76,7 +76,15 @@
     "refinement_badge": "Verfeinerungsmodus · Vertrauen wird weiter gestärkt für: {dims}",
     "refinement_badge_generic": "Verfeinerungsmodus · Routing-Vertrauen wird weiter gestärkt.",
     "refinement_live_heading": "Live-Vertrauen",
-    "question": "Frage"
+    "question": "Frage",
+    "prompt_likert5": "Bitte geben Sie an, wie sehr diese Aussage Sie in Ihrem Alltag beschreibt.",
+    "prompt_likert3": "Wählen Sie die passendste Option. Kurze Formulierungen sind gut vorlesbar.",
+    "likert3_low_label": "Trifft selten zu",
+    "likert3_low_desc": "Selten oder gar nicht auf mich zutreffend",
+    "likert3_mid_label": "Manchmal",
+    "likert3_mid_desc": "Kommt vor oder gemischt",
+    "likert3_high_label": "Trifft oft zu",
+    "likert3_high_desc": "Häufig auf mich zutreffend"
   },
   "radar": {
     "caption": "Radar: Rohwerte (äußerer Ring) und vertrauensbereinigte Werte (innerer Ring). Eine große Lücke auf einer Achse bedeutet geringere Sicherheit auf dieser Dimension.",

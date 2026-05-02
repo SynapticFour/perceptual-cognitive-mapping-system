@@ -21,14 +21,16 @@
     "status": "./setup.sh status",
     "verify": "./verify-gitignore.sh",
     "type-check": "node ./node_modules/next/dist/bin/next typegen && node ./node_modules/typescript/bin/tsc --noEmit",
-    "check": "npm run type-check && npm run lint && npm run validate-questions",
+    "check": "npm run type-check && npm run lint && npm run validate-questions && npm run validate-global-bank",
     "test:unit": "node ./node_modules/vitest/vitest.mjs run",
     "test:coverage": "node ./node_modules/vitest/vitest.mjs run --coverage",
     "test:edge": "node ./node_modules/vitest/vitest.mjs run --config vitest.edge.config.ts",
     "test:e2e": "node ./node_modules/@playwright/test/cli.js test",
     "test": "npm run check && npm run test:unit",
     "analyze": "ANALYZE=true node ./node_modules/next/dist/bin/next build --webpack",
-    "validate-questions": "node ./node_modules/ts-node/dist/bin.js --compiler-options '{\"module\":\"CommonJS\",\"moduleResolution\":\"node\"}' scripts/validate-question-bank.ts"
+    "validate-questions": "node ./node_modules/ts-node/dist/bin.js --compiler-options '{\"module\":\"CommonJS\",\"moduleResolution\":\"node\"}' scripts/validate-question-bank.ts",
+    "generate-global-bank": "node ./node_modules/ts-node/dist/bin.js --compiler-options '{\"module\":\"CommonJS\",\"moduleResolution\":\"node\"}' scripts/generate-global-behavioral-bank.ts",
+    "validate-global-bank": "node ./node_modules/ts-node/dist/bin.js --compiler-options '{\"module\":\"CommonJS\",\"moduleResolution\":\"node\"}' scripts/validate-global-behavior-bank.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.103.0",

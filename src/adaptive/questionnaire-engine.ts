@@ -269,7 +269,9 @@ export class AdaptiveQuestionnaireEngine {
       throw new Error('Question not found');
     }
     const v = Number(response.response);
-    if (!Number.isInteger(v) || v < 1 || v > 5) {
+    const qMeta = this.questions.find((q) => q.id === response.questionId);
+    const maxLikert = qMeta?.responseScale === 'likert3' ? 3 : 5;
+    if (!Number.isInteger(v) || v < 1 || v > maxLikert) {
       throw new Error('Invalid response value');
     }
     if (!(response.timestamp instanceof Date) || Number.isNaN(response.timestamp.getTime())) {

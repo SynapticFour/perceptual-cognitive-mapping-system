@@ -50,7 +50,7 @@ export function buildDimensionDisplayModel(
       const w = q.dimensionWeights[d] ?? 0;
       if (w < CONTRIBUTION_THRESHOLD) continue;
       items += 1;
-      const norm = normalizeLikertResponse(qr.response);
+      const norm = normalizeLikertResponse(qr.response, q.responseScale ?? 'likert5');
       const adj = adjustedNormalizedResponse(norm, q.reverseScored ?? false);
       acc += adj * w;
       wsum += w;

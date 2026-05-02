@@ -1,0 +1,4227 @@
+[
+  {
+    "id": "g8-predictability_adaptivity-001",
+    "text": "When the order of the day changes suddenly, I still feel steady inside.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-002",
+    "text": "I like to know early what kind of work or tasks are coming.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-003",
+    "text": "If plans fall apart, I can shift without feeling lost for long.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-004",
+    "text": "When others change the time we agreed on, I need a moment to reset.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-005",
+    "text": "A clear sense of what happens next helps my body feel settled.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-006",
+    "text": "Surprise visits or sudden news rarely throw me off for the whole day.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-007",
+    "text": "When the path I take is unknown, I move forward anyway.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-008",
+    "text": "I feel better when the steps ahead are spelled out simply.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-009",
+    "text": "If rules for a shared task shift mid-way, I adapt without much fuss.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-010",
+    "text": "When nothing is fixed in advance, I can still find a rhythm.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-011",
+    "text": "Knowing roughly when rest and food will come makes the day easier.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-012",
+    "text": "Sudden loud announcements in a crowd do not ruin my whole plan.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-013",
+    "text": "If someone takes a different route than we said, I adjust quickly.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-014",
+    "text": "When timing slips, I can wait without my mind spinning.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-015",
+    "text": "I prefer small routines I can count on, even when life is busy.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-016",
+    "text": "When the weather turns and work must change, I accept it calmly.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-017",
+    "text": "If a tool breaks, I can switch to another way without panic.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-018",
+    "text": "When many small things go wrong at once, I look for one simple next step.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-019",
+    "text": "I like agreements about who does what before we start a shared job.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-020",
+    "text": "When the group changes the plan, I ask once, then go along.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-021",
+    "text": "If I must leave home without knowing return time, I feel uneasy.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-022",
+    "text": "When the day is wide open, I still pick one small anchor task.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-023",
+    "text": "Surprise gifts or visits feel fine even if I did not prepare.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-024",
+    "text": "When travel delays happen, I find a place to sit and breathe.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-predictability_adaptivity-025",
+    "text": "If instructions come late, I can still begin with what I know.",
+    "dimension_weights": {
+      "S": 0.05,
+      "R": 0.72,
+      "C": 0.18,
+      "T": 0.05
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure",
+      "g8:predictability_adaptivity",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-001",
+    "text": "Bright midday light on my face can feel tiring after a while.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-002",
+    "text": "Many overlapping voices make it harder for me to track one line of talk.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-003",
+    "text": "Rough fabric on my skin can distract me until I adjust it.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-004",
+    "text": "Strong smells nearby pull my attention even when I try to focus elsewhere.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-005",
+    "text": "Quiet evenings feel easier on my nerves than noisy gatherings.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-006",
+    "text": "When feet are wet for a long time, the feeling stays in my mind.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-007",
+    "text": "Sudden sharp sounds make my body tense before I think.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-008",
+    "text": "Crowded rooms with close bodies feel draining after some minutes.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-009",
+    "text": "Gentle wind on skin usually feels pleasant, not irritating.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-010",
+    "text": "When music is very loud, I step back or cover my ears.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-011",
+    "text": "Dim light helps my eyes relax when I have been outside all day.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-012",
+    "text": "Sticky hands after cooking distract me until I wash them.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-013",
+    "text": "When dogs bark close by, I notice it before other sounds.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-014",
+    "text": "Soft blankets help me settle when I try to rest.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-015",
+    "text": "When many colors and signs compete, I scan slowly to find my way.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-016",
+    "text": "Heat that builds in a closed space makes it hard to think clearly.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-017",
+    "text": "Cold water on my face wakes me up fast.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-018",
+    "text": "When footsteps echo in a hall, I track the rhythm without trying.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-019",
+    "text": "Bright phone screens at night feel harsh on my eyes.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-020",
+    "text": "When cooking smoke drifts toward me, I move or open air.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-021",
+    "text": "Rain on a roof can soothe me until I sleep.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-022",
+    "text": "When a baby cries nearby, I notice it before other tasks.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-023",
+    "text": "Sand or grit inside shoes bothers me until I clear it.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-024",
+    "text": "When a room is too still and silent, I may seek a little sound.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-sensory_processing-025",
+    "text": "Humming a tune helps me carry a heavy load farther.",
+    "dimension_weights": {
+      "F": 0.12,
+      "S": 0.78,
+      "E": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory",
+      "g8:sensory_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-001",
+    "text": "I notice repeating shapes or rhythms in what others treat as random.",
+    "dimension_weights": {
+      "P": 0.72,
+      "C": 0.13,
+      "V": 0.15
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-002",
+    "text": "When learning something new, I look for one simple picture in my mind.",
+    "dimension_weights": {
+      "P": 0.68,
+      "C": 0.1,
+      "V": 0.22
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-003",
+    "text": "I spot when two stories people tell do not match.",
+    "dimension_weights": {
+      "F": 0.1,
+      "P": 0.22,
+      "V": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-004",
+    "text": "Breaking a big job into small named parts helps me begin.",
+    "dimension_weights": {
+      "P": 0.72,
+      "C": 0.13,
+      "V": 0.15
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-005",
+    "text": "When someone gives only words, I ask for a quick sketch or gesture.",
+    "dimension_weights": {
+      "P": 0.68,
+      "C": 0.1,
+      "V": 0.22
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-006",
+    "text": "I compare today with yesterday to see what really changed.",
+    "dimension_weights": {
+      "F": 0.1,
+      "P": 0.22,
+      "V": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-007",
+    "text": "If a problem looks like one I saw before, I reuse what worked.",
+    "dimension_weights": {
+      "P": 0.72,
+      "C": 0.13,
+      "V": 0.15
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-008",
+    "text": "When facts clash, I hold both in mind until a pattern appears.",
+    "dimension_weights": {
+      "P": 0.68,
+      "C": 0.1,
+      "V": 0.22
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-009",
+    "text": "I like naming the main risk before we act as a group.",
+    "dimension_weights": {
+      "F": 0.1,
+      "P": 0.22,
+      "V": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-010",
+    "text": "When directions confuse me, I walk a short test path first.",
+    "dimension_weights": {
+      "P": 0.72,
+      "C": 0.13,
+      "V": 0.15
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-011",
+    "text": "I see links between chores that others keep separate.",
+    "dimension_weights": {
+      "P": 0.68,
+      "C": 0.1,
+      "V": 0.22
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-012",
+    "text": "If a rule feels unclear, I try one harmless example to learn.",
+    "dimension_weights": {
+      "F": 0.1,
+      "P": 0.22,
+      "V": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-013",
+    "text": "When listening to a long talk, I mark two ideas to remember.",
+    "dimension_weights": {
+      "P": 0.72,
+      "C": 0.13,
+      "V": 0.15
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-014",
+    "text": "I turn a messy list into a circle or line in my head.",
+    "dimension_weights": {
+      "P": 0.68,
+      "C": 0.1,
+      "V": 0.22
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-015",
+    "text": "When someone jumps topics fast, I ask which one matters now.",
+    "dimension_weights": {
+      "F": 0.1,
+      "P": 0.22,
+      "V": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-016",
+    "text": "I notice when a story grows bigger each time it is retold.",
+    "dimension_weights": {
+      "P": 0.72,
+      "C": 0.13,
+      "V": 0.15
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-017",
+    "text": "If a tool can serve two jobs, I prefer that over carrying more.",
+    "dimension_weights": {
+      "P": 0.68,
+      "C": 0.1,
+      "V": 0.22
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-018",
+    "text": "When counting stock or harvest, I group items to avoid mistakes.",
+    "dimension_weights": {
+      "F": 0.1,
+      "P": 0.22,
+      "V": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-019",
+    "text": "I scan the horizon for landmarks before crossing open land.",
+    "dimension_weights": {
+      "P": 0.72,
+      "C": 0.13,
+      "V": 0.15
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-020",
+    "text": "When teaching a child, I show once with hands, then with words.",
+    "dimension_weights": {
+      "P": 0.68,
+      "C": 0.1,
+      "V": 0.22
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-021",
+    "text": "If numbers feel abstract, I picture piles or rows.",
+    "dimension_weights": {
+      "F": 0.1,
+      "P": 0.22,
+      "V": 0.68
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-022",
+    "text": "When two people disagree, I restate what each wants in plain words.",
+    "dimension_weights": {
+      "P": 0.72,
+      "C": 0.13,
+      "V": 0.15
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-023",
+    "text": "I like a short summary at the end of a meeting.",
+    "dimension_weights": {
+      "P": 0.68,
+      "C": 0.1,
+      "V": 0.22
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-024",
+    "text": "When maps are missing, I draw a rough one in dirt or paper.",
+    "dimension_weights": {
+      "F": 0.1,
+      "P": 0.22,
+      "V": 0.68
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-cognitive_framing-025",
+    "text": "If a joke hides an insult, I name the hurt plainly.",
+    "dimension_weights": {
+      "P": 0.72,
+      "C": 0.13,
+      "V": 0.15
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern",
+      "g8:cognitive_framing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-001",
+    "text": "After a long day with many people, I seek quiet to recharge.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-002",
+    "text": "Working side by side in silence feels comfortable with the right person.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-003",
+    "text": "I step forward when a group needs someone to speak plainly.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-004",
+    "text": "When newcomers arrive, I greet them before returning to work.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-005",
+    "text": "I listen longer when someone seems shaken by news.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-006",
+    "text": "Large feasts with many tables lift my mood if I know a few faces.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-007",
+    "text": "When conflict rises, I try to lower voices before solving facts.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-008",
+    "text": "I enjoy short jokes that do not shame anyone.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-009",
+    "text": "If someone is left out of a task, I invite them in.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-010",
+    "text": "When I am tired, I still nod to neighbors I pass.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-011",
+    "text": "I share food when someone nearby looks hungry.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-012",
+    "text": "When a child clings to a parent, I give space and a smile.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-013",
+    "text": "I prefer small circles for deep talk over big crowds for shallow chat.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-014",
+    "text": "When praise is due, I say it soon rather than waiting.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-015",
+    "text": "If gossip starts, I change the subject to something useful.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-016",
+    "text": "When elders speak, I wait for a pause before answering.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-017",
+    "text": "I feel responsible to warn others about a loose step or sharp nail.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-018",
+    "text": "When music starts, I may clap even if I do not dance.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-019",
+    "text": "If someone apologizes, I accept without dragging the past.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-020",
+    "text": "When teamwork stalls, I offer one concrete task I can take.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-021",
+    "text": "I remember faces faster than written names.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-022",
+    "text": "When someone is shamed in public, I feel heat in my chest.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-023",
+    "text": "I step back when two leaders argue; I wait for a signal.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-024",
+    "text": "When a friend is sick, I visit with something small to eat.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-social_orientation-025",
+    "text": "If a stranger needs directions, I walk them to a clear landmark.",
+    "dimension_weights": {
+      "F": 0.1,
+      "S": 0.12,
+      "E": 0.78
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "social",
+      "g8:social_orientation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-001",
+    "text": "When many people talk at once, I pick one voice and stay with it.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-002",
+    "text": "If too many tasks land at the same hour, I freeze for a moment.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-003",
+    "text": "I write marks on my hand when I must remember numbers briefly.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-004",
+    "text": "When instructions come fast, I ask for the first step again.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-005",
+    "text": "A short list of three jobs feels easier than a long speech.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-006",
+    "text": "When noise rises, I repeat the new fact under my breath.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-007",
+    "text": "If someone adds detail after detail, I ask what matters today.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-008",
+    "text": "When carrying water and watching children, I drop one task in my mind.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-009",
+    "text": "I slow down on purpose when a message feels heavy.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-010",
+    "text": "When two radios play, I cannot track either story well.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-011",
+    "text": "If a line of numbers grows, I group them in pairs to check.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-012",
+    "text": "When news arrives in fragments, I wait before I repeat it.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-013",
+    "text": "I set one object in a special place to mean “remember this.”",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-014",
+    "text": "When teaching, I show one example, then pause.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-015",
+    "text": "If my mind feels full, I sit and drink before deciding.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-016",
+    "text": "When many signs point different ways, I ask a local person once.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-017",
+    "text": "I drop low-priority jobs when time is short.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-018",
+    "text": "When counting money, I speak the amount aloud softly.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-019",
+    "text": "If a story has too many names, I focus on the outcome only.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-020",
+    "text": "When packing for travel, I lay items out before closing the bag.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-021",
+    "text": "I repeat a new name three times when I first hear it.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-022",
+    "text": "When machines beep often, I mute what I can.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-023",
+    "text": "If a crowd asks questions together, I raise one finger for order.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-024",
+    "text": "When reading is hard, I listen instead if someone can read aloud.",
+    "dimension_weights": {
+      "F": 0.7,
+      "P": 0.18,
+      "C": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-information_load-025",
+    "text": "When my head feels crowded, I walk outside for two minutes.",
+    "dimension_weights": {
+      "F": 0.74,
+      "P": 0.14,
+      "I": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus",
+      "g8:information_load",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-001",
+    "text": "I notice shadows shifting and guess the time of day.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-002",
+    "text": "When someone says “soon,” I ask roughly how many minutes.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-003",
+    "text": "If I must wake early, I prepare clothes the night before.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-004",
+    "text": "When cooking, I track time with songs I know by length.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-005",
+    "text": "I feel when a season is turning before the calendar says so.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-006",
+    "text": "When waiting feels long, I check the sun or a clock if I can.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-007",
+    "text": "If a child asks “how long,” I compare to a known chore.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-008",
+    "text": "When planning travel, I add extra time for rough roads.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-009",
+    "text": "I remember recurring market days better than dates on paper.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-010",
+    "text": "When dusk arrives, I start closing tasks without being told.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-011",
+    "text": "If I promise “tomorrow,” I tie it to morning light in my mind.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-012",
+    "text": "When music speeds up, I match my steps without thinking.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-013",
+    "text": "I feel hunger at roughly the same hours most days.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-014",
+    "text": "When a meeting runs late, I shift later jobs in my head.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-015",
+    "text": "If night work is needed, I nap first when possible.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-016",
+    "text": "When seasons affect planting, I watch neighbors’ fields.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-017",
+    "text": "I estimate distance by how long my feet ache.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-018",
+    "text": "When tides matter, I ask locals instead of guessing.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-019",
+    "text": "If a child naps, I use that window for quiet work.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-020",
+    "text": "When bells or calls mark hours, I sync my pace to them.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-021",
+    "text": "I notice when my body wants rest before my mind admits it.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-022",
+    "text": "When time zones confuse me, I anchor to one meal.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-023",
+    "text": "If a task takes longer once, I plan longer next time.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-024",
+    "text": "When stars appear, I know evening chores should finish.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-temporal_processing-025",
+    "text": "When roosters call, I treat it as a soft alarm.",
+    "dimension_weights": {
+      "R": 0.14,
+      "C": 0.1,
+      "T": 0.76
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility",
+      "g8:temporal_processing",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-001",
+    "text": "When anger rises, I breathe before I speak.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-002",
+    "text": "If I want to quit a hard job, I promise myself only five more minutes.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-003",
+    "text": "When sweets are nearby, I can take one and step away.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-004",
+    "text": "If someone insults me, I leave the place before I answer harshly.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-005",
+    "text": "When tired, I still finish one small duty I started.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-006",
+    "text": "When laughter bursts out, I can lower my voice if needed.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-007",
+    "text": "If I fail once, I try again with a smaller step.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-008",
+    "text": "When pain appears, I notice it without deciding the whole day is bad.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-009",
+    "text": "If I speak too loud, I soften when I see faces wince.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-010",
+    "text": "When envy appears, I name one thing I already have.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-011",
+    "text": "If a habit hurts me, I change the cue, not only the will.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-012",
+    "text": "When shame visits, I tell one trusted person.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-013",
+    "text": "If I spill something, I clean before blaming anyone.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-014",
+    "text": "When tempted to lie small, I tell a plain truth instead.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-015",
+    "text": "If children copy my tone, I slow my speech on purpose.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-016",
+    "text": "When I want to buy what I cannot afford, I walk away first.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-017",
+    "text": "If news scares me, I check one fact before I spread it.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-018",
+    "text": "When I interrupt, I apologize and yield the floor.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-019",
+    "text": "If I feel faint, I sit and drink before standing proud.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-020",
+    "text": "When pride blocks an apology, I say sorry anyway.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-021",
+    "text": "If I oversleep, I skip blame and start the next useful task.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-022",
+    "text": "When online chatter pulls me, I set the device face down.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-023",
+    "text": "If I gossip, I stop mid-sentence when I notice.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-024",
+    "text": "When muscles beg to stop, I stretch once then decide.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.7,
+      "A": 0.12
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-self_regulation-025",
+    "text": "If I break a promise, I make a smaller promise I can keep.",
+    "dimension_weights": {
+      "F": 0.16,
+      "R": 0.12,
+      "C": 0.72
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "flexibility",
+      "g8:self_regulation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-001",
+    "text": "When a task helps people I know, I push through tiredness.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-002",
+    "text": "If the goal feels far, I still enjoy the first visible step.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-003",
+    "text": "When praise is rare, I keep going if the work itself matters.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-004",
+    "text": "If I promised quietly, I treat it like a public vow.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-005",
+    "text": "When learning helps my family, I return to it after breaks.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-006",
+    "text": "If boredom hits, I change the method, not always the goal.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-007",
+    "text": "When small wins appear, I notice them aloud.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-008",
+    "text": "If fear says stop, I shrink the task until I can start.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-009",
+    "text": "When a friend counts on me, I rise earlier.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.54,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-010",
+    "text": "If the sun is hot, I still move if someone waits.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.56,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-011",
+    "text": "When tools are poor, I improvise instead of waiting forever.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-012",
+    "text": "If my body is weak, I do one gentle part of the job.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-013",
+    "text": "When songs play, rhythm helps me repeat dull work.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-014",
+    "text": "If others rest, I may still finish my slice if time is short.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-015",
+    "text": "When a deadline is real, I front-load the hardest piece.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-016",
+    "text": "If reward is unclear, I tie the job to care for someone.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-017",
+    "text": "When mockery stings, I use it as fuel only briefly, then cool down.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-018",
+    "text": "If luck fails, I try a different path the same day.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-019",
+    "text": "When night comes, I stop dangerous work even if eager.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-020",
+    "text": "If hope dips, I remember one past time I persisted.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-021",
+    "text": "When elders watch, I show steady effort, not only speed.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-022",
+    "text": "If money is small, I still polish what I sell.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-023",
+    "text": "When competition rises, I focus on my own line.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.82,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-024",
+    "text": "If praise floods, I stay polite and keep standards.",
+    "dimension_weights": {
+      "F": 0.18,
+      "C": 0.14,
+      "A": 0.68
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.84,
+    "reverseScored": true,
+    "responseScale": "likert3"
+  },
+  {
+    "id": "g8-motivation-025",
+    "text": "When the task is lonely, I speak kindly to myself.",
+    "dimension_weights": {
+      "F": 0.72,
+      "R": 0.14,
+      "A": 0.14
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus",
+      "g8:motivation",
+      "behavioral_v2",
+      "global_bank"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.52,
+    "reverseScored": false,
+    "responseScale": "likert3"
+  }
+]

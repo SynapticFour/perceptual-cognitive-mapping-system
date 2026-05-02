@@ -134,7 +134,7 @@ export function calculateResearchConfidence(
 
       // Collect weighted responses for consistency analysis
       if (w >= VARIANCE_WEIGHT_THRESHOLD) {
-        const norm = normalizeLikertResponse(qr.response); // Convert to [0,1]
+        const norm = normalizeLikertResponse(qr.response, q.responseScale ?? 'likert5'); // Convert to [0,1]
         const adjusted = adjustedNormalizedResponse(norm, q.reverseScored ?? false); // Apply reverse scoring
         weightedAdjusted.push(adjusted * w); // Weight by dimension strength
       }

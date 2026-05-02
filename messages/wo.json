@@ -76,7 +76,15 @@
     "refinement_badge": "Yoon bu yeesal · Ñu kontine ngir yëg yi ci: {dims}",
     "refinement_badge_generic": "Yoon bu yeesal · Ñu kontine ngir yëg yi ci yoon gi.",
     "refinement_live_heading": "Yëg-yëg bu lees",
-    "question": "Lammiñ"
+    "question": "Lammiñ",
+    "prompt_likert5": "Tànku loolu dina wax lañu mel ni ci sa bët bi.",
+    "prompt_likert3": "Tànnal benn. Mbind mi gëtt mooy gën a baax su fekk ñu koy wax.",
+    "likert3_low_label": "Du mel ni ma",
+    "likert3_low_desc": "Suuf suuf walla du ma mel",
+    "likert3_mid_label": "Luy mel ni",
+    "likert3_mid_desc": "Luy mel ni walla du leer",
+    "likert3_high_label": "Mel ni ma",
+    "likert3_high_desc": "Dina mel ni ma ci yeneen yoon"
   },
   "radar": {
     "caption": "Graf radar bi lim lim yi yu leer (biti bi bax) ak lim yi ñu yëg (biti bi ci biir). Ndaw bu rëy ci benn yoon dafay wax ne yëg yi du leer ci yoon bi.",

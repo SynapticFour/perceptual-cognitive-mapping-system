@@ -73,6 +73,11 @@
         "reverseScored": {
           "type": "boolean"
         },
+        "responseScale": {
+          "type": "string",
+          "enum": ["likert5", "likert3"],
+          "description": "likert3 = three ordered response options (1–3); default is five-point."
+        },
         "irt_a": {
           "type": ["number", "null"],
           "description": "Item discrimination parameter (IRT 2PL model). Null until calibrated on pilot data.",

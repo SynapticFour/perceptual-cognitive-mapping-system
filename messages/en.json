@@ -76,7 +76,15 @@
     "refinement_badge": "Refinement mode · Continuing to improve confidence on: {dims}",
     "refinement_badge_generic": "Refinement mode · Continuing to strengthen routing confidence.",
     "refinement_live_heading": "Live confidence",
-    "question": "Question"
+    "question": "Question",
+    "prompt_likert5": "Please rate how much this statement describes you in your daily life.",
+    "prompt_likert3": "Pick the option that fits you most. Short labels work well if this is read aloud.",
+    "likert3_low_label": "Not like me",
+    "likert3_low_desc": "Rarely or not true for me",
+    "likert3_mid_label": "Sometimes",
+    "likert3_mid_desc": "It depends or is mixed",
+    "likert3_high_label": "Like me",
+    "likert3_high_desc": "Often true for me"
   },
   "radar": {
     "caption": "Radar chart comparing your raw scores (outer ring) with confidence-adjusted scores (inner ring). A wide gap on a spoke means we are less certain on that dimension.",

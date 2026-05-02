@@ -7,6 +7,10 @@ import { render, waitFor } from '@testing-library/react';
 
 const mockPush = vi.fn();
 
+vi.mock('next-intl', () => ({
+  useLocale: () => 'en',
+}));
+
 vi.mock('@/i18n/navigation', () => ({
   useRouter: () => ({ push: mockPush, replace: vi.fn() }),
 }));

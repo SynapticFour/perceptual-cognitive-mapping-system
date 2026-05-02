@@ -3,6 +3,9 @@ import { getQuestionBankSync } from './question-bank-state';
 
 export type LikertResponse = 1 | 2 | 3 | 4 | 5;
 
+/** `likert3` items use responses 1–3 (audio-friendly); still stored as LikertResponse. */
+export type ResponseScale = 'likert5' | 'likert3';
+
 export interface QuestionResponse {
   questionId: string;
   response: LikertResponse;
@@ -24,6 +27,8 @@ export interface QuestionBankJsonEntry {
   culturalContext: 'universal' | 'ghana' | 'western';
   informationGain: number;
   reverseScored: boolean;
+  /** Defaults to 5-point agreement scale; `likert3` uses three ordered options (low literacy / audio). */
+  responseScale?: ResponseScale;
   /**
    * IRT 2PL discrimination parameter. Null until calibrated on ≥200 pilot responses.
    * When populated, the adaptive engine should weight this question's information gain
@@ -82,6 +87,7 @@ export interface AssessmentQuestion {
   culturalContext?: 'western' | 'ghana' | 'universal';
   /** When true, Likert responses are inverted (1↔5) after normalisation before scoring. */
   reverseScored?: boolean;
+  responseScale?: ResponseScale;
 }
 
 /** Map a schema-valid JSON row into the in-memory assessment shape. */
@@ -99,6 +105,7 @@ export function jsonEntryToAssessmentQuestion(row: QuestionBankJsonEntry): Asses
     tags: row.tags,
     culturalContext: row.culturalContext,
     reverseScored: row.reverseScored,
+    responseScale: row.responseScale,
   };
 }
 
@@ -114,7 +121,11 @@ export function getQuestionsForContext(context: 'western' | 'ghana' | 'universal
   return getAssessmentQuestions('all', context);
 }
 
-export function normalizeLikertResponse(response: LikertResponse): number {
+export function normalizeLikertResponse(response: LikertResponse, scale: ResponseScale = 'likert5'): number {
+  if (scale === 'likert3') {
+    const r = Math.min(3, Math.max(1, response));
+    return (r - 1) / 2;
+  }
   return (response - 1) / 4;
 }
 
