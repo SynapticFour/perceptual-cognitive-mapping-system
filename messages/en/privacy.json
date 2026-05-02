@@ -5,7 +5,7 @@
     "page_title": "Privacy information",
     "intro": "This notice describes processing of personal data when you use the Perceptual & Cognitive Mapping System (PCMS) at map.synapticfour.com, in line with Art. 13 GDPR. The controller is Synaptic Four (Stuttgart). PCMS is a publicly accessible research application, not a commercial product offering.",
     "controller_heading": "Controller",
-    "controller_body": "Synaptic Four, Stuttgart, Germany. Email: contact@synapticfour.com.",
+    "controller_body": "Synaptic Four, Stuttgart, Germany. Email: contact@synapticfour.com. Full postal address and proprietor details: https://synapticfour.com/en/impressum (English) or https://synapticfour.com/de/impressum (German).",
     "data_heading": "Categories of data and purposes",
     "data_body": "We primarily process anonymous or pseudonymous session data: random session identifiers, cognitive routing features (vectors), response patterns, timestamps, reaction times, and derived statistical metrics for cognitive-science research. The assessment flow does not ask for names, email addresses, or postal addresses. If you email us, that communication is a separate processing activity from the anonymous session.",
     "legal_basis_heading": "Legal basis",
@@ -41,6 +41,6 @@
     "contact_heading": "Privacy contact",
     "contact_body": "Questions about processing or exercising your rights: contact@synapticfour.com.",
     "not_legal_advice": "This text is not legal advice and does not replace advice for your specific situation.",
-    "last_updated": "Last updated: 2026-02-08"
+    "last_updated": "Last updated: May 2026"
   }
 }

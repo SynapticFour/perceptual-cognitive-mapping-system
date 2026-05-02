@@ -5,7 +5,7 @@
     "page_title": "Datenschutzhinweise",
     "intro": "Diese Seite informiert nach Art. 13 DSGVO über die Verarbeitung personenbezogener Daten bei Nutzung des Perceptual & Cognitive Mapping System (PCMS) unter map.synapticfour.com. Verantwortlicher ist Synaptic Four (Stuttgart). PCMS ist eine öffentlich zugängliche Forschungsanwendung ohne kommerzielles Produktangebot.",
     "controller_heading": "Verantwortlicher",
-    "controller_body": "Synaptic Four, Stuttgart, Deutschland. E-Mail: contact@synapticfour.com.",
+    "controller_body": "Synaptic Four, Stuttgart, Deutschland. E-Mail: contact@synapticfour.com. Vollständige Anschrift und Angaben zur Rechtsform: https://synapticfour.com/de/impressum (Deutsch) bzw. https://synapticfour.com/en/impressum (Englisch).",
     "data_heading": "Kategorien personenbezogener Daten und Zwecke",
     "data_body": "Es werden vorrangig anonyme oder pseudonyme Sitzungsdaten verarbeitet: zufällige Sitzungskennungen, kognitive Routing-Merkmale (Vektoren), Antwortmuster, Zeitstempel, Reaktionszeiten und abgeleitete statistische Kennzahlen für die kognitionswissenschaftliche Forschung. Im Erhebungsablauf werden keine Namen, E-Mail-Adressen oder Postadressen abgefragt. Kontaktieren Sie uns per E-Mail, ist diese Kommunikation ein separates Verarbeitungsvorgang neben der anonymen Sitzung.",
     "legal_basis_heading": "Rechtsgrundlage",
@@ -41,6 +41,6 @@
     "contact_heading": "Kontakt Datenschutz",
     "contact_body": "Bei Fragen zur Verarbeitung Ihrer Daten oder zur Wahrnehmung Ihrer Rechte: contact@synapticfour.com.",
     "not_legal_advice": "Diese Hinweise stellen keine Rechtsberatung dar und können eine Einzelfallprüfung durch eine Fachperson nicht ersetzen.",
-    "last_updated": "Stand: 8. Februar 2026"
+    "last_updated": "Stand: Mai 2026"
   }
 }
