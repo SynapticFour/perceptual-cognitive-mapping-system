@@ -321,6 +321,18 @@ npm start
 - Security policy: [`SECURITY.md`](./SECURITY.md)
 - Code of conduct: [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md)
 
+## Legal & privacy (forks and self-hosting)
+
+PCMS ships with consent copy, a Datenschutz/privacy page, and footer links aligned with the **Synaptic Four** public deployment at **map.synapticfour.com** (Vercel hosting; optional Supabase in **EU Frankfurt** — verify in dashboard). See **`docs/DEPLOYMENT-LEGAL.md`** and **`docs/legal-audit.md`** for the operator checklist and disclosure status.
+
+**If you fork or self-host this software, you are responsible for your own legal documents and disclosures.** At minimum, operators typically need:
+
+- A **privacy policy** (Datenschutzerklärung) appropriate for their jurisdiction, hosting, and subprocessors — replace or adapt the template content under `/privacy` and the message files in `messages/*/privacy.json`.
+- **Consent wording** aligned with what your deployment actually collects and stores (including optional Supabase, retention, and any analytics).
+- An **Imprint** (Impressum) where legally required — the default footer links to Synaptic Four’s imprint; change that link for your organisation.
+
+This repository does not provide turnkey legal compliance for every jurisdiction.
+
 ## ⚖️ Legal Notice
 
 This repository documents technical capabilities and research operating guidance. It is not legal advice and does not by itself provide regulatory certification or compliance guarantees. Compliance outcomes depend on operator configuration, contracts, and organisational controls.

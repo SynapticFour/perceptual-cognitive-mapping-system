@@ -40,6 +40,7 @@ import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
 import { seedConsentIfSkipMode } from '@/lib/ethics-flow-config';
 import { buildResearchSessionZip, downloadUint8ArrayFile } from '@/lib/research-session-bundle';
 import ParticipantPrintSheet from '@/components/results/ParticipantPrintSheet';
+import SiteFooter from '@/components/layout/SiteFooter';
 
 const PIPELINE_STORAGE_KEY = 'pcms-pipeline-result';
 
@@ -549,7 +550,8 @@ export default function ResultsPage() {
           </div>
         </section>
 
-        <footer className="mt-12 text-center text-sm text-gray-600">
+        <footer className="mt-12 space-y-4 text-center text-sm text-gray-600">
+          <SiteFooter className="pb-2" />
           <p className="mb-2">{ui['results.footer_line1']}</p>
           <p>{ui['results.footer_line2']}</p>
         </footer>

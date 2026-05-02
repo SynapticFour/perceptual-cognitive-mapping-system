@@ -478,6 +478,7 @@
     "streamlined_bundle_title": "Forschungszweck & Messinhalt",
     "streamlined_safeguards_title": "Grenzen, Datenschutz & Ihre Rechte",
     "qa_mode_banner": "QA-Build: vollständige Einwilligungsschritte. Für den kürzeren Ablauf NEXT_PUBLIC_PCMS_CONSENT_MODE=default setzen.",
+    "storage_notice": "Diese Anwendung speichert Sitzungsdaten lokal in Ihrem Browser und — wenn Sie zustimmen — anonym auf einem Forschungsserver. Es werden keine personenbezogenen Daten im Sinne einer direkten Identifizierung erhoben.",
     "skip_redirect": "Einwilligung wird übersprungen (Testmodus)…",
     "research_title": "Was dieses System ist",
     "research_body": "Dies ist ein nicht-klinischer Forschungsfragebogen. Er erfasst selbstberichtete Tendenzen auf kontinuierlichen Dimensionen. Es handelt sich nicht um eine klinische Leistung; es gibt keine Behandlung oder medizinische Beratung.",
@@ -486,9 +487,9 @@
     "limits_title": "Was nicht gemessen wird",
     "limits_body": "Dieses Werkzeug misst keinen IQ, stellt keine medizinische oder psychiatrische Diagnose und bewertet Menschen nicht als gut oder schlecht. Es gibt kein Bestehen oder Nichtbestehen. Bei gesundheitlichen Fragen wenden Sie sich an Fachpersonen.",
     "privacy_title": "Was gespeichert wird",
-    "privacy_body": "Wir speichern eine anonyme Sitzungskennung, Zeitstempel, Ihre Antworten, Reaktionszeiten und abgeleitete statistische Zusammenfassungen für die Forschung. In diesem Ablauf erfassen wir keinen Namen, keine E-Mail und keine Postadresse, sofern Sie nicht separat Kontakt aufnehmen.",
+    "privacy_body": "Synaptic Four (Stuttgart) speichert eine anonyme Sitzungskennung, Zeitstempel, Ihre Antworten, Reaktionszeiten und abgeleitete statistische Zusammenfassungen für die Forschung. In diesem Ablauf erfassen wir keinen Namen, keine E-Mail und keine Postadresse, es sei denn, Sie kontaktieren uns separat (dann besteht ein eigenes Verarbeitungsverhältnis). Ausführliche Datenschutzhinweise: Verknüpfung „Datenschutz“ unten bzw. /privacy.",
     "rights_title": "Ihre Rechte",
-    "rights_body": "Sie können jederzeit ohne Nachteil abbrechen. Sie können die Löschung der mit Ihrer Sitzungs-ID verknüpften Daten verlangen, soweit technisch möglich. Kontaktieren Sie das Forschungsteam über die in den Materialien genannte Adresse. Betroffenenrechte können nach geltendem Recht bearbeitet werden.",
+    "rights_body": "Sie können jederzeit ohne Nachteil abbrechen. Sie können die Löschung der mit Ihrer Sitzungs-ID verknüpften Daten verlangen (auf der Ergebnisseite „Meine Daten löschen“, soweit eingerichtet). Kontakt: contact@synapticfour.com. Betroffenenrechte nach DSGVO können Sie dort ebenfalls geltend machen; Einzelheiten stehen auf der Seite „Datenschutz“.",
     "ghana_title": "Ghana / medizinischer Kontext",
     "ghana_body": "Dieser Fragebogen ersetzt keinen Arzt, keine Pflegekraft, keinen Psychologen und keinen Community-Gesundheitsdienst. Er kann keine Erkrankung erkennen oder behandeln. In Ghana und anderswo nutzen Sie qualifizierte Fachpersonen für medizinische Entscheidungen."
   },
@@ -526,5 +527,11 @@
     "cancel": "Abbrechen",
     "done": "Löschung abgeschlossen. Lokale Daten wurden entfernt.",
     "error": "Löschung fehlgeschlagen. Sie können dennoch die Browser-Daten in den Seiteneinstellungen leeren."
+  },
+  "site_footer": {
+    "nav_label": "Rechtliches und externe Links",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum",
+    "github": "GitHub"
   }
 }

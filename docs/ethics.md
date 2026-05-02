@@ -273,7 +273,7 @@ These items map the principles above to routes and storage in this repository:
 - Declaration of Helsinki compliance
 - UNESCO Universal Declaration on Bioethics
 - International Conference on Harmonization guidelines
-- GDPR considerations for global participants
+- GDPR considerations for global participants — for the operator-facing processing summary (hosting, subprocessors, consent), see [`docs/DEPLOYMENT-LEGAL.md`](./DEPLOYMENT-LEGAL.md) and the in-app privacy route `/privacy` (`messages/*/privacy.json`).
 
 **Institutional Review**
 - IRB/REC approval processes

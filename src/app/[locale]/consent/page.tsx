@@ -174,6 +174,9 @@ export default function ConsentPage() {
             {t('qa_mode_banner')}
           </p>
         ) : null}
+        <p className="mb-4 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-center text-sm text-slate-700">
+          {t('storage_notice')}
+        </p>
         <p className="mb-2 text-center text-sm font-medium text-slate-500">
           {t('progress', { n: step + 1, total })}
         </p>
