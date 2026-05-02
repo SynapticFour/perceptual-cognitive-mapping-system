@@ -4,6 +4,47 @@ import type { DimensionDisplayModel } from '@/lib/dimension-display';
 
 const VERSION = 1 as const;
 
+/** Browsers and intermediaries often cap URLs; keep share payloads well under practical limits. */
+export const MAX_SHARE_URL_LENGTH = 2000;
+
+/**
+ * Prefer `?p=` on the current URL; if too long, fall back to `#p=` (hash is not sent to the server).
+ */
+export function buildShareableResultsUrl(
+  currentHref: string,
+  encodedPayload: string
+): { ok: true; url: string } | { ok: false; reason: 'too_long' } {
+  const withQuery = new URL(currentHref);
+  withQuery.hash = '';
+  withQuery.searchParams.set('p', encodedPayload);
+  const queryUrl = withQuery.toString();
+  if (queryUrl.length <= MAX_SHARE_URL_LENGTH) {
+    return { ok: true, url: queryUrl };
+  }
+
+  const originPath = new URL(currentHref);
+  const minimal = `${originPath.origin}${originPath.pathname}`;
+  const hashUrl = `${minimal}#${new URLSearchParams({ p: encodedPayload }).toString()}`;
+  if (hashUrl.length <= MAX_SHARE_URL_LENGTH) {
+    return { ok: true, url: hashUrl };
+  }
+
+  return { ok: false, reason: 'too_long' };
+}
+
+/** Read share payload from `?p=` or hash `#p=` / `#?p=`. */
+export function readShareEncodedPayloadFromWindow(search: string, hash: string): string | null {
+  const fromSearch = new URLSearchParams(search).get('p');
+  if (fromSearch) return fromSearch;
+
+  const h = hash.replace(/^#/, '');
+  if (!h) return null;
+  const params = new URLSearchParams(h.startsWith('?') ? h.slice(1) : h);
+  const fromHash = params.get('p');
+  if (fromHash) return fromHash;
+  return null;
+}
+
 export type LandscapeSharePayload = {
   v: typeof VERSION;
   /** Raw scores 0–100 per dimension */

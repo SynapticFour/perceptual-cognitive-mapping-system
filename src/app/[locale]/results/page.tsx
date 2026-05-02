@@ -13,10 +13,12 @@ import ConfidenceSummaryBanner from '@/components/results/confidence-summary-ban
 import InsightCards from '@/components/results/insight-cards';
 import {
   buildSharePayload,
+  buildShareableResultsUrl,
   confidenceComponentsFromSharePayload,
   decodeLandscapeSharePayload,
   displayModelFromSharePayload,
   encodeLandscapeSharePayload,
+  readShareEncodedPayloadFromWindow,
   type LandscapeSharePayload,
 } from '@/lib/landscape-share-codec';
 import { parseStoredPipelineSession } from '@/lib/parse-pipeline-session';
@@ -87,8 +89,7 @@ export default function ResultsPage() {
         return;
       }
 
-      const params = new URLSearchParams(window.location.search);
-      const p = params.get('p');
+      const p = readShareEncodedPayloadFromWindow(window.location.search, window.location.hash);
       const decoded = p ? decodeLandscapeSharePayload(p) : null;
       if (decoded && !cancelled) {
         setUrlShare(decoded);
@@ -219,9 +220,14 @@ export default function ResultsPage() {
     if (!session || !display || !confidenceComponents) return;
 
     const payload = buildSharePayload(display, confidenceComponents, session.completedAt);
-    const p = encodeLandscapeSharePayload(payload);
-    const path = typeof window !== 'undefined' ? window.location.pathname : '/results';
-    const shareUrl = `${window.location.origin}${path}?p=${encodeURIComponent(p)}`;
+    const encoded = encodeLandscapeSharePayload(payload);
+    const href = typeof window !== 'undefined' ? window.location.href : 'http://localhost/results';
+    const built = buildShareableResultsUrl(href, encoded);
+    if (!built.ok) {
+      alert(ui['results.share_url_too_long']);
+      return;
+    }
+    const shareUrl = built.url;
 
     if (navigator.share) {
       void navigator.share({

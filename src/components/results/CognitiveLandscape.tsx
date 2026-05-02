@@ -7,6 +7,7 @@ import { getDimensionUi } from '@/lib/cognitive-dimensions-ui';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
 import {
   buildSharePayload,
+  buildShareableResultsUrl,
   encodeLandscapeSharePayload,
   type LandscapeSharePayload,
 } from '@/lib/landscape-share-codec';
@@ -190,15 +191,17 @@ export default function CognitiveLandscape({
 
   const handleCopyShareUrl = useCallback(() => {
     const encoded = encodeLandscapeSharePayload(sharePayload);
-    const u = new URL(window.location.href);
-    u.searchParams.set('p', encoded);
-    const href = u.toString();
-    void navigator.clipboard.writeText(href).then(
+    const built = buildShareableResultsUrl(window.location.href, encoded);
+    if (!built.ok) {
+      alert(strings['landscape.share_url_too_long']);
+      return;
+    }
+    void navigator.clipboard.writeText(built.url).then(
       () => {
         alert(strings['landscape.share_copied']);
       },
       () => {
-        alert(href);
+        alert(built.url);
       }
     );
   }, [sharePayload, strings]);
