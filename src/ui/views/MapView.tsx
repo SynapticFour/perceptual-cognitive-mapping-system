@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { CognitiveModel } from '@/core/cognitive-pipeline';
 import { formatTraitLabel } from '@/core/traits/trait-mapping';
 import { TRAIT_DOMAIN_HEX, formatTraitDomainLabel, type TraitDomain } from '@/core/traits/trait-domains';
@@ -10,6 +10,18 @@ import { activationPositionJitter } from '@/lib/cognitive-map-projection';
 import { regionBoundaryPoints } from '@/lib/cognitive-regions';
 import { fieldReferenceGlyphRadiiPx } from '@/ui/views/field-glyphs';
 import { toPlotPx, VIEW_BOX, VIEW_INNER, VIEW_PAD } from '@/ui/views/map-layout';
+
+const VIEW_MIN = VIEW_BOX / 4;
+
+type ViewBoxState = { x: number; y: number; w: number; h: number };
+
+function clampViewBox(v: ViewBoxState): ViewBoxState {
+  const w = Math.min(VIEW_BOX, Math.max(VIEW_MIN, v.w));
+  const h = Math.min(VIEW_BOX, Math.max(VIEW_MIN, v.h));
+  const x = Math.min(Math.max(0, v.x), VIEW_BOX - w);
+  const y = Math.min(Math.max(0, v.y), VIEW_BOX - h);
+  return { x, y, w, h };
+}
 
 export interface MapViewProps {
   model: CognitiveModel;
@@ -54,6 +66,13 @@ function boundaryPathD(
 }
 
 export default function MapView({ model, strings, userAccentColor, patternHighlightTraitIds }: MapViewProps) {
+  const svgRef = useRef<SVGSVGElement | null>(null);
+  const [viewBox, setViewBox] = useState<ViewBoxState>({
+    x: 0,
+    y: 0,
+    w: VIEW_BOX,
+    h: VIEW_BOX,
+  });
   const [tip, setTip] = useState<TipState>(null);
   const [hoveredRegionId, setHoveredRegionId] = useState<string | null>(null);
   const centroidPx = toPlotPx(model.centroid.x, model.centroid.y);
@@ -101,10 +120,87 @@ export default function MapView({ model, strings, userAccentColor, patternHighli
     );
   }, [model.fingerprint, model.activations.length]);
 
+  const zoomBy = useCallback((scale: number, clientX: number, clientY: number) => {
+    setViewBox((prev) => {
+      const el = svgRef.current;
+      if (!el) return prev;
+      const rect = el.getBoundingClientRect();
+      const sx = clientX - rect.left;
+      const sy = clientY - rect.top;
+      const ux = prev.x + (sx / rect.width) * prev.w;
+      const uy = prev.y + (sy / rect.height) * prev.h;
+      const newW = Math.min(VIEW_BOX, Math.max(VIEW_MIN, prev.w * scale));
+      const newH = newW;
+      let nx = ux - (sx / rect.width) * newW;
+      let ny = uy - (sy / rect.height) * newH;
+      return clampViewBox({ x: nx, y: ny, w: newW, h: newH });
+    });
+  }, []);
+
+  useEffect(() => {
+    const el = svgRef.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const scale = e.deltaY < 0 ? 0.92 : 1 / 0.92;
+      zoomBy(scale, e.clientX, e.clientY);
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, [zoomBy]);
+
+  const viewBoxStr = `${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}`;
+
+  const tipPositionPct = (px: number, py: number) => ({
+    left: `${((px - viewBox.x) / viewBox.w) * 100}%`,
+    top: `${((py - viewBox.y) / viewBox.h) * 100}%`,
+  });
+
   return (
     <div className="relative w-full">
+      <div className="pointer-events-none absolute right-1 top-1 z-20 flex flex-col gap-0.5 sm:flex-row sm:items-center">
+        <button
+          type="button"
+          className="pointer-events-auto rounded border border-slate-200 bg-white/95 px-2 py-0.5 text-[10px] font-medium text-slate-700 shadow-sm hover:bg-slate-50"
+          onClick={() => {
+            const el = svgRef.current;
+            if (!el) return;
+            const r = el.getBoundingClientRect();
+            zoomBy(0.92, r.left + r.width / 2, r.top + r.height / 2);
+          }}
+          aria-label={strings['landscape.map_zoom_in']}
+          title={strings['landscape.map_zoom_in']}
+        >
+          +
+        </button>
+        <button
+          type="button"
+          className="pointer-events-auto rounded border border-slate-200 bg-white/95 px-2 py-0.5 text-[10px] font-medium text-slate-700 shadow-sm hover:bg-slate-50"
+          onClick={() => {
+            const el = svgRef.current;
+            if (!el) return;
+            const r = el.getBoundingClientRect();
+            zoomBy(1 / 0.92, r.left + r.width / 2, r.top + r.height / 2);
+          }}
+          aria-label={strings['landscape.map_zoom_out']}
+          title={strings['landscape.map_zoom_out']}
+        >
+          −
+        </button>
+        <button
+          type="button"
+          className="pointer-events-auto rounded border border-slate-200 bg-white/95 px-2 py-0.5 text-[10px] font-medium text-slate-700 shadow-sm hover:bg-slate-50"
+          onClick={() => setViewBox({ x: 0, y: 0, w: VIEW_BOX, h: VIEW_BOX })}
+          aria-label={strings['landscape.map_zoom_reset']}
+          title={strings['landscape.map_zoom_reset']}
+        >
+          ⟲
+        </button>
+      </div>
       <svg
-        viewBox={`0 0 ${VIEW_BOX} ${VIEW_BOX}`}
+        ref={svgRef}
+        viewBox={viewBoxStr}
+        preserveAspectRatio="xMidYMid meet"
         data-cognitive-map-export
         className="h-[min(22rem,calc(100vw-2.5rem))] w-full max-h-[28rem] touch-manipulation rounded-lg bg-gradient-to-b from-slate-50 to-indigo-50/40 shadow-inner ring-1 ring-slate-200/80"
         role="img"
@@ -291,13 +387,15 @@ export default function MapView({ model, strings, userAccentColor, patternHighli
       <p className="mt-1.5 px-1 text-center text-[10px] leading-snug text-slate-500">
         {strings['landscape.constellation_note']}
       </p>
+      <p className="mt-0.5 px-1 text-center text-[10px] leading-snug text-slate-400">
+        {strings['landscape.map_zoom_hint']}
+      </p>
 
       {tip?.kind === 'trait' ? (
         <div
           className="pointer-events-none absolute z-10 max-w-xs rounded-md border border-slate-200 bg-white/95 px-2.5 py-1.5 text-[11px] shadow-md"
           style={{
-            left: `${(tip.px / VIEW_BOX) * 100}%`,
-            top: `${(tip.py / VIEW_BOX) * 100}%`,
+            ...tipPositionPct(tip.px, tip.py),
             transform: 'translate(-50%, -120%)',
           }}
         >
@@ -316,8 +414,7 @@ export default function MapView({ model, strings, userAccentColor, patternHighli
         <div
           className="pointer-events-none absolute z-10 max-w-sm rounded-md border border-slate-200 bg-white/95 px-2.5 py-1.5 text-[11px] shadow-md"
           style={{
-            left: `${(tip.px / VIEW_BOX) * 100}%`,
-            top: `${(tip.py / VIEW_BOX) * 100}%`,
+            ...tipPositionPct(tip.px, tip.py),
             transform: 'translate(-50%, -108%)',
           }}
         >

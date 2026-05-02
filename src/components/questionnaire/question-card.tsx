@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { type AssessmentQuestion, type LikertResponse } from '@/data/questions';
 
 interface QuestionCardProps {
@@ -10,6 +11,11 @@ interface QuestionCardProps {
 }
 
 export default function QuestionCard({ question, onResponse, questionNumber, totalQuestions }: QuestionCardProps) {
+  const [choiceLocked, setChoiceLocked] = useState(false);
+  useEffect(() => {
+    setChoiceLocked(false);
+  }, [question.id]);
+
   const likertOptions: { value: LikertResponse; label: string; description: string }[] = [
     { value: 1, label: 'Strongly Disagree', description: 'This does not describe me at all' },
     { value: 2, label: 'Disagree', description: 'This rarely describes me' },
@@ -53,8 +59,14 @@ export default function QuestionCard({ question, onResponse, questionNumber, tot
         {likertOptions.map((option) => (
           <button
             key={option.value}
-            onClick={() => onResponse(option.value)}
-            className="w-full text-left p-4 rounded-lg border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group"
+            type="button"
+            disabled={choiceLocked}
+            onClick={() => {
+              if (choiceLocked) return;
+              setChoiceLocked(true);
+              onResponse(option.value);
+            }}
+            className="w-full text-left p-4 rounded-lg border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group disabled:pointer-events-none disabled:opacity-60"
           >
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">

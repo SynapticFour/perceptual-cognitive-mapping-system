@@ -182,15 +182,14 @@ describe('AdaptiveQuestionnaireEngine - Edge Cases', () => {
         });
       }).not.toThrow();
 
-      // Second submission should fail
-      expect(() => {
-        engine.submitResponse({
-          questionId: question!.id,
-          response: 4,
-          timestamp: new Date(),
-          responseTimeMs: 1000,
-        });
-      }).toThrow('Question already answered');
+      // Second submission is ignored (double-click / duplicate event)
+      const dup = engine.submitResponse({
+        questionId: question!.id,
+        response: 4,
+        timestamp: new Date(),
+        responseTimeMs: 1000,
+      });
+      expect(dup).toBe(false);
     });
 
     it('should handle rapid submissions gracefully', () => {

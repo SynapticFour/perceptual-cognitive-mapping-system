@@ -256,7 +256,11 @@ export class AdaptiveQuestionnaireEngine {
     return targetWeight * 2 + informationGain;
   }
 
-  submitResponse(response: QuestionResponse): void {
+  /**
+   * Records one answer for the current question. Returns false if this question was already
+   * submitted (e.g. double-click) so the UI can ignore the duplicate without treating it as an error.
+   */
+  submitResponse(response: QuestionResponse): boolean {
     if (!response.questionId || response.questionId.trim().length === 0) {
       throw new Error('Invalid question ID');
     }
@@ -275,7 +279,7 @@ export class AdaptiveQuestionnaireEngine {
       throw new Error('Invalid response time');
     }
     if (this.state.answeredQuestions.has(response.questionId)) {
-      throw new Error('Question already answered');
+      return false;
     }
     if (!this.state.currentQuestion || this.state.currentQuestion.id !== response.questionId) {
       throw new Error('Invalid response: question mismatch');
@@ -287,6 +291,7 @@ export class AdaptiveQuestionnaireEngine {
     if (this.shouldComplete()) {
       this.state.isComplete = true;
     }
+    return true;
   }
 
   private shouldComplete(): boolean {

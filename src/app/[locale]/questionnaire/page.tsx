@@ -229,7 +229,10 @@ export default function QuestionnairePage() {
       };
 
       try {
-        engine.submitResponse(questionResponse);
+        const applied = engine.submitResponse(questionResponse);
+        if (!applied) {
+          return;
+        }
         setRenderTick((n) => n + 1);
         const nextQuestion = engine.selectNextQuestion();
 

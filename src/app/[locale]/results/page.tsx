@@ -33,6 +33,7 @@ import { encodeProfileVectorCode } from '@/lib/sms-export';
 import { computeEarlySupportSignals } from '@/cohort';
 import { buildCognitiveModel } from '@/core/cognitive-pipeline';
 import SupportInsightsSection from '@/components/cohort/SupportInsightsSection';
+import { isSupabaseConfigured } from '@/lib/supabase';
 
 const PIPELINE_STORAGE_KEY = 'pcms-pipeline-result';
 
@@ -468,9 +469,15 @@ export default function ResultsPage() {
                 <div className="text-sm text-gray-600">{ui['results.research_embedding_confidence']}</div>
               </div>
             </div>
-            <div className="rounded-lg bg-blue-50 p-4">
-              <p className="text-sm text-blue-800">{ui['results.research_consent_note']}</p>
-            </div>
+            {isSupabaseConfigured() ? (
+              <div className="rounded-lg bg-blue-50 p-4">
+                <p className="text-sm text-blue-800">{ui['results.research_consent_note']}</p>
+              </div>
+            ) : (
+              <div className="rounded-lg bg-slate-50 p-4">
+                <p className="text-sm text-slate-700">{ui['results.research_consent_local_only']}</p>
+              </div>
+            )}
           </div>
         </section>
 
