@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useLocale } from 'next-intl';
 import { Link, useRouter } from '@/i18n/navigation';
 import type { StoredPipelineSession } from '@/types/pipeline-session';
 import type { CognitiveProfilePublic } from '@/types/profile-public';
@@ -34,6 +35,8 @@ import { computeEarlySupportSignals } from '@/cohort';
 import { buildCognitiveModel } from '@/core/cognitive-pipeline';
 import SupportInsightsSection from '@/components/cohort/SupportInsightsSection';
 import { isSupabaseConfigured } from '@/lib/supabase';
+import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
+import { seedConsentIfSkipMode } from '@/lib/ethics-flow-config';
 
 const PIPELINE_STORAGE_KEY = 'pcms-pipeline-result';
 
@@ -51,6 +54,7 @@ function publicProfileFromShare(payload: LandscapeSharePayload, ui: UiStrings): 
 
 export default function ResultsPage() {
   const router = useRouter();
+  const locale = useLocale();
   const ui = useUiStrings();
   const [session, setSession] = useState<StoredPipelineSession | null>(null);
   const [urlShare, setUrlShare] = useState<LandscapeSharePayload | null>(null);
@@ -63,6 +67,12 @@ export default function ResultsPage() {
     let cancelled = false;
 
     const run = async () => {
+      if (seedConsentIfSkipMode(locale)) {
+        appendEthicsAuditEvent({
+          type: 'consent_flow_completed',
+          meta: { consentVersion: '2.0', consentMode: 'skip', source: 'results_gate' },
+        });
+      }
       const consent = localStorage.getItem('pcms-consent-timestamp');
       if (!consent) {
         router.push('/consent');
@@ -113,7 +123,7 @@ export default function ResultsPage() {
     return () => {
       cancelled = true;
     };
-  }, [router]);
+  }, [router, locale]);
 
   useEffect(() => {
     if (loading) return;

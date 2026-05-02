@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { useLocale } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import {
   AdaptiveQuestionnaireEngine,
@@ -27,9 +28,12 @@ import { tagCoverageFromScoringResult } from '@/scoring';
 import QuestionCard from '@/components/questionnaire/question-card';
 import ProgressIndicator from '@/components/questionnaire/progress-indicator';
 import LiveRefinementConfidence from '@/components/questionnaire/live-refinement-confidence';
+import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
+import { seedConsentIfSkipMode } from '@/lib/ethics-flow-config';
 
 export default function QuestionnairePage() {
   const router = useRouter();
+  const locale = useLocale();
   const ui = useUiStrings();
   const uiRef = useRef(ui);
   uiRef.current = ui;
@@ -152,12 +156,18 @@ export default function QuestionnairePage() {
   }, [router]);
 
   useEffect(() => {
+    if (seedConsentIfSkipMode(locale)) {
+      appendEthicsAuditEvent({
+        type: 'consent_flow_completed',
+        meta: { consentVersion: '2.0', consentMode: 'skip', source: 'questionnaire_gate' },
+      });
+    }
     const consent = localStorage.getItem('pcms-consent-timestamp');
     if (!consent) {
       router.push('/consent');
       return;
     }
-  }, [router]);
+  }, [router, locale]);
 
   const persistPipelineAndNavigate = useCallback(
     async (eng: AdaptiveQuestionnaireEngine, finalState: ReturnType<AdaptiveQuestionnaireEngine['getState']>) => {

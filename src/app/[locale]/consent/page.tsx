@@ -1,25 +1,54 @@
 'use client';
 
-import { useMemo, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useEffect, useMemo, useState } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { ROUTING_WEIGHT_KEYS, type RoutingWeightKey } from '@/adaptive/routing-tags';
 import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
-
-const STEP_IDS = ['research', 'measured', 'limits', 'privacy', 'rights', 'ghana'] as const;
-type StepId = (typeof STEP_IDS)[number];
+import {
+  buildConsentSteps,
+  getConsentRuntimeMode,
+  type ConsentStepId,
+  writePcmsConsentLocalStorage,
+} from '@/lib/ethics-flow-config';
 
 export default function ConsentPage() {
   const router = useRouter();
+  const locale = useLocale();
   const t = useTranslations('ethics_consent');
   const tDims = useTranslations('dims');
+  const runtimeMode = getConsentRuntimeMode();
+
+  const steps = useMemo(
+    () => buildConsentSteps({ mode: runtimeMode === 'qa_all_steps' ? 'qa_all_steps' : 'default', locale }),
+    [runtimeMode, locale]
+  );
+
   const [step, setStep] = useState(0);
   const [confirmed, setConfirmed] = useState(false);
 
-  const total = STEP_IDS.length;
-  const stepId = STEP_IDS[step];
+  const total = steps.length;
+  const stepId = steps[step] ?? steps[0];
 
   const dimKeys = useMemo(() => [...ROUTING_WEIGHT_KEYS] as RoutingWeightKey[], []);
+
+  useEffect(() => {
+    if (runtimeMode !== 'skip') return;
+    appendEthicsAuditEvent({
+      type: 'consent_flow_completed',
+      meta: { consentVersion: '2.0', consentMode: 'skip', stepsConfirmed: steps },
+    });
+    writePcmsConsentLocalStorage(steps, { consentMode: 'skip' });
+    router.replace('/questionnaire');
+  }, [runtimeMode, router, steps]);
+
+  if (runtimeMode === 'skip') {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
+        <p className="text-center text-slate-600">{t('skip_redirect')}</p>
+      </div>
+    );
+  }
 
   const goNext = () => {
     if (!confirmed) return;
@@ -28,33 +57,59 @@ export default function ConsentPage() {
     if (step < total - 1) {
       setStep(step + 1);
     } else {
-      finishConsent([...STEP_IDS]);
+      finishConsent([...steps]);
     }
   };
 
-  const finishConsent = (steps: StepId[]) => {
+  const finishConsent = (confirmedSteps: ConsentStepId[]) => {
     appendEthicsAuditEvent({
       type: 'consent_flow_completed',
-      meta: { stepsConfirmed: steps, consentVersion: '2.0' },
+      meta: { stepsConfirmed: confirmedSteps, consentVersion: '2.0' },
     });
-    const ts = new Date().toISOString();
-    localStorage.setItem('pcms-consent-timestamp', ts);
-    localStorage.setItem(
-      'pcms-consent-details',
-      JSON.stringify({
-        version: '2.0',
-        timestamp: ts,
-        stepsConfirmed: steps,
-        ageConfirmation: true,
-        voluntaryParticipation: true,
-        dataUseAgreement: true,
-      })
-    );
+    writePcmsConsentLocalStorage(confirmedSteps);
     router.push('/questionnaire');
   };
 
-  const sectionBody = () => {
-    switch (stepId) {
+  const sectionBody = (id: ConsentStepId) => {
+    switch (id) {
+      case 'streamlined_core':
+        return (
+          <div className="space-y-8 text-slate-700">
+            <section>
+              <h2 className="text-lg font-semibold text-slate-900">{t('research_title')}</h2>
+              <p className="mt-2">{t('research_body')}</p>
+            </section>
+            <section>
+              <h2 className="text-lg font-semibold text-slate-900">{t('measured_title')}</h2>
+              <p className="mt-2">{t('measured_intro')}</p>
+              <ul className="mt-4 space-y-3 border-t border-slate-200 pt-4">
+                {dimKeys.map((dim) => (
+                  <li key={dim} className="rounded-lg bg-slate-50 p-3">
+                    <p className="font-semibold text-slate-900">{tDims(`${dim}.title`)}</p>
+                    <p className="mt-1 text-sm">{tDims(`${dim}.description`)}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </div>
+        );
+      case 'streamlined_safeguards':
+        return (
+          <div className="space-y-8 text-slate-700">
+            <section>
+              <h2 className="text-base font-semibold text-slate-900">{t('limits_title')}</h2>
+              <p className="mt-2">{t('limits_body')}</p>
+            </section>
+            <section>
+              <h2 className="text-base font-semibold text-slate-900">{t('privacy_title')}</h2>
+              <p className="mt-2">{t('privacy_body')}</p>
+            </section>
+            <section>
+              <h2 className="text-base font-semibold text-slate-900">{t('rights_title')}</h2>
+              <p className="mt-2">{t('rights_body')}</p>
+            </section>
+          </div>
+        );
       case 'research':
         return (
           <div className="space-y-3 text-slate-700">
@@ -88,8 +143,12 @@ export default function ConsentPage() {
     }
   };
 
-  const titleForStep = () => {
-    switch (stepId) {
+  const titleForStep = (id: ConsentStepId) => {
+    switch (id) {
+      case 'streamlined_core':
+        return t('streamlined_bundle_title');
+      case 'streamlined_safeguards':
+        return t('streamlined_safeguards_title');
       case 'research':
         return t('research_title');
       case 'measured':
@@ -110,12 +169,17 @@ export default function ConsentPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white px-4 py-10">
       <div className="mx-auto max-w-2xl">
+        {runtimeMode === 'qa_all_steps' ? (
+          <p className="mb-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-center text-sm text-amber-900">
+            {t('qa_mode_banner')}
+          </p>
+        ) : null}
         <p className="mb-2 text-center text-sm font-medium text-slate-500">
           {t('progress', { n: step + 1, total })}
         </p>
-        <h1 className="mb-6 text-center text-2xl font-bold text-slate-900 sm:text-3xl">{titleForStep()}</h1>
+        <h1 className="mb-6 text-center text-2xl font-bold text-slate-900 sm:text-3xl">{titleForStep(stepId)}</h1>
 
-        <div className="mb-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">{sectionBody()}</div>
+        <div className="mb-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">{sectionBody(stepId)}</div>
 
         <label className="mb-6 flex cursor-pointer items-start gap-3 rounded-lg border border-slate-200 bg-amber-50/80 p-4">
           <input

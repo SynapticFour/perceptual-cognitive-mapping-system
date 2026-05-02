@@ -2,10 +2,13 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { getConsentRuntimeMode } from '@/lib/ethics-flow-config';
 
 export default function LandingPage() {
   const tWelcome = useTranslations('welcome');
   const tLanding = useTranslations('landing');
+  const consentMode = getConsentRuntimeMode();
+  const primaryHref = consentMode === 'skip' ? '/questionnaire' : '/consent';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
@@ -16,7 +19,7 @@ export default function LandingPage() {
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
-            href="/consent"
+            href={primaryHref}
             className="inline-block w-full rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:from-blue-700 hover:to-purple-700 sm:w-auto"
           >
             {tLanding('cta_consent')}
