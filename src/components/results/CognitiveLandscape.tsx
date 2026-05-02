@@ -132,7 +132,7 @@ export default function CognitiveLandscape({
         strings,
         extraPoints: mapExtraPoints,
       }),
-    [confidenceComponents, display, embeddingDimension, embeddingVector, mapExtraPoints, strings]
+    [confidenceComponents, display, embeddingDimension, embeddingVector, mapExtraPoints]
   );
 
   const lastRecordedFingerprintRef = useRef<string | null>(null);

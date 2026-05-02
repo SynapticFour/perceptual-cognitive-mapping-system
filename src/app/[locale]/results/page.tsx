@@ -35,6 +35,7 @@ import DeleteMyDataButton from '@/components/ethics/DeleteMyDataButton';
 import { encodeProfileVectorCode } from '@/lib/sms-export';
 import { computeEarlySupportSignals } from '@/cohort';
 import { buildCognitiveModel } from '@/core/cognitive-pipeline';
+import { defaultUiStrings } from '@/lib/ui-strings';
 import SupportInsightsSection from '@/components/cohort/SupportInsightsSection';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
@@ -192,9 +193,9 @@ export default function ResultsPage() {
       embeddingDimension: session.embedding.dimension,
       display,
       confidenceComponents,
-      strings: ui,
+      strings: defaultUiStrings,
     });
-  }, [session, display, confidenceComponents, ui]);
+  }, [session, display, confidenceComponents]);
 
   const supportSignals = useMemo(() => {
     if (!cognitiveModelForSupport) return [];

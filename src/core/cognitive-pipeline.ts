@@ -44,6 +44,18 @@ export type CognitiveMapExtraPoint = CognitiveExtraPoint;
 const SYNTHETIC_COUNT_DEFAULT = 300;
 const SYNTHETIC_NOISE = 0.1;
 const DENSITY_CELL = 6;
+
+/** Deterministic archetype rows per embedding width — avoids recomputing on every results render. */
+const ARCHETYPE_LATENT_ROWS_CACHE = new Map<number, number[][]>();
+
+function getArchetypeLatentRows(dim: number): number[][] {
+  let rows = ARCHETYPE_LATENT_ROWS_CACHE.get(dim);
+  if (!rows) {
+    rows = COGNITIVE_ARCHETYPES.map((a) => projectCognitiveVectorToLatentSpace(a.vector, dim));
+    ARCHETYPE_LATENT_ROWS_CACHE.set(dim, rows);
+  }
+  return rows;
+}
 /** Lower radius preserves multiple density peaks (avoids one merged mountain). */
 const SMOOTH_RADIUS = 1;
 
@@ -273,7 +285,7 @@ export function buildCognitiveModel(input: BuildCognitiveModelInput): CognitiveM
   const activationRows = activations.map((a) => a.vector);
   const k = activationRows.length;
 
-  const refRows = COGNITIVE_ARCHETYPES.map((a) => projectCognitiveVectorToLatentSpace(a.vector, dim));
+  const refRows = getArchetypeLatentRows(dim);
   const extraRows = extraPoints.map((e) => alignVectorToDim(e.vector, dim));
 
   const seedRow = new Array(dim).fill(0);
