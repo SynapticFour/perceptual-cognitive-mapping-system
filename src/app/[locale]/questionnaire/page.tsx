@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { Suspense, useState, useEffect, useCallback, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
@@ -41,7 +41,19 @@ import { Link } from '@/i18n/navigation';
 import QuestionnaireOfflineTools from '@/components/questionnaire/QuestionnaireOfflineTools';
 import { resolveQuestionDisplayText } from '@/lib/resolve-question-display-text';
 
-export default function QuestionnairePage() {
+function QuestionnaireSuspenseFallback() {
+  const t = useTranslations('questionnaire');
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="text-center">
+        <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-b-2 border-blue-600" />
+        <p className="text-gray-600">{t('loading')}</p>
+      </div>
+    </div>
+  );
+}
+
+function QuestionnairePageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const questionnaireSearchKey = searchParams?.toString() ?? '';
@@ -482,5 +494,13 @@ export default function QuestionnairePage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function QuestionnairePage() {
+  return (
+    <Suspense fallback={<QuestionnaireSuspenseFallback />}>
+      <QuestionnairePageContent />
+    </Suspense>
   );
 }
