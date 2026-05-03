@@ -438,7 +438,7 @@
     "age_body": "War nga am 18 at walla ci kaw ngir jëf. Su fekk du nga 18, laaj sa waajur walla kenn ci sa kër ngir wax ak yaw.",
     "checkbox_intro": "Ma xam te ma nangu:",
     "checkbox_body": "Ma am 18 at walla ci kaw. Ma jàng te ma xam li lépp ci kaw. Ma bëgg a jëf ci seetlu gi ci sama bopp. Ma xam ne mën naa lekk ci biir benn saat. Ma xam ne sa tontu dinañu denc ci sirri te ñu jëfandikoo ko rekk ci seetlu.",
-    "footer_contact": "Laaj? Ñu la joxe: research@pcms.example",
+    "footer_contact": "Laaj? Ñu la joxe: contact@synapticfour.com",
     "footer_ethics": "Seetlu bi toll ci yoon yu etik ci seetlu ak nit."
   },
   "post_consent": {
@@ -500,6 +500,8 @@
     "qa_mode_banner": "QA: dëggal bu yépp ci ay tànki wuute. Ngir yoon bu gëna gaaw, def NEXT_PUBLIC_PCMS_CONSENT_MODE=default.",
     "skip_redirect": "Dëggal bi di ko dindi (mod test)…",
     "storage_notice": "Dalub bi dafay denc xibaar ci séans ci sa navigatëur bi te, su nga may koo, ci sirri ci serëër bu seetlu. CI lammiñ yii amul benn xibaar bu ñu mën a wax mo nga ci tur walla i-meel.",
+    "storage_notice_local": "Xibaar ci séans bi dinañu denc ci sa navigatëur bi. CI lammiñ yii amul tur, i-meel, walla adrësi postal.",
+    "storage_notice_cloud_extra": "Ci dalub bii mën na am cloud: su nga kontine, mën nañu yeb ay résumé bu sirri ci database bu seetlu bi ñu lajj (xool Sutura). Su cloud amul, amul benn yeb bu dem ci sa aparëy soo boole nga jëf export walla partaas.",
     "research_title": "Lan mooy sistem bi",
     "research_body": "Lii mooy lammiñ yu seetlu yu du dawtal. Dafay lim yoon yu ne ci sa bopp ci yoon yu toll ngir xam yoon yu wuute ci xalaat. Du dawtal te du jox ndigal walla jëf.",
     "measured_title": "Lan lañu lim",

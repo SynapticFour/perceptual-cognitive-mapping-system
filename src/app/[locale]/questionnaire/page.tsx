@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import {
@@ -42,6 +43,8 @@ import { resolveQuestionDisplayText } from '@/lib/resolve-question-display-text'
 
 export default function QuestionnairePage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const questionnaireSearchKey = searchParams?.toString() ?? '';
   const locale = useLocale();
   const tQ = useTranslations('questionnaire');
   const ui = useUiStrings();
@@ -79,6 +82,7 @@ export default function QuestionnairePage() {
         const eng = new AdaptiveQuestionnaireEngine();
 
         if (mode === 'refinement') {
+          setResumeError(null);
           const storedSid = localStorage.getItem('pcms-session-id');
           if (sessionQ && storedSid && sessionQ !== storedSid) {
             setResumeError(uiRef.current['questionnaire.session_mismatch']);
@@ -94,25 +98,29 @@ export default function QuestionnairePage() {
           persistAsRefinementRound.current = true;
 
           const rawPipe = localStorage.getItem('pcms-pipeline-result');
-          let belowThreshold: RoutingWeightKey[] | undefined;
+          let belowFromPipe: RoutingWeightKey[] = [];
           if (rawPipe) {
             try {
               const parsed = parseStoredPipelineSession(JSON.parse(rawPipe));
               if (parsed) {
-                const below = dimensionsBelowConfidenceThreshold(parsed.scoringResult.confidenceComponents);
-                belowThreshold = below.length > 0 ? below : undefined;
+                belowFromPipe = dimensionsBelowConfidenceThreshold(parsed.scoringResult.confidenceComponents);
               }
             } catch {
               /* ignore */
             }
           }
 
-          eng.resumeFrom(history, belowThreshold);
-          const focus = eng.getRefinementFocusDimensions();
           const scoringFromHistory = buildScoringResultFromHistory(
             history,
             eng.getState().culturalContext
           );
+          const belowLive = dimensionsBelowConfidenceThreshold(scoringFromHistory.confidenceComponents);
+          const mergedBelow: RoutingWeightKey[] = [...new Set([...belowFromPipe, ...belowLive])];
+          const belowThreshold: RoutingWeightKey[] | undefined =
+            mergedBelow.length > 0 ? mergedBelow : undefined;
+
+          eng.resumeFrom(history, belowThreshold);
+          const focus = eng.getRefinementFocusDimensions();
           const fallbackBelow = dimensionsBelowConfidenceThreshold(scoringFromHistory.confidenceComponents);
           const progressDims: RoutingWeightKey[] =
             focus && focus.length > 0
@@ -166,7 +174,7 @@ export default function QuestionnairePage() {
     return () => {
       cancelled = true;
     };
-  }, [router]);
+  }, [router, questionnaireSearchKey]);
 
   useEffect(() => {
     if (seedConsentIfSkipMode(locale)) {

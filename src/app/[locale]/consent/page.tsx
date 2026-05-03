@@ -11,6 +11,7 @@ import {
   type ConsentStepId,
   writePcmsConsentLocalStorage,
 } from '@/lib/ethics-flow-config';
+import { isSupabaseConfigured } from '@/lib/supabase';
 
 export default function ConsentPage() {
   const router = useRouter();
@@ -178,7 +179,8 @@ export default function ConsentPage() {
           </p>
         ) : null}
         <p className="mb-4 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-center text-sm text-slate-700">
-          {t('storage_notice')}
+          {t('storage_notice_local')}
+          {isSupabaseConfigured() ? <> {t('storage_notice_cloud_extra')}</> : null}
         </p>
         <p className="mb-2 text-center text-sm font-medium text-slate-500">
           {t('progress', { n: step + 1, total })}

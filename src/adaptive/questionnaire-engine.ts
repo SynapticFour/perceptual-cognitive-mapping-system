@@ -217,13 +217,44 @@ export class AdaptiveQuestionnaireEngine {
 
   private selectRefinementQuestion(): AssessmentQuestion | null {
     const coverage = this.routingCoverage();
-    const pool = this.refinementFocusTags ?? ROUTING_WEIGHT_KEYS;
+    const threshold = this.config.confidenceThreshold;
+
+    /**
+     * When refinement is restricted to {@link refinementFocusTags}, a single “best” tag can still
+     * have no unanswered items left. Previously we returned null and the session exited refinement
+     * immediately — felt like “Continue assessment” did nothing. Try other low-coverage tags in the
+     * pool, then any remaining refinement item.
+     */
+    if (this.refinementFocusTags && this.refinementFocusTags.length > 0) {
+      const pool = this.refinementFocusTags;
+      const below = [...pool].filter((t) => coverage[t] < threshold).sort((a, b) => coverage[a] - coverage[b]);
+      const tryOrder = below.length > 0 ? below : [...pool].sort((a, b) => coverage[a] - coverage[b]);
+
+      for (const targetTag of tryOrder) {
+        const refinementQuestions = getQuestionsForDimensions(
+          [targetTag],
+          'refinement',
+          Array.from(this.state.answeredQuestions)
+        );
+        const available = refinementQuestions.filter((q) => !this.state.answeredQuestions.has(q.id));
+        if (available.length === 0) continue;
+        const scoredQuestions = available.map((q) => ({
+          question: q,
+          score: this.calculateRefinementQuestionScore(q, targetTag),
+        }));
+        scoredQuestions.sort((a, b) => b.score - a.score);
+        return scoredQuestions[0]!.question;
+      }
+
+      const refinementQuestions = getAssessmentQuestions('refinement', this.state.culturalContext);
+      const available = refinementQuestions.filter((q) => !this.state.answeredQuestions.has(q.id));
+      return available.length > 0 ? available[0]! : null;
+    }
+
+    const pool = ROUTING_WEIGHT_KEYS;
     const targetTag = this.coverageModel.getNextTargetTag(coverage, pool);
 
     if (!targetTag) {
-      if (this.refinementFocusTags) {
-        return null;
-      }
       const refinementQuestions = getAssessmentQuestions('refinement', this.state.culturalContext);
       const available = refinementQuestions.filter((q) => !this.state.answeredQuestions.has(q.id));
       return available.length > 0 ? available[0]! : null;
