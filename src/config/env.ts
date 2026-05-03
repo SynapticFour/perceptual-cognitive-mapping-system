@@ -32,3 +32,13 @@ export function getPublicAppUrl(): string | undefined {
 export function showOperatorSyncDiagnostic(): boolean {
   return readPublic('NEXT_PUBLIC_PCMS_SHOW_OPERATOR_SYNC_DIAGNOSTIC') === '1';
 }
+
+/** When `true`, shows a validation-status banner on `/research/*` linking to docs/VALIDATION_PROTOCOL.md. */
+export function showValidationStatusBanner(): boolean {
+  return readPublic('NEXT_PUBLIC_SHOW_VALIDATION_STATUS') === 'true';
+}
+
+/** When `true`, enables the optional facilitator observation cards on the results page. */
+export function isFacilitatorViewEnabled(): boolean {
+  return readPublic('NEXT_PUBLIC_ENABLE_FACILITATOR_VIEW') === 'true';
+}

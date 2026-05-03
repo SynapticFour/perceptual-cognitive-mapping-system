@@ -481,7 +481,7 @@
   },
   "welcome": {
     "title": "Wie arbeitet dein Geist?",
-    "subtitle": "Ein Forschungswerkzeug, das deinen Denkstil als kontinuierliches Profil abbildet — keine Diagnose, kein Label. Nur dein Muster."
+    "subtitle": "Ein Forschungswerkzeug, das deinen Denkstil als durchgehendes Profil abbildet — verständliche Muster zur Selbstreflexion und für Forschung."
   },
   "consent": {
     "title": "Einwilligung in die Forschungsteilnahme",
@@ -502,7 +502,7 @@
     "privacy_research_label": "Nur Forschung:",
     "privacy_research_body": "Daten werden nur zur Untersuchung von Denkmustern verwendet",
     "important_heading": "Wichtige Hinweise",
-    "important_medical": "Dies ist KEIN medizinischer Test. Das Instrument dient der Selbsterkenntnis und der Forschung. Es kann keine Erkrankungen diagnostizieren oder behandeln.",
+    "important_medical": "Dieses Instrument hilft dir, deine typischen Denk- und Verarbeitungsweisen kennenzulernen, und unterstützt Forschung. Es beschreibt Neigungen auf kontinuierlichen Skalen — es bewertet weder Gesundheit noch Eignung für einen bestimmten Zweck.",
     "important_help": "Bei psychischen Problemen wenden Sie sich bitte an Ärztinnen, Therapeutinnen oder andere qualifizierte Fachpersonen.",
     "helps_heading": "Wozu Ihre Daten beitragen",
     "helps_body": "Ihre anonymen Antworten — zusammen mit vielen anderen — helfen Forschenden zu verstehen, wie unterschiedlich Menschen denken. Ergebnisse können in wissenschaftlichen Publikationen erscheinen, um Lehrende, Forschende und die Öffentlichkeit zu informieren.",
@@ -514,16 +514,16 @@
     "footer_ethics": "Die Studie orientiert sich an ethischen Grundsätzen für die Forschung am Menschen."
   },
   "post_consent": {
-    "hero_subtitle": "Erkunden Sie, wie Sie typischerweise denken und lernen — beschreibend, nicht diagnostisch",
+    "hero_subtitle": "Erkunden Sie, wie Sie typischerweise denken und lernen — beschreibende Profile auf kontinuierlichen Dimensionen",
     "card_evidence_title": "Evidenzbasiert",
-    "card_evidence_body": "Stützt sich auf Kognitionsforschung und Dimensionsmodelle — kein medizinischer Test",
+    "card_evidence_body": "Fundiert in Kognitionswissenschaft und Dimensionsmodellen für beschreibende Selbstangaben",
     "card_adaptive_title": "Adaptive Bewertung",
     "card_adaptive_body": "Fragen passen sich Ihren Antworten an für passendere Einblicke",
     "card_insights_title": "Personalisierte Einblicke",
     "card_insights_body": "Alltagstaugliche Ideen, die zu Ihrem Stil passen könnten — Vorschläge, keine Vorschriften",
     "diff_heading": "Was dies unterscheidet",
     "diff_traditional_heading": "Traditionelle Ansätze",
-    "diff_traditional_1": "Kategorische Etiketten und Diagnosen",
+    "diff_traditional_1": "Menschen in feste klinikähnliche Schubladen sortieren",
     "diff_traditional_2": "Einheitsbewertungen für alle",
     "diff_traditional_3": "Stigma und festgefahrene Selbstbilder",
     "diff_ours_heading": "Unser Ansatz",
@@ -595,20 +595,20 @@
     "step4_k2": "Freiwillige Teilnahme",
     "step4_k3": "Recht auf Datenlöschung",
     "step5_title": "Wichtige Grenzen",
-    "step5_p1": "Dies ist KEIN medizinisches oder diagnostisches Instrument.",
+    "step5_p1": "Dieses Werkzeug beschreibt, wie du typischerweise denkst und reagierst — es bewertet weder Gesundheit noch Eignung für einen bestimmten Zweck.",
     "step5_p2": "Ergebnisse beschreiben Tendenzen, keine endgültigen Eigenschaften.",
     "step5_p3": "Individuelle Unterschiede sind normal und erwartbar.",
     "step5_p4": "Bei gesundheitlichen Bedenken wenden Sie sich bitte an Fachpersonen.",
-    "step5_k1": "Nicht zur Diagnose",
+    "step5_k1": "Neigungen für Reflexion und Forschung",
     "step5_k2": "Wahrscheinlichkeitsbasierte Ergebnisse",
     "step5_k3": "Gesundheit: Fachpersonen konsultieren"
   },
   "landing": {
     "lead": "Etwa 10–15 Minuten · Keine Registrierung · Bitte lies die kurze Einwilligung, bevor du startest.",
-    "not_heading": "Was das nicht ist",
-    "not_1": "🚫 Kein Autismus-Test",
-    "not_2": "🚫 Kein Medizinprodukt",
-    "not_3": "🚫 Keine Diagnose",
+    "diff_heading": "Worin sich das von klinischen Instrumenten unterscheidet",
+    "diff_1": "Neigungen werden auf einem kontinuierlichen Spektrum abgebildet — Muster, keine Kategorien.",
+    "diff_2": "Profil in Alltagssprache: keine Etiketten, keine Einzelnote, kein Bestehen oder Nichtbestehen.",
+    "diff_3": "Für Selbstverständnis und Forschung — nicht dafür, Menschen in Organisationen zu vergleichen oder auszuwählen.",
     "get_heading": "Was du bekommst",
     "get_1": "🗺️ Eine mehrdimensionale Karte deines Denkstils",
     "get_2": "🔒 Anonym, privat, keine Registrierung",
@@ -619,7 +619,7 @@
   "results_interpretation": {
     "heading": "Was bedeutet das?",
     "para1": "Dein Profil zeigt, wie du Fokus, Musterwahrnehmung, sensorische Sensitivität, soziale Energie, Strukturpräferenz und kognitive Flexibilität gewichtest. Diese Dimensionen sind bei jedem Menschen einzigartig kombiniert.",
-    "para2": "Diese Muster überschneiden sich in der Forschung häufig mit Konzepten wie Neurodiversität, Hochsensibilität oder Autismus-Spektrum — aber sie sind weder gleichzusetzen noch diagnostisch verwertbar. Wenn du mehr über den Forschungshintergrund erfahren möchtest: <research>Forschungsnotiz zu PCMS auf Synaptic Four</research>.",
+    "para2": "In der Forschungsliteratur tauchen ähnliche Profile oft bei breiten Themen kognitiver Vielfalt und unterschiedlicher Alltagsverarbeitung auf — dein Abbild hier bleibt eine rein dimensionale Beschreibung und ist mit keinem einzelnen Forschungsthema eins zu eins gleichzusetzen. Mehr zum Forschungsrahmen: <research>Forschungsnotiz zu PCMS auf Synaptic Four</research>.",
     "strengths_heading": "Stärken-Korrelate",
     "strengths_sub": "Deine drei höchsten Werte unter den sechs Kern-Dimensionen — beschreibende Stärken, kein Urteil.",
     "strength_F": "Tiefe Konzentration, Detail-Präzision",
@@ -646,9 +646,9 @@
     "research_title": "Was dieses System ist",
     "research_body": "Dies ist ein nicht-klinischer Forschungsfragebogen. Er erfasst selbstberichtete Tendenzen auf kontinuierlichen Dimensionen. Es handelt sich nicht um eine klinische Leistung; es gibt keine Behandlung oder medizinische Beratung.",
     "measured_title": "Was gemessen wird",
-    "measured_intro": "Der Fragebogen erfragt Präferenzen und typische Verhaltensweisen. Zehn Dimensionen fassen Muster zusammen (z. B. Fokus, sensorische Empfindlichkeit oder Planungsstil). Jeder Wert ist eine Tendenz auf einer Skala — keine Leistungsnote und kein medizinisches Etikett.",
-    "limits_title": "Was nicht gemessen wird",
-    "limits_body": "Dieses Werkzeug misst keinen IQ, stellt keine medizinische oder psychiatrische Diagnose und bewertet Menschen nicht als gut oder schlecht. Es gibt kein Bestehen oder Nichtbestehen. Bei gesundheitlichen Fragen wenden Sie sich an Fachpersonen.",
+    "measured_intro": "Der Fragebogen erfragt Präferenzen und typische Verhaltensweisen. Zehn Dimensionen fassen Muster zusammen (z. B. Fokus, sensorische Empfindlichkeit oder Planungsstil). Jeder Wert ist eine Tendenz auf einer Skala — beschreibend, ohne Gesamtfähigkeit zu benoten.",
+    "limits_title": "Was der Fragebogen erfasst — und was außerhalb liegt",
+    "limits_body": "Der Fragebogen erfasst selbstberichtete Neigungen auf den oben genannten Dimensionen. Er ist nicht dafür angelegt, IQ, Gesamtfähigkeit oder Eignung für Schule, Arbeit oder Versorgung zu bewerten. Es gibt kein Bestehen oder Nichtbestehen. Bei gesundheitlichen Fragen wenden Sie sich an Fachpersonen.",
     "privacy_title": "Was gespeichert wird",
     "privacy_body": "Synaptic Four (Stuttgart) speichert eine anonyme Sitzungskennung, Zeitstempel, Ihre Antworten, Reaktionszeiten und abgeleitete statistische Zusammenfassungen für die Forschung. In diesem Ablauf erfassen wir keinen Namen, keine E-Mail und keine Postadresse, es sei denn, Sie kontaktieren uns separat (dann besteht ein eigenes Verarbeitungsverhältnis). Ausführliche Datenschutzhinweise: Verknüpfung „Datenschutz“ unten bzw. /privacy.",
     "privacy_body_local": "Synaptic Four (Stuttgart) nutzt eine anonyme Sitzungskennung, Zeitstempel, Ihre Antworten, Reaktionszeiten und abgeleitete statistische Zusammenfassungen für dieses Instrument. Standardmäßig verbleiben diese Daten in diesem Browser für Ihre Sitzung. In diesem Ablauf erfassen wir keinen Namen, keine E-Mail und keine Postadresse, es sei denn, Sie kontaktieren uns separat (dann besteht ein eigenes Verarbeitungsverhältnis).",
@@ -670,15 +670,15 @@
     "use_research": "Teilnahme an Forschung",
     "use_education": "Lehre / Bildung",
     "use_other": "Sonstiges",
-    "chk_nondiagnostic": "Ich verstehe, dass diese Ergebnisse keine Diagnose und kein medizinischer Test sind.",
-    "chk_research": "Ich verstehe, dass dieses Instrument der Forschung und Selbstreflexion dient — nicht der klinischen Versorgung.",
+    "chk_nondiagnostic": "Ich verstehe, dass diese Ergebnisse Neigungen für Reflexion und Forschung beschreiben — sie bewerten weder meine Gesundheit noch meine Eignung für einen bestimmten Zweck.",
+    "chk_research": "Ich verstehe, dass dieses Instrument Selbstreflexion und Forschungsteilnahme unterstützt — nicht Behandlungs- oder Platzierungsentscheidungen.",
     "submit": "Ergebnisse anzeigen",
     "error_incomplete": "Bitte alle Felder ausfüllen und beide Bestätigungen ankreuzen."
   },
   "ethics_results": {
     "banner_title": "Wichtige Grenzen",
-    "non_medical": "Dies ist kein medizinischer Test.",
-    "non_diagnosis": "Diese Ergebnisse sind keine Diagnose.",
+    "non_medical": "Dein Profil fasst selbstberichtete Neigungen auf den Fragebogen-Dimensionen zusammen.",
+    "non_diagnosis": "Nutze die Ausgaben für Reflexion und Forschungsfragen — nicht, um Eignung für eine Rolle, Schule oder Versorgung zu beurteilen.",
     "non_judgement": "Ihr Profil ist weder gut noch schlecht — es beschreibt Tendenzen, nicht Ihren Wert.",
     "ghana_medical": "Diese Bewertung ersetzt keinen Arzt, keine Pflegekraft, keinen Berater oder eine traditionelle Heilerin, wenn Sie professionelle Hilfe brauchen.",
     "delete_label": "Meine Daten löschen",
@@ -694,8 +694,8 @@
     "error": "Löschung fehlgeschlagen. Sie können dennoch die Browser-Daten in den Seiteneinstellungen leeren."
   },
   "operatorSync": {
-    "bar_aria": "Diagnose zur Forschungs-Synchronisation",
-    "bar_title": "Sync-Diagnose",
+    "bar_aria": "Technische Übersicht zur Forschungs-Synchronisation",
+    "bar_title": "Sync-Status",
     "env_on": "Cloud-Env: Variablen gesetzt (Schreiben kann trotzdem fehlschlagen).",
     "env_off": "Cloud-Env: nicht gesetzt — kein Datenbank-Upload in diesem Build.",
     "last_never": "Letzter Remote-Schreibversuch: in diesem Browser noch nicht protokolliert.",
@@ -703,6 +703,99 @@
     "status_ok": "OK",
     "status_fail": "fehlgeschlagen",
     "pending": "Sitzungen in Upload-Warteschlange: {n}"
+  },
+  "facilitator": {
+    "toggle_show": "[DE] Facilitator view",
+    "toggle_hide": "[DE] Hide facilitator view",
+    "section_title": "[DE] Facilitator observations",
+    "section_intro": "[DE] Practical, non-clinical ideas for teachers and parents based on this session’s dimension scores.",
+    "disclaimer": "[DE] These observations are based on self-reported tendencies and are not validated for individual educational decisions. Always combine with your direct knowledge of the child.",
+    "low_confidence_note": "[DE] Overall session confidence was limited — treat these cards as tentative prompts, not a full picture of the learner.",
+    "label_observation": "[DE] What you might notice",
+    "label_suggestions": "[DE] Environmental ideas that may help",
+    "label_professional": "[DE] Talk with a professional if",
+    "filler1": {
+      "observation": "[DE] Several dimensions sit in a middle range here, so day-to-day needs may shift with the task, sleep, and stress.",
+      "suggestion": "[DE] Offering a predictable routine with small choices built in may help many learners in this range feel steady without feeling boxed in.",
+      "professional": "[DE] If learning or wellbeing concerns persist across settings, a trusted educator or health professional can help you think through next steps together."
+    },
+    "filler2": {
+      "observation": "[DE] Self-report tools capture a moment in time; behaviour in class can look different when interests, peers, or sensory load change.",
+      "suggestion": "[DE] Short check-ins after varied activities (quiet work, group talk, movement) may help you notice what supports engagement most often.",
+      "professional": "[DE] If you are unsure how to interpret patterns over time, a specialist who knows the child can offer perspective without labelling them."
+    },
+    "F": {
+      "high": {
+        "observation": "[DE] May stay absorbed in a task for a long stretch and lose track of transitions or class-wide announcements.",
+        "suggestion": "[DE] Gentle transition signals a minute ahead may help. A quiet corner for extended work may help when the room is lively.",
+        "professional": "[DE] If long stretches of solo focus get in the way of required group work or safety routines, a specialist conversation may help find balanced supports."
+      },
+      "low": {
+        "observation": "[DE] May notice side conversations, movement, or small visual changes in the room while working.",
+        "suggestion": "[DE] Seating with a simple visual barrier to the busiest part of the room may help. Breaking tasks into short visible steps may help more than long open-ended blocks.",
+        "professional": "[DE] If attention challenges clearly affect learning despite adjustments, an educational or developmental specialist may help explore what else could help."
+      }
+    },
+    "P": {
+      "high": {
+        "observation": "[DE] May enjoy open-ended problems and spotting patterns before step-by-step instructions feel necessary.",
+        "suggestion": "[DE] Optional extension prompts or choice boards may help. Very rigid step lists without the “why” may feel constraining.",
+        "professional": "[DE] If frustration appears mainly when tasks stay purely concrete, a learning specialist may help match task design to strengths."
+      },
+      "low": {
+        "observation": "[DE] May follow clear examples best and feel more secure when instructions are concrete and ordered.",
+        "suggestion": "[DE] Worked examples, checklists, and labelled materials may help. Open-ended prompts without models may feel harder to start.",
+        "professional": "[DE] If anxiety or refusal shows up mostly on vague tasks, a professional may help design scaffolds that still build independence over time."
+      }
+    },
+    "S": {
+      "high": {
+        "observation": "[DE] May be easily distracted by background noise or bright lighting.",
+        "suggestion": "[DE] Seating away from windows or high-traffic areas may help. Softer lighting or optional quiet headphones during independent work may help.",
+        "professional": "[DE] If sensory sensitivity clearly interferes with learning or wellbeing, a specialist assessment may help identify specific supports."
+      },
+      "low": {
+        "observation": "[DE] May tolerate busy or varied sensory environments more comfortably than peers who need quieter conditions.",
+        "suggestion": "[DE] Front-row or central seating may still work well; just watch for fatigue on very long intense days.",
+        "professional": "[DE] If you ever worry about hearing or vision rather than comfort alone, a routine screening may help rule out basic sensory needs."
+      }
+    },
+    "E": {
+      "high": {
+        "observation": "[DE] May need recovery time after lively group work or whole-class discussions.",
+        "suggestion": "[DE] Pair or trio tasks before large groups may help. A brief quiet reset after noisy activities may help energy return.",
+        "professional": "[DE] If social exhaustion leads to frequent distress or withdrawal, a counsellor or trusted clinician may help explore coping strategies."
+      },
+      "low": {
+        "observation": "[DE] May perk up with discussion, collaboration, or movement between peers.",
+        "suggestion": "[DE] Rotating roles in group tasks and verbal rehearsal may help. Long silent independent blocks may feel draining.",
+        "professional": "[DE] If restlessness is paired with marked distress at home or school, a professional may help separate social energy from other stressors."
+      }
+    },
+    "R": {
+      "high": {
+        "observation": "[DE] May feel safer when schedules, steps, and expectations are spelled out in advance.",
+        "suggestion": "[DE] Visible timetables and advance warning of changes may help. Surprise rule shifts may feel harder to absorb in the moment.",
+        "professional": "[DE] If rigidity around routines causes intense upset, a specialist may help introduce flexibility skills gently."
+      },
+      "low": {
+        "observation": "[DE] May adapt on the fly when plans change and tolerate loose timelines better than highly fixed routines.",
+        "suggestion": "[DE] Framing goals as outcomes rather than minute-by-minute scripts may help. Too many arbitrary rules may feel unnecessary.",
+        "professional": "[DE] If improvisation leads to missed deadlines across subjects, a learning coach may help build light structure without removing autonomy."
+      }
+    },
+    "C": {
+      "high": {
+        "observation": "[DE] May hold multiple possible answers comfortably and revise ideas when new information appears.",
+        "suggestion": "[DE] Tasks that allow revising drafts or comparing strategies may help. Very black-and-white grading without room to explain may feel tight.",
+        "professional": "[DE] If uncertainty feels exciting at school but overwhelming at home (or the reverse), a brief conversation with a counsellor may help."
+      },
+      "low": {
+        "observation": "[DE] May prefer clear right-or-wrong framing and notice discomfort when instructions or answers feel ambiguous.",
+        "suggestion": "[DE] Rubrics with examples, worked answers, and explicit “good enough” criteria may help. Open-ended problems may need a starting template.",
+        "professional": "[DE] If distress centres on small changes to familiar routines or wording, a professional may help build tolerance step by step."
+      }
+    }
   },
   "site_footer": {
     "nav_label": "Rechtliches und externe Links",

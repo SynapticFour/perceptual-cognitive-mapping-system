@@ -48,7 +48,10 @@ import {
 } from '@/lib/research-session-bundle';
 import { isResearchModeActive } from '@/lib/adaptive-mode-resolution';
 import ParticipantPrintSheet from '@/components/results/ParticipantPrintSheet';
+import FacilitatorInsights from '@/components/results/FacilitatorInsights';
+import type { FacilitatorDimensionScores } from '@/components/results/FacilitatorInsights';
 import SiteFooter from '@/components/layout/SiteFooter';
+import { isFacilitatorViewEnabled } from '@/config/env';
 
 const PIPELINE_STORAGE_KEY = 'pcms-pipeline-result';
 
@@ -75,6 +78,7 @@ export default function ResultsPage() {
   const [needsAssent, setNeedsAssent] = useState(false);
   const [groupInsightsAvailable, setGroupInsightsAvailable] = useState(false);
   const [sufficientConfidenceBanner, setSufficientConfidenceBanner] = useState(false);
+  const [facilitatorView, setFacilitatorView] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -184,6 +188,18 @@ export default function ResultsPage() {
     if (urlShare) return displayModelFromSharePayload(urlShare);
     return null;
   }, [session, urlShare, confidenceComponents]);
+
+  const facilitatorDimensionScores = useMemo((): FacilitatorDimensionScores | null => {
+    if (!display) return null;
+    return {
+      F: display.rawPercent.F,
+      P: display.rawPercent.P,
+      S: display.rawPercent.S,
+      E: display.rawPercent.E,
+      R: display.rawPercent.R,
+      C: display.rawPercent.C,
+    };
+  }, [display]);
 
   const viewProfile = useMemo((): CognitiveProfilePublic | null => {
     if (session) return session.publicProfile;
@@ -464,6 +480,16 @@ export default function ResultsPage() {
               {ui['results.sms_code_copy']}
             </button>
           ) : null}
+          {isFacilitatorViewEnabled() && facilitatorDimensionScores ? (
+            <button
+              type="button"
+              onClick={() => setFacilitatorView((v) => !v)}
+              className="rounded-lg border border-teal-600 bg-teal-50 px-4 py-2 text-sm font-medium text-teal-950 shadow-sm hover:bg-teal-100 sm:px-6"
+              aria-pressed={facilitatorView}
+            >
+              {facilitatorView ? ui['facilitator.toggle_hide'] : ui['facilitator.toggle_show']}
+            </button>
+          ) : null}
         </div>
 
         <div className="mb-6">
@@ -473,6 +499,15 @@ export default function ResultsPage() {
             onContinueAssessment={session ? handleContinueAssessment : undefined}
           />
         </div>
+
+        {facilitatorDimensionScores ? (
+          <FacilitatorInsights
+            profile={viewProfile}
+            locale={String(locale)}
+            dimensionScores={facilitatorDimensionScores}
+            showFacilitatorView={facilitatorView}
+          />
+        ) : null}
 
         {groupInsightsAvailable ? (
           <div className="mb-6 text-center">

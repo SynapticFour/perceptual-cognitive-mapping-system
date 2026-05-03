@@ -481,7 +481,7 @@
   },
   "welcome": {
     "title": "How does your mind work?",
-    "subtitle": "A research tool that maps your cognitive style as a continuous profile — not a diagnosis, not a label. Just your pattern."
+    "subtitle": "A research tool that maps your cognitive style as a continuous profile—plain-language patterns for reflection and research."
   },
   "consent": {
     "title": "Research Consent Form",
@@ -502,7 +502,7 @@
     "privacy_research_label": "Research Only:",
     "privacy_research_body": "Information used only to understand thinking patterns",
     "important_heading": "Important Information",
-    "important_medical": "This is NOT a medical test. This tool is for learning about yourself and contributing to research. It cannot diagnose or treat any health condition.",
+    "important_medical": "This tool is for learning how you tend to think and for contributing to research. It describes tendencies on continuous scales—it does not assess health or fitness for any purpose.",
     "important_help": "If you need help with mental health, please talk to a doctor, counselor, or trusted healthcare professional.",
     "helps_heading": "How Your Information Helps",
     "helps_body": "Your anonymous answers, combined with many others, help scientists understand how different people think. This research may be shared in scientific papers to help educators, researchers, and people everywhere better understand cognitive diversity.",
@@ -514,16 +514,16 @@
     "footer_ethics": "This research follows ethical guidelines for human subjects research."
   },
   "post_consent": {
-    "hero_subtitle": "Explore how you tend to think and learn—descriptive, not diagnostic",
+    "hero_subtitle": "Explore how you tend to think and learn—descriptive profiles on continuous dimensions",
     "card_evidence_title": "Evidence-Based",
-    "card_evidence_body": "Draws on cognitive science and dimensional summaries (not medical testing)",
+    "card_evidence_body": "Grounded in cognitive science and dimensional summaries for descriptive, self-report use",
     "card_adaptive_title": "Adaptive Assessment",
     "card_adaptive_body": "Questions adapt based on your responses for personalized insights",
     "card_insights_title": "Personalized Insights",
     "card_insights_body": "See plain-language ideas that may fit your style—suggestions only, not prescriptions",
     "diff_heading": "What Makes This Different",
     "diff_traditional_heading": "Traditional Approaches",
-    "diff_traditional_1": "Categorical labels and diagnoses",
+    "diff_traditional_1": "Sorting people into fixed clinical-style boxes",
     "diff_traditional_2": "One-size-fits-all assessments",
     "diff_traditional_3": "Stigma and fixed mindsets",
     "diff_ours_heading": "Our Approach",
@@ -595,20 +595,20 @@
     "step4_k2": "Voluntary participation",
     "step4_k3": "Right to withdraw data",
     "step5_title": "Important limitations",
-    "step5_p1": "This is NOT a medical or diagnostic tool.",
+    "step5_p1": "This tool describes how you tend to think — it does not assess health or fitness for any purpose.",
     "step5_p2": "Results represent tendencies, not definitive characteristics.",
     "step5_p3": "Individual variation is normal and expected.",
     "step5_p4": "If you have health concerns, please consult a qualified professional.",
-    "step5_k1": "Not for diagnosis",
+    "step5_k1": "Tendencies for reflection and research",
     "step5_k2": "Probabilistic results",
     "step5_k3": "Consult professionals for health concerns"
   },
   "landing": {
     "lead": "About 10–15 minutes · No registration · Please read the short consent before you start.",
-    "not_heading": "What this is NOT",
-    "not_1": "🚫 Not an autism test",
-    "not_2": "🚫 Not a medical device",
-    "not_3": "🚫 Not a diagnosis",
+    "diff_heading": "How this differs from clinical-style tools",
+    "diff_1": "Maps tendencies on a continuous spectrum—patterns, not categories.",
+    "diff_2": "Plain-language profile: no labels, no scores, no pass/fail.",
+    "diff_3": "For self-understanding and research—not for institutions to rank or screen people.",
     "get_heading": "What you will get",
     "get_1": "🗺️ A multi-dimensional map of your cognitive style",
     "get_2": "🔒 Anonymous, private, no registration",
@@ -619,7 +619,7 @@
   "results_interpretation": {
     "heading": "What does this mean?",
     "para1": "Your profile shows how you weight focus, pattern processing, sensory sensitivity, social energy, structure preference, and cognitive flexibility. Everyone combines these dimensions in a unique way.",
-    "para2": "These patterns often overlap in research with concepts such as neurodiversity, high sensitivity, or autism spectrum profiles — but they are not interchangeable and cannot be used for diagnosis. For more on the research background, read the <research>PCMS research note on Synaptic Four</research>.",
+    "para2": "In research literature, similar shapes often appear among broad themes of cognitive diversity and everyday processing styles—your snapshot here is only a dimensional description and is not interchangeable with any single research theme. For more on the research framing, read the <research>PCMS research note on Synaptic Four</research>.",
     "strengths_heading": "Strength correlates",
     "strengths_sub": "Your three highest scores among the core six dimensions — descriptive strengths, not a verdict.",
     "strength_F": "Deep concentration, detail precision",
@@ -646,9 +646,9 @@
     "research_title": "What this system is",
     "research_body": "This is a non-clinical research questionnaire. It measures self-reported tendencies on continuous dimensions for scientific understanding of cognitive diversity. It is not a clinical service and does not provide treatment or advice.",
     "measured_title": "What is measured",
-    "measured_intro": "The assessment asks about preferences and typical behaviours. Ten dimensions summarise patterns (for example focus, sensory comfort, or planning style). Each score is a tendency on a scale — not an ability grade and not a medical label.",
-    "limits_title": "What is not measured",
-    "limits_body": "This tool does not measure IQ, does not diagnose any medical or psychiatric condition, and does not rank people as good or bad. There are no pass/fail outcomes. If you have health concerns, contact a qualified professional.",
+    "measured_intro": "The assessment asks about preferences and typical behaviours. Ten dimensions summarise patterns (for example focus, sensory comfort, or planning style). Each score is a tendency on a scale—descriptive, not a ranking of overall ability.",
+    "limits_title": "Scope of what is captured",
+    "limits_body": "The questionnaire records self-reported tendencies on the dimensions described above. It is not designed to measure IQ, overall ability, or suitability for school, work, or care. There are no pass/fail outcomes. If you have health concerns, contact a qualified professional.",
     "privacy_title": "What we store",
     "privacy_body": "Synaptic Four (Stuttgart) stores an anonymous session identifier, timestamps, your answers, response times, and derived statistical summaries needed for research. We do not collect your name, email, or postal address in this flow unless you contact us separately (which is a separate processing context). Full privacy notice: “Privacy” in the footer or /privacy.",
     "privacy_body_local": "Synaptic Four (Stuttgart) uses an anonymous session identifier, timestamps, your answers, response times, and derived statistical summaries for this tool. By default these stay in this browser for your session. We do not collect your name, email, or postal address in this flow unless you contact us separately (then it is a separate processing context).",
@@ -670,15 +670,15 @@
     "use_research": "Participating in research",
     "use_education": "Education / teaching",
     "use_other": "Other",
-    "chk_nondiagnostic": "I understand these results are not a diagnosis and not a medical test.",
-    "chk_research": "I understand this tool is for research and self-reflection, not clinical care.",
+    "chk_nondiagnostic": "I understand these results describe tendencies for reflection and research—they do not assess my health or fitness for any purpose.",
+    "chk_research": "I understand this tool supports self-reflection and research participation, not treatment or placement decisions.",
     "submit": "View results",
     "error_incomplete": "Please answer all fields and tick both confirmations."
   },
   "ethics_results": {
     "banner_title": "Important limitations",
-    "non_medical": "This is not a medical test.",
-    "non_diagnosis": "These results are not a diagnosis.",
+    "non_medical": "Your profile summarizes self-reported tendencies on the questionnaire dimensions.",
+    "non_diagnosis": "Use these outputs for reflection and research questions—not to judge fitness for a role, school, or care.",
     "non_judgement": "Your profile is neither good nor bad — it describes tendencies, not worth.",
     "ghana_medical": "This assessment does not replace a doctor, nurse, counsellor, or traditional healer where you need professional care.",
     "delete_label": "Delete my data",
@@ -703,6 +703,99 @@
     "status_ok": "OK",
     "status_fail": "failed",
     "pending": "Queued sessions waiting for upload: {n}"
+  },
+  "facilitator": {
+    "toggle_show": "Facilitator view",
+    "toggle_hide": "Hide facilitator view",
+    "section_title": "Facilitator observations",
+    "section_intro": "Practical, non-clinical ideas for teachers and parents based on this session’s dimension scores.",
+    "disclaimer": "These observations are based on self-reported tendencies and are not validated for individual educational decisions. Always combine with your direct knowledge of the child.",
+    "low_confidence_note": "Overall session confidence was limited — treat these cards as tentative prompts, not a full picture of the learner.",
+    "label_observation": "What you might notice",
+    "label_suggestions": "Environmental ideas that may help",
+    "label_professional": "Talk with a professional if",
+    "filler1": {
+      "observation": "Several dimensions sit in a middle range here, so day-to-day needs may shift with the task, sleep, and stress.",
+      "suggestion": "Offering a predictable routine with small choices built in may help many learners in this range feel steady without feeling boxed in.",
+      "professional": "If learning or wellbeing concerns persist across settings, a trusted educator or health professional can help you think through next steps together."
+    },
+    "filler2": {
+      "observation": "Self-report tools capture a moment in time; behaviour in class can look different when interests, peers, or sensory load change.",
+      "suggestion": "Short check-ins after varied activities (quiet work, group talk, movement) may help you notice what supports engagement most often.",
+      "professional": "If you are unsure how to interpret patterns over time, a specialist who knows the child can offer perspective without labelling them."
+    },
+    "F": {
+      "high": {
+        "observation": "May stay absorbed in a task for a long stretch and lose track of transitions or class-wide announcements.",
+        "suggestion": "Gentle transition signals a minute ahead may help. A quiet corner for extended work may help when the room is lively.",
+        "professional": "If long stretches of solo focus get in the way of required group work or safety routines, a specialist conversation may help find balanced supports."
+      },
+      "low": {
+        "observation": "May notice side conversations, movement, or small visual changes in the room while working.",
+        "suggestion": "Seating with a simple visual barrier to the busiest part of the room may help. Breaking tasks into short visible steps may help more than long open-ended blocks.",
+        "professional": "If attention challenges clearly affect learning despite adjustments, an educational or developmental specialist may help explore what else could help."
+      }
+    },
+    "P": {
+      "high": {
+        "observation": "May enjoy open-ended problems and spotting patterns before step-by-step instructions feel necessary.",
+        "suggestion": "Optional extension prompts or choice boards may help. Very rigid step lists without the “why” may feel constraining.",
+        "professional": "If frustration appears mainly when tasks stay purely concrete, a learning specialist may help match task design to strengths."
+      },
+      "low": {
+        "observation": "May follow clear examples best and feel more secure when instructions are concrete and ordered.",
+        "suggestion": "Worked examples, checklists, and labelled materials may help. Open-ended prompts without models may feel harder to start.",
+        "professional": "If anxiety or refusal shows up mostly on vague tasks, a professional may help design scaffolds that still build independence over time."
+      }
+    },
+    "S": {
+      "high": {
+        "observation": "May be easily distracted by background noise or bright lighting.",
+        "suggestion": "Seating away from windows or high-traffic areas may help. Softer lighting or optional quiet headphones during independent work may help.",
+        "professional": "If sensory sensitivity clearly interferes with learning or wellbeing, a specialist assessment may help identify specific supports."
+      },
+      "low": {
+        "observation": "May tolerate busy or varied sensory environments more comfortably than peers who need quieter conditions.",
+        "suggestion": "Front-row or central seating may still work well; just watch for fatigue on very long intense days.",
+        "professional": "If you ever worry about hearing or vision rather than comfort alone, a routine screening may help rule out basic sensory needs."
+      }
+    },
+    "E": {
+      "high": {
+        "observation": "May need recovery time after lively group work or whole-class discussions.",
+        "suggestion": "Pair or trio tasks before large groups may help. A brief quiet reset after noisy activities may help energy return.",
+        "professional": "If social exhaustion leads to frequent distress or withdrawal, a counsellor or trusted clinician may help explore coping strategies."
+      },
+      "low": {
+        "observation": "May perk up with discussion, collaboration, or movement between peers.",
+        "suggestion": "Rotating roles in group tasks and verbal rehearsal may help. Long silent independent blocks may feel draining.",
+        "professional": "If restlessness is paired with marked distress at home or school, a professional may help separate social energy from other stressors."
+      }
+    },
+    "R": {
+      "high": {
+        "observation": "May feel safer when schedules, steps, and expectations are spelled out in advance.",
+        "suggestion": "Visible timetables and advance warning of changes may help. Surprise rule shifts may feel harder to absorb in the moment.",
+        "professional": "If rigidity around routines causes intense upset, a specialist may help introduce flexibility skills gently."
+      },
+      "low": {
+        "observation": "May adapt on the fly when plans change and tolerate loose timelines better than highly fixed routines.",
+        "suggestion": "Framing goals as outcomes rather than minute-by-minute scripts may help. Too many arbitrary rules may feel unnecessary.",
+        "professional": "If improvisation leads to missed deadlines across subjects, a learning coach may help build light structure without removing autonomy."
+      }
+    },
+    "C": {
+      "high": {
+        "observation": "May hold multiple possible answers comfortably and revise ideas when new information appears.",
+        "suggestion": "Tasks that allow revising drafts or comparing strategies may help. Very black-and-white grading without room to explain may feel tight.",
+        "professional": "If uncertainty feels exciting at school but overwhelming at home (or the reverse), a brief conversation with a counsellor may help."
+      },
+      "low": {
+        "observation": "May prefer clear right-or-wrong framing and notice discomfort when instructions or answers feel ambiguous.",
+        "suggestion": "Rubrics with examples, worked answers, and explicit “good enough” criteria may help. Open-ended problems may need a starting template.",
+        "professional": "If distress centres on small changes to familiar routines or wording, a professional may help build tolerance step by step."
+      }
+    }
   },
   "site_footer": {
     "nav_label": "Legal and external links",

@@ -1,4 +1,17 @@
 {
+  "_localeReview": {
+    "reviewStatus": "PENDING_NATIVE_REVIEW",
+    "lastReviewed": "never",
+    "checklistDoc": "docs/CULTURAL_REVIEW_CHECKLIST.md",
+    "fileNote": "JSON does not allow // comments; this object is the machine-readable review status for this locale.",
+    "outstandingItems": [
+      "1. Framing: Several merged or Wolof strings still use negated clinical framing (e.g. results.footer_line2, share_text); re-audit for positive tendency-only wording.",
+      "2. Scales: Likert anchors and questionnaire prompts largely inherit English — Wolof pragmatics for agreement strength not validated.",
+      "3. Context: Scenario examples live mainly in question banks (not this file) — confirm Wolof deployment uses stems appropriate for Senegal/Wolofophone contexts.",
+      "4. Consent: Terms such as \"seetlu\" / research participation — confirm neutrality and trust connotations with community reviewers.",
+      "5. Thinking style: \"xalaat\", \"lim\", \"profil\" — confirm they read as descriptive habits, not labels implying deficit or medicine."
+    ]
+  },
   "results": {
     "loading": "Yebum ngi lay jëkk jàng njàngale bi…",
     "no_results_title": "Gisul benn njàngale",
@@ -516,11 +529,9 @@
     "storage_notice_local": "Xibaar ci séans bi dinañu denc ci sa navigatëur bi. CI lammiñ yii amul tur, i-meel, walla adrësi postal.",
     "storage_notice_cloud_extra": "Ci dalub bii mën na am cloud: su nga kontine, mën nañu yeb ay résumé bu sirri ci database bu seetlu bi ñu lajj (xool Sutura). Su cloud amul, amul benn yeb bu dem ci sa aparëy soo boole nga jëf export walla partaas.",
     "research_title": "Lan mooy sistem bi",
-    "research_body": "Lii mooy lammiñ yu seetlu yu du dawtal. Dafay lim yoon yu ne ci sa bopp ci yoon yu toll ngir xam yoon yu wuute ci xalaat. Du dawtal te du jox ndigal walla jëf.",
+    "research_body": "Lii mooy lammiñ yu seetlu ci yoon yu toll. Dafay lim yoon yu ne ci sa bopp ngir xam yoon yu wuute ci xalaat. Du jox ndigal walla jëf yaram walla taxawaay bu am solo.",
     "measured_title": "Lan lañu lim",
-    "measured_intro": "Jëmm bi laaj ci sa bëgg-bëgg ak sa jëf yu mel ni. Ñaar fukki yoon di leen lim yu yoon (misal xare, noppalu mend-mend, walla yoon bu waxtu). Benn lim mooy yoon bu ne ci skaal bi — du at bu jëf walla taxawaay bu dawtal.",
-    "limits_title": "Lan duñu lim",
-    "limits_body": "Buntu bi du lim IQ, du wax dawtal yaram walla xel, du def lim bu rafet walla bu bon ci nit. Amul «pass» walla «fail». Su fekk nga am laaj ci yaram, joxe ak kenn ci ñetti yaram yu am ndigal.",
+    "measured_intro": "Jëmm bi laaj ci sa bëgg-bëgg ak sa jëf yu mel ni. Ñaar fukki yoon di leen lim yu yoon (misal xare, noppalu mend-mend, walla yoon bu waxtu). Benn lim mooy yoon bu ne ci skaal bi — leeral, du lim bu toll ci sa doole lépp.",
     "privacy_title": "Lan lañu denc",
     "privacy_body": "Synaptic Four (Stuttgart) dafay denc benn ID bu sirri ci séans bi, waxtu yi, sa tontu, waxtu ci tontu yi, ak lim yu statistik yu soxla seetlu. Nu la laaj sa tur, i-meel, walla adres ci yoon yii — su fekk du nga wax ak nu ci bopp sa bopp (leen mooy benn jëf bu wuute). Waxtaan bu mat ci sutura: li ci suuf «Sutura» walla /privacy.",
     "privacy_body_local": "Synaptic Four (Stuttgart) mën na denc ID bu sirri ci séans bi, waxtu, tontu, ak lim yu statistik ci sa navigatëur bi ci séans bii. Du laaj tur, i-meel, walla adres postal ci yoon yii — su fekk du nga wax ak nu ci bopp sa bopp (leen mooy benn jëf bu wuute).",
@@ -542,15 +553,15 @@
     "use_research": "Jëf ci seetlu",
     "use_education": "Jàng walla jàngale",
     "use_other": "Yeneen",
-    "chk_nondiagnostic": "Ma xam ne njàngale yii du dawtal walla jëmm bu dawtal.",
-    "chk_research": "Ma xam ne buntu mooy ci seetlu ak xam sa bopp, du dawtal.",
+    "chk_nondiagnostic": "Ma xam ne njàngale yii wax yoon yi ci seetlu ak xam sa bopp — du lim yaram walla taxawaay solo.",
+    "chk_research": "Ma xam ne buntu mooy ci seetlu ak xam sa bopp — du jëf yaram walla taxawaay solo.",
     "submit": "Gis njàngale bi",
     "error_incomplete": "Tontu lépp te tànn ñaar yi ci dëggal."
   },
   "ethics_results": {
     "banner_title": "Tànk yu am solo",
-    "non_medical": "Bunu jëmm bu dawtal.",
-    "non_diagnosis": "Njàngale yii du dawtal.",
+    "non_medical": "Sa profil di leen yoon yi ci lammiñ yii ci sa bopp.",
+    "non_diagnosis": "Jëfandikoo leen ci xam sa bopp ak laaj yu seetlu — du tax lim solo ci doole walla jëf.",
     "non_judgement": "Sa profil du rafet du bon — dafay wax yoon yi, du sa solo.",
     "ghana_medical": "Jëmm gi du tax dawtal, garde, wallu-kat, walla fajkat bu tradisyon su la soxla wallu bu am ndigal.",
     "delete_label": "Màbb sama xibaar",
@@ -566,8 +577,8 @@
     "error": "Màbb bi mënul pare. Mën nga màbb ci parametër yi ci dal bi."
   },
   "operatorSync": {
-    "bar_aria": "Diagnose sync bu bet bi",
-    "bar_title": "Diagnose sync",
+    "bar_aria": "Jëfandikoo bu seetlu ci sync",
+    "bar_title": "Sync",
     "env_on": "Cloud: variable yi ñu lajj (bind mën na doy).",
     "env_off": "Cloud: amul — amul yeb ci database ci dalub bii.",
     "last_never": "Bind bu mujj: amul ci sa navigatëur bi.",

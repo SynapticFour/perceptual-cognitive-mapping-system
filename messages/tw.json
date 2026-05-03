@@ -1,4 +1,17 @@
 {
+  "_localeReview": {
+    "reviewStatus": "PENDING_NATIVE_REVIEW",
+    "lastReviewed": "never",
+    "checklistDoc": "docs/CULTURAL_REVIEW_CHECKLIST.md",
+    "fileNote": "JSON does not allow // comments; this object is the machine-readable review status for this locale.",
+    "outstandingItems": [
+      "1. Framing: Many strings still carry [NEEDS_REVIEW] or English placeholders; cohort/support/sms blocks mix English clinical-adjacent phrasing — full native pass required.",
+      "2. Scales: Questionnaire Likert strings not localised in this file — map Strongly agree/disagree to Akan communicative norms.",
+      "3. Context: Dimension E uses Ghana-centric Ubuntu framing — validate for all Twi/Akan deployment contexts; question-bank scenarios need regional audit separately.",
+      "4. Consent: ethics_consent strings mix Twi and English — harmonise and vet \"research\" / storage wording for local history and trust.",
+      "5. Thinking style: Cognitive dimension titles/descriptions are draft — ensure \"adwene\" / tendency language does not read as medical or stigmatising."
+    ]
+  },
   "welcome": {
     "title": "Wo nim wo ho",
     "subtitle": "Ɛyɛ dwumadi a ɛboa yɛn ahu adwene ne akwan a nnipa foforo so dwen no mu yɛɛteɛne. [NEEDS_REVIEW: validate natural Twi for ‘research tool for cognitive diversity’]"

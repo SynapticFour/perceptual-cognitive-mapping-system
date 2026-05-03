@@ -17,6 +17,14 @@ A scientifically grounded web-based system for mapping human cognition into cont
 >
 > [Why no labels? →](#design-philosophy)
 
+---
+
+### Instrument validation status (researchers & funders)
+
+PCMS has **not** yet completed **publication-standard** psychometric validation (reliability from real data, convergent validity, local norms, cross-locale comparability). Scoring weights are literature- and design-based, not empirically calibrated on a dedicated normative corpus. For an explicit statement of current limits and a **Phase 1 validation roadmap**, see **[`docs/VALIDATION_PROTOCOL.md`](./docs/VALIDATION_PROTOCOL.md)**. A complementary technical calibration roadmap (IRT/CFA, larger samples) is in [`docs/VALIDATION_ROADMAP.md`](./docs/VALIDATION_ROADMAP.md).
+
+---
+
 ### Version labels
 
 Research documentation and stored assessments refer to protocol **v1.0** for reproducibility. The npm semver in `package.json` is maintained separately and may differ—pin **git commit** (or release tags, when published) for reproducible deployments, not the npm version alone.

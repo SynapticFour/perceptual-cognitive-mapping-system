@@ -20,14 +20,14 @@ export default function LandingPage() {
           <p className="mb-8 text-left text-base leading-relaxed text-gray-700">{tLanding('lead')}</p>
 
           <div className="mb-10 grid gap-6 text-left sm:grid-cols-2">
-            <div className="rounded-xl border border-rose-200/80 bg-rose-50/60 p-4 sm:p-5">
-              <h2 className="text-sm font-semibold uppercase tracking-wide text-rose-900/90">
-                {tLanding('not_heading')}
+            <div className="rounded-xl border border-sky-200/80 bg-sky-50/60 p-4 sm:p-5">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-sky-900/90">
+                {tLanding('diff_heading')}
               </h2>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-rose-950">
-                <li>{tLanding('not_1')}</li>
-                <li>{tLanding('not_2')}</li>
-                <li>{tLanding('not_3')}</li>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-sky-950">
+                <li>{tLanding('diff_1')}</li>
+                <li>{tLanding('diff_2')}</li>
+                <li>{tLanding('diff_3')}</li>
               </ul>
             </div>
             <div className="rounded-xl border border-teal-200/80 bg-teal-50/60 p-4 sm:p-5">
