@@ -18,6 +18,10 @@ jobs:
       - run: npm run lint
       - name: Validate question bank
         run: npm run validate-questions
+      - name: Validate global behavioral bank
+        run: npm run validate-global-bank
+      - name: Validate cultural adaptive bank
+        run: npm run validate-cultural-bank
       - name: Type-check
         run: npx tsc --noEmit
       - run: npm run test:unit
