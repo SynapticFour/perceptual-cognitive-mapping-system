@@ -103,7 +103,8 @@ export default function ConsentPage() {
             </section>
             <section>
               <h2 className="text-base font-semibold text-slate-900">{t('privacy_title')}</h2>
-              <p className="mt-2">{t('privacy_body')}</p>
+              <p className="mt-2">{t('privacy_body_local')}</p>
+              {isSupabaseConfigured() ? <p className="mt-2">{t('privacy_body_cloud_extra')}</p> : null}
             </section>
             <section>
               <h2 className="text-base font-semibold text-slate-900">{t('rights_title')}</h2>
@@ -134,7 +135,12 @@ export default function ConsentPage() {
       case 'limits':
         return <p className="text-slate-700">{t('limits_body')}</p>;
       case 'privacy':
-        return <p className="text-slate-700">{t('privacy_body')}</p>;
+        return (
+          <div className="space-y-2 text-slate-700">
+            <p>{t('privacy_body_local')}</p>
+            {isSupabaseConfigured() ? <p>{t('privacy_body_cloud_extra')}</p> : null}
+          </div>
+        );
       case 'rights':
         return <p className="text-slate-700">{t('rights_body')}</p>;
       case 'ghana':

@@ -510,6 +510,8 @@
     "limits_body": "Buntu bi du lim IQ, du wax dawtal yaram walla xel, du def lim bu rafet walla bu bon ci nit. Amul «pass» walla «fail». Su fekk nga am laaj ci yaram, joxe ak kenn ci ñetti yaram yu am ndigal.",
     "privacy_title": "Lan lañu denc",
     "privacy_body": "Synaptic Four (Stuttgart) dafay denc benn ID bu sirri ci séans bi, waxtu yi, sa tontu, waxtu ci tontu yi, ak lim yu statistik yu soxla seetlu. Nu la laaj sa tur, i-meel, walla adres ci yoon yii — su fekk du nga wax ak nu ci bopp sa bopp (leen mooy benn jëf bu wuute). Waxtaan bu mat ci sutura: li ci suuf «Sutura» walla /privacy.",
+    "privacy_body_local": "Synaptic Four (Stuttgart) mën na denc ID bu sirri ci séans bi, waxtu, tontu, ak lim yu statistik ci sa navigatëur bi ci séans bii. Du laaj tur, i-meel, walla adres postal ci yoon yii — su fekk du nga wax ak nu ci bopp sa bopp (leen mooy benn jëf bu wuute).",
+    "privacy_body_cloud_extra": "Su cloud bi ñu lajj mooy am: xibaar yii yu mel ni ci kaw mën nañu leen yeb ci database bu seetlu bi su sync bi doy na. Luy mat ci sutura: «Sutura» walla /privacy.",
     "rights_title": "Sa hakkee",
     "rights_body": "Mën nga lekk ci biir benn saat amul laaj. Mën nga laaj ne ñu màbb xibaar yu bokk ak ID séans bi — ci njàngale bi, «Màbb sama xibaar», su fekk laaj bi si. Kontak: contact@synapticfour.com. Hakkee yi ci sutura — xool xët wi «Sutura».",
     "ghana_title": "Ghana / yaram",
@@ -549,6 +551,17 @@
     "cancel": "Neen",
     "done": "Laaj bi pare na. Xibaar ci navigatëër bi màbb nañu.",
     "error": "Màbb bi mënul pare. Mën nga màbb ci parametër yi ci dal bi."
+  },
+  "operatorSync": {
+    "bar_aria": "Diagnose sync bu bet bi",
+    "bar_title": "Diagnose sync",
+    "env_on": "Cloud: variable yi ñu lajj (bind mën na doy).",
+    "env_off": "Cloud: amul — amul yeb ci database ci dalub bii.",
+    "last_never": "Bind bu mujj: amul ci sa navigatëur bi.",
+    "last_line": "Bind bu mujj: {status} · {context} · {time}",
+    "status_ok": "OK",
+    "status_fail": "doyul",
+    "pending": "Séans yu xaar yeb: {n}"
   },
   "site_footer": {
     "nav_label": "Yëg-yëg ci laaj yi ak xëtu yi",

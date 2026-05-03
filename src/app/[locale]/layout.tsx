@@ -7,6 +7,7 @@ import AppNav from '@/components/layout/AppNav';
 import HtmlLang from '@/components/i18n/HtmlLang';
 import LocaleFromStorage from '@/components/i18n/LocaleFromStorage';
 import LocaleOfflineChrome from '@/components/layout/LocaleOfflineChrome';
+import OperatorSyncDiagnosticBar from '@/components/layout/OperatorSyncDiagnosticBar';
 
 type Props = {
   children: ReactNode;
@@ -30,6 +31,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <HtmlLang />
       <LocaleFromStorage />
       <AppNav />
+      <OperatorSyncDiagnosticBar />
       <LocaleOfflineChrome />
       <div className="flex-1">{children}</div>
     </NextIntlClientProvider>

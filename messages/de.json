@@ -638,6 +638,8 @@
     "limits_body": "Dieses Werkzeug misst keinen IQ, stellt keine medizinische oder psychiatrische Diagnose und bewertet Menschen nicht als gut oder schlecht. Es gibt kein Bestehen oder Nichtbestehen. Bei gesundheitlichen Fragen wenden Sie sich an Fachpersonen.",
     "privacy_title": "Was gespeichert wird",
     "privacy_body": "Synaptic Four (Stuttgart) speichert eine anonyme Sitzungskennung, Zeitstempel, Ihre Antworten, Reaktionszeiten und abgeleitete statistische Zusammenfassungen für die Forschung. In diesem Ablauf erfassen wir keinen Namen, keine E-Mail und keine Postadresse, es sei denn, Sie kontaktieren uns separat (dann besteht ein eigenes Verarbeitungsverhältnis). Ausführliche Datenschutzhinweise: Verknüpfung „Datenschutz“ unten bzw. /privacy.",
+    "privacy_body_local": "Synaptic Four (Stuttgart) nutzt eine anonyme Sitzungskennung, Zeitstempel, Ihre Antworten, Reaktionszeiten und abgeleitete statistische Zusammenfassungen für dieses Instrument. Standardmäßig verbleiben diese Daten in diesem Browser für Ihre Sitzung. In diesem Ablauf erfassen wir keinen Namen, keine E-Mail und keine Postadresse, es sei denn, Sie kontaktieren uns separat (dann besteht ein eigenes Verarbeitungsverhältnis).",
+    "privacy_body_cloud_extra": "Wenn optionaler Cloud-Speicher für dieses Deployment aktiviert ist, können dieselben pseudonymen Felder bei erfolgreicher Synchronisation in die konfigurierte Forschungsdatenbank geschrieben werden. Ausführliche Datenschutzhinweise: „Datenschutz“ unten bzw. /privacy.",
     "rights_title": "Ihre Rechte",
     "rights_body": "Sie können jederzeit ohne Nachteil abbrechen. Sie können die Löschung der mit Ihrer Sitzungs-ID verknüpften Daten verlangen (auf der Ergebnisseite „Meine Daten löschen“, soweit eingerichtet). Kontakt: contact@synapticfour.com. Betroffenenrechte nach DSGVO können Sie dort ebenfalls geltend machen; Einzelheiten stehen auf der Seite „Datenschutz“.",
     "ghana_title": "Ghana / medizinischer Kontext",
@@ -677,6 +679,17 @@
     "cancel": "Abbrechen",
     "done": "Löschung abgeschlossen. Lokale Daten wurden entfernt.",
     "error": "Löschung fehlgeschlagen. Sie können dennoch die Browser-Daten in den Seiteneinstellungen leeren."
+  },
+  "operatorSync": {
+    "bar_aria": "Diagnose zur Forschungs-Synchronisation",
+    "bar_title": "Sync-Diagnose",
+    "env_on": "Cloud-Env: Variablen gesetzt (Schreiben kann trotzdem fehlschlagen).",
+    "env_off": "Cloud-Env: nicht gesetzt — kein Datenbank-Upload in diesem Build.",
+    "last_never": "Letzter Remote-Schreibversuch: in diesem Browser noch nicht protokolliert.",
+    "last_line": "Letzter Remote-Schreibversuch: {status} · {context} · {time}",
+    "status_ok": "OK",
+    "status_fail": "fehlgeschlagen",
+    "pending": "Sitzungen in Upload-Warteschlange: {n}"
   },
   "site_footer": {
     "nav_label": "Rechtliches und externe Links",

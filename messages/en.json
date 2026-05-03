@@ -638,6 +638,8 @@
     "limits_body": "This tool does not measure IQ, does not diagnose any medical or psychiatric condition, and does not rank people as good or bad. There are no pass/fail outcomes. If you have health concerns, contact a qualified professional.",
     "privacy_title": "What we store",
     "privacy_body": "Synaptic Four (Stuttgart) stores an anonymous session identifier, timestamps, your answers, response times, and derived statistical summaries needed for research. We do not collect your name, email, or postal address in this flow unless you contact us separately (which is a separate processing context). Full privacy notice: “Privacy” in the footer or /privacy.",
+    "privacy_body_local": "Synaptic Four (Stuttgart) uses an anonymous session identifier, timestamps, your answers, response times, and derived statistical summaries for this tool. By default these stay in this browser for your session. We do not collect your name, email, or postal address in this flow unless you contact us separately (then it is a separate processing context).",
+    "privacy_body_cloud_extra": "When optional cloud storage is enabled for this deployment, the same pseudonymous fields may be written to the configured research database if sync succeeds. Full privacy notice: “Privacy” in the footer or /privacy.",
     "rights_title": "Your rights",
     "rights_body": "You may stop at any time without penalty. You may request deletion of data linked to your session ID where technically possible (use “Delete my data” on the results page when enabled). Contact: contact@synapticfour.com for requests and GDPR rights; details are on the Privacy page.",
     "ghana_title": "Ghana / medical context",
@@ -677,6 +679,17 @@
     "cancel": "Cancel",
     "done": "Deletion request completed. Local data cleared.",
     "error": "Deletion could not be completed. You can still clear this browser’s storage from site settings."
+  },
+  "operatorSync": {
+    "bar_aria": "Research sync diagnostics for operators",
+    "bar_title": "Sync diagnostics",
+    "env_on": "Cloud env: variables set (writes can still fail at runtime).",
+    "env_off": "Cloud env: not set — no research database upload in this build.",
+    "last_never": "Last remote write: none logged in this browser yet.",
+    "last_line": "Last remote write: {status} · {context} · {time}",
+    "status_ok": "OK",
+    "status_fail": "failed",
+    "pending": "Queued sessions waiting for upload: {n}"
   },
   "site_footer": {
     "nav_label": "Legal and external links",

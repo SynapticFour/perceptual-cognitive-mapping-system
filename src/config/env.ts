@@ -27,3 +27,8 @@ export function isSupabaseEnvConfigured(): boolean {
 export function getPublicAppUrl(): string | undefined {
   return readPublic('NEXT_PUBLIC_APP_URL');
 }
+
+/** When `1`, shows a compact operator bar with cloud env + last write telemetry (browser-only). */
+export function showOperatorSyncDiagnostic(): boolean {
+  return readPublic('NEXT_PUBLIC_PCMS_SHOW_OPERATOR_SYNC_DIAGNOSTIC') === '1';
+}

@@ -7,6 +7,7 @@ import type { Json } from '@/types/database.types';
 import { readAssessmentContextFromStorage } from '@/types/assessment-context';
 import { appendOfflineResponseRow, attachOfflineCompletion, questionResponsesToOfflineRows } from '@/lib/offline-storage';
 import { getQuestionBankSync } from '@/data/question-bank-state';
+import { recordCloudSyncAttempt } from '@/lib/cloud-sync-telemetry';
 
 function logSupabaseFailure(context: string, err: unknown): void {
   if (process.env.NODE_ENV !== 'development') return;
@@ -101,9 +102,13 @@ export class DataCollectionService {
 
       if (error) {
         logSupabaseFailure('createOrUpdateSession/upsert', error);
+        recordCloudSyncAttempt('session_upsert', false);
+      } else {
+        recordCloudSyncAttempt('session_upsert', true);
       }
     } catch (err) {
       logSupabaseFailure('createOrUpdateSession', err);
+      recordCloudSyncAttempt('session_upsert', false);
     }
   }
 
@@ -159,6 +164,7 @@ export class DataCollectionService {
         },
         { culturalContext }
       );
+      recordCloudSyncAttempt('question_response_offline', false);
       return;
     }
 
@@ -167,6 +173,7 @@ export class DataCollectionService {
 
       if (error) {
         logSupabaseFailure('recordQuestionResponse/insert', error);
+        recordCloudSyncAttempt('question_response', false);
         await appendOfflineResponseRow(
           this.sessionId,
           {
@@ -179,9 +186,12 @@ export class DataCollectionService {
           },
           { culturalContext }
         );
+      } else {
+        recordCloudSyncAttempt('question_response', true);
       }
     } catch (err) {
       logSupabaseFailure('recordQuestionResponse', err);
+      recordCloudSyncAttempt('question_response', false);
       try {
         await appendOfflineResponseRow(
           this.sessionId,
@@ -341,6 +351,10 @@ export class DataCollectionService {
       }
       // Store research data locally as fallback
       localStorage.setItem(`pcms-research-${this.sessionId}`, JSON.stringify(researchData));
+    }
+
+    if (isSupabaseConfigured()) {
+      recordCloudSyncAttempt('assessment_complete', remoteOk);
     }
 
     localStorage.removeItem('pcms-question-history');

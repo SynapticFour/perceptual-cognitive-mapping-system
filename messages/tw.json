@@ -136,7 +136,20 @@
     "storage_notice_local": "Session data are stored locally in this browser. The assessment flow does not collect your name, email, or postal address.",
     "storage_notice_cloud_extra": "This deployment has optional cloud storage: if you continue, anonymous session summaries may sync to the configured research database (see Privacy). If cloud storage is not in use, nothing leaves this device except what you export or share.",
     "privacy_body": "Synaptic Four (Stuttgart) sie ahokyere session ID, bere bere no, wo mmuaeɛ, bere a ɛfa mmuaeɛ ho, ne statistical summaries ma nhwehwɛ so. Yɛnnɔ wo din, email, anaa adrɛsi wɔ ɔhaw yi mu — gye sɛ wo ntɛm yɛn kwa (ɛno ara na ɛyɛ dwuma foforo). Nhomasua pa ara: hwɛ «Privacy» / ahodeɛ ho sɔkabɔ ho nhoma wɔ footer no mu anaa /privacy.",
+    "privacy_body_local": "Synaptic Four (Stuttgart) uses an anonymous session identifier, timestamps, your answers, response times, and derived statistical summaries for this tool. By default these stay in this browser for your session. We do not collect your name, email, or postal address in this flow unless you contact us separately (then it is a separate processing context).",
+    "privacy_body_cloud_extra": "When optional cloud storage is enabled for this deployment, the same pseudonymous fields may be written to the configured research database if sync succeeds. Full privacy notice: “Privacy” in the footer or /privacy.",
     "rights_body": "Wobɛtumi gyae bere biara a wopɛ a ɛnhɔ wo so. Wobɛtumi hwehwɛ sɛ epra nhomasua a ɛka wo session ID ho — fa «Delete my data» so wɔ nhomasua krataafa no so (sɛ wo de si mu). Ntɛm: contact@synapticfour.com. Ahodeɛ ho akwan — hwɛ Privacy nhoma no."
+  },
+  "operatorSync": {
+    "bar_aria": "Research sync diagnostics for operators",
+    "bar_title": "Sync diagnostics",
+    "env_on": "Cloud env: variables set (writes can still fail at runtime).",
+    "env_off": "Cloud env: not set — no research database upload in this build.",
+    "last_never": "Last remote write: none logged in this browser yet.",
+    "last_line": "Last remote write: {status} · {context} · {time}",
+    "status_ok": "OK",
+    "status_fail": "failed",
+    "pending": "Queued sessions waiting for upload: {n}"
   },
   "site_footer": {
     "nav_label": "La mbra ne ahodoɔ a wɔ fa baabi foforo",
