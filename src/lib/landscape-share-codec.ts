@@ -4,6 +4,14 @@ import type { DimensionDisplayModel } from '@/lib/dimension-display';
 
 const VERSION = 1 as const;
 
+/**
+ * **URL / SMS share payloads are not a scientific record.**
+ * They deliberately omit: full `ConfidenceComponents` (evidence, reliability, consistency, sample gates),
+ * within-session contradiction / profile diagnostics, raw answers, question bank version, stem region,
+ * and adaptive policy. **Do not use `LandscapeSharePayload` for research analysis** — use
+ * `StoredPipelineSession`, `full-session.json`, or authorised database exports.
+ */
+
 /** Browsers and intermediaries often cap URLs; keep share payloads well under practical limits. */
 export const MAX_SHARE_URL_LENGTH = 2000;
 
@@ -47,11 +55,16 @@ export function readShareEncodedPayloadFromWindow(search: string, hash: string):
 
 export type LandscapeSharePayload = {
   v: typeof VERSION;
+  /**
+   * Present on payloads from `buildSharePayload` (v1). When true, marks a **lossy compressed excerpt**
+   * for UX sharing only — not interchangeable with a stored research session.
+   */
+  isCompressed?: true;
   /** Raw scores 0–100 per dimension */
   rp: Record<CognitiveDimension, number>;
   /** Weighted / adjusted scores 0–100 */
   wp: Record<CognitiveDimension, number>;
-  /** Final routing confidence 0–1 */
+  /** Final routing confidence 0–1 per dimension only (other confidence fields dropped). */
   fc: Record<CognitiveDimension, number>;
   completedAt?: string;
 };
@@ -69,7 +82,7 @@ export function buildSharePayload(
     wp[d] = display.weightedPercent[d];
     fc[d] = confidenceComponents[d].finalConfidence;
   }
-  return { v: VERSION, rp, wp, fc, completedAt };
+  return { v: VERSION, isCompressed: true, rp, wp, fc, completedAt };
 }
 
 export function encodeLandscapeSharePayload(payload: LandscapeSharePayload): string {
@@ -94,6 +107,7 @@ export function decodeLandscapeSharePayload(encoded: string): LandscapeSharePayl
     }
     return {
       v: VERSION,
+      isCompressed: true,
       rp: rp as Record<CognitiveDimension, number>,
       wp: wp as Record<CognitiveDimension, number>,
       fc: fc as Record<CognitiveDimension, number>,

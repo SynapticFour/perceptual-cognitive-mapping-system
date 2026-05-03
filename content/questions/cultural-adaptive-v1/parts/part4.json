@@ -1,0 +1,702 @@
+[
+  {
+    "id": "ca-v1-effort_recovery-001",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I return to a hard task after a short walk instead of abandoning it.",
+      "ghana": "Tough task plus brief walk brings me back to try again.",
+      "west_africa": "Hard job gets another round after a stroll."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-002",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "Heavy physical work leads me to drink water and sit before the next chore.",
+      "ghana": "Big exertion gets water plus sit before round two.",
+      "west_africa": "After hard labor I hydrate and rest briefly."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-003",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I push to finish a boring but important task the same day I started.",
+      "ghana": "Dull-but-needed work closes same day it opens.",
+      "west_africa": "Important boring jobs do not cross midnight idle."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-004",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I notice muscle soreness and lighten the next task on purpose.",
+      "ghana": "Sore muscles trigger a lighter next load by choice.",
+      "west_africa": "Body ache steers next task size down."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-005",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "Mental fatigue makes me switch to a simple hands task for a while.",
+      "ghana": "Brain tired sends me to easy hand work awhile.",
+      "west_africa": "Thinking drain moves me to plain manual chores."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-006",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I split a huge cleaning job across several days on purpose.",
+      "ghana": "Massive cleaning spreads across planned days.",
+      "west_africa": "Big clean gets day-sliced plan."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-007",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I sleep longer after an unusually demanding day.",
+      "ghana": "Extra-hard day extends my sleep the night after.",
+      "west_africa": "Big demand day lengthens next sleep."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-008",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "I take notes during long talks so my mind can rest between points.",
+      "ghana": "Long speech gets note fragments so my mind breathes.",
+      "west_africa": "Extended talk pairs with jotting breaks for me."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-009",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I set a visible timer to work in focused bursts on dull tasks.",
+      "ghana": "Boring work runs in timed visible bursts.",
+      "west_africa": "Timer chunks carry dull work."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-010",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I stop work for food before I feel shaky.",
+      "ghana": "Meal breaks come before shaky hunger.",
+      "west_africa": "Food pause precedes shakiness."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-011",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I celebrate small finished pieces of a long project aloud or in text to someone.",
+      "ghana": "Tiny milestones get a spoken or text cheer to another person.",
+      "west_africa": "Micro wins get shared praise."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-012",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "After conflict talk, I need quiet alone time before the next social task.",
+      "ghana": "Hot words exchange needs solo quiet before next people task.",
+      "west_africa": "Argument aftermath needs alone buffer."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-013",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "A hard failed attempt makes me shelve the task for days.",
+      "ghana": "Tough fail shelves the job many days.",
+      "west_africa": "Failure sends long shelf time."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-014",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I jump straight into the next heavy chore without water or sit.",
+      "ghana": "Back-to-back heavy chores without pause is my pattern.",
+      "west_africa": "No sit or sip between hard rounds."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-015",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "Boring important tasks often spill to another day unfinished.",
+      "ghana": "Dull needed work crosses days open.",
+      "west_africa": "Important drudge lingers unfinished."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-016",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I ignore early muscle soreness and repeat the same heavy load.",
+      "ghana": "Early soreness ignored; same load repeated.",
+      "west_africa": "Soreness does not shrink next task."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-017",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "Mental fatigue makes me stop all work rather than switch task type.",
+      "ghana": "Brain tired halts everything.",
+      "west_africa": "Think-tired ends the work block fully."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-018",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I try to finish huge cleaning in one long push.",
+      "ghana": "Whole clean in one marathon session is my pull.",
+      "west_africa": "One-shot giant clean attempts."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-019",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "Demanding day rarely changes how long I sleep.",
+      "ghana": "Hard day does not stretch night sleep.",
+      "west_africa": "Sleep length stable after strain."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-020",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "I rely on memory alone through long talks without jotting.",
+      "ghana": "Long talks need no notes from me.",
+      "west_africa": "Memory holds long talks solo."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-021",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "Dull tasks run without timers until something interrupts.",
+      "ghana": "No burst timers on boring work.",
+      "west_africa": "Open-ended grind on dull jobs."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-022",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I work through hunger until shaking or headache appears.",
+      "ghana": "Hunger ignored until body signals hard.",
+      "west_africa": "Food waits for strong body complaint."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-023",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I move on to the next task without noting what I finished.",
+      "ghana": "Finished slices pass without acknowledgment.",
+      "west_africa": "No micro-celebration between chunks."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-024",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "After conflict talk I go straight into the next crowded task.",
+      "ghana": "Argument then immediate crowd task is fine for me.",
+      "west_africa": "No solo buffer needed after tense talk."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-025",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "A few minutes with my eyes closed rarely changes how tired I feel.",
+      "ghana": "Short quiet with my eyes shut seldom shifts my tired level.",
+      "west_africa": "A brief eye rest rarely lifts my energy."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-001",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "demonstration"
+    ],
+    "variants": {
+      "global": "I understand a new physical skill faster when someone shows me once.",
+      "ghana": "Seeing a move once beats hearing many words for my body learning.",
+      "west_africa": "Demo-first beats long verbal-only coaching for my hands."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-002",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "verbal"
+    ],
+    "variants": {
+      "global": "Spoken steps alone are enough for me to copy a simple new routine.",
+      "ghana": "Voice-only instructions carry simple new routines for me.",
+      "west_africa": "Hearing the order is enough without pictures."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-003",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "practice"
+    ],
+    "variants": {
+      "global": "I repeat a new phrase aloud several times to lock it in.",
+      "ghana": "Fresh phrases get loud repeats to stick.",
+      "west_africa": "New wording needs spoken loops."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-004",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "visual"
+    ],
+    "variants": {
+      "global": "I draw a quick map or diagram to explain where something is.",
+      "ghana": "Place explanation gets a fast sketch from me.",
+      "west_africa": "Location questions get doodle answers."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-005",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "error"
+    ],
+    "variants": {
+      "global": "I learn from a mistake if the wrong outcome is shown clearly.",
+      "ghana": "Clear wrong result teaches me fast.",
+      "west_africa": "Visible error outcome educates me."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-006",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "pace"
+    ],
+    "variants": {
+      "global": "I ask the teacher or guide to slow down when hands and words move too fast together.",
+      "ghana": "Hands plus words too fast triggers a slow request from me.",
+      "west_africa": "I request slower combo demo when rushed."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-007",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "memory"
+    ],
+    "variants": {
+      "global": "I tie a new name to a face feature so I recall it next time.",
+      "ghana": "Face detail anchors new names for me.",
+      "west_africa": "Feature hook holds names."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-008",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "expression"
+    ],
+    "variants": {
+      "global": "I use objects around me as props when telling a story.",
+      "ghana": "Storytelling grabs nearby objects as examples.",
+      "west_africa": "Tales include prop pointing."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-009",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "reading"
+    ],
+    "variants": {
+      "global": "Long written instructions tire me; short bullet lists work better.",
+      "ghana": "Paragraph manuals drain me; bullets help.",
+      "west_africa": "Wall-of-text rules lose me; lists win."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-010",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "practice"
+    ],
+    "variants": {
+      "global": "I practice a new dance or sport move in slow motion first.",
+      "ghana": "Fresh moves start in slow motion.",
+      "west_africa": "New motor pattern begins slow."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-011",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "social"
+    ],
+    "variants": {
+      "global": "I learn a group game faster after one practice round than after only rules talk.",
+      "ghana": "One trial round beats rules lecture for group games.",
+      "west_africa": "Play round teaches group rules faster for me."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-012",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "visual"
+    ],
+    "variants": {
+      "global": "Charts with colors help me compare amounts at a glance.",
+      "ghana": "Color bars make amount gaps obvious to my eyes.",
+      "west_africa": "Hue-coded charts speed compare."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-013",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "demonstration"
+    ],
+    "variants": {
+      "global": "Watching once is not enough; I need several repeats before my body copies.",
+      "ghana": "Single demo is too thin; repeats needed for my body.",
+      "west_africa": "Multi-repeat watch before motor copy."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-014",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "verbal"
+    ],
+    "variants": {
+      "global": "Spoken steps alone are not enough; I need a picture or gesture.",
+      "ghana": "Voice-only is thin; picture or hand cue needed.",
+      "west_africa": "Words alone miss for new routines."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-015",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "practice"
+    ],
+    "variants": {
+      "global": "I lock new phrases silently in my head without saying them aloud.",
+      "ghana": "Silent mental loop stores new wording.",
+      "west_africa": "No loud repeats needed for phrases."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-016",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "visual"
+    ],
+    "variants": {
+      "global": "I describe a place with words only and skip drawing.",
+      "ghana": "Word picture without sketch is my habit.",
+      "west_africa": "No doodle for directions."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-017",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "error"
+    ],
+    "variants": {
+      "global": "Mistakes confuse me unless someone walks through the right steps slowly.",
+      "ghana": "Errors need slow correct walkthrough.",
+      "west_africa": "Wrong tries need guided redo."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-018",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "pace"
+    ],
+    "variants": {
+      "global": "Fast hands with fast talk during demo feels fine to me.",
+      "ghana": "Rapid demo pace matches my learning.",
+      "west_africa": "Speedy combo demo fits me."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-019",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "memory"
+    ],
+    "variants": {
+      "global": "I recall new names without linking them to face details.",
+      "ghana": "Names stick without feature tricks.",
+      "west_africa": "Face hooks unused."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-020",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "expression"
+    ],
+    "variants": {
+      "global": "I tell stories with words only and rarely point to objects.",
+      "ghana": "Object-free storytelling is my style.",
+      "west_africa": "Props seldom appear in my tales."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-021",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "reading"
+    ],
+    "variants": {
+      "global": "Long written instructions feel clearer than very short bullets.",
+      "ghana": "Full paragraphs beat ultra-short bullets for me.",
+      "west_africa": "Dense text guides me well."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-022",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "practice"
+    ],
+    "variants": {
+      "global": "I practice new moves at full speed from the first try.",
+      "ghana": "Day-one new moves run full tempo.",
+      "west_africa": "No slow-motion ramp."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-023",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "social"
+    ],
+    "variants": {
+      "global": "Rules talk alone is enough for me before a group game starts.",
+      "ghana": "Pre-game lecture carries me without practice round.",
+      "west_africa": "Verbal rules pre-play suffice."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-024",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "visual"
+    ],
+    "variants": {
+      "global": "Color charts feel optional; numbers alone are enough.",
+      "ghana": "Numeric tables beat color bars for me.",
+      "west_africa": "Plain numbers compare fine."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-025",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "demonstration"
+    ],
+    "variants": {
+      "global": "Written checklist beats live demo for my learning style.",
+      "ghana": "Paper checklist tops live show for me.",
+      "west_africa": "List beats watching."
+    }
+  }
+]

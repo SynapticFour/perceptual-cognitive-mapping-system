@@ -9,6 +9,7 @@
 - **[Data Model](./data-model.md)** - Database schema and data structure documentation
 
 #### **Research Documentation**
+- **[Research roadmap](./RESEARCH-ROADMAP.md)** - Epics/tickets: session reproducibility, dual confidence model, banks, offline exports
 - **[Whitepaper](./whitepaper.md)** - Complete technical and theoretical foundation
 - **[Research Study Design v1.0](../lib/research/study_v1.md)** - Complete research protocol and study design
 - **[Methodology](../lib/research/methodology.md)** - Research methodology and validation procedures

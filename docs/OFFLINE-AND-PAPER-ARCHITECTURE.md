@@ -69,6 +69,7 @@ Keeping these **versioned** (`session.version`, assessment version strings) pres
 **Manual sync / “sneakernet”**
 
 - Export `localStorage` + IndexedDB-backed JSON exports (or a single **profile bundle** file) and move via USB; import on a connected machine — **operational procedure**, can be scripted without changing scoring.
+- Queued completions in IndexedDB: the pending-sync banner offers **“Download queued sessions (JSON)”** — one `full-session` JSON per session (`buildFullSessionExportV1` in `research-session-bundle.ts`, same shape as the ZIP’s `full-session.json`).
 
 ## 3. Fallback logic
 

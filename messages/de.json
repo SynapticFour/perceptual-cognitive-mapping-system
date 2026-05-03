@@ -41,6 +41,9 @@
     "group_analysis_hint": "Optional: 2–6 teilbare Kurzprofile kombinieren — Diversität, Umfeld-Passung und Moderationshinweise (Forschung/Teams).",
     "research_bundle": "Forschungs-Bundle (ZIP)",
     "research_bundle_no_history": "Keine Antworthistorie in diesem Browser — das ZIP braucht gespeicherte Antworten dieser Sitzung.",
+    "download_full_session": "Vollständige Sitzung (JSON)",
+    "download_full_session_no_history": "Keine Antworthistorie in diesem Browser — der Vollständig-Export benötigt gespeicherte Antworten.",
+    "download_full_session_filename": "full-session-{date}.json",
     "print_summary": "Druckbare Zusammenfassung",
     "print_heading": "Ihre Sitzungszusammenfassung",
     "print_meta": "{count} Antworten · {date}",
@@ -395,7 +398,9 @@
     }
   },
   "offline": {
-    "pending_sync_banner": "{n} abgeschlossene Sitzung(en) warten auf Upload, sobald online (optional Cloud-Sync)."
+    "pending_sync_banner": "{n} abgeschlossene Sitzung(en) warten auf Upload, sobald online (optional Cloud-Sync).",
+    "pending_sync_export": "Warteschlange als JSON herunterladen",
+    "pending_sync_export_aria": "Pro wartender Offline-Sitzung eine JSON-Datei (Pipeline + Antworten) speichern"
   },
   "field": {
     "offline_tools_heading": "Offline / Feld",
@@ -447,7 +452,15 @@
     "cluster_row": "{id} — Teilnehmende: {member_list}. {summary}",
     "diversity_score_line": "Score: {score} / 100 (Modellskala)",
     "friction_line": "{traits} — Stärke {strength}: {suggestion}",
-    "environment_line": "{id} ({intensity}): {narrative}"
+    "environment_line": "{id} ({intensity}): {narrative}",
+    "setting_context": "Rahmenbedingungen (Moderations-Sicht)",
+    "setting_context_hint": "Bewertet das Umfeld, nicht Personen. Nur für aggregierte Passungs-Hinweise.",
+    "predictability": "Vorhersehbarkeit / Stabilität",
+    "stimulation": "Sensorische Reizung",
+    "interruption": "Unterbrechungen",
+    "routing_entropy": "Routing-Profil-Streuung (Entropie 0–1): {value}",
+    "structured_recs": "Gekennzeichnete, umsetzbare Hinweise",
+    "rec_category": "Kategorie: {category}"
   },
   "pipeline": {
     "pattern": {

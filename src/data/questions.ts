@@ -49,6 +49,9 @@ export type AssessmentQuestionCategory =
   | 'structure'
   | 'flexibility';
 
+/** Regional English stem bundle for the same measurement intent (e.g. cultural-adaptive bank). */
+export type QuestionStemRegion = 'global' | 'ghana' | 'west_africa';
+
 const QUESTION_CATEGORY_VALUES: AssessmentQuestionCategory[] = [
   'focus',
   'pattern',
@@ -88,6 +91,11 @@ export interface AssessmentQuestion {
   /** When true, Likert responses are inverted (1↔5) after normalisation before scoring. */
   reverseScored?: boolean;
   responseScale?: ResponseScale;
+  /**
+   * When present, display text can be chosen per {@link QuestionStemRegion} at runtime
+   * (see `resolveQuestionDisplayText` / `resolveStemForRegion`); `text` remains the load-time default.
+   */
+  stemVariants?: Record<QuestionStemRegion, string>;
 }
 
 /** Map a schema-valid JSON row into the in-memory assessment shape. */

@@ -3,10 +3,10 @@
  * Does not import Supabase — see `offline-supabase-sync.ts`.
  */
 
-import type { AssessmentQuestion } from '@/data/questions';
-import type { QuestionResponse } from '@/data/questions';
-import type { StoredPipelineSession } from '@/types/pipeline-session';
+import type { AssessmentQuestion, LikertResponse, QuestionResponse } from '@/data/questions';
 import type { ResearchAssessmentData } from '@/lib/data-collection';
+import { buildFullSessionExportV1 } from '@/lib/research-session-bundle';
+import type { StoredPipelineSession } from '@/types/pipeline-session';
 
 const DB_NAME = 'PCMSOffline';
 const DB_VERSION = 1;
@@ -30,7 +30,7 @@ export interface OfflineSession {
   profile: StoredPipelineSession | null;
   timestamp: string;
   synced: boolean;
-  completionStatus?: 'confidence_met' | 'max_questions' | 'user_exit';
+  completionStatus?: 'confidence_met' | 'max_questions' | 'user_exit' | 'diminishing_returns';
   culturalContext?: 'western' | 'ghana' | 'universal';
   /** For `sessions` / `profiles` rows when syncing. */
   consentTimestamp?: string;
@@ -147,7 +147,7 @@ export async function attachOfflineCompletion(
     profile: StoredPipelineSession;
     research: ResearchAssessmentData;
     completionTimeSeconds: number;
-    completionStatus: 'confidence_met' | 'max_questions' | 'user_exit';
+    completionStatus: 'confidence_met' | 'max_questions' | 'user_exit' | 'diminishing_returns';
     consentTimestamp: string;
     /** When no per-answer IDB rows exist (e.g. failed only at finalize), pass replay rows for Supabase. */
     responseRows?: OfflineResponseRow[];
@@ -215,4 +215,44 @@ export function questionResponsesToOfflineRows(
     });
   }
   return out;
+}
+
+/** Rebuild in-memory history from IndexedDB rows (for JSON export). */
+export function offlineResponseRowsToQuestionResponses(rows: OfflineResponseRow[]): QuestionResponse[] {
+  return rows.map((r) => ({
+    questionId: r.questionId,
+    response: r.response as LikertResponse,
+    responseTimeMs: r.responseTimeMs,
+    timestamp: new Date(r.timestamp),
+  }));
+}
+
+/** Single JSON document: pipeline + answers (same shape as ZIP `full-session.json`). */
+export function buildOfflinePendingFullSessionJson(session: OfflineSession): string | null {
+  if (!session.profile) return null;
+  const history = offlineResponseRowsToQuestionResponses(session.responses);
+  return JSON.stringify(buildFullSessionExportV1(session.profile, history, session.timestamp), null, 2);
+}
+
+export function downloadOfflineSessionFullExport(session: OfflineSession, filename?: string): boolean {
+  if (typeof document === 'undefined') return false;
+  const raw = buildOfflinePendingFullSessionJson(session);
+  if (!raw) return false;
+  const blob = new Blob([raw], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename ?? `pcms-full-session-${session.sessionId}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  return true;
+}
+
+export async function downloadAllPendingSessionFullExports(): Promise<number> {
+  const pending = await getPendingSessions();
+  let n = 0;
+  for (const s of pending) {
+    if (downloadOfflineSessionFullExport(s)) n += 1;
+  }
+  return n;
 }

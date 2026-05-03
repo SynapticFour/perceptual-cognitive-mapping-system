@@ -6,6 +6,7 @@ import { buildCognitiveModel } from '@/core/cognitive-pipeline';
 import {
   analyzeMultiProfileGroup,
   toPortableGroupAnalysisJson,
+  type EnvironmentStressProfile,
   type GroupCognitiveAnalysisReport,
   type GroupMemberInput,
 } from '@/lib/group-cognitive-analysis';
@@ -20,6 +21,19 @@ import { formatUiString } from '@/lib/ui-strings';
 import type { ConfidenceComponents } from '@/scoring';
 
 const MAX_MEMBERS = 6;
+
+const defaultEnvStress: EnvironmentStressProfile = {
+  predictability01: 0.55,
+  stimulation01: 0.35,
+  interruption01: 0.38,
+};
+
+function humanizeRecCategory(id: string): string {
+  return id
+    .split('_')
+    .map((w) => w.slice(0, 1).toUpperCase() + w.slice(1))
+    .join(' ');
+}
 
 function extractPayloadToken(input: string): string | null {
   const s = input.trim();
@@ -82,16 +96,23 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
   ]);
   const [error, setError] = useState<string | null>(null);
   const [report, setReport] = useState<GroupCognitiveAnalysisReport | null>(null);
+  const [envStress, setEnvStress] = useState<EnvironmentStressProfile>(() => ({ ...defaultEnvStress }));
 
   const runDemo = useCallback(() => {
     setError(null);
     const conf = mockConfidence();
+    const demoEnv: EnvironmentStressProfile = {
+      predictability01: 0.28,
+      stimulation01: 0.74,
+      interruption01: 0.78,
+    };
+    setEnvStress(demoEnv);
     const members: GroupMemberInput[] = [
-      buildMember('m0', strings['group_analysis.demo_profile_a'], makeDisplay(42), conf, 1),
+      buildMember('m0', strings['group_analysis.demo_profile_a'], makeDisplay(58), conf, 1),
       buildMember('m1', strings['group_analysis.demo_profile_b'], makeDisplay(58), conf, 2),
-      buildMember('m2', strings['group_analysis.demo_profile_c'], makeDisplay(51), conf, 3),
+      buildMember('m2', strings['group_analysis.demo_profile_c'], makeDisplay(58), conf, 3),
     ];
-    setReport(analyzeMultiProfileGroup(members));
+    setReport(analyzeMultiProfileGroup(members, { environment: demoEnv }));
   }, [strings]);
 
   const runAnalyze = useCallback(() => {
@@ -125,11 +146,11 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
       return;
     }
     try {
-      setReport(analyzeMultiProfileGroup(members));
+      setReport(analyzeMultiProfileGroup(members, { environment: envStress }));
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     }
-  }, [rows, strings]);
+  }, [rows, strings, envStress]);
 
   const portableJson = useMemo(() => (report ? JSON.stringify(toPortableGroupAnalysisJson(report), null, 2) : ''), [report]);
 
@@ -150,6 +171,52 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
         <h1 className="text-2xl font-semibold text-slate-900">{strings['group_analysis.title']}</h1>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">{strings['group_analysis.lead']}</p>
         <p className="mt-3 rounded-md border border-amber-100 bg-amber-50/90 px-3 py-2 text-xs text-amber-950">{strings['group_analysis.disclaimer']}</p>
+
+        <section className="mt-5 rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
+          <h2 className="text-sm font-semibold text-slate-900">{strings['group_analysis.setting_context']}</h2>
+          <p className="mt-1 text-xs text-slate-600">{strings['group_analysis.setting_context_hint']}</p>
+          <div className="mt-3 space-y-3">
+            <label className="block text-xs text-slate-600">
+              {strings['group_analysis.predictability']}: {(envStress.predictability01 * 100).toFixed(0)}%
+              <input
+                type="range"
+                min={0}
+                max={100}
+                value={Math.round(envStress.predictability01 * 100)}
+                onChange={(e) =>
+                  setEnvStress((s) => ({ ...s, predictability01: Number(e.target.value) / 100 }))
+                }
+                className="mt-1 block w-full accent-indigo-600"
+              />
+            </label>
+            <label className="block text-xs text-slate-600">
+              {strings['group_analysis.stimulation']}: {(envStress.stimulation01 * 100).toFixed(0)}%
+              <input
+                type="range"
+                min={0}
+                max={100}
+                value={Math.round(envStress.stimulation01 * 100)}
+                onChange={(e) =>
+                  setEnvStress((s) => ({ ...s, stimulation01: Number(e.target.value) / 100 }))
+                }
+                className="mt-1 block w-full accent-indigo-600"
+              />
+            </label>
+            <label className="block text-xs text-slate-600">
+              {strings['group_analysis.interruption']}: {(envStress.interruption01 * 100).toFixed(0)}%
+              <input
+                type="range"
+                min={0}
+                max={100}
+                value={Math.round(envStress.interruption01 * 100)}
+                onChange={(e) =>
+                  setEnvStress((s) => ({ ...s, interruption01: Number(e.target.value) / 100 }))
+                }
+                className="mt-1 block w-full accent-indigo-600"
+              />
+            </label>
+          </div>
+        </section>
 
         <p className="mt-4 text-sm text-slate-700">{strings['group_analysis.instructions']}</p>
 
@@ -239,6 +306,11 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
                   value: report.diversity.meanPairwiseDistance.toFixed(3),
                 })}
               </p>
+              <p className="mt-1 text-xs text-slate-500">
+                {formatUiString(strings['group_analysis.routing_entropy'], {
+                  value: report.diversity.routingProfileEntropy01.toFixed(3),
+                })}
+              </p>
             </section>
 
             <section>
@@ -275,6 +347,23 @@ export default function GroupAnalysisClient({ strings }: { strings: UiStrings })
               <ul className="mt-2 list-inside list-disc text-sm text-slate-700">
                 {report.recommendations.map((line, i) => (
                   <li key={i}>{line}</li>
+                ))}
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-slate-900">{strings['group_analysis.structured_recs']}</h2>
+              <ul className="mt-2 space-y-3">
+                {report.recommendationItems.map((item) => (
+                  <li key={item.id} className="rounded-md border border-slate-200 bg-white p-3 text-sm text-slate-800">
+                    <p className="text-xs text-slate-500">
+                      {formatUiString(strings['group_analysis.rec_category'], {
+                        category: humanizeRecCategory(item.category),
+                      })}
+                    </p>
+                    <p className="mt-1 font-medium text-slate-900">{item.text}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-slate-600">{item.rationale}</p>
+                  </li>
                 ))}
               </ul>
             </section>

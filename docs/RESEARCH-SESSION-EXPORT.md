@@ -15,9 +15,10 @@ The **Research bundle (ZIP)** download includes:
 
 | File | Role |
 |------|------|
-| `manifest.json` | Export version, session ids, consent timestamp pointer, **SHA-256** of pipeline + history JSON |
-| `pipeline-session.json` | Full `StoredPipelineSession` |
+| `manifest.json` | Export version (v2+), session ids, consent timestamp, optional **`reproducibility`** (bank id, stem region, profile-adaptive aggregates), **SHA-256** of pipeline, history, and **full-session** JSON |
+| `pipeline-session.json` | Full `StoredPipelineSession` (includes `profileAdaptiveSummary`, `stemRegionUsed`, `questionBankId` when saved) |
 | `question-history.json` | Serialised `QuestionResponse[]` |
+| `full-session.json` | One file: `{ schemaVersion: 1, exportedAt, pipelineSession, questionHistory }` (offline handoff / scripting) |
 | `responses-long.csv` | Long-format CSV for stats software |
 | `ro-crate-metadata.json` | **Minimal RO-Crate 1.1** `Dataset` describing the bundle |
 
@@ -25,5 +26,6 @@ The **Research bundle (ZIP)** download includes:
 
 ## Related code
 
-- `src/lib/research-session-bundle.ts` — ZIP construction and RO-Crate graph.
-- `src/app/[locale]/results/page.tsx` — “Research bundle (ZIP)” button when a full session is stored.
+- `src/lib/research-session-bundle.ts` — ZIP construction, `buildFullSessionExportV1`, RO-Crate graph.
+- `src/lib/offline-storage.ts` — `downloadOfflineSessionFullExport` / `downloadAllPendingSessionFullExports` for queued IndexedDB sessions (same JSON shape as `full-session.json`).
+- `src/app/[locale]/results/page.tsx` — “Download data” (pipeline only), **“Full session (JSON)”** (pipeline + history), and “Research bundle (ZIP)”.

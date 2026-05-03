@@ -39,6 +39,9 @@
     "group_analysis_hint": "Su fekk: boole 2–6 liñu lim ngir xool yu bari, melow ak xalaat ci jëkk (seetlu / mbooloo).",
     "research_bundle": "ZIP bu seetlu",
     "research_bundle_no_history": "Amul taariix bu mat ci browser bi.",
+    "download_full_session": "Séans bu mat (JSON)",
+    "download_full_session_no_history": "Amul taariix bu mat — JSON bi laaj tontu yi ci browser bi.",
+    "download_full_session_filename": "full-session-{date}.json",
     "print_summary": "Dindi bu mën a xer",
     "print_heading": "Xool bu séans bi",
     "print_meta": "{count} tontu · {date}",
@@ -338,7 +341,9 @@
     }
   },
   "offline": {
-    "pending_sync_banner": "{n} séans yu mat ngir yeb soo jot online."
+    "pending_sync_banner": "{n} séans yu mat ngir yeb soo jot online.",
+    "pending_sync_export": "Yeb séans yu xaar (JSON)",
+    "pending_sync_export_aria": "Benn JSON ci benn séans bu xaar (pipeline ak tontu yi)"
   },
   "field": {
     "offline_tools_heading": "Offline / gox",
@@ -388,7 +393,15 @@
     "cluster_row": "{id} — xarit yi: {member_list}. {summary}",
     "diversity_score_line": "Score: {score} / 100 (skaal bu modèle bi)",
     "friction_line": "{traits} — doole {strength}: {suggestion}",
-    "environment_line": "{id} ({intensity}): {narrative}"
+    "environment_line": "{id} ({intensity}): {narrative}",
+    "setting_context": "Melow bi biti (toll bu tollkat)",
+    "setting_context_hint": "Melo biti, du nit. Ngir waxin bu boole ci melokan.",
+    "predictability": "Mën nañu gis li ci biir",
+    "stimulation": "Mel mi tax mu doole",
+    "interruption": "Daje ci biir",
+    "routing_entropy": "Yu bari ci profil routing (entropy 0–1): {value}",
+    "structured_recs": "Luy jëfandikoo ci etiket",
+    "rec_category": "Rëdd: {category}"
   },
   "pipeline": {
     "pattern": {

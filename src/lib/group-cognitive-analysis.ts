@@ -35,6 +35,41 @@ export type DiversityBreakdown = {
   perDimensionStd: Record<CognitiveDimension, number>;
   /** Mean pairwise Euclidean distance in 0–1 normalized routing space. */
   meanPairwiseDistance: number;
+  /**
+   * Mean Shannon entropy of softmax-normalized routing vectors (natural log), scaled to 0–1 by `ln(K)` for K routing dimensions.
+   * Higher ≈ profiles less “peaked” on the same dominant axis (diverse emphases).
+   */
+  routingProfileEntropy01: number;
+};
+
+/** Optional facilitator rating of the *setting* (not people): all in [0,1]. */
+export type EnvironmentStressProfile = {
+  /** 1 = highly predictable / stable; 0 = chaotic / unpredictable. */
+  predictability01: number;
+  /** 0 = calm sensory context; 1 = high stimulation (noise, crowding, visual load). */
+  stimulation01: number;
+  /** 0 = few interruptions; 1 = frequent interruptions. */
+  interruption01: number;
+};
+
+export type GroupAnalysisOptions = {
+  environment?: EnvironmentStressProfile;
+  /** Override automatic cluster count (otherwise derived from group size). */
+  kClusters?: number;
+};
+
+export type RecommendationCategory =
+  | 'environment_design'
+  | 'temporal_structure'
+  | 'sensory_access'
+  | 'social_norms';
+
+export type GroupRecommendationItem = {
+  id: string;
+  category: RecommendationCategory;
+  text: string;
+  rationale: string;
+  relatedRiskIds: string[];
 };
 
 export type GroupRiskSeverity = 'low' | 'moderate' | 'elevated';
@@ -59,6 +94,10 @@ export type GroupCognitiveAnalysisReport = {
   frictionSignals: FrictionSignal[];
   environmentSignals: EnvironmentSignal[];
   recommendations: string[];
+  /** Typed, actionable items (deterministic order by `id`). */
+  recommendationItems: GroupRecommendationItem[];
+  /** Echo of optional environment profile used for mismatch rules. */
+  environment?: EnvironmentStressProfile;
   summaryNarrative: string;
 };
 
@@ -75,6 +114,16 @@ function std(xs: number[]): number {
 
 function routingMatrix(members: GroupMemberInput[]): number[][] {
   return members.map((m) => ROUTING_WEIGHT_KEYS.map((d) => m.display.rawPercent[d] / 100));
+}
+
+function softmaxEntropy01(row: number[]): number {
+  const s = row.reduce((a, b) => a + b, 0) || 1e-9;
+  let h = 0;
+  for (const v of row) {
+    const p = Math.max(1e-12, v / s);
+    h -= p * Math.log(p);
+  }
+  return Math.max(0, Math.min(1, h / Math.log(ROUTING_WEIGHT_KEYS.length)));
 }
 
 function computeDiversity(members: GroupMemberInput[]): DiversityBreakdown {
@@ -98,8 +147,10 @@ function computeDiversity(members: GroupMemberInput[]): DiversityBreakdown {
     }
   }
   const meanPairwiseDistance = pairN > 0 ? pairSum / pairN : 0;
+  const routingProfileEntropy01 =
+    pts.length > 0 ? mean(pts.map((row) => softmaxEntropy01(row))) : 0;
 
-  return { score, perDimensionStd, meanPairwiseDistance };
+  return { score, perDimensionStd, meanPairwiseDistance, routingProfileEntropy01 };
 }
 
 function euclidean(a: number[], b: number[]): number {
@@ -182,6 +233,77 @@ function buildMemberClusters(members: GroupMemberInput[], assignment: number[]):
   return out;
 }
 
+function clamp01(x: number): number {
+  if (!Number.isFinite(x)) return 0.5;
+  return Math.max(0, Math.min(1, x));
+}
+
+/**
+ * Person–environment style *mismatch* hints: aggregate routing vs facilitator-rated context.
+ * Non-diagnostic; does not name individuals.
+ */
+export function deriveEnvironmentMismatchRisks(
+  members: GroupMemberInput[],
+  env: EnvironmentStressProfile
+): GroupRiskIndicator[] {
+  const risks: GroupRiskIndicator[] = [];
+  const p = clamp01(env.predictability01);
+  const st = clamp01(env.stimulation01);
+  const inter = clamp01(env.interruption01);
+  const rMean = mean(members.map((m) => m.display.rawPercent.R));
+  const sMean = mean(members.map((m) => m.display.rawPercent.S));
+  const fMean = mean(members.map((m) => m.display.rawPercent.F));
+
+  if (rMean >= 56 && p <= 0.38) {
+    risks.push({
+      id: 'structure_need_chaotic_env',
+      severity: rMean >= 64 && p <= 0.28 ? 'elevated' : 'moderate',
+      title: 'Structure emphasis vs low environmental predictability',
+      explanation:
+        'Aggregate routing signals lean toward planning and sequencing, while the described environment is low on predictability. That pairing can increase coordination load for the group as a whole.',
+      suggestion:
+        'Publish stable sequences, give advance notice before changes, and avoid surprise reshuffles mid-block unless the group explicitly opts in.',
+    });
+  }
+
+  if (sMean >= 52 && st >= 0.58) {
+    risks.push({
+      id: 'sensory_environment_mismatch',
+      severity: sMean >= 60 && st >= 0.72 ? 'elevated' : 'moderate',
+      title: 'Sensory sensitivity vs high-stimulation setting',
+      explanation:
+        'Average sensory-reactivity routing signal is elevated while the environment is rated as high-stimulation. Some participants may fatigue faster in that combination.',
+      suggestion:
+        'Offer lower-stimulation breakout options, steady lighting, and predictable quiet intervals.',
+    });
+  }
+
+  if (fMean >= 56 && inter >= 0.62) {
+    risks.push({
+      id: 'focus_interruption_mismatch',
+      severity: fMean >= 64 && inter >= 0.75 ? 'elevated' : 'moderate',
+      title: 'Attention-channel emphasis vs interrupt-heavy context',
+      explanation:
+        'Aggregate attention-related routing signal is relatively high while interruptions are rated frequent—shared calendars may otherwise fight the context.',
+      suggestion:
+        'Define explicit focus blocks, interruption windows, and a single “source of truth” schedule.',
+    });
+  }
+
+  return risks;
+}
+
+function dedupeRisksById(risks: GroupRiskIndicator[]): GroupRiskIndicator[] {
+  const seen = new Set<string>();
+  const out: GroupRiskIndicator[] = [];
+  for (const r of risks) {
+    if (seen.has(r.id)) continue;
+    seen.add(r.id);
+    out.push(r);
+  }
+  return out;
+}
+
 function deriveRoutingRisks(
   members: GroupMemberInput[],
   cohortModel: CohortModel,
@@ -255,6 +377,102 @@ function deriveRoutingRisks(
   return risks;
 }
 
+type RecommendationInput = Pick<
+  GroupCognitiveAnalysisReport,
+  'risks' | 'diversity' | 'environmentSignals' | 'frictionSignals'
+>;
+
+/**
+ * Deterministic recommendation objects derived from risks, diversity, and environment signals.
+ */
+export function buildStructuredRecommendationItems(input: RecommendationInput): GroupRecommendationItem[] {
+  const riskIds = new Set(input.risks.map((r) => r.id));
+  const items: GroupRecommendationItem[] = [];
+
+  if (riskIds.has('structure_need_chaotic_env')) {
+    items.push({
+      id: 'rec_temporal_visible_sequence',
+      category: 'temporal_structure',
+      text: 'Use a visible running order and “next / now / later” cues; announce changes before they land.',
+      rationale:
+        'Aligns low environmental predictability with aggregate structure-seeking routing signals (descriptive, not predictive).',
+      relatedRiskIds: ['structure_need_chaotic_env'],
+    });
+  }
+
+  if (riskIds.has('sensory_environment_mismatch')) {
+    items.push({
+      id: 'rec_sensory_low_stimulation',
+      category: 'sensory_access',
+      text: 'Prefer quieter breakout zones, steady lighting, and optional low-stimulus breaks.',
+      rationale: 'Pairs elevated aggregate sensory signal with a high-stimulation environment rating.',
+      relatedRiskIds: ['sensory_environment_mismatch'],
+    });
+  }
+
+  if (riskIds.has('focus_interruption_mismatch')) {
+    items.push({
+      id: 'rec_interruption_norms',
+      category: 'social_norms',
+      text: 'Agree on interruption windows versus deep-focus blocks and a visible “do not disturb” convention.',
+      rationale: 'Reduces tension between aggregate attention-channel emphasis and interrupt-heavy contexts.',
+      relatedRiskIds: ['focus_interruption_mismatch'],
+    });
+  }
+
+  if (riskIds.has('sensory_load')) {
+    items.push({
+      id: 'rec_sensory_design_review',
+      category: 'environment_design',
+      text: 'Review ambient noise and lighting defaults; offer opt-out from the loudest joint activities.',
+      rationale: 'Responds to the aggregate sensory_load routing flag.',
+      relatedRiskIds: ['sensory_load'],
+    });
+  }
+
+  if (input.diversity.score >= 0.55) {
+    items.push({
+      id: 'rec_diversity_parallel_tracks',
+      category: 'social_norms',
+      text: 'Offer parallel information tracks (short brief plus optional deep dive) so mixed styles stay legitimate.',
+      rationale: 'High routing diversity suggests several co-existing emphases in the same roster.',
+      relatedRiskIds: [],
+    });
+  }
+
+  for (const e of input.environmentSignals.slice(0, 2)) {
+    items.push({
+      id: `rec_env_${e.id}`,
+      category: 'environment_design',
+      text: e.narrative,
+      rationale: e.explanation,
+      relatedRiskIds: [],
+    });
+  }
+
+  for (const f of input.frictionSignals.slice(0, 1)) {
+    if (f.strength < 0.35) continue;
+    const key = `${f.traits[0]}_${f.traits[1]}`.replace(/[^a-z0-9_]+/gi, '_');
+    items.push({
+      id: `rec_friction_${key}`,
+      category: 'social_norms',
+      text: f.suggestion,
+      rationale: f.explanation,
+      relatedRiskIds: [],
+    });
+  }
+
+  items.sort((a, b) => a.id.localeCompare(b.id));
+  const seen = new Set<string>();
+  const dedup: GroupRecommendationItem[] = [];
+  for (const it of items) {
+    if (seen.has(it.id)) continue;
+    seen.add(it.id);
+    dedup.push(it);
+  }
+  return dedup.slice(0, 16);
+}
+
 function mergeRecommendations(
   env: EnvironmentSignal[],
   friction: FrictionSignal[],
@@ -307,8 +525,12 @@ function buildNarrative(
 
 /**
  * Full multi-profile analysis. Requires at least two {@link GroupMemberInput} rows.
+ * Optional {@link GroupAnalysisOptions.environment} adds deterministic person–environment mismatch flags.
  */
-export function analyzeMultiProfileGroup(members: GroupMemberInput[]): GroupCognitiveAnalysisReport {
+export function analyzeMultiProfileGroup(
+  members: GroupMemberInput[],
+  options?: GroupAnalysisOptions
+): GroupCognitiveAnalysisReport {
   if (members.length < 2) {
     throw new Error('analyzeMultiProfileGroup: need at least two members');
   }
@@ -317,12 +539,22 @@ export function analyzeMultiProfileGroup(members: GroupMemberInput[]): GroupCogn
   const environmentSignals = deriveEnvironmentSignals(cohortModel);
   const frictionSignals = mapInteractionFriction(cohortModel);
   const diversity = computeDiversity(members);
-  const kTarget = members.length <= 3 ? 2 : Math.min(3, Math.ceil(members.length / 2));
+  const kTarget =
+    options?.kClusters ??
+    (members.length <= 3 ? 2 : Math.min(3, Math.ceil(members.length / 2)));
   const pts = routingMatrix(members);
   const assignment = clusterMembersByRoutingVectors(pts, kTarget);
   const clusters = buildMemberClusters(members, assignment);
-  const risks = deriveRoutingRisks(members, cohortModel, frictionSignals);
+  const env = options?.environment;
+  const mismatch = env ? deriveEnvironmentMismatchRisks(members, env) : [];
+  const risks = dedupeRisksById([...mismatch, ...deriveRoutingRisks(members, cohortModel, frictionSignals)]);
   const recommendations = mergeRecommendations(environmentSignals, frictionSignals, risks);
+  const recommendationItems = buildStructuredRecommendationItems({
+    risks,
+    diversity,
+    environmentSignals,
+    frictionSignals,
+  });
   const summaryNarrative = buildNarrative(members, diversity, cohortModel, clusters, risks);
 
   return {
@@ -337,6 +569,8 @@ export function analyzeMultiProfileGroup(members: GroupMemberInput[]): GroupCogn
     frictionSignals,
     environmentSignals,
     recommendations,
+    recommendationItems,
+    environment: env,
     summaryNarrative,
   };
 }
@@ -355,6 +589,8 @@ export function toPortableGroupAnalysisJson(report: GroupCognitiveAnalysisReport
     frictionSignals: report.frictionSignals,
     environmentSignals: report.environmentSignals,
     recommendations: report.recommendations,
+    recommendationItems: report.recommendationItems,
+    environment: report.environment,
     summaryNarrative: report.summaryNarrative,
     cohortSummary: {
       diversityIndex: cm.diversityIndex,

@@ -1,0 +1,702 @@
+[
+  {
+    "id": "ca-v1-sensory_regulation-001",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "environment"
+    ],
+    "variants": {
+      "global": "I notice everyday smells in a room before others mention them.",
+      "ghana": "When I enter a room or hall, I often notice ordinary smells there before anyone else points them out.",
+      "west_africa": "In the place where I sit or stand, I tend to notice common smells before people around me say anything."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-002",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "social"
+    ],
+    "variants": {
+      "global": "Busy crowded places drain my energy faster than calm places.",
+      "ghana": "When a place fills with many people and movement, I feel my energy drop sooner than in a calmer setting.",
+      "west_africa": "In a packed market, vehicle, or gathering, I tire sooner than when the same task is done in a quiet spot."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-003",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "light"
+    ],
+    "variants": {
+      "global": "Bright overhead light starts to bother me if I stay under it a long time.",
+      "ghana": "If I remain under strong ceiling light for a long stretch, my eyes or head begin to feel strained.",
+      "west_africa": "Under bright fixed lighting for many hours, I start to feel uneasy or worn down."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-004",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "When noise keeps rising, I move to a calmer spot if I can.",
+      "ghana": "If the sound level keeps climbing, I look for a quieter corner or step outside when that is possible.",
+      "west_africa": "As noise builds around me, I shift toward a calmer area when there is a way to do it."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-005",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "touch"
+    ],
+    "variants": {
+      "global": "Rough seams or tags on clothing pull my attention away from what I am doing.",
+      "ghana": "Scratchy fabric edges or labels on my clothes distract me from the task in front of me.",
+      "west_africa": "When cloth rubs roughly on my skin, I lose focus on what I meant to finish."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-006",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "temperature"
+    ],
+    "variants": {
+      "global": "I notice small shifts in heat or cold in a room before others comment.",
+      "ghana": "I feel slight changes in warmth or cool air in a space before someone else speaks about it.",
+      "west_africa": "Temperature changes in the air around me reach my attention early compared with people nearby."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-007",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "Deep engine rumble or heavy machine vibration catches my attention quickly.",
+      "ghana": "Low shaking from engines or big machines pulls my attention as soon as it starts.",
+      "west_africa": "Strong steady vibration from motors or equipment stands out to me right away."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-008",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "recovery"
+    ],
+    "variants": {
+      "global": "After someone shouts very close to me, I need a little time before I feel steady again.",
+      "ghana": "When a person raises their voice right beside me, I take a short while before I feel settled.",
+      "west_africa": "Loud speech pressed near my ear leaves me needing a brief pause before I feel normal."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-009",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "observable"
+    ],
+    "variants": {
+      "global": "People can tell from my face or body when a place feels too loud for me.",
+      "ghana": "Others around me can see signs that the noise level is too much for me.",
+      "west_africa": "My expression or posture shows when sound in a place is overwhelming me."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-010",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "recovery"
+    ],
+    "variants": {
+      "global": "After an overstimulating spell, I need a quiet break before I can focus well again.",
+      "ghana": "When a spell feels overstimulating, I recover focus faster if I get a quiet pause.",
+      "west_africa": "I work best again only after some calm time following a very stimulating stretch."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-011",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "If music or a speaker is very loud, I turn it down or step away when I am allowed.",
+      "ghana": "When playback is far too loud, I lower the volume or leave the spot if that is acceptable.",
+      "west_africa": "Very loud sound from a device or speaker leads me to reduce it or move off when I can."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-012",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "taste_texture"
+    ],
+    "variants": {
+      "global": "Food textures that are very slimy or very rough are hard to ignore while I eat.",
+      "ghana": "While eating, textures that are extremely slippery or coarse stay on my mind.",
+      "west_africa": "Certain mouth-feels while chewing keep pulling my attention even if I want to think of something else."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-013",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "light"
+    ],
+    "variants": {
+      "global": "I choose a seat away from flashing or flickering lights when I have a choice.",
+      "ghana": "Given a choice, I sit where lights do not flicker or flash in my eyes.",
+      "west_africa": "If seats are open, I pick one that avoids strobe-like or broken-bulb flicker."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-014",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "social"
+    ],
+    "variants": {
+      "global": "Crowded busy places feel about the same to my energy as quiet places.",
+      "ghana": "A full room and an empty room feel roughly equal in how much energy they take from me.",
+      "west_africa": "Whether a place is packed or nearly empty barely changes how tired I feel."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-015",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "light"
+    ],
+    "variants": {
+      "global": "Strong overhead light rarely bothers me even after many hours.",
+      "ghana": "Ceiling lights can stay bright for a long time without me feeling strained.",
+      "west_africa": "I can stay under bright fixed lights a long while without discomfort."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-016",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "Rising noise rarely makes me look for a different spot.",
+      "ghana": "Louder and louder sound around me seldom pushes me to relocate.",
+      "west_africa": "I usually stay put even when the noise level climbs around me."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-017",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "touch"
+    ],
+    "variants": {
+      "global": "Rough clothing seams rarely distract me from my task.",
+      "ghana": "Tags and coarse seams on clothes seldom pull me off track.",
+      "west_africa": "Fabric rubbing roughly hardly breaks my concentration."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-018",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "temperature"
+    ],
+    "variants": {
+      "global": "I rarely notice small heat or cold shifts unless someone points them out.",
+      "ghana": "Minor temperature changes in a room usually pass me by until another person mentions them.",
+      "west_africa": "Slight warm or cool shifts in the air seldom reach my attention first."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-019",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "Engine rumble or machine vibration blends into the background for me.",
+      "ghana": "Heavy low vibration from equipment is easy for me to tune out.",
+      "west_africa": "Motor rumble fades into the background without grabbing me."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-020",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "recovery"
+    ],
+    "variants": {
+      "global": "Loud speech near me rarely leaves me feeling off balance for more than a moment.",
+      "ghana": "A shout close by unsettles me only briefly, if at all.",
+      "west_africa": "Sharp loud words beside me hardly ripple my calm."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-021",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "observable"
+    ],
+    "variants": {
+      "global": "Others rarely read discomfort on my face about the noise level.",
+      "ghana": "People seldom see from my look that sound is too much for me.",
+      "west_africa": "My face does not often show that noise is overwhelming."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-022",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I return to clear focus quickly right after a very stimulating stretch.",
+      "ghana": "Right after heavy stimulation, I snap back to focus without needing much pause.",
+      "west_africa": "I do not need a long quiet gap before thinking clearly again after intensity."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-023",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "Very loud music or announcements rarely make me lower the volume or leave.",
+      "ghana": "Even when playback is extremely loud, I usually stay and accept it.",
+      "west_africa": "Blaring sound seldom leads me to turn it down or walk away."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-024",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "taste_texture"
+    ],
+    "variants": {
+      "global": "Extreme slimy or rough food textures rarely bother me while eating.",
+      "ghana": "Unusual mouth-feel during meals seldom distracts me.",
+      "west_africa": "Texture surprises in food hardly pull my mind away."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-025",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "light"
+    ],
+    "variants": {
+      "global": "Flickering or flashing lights rarely change where I choose to sit.",
+      "ghana": "Broken-bulb flicker or flashing signs seldom affect my seat choice.",
+      "west_africa": "I pick seats without thinking about flicker risk."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-001",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "focus"
+    ],
+    "variants": {
+      "global": "When I mean to finish one task, unrelated sounds often pull my mind away.",
+      "ghana": "While I am trying to finish one piece of work, background sounds often steal my thoughts.",
+      "west_africa": "If I plan to stick to a single job, side noises still snatch my attention."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-002",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "switching"
+    ],
+    "variants": {
+      "global": "I jump between small tasks many times before the main one is done.",
+      "ghana": "I hop among minor jobs again and again before the big task reaches the end.",
+      "west_africa": "Little side errands split my time before the chief task is closed."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-003",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "I can read or listen to instructions for a long stretch without losing the thread.",
+      "ghana": "I hold the line of a long explanation in my head while reading or listening.",
+      "west_africa": "Long guidance stays clear in my mind while I take it in."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-004",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "detail"
+    ],
+    "variants": {
+      "global": "Small mistakes in a form or list jump out at me while I check it.",
+      "ghana": "When I scan a list or form, little errors show up to me quickly.",
+      "west_africa": "Typos or missing lines catch my eye during review."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-005",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "distraction"
+    ],
+    "variants": {
+      "global": "A new message alert often interrupts me even when I planned to wait.",
+      "ghana": "Ping from a device often breaks my plan to stay off it for a while.",
+      "west_africa": "Notifications cut in when I meant to stay focused elsewhere."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-006",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "I return to the same task after a short break and pick up where I left off.",
+      "ghana": "After stepping away briefly, I slide back into the same task smoothly.",
+      "west_africa": "A pause does not erase my place in the work I was doing."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-007",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "dual"
+    ],
+    "variants": {
+      "global": "Doing two simple chores at once, like stirring and watching a pot, feels natural.",
+      "ghana": "Pairing two easy physical routines at the same time feels fine to me.",
+      "west_africa": "Light dual tasks side by side do not confuse me."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-008",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "memory_cue"
+    ],
+    "variants": {
+      "global": "I rely on a written note or mark so I do not forget the next step.",
+      "ghana": "I leave myself a short written cue for the next action so it is not lost.",
+      "west_africa": "A scrap of paper or phone note guards the next step in my mind."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-009",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "filter"
+    ],
+    "variants": {
+      "global": "Background chatter fades for me when I decide to lock onto one speaker.",
+      "ghana": "When I choose one voice to follow, other voices drop in importance in my ears.",
+      "west_africa": "I can narrow listening to one person amid side talk."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-010",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "I lose track of time when I am deeply into a hands-on task I enjoy.",
+      "ghana": "Hours can pass unnoticed when I am absorbed in a satisfying manual task.",
+      "west_africa": "A hands-on project I like can swallow my sense of clock time."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-011",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "switching"
+    ],
+    "variants": {
+      "global": "Switching tools mid-task costs me a moment to remember what comes next.",
+      "ghana": "Changing tools in the middle of a job creates a short blank in my sequence memory.",
+      "west_africa": "Each tool swap needs a beat before the next move is clear."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-012",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "detail"
+    ],
+    "variants": {
+      "global": "I skim a page and miss a line that was clearly printed there.",
+      "ghana": "Quick reading makes me skip a printed line that was present.",
+      "west_africa": "Fast scanning lets a visible line slip past me."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-013",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "focus"
+    ],
+    "variants": {
+      "global": "Unrelated sounds rarely pull me off a task I meant to finish.",
+      "ghana": "Side noise seldom steals me from a job I chose to complete.",
+      "west_africa": "Background sound hardly breaks the task I locked onto."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-014",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "switching"
+    ],
+    "variants": {
+      "global": "I stay on one task until it is done before opening side tasks.",
+      "ghana": "I close the main job before I open smaller ones.",
+      "west_africa": "Side errands wait until the chief task is finished."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-015",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "Long stretches of reading or listening often lose me halfway.",
+      "ghana": "Extended explanations often drift out of my grasp midway.",
+      "west_africa": "Long guidance tends to blur before the end."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-016",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "detail"
+    ],
+    "variants": {
+      "global": "Small errors in a list are easy for me to miss on first pass.",
+      "ghana": "Little mistakes hide from me during a quick check.",
+      "west_africa": "First scan of a form often leaves errors unseen."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-017",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "distraction"
+    ],
+    "variants": {
+      "global": "I can ignore new message alerts when I planned a focus block.",
+      "ghana": "Planned focus time usually holds even when the device pings.",
+      "west_africa": "I keep alerts from breaking a focus block I set."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-018",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "After a break I often need to rebuild the whole picture of the task.",
+      "ghana": "Returning from pause, I rebuild the task picture slowly.",
+      "west_africa": "Post-break restart feels like starting near the beginning."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-019",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "dual"
+    ],
+    "variants": {
+      "global": "Even two simple chores at once feel tangled for me.",
+      "ghana": "Pairing two easy routines at once confuses my hands or thoughts.",
+      "west_africa": "Dual light tasks feel knotted rather than smooth."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-020",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "memory_cue"
+    ],
+    "variants": {
+      "global": "I remember the next step without needing a written cue most of the time.",
+      "ghana": "Next steps stay in mind without paper or phone reminders.",
+      "west_africa": "I seldom need a note for what comes next."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-021",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "filter"
+    ],
+    "variants": {
+      "global": "Side chatter stays loud in my mind even when I try to focus on one speaker.",
+      "ghana": "Other voices stay prominent even when I pick one person to hear.",
+      "west_africa": "Background talk keeps competing when I aim at one voice."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-022",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "I rarely lose track of clock time during hands-on work.",
+      "ghana": "Hands-on tasks keep my sense of passing hours steady.",
+      "west_africa": "Clock awareness stays sharp even in absorbing manual work."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-023",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "switching"
+    ],
+    "variants": {
+      "global": "Switching tools mid-task feels seamless with almost no pause.",
+      "ghana": "Tool changes mid-job flow without a hitch.",
+      "west_africa": "Moving from one implement to another is instant for me."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-024",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "detail"
+    ],
+    "variants": {
+      "global": "A careful read usually catches every printed line.",
+      "ghana": "Slow read picks up each line that is on the page.",
+      "west_africa": "Line-by-line review rarely skips visible text."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-025",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "focus"
+    ],
+    "variants": {
+      "global": "I can keep mental focus on one topic through long waiting periods.",
+      "ghana": "Waiting a long time in a queue does not scatter my thoughts from the topic I chose.",
+      "west_africa": "Long waits leave my chosen topic stable in mind."
+    }
+  }
+]

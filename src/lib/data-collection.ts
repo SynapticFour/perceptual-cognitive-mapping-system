@@ -214,9 +214,17 @@ export class DataCollectionService {
   async saveFinalPipeline(
     stored: StoredPipelineSession,
     questionHistory: QuestionResponse[],
-    completionStatus: 'confidence_met' | 'max_questions' | 'user_exit' = 'user_exit'
+    completionStatus:
+      | 'confidence_met'
+      | 'max_questions'
+      | 'user_exit'
+      | 'diminishing_returns' = 'user_exit'
   ) {
     if (!this.sessionId || !this.startTime) return;
+
+    /** `diminishing_returns` is stored as `confidence_met` for Postgres CHECK constraints; localStorage keeps the semantic reason. */
+    const completionForRemote: 'confidence_met' | 'max_questions' | 'user_exit' =
+      completionStatus === 'diminishing_returns' ? 'confidence_met' : completionStatus;
 
     this.assessmentTracker.addCheckpoint('assessment_completed', {
       completionStatus,
@@ -236,7 +244,7 @@ export class DataCollectionService {
       question_path: [...this.questionPath],
       responses: [...this.responses],
       final_profile: stored as unknown as Json,
-      completion_status: completionStatus,
+      completion_status: completionForRemote,
       cultural_context: culturalContext
     };
 
@@ -302,7 +310,7 @@ export class DataCollectionService {
                 .from('sessions')
                 .update({
                   completed_at: new Date().toISOString(),
-                  completion_status: completionStatus,
+                  completion_status: completionForRemote,
                   assessment_version: this.assessmentVersion,
                   question_path: this.questionPath,
                   duration_ms: durationMs,

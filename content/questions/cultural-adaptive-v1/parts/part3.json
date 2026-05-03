@@ -1,0 +1,702 @@
+[
+  {
+    "id": "ca-v1-structure_preference-001",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I write numbered steps before starting a new multi-step chore.",
+      "ghana": "Fresh many-step tasks get a numbered list from me first.",
+      "west_africa": "New complex chores start with ordered notes."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-002",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "I like open-ended days where tasks can reshuffle freely.",
+      "ghana": "Flexible days with reshuffle room feel better than rigid slots.",
+      "west_africa": "Open schedules please me more than fixed minute maps."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-003",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "rules"
+    ],
+    "variants": {
+      "global": "Clear written rules lower my stress in shared spaces.",
+      "ghana": "Posted plain rules calm me in shared work or living areas.",
+      "west_africa": "Visible simple rules ease me in common spaces."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-004",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "improv"
+    ],
+    "variants": {
+      "global": "If materials are missing, I improvise with what is nearby.",
+      "ghana": "Absent tools lead me to nearby substitutes.",
+      "west_africa": "Gaps in supplies spark on-the-spot swaps."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-005",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I pack bags the night before a morning trip.",
+      "ghana": "Evening-before packing is my habit for early travel.",
+      "west_africa": "Morning trips get bags ready the prior night."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-006",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "Surprise visits feel disruptive when I had a fixed task list.",
+      "ghana": "Unplanned guests clash with a tight written list day.",
+      "west_africa": "Pop-in visits jar me on list-heavy days."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-007",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "environment"
+    ],
+    "variants": {
+      "global": "I reset objects to the same spots so I can find them again.",
+      "ghana": "Things return to fixed homes so search is short.",
+      "west_africa": "Stable object homes speed finding."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-008",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "rules"
+    ],
+    "variants": {
+      "global": "I question a rule that blocks safety or fairness even if it is written.",
+      "ghana": "Written rules that risk harm or unfairness get a spoken question from me.",
+      "west_africa": "I raise concerns about bad posted rules."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-009",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "sequence"
+    ],
+    "variants": {
+      "global": "Doing steps out of order on purpose feels uncomfortable if order matters for quality.",
+      "ghana": "Wrong order on purpose feels off when order affects outcome.",
+      "west_africa": "Sequence jumps unsettle me when sequence affects results."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-010",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "improv"
+    ],
+    "variants": {
+      "global": "I prefer a recipe or pattern the first time I try a new craft.",
+      "ghana": "First attempt at a craft wants a pattern in hand.",
+      "west_africa": "New craft starts with a model to copy."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-011",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I estimate time for each subtask before I begin.",
+      "ghana": "Subtask minutes get guessed before start.",
+      "west_africa": "I slice total time across parts ahead of work."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-012",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "I enjoy discovering the path while moving rather than mapping everything first.",
+      "ghana": "Forward motion with partial map feels fun.",
+      "west_africa": "Full pre-map is less fun than discover-as-I-go."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-013",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I start multi-step chores without writing steps first.",
+      "ghana": "Many-step jobs begin straight from the head without lists.",
+      "west_africa": "I launch complex tasks without numbered prep."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-014",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "Tight schedules with little reshuffle room feel better to me than loose days.",
+      "ghana": "Minute-tight plans beat fully open days for my comfort.",
+      "west_africa": "I prefer heavy structure over floating tasks."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-015",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "rules"
+    ],
+    "variants": {
+      "global": "Posted rules feel neutral or slightly stressful rather than calming.",
+      "ghana": "Wall rules neither calm nor excite me; slight stress.",
+      "west_africa": "Written shared rules add little comfort."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-016",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "improv"
+    ],
+    "variants": {
+      "global": "Missing materials stall me until the right tool appears.",
+      "ghana": "Without exact supplies I pause rather than swap.",
+      "west_africa": "Wrong-tool work is hard to start."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-017",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I pack on the morning of travel rather than the night before.",
+      "ghana": "Travel bags get packed at wake time.",
+      "west_africa": "Same-day morning pack is my norm."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-018",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "Surprise visits feel welcome even on a fixed task day.",
+      "ghana": "Unplanned guests fit fine beside a list.",
+      "west_africa": "Drop-in visitors sit well with planned chores."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-019",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "environment"
+    ],
+    "variants": {
+      "global": "I leave tools where I last used them and search later.",
+      "ghana": "Objects rest where dropped until needed again.",
+      "west_africa": "Floating placement is my habit."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-020",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "environment"
+    ],
+    "variants": {
+      "global": "I keep the same tool layout between sessions so I can grab fast.",
+      "ghana": "Tools return to the same layout each time so my hand finds them fast.",
+      "west_africa": "I reset my workspace layout the same way between sessions."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-021",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "sequence"
+    ],
+    "variants": {
+      "global": "Order of steps rarely matters to me if the end result looks fine.",
+      "ghana": "End quality OK means order felt flexible to me.",
+      "west_africa": "Step sequence is loose in my mind."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-022",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "improv"
+    ],
+    "variants": {
+      "global": "I try a new craft first by experimenting without a pattern.",
+      "ghana": "Pattern-free first trial is my craft style.",
+      "west_africa": "New making starts with free play."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-023",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I begin work and discover time needs as I go.",
+      "ghana": "Clock needs reveal during the job.",
+      "west_africa": "No upfront subtask time guesses."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-024",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "I want the full map before any first step.",
+      "ghana": "Complete preview before motion feels required.",
+      "west_africa": "All-at-once planning precedes action."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-025",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "environment"
+    ],
+    "variants": {
+      "global": "Shared tidy zones matter less to me than finishing the job.",
+      "ghana": "End finish beats mid-way neat placement for me.",
+      "west_africa": "Completion tops strict tidiness."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-001",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "When the method must change mid-task, I switch without long complaint.",
+      "ghana": "A required method swap mid-job gets a quick shift from me.",
+      "west_africa": "Forced path change mid-task draws little grumble time."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-002",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "Trying a new route to a familiar place feels refreshing.",
+      "ghana": "A different path to the same end feels like a treat.",
+      "west_africa": "Unfamiliar roads to known places please me."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-003",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "routine"
+    ],
+    "variants": {
+      "global": "I feel uneasy the first day a daily routine is interrupted.",
+      "ghana": "Day one of a broken routine feels off in my body.",
+      "west_africa": "Routine break day one unsettles me."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-004",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "problem_solving"
+    ],
+    "variants": {
+      "global": "If a tool breaks, I look for another object that can do the job.",
+      "ghana": "Tool failure sends me hunting for a stand-in object.",
+      "west_africa": "Broken gear triggers substitute search."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-005",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "social"
+    ],
+    "variants": {
+      "global": "New faces in a steady work group take me a meeting or two to adjust to.",
+      "ghana": "Fresh members in a fixed team need a couple meets from me.",
+      "west_africa": "Steady crew changes need warm-up meets."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-006",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "Weather shifts my outdoor plan and I rebuild the plan fast.",
+      "ghana": "Rain or wind reshapes outdoor work with quick replan.",
+      "west_africa": "Sky change gets a fast alternate plan."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-007",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "I revisit old habits even when a new habit would work better.",
+      "ghana": "Better new habit still loses to old groove sometimes.",
+      "west_africa": "Comfort habit wins over improved new pattern at times."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-008",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "instruction"
+    ],
+    "variants": {
+      "global": "I need the reason for a rule change before I accept the new rule.",
+      "ghana": "Rule swaps want a clear why from me.",
+      "west_africa": "New rules need rationale to stick."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-009",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "technology"
+    ],
+    "variants": {
+      "global": "Updated software layout slows me down until I explore every corner.",
+      "ghana": "Fresh app layout needs a full click tour before speed returns.",
+      "west_africa": "UI redesign needs exploration time."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-010",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "Canceled plans free me to do something else useful quickly.",
+      "ghana": "Plan drops become quick slots for other useful acts.",
+      "west_africa": "Cancelation redirects me fast to next useful thing."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-011",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "I sample unfamiliar food willingly when ingredients are named.",
+      "ghana": "Named parts make unknown dishes OK to taste.",
+      "west_africa": "Ingredient labels open me to new plates."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-012",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "routine"
+    ],
+    "variants": {
+      "global": "I return smoothly to a routine after a holiday break.",
+      "ghana": "Post-holiday rhythm snaps back for me.",
+      "west_africa": "After time off, old daily pattern returns easily."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-013",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "Method change mid-task frustrates me for a noticeable stretch.",
+      "ghana": "Mid-job method swap costs me mood time.",
+      "west_africa": "Path change mid-task irritates before I move on."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-014",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "A new route to a familiar place feels like unnecessary risk.",
+      "ghana": "Different roads to the same place feel risky not fun.",
+      "west_africa": "Alternate paths feel needless."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-015",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "routine"
+    ],
+    "variants": {
+      "global": "First interrupted routine day feels fine to me.",
+      "ghana": "Routine break day one feels normal.",
+      "west_africa": "Day-one routine gap does not shake me."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-016",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "problem_solving"
+    ],
+    "variants": {
+      "global": "Tool break stops the job until the exact tool is fixed or replaced.",
+      "ghana": "Without the right tool I halt rather than substitute.",
+      "west_africa": "Exact-tool dependence on failure."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-017",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "social"
+    ],
+    "variants": {
+      "global": "New people in a steady group feel instantly normal to me.",
+      "ghana": "Fresh faces slot in immediately for me.",
+      "west_africa": "Instant comfort with new team members."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-018",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "Weather change leaves me stuck without a new plan for a while.",
+      "ghana": "Sky shift freezes my planning for a bit.",
+      "west_africa": "Weather turns create plan blanks."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-019",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "I adopt a better new habit quickly when I see it works.",
+      "ghana": "Shown better habit swaps in fast for me.",
+      "west_africa": "Evidence of improvement drives fast habit swap."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-020",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "instruction"
+    ],
+    "variants": {
+      "global": "I accept a rule change on brief notice without needing a long reason.",
+      "ghana": "Short notice rule change sits fine without deep why.",
+      "west_africa": "New rule on brief word works for me."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-021",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "technology"
+    ],
+    "variants": {
+      "global": "Updated software feels intuitive right away.",
+      "ghana": "New layout clicks immediately.",
+      "west_africa": "Redesign speeds me up from day one."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-022",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "Canceled plans leave me drifting unsure what to do next.",
+      "ghana": "Dropped plans create empty unsure minutes.",
+      "west_africa": "Cancelation empties my next move."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-023",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "Unfamiliar food makes me refuse even when ingredients are named.",
+      "ghana": "Unknown dishes get a no even with parts listed.",
+      "west_africa": "Named unfamiliar plates still get declined."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-024",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "routine"
+    ],
+    "variants": {
+      "global": "After a long break, rebuilding routine takes many days.",
+      "ghana": "Holiday return stretches routine rebuild across days.",
+      "west_africa": "Slow return to rhythm after time away."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-025",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "problem_solving"
+    ],
+    "variants": {
+      "global": "I combine odd objects creatively when standard tools are gone.",
+      "ghana": "No standard tool sparks creative mashups from me.",
+      "west_africa": "Odd combos finish jobs without proper gear."
+    }
+  }
+]

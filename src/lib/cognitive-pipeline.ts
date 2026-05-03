@@ -12,9 +12,11 @@ import type { RawResponse, SessionRaw } from '@/types/raw-session';
 import type { CognitiveProfilePublic } from '@/types/profile-public';
 import { interpretCognitiveFeatures } from '@/lib/interpretation';
 import { defaultUiStrings } from '@/lib/ui-strings';
-import { PIPELINE_STORAGE_VERSION, type StoredPipelineSession } from '@/types/pipeline-session';
-import type { EightConstructOutcome } from '@/types/eight-construct-outcome';
-
+import {
+  PIPELINE_STORAGE_VERSION,
+  type SessionPersistenceMeta,
+  type StoredPipelineSession,
+} from '@/types/pipeline-session';
 export function questionResponseToRawResponse(question: AssessmentQuestion, qr: QuestionResponse): RawResponse {
   const type = question.type;
   const difficulty = question.difficulty;
@@ -105,11 +107,7 @@ export function toStoredPipelineSession(
   responseCount: number,
   completedAt: string = new Date().toISOString(),
   scoringResult: ScoringResult,
-  sessionMeta?: {
-    sessionId?: string;
-    revision?: number;
-    eightConstructScores?: EightConstructOutcome | null;
-  }
+  sessionMeta?: SessionPersistenceMeta
 ): StoredPipelineSession {
   const { embedding, publicProfile, features } = pipeline;
   const out: StoredPipelineSession = {
@@ -134,6 +132,24 @@ export function toStoredPipelineSession(
   };
   if (sessionMeta?.eightConstructScores) {
     out.eightConstructScores = sessionMeta.eightConstructScores;
+  }
+  if (sessionMeta?.profileAdaptiveSummary) {
+    out.profileAdaptiveSummary = sessionMeta.profileAdaptiveSummary;
+  }
+  if (sessionMeta?.stemRegionUsed) {
+    out.stemRegionUsed = sessionMeta.stemRegionUsed;
+  }
+  if (sessionMeta?.questionBankId) {
+    out.questionBankId = sessionMeta.questionBankId;
+  }
+  if (sessionMeta?.bankVersion) {
+    out.bankVersion = sessionMeta.bankVersion;
+  }
+  if (sessionMeta?.adaptiveMode) {
+    out.adaptiveMode = sessionMeta.adaptiveMode;
+  }
+  if (sessionMeta?.researchMode !== undefined) {
+    out.researchMode = sessionMeta.researchMode;
   }
   return out;
 }

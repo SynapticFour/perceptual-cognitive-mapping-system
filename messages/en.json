@@ -41,6 +41,9 @@
     "group_analysis_hint": "Optional: combine 2–6 share payloads to see diversity, environment fit, and facilitation hints together (research / team contexts).",
     "research_bundle": "Research bundle (ZIP)",
     "research_bundle_no_history": "No answer history found in this browser — research ZIP needs stored responses from this device.",
+    "download_full_session": "Full session (JSON)",
+    "download_full_session_no_history": "No answer history found in this browser — full-session export needs stored responses from this device.",
+    "download_full_session_filename": "full-session-{date}.json",
     "print_summary": "Printable summary",
     "print_heading": "Your session summary",
     "print_meta": "{count} responses · {date}",
@@ -395,7 +398,9 @@
     }
   },
   "offline": {
-    "pending_sync_banner": "{n} completed session(s) waiting to upload when online (optional cloud sync)."
+    "pending_sync_banner": "{n} completed session(s) waiting to upload when online (optional cloud sync).",
+    "pending_sync_export": "Download queued sessions (JSON)",
+    "pending_sync_export_aria": "Save one full-session JSON file per queued offline session"
   },
   "field": {
     "offline_tools_heading": "Offline / field setup",
@@ -447,7 +452,15 @@
     "cluster_row": "{id} — members {member_list}. {summary}",
     "diversity_score_line": "Score: {score} / 100 (model scale)",
     "friction_line": "{traits} — strength {strength}: {suggestion}",
-    "environment_line": "{id} ({intensity}): {narrative}"
+    "environment_line": "{id} ({intensity}): {narrative}",
+    "setting_context": "Setting context (facilitator view)",
+    "setting_context_hint": "Rates the environment, not people. Used only for aggregate person–environment mismatch hints.",
+    "predictability": "Predictability / stability",
+    "stimulation": "Sensory stimulation",
+    "interruption": "Interruptions",
+    "routing_entropy": "Routing-profile spread (entropy 0–1): {value}",
+    "structured_recs": "Tagged actionable insights",
+    "rec_category": "Category: {category}"
   },
   "pipeline": {
     "pattern": {

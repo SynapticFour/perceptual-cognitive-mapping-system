@@ -58,9 +58,22 @@ describe('group-cognitive-analysis', () => {
     const r = analyzeMultiProfileGroup([a, b]);
     expect(r.memberCount).toBe(2);
     expect(r.diversity.score).toBeGreaterThanOrEqual(0);
+    expect(r.diversity.routingProfileEntropy01).toBeGreaterThanOrEqual(0);
+    expect(r.diversity.routingProfileEntropy01).toBeLessThanOrEqual(1);
     expect(r.clusters.length).toBeGreaterThanOrEqual(1);
     expect(r.recommendations.length).toBeGreaterThan(0);
+    expect(r.recommendationItems.length).toBeGreaterThan(0);
     expect(r.summaryNarrative.length).toBeGreaterThan(40);
+  });
+
+  it('environment stress triggers structure_need_chaotic_env and structured rec', () => {
+    const a = makeMember('m0', 'A', 62, 1);
+    const b = makeMember('m1', 'B', 62, 2);
+    const env = { predictability01: 0.32, stimulation01: 0.2, interruption01: 0.2 };
+    const r = analyzeMultiProfileGroup([a, b], { environment: env });
+    expect(r.environment).toEqual(env);
+    expect(r.risks.some((x) => x.id === 'structure_need_chaotic_env')).toBe(true);
+    expect(r.recommendationItems.some((x) => x.id === 'rec_temporal_visible_sequence')).toBe(true);
   });
 
   it('throws when fewer than two members', () => {

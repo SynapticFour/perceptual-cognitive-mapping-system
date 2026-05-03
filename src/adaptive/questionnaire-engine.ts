@@ -15,7 +15,18 @@ import {
   buildPerDimensionRoutingDiagnostics,
   type PerDimensionRoutingDiagnostics,
 } from '@/adaptive/routing-diagnostics';
+import {
+  buildProfileConfidenceTrace,
+  computeProfileAdaptiveSnapshot,
+  DEFAULT_PROFILE_ADAPTIVE_CONFIG,
+  marginalSessionConfidenceGain,
+  profileCoreQuestionBoost,
+  profileRefinementQuestionBoost,
+  type ProfileAdaptiveConfig,
+  type ProfileAdaptiveSnapshot,
+} from '@/adaptive/profile-adaptive';
 import { ScoringModel, type CognitiveDimension } from '@/scoring';
+import { resolveAdaptiveModeResolution } from '@/lib/adaptive-mode-resolution';
 
 /** Research-defined maximum number of answered questions per assessment (including refinement). */
 export const ENGINE_HARD_CAP_TOTAL_QUESTIONS = 30;
@@ -29,7 +40,7 @@ export interface QuestionnaireState {
   startTime: Date;
   phase: 'core' | 'refinement' | 'complete';
   questionPath: string[];
-  completionReason: 'confidence_met' | 'max_questions' | 'user_exit' | null;
+  completionReason: 'confidence_met' | 'max_questions' | 'user_exit' | 'diminishing_returns' | null;
 }
 
 export interface QuestionSelectionCriteria {
@@ -53,6 +64,19 @@ export interface ResearchAssessmentConfig {
    * - `all_dimensions` — every dimension must reach threshold (aligns with strict adaptive specs).
    */
   stoppingRule?: 'majority_dimensions' | 'all_dimensions';
+  /**
+   * **Required** on the merged runtime config — resolved in the constructor via
+   * {@link resolveAdaptiveModeResolution} (env `NEXT_PUBLIC_PCMS_ADAPTIVE_MODE`, optional
+   * `NEXT_PUBLIC_PCMS_RESEARCH_MODE`, or explicit constructor override).
+   *
+   * - `routing_coverage` — selection driven primarily by **scoring-model** `routingCoverage()` (finalConfidence per tag).
+   * - `profile_diagnostic` — adds **profile** contradiction/variance boosts and profile stop rules.
+   */
+  adaptiveMode: 'routing_coverage' | 'profile_diagnostic';
+  /** When true (env `NEXT_PUBLIC_PCMS_RESEARCH_MODE`), forces `profile_diagnostic` and UI should disable lossy share flows. */
+  researchMode?: boolean;
+  /** Overrides for profile mode (merged onto {@link DEFAULT_PROFILE_ADAPTIVE_CONFIG}). */
+  profileAdaptive?: Partial<ProfileAdaptiveConfig>;
 }
 
 export class AdaptiveQuestionnaireEngine {
@@ -67,6 +91,8 @@ export class AdaptiveQuestionnaireEngine {
    * that need additional confidence building.
    */
   private refinementFocusTags: RoutingWeightKey[] | null = null;
+  /** Session confidence after each answer (profile mode); used for diminishing-returns stop. */
+  private profileConfidenceTrace: number[] = [];
 
   /**
    * Initializes the adaptive questionnaire engine with cultural context and configuration.
@@ -85,13 +111,19 @@ export class AdaptiveQuestionnaireEngine {
     // Load questions appropriate for the cultural context
     this.questions = getQuestionsForContext(culturalContext);
     
-    // Merge default config with provided overrides
+    const resolved = resolveAdaptiveModeResolution({
+      adaptiveMode: config?.adaptiveMode,
+      researchMode: config?.researchMode,
+    });
+    // Merge default config with provided overrides — `adaptiveMode` / `researchMode` always from resolution.
     this.config = {
       confidenceThreshold: 0.75, // Minimum confidence required for completion
-      maxCoreQuestions: 15,      // Maximum questions in core phase
+      maxCoreQuestions: 15, // Maximum questions in core phase
       maxRefinementQuestions: 10, // Maximum questions in refinement phase
       maxTotalQuestions: ENGINE_HARD_CAP_TOTAL_QUESTIONS, // Absolute upper limit
       ...config,
+      adaptiveMode: resolved.adaptiveMode,
+      researchMode: resolved.researchMode,
     };
     
     // Initialize supporting models
@@ -106,6 +138,15 @@ export class AdaptiveQuestionnaireEngine {
     this.state = this.initializeState(culturalContext);
   }
 
+  /** Persisted on `StoredPipelineSession` for reproducibility. */
+  getAdaptiveMode(): ResearchAssessmentConfig['adaptiveMode'] {
+    return this.config.adaptiveMode;
+  }
+
+  getResearchMode(): boolean {
+    return this.config.researchMode === true;
+  }
+
   private get totalQuestionHardCap(): number {
     return this.config.totalQuestionHardCap ?? ENGINE_HARD_CAP_TOTAL_QUESTIONS;
   }
@@ -116,6 +157,31 @@ export class AdaptiveQuestionnaireEngine {
       this.questions,
       this.scoringModel
     );
+  }
+
+  private isProfileMode(): boolean {
+    return this.config.adaptiveMode === 'profile_diagnostic';
+  }
+
+  private mergedProfileConfig(): ProfileAdaptiveConfig {
+    return { ...DEFAULT_PROFILE_ADAPTIVE_CONFIG, ...this.config.profileAdaptive };
+  }
+
+  private getQuestionsById(): Map<string, AssessmentQuestion> {
+    return new Map(this.questions.map((q) => [q.id, q]));
+  }
+
+  private recordProfileConfidenceTrace(): void {
+    if (!this.isProfileMode()) return;
+    const snap = computeProfileAdaptiveSnapshot(
+      this.state.questionHistory,
+      this.getQuestionsById(),
+      this.mergedProfileConfig()
+    );
+    this.profileConfidenceTrace.push(snap.sessionConfidence);
+    if (this.profileConfidenceTrace.length > 40) {
+      this.profileConfidenceTrace.shift();
+    }
   }
 
   private initializeState(culturalContext: 'western' | 'ghana' | 'universal'): QuestionnaireState {
@@ -206,18 +272,33 @@ export class AdaptiveQuestionnaireEngine {
 
     const counts = this.coverageModel.countQuestionsPerTag(this.state.questionHistory, this.questions);
     const coverage = this.routingCoverage();
-    const scoredQuestions = availableCore.map((q) => ({
-      question: q,
-      score: this.calculateCoreQuestionScore(q, counts, coverage),
-    }));
+    const snap = this.isProfileMode()
+      ? computeProfileAdaptiveSnapshot(this.state.questionHistory, this.getQuestionsById(), this.mergedProfileConfig())
+      : null;
+    const pcfg = this.mergedProfileConfig();
+    const blend = pcfg.coreLegacyBlend;
 
-    scoredQuestions.sort((a, b) => b.score - a.score);
+    const scoredQuestions = availableCore.map((q) => {
+      const legacy = this.calculateCoreQuestionScore(q, counts, coverage);
+      const profileB = snap ? profileCoreQuestionBoost(q, snap, pcfg) : 0;
+      const score = snap ? legacy * blend + profileB * (1 - blend) : legacy;
+      return { question: q, score };
+    });
+
+    scoredQuestions.sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.question.id.localeCompare(b.question.id);
+    });
     return scoredQuestions[0]!.question;
   }
 
   private selectRefinementQuestion(): AssessmentQuestion | null {
     const coverage = this.routingCoverage();
     const threshold = this.config.confidenceThreshold;
+    const snap = this.isProfileMode()
+      ? computeProfileAdaptiveSnapshot(this.state.questionHistory, this.getQuestionsById(), this.mergedProfileConfig())
+      : null;
+    const pcfg = this.mergedProfileConfig();
 
     /**
      * When refinement is restricted to {@link refinementFocusTags}, a single “best” tag can still
@@ -240,15 +321,18 @@ export class AdaptiveQuestionnaireEngine {
         if (available.length === 0) continue;
         const scoredQuestions = available.map((q) => ({
           question: q,
-          score: this.calculateRefinementQuestionScore(q, targetTag),
+          score: this.refinementQuestionTotalScore(q, targetTag, snap, pcfg),
         }));
-        scoredQuestions.sort((a, b) => b.score - a.score);
+        scoredQuestions.sort((a, b) => {
+          if (b.score !== a.score) return b.score - a.score;
+          return a.question.id.localeCompare(b.question.id);
+        });
         return scoredQuestions[0]!.question;
       }
 
       const refinementQuestions = getAssessmentQuestions('refinement', this.state.culturalContext);
       const available = refinementQuestions.filter((q) => !this.state.answeredQuestions.has(q.id));
-      return available.length > 0 ? available[0]! : null;
+      return this.pickBestRefinementQuestion(available, snap, pcfg, null);
     }
 
     const pool = ROUTING_WEIGHT_KEYS;
@@ -257,7 +341,7 @@ export class AdaptiveQuestionnaireEngine {
     if (!targetTag) {
       const refinementQuestions = getAssessmentQuestions('refinement', this.state.culturalContext);
       const available = refinementQuestions.filter((q) => !this.state.answeredQuestions.has(q.id));
-      return available.length > 0 ? available[0]! : null;
+      return this.pickBestRefinementQuestion(available, snap, pcfg, null);
     }
 
     const refinementQuestions = getQuestionsForDimensions(
@@ -271,11 +355,65 @@ export class AdaptiveQuestionnaireEngine {
 
     const scoredQuestions = available.map((q) => ({
       question: q,
-      score: this.calculateRefinementQuestionScore(q, targetTag),
+      score: this.refinementQuestionTotalScore(q, targetTag, snap, pcfg),
     }));
 
-    scoredQuestions.sort((a, b) => b.score - a.score);
+    scoredQuestions.sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.question.id.localeCompare(b.question.id);
+    });
     return scoredQuestions[0]!.question;
+  }
+
+  private refinementQuestionTotalScore(
+    question: AssessmentQuestion,
+    targetTag: RoutingWeightKey,
+    snap: ProfileAdaptiveSnapshot | null,
+    pcfg: ProfileAdaptiveConfig
+  ): number {
+    let score = this.calculateRefinementQuestionScore(question, targetTag);
+    if (snap) {
+      score += profileRefinementQuestionBoost(question, targetTag, snap, pcfg);
+    }
+    return score;
+  }
+
+  /**
+   * Picking the first unanswered refinement item (`available[0]`) is **invalid for research**:
+   * order depends on arbitrary bank JSON ordering, not evidence, coverage gaps, or contradiction.
+   * Rank every candidate with the same principled components used in core + targeted refinement.
+   */
+  private pickBestRefinementQuestion(
+    available: AssessmentQuestion[],
+    snap: ProfileAdaptiveSnapshot | null,
+    pcfg: ProfileAdaptiveConfig,
+    targetTag: RoutingWeightKey | null
+  ): AssessmentQuestion | null {
+    if (available.length === 0) return null;
+    const counts = this.coverageModel.countQuestionsPerTag(this.state.questionHistory, this.questions);
+    const coverage = this.routingCoverage();
+    const scored = available.map((q) => {
+      let score = this.calculateCoreQuestionScore(q, counts, coverage);
+      const prim = this.getPrimaryTag(q);
+      const tag = targetTag ?? prim;
+      score += this.calculateRefinementQuestionScore(q, tag);
+      if (snap) {
+        if (targetTag) {
+          score += profileRefinementQuestionBoost(q, targetTag, snap, pcfg);
+        } else {
+          let maxB = 0;
+          for (const t of ROUTING_WEIGHT_KEYS) {
+            if ((q.dimensionWeights[t] ?? 0) >= 0.25) {
+              maxB = Math.max(maxB, profileRefinementQuestionBoost(q, t, snap, pcfg));
+            }
+          }
+          score += maxB;
+        }
+      }
+      return { question: q, score };
+    });
+    scored.sort((a, b) => (b.score !== a.score ? b.score - a.score : a.question.id.localeCompare(b.question.id)));
+    return scored[0]!.question;
   }
 
   /**
@@ -344,6 +482,7 @@ export class AdaptiveQuestionnaireEngine {
     this.state.questionHistory.push(response);
     this.state.answeredQuestions.add(response.questionId);
     this.state.currentQuestion = null;
+    this.recordProfileConfidenceTrace();
     if (this.shouldComplete()) {
       this.state.isComplete = true;
     }
@@ -404,6 +543,29 @@ export class AdaptiveQuestionnaireEngine {
       }
     }
 
+    if (
+      this.isProfileMode() &&
+      this.state.phase === 'refinement' &&
+      this.state.questionHistory.length > 0
+    ) {
+      const pcfg = this.mergedProfileConfig();
+      const n = this.state.questionHistory.length;
+      if (n >= pcfg.minTotalAnswersForProfileStop) {
+        const snap = computeProfileAdaptiveSnapshot(this.state.questionHistory, this.getQuestionsById(), pcfg);
+        if (snap.sessionConfidence >= pcfg.sessionConfidenceThreshold) {
+          this.state.phase = 'complete';
+          this.state.completionReason = 'confidence_met';
+          return true;
+        }
+        const gain = marginalSessionConfidenceGain(this.profileConfidenceTrace, pcfg.diminishingReturnsWindow);
+        if (gain !== null && gain < pcfg.diminishingReturnsEpsilon) {
+          this.state.phase = 'complete';
+          this.state.completionReason = 'diminishing_returns';
+          return true;
+        }
+      }
+    }
+
     return false;
   }
 
@@ -437,6 +599,7 @@ export class AdaptiveQuestionnaireEngine {
 
   reset(): void {
     this.refinementFocusTags = null;
+    this.profileConfidenceTrace = [];
     this.state = this.initializeState(this.state.culturalContext);
   }
 
@@ -458,6 +621,15 @@ export class AdaptiveQuestionnaireEngine {
     this.state.currentQuestion = null;
     this.refinementFocusTags =
       targetDimensions && targetDimensions.length > 0 ? [...targetDimensions] : null;
+    if (this.isProfileMode()) {
+      this.profileConfidenceTrace = buildProfileConfidenceTrace(
+        normalized,
+        this.getQuestionsById(),
+        this.mergedProfileConfig()
+      );
+    } else {
+      this.profileConfidenceTrace = [];
+    }
   }
 
   getCompletionStats(): {
@@ -468,6 +640,8 @@ export class AdaptiveQuestionnaireEngine {
     tagCoverage: TagCoverageVector;
     /** Per F–V dimension: mean, variance of weighted contributions, confidence (offline, deterministic). */
     perDimensionRouting: Record<RoutingWeightKey, PerDimensionRoutingDiagnostics>;
+    /** Present when {@link ResearchAssessmentConfig.adaptiveMode} is `profile_diagnostic`. */
+    profileAdaptive: ProfileAdaptiveSnapshot | null;
     phase: 'core' | 'refinement' | 'complete';
     completionReason: string | null;
     estimatedQuestionsRemaining: number;
@@ -477,6 +651,9 @@ export class AdaptiveQuestionnaireEngine {
     const thresholdStatus = this.coverageModel.meetsResearchThresholds(tagCoverage);
     const questionsById = new Map(this.questions.map((q) => [q.id, q]));
     const perDimensionRouting = buildPerDimensionRoutingDiagnostics(this.state.questionHistory, questionsById);
+    const profileAdaptive = this.isProfileMode()
+      ? computeProfileAdaptiveSnapshot(this.state.questionHistory, questionsById, this.mergedProfileConfig())
+      : null;
 
     return {
       questionsAnswered: this.state.questionHistory.length,
@@ -485,6 +662,7 @@ export class AdaptiveQuestionnaireEngine {
       averageTagCoverage: this.coverageModel.averageCoverage(tagCoverage),
       tagCoverage,
       perDimensionRouting,
+      profileAdaptive,
       phase: this.state.phase,
       completionReason: this.state.completionReason,
       estimatedQuestionsRemaining: Math.max(

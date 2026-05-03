@@ -3,16 +3,23 @@ import fs from 'fs/promises';
 
 import { assertResearchBankConstraints, validateQuestionBankArray } from '../lib/question-validator';
 import { validateGlobalBehavioralBankArray } from '../lib/global-behavior-bank-validator';
+import { validateCulturalAdaptiveBankArray } from '../lib/cultural-adaptive-bank';
 import type { AssessmentQuestion } from './questions';
 
 const BANK_FILES = ['core.json', 'refinement.json'] as const;
 
 const QUESTION_ROOT = path.join(process.cwd(), 'content', 'questions');
 
-/** `global_v2` loads only the 200-item behavioral bank (see `docs` in repo root / `.env.example`). */
-function questionSourceMode(): 'classic' | 'global_v2' {
+/**
+ * - `classic` — `universal` / `ghana` JSON packs.
+ * - `global_v2` — `global-behavioral-v2/bank.json`.
+ * - `cultural_adaptive_v1` — `cultural-adaptive-v1/bank.json` (see `.env.example`).
+ */
+function questionSourceMode(): 'classic' | 'global_v2' | 'cultural_adaptive_v1' {
   const raw = process.env.NEXT_PUBLIC_PCMS_QUESTION_SOURCE?.trim().toLowerCase();
-  return raw === 'global_v2' ? 'global_v2' : 'classic';
+  if (raw === 'global_v2') return 'global_v2';
+  if (raw === 'cultural_adaptive_v1' || raw === 'cultural_adaptive') return 'cultural_adaptive_v1';
+  return 'classic';
 }
 
 /**
@@ -63,6 +70,23 @@ export async function loadQuestionsFromDiskImpl(locale: string): Promise<Assessm
       throw new Error(`Invalid JSON in ${filePath}`, { cause: err });
     }
     return validateGlobalBehavioralBankArray(parsed, filePath);
+  }
+
+  if (questionSourceMode() === 'cultural_adaptive_v1') {
+    const filePath = path.join(QUESTION_ROOT, 'cultural-adaptive-v1', 'bank.json');
+    let raw: string;
+    try {
+      raw = await fs.readFile(filePath, 'utf8');
+    } catch (e) {
+      throw new Error(`Cultural adaptive bank missing: ${filePath}`, { cause: e });
+    }
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(raw);
+    } catch (err) {
+      throw new Error(`Invalid JSON in ${filePath}`, { cause: err });
+    }
+    return validateCulturalAdaptiveBankArray(parsed, filePath, locale);
   }
 
   const folders = bankFoldersForLocale(locale);

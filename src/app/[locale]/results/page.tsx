@@ -41,7 +41,12 @@ import SupportInsightsSection from '@/components/cohort/SupportInsightsSection';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
 import { seedConsentIfSkipMode } from '@/lib/ethics-flow-config';
-import { buildResearchSessionZip, downloadUint8ArrayFile } from '@/lib/research-session-bundle';
+import {
+  buildFullSessionExportV1,
+  buildResearchSessionZip,
+  downloadUint8ArrayFile,
+} from '@/lib/research-session-bundle';
+import { isResearchModeActive } from '@/lib/adaptive-mode-resolution';
 import ParticipantPrintSheet from '@/components/results/ParticipantPrintSheet';
 import SiteFooter from '@/components/layout/SiteFooter';
 
@@ -215,6 +220,7 @@ export default function ResultsPage() {
   }, [router]);
 
   const handleShare = useCallback(() => {
+    if (isResearchModeActive(session)) return;
     if (!session || !display || !confidenceComponents) return;
 
     const payload = buildSharePayload(display, confidenceComponents, session.completedAt);
@@ -256,6 +262,28 @@ export default function ResultsPage() {
     URL.revokeObjectURL(url);
   }, [session, ui]);
 
+  const handleDownloadFullSession = useCallback(() => {
+    if (!session) return;
+    const history = readQuestionHistoryFromStorage();
+    if (history.length === 0) {
+      window.alert(ui['results.download_full_session_no_history']);
+      return;
+    }
+    const payload = buildFullSessionExportV1(session, history);
+    const dataStr = JSON.stringify(payload, null, 2);
+    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(dataBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = formatUiString(ui['results.download_full_session_filename'], {
+      date: new Date().toISOString().split('T')[0],
+    });
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }, [session, ui]);
+
   const handleResearchBundle = useCallback(async () => {
     if (!session) return;
     const history = readQuestionHistoryFromStorage();
@@ -281,6 +309,7 @@ export default function ResultsPage() {
   }, [session, locale, ui]);
 
   const handleCopySmsCode = useCallback(() => {
+    if (isResearchModeActive(session)) return;
     if (!display) return;
     const code = encodeProfileVectorCode(display.rawPercent);
     void navigator.clipboard.writeText(code).then(
@@ -291,7 +320,7 @@ export default function ResultsPage() {
         alert(code);
       }
     );
-  }, [display, ui]);
+  }, [display, session, ui]);
 
   if (loading) {
     return (
@@ -394,19 +423,28 @@ export default function ResultsPage() {
           <DeleteMyDataButton sessionId={session?.sessionId ?? null} variant="prominent" />
           {session ? (
             <>
-              <button
-                type="button"
-                onClick={handleShare}
-                className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-blue-700 sm:px-6"
-              >
-                {ui['results.share']}
-              </button>
+              {!isResearchModeActive(session) ? (
+                <button
+                  type="button"
+                  onClick={handleShare}
+                  className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-blue-700 sm:px-6"
+                >
+                  {ui['results.share']}
+                </button>
+              ) : null}
               <button
                 type="button"
                 onClick={handleDownload}
                 className="min-h-11 rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-purple-700 sm:px-6"
               >
                 {ui['results.download']}
+              </button>
+              <button
+                type="button"
+                onClick={handleDownloadFullSession}
+                className="min-h-11 rounded-lg border border-purple-300 bg-purple-50 px-4 py-2 text-sm font-medium text-purple-950 shadow-sm hover:bg-purple-100 sm:px-6"
+              >
+                {ui['results.download_full_session']}
               </button>
               <button
                 type="button"
@@ -417,7 +455,7 @@ export default function ResultsPage() {
               </button>
             </>
           ) : null}
-          {display ? (
+          {display && !isResearchModeActive(session) ? (
             <button
               type="button"
               onClick={handleCopySmsCode}

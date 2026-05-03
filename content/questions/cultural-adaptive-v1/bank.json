@@ -1,0 +1,2802 @@
+[
+  {
+    "id": "ca-v1-sensory_regulation-001",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "environment"
+    ],
+    "variants": {
+      "global": "I notice everyday smells in a room before others mention them.",
+      "ghana": "When I enter a room or hall, I often notice ordinary smells there before anyone else points them out.",
+      "west_africa": "In the place where I sit or stand, I tend to notice common smells before people around me say anything."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-002",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "social"
+    ],
+    "variants": {
+      "global": "Busy crowded places drain my energy faster than calm places.",
+      "ghana": "When a place fills with many people and movement, I feel my energy drop sooner than in a calmer setting.",
+      "west_africa": "In a packed market, vehicle, or gathering, I tire sooner than when the same task is done in a quiet spot."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-003",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "light"
+    ],
+    "variants": {
+      "global": "Bright overhead light starts to bother me if I stay under it a long time.",
+      "ghana": "If I remain under strong ceiling light for a long stretch, my eyes or head begin to feel strained.",
+      "west_africa": "Under bright fixed lighting for many hours, I start to feel uneasy or worn down."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-004",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "When noise keeps rising, I move to a calmer spot if I can.",
+      "ghana": "If the sound level keeps climbing, I look for a quieter corner or step outside when that is possible.",
+      "west_africa": "As noise builds around me, I shift toward a calmer area when there is a way to do it."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-005",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "touch"
+    ],
+    "variants": {
+      "global": "Rough seams or tags on clothing pull my attention away from what I am doing.",
+      "ghana": "Scratchy fabric edges or labels on my clothes distract me from the task in front of me.",
+      "west_africa": "When cloth rubs roughly on my skin, I lose focus on what I meant to finish."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-006",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "temperature"
+    ],
+    "variants": {
+      "global": "I notice small shifts in heat or cold in a room before others comment.",
+      "ghana": "I feel slight changes in warmth or cool air in a space before someone else speaks about it.",
+      "west_africa": "Temperature changes in the air around me reach my attention early compared with people nearby."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-007",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "Deep engine rumble or heavy machine vibration catches my attention quickly.",
+      "ghana": "Low shaking from engines or big machines pulls my attention as soon as it starts.",
+      "west_africa": "Strong steady vibration from motors or equipment stands out to me right away."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-008",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "recovery"
+    ],
+    "variants": {
+      "global": "After someone shouts very close to me, I need a little time before I feel steady again.",
+      "ghana": "When a person raises their voice right beside me, I take a short while before I feel settled.",
+      "west_africa": "Loud speech pressed near my ear leaves me needing a brief pause before I feel normal."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-009",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "observable"
+    ],
+    "variants": {
+      "global": "People can tell from my face or body when a place feels too loud for me.",
+      "ghana": "Others around me can see signs that the noise level is too much for me.",
+      "west_africa": "My expression or posture shows when sound in a place is overwhelming me."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-010",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "recovery"
+    ],
+    "variants": {
+      "global": "After an overstimulating spell, I need a quiet break before I can focus well again.",
+      "ghana": "When a spell feels overstimulating, I recover focus faster if I get a quiet pause.",
+      "west_africa": "I work best again only after some calm time following a very stimulating stretch."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-011",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "If music or a speaker is very loud, I turn it down or step away when I am allowed.",
+      "ghana": "When playback is far too loud, I lower the volume or leave the spot if that is acceptable.",
+      "west_africa": "Very loud sound from a device or speaker leads me to reduce it or move off when I can."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-012",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "taste_texture"
+    ],
+    "variants": {
+      "global": "Food textures that are very slimy or very rough are hard to ignore while I eat.",
+      "ghana": "While eating, textures that are extremely slippery or coarse stay on my mind.",
+      "west_africa": "Certain mouth-feels while chewing keep pulling my attention even if I want to think of something else."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-013",
+    "dimension": "sensory_regulation",
+    "reverse": false,
+    "tags": [
+      "sensory",
+      "light"
+    ],
+    "variants": {
+      "global": "I choose a seat away from flashing or flickering lights when I have a choice.",
+      "ghana": "Given a choice, I sit where lights do not flicker or flash in my eyes.",
+      "west_africa": "If seats are open, I pick one that avoids strobe-like or broken-bulb flicker."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-014",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "social"
+    ],
+    "variants": {
+      "global": "Crowded busy places feel about the same to my energy as quiet places.",
+      "ghana": "A full room and an empty room feel roughly equal in how much energy they take from me.",
+      "west_africa": "Whether a place is packed or nearly empty barely changes how tired I feel."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-015",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "light"
+    ],
+    "variants": {
+      "global": "Strong overhead light rarely bothers me even after many hours.",
+      "ghana": "Ceiling lights can stay bright for a long time without me feeling strained.",
+      "west_africa": "I can stay under bright fixed lights a long while without discomfort."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-016",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "Rising noise rarely makes me look for a different spot.",
+      "ghana": "Louder and louder sound around me seldom pushes me to relocate.",
+      "west_africa": "I usually stay put even when the noise level climbs around me."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-017",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "touch"
+    ],
+    "variants": {
+      "global": "Rough clothing seams rarely distract me from my task.",
+      "ghana": "Tags and coarse seams on clothes seldom pull me off track.",
+      "west_africa": "Fabric rubbing roughly hardly breaks my concentration."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-018",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "temperature"
+    ],
+    "variants": {
+      "global": "I rarely notice small heat or cold shifts unless someone points them out.",
+      "ghana": "Minor temperature changes in a room usually pass me by until another person mentions them.",
+      "west_africa": "Slight warm or cool shifts in the air seldom reach my attention first."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-019",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "Engine rumble or machine vibration blends into the background for me.",
+      "ghana": "Heavy low vibration from equipment is easy for me to tune out.",
+      "west_africa": "Motor rumble fades into the background without grabbing me."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-020",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "recovery"
+    ],
+    "variants": {
+      "global": "Loud speech near me rarely leaves me feeling off balance for more than a moment.",
+      "ghana": "A shout close by unsettles me only briefly, if at all.",
+      "west_africa": "Sharp loud words beside me hardly ripple my calm."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-021",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "observable"
+    ],
+    "variants": {
+      "global": "Others rarely read discomfort on my face about the noise level.",
+      "ghana": "People seldom see from my look that sound is too much for me.",
+      "west_africa": "My face does not often show that noise is overwhelming."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-022",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I return to clear focus quickly right after a very stimulating stretch.",
+      "ghana": "Right after heavy stimulation, I snap back to focus without needing much pause.",
+      "west_africa": "I do not need a long quiet gap before thinking clearly again after intensity."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-023",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "auditory"
+    ],
+    "variants": {
+      "global": "Very loud music or announcements rarely make me lower the volume or leave.",
+      "ghana": "Even when playback is extremely loud, I usually stay and accept it.",
+      "west_africa": "Blaring sound seldom leads me to turn it down or walk away."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-024",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "taste_texture"
+    ],
+    "variants": {
+      "global": "Extreme slimy or rough food textures rarely bother me while eating.",
+      "ghana": "Unusual mouth-feel during meals seldom distracts me.",
+      "west_africa": "Texture surprises in food hardly pull my mind away."
+    }
+  },
+  {
+    "id": "ca-v1-sensory_regulation-025",
+    "dimension": "sensory_regulation",
+    "reverse": true,
+    "tags": [
+      "sensory",
+      "light"
+    ],
+    "variants": {
+      "global": "Flickering or flashing lights rarely change where I choose to sit.",
+      "ghana": "Broken-bulb flicker or flashing signs seldom affect my seat choice.",
+      "west_africa": "I pick seats without thinking about flicker risk."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-001",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "focus"
+    ],
+    "variants": {
+      "global": "When I mean to finish one task, unrelated sounds often pull my mind away.",
+      "ghana": "While I am trying to finish one piece of work, background sounds often steal my thoughts.",
+      "west_africa": "If I plan to stick to a single job, side noises still snatch my attention."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-002",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "switching"
+    ],
+    "variants": {
+      "global": "I jump between small tasks many times before the main one is done.",
+      "ghana": "I hop among minor jobs again and again before the big task reaches the end.",
+      "west_africa": "Little side errands split my time before the chief task is closed."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-003",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "I can read or listen to instructions for a long stretch without losing the thread.",
+      "ghana": "I hold the line of a long explanation in my head while reading or listening.",
+      "west_africa": "Long guidance stays clear in my mind while I take it in."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-004",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "detail"
+    ],
+    "variants": {
+      "global": "Small mistakes in a form or list jump out at me while I check it.",
+      "ghana": "When I scan a list or form, little errors show up to me quickly.",
+      "west_africa": "Typos or missing lines catch my eye during review."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-005",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "distraction"
+    ],
+    "variants": {
+      "global": "A new message alert often interrupts me even when I planned to wait.",
+      "ghana": "Ping from a device often breaks my plan to stay off it for a while.",
+      "west_africa": "Notifications cut in when I meant to stay focused elsewhere."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-006",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "I return to the same task after a short break and pick up where I left off.",
+      "ghana": "After stepping away briefly, I slide back into the same task smoothly.",
+      "west_africa": "A pause does not erase my place in the work I was doing."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-007",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "dual"
+    ],
+    "variants": {
+      "global": "Doing two simple chores at once, like stirring and watching a pot, feels natural.",
+      "ghana": "Pairing two easy physical routines at the same time feels fine to me.",
+      "west_africa": "Light dual tasks side by side do not confuse me."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-008",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "memory_cue"
+    ],
+    "variants": {
+      "global": "I rely on a written note or mark so I do not forget the next step.",
+      "ghana": "I leave myself a short written cue for the next action so it is not lost.",
+      "west_africa": "A scrap of paper or phone note guards the next step in my mind."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-009",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "filter"
+    ],
+    "variants": {
+      "global": "Background chatter fades for me when I decide to lock onto one speaker.",
+      "ghana": "When I choose one voice to follow, other voices drop in importance in my ears.",
+      "west_africa": "I can narrow listening to one person amid side talk."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-010",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "I lose track of time when I am deeply into a hands-on task I enjoy.",
+      "ghana": "Hours can pass unnoticed when I am absorbed in a satisfying manual task.",
+      "west_africa": "A hands-on project I like can swallow my sense of clock time."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-011",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "switching"
+    ],
+    "variants": {
+      "global": "Switching tools mid-task costs me a moment to remember what comes next.",
+      "ghana": "Changing tools in the middle of a job creates a short blank in my sequence memory.",
+      "west_africa": "Each tool swap needs a beat before the next move is clear."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-012",
+    "dimension": "attention_focus",
+    "reverse": false,
+    "tags": [
+      "attention",
+      "detail"
+    ],
+    "variants": {
+      "global": "I skim a page and miss a line that was clearly printed there.",
+      "ghana": "Quick reading makes me skip a printed line that was present.",
+      "west_africa": "Fast scanning lets a visible line slip past me."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-013",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "focus"
+    ],
+    "variants": {
+      "global": "Unrelated sounds rarely pull me off a task I meant to finish.",
+      "ghana": "Side noise seldom steals me from a job I chose to complete.",
+      "west_africa": "Background sound hardly breaks the task I locked onto."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-014",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "switching"
+    ],
+    "variants": {
+      "global": "I stay on one task until it is done before opening side tasks.",
+      "ghana": "I close the main job before I open smaller ones.",
+      "west_africa": "Side errands wait until the chief task is finished."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-015",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "Long stretches of reading or listening often lose me halfway.",
+      "ghana": "Extended explanations often drift out of my grasp midway.",
+      "west_africa": "Long guidance tends to blur before the end."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-016",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "detail"
+    ],
+    "variants": {
+      "global": "Small errors in a list are easy for me to miss on first pass.",
+      "ghana": "Little mistakes hide from me during a quick check.",
+      "west_africa": "First scan of a form often leaves errors unseen."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-017",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "distraction"
+    ],
+    "variants": {
+      "global": "I can ignore new message alerts when I planned a focus block.",
+      "ghana": "Planned focus time usually holds even when the device pings.",
+      "west_africa": "I keep alerts from breaking a focus block I set."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-018",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "After a break I often need to rebuild the whole picture of the task.",
+      "ghana": "Returning from pause, I rebuild the task picture slowly.",
+      "west_africa": "Post-break restart feels like starting near the beginning."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-019",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "dual"
+    ],
+    "variants": {
+      "global": "Even two simple chores at once feel tangled for me.",
+      "ghana": "Pairing two easy routines at once confuses my hands or thoughts.",
+      "west_africa": "Dual light tasks feel knotted rather than smooth."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-020",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "memory_cue"
+    ],
+    "variants": {
+      "global": "I remember the next step without needing a written cue most of the time.",
+      "ghana": "Next steps stay in mind without paper or phone reminders.",
+      "west_africa": "I seldom need a note for what comes next."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-021",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "filter"
+    ],
+    "variants": {
+      "global": "Side chatter stays loud in my mind even when I try to focus on one speaker.",
+      "ghana": "Other voices stay prominent even when I pick one person to hear.",
+      "west_africa": "Background talk keeps competing when I aim at one voice."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-022",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "sustain"
+    ],
+    "variants": {
+      "global": "I rarely lose track of clock time during hands-on work.",
+      "ghana": "Hands-on tasks keep my sense of passing hours steady.",
+      "west_africa": "Clock awareness stays sharp even in absorbing manual work."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-023",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "switching"
+    ],
+    "variants": {
+      "global": "Switching tools mid-task feels seamless with almost no pause.",
+      "ghana": "Tool changes mid-job flow without a hitch.",
+      "west_africa": "Moving from one implement to another is instant for me."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-024",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "detail"
+    ],
+    "variants": {
+      "global": "A careful read usually catches every printed line.",
+      "ghana": "Slow read picks up each line that is on the page.",
+      "west_africa": "Line-by-line review rarely skips visible text."
+    }
+  },
+  {
+    "id": "ca-v1-attention_focus-025",
+    "dimension": "attention_focus",
+    "reverse": true,
+    "tags": [
+      "attention",
+      "focus"
+    ],
+    "variants": {
+      "global": "I can keep mental focus on one topic through long waiting periods.",
+      "ghana": "Waiting a long time in a queue does not scatter my thoughts from the topic I chose.",
+      "west_africa": "Long waits leave my chosen topic stable in mind."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-001",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "planning"
+    ],
+    "variants": {
+      "global": "When plans shift at short notice, I adjust what I do next without much fuss.",
+      "ghana": "If the time or place of a meeting changes late, I rearrange my next steps calmly.",
+      "west_africa": "Sudden plan changes lead me to update my next moves without long upset."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-002",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "waiting"
+    ],
+    "variants": {
+      "global": "Long waits in a queue feel harder if I have nothing useful in hand to do.",
+      "ghana": "Standing in line for a long stretch drags more when my hands and mind are idle.",
+      "west_africa": "Empty-handed waiting in a long line wears on me."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-003",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "punctuality_observable"
+    ],
+    "variants": {
+      "global": "I arrive within the window others expect when the time was agreed in advance.",
+      "ghana": "When a time was fixed ahead, I show up inside the range people expect.",
+      "west_africa": "Agreed meeting times see me there in the expected span."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-004",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "flex"
+    ],
+    "variants": {
+      "global": "If a task takes longer than guessed, I extend the time I give it without panic.",
+      "ghana": "When work runs past the first guess, I widen the slot instead of rushing wildly.",
+      "west_africa": "Underestimated duration gets more room rather than panic."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-005",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "rhythm"
+    ],
+    "variants": {
+      "global": "I break a big job into timed chunks with short rests in between.",
+      "ghana": "Large work gets split into blocks with brief rests between.",
+      "west_africa": "Chunk-and-rest pacing is how I tackle long jobs."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-006",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "deadline"
+    ],
+    "variants": {
+      "global": "A clear deadline helps me finish rather than stalls me.",
+      "ghana": "Knowing the end time pushes me forward instead of freezing me.",
+      "west_africa": "Fixed end dates spur completion rather than block starts."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-007",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "memory"
+    ],
+    "variants": {
+      "global": "I forget upcoming appointments unless I put them on a list or phone.",
+      "ghana": "Future times slip unless I record them on paper or device.",
+      "west_africa": "Dates ahead vanish from mind without a written or digital reminder."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-008",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "transition"
+    ],
+    "variants": {
+      "global": "Switching from rest to work mode takes me several minutes.",
+      "ghana": "Moving from rest into active work needs a few minutes of ramp-up.",
+      "west_africa": "Cold start from break to labor is not instant for me."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-009",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "social_time"
+    ],
+    "variants": {
+      "global": "Group work moves faster than I expected when everyone knows their part.",
+      "ghana": "Team tasks finish sooner than I thought when roles are clear.",
+      "west_africa": "Clear division of labor speeds group jobs beyond my first guess."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-010",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "estimate"
+    ],
+    "variants": {
+      "global": "I underestimate how long travel will take when roads are busy.",
+      "ghana": "Busy routes make my travel guess too short.",
+      "west_africa": "Traffic-heavy trips run longer than my first estimate."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-011",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "routine"
+    ],
+    "variants": {
+      "global": "Repeating the same morning steps in the same order settles me.",
+      "ghana": "Same order of morning actions steadies my start.",
+      "west_africa": "Fixed morning sequence calms my entry into the day."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-012",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "flex"
+    ],
+    "variants": {
+      "global": "If someone arrives late, I use the gap for a small useful task.",
+      "ghana": "Late arrival by others becomes a slot for a tiny useful chore.",
+      "west_africa": "Unexpected gaps become pockets for small wins."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-013",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "planning"
+    ],
+    "variants": {
+      "global": "Short-notice plan changes leave me rattled for a while.",
+      "ghana": "Late changes to time or place unsettle me before I can move on.",
+      "west_africa": "Sudden shifts in schedule throw me off first, then I adapt."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-014",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "waiting"
+    ],
+    "variants": {
+      "global": "Long queues feel fine even with nothing in hand to occupy me.",
+      "ghana": "Waiting in line a long time without activity does not bother me.",
+      "west_africa": "Idle long waits are easy on my mood."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-015",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "punctuality_observable"
+    ],
+    "variants": {
+      "global": "Agreed times are hard for me to hit even when I try.",
+      "ghana": "Expected arrival windows slip for me despite effort.",
+      "west_africa": "People sometimes wait for me even when I intend to be prompt."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-016",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "flex"
+    ],
+    "variants": {
+      "global": "When a task runs long, I feel rushed rather than widening the slot.",
+      "ghana": "Past-guess duration makes me hurry instead of calmly extending time.",
+      "west_africa": "Overrun tasks trigger rush feelings."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-017",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "rhythm"
+    ],
+    "variants": {
+      "global": "I prefer to push through a big job in one stretch without timed breaks.",
+      "ghana": "Large jobs feel better in one long push than in timed chunks.",
+      "west_africa": "I avoid chunk timers on long work."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-018",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "deadline"
+    ],
+    "variants": {
+      "global": "A firm deadline makes me freeze or delay starting.",
+      "ghana": "End dates make starting harder rather than easier.",
+      "west_africa": "Deadlines stall my opening move."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-019",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "memory"
+    ],
+    "variants": {
+      "global": "I keep upcoming times in mind without lists or phone reminders.",
+      "ghana": "Future appointments stay in memory without writing them down.",
+      "west_africa": "I rarely miss a time I only heard spoken once."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-020",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "transition"
+    ],
+    "variants": {
+      "global": "I snap from rest to full work speed almost immediately.",
+      "ghana": "Break to labor shift happens in seconds.",
+      "west_africa": "Rest ends and work speed peaks at once."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-021",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "social_time"
+    ],
+    "variants": {
+      "global": "Group work often runs longer than I first guessed.",
+      "ghana": "Team tasks drag past my opening estimate.",
+      "west_africa": "Shared jobs expand in clock time versus my plan."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-022",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "estimate"
+    ],
+    "variants": {
+      "global": "I overguess travel time even when roads are clear.",
+      "ghana": "I pad travel time more than traffic needs.",
+      "west_africa": "Clear roads still get a long time buffer from me."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-023",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "routine"
+    ],
+    "variants": {
+      "global": "Changing the order of morning steps does not unsettle me.",
+      "ghana": "Shuffled morning order leaves me fine.",
+      "west_africa": "Morning sequence can vary without cost."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-024",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "flex"
+    ],
+    "variants": {
+      "global": "Late arrival by others frustrates me and I struggle to use the gap.",
+      "ghana": "When others are late, the open minutes feel wasted and irritating.",
+      "west_africa": "Waiting on latecomers drains me without productive use."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-025",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "social_time"
+    ],
+    "variants": {
+      "global": "I expect solo tasks and group tasks to take about the same clock time.",
+      "ghana": "I budget equal minutes for alone work and shared work.",
+      "west_africa": "Team versus solo duration feels similar in my planning."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-001",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "In a group talk, I wait for a clear pause before I add my point.",
+      "ghana": "When many voices overlap, I hold my words until a calm opening appears.",
+      "west_africa": "In overlapping speech, I wait for a settled gap before speaking."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-002",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "I speak up as soon as I have something to add, even if others are still talking.",
+      "ghana": "If I have a thought, I offer it even while side talk continues.",
+      "west_africa": "I insert my point when ready rather than waiting for full quiet."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-003",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "turn_taking"
+    ],
+    "variants": {
+      "global": "I yield the floor when someone else has been waiting with a raised hand.",
+      "ghana": "If another person has waited visibly, I pass the turn.",
+      "west_africa": "Visible wait gets my silence so they can speak."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-004",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "turn_taking"
+    ],
+    "variants": {
+      "global": "I finish my full thought even if another person is ready to speak.",
+      "ghana": "I close my thought before yielding even when someone is poised.",
+      "west_africa": "I complete my line before opening space."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-005",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "pace"
+    ],
+    "variants": {
+      "global": "I slow my speech when the other person looks confused.",
+      "ghana": "Confusion on the other face leads me to ease my pace.",
+      "west_africa": "I stretch words slower when understanding seems low."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-006",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "pace"
+    ],
+    "variants": {
+      "global": "I keep the same speech speed even when the listener looks lost.",
+      "ghana": "Listener confusion does not change my talking speed much.",
+      "west_africa": "My pace stays steady regardless of puzzled looks."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-007",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "clarity"
+    ],
+    "variants": {
+      "global": "I check whether the other person understood by asking a short question.",
+      "ghana": "I use a brief check question after giving instructions.",
+      "west_africa": "After directions, I ask a tiny confirmation question."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-008",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "clarity"
+    ],
+    "variants": {
+      "global": "I move on after instructions without checking if they were clear.",
+      "ghana": "I leave instructions and assume all is clear unless someone stops me.",
+      "west_africa": "I rarely ask a quick check after I explain steps."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-009",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "repair"
+    ],
+    "variants": {
+      "global": "If someone did not hear me, I repeat the same point in simpler shorter words.",
+      "ghana": "When my line was missed, I say it again shorter and plainer.",
+      "west_africa": "Missed hearing gets a brief second version from me."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-010",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "repair"
+    ],
+    "variants": {
+      "global": "If someone did not hear me, I repeat the same long wording again.",
+      "ghana": "After a miss, I say the same long line a second time.",
+      "west_africa": "My second try uses the same long phrasing as the first."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-011",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "nonverbal"
+    ],
+    "variants": {
+      "global": "I notice hand signals or nods that mean wait or go ahead.",
+      "ghana": "Small hand or head cues that mean pause or continue are visible to me.",
+      "west_africa": "Silent turn cues read clearly for me."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-012",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "nonverbal"
+    ],
+    "variants": {
+      "global": "Small wait-or-go cues from hands or head often pass me by.",
+      "ghana": "Tiny silent cues about turn-taking slip past me.",
+      "west_africa": "Hand and nod signals about pausing are easy to miss for me."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-013",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "listening"
+    ],
+    "variants": {
+      "global": "I can follow one quiet speaker even when side chatter continues.",
+      "ghana": "One low voice stays clear to me amid background talk.",
+      "west_africa": "Soft main speaker plus side noise still works for my listening."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-014",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "listening"
+    ],
+    "variants": {
+      "global": "Side chatter makes one quiet speaker hard for me to track.",
+      "ghana": "Background talk drowns a soft main voice for me.",
+      "west_africa": "Low lead voice plus chatter loses me."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-015",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "I leave a short quiet gap so someone else can join.",
+      "ghana": "I leave a small open space in the talk so another person can enter.",
+      "west_africa": "I pause briefly so another voice can enter the talk."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-016",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "I jump in during short gaps before others have finished their line.",
+      "ghana": "I enter the gap early, before the other line feels fully closed.",
+      "west_africa": "I start speaking in small openings even if the line may not be done."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-017",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "auditory"
+    ],
+    "variants": {
+      "global": "After a noisy spell, I repeat a key word slowly before I go on.",
+      "ghana": "When noise just dropped, I say a key word again, slowly, then continue.",
+      "west_africa": "After loud noise, I restate one key word at a slower pace."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-018",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "auditory"
+    ],
+    "variants": {
+      "global": "After a noisy spell, I continue without repeating a key word.",
+      "ghana": "When noise ends, I move on without restating a key word.",
+      "west_africa": "I do not restate a key word after the room was loud."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-019",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "When several people speak at once, I lower my volume so one line can come through.",
+      "ghana": "If many voices clash, I soften my voice so one line can surface.",
+      "west_africa": "During overlap, I speak more softly so one thread can win through."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-020",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "When several people speak at once, I raise my volume so I am heard.",
+      "ghana": "If many voices clash, I push my voice louder to break through.",
+      "west_africa": "During overlap, I speak up louder to cut through."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-021",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "observable"
+    ],
+    "variants": {
+      "global": "I point to what I mean when words alone might be unclear.",
+      "ghana": "If words might confuse, I point at the object or place I mean.",
+      "west_africa": "I use a pointing gesture when plain words might miss."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-022",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "observable"
+    ],
+    "variants": {
+      "global": "I rely on words only even when pointing would make the meaning clearer.",
+      "ghana": "Even when a gesture would help, I stick to words alone.",
+      "west_africa": "I avoid pointing even when it would clear things up."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-023",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "listening"
+    ],
+    "variants": {
+      "global": "I lose thread of a story if several people jump in without order.",
+      "ghana": "A tale told out of turn by many speakers confuses my tracking.",
+      "west_africa": "Unordered jump-ins make me lose the narrative line."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-024",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "listening"
+    ],
+    "variants": {
+      "global": "Many unordered speakers do not confuse me; I rebuild the story.",
+      "ghana": "Jumping speakers still leave me with a clear story picture.",
+      "west_africa": "Chaotic turn order does not lose me."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-025",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "observable"
+    ],
+    "variants": {
+      "global": "I step half a step back when someone steps forward to speak.",
+      "ghana": "If a person moves forward to speak, I make a small space with my feet.",
+      "west_africa": "When someone advances to talk, I ease back a little."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-001",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I write numbered steps before starting a new multi-step chore.",
+      "ghana": "Fresh many-step tasks get a numbered list from me first.",
+      "west_africa": "New complex chores start with ordered notes."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-002",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "I like open-ended days where tasks can reshuffle freely.",
+      "ghana": "Flexible days with reshuffle room feel better than rigid slots.",
+      "west_africa": "Open schedules please me more than fixed minute maps."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-003",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "rules"
+    ],
+    "variants": {
+      "global": "Clear written rules lower my stress in shared spaces.",
+      "ghana": "Posted plain rules calm me in shared work or living areas.",
+      "west_africa": "Visible simple rules ease me in common spaces."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-004",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "improv"
+    ],
+    "variants": {
+      "global": "If materials are missing, I improvise with what is nearby.",
+      "ghana": "Absent tools lead me to nearby substitutes.",
+      "west_africa": "Gaps in supplies spark on-the-spot swaps."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-005",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I pack bags the night before a morning trip.",
+      "ghana": "Evening-before packing is my habit for early travel.",
+      "west_africa": "Morning trips get bags ready the prior night."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-006",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "Surprise visits feel disruptive when I had a fixed task list.",
+      "ghana": "Unplanned guests clash with a tight written list day.",
+      "west_africa": "Pop-in visits jar me on list-heavy days."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-007",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "environment"
+    ],
+    "variants": {
+      "global": "I reset objects to the same spots so I can find them again.",
+      "ghana": "Things return to fixed homes so search is short.",
+      "west_africa": "Stable object homes speed finding."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-008",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "rules"
+    ],
+    "variants": {
+      "global": "I question a rule that blocks safety or fairness even if it is written.",
+      "ghana": "Written rules that risk harm or unfairness get a spoken question from me.",
+      "west_africa": "I raise concerns about bad posted rules."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-009",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "sequence"
+    ],
+    "variants": {
+      "global": "Doing steps out of order on purpose feels uncomfortable if order matters for quality.",
+      "ghana": "Wrong order on purpose feels off when order affects outcome.",
+      "west_africa": "Sequence jumps unsettle me when sequence affects results."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-010",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "improv"
+    ],
+    "variants": {
+      "global": "I prefer a recipe or pattern the first time I try a new craft.",
+      "ghana": "First attempt at a craft wants a pattern in hand.",
+      "west_africa": "New craft starts with a model to copy."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-011",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I estimate time for each subtask before I begin.",
+      "ghana": "Subtask minutes get guessed before start.",
+      "west_africa": "I slice total time across parts ahead of work."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-012",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "I enjoy discovering the path while moving rather than mapping everything first.",
+      "ghana": "Forward motion with partial map feels fun.",
+      "west_africa": "Full pre-map is less fun than discover-as-I-go."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-013",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I start multi-step chores without writing steps first.",
+      "ghana": "Many-step jobs begin straight from the head without lists.",
+      "west_africa": "I launch complex tasks without numbered prep."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-014",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "Tight schedules with little reshuffle room feel better to me than loose days.",
+      "ghana": "Minute-tight plans beat fully open days for my comfort.",
+      "west_africa": "I prefer heavy structure over floating tasks."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-015",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "rules"
+    ],
+    "variants": {
+      "global": "Posted rules feel neutral or slightly stressful rather than calming.",
+      "ghana": "Wall rules neither calm nor excite me; slight stress.",
+      "west_africa": "Written shared rules add little comfort."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-016",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "improv"
+    ],
+    "variants": {
+      "global": "Missing materials stall me until the right tool appears.",
+      "ghana": "Without exact supplies I pause rather than swap.",
+      "west_africa": "Wrong-tool work is hard to start."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-017",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I pack on the morning of travel rather than the night before.",
+      "ghana": "Travel bags get packed at wake time.",
+      "west_africa": "Same-day morning pack is my norm."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-018",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "Surprise visits feel welcome even on a fixed task day.",
+      "ghana": "Unplanned guests fit fine beside a list.",
+      "west_africa": "Drop-in visitors sit well with planned chores."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-019",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "environment"
+    ],
+    "variants": {
+      "global": "I leave tools where I last used them and search later.",
+      "ghana": "Objects rest where dropped until needed again.",
+      "west_africa": "Floating placement is my habit."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-020",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "environment"
+    ],
+    "variants": {
+      "global": "I keep the same tool layout between sessions so I can grab fast.",
+      "ghana": "Tools return to the same layout each time so my hand finds them fast.",
+      "west_africa": "I reset my workspace layout the same way between sessions."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-021",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "sequence"
+    ],
+    "variants": {
+      "global": "Order of steps rarely matters to me if the end result looks fine.",
+      "ghana": "End quality OK means order felt flexible to me.",
+      "west_africa": "Step sequence is loose in my mind."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-022",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "improv"
+    ],
+    "variants": {
+      "global": "I try a new craft first by experimenting without a pattern.",
+      "ghana": "Pattern-free first trial is my craft style.",
+      "west_africa": "New making starts with free play."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-023",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "planning"
+    ],
+    "variants": {
+      "global": "I begin work and discover time needs as I go.",
+      "ghana": "Clock needs reveal during the job.",
+      "west_africa": "No upfront subtask time guesses."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-024",
+    "dimension": "structure_preference",
+    "reverse": false,
+    "tags": [
+      "structure",
+      "openness"
+    ],
+    "variants": {
+      "global": "I want the full map before any first step.",
+      "ghana": "Complete preview before motion feels required.",
+      "west_africa": "All-at-once planning precedes action."
+    }
+  },
+  {
+    "id": "ca-v1-structure_preference-025",
+    "dimension": "structure_preference",
+    "reverse": true,
+    "tags": [
+      "structure",
+      "environment"
+    ],
+    "variants": {
+      "global": "Shared tidy zones matter less to me than finishing the job.",
+      "ghana": "End finish beats mid-way neat placement for me.",
+      "west_africa": "Completion tops strict tidiness."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-001",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "When the method must change mid-task, I switch without long complaint.",
+      "ghana": "A required method swap mid-job gets a quick shift from me.",
+      "west_africa": "Forced path change mid-task draws little grumble time."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-002",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "Trying a new route to a familiar place feels refreshing.",
+      "ghana": "A different path to the same end feels like a treat.",
+      "west_africa": "Unfamiliar roads to known places please me."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-003",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "routine"
+    ],
+    "variants": {
+      "global": "I feel uneasy the first day a daily routine is interrupted.",
+      "ghana": "Day one of a broken routine feels off in my body.",
+      "west_africa": "Routine break day one unsettles me."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-004",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "problem_solving"
+    ],
+    "variants": {
+      "global": "If a tool breaks, I look for another object that can do the job.",
+      "ghana": "Tool failure sends me hunting for a stand-in object.",
+      "west_africa": "Broken gear triggers substitute search."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-005",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "social"
+    ],
+    "variants": {
+      "global": "New faces in a steady work group take me a meeting or two to adjust to.",
+      "ghana": "Fresh members in a fixed team need a couple meets from me.",
+      "west_africa": "Steady crew changes need warm-up meets."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-006",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "Weather shifts my outdoor plan and I rebuild the plan fast.",
+      "ghana": "Rain or wind reshapes outdoor work with quick replan.",
+      "west_africa": "Sky change gets a fast alternate plan."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-007",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "I revisit old habits even when a new habit would work better.",
+      "ghana": "Better new habit still loses to old groove sometimes.",
+      "west_africa": "Comfort habit wins over improved new pattern at times."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-008",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "instruction"
+    ],
+    "variants": {
+      "global": "I need the reason for a rule change before I accept the new rule.",
+      "ghana": "Rule swaps want a clear why from me.",
+      "west_africa": "New rules need rationale to stick."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-009",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "technology"
+    ],
+    "variants": {
+      "global": "Updated software layout slows me down until I explore every corner.",
+      "ghana": "Fresh app layout needs a full click tour before speed returns.",
+      "west_africa": "UI redesign needs exploration time."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-010",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "Canceled plans free me to do something else useful quickly.",
+      "ghana": "Plan drops become quick slots for other useful acts.",
+      "west_africa": "Cancelation redirects me fast to next useful thing."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-011",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "I sample unfamiliar food willingly when ingredients are named.",
+      "ghana": "Named parts make unknown dishes OK to taste.",
+      "west_africa": "Ingredient labels open me to new plates."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-012",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "routine"
+    ],
+    "variants": {
+      "global": "I return smoothly to a routine after a holiday break.",
+      "ghana": "Post-holiday rhythm snaps back for me.",
+      "west_africa": "After time off, old daily pattern returns easily."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-013",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "Method change mid-task frustrates me for a noticeable stretch.",
+      "ghana": "Mid-job method swap costs me mood time.",
+      "west_africa": "Path change mid-task irritates before I move on."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-014",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "A new route to a familiar place feels like unnecessary risk.",
+      "ghana": "Different roads to the same place feel risky not fun.",
+      "west_africa": "Alternate paths feel needless."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-015",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "routine"
+    ],
+    "variants": {
+      "global": "First interrupted routine day feels fine to me.",
+      "ghana": "Routine break day one feels normal.",
+      "west_africa": "Day-one routine gap does not shake me."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-016",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "problem_solving"
+    ],
+    "variants": {
+      "global": "Tool break stops the job until the exact tool is fixed or replaced.",
+      "ghana": "Without the right tool I halt rather than substitute.",
+      "west_africa": "Exact-tool dependence on failure."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-017",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "social"
+    ],
+    "variants": {
+      "global": "New people in a steady group feel instantly normal to me.",
+      "ghana": "Fresh faces slot in immediately for me.",
+      "west_africa": "Instant comfort with new team members."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-018",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "Weather change leaves me stuck without a new plan for a while.",
+      "ghana": "Sky shift freezes my planning for a bit.",
+      "west_africa": "Weather turns create plan blanks."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-019",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "I adopt a better new habit quickly when I see it works.",
+      "ghana": "Shown better habit swaps in fast for me.",
+      "west_africa": "Evidence of improvement drives fast habit swap."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-020",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "instruction"
+    ],
+    "variants": {
+      "global": "I accept a rule change on brief notice without needing a long reason.",
+      "ghana": "Short notice rule change sits fine without deep why.",
+      "west_africa": "New rule on brief word works for me."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-021",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "technology"
+    ],
+    "variants": {
+      "global": "Updated software feels intuitive right away.",
+      "ghana": "New layout clicks immediately.",
+      "west_africa": "Redesign speeds me up from day one."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-022",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "change"
+    ],
+    "variants": {
+      "global": "Canceled plans leave me drifting unsure what to do next.",
+      "ghana": "Dropped plans create empty unsure minutes.",
+      "west_africa": "Cancelation empties my next move."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-023",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "novelty"
+    ],
+    "variants": {
+      "global": "Unfamiliar food makes me refuse even when ingredients are named.",
+      "ghana": "Unknown dishes get a no even with parts listed.",
+      "west_africa": "Named unfamiliar plates still get declined."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-024",
+    "dimension": "adaptability_change",
+    "reverse": true,
+    "tags": [
+      "adaptability",
+      "routine"
+    ],
+    "variants": {
+      "global": "After a long break, rebuilding routine takes many days.",
+      "ghana": "Holiday return stretches routine rebuild across days.",
+      "west_africa": "Slow return to rhythm after time away."
+    }
+  },
+  {
+    "id": "ca-v1-adaptability_change-025",
+    "dimension": "adaptability_change",
+    "reverse": false,
+    "tags": [
+      "adaptability",
+      "problem_solving"
+    ],
+    "variants": {
+      "global": "I combine odd objects creatively when standard tools are gone.",
+      "ghana": "No standard tool sparks creative mashups from me.",
+      "west_africa": "Odd combos finish jobs without proper gear."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-001",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I return to a hard task after a short walk instead of abandoning it.",
+      "ghana": "Tough task plus brief walk brings me back to try again.",
+      "west_africa": "Hard job gets another round after a stroll."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-002",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "Heavy physical work leads me to drink water and sit before the next chore.",
+      "ghana": "Big exertion gets water plus sit before round two.",
+      "west_africa": "After hard labor I hydrate and rest briefly."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-003",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I push to finish a boring but important task the same day I started.",
+      "ghana": "Dull-but-needed work closes same day it opens.",
+      "west_africa": "Important boring jobs do not cross midnight idle."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-004",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I notice muscle soreness and lighten the next task on purpose.",
+      "ghana": "Sore muscles trigger a lighter next load by choice.",
+      "west_africa": "Body ache steers next task size down."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-005",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "Mental fatigue makes me switch to a simple hands task for a while.",
+      "ghana": "Brain tired sends me to easy hand work awhile.",
+      "west_africa": "Thinking drain moves me to plain manual chores."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-006",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I split a huge cleaning job across several days on purpose.",
+      "ghana": "Massive cleaning spreads across planned days.",
+      "west_africa": "Big clean gets day-sliced plan."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-007",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I sleep longer after an unusually demanding day.",
+      "ghana": "Extra-hard day extends my sleep the night after.",
+      "west_africa": "Big demand day lengthens next sleep."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-008",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "I take notes during long talks so my mind can rest between points.",
+      "ghana": "Long speech gets note fragments so my mind breathes.",
+      "west_africa": "Extended talk pairs with jotting breaks for me."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-009",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I set a visible timer to work in focused bursts on dull tasks.",
+      "ghana": "Boring work runs in timed visible bursts.",
+      "west_africa": "Timer chunks carry dull work."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-010",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I stop work for food before I feel shaky.",
+      "ghana": "Meal breaks come before shaky hunger.",
+      "west_africa": "Food pause precedes shakiness."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-011",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I celebrate small finished pieces of a long project aloud or in text to someone.",
+      "ghana": "Tiny milestones get a spoken or text cheer to another person.",
+      "west_africa": "Micro wins get shared praise."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-012",
+    "dimension": "effort_recovery",
+    "reverse": false,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "After conflict talk, I need quiet alone time before the next social task.",
+      "ghana": "Hot words exchange needs solo quiet before next people task.",
+      "west_africa": "Argument aftermath needs alone buffer."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-013",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "A hard failed attempt makes me shelve the task for days.",
+      "ghana": "Tough fail shelves the job many days.",
+      "west_africa": "Failure sends long shelf time."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-014",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I jump straight into the next heavy chore without water or sit.",
+      "ghana": "Back-to-back heavy chores without pause is my pattern.",
+      "west_africa": "No sit or sip between hard rounds."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-015",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "Boring important tasks often spill to another day unfinished.",
+      "ghana": "Dull needed work crosses days open.",
+      "west_africa": "Important drudge lingers unfinished."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-016",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I ignore early muscle soreness and repeat the same heavy load.",
+      "ghana": "Early soreness ignored; same load repeated.",
+      "west_africa": "Soreness does not shrink next task."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-017",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "Mental fatigue makes me stop all work rather than switch task type.",
+      "ghana": "Brain tired halts everything.",
+      "west_africa": "Think-tired ends the work block fully."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-018",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I try to finish huge cleaning in one long push.",
+      "ghana": "Whole clean in one marathon session is my pull.",
+      "west_africa": "One-shot giant clean attempts."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-019",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "Demanding day rarely changes how long I sleep.",
+      "ghana": "Hard day does not stretch night sleep.",
+      "west_africa": "Sleep length stable after strain."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-020",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "I rely on memory alone through long talks without jotting.",
+      "ghana": "Long talks need no notes from me.",
+      "west_africa": "Memory holds long talks solo."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-021",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "Dull tasks run without timers until something interrupts.",
+      "ghana": "No burst timers on boring work.",
+      "west_africa": "Open-ended grind on dull jobs."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-022",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "I work through hunger until shaking or headache appears.",
+      "ghana": "Hunger ignored until body signals hard.",
+      "west_africa": "Food waits for strong body complaint."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-023",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "persistence"
+    ],
+    "variants": {
+      "global": "I move on to the next task without noting what I finished.",
+      "ghana": "Finished slices pass without acknowledgment.",
+      "west_africa": "No micro-celebration between chunks."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-024",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "mental"
+    ],
+    "variants": {
+      "global": "After conflict talk I go straight into the next crowded task.",
+      "ghana": "Argument then immediate crowd task is fine for me.",
+      "west_africa": "No solo buffer needed after tense talk."
+    }
+  },
+  {
+    "id": "ca-v1-effort_recovery-025",
+    "dimension": "effort_recovery",
+    "reverse": true,
+    "tags": [
+      "effort",
+      "recovery"
+    ],
+    "variants": {
+      "global": "A few minutes with my eyes closed rarely changes how tired I feel.",
+      "ghana": "Short quiet with my eyes shut seldom shifts my tired level.",
+      "west_africa": "A brief eye rest rarely lifts my energy."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-001",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "demonstration"
+    ],
+    "variants": {
+      "global": "I understand a new physical skill faster when someone shows me once.",
+      "ghana": "Seeing a move once beats hearing many words for my body learning.",
+      "west_africa": "Demo-first beats long verbal-only coaching for my hands."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-002",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "verbal"
+    ],
+    "variants": {
+      "global": "Spoken steps alone are enough for me to copy a simple new routine.",
+      "ghana": "Voice-only instructions carry simple new routines for me.",
+      "west_africa": "Hearing the order is enough without pictures."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-003",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "practice"
+    ],
+    "variants": {
+      "global": "I repeat a new phrase aloud several times to lock it in.",
+      "ghana": "Fresh phrases get loud repeats to stick.",
+      "west_africa": "New wording needs spoken loops."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-004",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "visual"
+    ],
+    "variants": {
+      "global": "I draw a quick map or diagram to explain where something is.",
+      "ghana": "Place explanation gets a fast sketch from me.",
+      "west_africa": "Location questions get doodle answers."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-005",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "error"
+    ],
+    "variants": {
+      "global": "I learn from a mistake if the wrong outcome is shown clearly.",
+      "ghana": "Clear wrong result teaches me fast.",
+      "west_africa": "Visible error outcome educates me."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-006",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "pace"
+    ],
+    "variants": {
+      "global": "I ask the teacher or guide to slow down when hands and words move too fast together.",
+      "ghana": "Hands plus words too fast triggers a slow request from me.",
+      "west_africa": "I request slower combo demo when rushed."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-007",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "memory"
+    ],
+    "variants": {
+      "global": "I tie a new name to a face feature so I recall it next time.",
+      "ghana": "Face detail anchors new names for me.",
+      "west_africa": "Feature hook holds names."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-008",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "expression"
+    ],
+    "variants": {
+      "global": "I use objects around me as props when telling a story.",
+      "ghana": "Storytelling grabs nearby objects as examples.",
+      "west_africa": "Tales include prop pointing."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-009",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "reading"
+    ],
+    "variants": {
+      "global": "Long written instructions tire me; short bullet lists work better.",
+      "ghana": "Paragraph manuals drain me; bullets help.",
+      "west_africa": "Wall-of-text rules lose me; lists win."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-010",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "practice"
+    ],
+    "variants": {
+      "global": "I practice a new dance or sport move in slow motion first.",
+      "ghana": "Fresh moves start in slow motion.",
+      "west_africa": "New motor pattern begins slow."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-011",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "social"
+    ],
+    "variants": {
+      "global": "I learn a group game faster after one practice round than after only rules talk.",
+      "ghana": "One trial round beats rules lecture for group games.",
+      "west_africa": "Play round teaches group rules faster for me."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-012",
+    "dimension": "learning_expression",
+    "reverse": false,
+    "tags": [
+      "learning",
+      "visual"
+    ],
+    "variants": {
+      "global": "Charts with colors help me compare amounts at a glance.",
+      "ghana": "Color bars make amount gaps obvious to my eyes.",
+      "west_africa": "Hue-coded charts speed compare."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-013",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "demonstration"
+    ],
+    "variants": {
+      "global": "Watching once is not enough; I need several repeats before my body copies.",
+      "ghana": "Single demo is too thin; repeats needed for my body.",
+      "west_africa": "Multi-repeat watch before motor copy."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-014",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "verbal"
+    ],
+    "variants": {
+      "global": "Spoken steps alone are not enough; I need a picture or gesture.",
+      "ghana": "Voice-only is thin; picture or hand cue needed.",
+      "west_africa": "Words alone miss for new routines."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-015",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "practice"
+    ],
+    "variants": {
+      "global": "I lock new phrases silently in my head without saying them aloud.",
+      "ghana": "Silent mental loop stores new wording.",
+      "west_africa": "No loud repeats needed for phrases."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-016",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "visual"
+    ],
+    "variants": {
+      "global": "I describe a place with words only and skip drawing.",
+      "ghana": "Word picture without sketch is my habit.",
+      "west_africa": "No doodle for directions."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-017",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "error"
+    ],
+    "variants": {
+      "global": "Mistakes confuse me unless someone walks through the right steps slowly.",
+      "ghana": "Errors need slow correct walkthrough.",
+      "west_africa": "Wrong tries need guided redo."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-018",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "pace"
+    ],
+    "variants": {
+      "global": "Fast hands with fast talk during demo feels fine to me.",
+      "ghana": "Rapid demo pace matches my learning.",
+      "west_africa": "Speedy combo demo fits me."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-019",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "memory"
+    ],
+    "variants": {
+      "global": "I recall new names without linking them to face details.",
+      "ghana": "Names stick without feature tricks.",
+      "west_africa": "Face hooks unused."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-020",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "expression"
+    ],
+    "variants": {
+      "global": "I tell stories with words only and rarely point to objects.",
+      "ghana": "Object-free storytelling is my style.",
+      "west_africa": "Props seldom appear in my tales."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-021",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "reading"
+    ],
+    "variants": {
+      "global": "Long written instructions feel clearer than very short bullets.",
+      "ghana": "Full paragraphs beat ultra-short bullets for me.",
+      "west_africa": "Dense text guides me well."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-022",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "practice"
+    ],
+    "variants": {
+      "global": "I practice new moves at full speed from the first try.",
+      "ghana": "Day-one new moves run full tempo.",
+      "west_africa": "No slow-motion ramp."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-023",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "social"
+    ],
+    "variants": {
+      "global": "Rules talk alone is enough for me before a group game starts.",
+      "ghana": "Pre-game lecture carries me without practice round.",
+      "west_africa": "Verbal rules pre-play suffice."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-024",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "visual"
+    ],
+    "variants": {
+      "global": "Color charts feel optional; numbers alone are enough.",
+      "ghana": "Numeric tables beat color bars for me.",
+      "west_africa": "Plain numbers compare fine."
+    }
+  },
+  {
+    "id": "ca-v1-learning_expression-025",
+    "dimension": "learning_expression",
+    "reverse": true,
+    "tags": [
+      "learning",
+      "demonstration"
+    ],
+    "variants": {
+      "global": "Written checklist beats live demo for my learning style.",
+      "ghana": "Paper checklist tops live show for me.",
+      "west_africa": "List beats watching."
+    }
+  }
+]

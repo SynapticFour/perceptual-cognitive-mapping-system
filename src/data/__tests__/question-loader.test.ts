@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { loadQuestionsFromDiskImpl } from '@/data/question-loader-fs';
 import { validateQuestionBankArray } from '@/data/question-bank-validate';
 
@@ -21,5 +21,19 @@ describe('question bank loader', () => {
 
   it('validateQuestionBankArray throws on schema failure', () => {
     expect(() => validateQuestionBankArray([{ id: 'only-id' }], 'fixture')).toThrow(/validation failed/i);
+  });
+
+  it('loads cultural adaptive v1 bank when NEXT_PUBLIC_PCMS_QUESTION_SOURCE=cultural_adaptive_v1', async () => {
+    vi.stubEnv('NEXT_PUBLIC_PCMS_QUESTION_SOURCE', 'cultural_adaptive_v1');
+    try {
+      const merged = await loadQuestionsFromDiskImpl('universal');
+      expect(merged.length).toBe(200);
+      expect(merged[0].tags).toContain('cultural_adaptive_v1');
+      expect(merged[0].responseScale).toBe('likert3');
+      const gh = await loadQuestionsFromDiskImpl('ghana');
+      expect(gh[0].text).not.toBe(merged[0].text);
+    } finally {
+      vi.unstubAllEnvs();
+    }
   });
 });

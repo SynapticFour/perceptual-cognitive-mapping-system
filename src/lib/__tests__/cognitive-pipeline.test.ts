@@ -38,7 +38,13 @@ describe('cognitive-pipeline', () => {
     expect(out.publicProfile.summary.length).toBeGreaterThan(0);
 
     const scoringResult = buildScoringResultFromHistory(history, 'universal');
-    const stored = toStoredPipelineSession(out, 1, undefined, scoringResult);
+    const stored = toStoredPipelineSession(out, 1, undefined, scoringResult, {
+      adaptiveMode: 'routing_coverage',
+      researchMode: false,
+      stemRegionUsed: 'global',
+      questionBankId: 'routing_classic',
+      bankVersion: '1',
+    });
     expect(stored.version).toBe(PIPELINE_STORAGE_VERSION);
     expect(stored.scoringResult.confidenceComponents.F.finalConfidence).toBeGreaterThanOrEqual(0);
     expect(stored.embedding.vector).toHaveLength(32);

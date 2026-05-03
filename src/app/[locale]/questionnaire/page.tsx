@@ -6,10 +6,18 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import {
   AdaptiveQuestionnaireEngine,
+  computeProfileAdaptiveSnapshot,
   ENGINE_HARD_CAP_TOTAL_QUESTIONS,
   ROUTING_WEIGHT_KEYS,
+  type ResearchAssessmentConfig,
   type RoutingWeightKey,
+  toProfileAdaptiveSessionSummary,
 } from '@/adaptive';
+
+function engineConfigFromEnv(): Partial<ResearchAssessmentConfig> {
+  const r = resolveAdaptiveModeResolution({});
+  return { adaptiveMode: r.adaptiveMode, researchMode: r.researchMode };
+}
 import {
   type AssessmentQuestion,
   getAssessmentQuestions,
@@ -26,6 +34,8 @@ import {
 } from '@/lib/cognitive-pipeline';
 import { computeEightConstructScores } from '@/scoring/eight-construct-scores';
 import { parseStoredPipelineSession } from '@/lib/parse-pipeline-session';
+import { displayStemRegionForUiLocale } from '@/lib/regional-stem-resolution';
+import { inferQuestionBankMeta } from '@/lib/session-bank-meta';
 import { readQuestionHistoryFromStorage } from '@/lib/question-history-storage';
 import { dimensionsBelowConfidenceThreshold } from '@/lib/below-threshold-dimensions';
 import { getDimensionUi } from '@/lib/cognitive-dimensions-ui';
@@ -37,6 +47,8 @@ import ProgressIndicator from '@/components/questionnaire/progress-indicator';
 import LiveRefinementConfidence from '@/components/questionnaire/live-refinement-confidence';
 import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
 import { seedConsentIfSkipMode } from '@/lib/ethics-flow-config';
+import { resolveAdaptiveModeResolution } from '@/lib/adaptive-mode-resolution';
+import { warnIfResearchRecordIncomplete } from '@/lib/research-session-validation';
 import { Link } from '@/i18n/navigation';
 import QuestionnaireOfflineTools from '@/components/questionnaire/QuestionnaireOfflineTools';
 import { resolveQuestionDisplayText } from '@/lib/resolve-question-display-text';
@@ -91,7 +103,7 @@ function QuestionnairePageContent() {
         const mode = params.get('mode');
         const sessionQ = params.get('session');
 
-        const eng = new AdaptiveQuestionnaireEngine();
+        const eng = new AdaptiveQuestionnaireEngine('universal', engineConfigFromEnv());
 
         if (mode === 'refinement') {
           setResumeError(null);
@@ -233,6 +245,13 @@ function QuestionnairePageContent() {
         getAssessmentQuestions('all', finalState.culturalContext).map((q) => [q.id, q])
       );
       const eightConstructScores = computeEightConstructScores(finalState.questionHistory, questionsById);
+      const completionStats = eng.getCompletionStats();
+      const profileSnap =
+        completionStats.profileAdaptive ??
+        computeProfileAdaptiveSnapshot(finalState.questionHistory, questionsById);
+      const profileAdaptiveSummary = toProfileAdaptiveSessionSummary(profileSnap);
+      const stemRegionUsed = displayStemRegionForUiLocale(locale);
+      const { questionBankId, bankVersion } = inferQuestionBankMeta(finalState.questionHistory, questionsById);
       const stored = toStoredPipelineSession(
         pipeline,
         finalState.questionHistory.length,
@@ -242,8 +261,16 @@ function QuestionnairePageContent() {
           sessionId: pipelineSessionId,
           revision: nextRevision,
           eightConstructScores: eightConstructScores ?? undefined,
+          profileAdaptiveSummary,
+          stemRegionUsed,
+          questionBankId,
+          bankVersion,
+          adaptiveMode: eng.getAdaptiveMode(),
+          researchMode: eng.getResearchMode(),
         }
       );
+
+      warnIfResearchRecordIncomplete(stored, 'questionnaire pipeline complete');
 
       localStorage.setItem('pcms-pipeline-result', JSON.stringify(stored));
 
@@ -257,7 +284,7 @@ function QuestionnairePageContent() {
       localStorage.setItem('pcms-question-history', JSON.stringify(finalState.questionHistory));
       localStorage.setItem('pcms-completion-reason', completionReason);
 
-      if (completionReason === 'confidence_met') {
+      if (completionReason === 'confidence_met' || completionReason === 'diminishing_returns') {
         const coreAnswered = finalState.questionHistory.filter((h) =>
           getAssessmentQuestions('core', finalState.culturalContext).some((q) => q.id === h.questionId)
         ).length;
@@ -272,7 +299,7 @@ function QuestionnairePageContent() {
 
       router.push('/results');
     },
-    [router]
+    [router, locale]
   );
 
   const handleResponse = useCallback(

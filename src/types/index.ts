@@ -11,7 +11,7 @@ export { toPublicSessionStats } from '@/types/session-stats';
 export type { CognitiveProfilePublic } from '@/types/profile-public';
 
 export type { AssessmentQuestion, LikertResponse, QuestionResponse } from '@/data/questions';
-export type { StoredPipelineSession } from '@/types/pipeline-session';
+export type { SessionPersistenceMeta, StoredPipelineSession } from '@/types/pipeline-session';
 export type {
   EightConstructOutcome,
   EightConstructScaleScore,

@@ -1,0 +1,702 @@
+[
+  {
+    "id": "ca-v1-temporal_pacing-001",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "planning"
+    ],
+    "variants": {
+      "global": "When plans shift at short notice, I adjust what I do next without much fuss.",
+      "ghana": "If the time or place of a meeting changes late, I rearrange my next steps calmly.",
+      "west_africa": "Sudden plan changes lead me to update my next moves without long upset."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-002",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "waiting"
+    ],
+    "variants": {
+      "global": "Long waits in a queue feel harder if I have nothing useful in hand to do.",
+      "ghana": "Standing in line for a long stretch drags more when my hands and mind are idle.",
+      "west_africa": "Empty-handed waiting in a long line wears on me."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-003",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "punctuality_observable"
+    ],
+    "variants": {
+      "global": "I arrive within the window others expect when the time was agreed in advance.",
+      "ghana": "When a time was fixed ahead, I show up inside the range people expect.",
+      "west_africa": "Agreed meeting times see me there in the expected span."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-004",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "flex"
+    ],
+    "variants": {
+      "global": "If a task takes longer than guessed, I extend the time I give it without panic.",
+      "ghana": "When work runs past the first guess, I widen the slot instead of rushing wildly.",
+      "west_africa": "Underestimated duration gets more room rather than panic."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-005",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "rhythm"
+    ],
+    "variants": {
+      "global": "I break a big job into timed chunks with short rests in between.",
+      "ghana": "Large work gets split into blocks with brief rests between.",
+      "west_africa": "Chunk-and-rest pacing is how I tackle long jobs."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-006",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "deadline"
+    ],
+    "variants": {
+      "global": "A clear deadline helps me finish rather than stalls me.",
+      "ghana": "Knowing the end time pushes me forward instead of freezing me.",
+      "west_africa": "Fixed end dates spur completion rather than block starts."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-007",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "memory"
+    ],
+    "variants": {
+      "global": "I forget upcoming appointments unless I put them on a list or phone.",
+      "ghana": "Future times slip unless I record them on paper or device.",
+      "west_africa": "Dates ahead vanish from mind without a written or digital reminder."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-008",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "transition"
+    ],
+    "variants": {
+      "global": "Switching from rest to work mode takes me several minutes.",
+      "ghana": "Moving from rest into active work needs a few minutes of ramp-up.",
+      "west_africa": "Cold start from break to labor is not instant for me."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-009",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "social_time"
+    ],
+    "variants": {
+      "global": "Group work moves faster than I expected when everyone knows their part.",
+      "ghana": "Team tasks finish sooner than I thought when roles are clear.",
+      "west_africa": "Clear division of labor speeds group jobs beyond my first guess."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-010",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "estimate"
+    ],
+    "variants": {
+      "global": "I underestimate how long travel will take when roads are busy.",
+      "ghana": "Busy routes make my travel guess too short.",
+      "west_africa": "Traffic-heavy trips run longer than my first estimate."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-011",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "routine"
+    ],
+    "variants": {
+      "global": "Repeating the same morning steps in the same order settles me.",
+      "ghana": "Same order of morning actions steadies my start.",
+      "west_africa": "Fixed morning sequence calms my entry into the day."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-012",
+    "dimension": "temporal_pacing",
+    "reverse": false,
+    "tags": [
+      "time",
+      "flex"
+    ],
+    "variants": {
+      "global": "If someone arrives late, I use the gap for a small useful task.",
+      "ghana": "Late arrival by others becomes a slot for a tiny useful chore.",
+      "west_africa": "Unexpected gaps become pockets for small wins."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-013",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "planning"
+    ],
+    "variants": {
+      "global": "Short-notice plan changes leave me rattled for a while.",
+      "ghana": "Late changes to time or place unsettle me before I can move on.",
+      "west_africa": "Sudden shifts in schedule throw me off first, then I adapt."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-014",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "waiting"
+    ],
+    "variants": {
+      "global": "Long queues feel fine even with nothing in hand to occupy me.",
+      "ghana": "Waiting in line a long time without activity does not bother me.",
+      "west_africa": "Idle long waits are easy on my mood."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-015",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "punctuality_observable"
+    ],
+    "variants": {
+      "global": "Agreed times are hard for me to hit even when I try.",
+      "ghana": "Expected arrival windows slip for me despite effort.",
+      "west_africa": "People sometimes wait for me even when I intend to be prompt."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-016",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "flex"
+    ],
+    "variants": {
+      "global": "When a task runs long, I feel rushed rather than widening the slot.",
+      "ghana": "Past-guess duration makes me hurry instead of calmly extending time.",
+      "west_africa": "Overrun tasks trigger rush feelings."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-017",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "rhythm"
+    ],
+    "variants": {
+      "global": "I prefer to push through a big job in one stretch without timed breaks.",
+      "ghana": "Large jobs feel better in one long push than in timed chunks.",
+      "west_africa": "I avoid chunk timers on long work."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-018",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "deadline"
+    ],
+    "variants": {
+      "global": "A firm deadline makes me freeze or delay starting.",
+      "ghana": "End dates make starting harder rather than easier.",
+      "west_africa": "Deadlines stall my opening move."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-019",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "memory"
+    ],
+    "variants": {
+      "global": "I keep upcoming times in mind without lists or phone reminders.",
+      "ghana": "Future appointments stay in memory without writing them down.",
+      "west_africa": "I rarely miss a time I only heard spoken once."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-020",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "transition"
+    ],
+    "variants": {
+      "global": "I snap from rest to full work speed almost immediately.",
+      "ghana": "Break to labor shift happens in seconds.",
+      "west_africa": "Rest ends and work speed peaks at once."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-021",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "social_time"
+    ],
+    "variants": {
+      "global": "Group work often runs longer than I first guessed.",
+      "ghana": "Team tasks drag past my opening estimate.",
+      "west_africa": "Shared jobs expand in clock time versus my plan."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-022",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "estimate"
+    ],
+    "variants": {
+      "global": "I overguess travel time even when roads are clear.",
+      "ghana": "I pad travel time more than traffic needs.",
+      "west_africa": "Clear roads still get a long time buffer from me."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-023",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "routine"
+    ],
+    "variants": {
+      "global": "Changing the order of morning steps does not unsettle me.",
+      "ghana": "Shuffled morning order leaves me fine.",
+      "west_africa": "Morning sequence can vary without cost."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-024",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "flex"
+    ],
+    "variants": {
+      "global": "Late arrival by others frustrates me and I struggle to use the gap.",
+      "ghana": "When others are late, the open minutes feel wasted and irritating.",
+      "west_africa": "Waiting on latecomers drains me without productive use."
+    }
+  },
+  {
+    "id": "ca-v1-temporal_pacing-025",
+    "dimension": "temporal_pacing",
+    "reverse": true,
+    "tags": [
+      "time",
+      "social_time"
+    ],
+    "variants": {
+      "global": "I expect solo tasks and group tasks to take about the same clock time.",
+      "ghana": "I budget equal minutes for alone work and shared work.",
+      "west_africa": "Team versus solo duration feels similar in my planning."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-001",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "In a group talk, I wait for a clear pause before I add my point.",
+      "ghana": "When many voices overlap, I hold my words until a calm opening appears.",
+      "west_africa": "In overlapping speech, I wait for a settled gap before speaking."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-002",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "I speak up as soon as I have something to add, even if others are still talking.",
+      "ghana": "If I have a thought, I offer it even while side talk continues.",
+      "west_africa": "I insert my point when ready rather than waiting for full quiet."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-003",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "turn_taking"
+    ],
+    "variants": {
+      "global": "I yield the floor when someone else has been waiting with a raised hand.",
+      "ghana": "If another person has waited visibly, I pass the turn.",
+      "west_africa": "Visible wait gets my silence so they can speak."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-004",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "turn_taking"
+    ],
+    "variants": {
+      "global": "I finish my full thought even if another person is ready to speak.",
+      "ghana": "I close my thought before yielding even when someone is poised.",
+      "west_africa": "I complete my line before opening space."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-005",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "pace"
+    ],
+    "variants": {
+      "global": "I slow my speech when the other person looks confused.",
+      "ghana": "Confusion on the other face leads me to ease my pace.",
+      "west_africa": "I stretch words slower when understanding seems low."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-006",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "pace"
+    ],
+    "variants": {
+      "global": "I keep the same speech speed even when the listener looks lost.",
+      "ghana": "Listener confusion does not change my talking speed much.",
+      "west_africa": "My pace stays steady regardless of puzzled looks."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-007",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "clarity"
+    ],
+    "variants": {
+      "global": "I check whether the other person understood by asking a short question.",
+      "ghana": "I use a brief check question after giving instructions.",
+      "west_africa": "After directions, I ask a tiny confirmation question."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-008",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "clarity"
+    ],
+    "variants": {
+      "global": "I move on after instructions without checking if they were clear.",
+      "ghana": "I leave instructions and assume all is clear unless someone stops me.",
+      "west_africa": "I rarely ask a quick check after I explain steps."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-009",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "repair"
+    ],
+    "variants": {
+      "global": "If someone did not hear me, I repeat the same point in simpler shorter words.",
+      "ghana": "When my line was missed, I say it again shorter and plainer.",
+      "west_africa": "Missed hearing gets a brief second version from me."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-010",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "repair"
+    ],
+    "variants": {
+      "global": "If someone did not hear me, I repeat the same long wording again.",
+      "ghana": "After a miss, I say the same long line a second time.",
+      "west_africa": "My second try uses the same long phrasing as the first."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-011",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "nonverbal"
+    ],
+    "variants": {
+      "global": "I notice hand signals or nods that mean wait or go ahead.",
+      "ghana": "Small hand or head cues that mean pause or continue are visible to me.",
+      "west_africa": "Silent turn cues read clearly for me."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-012",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "nonverbal"
+    ],
+    "variants": {
+      "global": "Small wait-or-go cues from hands or head often pass me by.",
+      "ghana": "Tiny silent cues about turn-taking slip past me.",
+      "west_africa": "Hand and nod signals about pausing are easy to miss for me."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-013",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "listening"
+    ],
+    "variants": {
+      "global": "I can follow one quiet speaker even when side chatter continues.",
+      "ghana": "One low voice stays clear to me amid background talk.",
+      "west_africa": "Soft main speaker plus side noise still works for my listening."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-014",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "listening"
+    ],
+    "variants": {
+      "global": "Side chatter makes one quiet speaker hard for me to track.",
+      "ghana": "Background talk drowns a soft main voice for me.",
+      "west_africa": "Low lead voice plus chatter loses me."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-015",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "I leave a short quiet gap so someone else can join.",
+      "ghana": "I leave a small open space in the talk so another person can enter.",
+      "west_africa": "I pause briefly so another voice can enter the talk."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-016",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "I jump in during short gaps before others have finished their line.",
+      "ghana": "I enter the gap early, before the other line feels fully closed.",
+      "west_africa": "I start speaking in small openings even if the line may not be done."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-017",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "auditory"
+    ],
+    "variants": {
+      "global": "After a noisy spell, I repeat a key word slowly before I go on.",
+      "ghana": "When noise just dropped, I say a key word again, slowly, then continue.",
+      "west_africa": "After loud noise, I restate one key word at a slower pace."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-018",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "auditory"
+    ],
+    "variants": {
+      "global": "After a noisy spell, I continue without repeating a key word.",
+      "ghana": "When noise ends, I move on without restating a key word.",
+      "west_africa": "I do not restate a key word after the room was loud."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-019",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "When several people speak at once, I lower my volume so one line can come through.",
+      "ghana": "If many voices clash, I soften my voice so one line can surface.",
+      "west_africa": "During overlap, I speak more softly so one thread can win through."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-020",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "communication"
+    ],
+    "variants": {
+      "global": "When several people speak at once, I raise my volume so I am heard.",
+      "ghana": "If many voices clash, I push my voice louder to break through.",
+      "west_africa": "During overlap, I speak up louder to cut through."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-021",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "observable"
+    ],
+    "variants": {
+      "global": "I point to what I mean when words alone might be unclear.",
+      "ghana": "If words might confuse, I point at the object or place I mean.",
+      "west_africa": "I use a pointing gesture when plain words might miss."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-022",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "observable"
+    ],
+    "variants": {
+      "global": "I rely on words only even when pointing would make the meaning clearer.",
+      "ghana": "Even when a gesture would help, I stick to words alone.",
+      "west_africa": "I avoid pointing even when it would clear things up."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-023",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "listening"
+    ],
+    "variants": {
+      "global": "I lose thread of a story if several people jump in without order.",
+      "ghana": "A tale told out of turn by many speakers confuses my tracking.",
+      "west_africa": "Unordered jump-ins make me lose the narrative line."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-024",
+    "dimension": "conversation_rhythm",
+    "reverse": true,
+    "tags": [
+      "social",
+      "listening"
+    ],
+    "variants": {
+      "global": "Many unordered speakers do not confuse me; I rebuild the story.",
+      "ghana": "Jumping speakers still leave me with a clear story picture.",
+      "west_africa": "Chaotic turn order does not lose me."
+    }
+  },
+  {
+    "id": "ca-v1-conversation_rhythm-025",
+    "dimension": "conversation_rhythm",
+    "reverse": false,
+    "tags": [
+      "social",
+      "observable"
+    ],
+    "variants": {
+      "global": "I step half a step back when someone steps forward to speak.",
+      "ghana": "If a person moves forward to speak, I make a small space with my feet.",
+      "west_africa": "When someone advances to talk, I ease back a little."
+    }
+  }
+]

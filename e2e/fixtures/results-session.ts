@@ -12,6 +12,11 @@ const dim = (final: number, meets: boolean) => ({
 
 export const sampleStoredSession: StoredPipelineSession = {
   version: PIPELINE_STORAGE_VERSION,
+  adaptiveMode: 'routing_coverage',
+  researchMode: false,
+  questionBankId: 'routing_classic',
+  bankVersion: '1',
+  stemRegionUsed: 'global',
   completedAt: new Date().toISOString(),
   responseCount: 3,
   publicProfile: {

@@ -1,3 +1,6 @@
+import { computeProfileAdaptiveSnapshot, toProfileAdaptiveSessionSummary } from '@/adaptive';
+import type { QuestionResponse } from '@/data/questions';
+import { getAssessmentQuestions } from '@/data/questions';
 import {
   buildScoringResultFromHistory,
   buildSessionRawFromHistory,
@@ -5,7 +8,8 @@ import {
   runResearchPipeline,
   toStoredPipelineSession,
 } from '@/lib/cognitive-pipeline';
-import type { QuestionResponse } from '@/data/questions';
+import { displayStemRegionForUiLocale } from '@/lib/regional-stem-resolution';
+import { inferQuestionBankMeta } from '@/lib/session-bank-meta';
 import type { StoredPipelineSession } from '@/types/pipeline-session';
 
 /**
@@ -25,7 +29,18 @@ export async function runPaperImportPipeline(options: {
   }
   const pipeline = await runResearchPipeline(sessionRaw);
   const scoringResult = buildScoringResultFromHistory(options.history, 'universal');
+  const questionsById = new Map(getAssessmentQuestions('all', 'universal').map((q) => [q.id, q]));
+  const profileAdaptiveSummary = toProfileAdaptiveSessionSummary(
+    computeProfileAdaptiveSnapshot(options.history, questionsById)
+  );
+  const { questionBankId, bankVersion } = inferQuestionBankMeta(options.history, questionsById);
   return toStoredPipelineSession(pipeline, options.history.length, new Date().toISOString(), scoringResult, {
     sessionId: options.sessionId,
+    profileAdaptiveSummary,
+    stemRegionUsed: displayStemRegionForUiLocale('en'),
+    questionBankId,
+    bankVersion,
+    adaptiveMode: 'routing_coverage',
+    researchMode: false,
   });
 }

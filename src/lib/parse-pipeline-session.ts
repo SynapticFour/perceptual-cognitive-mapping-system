@@ -1,6 +1,12 @@
 import { isRecord } from './type-guards';
 import type { CognitiveProfilePublic } from '@/types/profile-public';
+import {
+  PROFILE_ADAPTIVE_SESSION_SUMMARY_VERSION,
+  type ProfileAdaptiveSessionSummary,
+} from '@/adaptive/profile-adaptive';
 import { ROUTING_WEIGHT_KEYS } from '@/adaptive/routing-tags';
+import type { QuestionStemRegion } from '@/data/questions';
+import type { ResolvedAdaptiveMode } from '@/lib/adaptive-mode-resolution';
 import { PIPELINE_STORAGE_VERSION, type StoredPipelineSession } from '@/types/pipeline-session';
 import type { ScoringResult } from '@/scoring';
 import {
@@ -53,6 +59,35 @@ function isEightConstructScaleScore(value: unknown, construct: EightConstructId)
   if (value.withinPersonItemSd !== null && !isFiniteNumber(value.withinPersonItemSd)) return false;
   if (value.meanSemWithinPerson !== null && !isFiniteNumber(value.meanSemWithinPerson)) return false;
   return true;
+}
+
+function isQuestionStemRegion(value: unknown): value is QuestionStemRegion {
+  return value === 'global' || value === 'ghana' || value === 'west_africa';
+}
+
+function isProfileDimensionStats(value: unknown): boolean {
+  if (!isRecord(value)) return false;
+  return (
+    isFiniteNumber(value.n) &&
+    isFiniteNumber(value.mean01) &&
+    isFiniteNumber(value.variance01) &&
+    isFiniteNumber(value.contradiction01) &&
+    isFiniteNumber(value.confidence01)
+  );
+}
+
+function isProfileAdaptiveSessionSummary(value: unknown): value is ProfileAdaptiveSessionSummary {
+  if (!isRecord(value)) return false;
+  if (value.schemaVersion !== PROFILE_ADAPTIVE_SESSION_SUMMARY_VERSION) return false;
+  if (!isFiniteNumber(value.sessionConfidence)) return false;
+  if (!isFiniteNumber(value.meanContradiction01)) return false;
+  const bd = value.byDimension;
+  if (!isRecord(bd)) return false;
+  return ROUTING_WEIGHT_KEYS.every((k) => isProfileDimensionStats(bd[k]));
+}
+
+function isStoredAdaptiveMode(value: unknown): value is ResolvedAdaptiveMode {
+  return value === 'routing_coverage' || value === 'profile_diagnostic';
 }
 
 function isEightConstructOutcome(value: unknown): value is EightConstructOutcome {
@@ -117,6 +152,27 @@ export function parseStoredPipelineSession(raw: unknown): StoredPipelineSession 
   if (raw.eightConstructScores !== undefined && raw.eightConstructScores !== null) {
     if (!isEightConstructOutcome(raw.eightConstructScores)) return null;
     out.eightConstructScores = raw.eightConstructScores;
+  }
+
+  if (raw.profileAdaptiveSummary !== undefined && raw.profileAdaptiveSummary !== null) {
+    if (isProfileAdaptiveSessionSummary(raw.profileAdaptiveSummary)) {
+      out.profileAdaptiveSummary = raw.profileAdaptiveSummary;
+    }
+  }
+  if (raw.stemRegionUsed !== undefined && isQuestionStemRegion(raw.stemRegionUsed)) {
+    out.stemRegionUsed = raw.stemRegionUsed;
+  }
+  if (typeof raw.questionBankId === 'string' && raw.questionBankId.length > 0) {
+    out.questionBankId = raw.questionBankId;
+  }
+  if (typeof raw.bankVersion === 'string' && raw.bankVersion.length > 0) {
+    out.bankVersion = raw.bankVersion;
+  }
+  if (raw.adaptiveMode !== undefined && isStoredAdaptiveMode(raw.adaptiveMode)) {
+    out.adaptiveMode = raw.adaptiveMode;
+  }
+  if (raw.researchMode === true || raw.researchMode === false) {
+    out.researchMode = raw.researchMode;
   }
 
   return out;
