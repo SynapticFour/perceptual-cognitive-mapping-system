@@ -29,6 +29,8 @@ npm run build
 npm run test:e2e   # requires playwright browsers; see .github/workflows/ci.yml
 ```
 
+Playwright’s dev server can fail in restricted sandboxes (`uv_interface_addresses`); run `npm run test:e2e` on a normal workstation or CI with full OS network APIs.
+
 ## Open work (needs people)
 
 1. **Native Twi / Wolof** — full `ethics_consent`, Likert, and long-form copy; `_localeReview` in `messages/tw.json`.
