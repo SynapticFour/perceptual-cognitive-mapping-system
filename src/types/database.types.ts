@@ -216,6 +216,27 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['ethics_audit_events']['Insert']>;
         Relationships: [];
       };
+      atlas_self_nominations: {
+        Row: {
+          id: string;
+          anonymous_id: string;
+          created_at: string;
+          locale: string;
+          selected_descriptor_ids: string[];
+          linked_pcms_session_id: string | null;
+          linked_atlas_session_id: string | null;
+        };
+        Insert: {
+          id?: string;
+          anonymous_id: string;
+          locale: string;
+          selected_descriptor_ids: string[];
+          linked_pcms_session_id?: string | null;
+          linked_atlas_session_id?: string | null;
+        };
+        Update: Partial<Database['public']['Tables']['atlas_self_nominations']['Insert']>;
+        Relationships: [];
+      };
     };
     Views: {
       research_analytics: {

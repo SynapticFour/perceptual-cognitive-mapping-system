@@ -9,6 +9,11 @@
 - **[Data Model](./data-model.md)** - Database schema and data structure documentation
 
 #### **Research Documentation**
+- **[Research action plan](./RESEARCH_ACTION_PLAN.md)** — Phased path to evidence, IRB, pre-registration, publication (team + agents)
+- **[Validation protocol](./VALIDATION_PROTOCOL.md)** — Honest psychometric status and Phase 1 bar (funders / IRB)
+- **[Architectural decisions (ADR)](./DECISIONS.md)** — PCMS + ATLAS non-negotiables
+- **[ATLAS programme](./ATLAS.md)** — Companion high-dimensional roadmap ([`ATLAS_VISION.md`](./ATLAS_VISION.md) alias)
+- **[Cursor prompts](../cursor-prompts/README.md)** — Executable briefs (T/I/A/V items, site audit, self-nomination, ATLAS prep)
 - **[Research roadmap](./RESEARCH-ROADMAP.md)** - Epics/tickets: session reproducibility, dual confidence model, banks, offline exports
 - **[Whitepaper](./whitepaper.md)** - Complete technical and theoretical foundation
 - **[Research Study Design v1.0](../lib/research/study_v1.md)** - Complete research protocol and study design
@@ -21,7 +26,9 @@
 - **[Designing for support without labels](./DESIGNING-SUPPORT-WITHOUT-LABELS.md)** - Guidance copy and why cohort views stay aggregate-only
 
 #### **Ethics and Compliance**
-- **[Ethics Framework v1.0](./ethics.md)** - Ethical guidelines and non-diagnostic clarifications
+- **[Ethics Framework v1.0](./ethics.md)** — Ethical guidelines (same source is served in-app at `/ethics` on the map deployment; locale prefix when not default, e.g. `/de/ethics`)
+- **[Site audit report (public readiness)](./SITE_AUDIT_REPORT.md)** — Periodic audit log; **[Continuation handoff](./CONTINUATION.md)** — resume-work index for agents and maintainers
+- The **[validation protocol](./VALIDATION_PROTOCOL.md)** (under Research above) is also served in-app at `/validation`
 - **GDPR tables** (after base schema): [`../supabase/migrations/20260413120000_ethics_gdpr.sql`](../supabase/migrations/20260413120000_ethics_gdpr.sql)
 - **Ethics audit events** (compliance / audit trail): [`../supabase/migrations/20260414200000_ethics_audit_events.sql`](../supabase/migrations/20260414200000_ethics_audit_events.sql)
 
@@ -43,6 +50,8 @@
 4. **Results**: `/results` — landscape (map, density, cognitive field, 3D terrain, vector); research ZIP export; print summary; additional **assent** step before showing scores when applicable
 5. **Field import** (optional): `/field-import` — paper/CSV replay into the same pipeline
 6. **Group analysis** (optional): `/group-cognitive-analysis` — paste multiple share payloads for aggregate patterns
+7. **Ethics (full text):** `/ethics` — renders `docs/ethics.md` (locale prefix for non-default languages, e.g. `/de/ethics`)
+8. **Validation protocol (full text):** `/validation` — renders `docs/VALIDATION_PROTOCOL.md`
 
 #### **Developer Resources**
 - **Setup Script**: `./setup.sh` - One-command setup for macOS

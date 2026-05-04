@@ -2,6 +2,14 @@
  * Barrel exports — prefer importing from specific modules in new code.
  */
 
+export type {
+  AnonymousParticipantId,
+  CovariancePrior,
+  DimensionKey,
+  DimensionScore,
+  LocaleKey,
+  QuestionBankId,
+} from '@/types/shared';
 export type { RawResponse, SessionRaw } from '@/types/raw-session';
 export type {
   SessionStatsInternal,

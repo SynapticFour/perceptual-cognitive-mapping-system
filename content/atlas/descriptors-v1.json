@@ -1,0 +1,426 @@
+{
+  "version": "1",
+  "schema": "atlas-descriptors-v1",
+  "descriptors": [
+    {
+      "id": "DESC-intero-001",
+      "metaTrait": "interoception",
+      "text": "I often notice physical sensations in my body — like hunger, heartbeat, or muscle tension — before I notice what emotion I am feeling",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-trans-001",
+      "metaTrait": "transition-sensitivity",
+      "text": "When plans change unexpectedly, even small changes, it takes me noticeably longer to adjust than it seems to take others",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-meta-001",
+      "metaTrait": "metaphor-thinking",
+      "text": "I often find myself understanding things through images, metaphors, or analogies before I can explain them in words",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-hyper-001",
+      "metaTrait": "hyperfocus",
+      "text": "When something genuinely interests me, I can stay focused on it for hours without noticing time passing — but switching to something else can feel jarring",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-feel-001",
+      "metaTrait": "feeling-labeling",
+      "text": "I sometimes struggle to put a name to what I am feeling — I know something is going on emotionally, but I cannot easily identify what it is",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-mask-001",
+      "metaTrait": "social-masking",
+      "text": "In social situations, I often put significant effort into acting in ways that feel expected or normal — and this can be exhausting even if the interaction itself was fine",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-time-001",
+      "metaTrait": "time-perception",
+      "text": "My sense of time passing is unreliable — I frequently underestimate how long something will take, or lose track of time entirely when absorbed in something",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-pattern-001",
+      "metaTrait": "pattern-imposition",
+      "text": "I tend to notice patterns and connections between things — sometimes this is useful, sometimes I am not sure if the pattern is really there",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-moral-001",
+      "metaTrait": "moral-intensity",
+      "text": "Situations I see as unfair or ethically wrong tend to affect me more strongly than they seem to affect other people around me",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-novelty-001",
+      "metaTrait": "novelty-drive",
+      "text": "I need regular exposure to new ideas, places, or experiences — routine without novelty starts to feel draining or suffocating",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-exist-001",
+      "metaTrait": "existential-preoccupation",
+      "text": "I spend a lot of time thinking about big questions — the meaning of things, why I am here, what happens after death — more than most people seem to",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-stim-001",
+      "metaTrait": "stimming-regulation",
+      "text": "I use repetitive movements, sounds, or sensations to self-regulate — to calm down, focus, or process strong feelings — and this helps even if others find it unusual",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-001",
+      "metaTrait": "sensory-gating",
+      "text": "Bright or busy spaces can feel manageable when I pace how much I take in at once",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-002",
+      "metaTrait": "sensory-gating",
+      "text": "Layered sounds and lights sometimes blend together until I need a quieter patch to reset",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-003",
+      "metaTrait": "proprioception",
+      "text": "I sense where my limbs are in space even with my eyes closed when I slow down and check in",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-004",
+      "metaTrait": "proprioception",
+      "text": "After sitting still for a long stretch, standing up feels like re-learning where my weight sits",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-005",
+      "metaTrait": "social-energy",
+      "text": "After lively gatherings I need quiet time before I feel ready for another round of conversation",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-006",
+      "metaTrait": "social-energy",
+      "text": "Short check-ins with people I trust restore me faster than long surface-level chats",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-007",
+      "metaTrait": "direct-communication",
+      "text": "I appreciate when people say plainly what they need rather than hinting and expecting me to guess",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-008",
+      "metaTrait": "direct-communication",
+      "text": "Clear timelines and next steps help me stay aligned more than vague reassurances",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-009",
+      "metaTrait": "associative-thinking",
+      "text": "One memory often pulls up another from a different season of life while I am doing something routine",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-010",
+      "metaTrait": "associative-thinking",
+      "text": "I enjoy finding what two hobbies or interests share under the surface",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-011",
+      "metaTrait": "affect-intensity",
+      "text": "Small wins can lift my whole day; small setbacks can sit heavy until I process them",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-012",
+      "metaTrait": "affect-intensity",
+      "text": "I feel moved by stories or music in a full-body way that surprises people who know me casually",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-013",
+      "metaTrait": "boredom-threshold",
+      "text": "Repetition without variation makes my attention drift even when I care about the outcome",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-014",
+      "metaTrait": "boredom-threshold",
+      "text": "I add small twists to familiar tasks so they stay engaging enough to finish",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-015",
+      "metaTrait": "intrinsic-motivation",
+      "text": "I stick with hard practice when the activity itself feels meaningful, not only when there is an external reward",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-016",
+      "metaTrait": "intrinsic-motivation",
+      "text": "Curiosity alone has led me deep into topics no assignment asked for",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-017",
+      "metaTrait": "body-boundaries",
+      "text": "Certain fabrics or temperatures on my skin distract me until I adjust clothing or the room",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-018",
+      "metaTrait": "body-boundaries",
+      "text": "Hugs or handshakes land differently depending on my energy that day",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-019",
+      "metaTrait": "rhythm-preference",
+      "text": "Steady beats while walking or working help me settle into a workable pace",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-020",
+      "metaTrait": "rhythm-preference",
+      "text": "Irregular interruptions make it harder for me to find my stride again",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-021",
+      "metaTrait": "detail-sweep",
+      "text": "I scan a scene for small changes before I relax into it",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-022",
+      "metaTrait": "detail-sweep",
+      "text": "Typos or visual clutter pull my eye even when I am trying to focus on the main message",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-023",
+      "metaTrait": "future-imagery",
+      "text": "Imagining how a choice might feel next month shapes what I say yes to today",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-024",
+      "metaTrait": "future-imagery",
+      "text": "Concrete examples of outcomes matter more to me than abstract slogans",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-025",
+      "metaTrait": "justice-sensitivity",
+      "text": "Seeing someone treated unfairly can stay on my mind after the moment has passed",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-026",
+      "metaTrait": "justice-sensitivity",
+      "text": "I notice when rules apply to one group differently than another in everyday situations",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-027",
+      "metaTrait": "novelty-balance",
+      "text": "Familiar rituals comfort me as long as there is still room for small surprises now and then",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-028",
+      "metaTrait": "novelty-balance",
+      "text": "Too many new things at once feels like overload even when each part is interesting alone",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-029",
+      "metaTrait": "solo-focus",
+      "text": "I do my deepest thinking when I can control the pace and pause without explaining aloud",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-030",
+      "metaTrait": "solo-focus",
+      "text": "Background voices at low volume sometimes help me focus; sudden loud bursts derail me",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-031",
+      "metaTrait": "co-regulation",
+      "text": "Calm people nearby help my body settle faster than when I am the only regulated person in the room",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-032",
+      "metaTrait": "co-regulation",
+      "text": "I pick up tension in a group before anyone names it",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-033",
+      "metaTrait": "narrative-memory",
+      "text": "I remember events as little stories with a beginning and turning point more than as raw facts",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-034",
+      "metaTrait": "narrative-memory",
+      "text": "Telling someone what happened helps me sort what it meant for me",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-035",
+      "metaTrait": "sensory-seeking",
+      "text": "Certain textures, scents, or movements feel grounding when stress runs high",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-036",
+      "metaTrait": "sensory-seeking",
+      "text": "I seek gentle stimulation when the day has felt flat rather than overstimulating",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-037",
+      "metaTrait": "task-switching",
+      "text": "Switching tasks costs me a visible beat; stacking too many switches in an hour wears me down",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-038",
+      "metaTrait": "task-switching",
+      "text": "Finishing one block fully before opening the next feels kinder to my attention",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-039",
+      "metaTrait": "fairness-reciprocity",
+      "text": "I track give-and-take in relationships and notice when the balance drifts for a long stretch",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-040",
+      "metaTrait": "fairness-reciprocity",
+      "text": "Praise feels hollow to me when it does not match what actually happened",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-041",
+      "metaTrait": "environment-fit",
+      "text": "Some rooms feel like they fit my body and some feel like I am performing inside them",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-042",
+      "metaTrait": "environment-fit",
+      "text": "Changing seats or lighting can shift my whole capacity to participate",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-043",
+      "metaTrait": "anticipation-body",
+      "text": "Upcoming events show up in my sleep or appetite before the calendar date feels close",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-044",
+      "metaTrait": "anticipation-body",
+      "text": "Deadlines create a physical buzz that can help or overwhelm depending on what else is on my plate",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-045",
+      "metaTrait": "gentle-honesty",
+      "text": "I value feedback that names one concrete behaviour instead of a vague character label",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-046",
+      "metaTrait": "gentle-honesty",
+      "text": "I offer feedback in small doses because big speeches feel risky to receive and to give",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-047",
+      "metaTrait": "rest-cues",
+      "text": "I notice when I need a break from input before I feel completely depleted",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    },
+    {
+      "id": "DESC-extra-048",
+      "metaTrait": "meaning-through-action",
+      "text": "Doing something with my hands helps me think through decisions that feel stuck in my head",
+      "tone": "neutral",
+      "culturalContext": "universal"
+    }
+  ]
+}

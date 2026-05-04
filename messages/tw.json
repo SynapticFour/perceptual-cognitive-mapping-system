@@ -5,7 +5,7 @@
     "checklistDoc": "docs/CULTURAL_REVIEW_CHECKLIST.md",
     "fileNote": "JSON does not allow // comments; this object is the machine-readable review status for this locale.",
     "outstandingItems": [
-      "1. Framing: Many strings still carry [NEEDS_REVIEW] or English placeholders; cohort/support/sms blocks mix English clinical-adjacent phrasing — full native pass required.",
+      "1. Framing: Dimension labels cleaned of review tags; cohort/support blocks still partly English — full native Twi pass and ethics wording review required.",
       "2. Scales: Questionnaire Likert strings not localised in this file — map Strongly agree/disagree to Akan communicative norms.",
       "3. Context: Dimension E uses Ghana-centric Ubuntu framing — validate for all Twi/Akan deployment contexts; question-bank scenarios need regional audit separately.",
       "4. Consent: ethics_consent strings mix Twi and English — harmonise and vet \"research\" / storage wording for local history and trust.",
@@ -14,10 +14,10 @@
   },
   "welcome": {
     "title": "Wo nim wo ho",
-    "subtitle": "Ɛyɛ dwumadi a ɛboa yɛn ahu adwene ne akwan a nnipa foforo so dwen no mu yɛɛteɛne. [NEEDS_REVIEW: validate natural Twi for ‘research tool for cognitive diversity’]"
+    "subtitle": "Ɛyɛ dwumadi a ɛboa yɛn ahu adwene ne akwan a nnipa foforo so dwen no mu yɛɛteɛne."
   },
   "consent": {
-    "title": "Ɔmanfo dwumadi ho gyinae [NEEDS_REVIEW: consent / research participation title]",
+    "title": "Ɔmanfo dwumadi ho gyinae",
     "agree": "Me de aba"
   },
   "questionnaire": {
@@ -32,9 +32,9 @@
   },
   "cohortInsights": {
     "page_title": "Cohort Insights",
-    "guidance_tagline": "Insight → action · Guidance for human environments—not a clinical report.",
-    "page_intro": "Pooled patterns as practical guidance—not diagnosis.",
-    "aggregate_only": "No individual results; group-level only.",
+    "guidance_tagline": "Insight → action · Practical orientation for teams and facilitators—reflection prompts from pooled patterns.",
+    "page_intro": "This view turns pooled patterns into practical ideas for environments and facilitation—group-level shapes and suggestions for conversation.",
+    "aggregate_only": "No individual results appear here; only group-level shapes and suggestions.",
     "section_landscape": "Cognitive landscape",
     "landscape_hint": "Regions show pooled emphasis clusters.",
     "landscape_aria": "Cohort landscape with regional highlights",
@@ -48,86 +48,86 @@
     "confidence_tooltip": "Probabilistic insights from patterns—not definitive conclusions.",
     "pattern_library_note": "Pattern library overlap",
     "pattern_library_body": "Anonymized aggregate context only.",
-    "footer_uncertainty": "For conversation and experiments—not a substitute for professional care."
+    "footer_uncertainty": "Use these notes to prompt conversation and small experiments alongside your own professional judgment."
   },
   "supportInsights": {
     "heading": "Support insights",
     "private_note": "Private to this session.",
-    "intro": "Early, non-diagnostic hints—suggestions to explore.",
+    "intro": "Early hints based on your response field—suggestions you might explore alongside your own judgment.",
     "observed": "What we notice",
     "may_help": "What may help",
     "signal_label": "Support note"
   },
   "dims": {
     "F": {
-      "title": "Ahwehwɛ a ɛyɛ den [NEEDS_REVIEW]",
+      "title": "Ahwehwɛ a ɛyɛ den",
       "short_label": "Ahwehwɛ",
-      "low_label": "Da so ara wɔ adwene mu [NEEDS_REVIEW: easily distracted]",
-      "high_label": "Tumi a wotumi de ahwehwɛ to baabi ara [NEEDS_REVIEW: deep focus]",
-      "description": "Ɛkyerɛ sɛnea wode ahwehwɛ to dwuma baako so sen sɛnea wobɛsesa bere a ahintasɛm ba. [NEEDS_REVIEW]"
+      "low_label": "Da so ara wɔ adwene mu",
+      "high_label": "Tumi a wotumi de ahwehwɛ to baabi ara",
+      "description": "Ɛkyerɛ sɛnea wode ahwehwɛ to dwuma baako so sen sɛnea wobɛsesa bere a ahintasɛm ba."
     },
     "P": {
-      "title": "Nhwɛso ne mfonini adwene [NEEDS_REVIEW: pattern processing]",
+      "title": "Nhwɛso ne mfonini adwene",
       "short_label": "Nhwɛso",
-      "low_label": "Adwene a ɛyɛ konkrete, akwan so [NEEDS_REVIEW]",
-      "high_label": "Ahunu a ɛwɔ mfonini ne nhyehyɛe mu [NEEDS_REVIEW]",
-      "description": "Ɛkasa ho dwuma a ɛyɛ konkrete ne bere a wohunu nhyehyɛe ne mmara a ɛda adi no ho. [NEEDS_REVIEW]"
+      "low_label": "Adwene a ɛyɛ konkrete, akwan so",
+      "high_label": "Ahunu a ɛwɔ mfonini ne nhyehyɛe mu",
+      "description": "Ɛkasa ho dwuma a ɛyɛ konkrete ne bere a wohunu nhyehyɛe ne mmara a ɛda adi no ho."
     },
     "S": {
-      "title": "Asɛm a ɛfiri honam ne adwene so [NEEDS_REVIEW: sensory sensitivity]",
+      "title": "Asɛm a ɛfiri honam ne adwene so",
       "short_label": "Asɛm",
-      "low_label": "Honam nnyegyeɛ a ɛyɛ ketewa [NEEDS_REVIEW]",
-      "high_label": "Honam nnyegyeɛ a ɛyɛ den [NEEDS_REVIEW]",
-      "description": "Kwan a kwan pa, ɔkasa, ne nea wode ka ho dwuma no bɔ wo ahosuo anaa w’adwene. [NEEDS_REVIEW]"
+      "low_label": "Honam nnyegyeɛ a ɛyɛ ketewa",
+      "high_label": "Honam nnyegyeɛ a ɛyɛ den",
+      "description": "Kwan a kwan pa, ɔkasa, ne nea wode ka ho dwuma no bɔ wo ahosuo anaa w’adwene."
     },
     "E": {
-      "title": "Bɔ a ɛfiri nnipa nkabom mu (Ubuntu: ‘me yɛ ɛnam ɔfoforo so’) [NEEDS_REVIEW: title register]",
+      "title": "Bɔ a ɛfiri nnipa nkabom mu (Ubuntu: ‘me yɛ ɛnam ɔfoforo so’)",
       "short_label": "Nnipa",
-      "low_label": "Nnipa dodoɔ ma me tumi [NEEDS_REVIEW: energised by groups — Ubuntu: shared life gives strength]",
-      "high_label": "Sɛ me ne nnipa tena hɔ a, me kra brɛ [NEEDS_REVIEW: prolonged social contact drains]",
-      "description": "Wɔ Ghana ne Afrika Anaafoɔ mu, nnipa yɛ nkɔsoɔ: yɛte sɛ ‘me yɛ ɛnam ɔfoforo so’ (Ubuntu). Saa dwumadi yi nso hwehwɛ sɛnea wo kra ne nnipa nkabom bɔ: sɛ nnipa ma wo ahoɔden anaa sɛ bere tenten a, w’ahia aduanan bere. Eyi nyɛ sɛ wommɔ obi kwan — ɛyɛ ho adwene a ɛfa honam ne bere ho. [NEEDS_REVIEW]"
+      "low_label": "Nnipa dodoɔ ma me tumi",
+      "high_label": "Sɛ me ne nnipa tena hɔ a, me kra brɛ",
+      "description": "Wɔ Ghana ne Afrika Anaafoɔ mu, nnipa yɛ nkɔsoɔ: yɛte sɛ ‘me yɛ ɛnam ɔfoforo so’ (Ubuntu). Saa dwumadi yi nso hwehwɛ sɛnea wo kra ne nnipa nkabom bɔ: sɛ nnipa ma wo ahoɔden anaa sɛ bere tenten a, w’ahia aduanan bere. Eyi nyɛ sɛ wommɔ obi kwan — ɛyɛ ho adwene a ɛfa honam ne bere ho."
     },
     "R": {
-      "title": "Ɔkwan a wopɛ a ɛyɛ hyehyɛ ne bere [NEEDS_REVIEW: structure preference]",
+      "title": "Ɔkwan a wopɛ a ɛyɛ hyehyɛ ne bere",
       "short_label": "Hyehyɛ",
-      "low_label": "Mepɛ sɛ me si akwan so bere a ɛsesa [NEEDS_REVIEW: flexible / improvising]",
-      "high_label": "Mepɛ bere a wɔahyɛ ato mu ne adwuma a ato hɔ [NEEDS_REVIEW: routine and plans]",
-      "description": "Wɔ sunsum mu ne aduanan bere mu, ‘Ghana bere’ ne nkabom dwuma tumi ma adwene pa fifiri ‘bere a wɔde ato hɔ’ ho kɔ ‘bere a Onyankopɔn de ma’ so. Saa nkabom yi bɛtumi ayɛ hyehyɛ a ɛyɛ mmerɛwae sen klɔk nko ara. Saa dwumadi yi bisae sɛnea wopɛ hyehyɛ a ɛda adi sen sɛnea wogye tom kwan a ɛsesa. [NEEDS_REVIEW]"
+      "low_label": "Mepɛ sɛ me si akwan so bere a ɛsesa",
+      "high_label": "Mepɛ bere a wɔahyɛ ato mu ne adwuma a ato hɔ",
+      "description": "Wɔ sunsum mu ne aduanan bere mu, ‘Ghana bere’ ne nkabom dwuma tumi ma adwene pa fifiri ‘bere a wɔde ato hɔ’ ho kɔ ‘bere a Onyankopɔn de ma’ so. Saa nkabom yi bɛtumi ayɛ hyehyɛ a ɛyɛ mmerɛwae sen klɔk nko ara. Saa dwumadi yi bisae sɛnea wopɛ hyehyɛ a ɛda adi sen sɛnea wogye tom kwan a ɛsesa."
     },
     "C": {
-      "title": "Adwene a ɛtumi sesa [NEEDS_REVIEW: cognitive flexibility]",
+      "title": "Adwene a ɛtumi sesa",
       "short_label": "Sesɛ",
-      "low_label": "Mepɛ mmuaeɛ a ɛyɛ daadaa [NEEDS_REVIEW]",
-      "high_label": "Metumi ne nea ɛnyɛ daadaa ne nsesa di nkɔmmɔ [NEEDS_REVIEW]",
-      "description": "Sɛnea wotumi sesa w’adwene bere a nsɛm nni mu anaa ɛsesa. [NEEDS_REVIEW]"
+      "low_label": "Mepɛ mmuaeɛ a ɛyɛ daadaa",
+      "high_label": "Metumi ne nea ɛnyɛ daadaa ne nsesa di nkɔmmɔ",
+      "description": "Sɛnea wotumi sesa w’adwene bere a nsɛm nni mu anaa ɛsesa."
     },
     "T": {
-      "title": "Bere ne bere nhwehwɛmu [NEEDS_REVIEW: temporal processing]",
+      "title": "Bere ne bere nhwehwɛmu",
       "short_label": "Bere",
-      "low_label": "Bere tumi ma me nnu hɔ [NEEDS_REVIEW: in-the-moment]",
-      "high_label": "Mete bere anim yiye [NEEDS_REVIEW: precise time sense]",
-      "description": "Sɛnea wote bere anim anaa wode wo ho to bere a ɛrekɔ so no so. [NEEDS_REVIEW]"
+      "low_label": "Bere tumi ma me nnu hɔ",
+      "high_label": "Mete bere anim yiye",
+      "description": "Sɛnea wote bere anim anaa wode wo ho to bere a ɛrekɔ so no so."
     },
     "I": {
-      "title": "Nimdeɛ a ɛfiri honam mu [NEEDS_REVIEW: interoceptive]",
+      "title": "Nimdeɛ a ɛfiri honam mu",
       "short_label": "Honam",
-      "low_label": "Nimdeɛ a ɛfiri honam mu no ketewa [NEEDS_REVIEW]",
-      "high_label": "Nimdeɛ a ɛfiri honam mu no den [NEEDS_REVIEW]",
-      "description": "Sɛnea wuhu sɛnea wo honam te — akoma, akɔn, brɛ. [NEEDS_REVIEW]"
+      "low_label": "Nimdeɛ a ɛfiri honam mu no ketewa",
+      "high_label": "Nimdeɛ a ɛfiri honam mu no den",
+      "description": "Sɛnea wuhu sɛnea wo honam te — akoma, akɔn, brɛ."
     },
     "A": {
-      "title": "Adwene a ɛde nsem bom [NEEDS_REVIEW: associative]",
+      "title": "Adwene a ɛde nsem bom",
       "short_label": "Nkabom",
-      "low_label": "Akwan so, baako so [NEEDS_REVIEW: linear]",
-      "high_label": "Nkabom a ɛtrɛw, adwene pa bebree [NEEDS_REVIEW: divergent]",
-      "description": "Sɛnea ideɛ no bɔ ho anaa ɛte baabi foforo so. [NEEDS_REVIEW]"
+      "low_label": "Akwan so, baako so",
+      "high_label": "Nkabom a ɛtrɛw, adwene pa bebree",
+      "description": "Sɛnea ideɛ no bɔ ho anaa ɛte baabi foforo so."
     },
     "V": {
-      "title": "Ɔkasae ne mfonini adwene [NEEDS_REVIEW: verbal–visual]",
+      "title": "Ɔkasae ne mfonini adwene",
       "short_label": "Ɔkasae / mfonini",
-      "low_label": "Ɔkasae ne bere so [NEEDS_REVIEW]",
-      "high_label": "Mfonini ne beae a ɛwɔ honam so [NEEDS_REVIEW: visuo-spatial]",
-      "description": "Sɛnea ɔkasae anaa mfonini di kan wɔ w’adwene mu. [NEEDS_REVIEW]"
+      "low_label": "Ɔkasae ne bere so",
+      "high_label": "Mfonini ne beae a ɛwɔ honam so",
+      "description": "Sɛnea ɔkasae anaa mfonini di kan wɔ w’adwene mu."
     }
   },
   "nav": {
@@ -135,7 +135,7 @@
   },
   "sms_profile": {
     "title": "Profile from SMS code",
-    "intro": "Paste compact code from results page. Approximate deciles; not clinical.",
+    "intro": "Paste compact code from results page. Approximate deciles for quick orientation—reflection only.",
     "code_label": "Code",
     "invalid": "Invalid code.",
     "dim_heading": "Approximate scores (%)",
@@ -164,10 +164,26 @@
     "status_fail": "failed",
     "pending": "Queued sessions waiting for upload: {n}"
   },
+  "docsPages": {
+    "back_home": "Home",
+    "ethics_meta_title": "Ethics & scope — PCMS",
+    "ethics_meta_description": "Ethics framework for the PCMS research prototype.",
+    "ethics_page_title": "Ethics & scope",
+    "ethics_intro": "Full ethics document (English; native Twi summary pending review).",
+    "validation_meta_title": "Validation protocol — PCMS",
+    "validation_meta_description": "What PCMS scores can and cannot claim today.",
+    "validation_page_title": "Validation protocol",
+    "validation_intro": "Validation status document (English; native Twi summary pending review)."
+  },
   "site_footer": {
     "nav_label": "La mbra ne ahodoɔ a wɔ fa baabi foforo",
     "privacy": "Ahodeɛ ho sɔkabɔ",
     "imprint": "Impressum",
-    "github": "GitHub"
+    "github": "GitHub",
+    "ethics_doc": "Ethics & scope",
+    "validation_protocol": "Validation status",
+    "prototype_line": "Research prototype for reflection and open science — maps cognitive tendencies.",
+    "contact": "Questions or data requests: contact@synapticfour.com",
+    "license_mit": "MIT License — see repository."
   }
 }

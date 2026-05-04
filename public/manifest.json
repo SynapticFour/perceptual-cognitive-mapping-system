@@ -1,7 +1,7 @@
 {
   "name": "Perceptual & Cognitive Mapping System",
   "short_name": "PCMS",
-  "description": "Research questionnaire for cognitive diversity — not a diagnostic tool.",
+  "description": "Explore cognitive tendencies through a research-based mapping tool — reflection and open science; research prototype.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

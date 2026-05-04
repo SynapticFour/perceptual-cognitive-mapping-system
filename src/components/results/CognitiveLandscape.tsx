@@ -1,8 +1,12 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useSyncExternalStore } from 'react';
-import { ROUTING_WEIGHT_KEYS } from '@/adaptive/routing-tags';
-import { COGNITIVE_DIMENSION_METADATA } from '@/model/cognitive-dimensions';
+import {
+  COGNITIVE_DIMENSION_METADATA,
+  PRIMARY_RESULTS_ROUTING_KEYS,
+  RESEARCH_ROUTING_KEYS,
+  type CognitiveDimension,
+} from '@/model/cognitive-dimensions';
 import { getDimensionUi } from '@/lib/cognitive-dimensions-ui';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
 import {
@@ -233,6 +237,60 @@ export default function CognitiveLandscape({
     }
   }, [strings]);
 
+  const renderLandscapeBar = (dim: CognitiveDimension) => {
+    const meta = getDimensionUi(dim, strings);
+    const raw = display.rawPercent[dim] / 100;
+    const conf = confidenceComponents[dim].finalConfidence;
+    const upper = plausibleUpper(raw, conf);
+    const rawPct = display.rawPercent[dim];
+    const upperPct = Math.min(100, upper * 100);
+    const ghostWidth = Math.max(0, upperPct - rawPct);
+    const hex = DIM_HEX[dim] ?? '#475569';
+    const plain = COGNITIVE_DIMENSION_METADATA[dim].description;
+
+    return (
+      <li
+        key={dim}
+        className="rounded-lg border border-slate-100 bg-slate-50/80 p-3 shadow-inner"
+        title={plain}
+      >
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h4 className="text-sm font-semibold text-slate-900">{meta.title}</h4>
+          <span className="text-sm font-semibold tabular-nums text-slate-800">{rawPct.toFixed(0)}%</span>
+        </div>
+        <div
+          className="relative mt-2 h-10 w-full overflow-hidden rounded-md bg-slate-200/90"
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(rawPct)}
+          aria-label={meta.title}
+        >
+          <div
+            className="absolute inset-y-0 left-0 rounded-l-md transition-[width] duration-700 ease-out"
+            style={{
+              width: `${rawPct}%`,
+              backgroundColor: hex,
+              opacity: 0.25 + conf * 0.65,
+            }}
+          />
+          {ghostWidth > 0.5 ? (
+            <div
+              className="absolute inset-y-0 bg-[repeating-linear-gradient(135deg,#cbd5e1_0px,#cbd5e1_5px,#e2e8f0_5px,#e2e8f0_10px)] opacity-80"
+              style={{ left: `${rawPct}%`, width: `${ghostWidth}%` }}
+              aria-hidden
+            />
+          ) : null}
+        </div>
+        <div className="mt-1 flex justify-between text-[11px] text-slate-600">
+          <span>{meta.lowLabel}</span>
+          <span>{meta.highLabel}</span>
+        </div>
+        <p className="mt-2 text-[11px] leading-snug text-slate-600">{plain}</p>
+      </li>
+    );
+  };
+
   return (
     <div className="mx-auto max-w-6xl space-y-8">
       <header className="rounded-xl border border-indigo-100 bg-gradient-to-br from-indigo-50/90 to-white px-4 py-5 shadow-sm sm:px-6">
@@ -302,60 +360,16 @@ export default function CognitiveLandscape({
         </h3>
         <p className="mb-4 text-xs text-slate-600 sm:text-sm">{strings['landscape.bars_caption']}</p>
         <ul className="grid grid-cols-1 gap-3 sm:gap-4">
-          {ROUTING_WEIGHT_KEYS.map((dim) => {
-            const meta = getDimensionUi(dim, strings);
-            const raw = display.rawPercent[dim] / 100;
-            const conf = confidenceComponents[dim].finalConfidence;
-            const upper = plausibleUpper(raw, conf);
-            const rawPct = display.rawPercent[dim];
-            const upperPct = Math.min(100, upper * 100);
-            const ghostWidth = Math.max(0, upperPct - rawPct);
-            const hex = DIM_HEX[dim] ?? '#475569';
-            const plain = COGNITIVE_DIMENSION_METADATA[dim].description;
-
-            return (
-              <li
-                key={dim}
-                className="rounded-lg border border-slate-100 bg-slate-50/80 p-3 shadow-inner"
-                title={plain}
-              >
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <h4 className="text-sm font-semibold text-slate-900">{meta.title}</h4>
-                  <span className="text-sm font-semibold tabular-nums text-slate-800">{rawPct.toFixed(0)}%</span>
-                </div>
-                <div
-                  className="relative mt-2 h-10 w-full overflow-hidden rounded-md bg-slate-200/90"
-                  role="progressbar"
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  aria-valuenow={Math.round(rawPct)}
-                  aria-label={meta.title}
-                >
-                  <div
-                    className="absolute inset-y-0 left-0 rounded-l-md transition-[width] duration-700 ease-out"
-                    style={{
-                      width: `${rawPct}%`,
-                      backgroundColor: hex,
-                      opacity: 0.25 + conf * 0.65,
-                    }}
-                  />
-                  {ghostWidth > 0.5 ? (
-                    <div
-                      className="absolute inset-y-0 bg-[repeating-linear-gradient(135deg,#cbd5e1_0px,#cbd5e1_5px,#e2e8f0_5px,#e2e8f0_10px)] opacity-80"
-                      style={{ left: `${rawPct}%`, width: `${ghostWidth}%` }}
-                      aria-hidden
-                    />
-                  ) : null}
-                </div>
-                <div className="mt-1 flex justify-between text-[11px] text-slate-600">
-                  <span>{meta.lowLabel}</span>
-                  <span>{meta.highLabel}</span>
-                </div>
-                <p className="mt-2 text-[11px] leading-snug text-slate-600">{plain}</p>
-              </li>
-            );
-          })}
+          {PRIMARY_RESULTS_ROUTING_KEYS.map((dim) => renderLandscapeBar(dim))}
         </ul>
+        <details className="mt-4 rounded-lg border border-slate-200 bg-slate-50/50 p-2 text-sm text-slate-800">
+          <summary className="cursor-pointer select-none rounded-md px-2 py-2 font-medium text-slate-900 hover:bg-slate-100">
+            {strings['landscape.research_routing_disclosure_summary']}
+          </summary>
+          <ul className="mt-2 grid grid-cols-1 gap-3 border-t border-slate-200 pt-3 sm:gap-4">
+            {RESEARCH_ROUTING_KEYS.map((dim) => renderLandscapeBar(dim))}
+          </ul>
+        </details>
       </section>
 
     </div>

@@ -5,18 +5,22 @@ import { validateQuestionBankArray } from '@/data/question-bank-validate';
 describe('question bank loader', () => {
   it('loads the universal bank when locale is not Ghana-specific', async () => {
     const merged = await loadQuestionsFromDiskImpl('zz-unknown-locale');
-    expect(merged.length).toBe(50);
+    expect(merged.length).toBe(130);
     expect(merged[0]).toMatchObject({
       id: expect.any(String),
       dimensionWeights: expect.any(Object),
     });
+    const tiavGh = merged.find((q) => q.id === 'TIAV-T-01');
+    expect(tiavGh?.text).toContain('I can picture');
+    expect(tiavGh?.stemVariants?.ghana).toContain('I can picture');
+    expect(tiavGh?.stemVariants?.ghana).toContain('naming ceremony');
   });
 
   it('merges universal and Ghana files for ghana / gh-en locales', async () => {
     const merged = await loadQuestionsFromDiskImpl('ghana');
-    expect(merged.length).toBe(75);
+    expect(merged.length).toBe(171);
     const ghanaOnly = merged.filter((q) => q.culturalContext === 'ghana');
-    expect(ghanaOnly.length).toBe(25);
+    expect(ghanaOnly.length).toBe(41);
   });
 
   it('validateQuestionBankArray throws on schema failure', () => {

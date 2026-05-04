@@ -28,6 +28,15 @@ interface RateLimitStore {
   };
 }
 
+/** Deterministic short fingerprint for in-memory rate keys — not persisted to PCMS databases. */
+function fingerprintClientIp(ip: string): string {
+  let h = 5381;
+  for (let i = 0; i < ip.length; i++) {
+    h = (h * 33) ^ ip.charCodeAt(i);
+  }
+  return (h >>> 0).toString(16);
+}
+
 export class RateLimiter {
   private store: RateLimitStore = {};
   private config: RateLimitConfig;
@@ -87,10 +96,11 @@ export class RateLimiter {
       return this.config.keyGenerator(request);
     }
 
-    // Default: use IP address
+    // Default: in-memory bucket keyed by hashed client IP (never written to Supabase session rows).
     const forwarded = request.headers.get('x-forwarded-for');
-    const ip = forwarded ? forwarded.split(',')[0] : 'unknown';
-    return `ip:${ip}`;
+    const raw = forwarded ? forwarded.split(',')[0].trim() : '';
+    if (!raw) return 'ip:unknown';
+    return `ip:${fingerprintClientIp(raw)}`;
   }
 
   /**

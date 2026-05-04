@@ -179,6 +179,11 @@ export default function ConsentPage() {
         <p className="mb-5 rounded-xl border border-slate-200/90 bg-white px-4 py-3 text-center text-base leading-relaxed text-slate-700 shadow-sm">
           {t('page_intro_cal')}
         </p>
+        <div className="mb-5 space-y-2 rounded-xl border border-sky-200 bg-sky-50/90 px-4 py-3 text-left text-sm leading-relaxed text-slate-800 shadow-sm">
+          <p className="font-semibold text-sky-950">{t('prototype_banner_title')}</p>
+          <p>{t('prototype_banner_body')}</p>
+          <p className="border-t border-sky-200/80 pt-2 text-slate-800">{t('irb_status_body')}</p>
+        </div>
         {runtimeMode === 'qa_all_steps' ? (
           <p className="mb-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-center text-sm text-amber-900">
             {t('qa_mode_banner')}

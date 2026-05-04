@@ -73,6 +73,11 @@
         "reverseScored": {
           "type": "boolean"
         },
+        "gh_variant": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional Ghana-context English stem; loaded into stemVariants for ghana / west_africa display."
+        },
         "responseScale": {
           "type": "string",
           "enum": ["likert5", "likert3"],

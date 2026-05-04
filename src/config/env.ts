@@ -2,6 +2,8 @@
  * Typed Next.js public env access. Server and client code should import from here only.
  */
 
+import { FEATURE_FLAGS } from '@/config/feature-flags';
+
 function readPublic(name: string): string | undefined {
   const v = process.env[name];
   if (v === undefined || v === '') return undefined;
@@ -35,10 +37,5 @@ export function showOperatorSyncDiagnostic(): boolean {
 
 /** When `true`, shows a validation-status banner on `/research/*` linking to docs/VALIDATION_PROTOCOL.md. */
 export function showValidationStatusBanner(): boolean {
-  return readPublic('NEXT_PUBLIC_SHOW_VALIDATION_STATUS') === 'true';
-}
-
-/** When `true`, enables the optional facilitator observation cards on the results page. */
-export function isFacilitatorViewEnabled(): boolean {
-  return readPublic('NEXT_PUBLIC_ENABLE_FACILITATOR_VIEW') === 'true';
+  return FEATURE_FLAGS.VALIDATION_STATUS_BANNER;
 }

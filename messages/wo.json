@@ -587,10 +587,26 @@
     "status_fail": "doyul",
     "pending": "Séans yu xaar yeb: {n}"
   },
+  "docsPages": {
+    "back_home": "Dal bi njëkk",
+    "ethics_meta_title": "Etik ak ràññee — PCMS",
+    "ethics_meta_description": "Etik ak man man a jëfandikoo PCMS ci seetlu.",
+    "ethics_page_title": "Etik ak ràññee",
+    "ethics_intro": "Dokuma bu mat ci etik (waxin bu njëkk ci réew mi; laaj su am solo).",
+    "validation_meta_title": "Protokol bu validaasion — PCMS",
+    "validation_meta_description": "Lan mën na wax léegi ci lim yi ak lan mënul.",
+    "validation_page_title": "Protokol bu validaasion",
+    "validation_intro": "Dokuma bu wax lim yi ci biir (waxin bu njëkk ci réew mi)."
+  },
   "site_footer": {
     "nav_label": "Yëg-yëg ci laaj yi ak xëtu yi",
     "privacy": "Sutura xibaar yi",
     "imprint": "Impressum",
-    "github": "GitHub"
+    "github": "GitHub",
+    "ethics_doc": "Etik ak ràññee",
+    "validation_protocol": "Validaasion",
+    "prototype_line": "Prototype bu seetlu — lim yoon yi ci xalaat; MIT.",
+    "contact": "Laaj: contact@synapticfour.com",
+    "license_mit": "Licence MIT — xool repository."
   }
 }

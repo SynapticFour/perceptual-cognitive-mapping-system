@@ -35,6 +35,7 @@ import EthicsResultsBanner from '@/components/ethics/EthicsResultsBanner';
 import ResultsAssentGate from '@/components/ethics/ResultsAssentGate';
 import DeleteMyDataButton from '@/components/ethics/DeleteMyDataButton';
 import { encodeProfileVectorCode } from '@/lib/sms-export';
+import { FEATURE_FLAGS } from '@/config/feature-flags';
 import { computeEarlySupportSignals } from '@/cohort';
 import { buildCognitiveModel } from '@/core/cognitive-pipeline';
 import SupportInsightsSection from '@/components/cohort/SupportInsightsSection';
@@ -51,9 +52,16 @@ import ParticipantPrintSheet from '@/components/results/ParticipantPrintSheet';
 import FacilitatorInsights from '@/components/results/FacilitatorInsights';
 import type { FacilitatorDimensionScores } from '@/components/results/FacilitatorInsights';
 import SiteFooter from '@/components/layout/SiteFooter';
-import { isFacilitatorViewEnabled } from '@/config/env';
+import SelfNominationModule from '@/atlas/self-nomination/SelfNominationModule';
+import SelfNominationResearchNote from '@/atlas/self-nomination/SelfNominationResearchNote';
+import { persistSelfNomination } from '@/lib/atlas-self-nomination-persist';
+import { putAtlasSelfNominationRow } from '@/lib/offline-storage';
 
 const PIPELINE_STORAGE_KEY = 'pcms-pipeline-result';
+
+function selfNominationStorageKey(sessionId: string): string {
+  return `pcms-self-nomination-v1:${sessionId}`;
+}
 
 function publicProfileFromShare(payload: LandscapeSharePayload, ui: UiStrings): CognitiveProfilePublic {
   const cc = confidenceComponentsFromSharePayload(payload);
@@ -78,7 +86,13 @@ export default function ResultsPage() {
   const [needsAssent, setNeedsAssent] = useState(false);
   const [groupInsightsAvailable, setGroupInsightsAvailable] = useState(false);
   const [sufficientConfidenceBanner, setSufficientConfidenceBanner] = useState(false);
-  const [facilitatorView, setFacilitatorView] = useState(false);
+  const [showFacilitator, setShowFacilitator] = useState(false);
+  const [selfNomComplete, setSelfNomComplete] = useState(false);
+  const [selfNomRecord, setSelfNomRecord] = useState<{
+    ids: string[];
+    explicitNone: boolean;
+    skipped: boolean;
+  } | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -174,6 +188,29 @@ export default function ResultsPage() {
     }
   }, []);
 
+  useEffect(() => {
+    if (typeof window === 'undefined' || !session?.sessionId) return;
+    const raw = localStorage.getItem(selfNominationStorageKey(session.sessionId));
+    if (!raw) return;
+    try {
+      const j = JSON.parse(raw) as {
+        v?: number;
+        selectedIds?: string[];
+        explicitNone?: boolean;
+        skipped?: boolean;
+      };
+      if (j.v !== 1) return;
+      setSelfNomComplete(true);
+      setSelfNomRecord({
+        ids: Array.isArray(j.selectedIds) ? j.selectedIds : [],
+        explicitNone: !!j.explicitNone,
+        skipped: !!j.skipped,
+      });
+    } catch {
+      /* ignore corrupt storage */
+    }
+  }, [session?.sessionId]);
+
   const confidenceComponents: ConfidenceComponents | null = useMemo(() => {
     if (session) return session.scoringResult.confidenceComponents;
     if (urlShare) return confidenceComponentsFromSharePayload(urlShare);
@@ -189,38 +226,95 @@ export default function ResultsPage() {
     return null;
   }, [session, urlShare, confidenceComponents]);
 
-  const facilitatorDimensionScores = useMemo((): FacilitatorDimensionScores | null => {
-    if (!display) return null;
-    return {
-      F: display.rawPercent.F,
-      P: display.rawPercent.P,
-      S: display.rawPercent.S,
-      E: display.rawPercent.E,
-      R: display.rawPercent.R,
-      C: display.rawPercent.C,
-    };
-  }, [display]);
-
   const viewProfile = useMemo((): CognitiveProfilePublic | null => {
     if (session) return session.publicProfile;
     if (urlShare) return publicProfileFromShare(urlShare, ui);
     return null;
   }, [session, urlShare, ui]);
 
-  const cognitiveModelForSupport = useMemo(() => {
-    if (!session || !display || !confidenceComponents) return null;
+  const cognitiveModel = useMemo(() => {
+    if (!display || !confidenceComponents) return null;
     return buildCognitiveModel({
-      embeddingVector: session.embedding.vector,
-      embeddingDimension: session.embedding.dimension,
+      embeddingVector: session?.embedding.vector ?? null,
+      embeddingDimension: session?.embedding.dimension ?? 64,
       display,
       confidenceComponents,
     });
   }, [session, display, confidenceComponents]);
 
+  const facilitatorScores: FacilitatorDimensionScores | null = useMemo(() => {
+    if (!cognitiveModel) return null;
+    const m = cognitiveModel.routingScores;
+    return {
+      F: Math.round((m.F ?? 0.5) * 100),
+      P: Math.round((m.P ?? 0.5) * 100),
+      S: Math.round((m.S ?? 0.5) * 100),
+      E: Math.round((m.E ?? 0.5) * 100),
+      R: Math.round((m.R ?? 0.5) * 100),
+      C: Math.round((m.C ?? 0.5) * 100),
+    };
+  }, [cognitiveModel]);
+
   const supportSignals = useMemo(() => {
-    if (!cognitiveModelForSupport) return [];
-    return computeEarlySupportSignals(cognitiveModelForSupport, { maxSignals: 4 });
-  }, [cognitiveModelForSupport]);
+    if (!cognitiveModel) return [];
+    return computeEarlySupportSignals(cognitiveModel, { maxSignals: 4 });
+  }, [cognitiveModel]);
+
+  const handleSelfNomComplete = useCallback(
+    async (selectedIds: string[], options?: { explicitNone?: boolean }) => {
+      if (!session?.sessionId || typeof window === 'undefined') return;
+      const browserKey = localStorage.getItem('pcms-session-id') ?? session.sessionId;
+      const explicitNone = !!options?.explicitNone;
+      await persistSelfNomination({
+        locale: String(locale),
+        browserSessionKey: browserKey,
+        linkedPcmsSessionId: session.sessionId,
+        selectedDescriptorIds: selectedIds,
+        explicitNone,
+      });
+      localStorage.setItem(
+        selfNominationStorageKey(session.sessionId),
+        JSON.stringify({
+          v: 1,
+          selectedIds,
+          explicitNone,
+          skipped: false,
+          completedAt: new Date().toISOString(),
+        })
+      );
+      setSelfNomRecord({ ids: selectedIds, explicitNone, skipped: false });
+      setSelfNomComplete(true);
+    },
+    [locale, session]
+  );
+
+  const handleSelfNomSkip = useCallback(async () => {
+    if (!session?.sessionId || typeof window === 'undefined') {
+      setSelfNomComplete(true);
+      return;
+    }
+    const browserKey = localStorage.getItem('pcms-session-id') ?? session.sessionId;
+    await putAtlasSelfNominationRow({
+      sessionId: browserKey,
+      locale: String(locale),
+      selectedDescriptorIds: [],
+      explicitNone: false,
+      skipped: true,
+      completedAt: new Date().toISOString(),
+    });
+    localStorage.setItem(
+      selfNominationStorageKey(session.sessionId),
+      JSON.stringify({
+        v: 1,
+        selectedIds: [],
+        explicitNone: false,
+        skipped: true,
+        completedAt: new Date().toISOString(),
+      })
+    );
+    setSelfNomRecord({ ids: [], explicitNone: false, skipped: true });
+    setSelfNomComplete(true);
+  }, [locale, session]);
 
   const handleRestart = useCallback(() => {
     localStorage.removeItem(PIPELINE_STORAGE_KEY);
@@ -419,6 +513,13 @@ export default function ResultsPage() {
           ) : null}
         </header>
 
+        <p
+          className="mx-auto mb-6 max-w-3xl rounded-lg border border-slate-300 bg-white px-4 py-3 text-center text-sm leading-relaxed text-slate-800 shadow-sm"
+          role="note"
+        >
+          {ui['results.public_map_disclaimer']}
+        </p>
+
         {showMaxLengthNotice ? (
           <p
             className="mx-auto mb-6 max-w-3xl rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-center text-sm text-amber-950"
@@ -480,14 +581,14 @@ export default function ResultsPage() {
               {ui['results.sms_code_copy']}
             </button>
           ) : null}
-          {isFacilitatorViewEnabled() && facilitatorDimensionScores ? (
+          {FEATURE_FLAGS.FACILITATOR_VIEW && facilitatorScores ? (
             <button
               type="button"
-              onClick={() => setFacilitatorView((v) => !v)}
+              onClick={() => setShowFacilitator((v) => !v)}
               className="rounded-lg border border-teal-600 bg-teal-50 px-4 py-2 text-sm font-medium text-teal-950 shadow-sm hover:bg-teal-100 sm:px-6"
-              aria-pressed={facilitatorView}
+              aria-pressed={showFacilitator}
             >
-              {facilitatorView ? ui['facilitator.toggle_hide'] : ui['facilitator.toggle_show']}
+              {showFacilitator ? ui['facilitator.toggle_hide'] : ui['facilitator.toggle_show']}
             </button>
           ) : null}
         </div>
@@ -499,15 +600,6 @@ export default function ResultsPage() {
             onContinueAssessment={session ? handleContinueAssessment : undefined}
           />
         </div>
-
-        {facilitatorDimensionScores ? (
-          <FacilitatorInsights
-            profile={viewProfile}
-            locale={String(locale)}
-            dimensionScores={facilitatorDimensionScores}
-            showFacilitatorView={facilitatorView}
-          />
-        ) : null}
 
         {groupInsightsAvailable ? (
           <div className="mb-6 text-center">
@@ -605,6 +697,39 @@ export default function ResultsPage() {
               confidenceComponents={session.scoringResult.confidenceComponents}
               display={display}
               strings={ui}
+            />
+          </div>
+        ) : null}
+
+        {facilitatorScores ? (
+          <FacilitatorInsights
+            profile={viewProfile}
+            locale={String(locale)}
+            dimensionScores={facilitatorScores}
+            showFacilitatorView={showFacilitator}
+          />
+        ) : null}
+
+        {FEATURE_FLAGS.ATLAS_SELF_NOMINATION && session && !urlShare && !selfNomComplete ? (
+          <SelfNominationModule
+            locale={String(locale)}
+            linkedSessionId={session.sessionId}
+            onComplete={(ids, opts) => void handleSelfNomComplete(ids, opts)}
+            onSkip={() => void handleSelfNomSkip()}
+          />
+        ) : null}
+
+        {FEATURE_FLAGS.ATLAS_SELF_NOMINATION &&
+        FEATURE_FLAGS.VALIDATION_STATUS_BANNER &&
+        selfNomRecord &&
+        session &&
+        !urlShare ? (
+          <div className="mx-auto mb-10 max-w-5xl">
+            <SelfNominationResearchNote
+              session={session}
+              selectedDescriptorIds={selfNomRecord.ids}
+              explicitNone={selfNomRecord.explicitNone}
+              skipped={selfNomRecord.skipped}
             />
           </div>
         ) : null}

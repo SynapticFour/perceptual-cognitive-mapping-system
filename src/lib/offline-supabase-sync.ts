@@ -2,7 +2,7 @@
  * Pushes queued IndexedDB sessions to Supabase when connectivity returns.
  */
 
-import { getSupabaseClient, getUserAgent, isSupabaseConfigured } from '@/lib/supabase';
+import { getSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
 import { assessmentDimensionWeightsToDbJson } from '@/lib/supabase-mappers';
 import {
   getPendingSessions,
@@ -22,7 +22,6 @@ async function pushOneSession(client: NonNullable<ReturnType<typeof getSupabaseC
     id: s.sessionId,
     consent_timestamp: consentTs,
     cultural_context: s.research.cultural_context,
-    user_agent: getUserAgent(),
     completion_status: 'in_progress' as const,
   };
 

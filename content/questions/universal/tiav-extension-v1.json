@@ -1,0 +1,1373 @@
+[
+  {
+    "id": "TIAV-T-01",
+    "text": "When something important is coming up, I can picture how the next few weeks might unfold.",
+    "dimension_weights": {
+      "T": 0.86,
+      "R": 0.08,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": false,
+    "gh_variant": "When something big is coming up — a naming ceremony, exams, or travel — I can picture how the next few weeks might unfold."
+  },
+  {
+    "id": "TIAV-T-02",
+    "text": "I start preparing for deadlines while they still feel far away on the calendar.",
+    "dimension_weights": {
+      "T": 0.84,
+      "R": 0.1,
+      "P": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": false,
+    "gh_variant": "I start preparing while the date still feels far away on the calendar or in family talk."
+  },
+  {
+    "id": "TIAV-T-03",
+    "text": "Hours feel short when I am absorbed; I often look at the clock and realise more time passed than it felt like.",
+    "dimension_weights": {
+      "T": 0.82,
+      "F": 0.12,
+      "A": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-T-04",
+    "text": "I bump tasks forward until the last stretch of pressure finally gets me moving.",
+    "dimension_weights": {
+      "T": 0.8,
+      "R": 0.12,
+      "E": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true,
+    "gh_variant": "I bump tasks forward until the last stretch before market day, exams, or travel finally gets me moving."
+  },
+  {
+    "id": "TIAV-T-05",
+    "text": "I keep a rough map in my head of what belongs to which day this week.",
+    "dimension_weights": {
+      "T": 0.72,
+      "R": 0.16,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-T-06",
+    "text": "I split big projects into ordered steps with rough time boxes before I begin.",
+    "dimension_weights": {
+      "T": 0.74,
+      "P": 0.14,
+      "R": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-T-07",
+    "text": "I work in bursts; each stretch feels shorter or longer on the clock than it felt from the inside.",
+    "dimension_weights": {
+      "T": 0.64,
+      "F": 0.2,
+      "A": 0.16
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-T-08",
+    "text": "The order of small errands in a day feels flexible; sequence matters little to me.",
+    "dimension_weights": {
+      "T": 0.62,
+      "C": 0.22,
+      "E": 0.16
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.58,
+    "reverseScored": false,
+    "gh_variant": "The order of small errands before market or after school feels flexible; sequence matters little to me."
+  },
+  {
+    "id": "TIAV-T-09",
+    "text": "I notice seasonal rhythms like holidays or exam cycles shaping how I plan ahead.",
+    "dimension_weights": {
+      "T": 0.83,
+      "R": 0.1,
+      "E": 0.07
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.75,
+    "reverseScored": false,
+    "gh_variant": "I notice seasons, holidays, harvest talk, or exam cycles shaping how I plan ahead."
+  },
+  {
+    "id": "TIAV-T-10",
+    "text": "Long stretches of free time feel shapeless until I give them a simple frame.",
+    "dimension_weights": {
+      "T": 0.81,
+      "I": 0.1,
+      "F": 0.09
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.73,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-T-11",
+    "text": "I replay past conversations on a loose timeline to learn what to do differently next time.",
+    "dimension_weights": {
+      "T": 0.73,
+      "A": 0.15,
+      "V": 0.12
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-T-12",
+    "text": "I arrive close to start times and leave little spare time for traffic or queues.",
+    "dimension_weights": {
+      "T": 0.79,
+      "R": 0.12,
+      "S": 0.09
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.71,
+    "reverseScored": true,
+    "gh_variant": "I arrive close to start times and leave little spare time for traffic, tro-tro waits, or queues."
+  },
+  {
+    "id": "TIAV-T-13",
+    "text": "I can describe how my typical weekday flows from morning to evening.",
+    "dimension_weights": {
+      "T": 0.7,
+      "V": 0.18,
+      "R": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.65,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-T-14",
+    "text": "I treat today and next week as about equally “present” when choosing what to worry about.",
+    "dimension_weights": {
+      "T": 0.65,
+      "E": 0.2,
+      "A": 0.15
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-T-15",
+    "text": "I picture where milestones sit on a calendar before saying yes to new commitments.",
+    "dimension_weights": {
+      "T": 0.85,
+      "R": 0.09,
+      "C": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.77,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-T-16",
+    "text": "I lose track of clock time during screen time, reading, or deep hobbies.",
+    "dimension_weights": {
+      "T": 0.83,
+      "F": 0.1,
+      "A": 0.07
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.75,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-T-17",
+    "text": "I keep mental notes about what should happen before lunch versus after school or work.",
+    "dimension_weights": {
+      "T": 0.71,
+      "R": 0.18,
+      "F": 0.11
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.67,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-T-18",
+    "text": "I feel steady when there is a clear rhythm to the week even if plans change inside it.",
+    "dimension_weights": {
+      "T": 0.68,
+      "E": 0.18,
+      "R": 0.14
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.63,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-T-19",
+    "text": "I underestimate how long familiar tasks take almost every time.",
+    "dimension_weights": {
+      "T": 0.8,
+      "P": 0.12,
+      "F": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-T-20",
+    "text": "I enjoy imagining possible futures in detail when making a big choice.",
+    "dimension_weights": {
+      "T": 0.77,
+      "A": 0.13,
+      "E": 0.1
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "structure"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.69,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-01",
+    "text": "When a choice feels heavy, I sense tightness, warmth, or openness in my body before the words line up.",
+    "dimension_weights": {
+      "I": 0.86,
+      "S": 0.1,
+      "C": 0.04
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.79,
+    "reverseScored": false,
+    "gh_variant": "When a choice feels heavy — at the market or in a family talk — I sense tightness, warmth, or openness in my body before the words line up."
+  },
+  {
+    "id": "TIAV-I-02",
+    "text": "I pick up early signs of hunger, thirst, or tiredness while they are still mild.",
+    "dimension_weights": {
+      "I": 0.84,
+      "S": 0.1,
+      "E": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.77,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-03",
+    "text": "Other people seem to notice hunger or fatigue before I feel it clearly.",
+    "dimension_weights": {
+      "I": 0.82,
+      "S": 0.12,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-I-04",
+    "text": "Signals from my body feel faint compared to what is happening around me.",
+    "dimension_weights": {
+      "I": 0.8,
+      "S": 0.14,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-I-05",
+    "text": "I sense heart rate or breathing shift during excitement or stress while it is happening.",
+    "dimension_weights": {
+      "I": 0.74,
+      "E": 0.16,
+      "T": 0.1
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-06",
+    "text": "Muscle tension in shoulders, jaw, or hands is something I notice during a busy day.",
+    "dimension_weights": {
+      "I": 0.72,
+      "S": 0.18,
+      "R": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-07",
+    "text": "I realise I need water or food only after a headache or irritability shows up.",
+    "dimension_weights": {
+      "I": 0.78,
+      "R": 0.12,
+      "E": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.71,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-I-08",
+    "text": "Fullness after eating reaches my awareness quickly enough to guide portion pace.",
+    "dimension_weights": {
+      "I": 0.7,
+      "T": 0.18,
+      "S": 0.12
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-09",
+    "text": "I track small shifts in energy across the day like a weather map inside me.",
+    "dimension_weights": {
+      "I": 0.83,
+      "T": 0.1,
+      "E": 0.07
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.75,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-10",
+    "text": "Physical discomfort sits in the background until it suddenly demands attention.",
+    "dimension_weights": {
+      "I": 0.81,
+      "S": 0.12,
+      "F": 0.07
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.73,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-I-11",
+    "text": "I sense temperature comfort in a room soon after entering.",
+    "dimension_weights": {
+      "I": 0.65,
+      "S": 0.22,
+      "P": 0.13
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.59,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-12",
+    "text": "Butterflies or calm in the stomach show up during anticipation or relief.",
+    "dimension_weights": {
+      "I": 0.73,
+      "E": 0.15,
+      "T": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-13",
+    "text": "I connect shallow breathing with stress early enough to slow down on purpose.",
+    "dimension_weights": {
+      "I": 0.76,
+      "R": 0.14,
+      "C": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.69,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-14",
+    "text": "I am last to notice that the room feels too loud or too bright for my comfort.",
+    "dimension_weights": {
+      "I": 0.79,
+      "S": 0.14,
+      "E": 0.07
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.71,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-I-15",
+    "text": "I name inner states with simple words like wired, flat, or buzzing.",
+    "dimension_weights": {
+      "I": 0.71,
+      "V": 0.18,
+      "E": 0.11
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.65,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-16",
+    "text": "I feel sleep pressure build gradually before a sharp drop in energy hits.",
+    "dimension_weights": {
+      "I": 0.75,
+      "T": 0.15,
+      "R": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-17",
+    "text": "I notice posture slipping into a slouch before discomfort spikes.",
+    "dimension_weights": {
+      "I": 0.69,
+      "S": 0.18,
+      "F": 0.13
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.63,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-18",
+    "text": "I sense rest needs during social time before irritability leaks into my tone.",
+    "dimension_weights": {
+      "I": 0.77,
+      "E": 0.13,
+      "R": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-I-19",
+    "text": "I rely on outside cues like meal times to guess my hunger more than inner cues.",
+    "dimension_weights": {
+      "I": 0.8,
+      "T": 0.12,
+      "S": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true,
+    "gh_variant": "I rely on meal times or what others are eating to guess my hunger more than inner cues."
+  },
+  {
+    "id": "TIAV-I-20",
+    "text": "A short body scan in my mind helps me locate where stress sits.",
+    "dimension_weights": {
+      "I": 0.72,
+      "A": 0.14,
+      "V": 0.14
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "sensory"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-01",
+    "text": "While working on one thing, my mind links useful ideas from topics that seemed unrelated.",
+    "dimension_weights": {
+      "A": 0.86,
+      "P": 0.08,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.8,
+    "reverseScored": false,
+    "gh_variant": "While doing one task — selling, studying, or fixing something — my mind links useful ideas from topics that seemed unrelated."
+  },
+  {
+    "id": "TIAV-A-02",
+    "text": "Analogies between different areas of life show up when I let my mind wander freely.",
+    "dimension_weights": {
+      "A": 0.84,
+      "P": 0.1,
+      "V": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.78,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-03",
+    "text": "My thinking stays close to the task; wide hops feel rare or distracting.",
+    "dimension_weights": {
+      "A": 0.82,
+      "F": 0.12,
+      "R": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-A-04",
+    "text": "I prefer a straight outline and skip tempting side branches.",
+    "dimension_weights": {
+      "A": 0.8,
+      "C": 0.12,
+      "P": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-A-05",
+    "text": "A single word can pull up a chain of memories from different years.",
+    "dimension_weights": {
+      "A": 0.75,
+      "V": 0.15,
+      "T": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-06",
+    "text": "I spot parallels between a story someone tells and something I read elsewhere.",
+    "dimension_weights": {
+      "A": 0.73,
+      "V": 0.16,
+      "E": 0.11
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-07",
+    "text": "Brainstorming lists grow wide fast; pruning them down is the harder part.",
+    "dimension_weights": {
+      "A": 0.78,
+      "E": 0.12,
+      "F": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-08",
+    "text": "I keep meetings and lessons on one track; side topics seldom pull me off course.",
+    "dimension_weights": {
+      "A": 0.7,
+      "R": 0.18,
+      "F": 0.12
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.65,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-A-09",
+    "text": "Dreams or daydreams reuse symbols that connect to daytime worries.",
+    "dimension_weights": {
+      "A": 0.71,
+      "I": 0.15,
+      "T": 0.14
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.64,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-10",
+    "text": "I draw creative links between tools at hand when a usual approach is blocked.",
+    "dimension_weights": {
+      "A": 0.83,
+      "C": 0.1,
+      "P": 0.07
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.76,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-11",
+    "text": "I lose the main thread when a conversation jumps topics quickly.",
+    "dimension_weights": {
+      "A": 0.79,
+      "F": 0.12,
+      "V": 0.09
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.71,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-A-12",
+    "text": "I enjoy mixing metaphors from cooking, music, and travel to explain an idea.",
+    "dimension_weights": {
+      "A": 0.74,
+      "V": 0.14,
+      "E": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-13",
+    "text": "I solve puzzles fastest when I stop forcing a linear path and let patterns pop.",
+    "dimension_weights": {
+      "A": 0.76,
+      "P": 0.14,
+      "F": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.69,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-14",
+    "text": "I screen out interesting tangents so the group finishes on time.",
+    "dimension_weights": {
+      "A": 0.72,
+      "R": 0.16,
+      "C": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-A-15",
+    "text": "Remote connections feel obvious in hindsight even if they surprised me at first.",
+    "dimension_weights": {
+      "A": 0.69,
+      "P": 0.18,
+      "T": 0.13
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.63,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-16",
+    "text": "I map how two school subjects support each other across the term.",
+    "dimension_weights": {
+      "A": 0.67,
+      "P": 0.2,
+      "R": 0.13
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.61,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-17",
+    "text": "I often find humour in the collision between two unlike frames.",
+    "dimension_weights": {
+      "A": 0.81,
+      "E": 0.12,
+      "V": 0.07
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-18",
+    "text": "I stick to one interpretation until evidence forces a switch.",
+    "dimension_weights": {
+      "A": 0.77,
+      "C": 0.13,
+      "P": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-A-19",
+    "text": "I use mind maps or loose webs more often than tight bullet lists when planning ideas.",
+    "dimension_weights": {
+      "A": 0.73,
+      "V": 0.15,
+      "F": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.67,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-A-20",
+    "text": "I notice when a new idea rhymes with an older habit I thought I left behind.",
+    "dimension_weights": {
+      "A": 0.71,
+      "T": 0.15,
+      "I": 0.14
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "pattern"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.65,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-V-01",
+    "text": "Diagrams, sketches, or maps speed up my understanding more than words alone.",
+    "dimension_weights": {
+      "V": 0.86,
+      "P": 0.08,
+      "F": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.79,
+    "reverseScored": false,
+    "gh_variant": "A quick sketch in sand or on paper, or pointing on a map, speeds up my understanding more than words alone."
+  },
+  {
+    "id": "TIAV-V-02",
+    "text": "I rehearse sentences in my head until the wording feels right.",
+    "dimension_weights": {
+      "V": 0.84,
+      "A": 0.1,
+      "E": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.77,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-V-03",
+    "text": "I picture layouts of rooms or streets to remember where things sit.",
+    "dimension_weights": {
+      "V": 0.82,
+      "P": 0.12,
+      "T": 0.06
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.75,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-V-04",
+    "text": "Narrating events in order with words is easier than drawing them.",
+    "dimension_weights": {
+      "V": 0.8,
+      "A": 0.12,
+      "T": 0.08
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.73,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-V-05",
+    "text": "I rotate shapes in imagination to see if parts will fit.",
+    "dimension_weights": {
+      "V": 0.75,
+      "P": 0.15,
+      "F": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.7,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-V-06",
+    "text": "I take voice notes because speaking captures my thoughts cleaner than imagery.",
+    "dimension_weights": {
+      "V": 0.73,
+      "A": 0.14,
+      "E": 0.13
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-V-07",
+    "text": "I remember faces and scenes like snapshots more than spoken lines.",
+    "dimension_weights": {
+      "V": 0.78,
+      "S": 0.12,
+      "I": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.72,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-V-08",
+    "text": "Written step lists carry me through a recipe or repair more than pictures.",
+    "dimension_weights": {
+      "V": 0.7,
+      "R": 0.18,
+      "P": 0.12
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.65,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-V-09",
+    "text": "I turn abstract rules into little verbal formulas I repeat.",
+    "dimension_weights": {
+      "V": 0.72,
+      "P": 0.16,
+      "A": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-V-10",
+    "text": "I navigate by landmarks and sense of direction more than street names.",
+    "dimension_weights": {
+      "V": 0.81,
+      "T": 0.1,
+      "P": 0.09
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.74,
+    "reverseScored": false,
+    "gh_variant": "I navigate by landmarks, paths people use, and sense of direction more than street signs alone."
+  },
+  {
+    "id": "TIAV-V-11",
+    "text": "I explain new ideas to someone else using a chalk talk or whiteboard sketch.",
+    "dimension_weights": {
+      "V": 0.79,
+      "E": 0.12,
+      "P": 0.09
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.71,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-V-12",
+    "text": "I replay dialogue lines from films or books to savour rhythm and word choice.",
+    "dimension_weights": {
+      "V": 0.74,
+      "A": 0.14,
+      "E": 0.12
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.68,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-V-13",
+    "text": "I score higher on remembering patterns than on remembering exact phrases.",
+    "dimension_weights": {
+      "V": 0.69,
+      "P": 0.18,
+      "F": 0.13
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.63,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-V-14",
+    "text": "I translate teacher instructions into a quick inner comic strip.",
+    "dimension_weights": {
+      "V": 0.71,
+      "A": 0.15,
+      "F": 0.14
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.65,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-V-15",
+    "text": "Colour coding or spatial grouping organises my notes.",
+    "dimension_weights": {
+      "V": 0.77,
+      "P": 0.13,
+      "C": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.69,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-V-16",
+    "text": "I trust a spoken promise more if I hear the exact words again in memory.",
+    "dimension_weights": {
+      "V": 0.76,
+      "E": 0.14,
+      "T": 0.1
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.69,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-V-17",
+    "text": "I imagine cutting objects or folding paper to guess outcomes.",
+    "dimension_weights": {
+      "V": 0.73,
+      "P": 0.16,
+      "A": 0.11
+    },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.67,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-V-18",
+    "text": "I describe directions to a friend mainly as left-right verbal sequence.",
+    "dimension_weights": {
+      "V": 0.68,
+      "T": 0.18,
+      "R": 0.14
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.62,
+    "reverseScored": true
+  },
+  {
+    "id": "TIAV-V-19",
+    "text": "Music feels like moving shapes or colours as much as sound layers.",
+    "dimension_weights": {
+      "V": 0.66,
+      "S": 0.2,
+      "I": 0.14
+    },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.6,
+    "reverseScored": false
+  },
+  {
+    "id": "TIAV-V-20",
+    "text": "I pick fonts and spacing when a message matters because form carries meaning.",
+    "dimension_weights": {
+      "V": 0.72,
+      "A": 0.14,
+      "E": 0.14
+    },
+    "type": "refinement",
+    "difficulty": "specific",
+    "tags": [
+      "focus"
+    ],
+    "culturalContext": "universal",
+    "informationGain": 0.66,
+    "reverseScored": true
+  }
+]

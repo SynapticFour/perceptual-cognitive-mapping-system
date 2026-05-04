@@ -21,7 +21,7 @@ A scientifically grounded web-based system for mapping human cognition into cont
 
 ### Instrument validation status (researchers & funders)
 
-PCMS has **not** yet completed **publication-standard** psychometric validation (reliability from real data, convergent validity, local norms, cross-locale comparability). Scoring weights are literature- and design-based, not empirically calibrated on a dedicated normative corpus. For an explicit statement of current limits and a **Phase 1 validation roadmap**, see **[`docs/VALIDATION_PROTOCOL.md`](./docs/VALIDATION_PROTOCOL.md)**. A complementary technical calibration roadmap (IRT/CFA, larger samples) is in [`docs/VALIDATION_ROADMAP.md`](./docs/VALIDATION_ROADMAP.md).
+PCMS has **not** yet completed **publication-standard** psychometric validation (reliability from real data, convergent validity, local norms, cross-locale comparability). Scoring weights are literature- and design-based, not empirically calibrated on a dedicated normative corpus. For an explicit statement of current limits and a **Phase 1 validation roadmap**, see **[`docs/VALIDATION_PROTOCOL.md`](./docs/VALIDATION_PROTOCOL.md)** (also in-app at `/validation` on the map host). For a sequenced execution plan (IRB, OSF, pilots, publication), see **[`docs/RESEARCH_ACTION_PLAN.md`](./docs/RESEARCH_ACTION_PLAN.md)**. A complementary technical calibration roadmap (IRT/CFA, larger samples) is in [`docs/VALIDATION_ROADMAP.md`](./docs/VALIDATION_ROADMAP.md). To pick up multi-session work: **[`docs/CONTINUATION.md`](./docs/CONTINUATION.md)** and the latest **[`docs/SITE_AUDIT_REPORT.md`](./docs/SITE_AUDIT_REPORT.md)**.
 
 ---
 
@@ -65,6 +65,7 @@ If a user does want to understand how their PCMS profile relates to common neuro
 - **Version Control**: Assessment versioning (v1.0) for research reproducibility
 - **Quality Assurance**: Data validation and fallback mechanisms
 - **Research Protocol**: Complete study design with hypotheses and analysis plan
+- **ATLAS (companion programme, design phase):** Adaptive Trait Landscape Architecture System — separate bank and publication track from PCMS; shares infrastructure only. See [`docs/ATLAS.md`](./docs/ATLAS.md) and decision log [`docs/DECISIONS.md`](./docs/DECISIONS.md). Placeholders: `src/atlas/`, `content/questions/atlas-v1/`.
 
 ### User Experience
 - **Internationalization**: English (default URL), German (`/de/...`), Wolof (`/wo/...`), Twi/Akan draft (`/tw/...`, merges over English for missing keys); see [`docs/I18N.md`](./docs/I18N.md)

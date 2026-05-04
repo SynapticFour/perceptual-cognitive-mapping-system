@@ -328,8 +328,8 @@ export class EthicsService {
       const anonymizedData = {
         session_identifier: `anon_${await this.hashString(sessionId)}`,
         ip_hash: null, // Remove IP hash after anonymization
-        user_agent: 'anonymized',
-        consent_ip_hash: null
+        user_agent: null,
+        consent_ip_hash: null,
       };
 
       const { error } = await client

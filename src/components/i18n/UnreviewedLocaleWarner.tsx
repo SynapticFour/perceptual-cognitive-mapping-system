@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { useLocale, useMessages } from 'next-intl';
+import { FEATURE_FLAGS } from '@/config/feature-flags';
 
 const STORAGE_PREFIX = 'pcms-locale-review-banner-dismissed:';
 
@@ -14,8 +15,7 @@ type LocaleReviewMeta = {
 
 function showReviewWarnings(): boolean {
   return (
-    process.env.NODE_ENV !== 'production' ||
-    process.env.NEXT_PUBLIC_LOCALE_REVIEW_WARNINGS === 'true'
+    process.env.NODE_ENV !== 'production' || FEATURE_FLAGS.LOCALE_REVIEW_WARNINGS
   );
 }
 

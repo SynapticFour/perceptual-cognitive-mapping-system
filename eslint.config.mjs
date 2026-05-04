@@ -65,6 +65,42 @@ const eslintConfig = defineConfig([
       "@typescript-eslint/no-unused-vars": "off",
     },
   },
+  {
+    files: ["src/atlas/self-nomination/**/*.{ts,tsx}"],
+    ignores: ["src/atlas/self-nomination/__tests__/**"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        {
+          paths: [
+            {
+              name: "@/scoring/scoring-model",
+              message: "Import from @/scoring instead.",
+            },
+          ],
+          patterns: [
+            {
+              group: ["@/scoring", "@/scoring/*"],
+              message:
+                "ATLAS self-nomination must not depend on the PCMS scoring stack (ADR-003). Use neutral descriptors and routing-tags only where needed.",
+            },
+            {
+              group: ["@/lib/cognitive-pipeline", "@/lib/cognitive-pipeline/*"],
+              message: "Self-nomination must not import the cognitive pipeline (ADR-003).",
+            },
+            {
+              group: ["@/core/cognitive-pipeline", "@/core/cognitive-pipeline/*"],
+              message: "Self-nomination must not import the cognitive pipeline (ADR-003).",
+            },
+            {
+              group: ["@/adaptive/questionnaire-engine", "@/adaptive/questionnaire-engine/*"],
+              message: "Self-nomination must not import the questionnaire engine (ADR-003).",
+            },
+          ],
+        },
+      ],
+    },
+  },
 ]);
 
 export default eslintConfig;

@@ -9,9 +9,11 @@ import { buildFullSessionExportV1 } from '@/lib/research-session-bundle';
 import type { StoredPipelineSession } from '@/types/pipeline-session';
 
 const DB_NAME = 'PCMSOffline';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 const STORE_BANKS = 'questionBanks';
 const STORE_SESSIONS = 'offlineSessions';
+/** ATLAS self-nomination selections per PCMS session (ADR-003; not scored). */
+const STORE_ATLAS_SELF_NOMINATION = 'atlasSelfNomination' as const;
 
 export interface OfflineResponseRow {
   questionId: string;
@@ -60,6 +62,9 @@ function openDb(): Promise<IDBDatabase> {
       }
       if (!db.objectStoreNames.contains(STORE_SESSIONS)) {
         db.createObjectStore(STORE_SESSIONS, { keyPath: 'sessionId' });
+      }
+      if (!db.objectStoreNames.contains(STORE_ATLAS_SELF_NOMINATION)) {
+        db.createObjectStore(STORE_ATLAS_SELF_NOMINATION, { keyPath: 'sessionId' });
       }
     };
     req.onsuccess = () => resolve(req.result);
@@ -255,4 +260,41 @@ export async function downloadAllPendingSessionFullExports(): Promise<number> {
     if (downloadOfflineSessionFullExport(s)) n += 1;
   }
   return n;
+}
+
+/** ATLAS self-nomination (auxiliary; ADR-003). Keyed by PCMS `sessionId`. */
+export type AtlasSelfNominationRow = {
+  sessionId: string;
+  locale: string;
+  selectedDescriptorIds: string[];
+  explicitNone: boolean;
+  skipped: boolean;
+  completedAt: string;
+};
+
+export async function putAtlasSelfNominationRow(row: AtlasSelfNominationRow): Promise<void> {
+  const db = await openDb();
+  await new Promise<void>((resolve, reject) => {
+    const tx = db.transaction(STORE_ATLAS_SELF_NOMINATION, 'readwrite');
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+    tx.objectStore(STORE_ATLAS_SELF_NOMINATION).put(row);
+  });
+  db.close();
+}
+
+export async function getAtlasSelfNominationRow(sessionId: string): Promise<AtlasSelfNominationRow | null> {
+  try {
+    const db = await openDb();
+    const row = await new Promise<AtlasSelfNominationRow | undefined>((resolve, reject) => {
+      const tx = db.transaction(STORE_ATLAS_SELF_NOMINATION, 'readonly');
+      tx.onerror = () => reject(tx.error);
+      const req = tx.objectStore(STORE_ATLAS_SELF_NOMINATION).get(sessionId);
+      req.onsuccess = () => resolve(req.result as AtlasSelfNominationRow | undefined);
+    });
+    db.close();
+    return row ?? null;
+  } catch {
+    return null;
+  }
 }

@@ -8,6 +8,19 @@ export const COGNITIVE_DIMENSION_KEYS = ['F', 'P', 'S', 'E', 'R', 'C', 'T', 'I',
 
 export type CognitiveDimension = (typeof COGNITIVE_DIMENSION_KEYS)[number];
 
+/**
+ * Primary results presentation (ADR-007): Focus–Flexibility / core routing axes shown first.
+ * Temporal, interoceptive, associative, verbal-spatial appear in a default-collapsed disclosure until reversal criteria are met.
+ */
+export const PRIMARY_RESULTS_ROUTING_KEYS = ['F', 'P', 'S', 'E', 'R', 'C'] as const satisfies readonly CognitiveDimension[];
+
+export type PrimaryResultsRoutingKey = (typeof PRIMARY_RESULTS_ROUTING_KEYS)[number];
+
+/** Research-facing routing dimensions (T–V) per ADR-007. */
+export const RESEARCH_ROUTING_KEYS = ['T', 'I', 'A', 'V'] as const satisfies readonly CognitiveDimension[];
+
+export type ResearchRoutingKey = (typeof RESEARCH_ROUTING_KEYS)[number];
+
 /** Unit-interval scores or confidences keyed by routing dimension. */
 export type CognitiveVector = Record<CognitiveDimension, number>;
 

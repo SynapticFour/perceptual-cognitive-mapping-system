@@ -6,7 +6,16 @@ import { validateGlobalBehavioralBankArray } from '../lib/global-behavior-bank-v
 import { validateCulturalAdaptiveBankArray } from '../lib/cultural-adaptive-bank';
 import type { AssessmentQuestion } from './questions';
 
-const BANK_FILES = ['core.json', 'refinement.json'] as const;
+/** Classic bank JSON files per content folder (order preserved when merging). */
+function bankJsonFilesForFolder(folder: string): readonly string[] {
+  if (folder === 'universal') {
+    return ['core.json', 'refinement.json', 'tiav-extension-v1.json'] as const;
+  }
+  if (folder === 'ghana') {
+    return ['core.json', 'refinement.json', 'tiav-ghana-v1.json'] as const;
+  }
+  return ['core.json', 'refinement.json'] as const;
+}
 
 const QUESTION_ROOT = path.join(process.cwd(), 'content', 'questions');
 
@@ -93,7 +102,7 @@ export async function loadQuestionsFromDiskImpl(locale: string): Promise<Assessm
   const merged: AssessmentQuestion[] = [];
 
   for (const folder of folders) {
-    for (const fileName of BANK_FILES) {
+    for (const fileName of bankJsonFilesForFolder(folder)) {
       const filePath = path.join(QUESTION_ROOT, folder, fileName);
       const chunk = await readValidatedJsonFile(filePath);
       merged.push(...chunk);

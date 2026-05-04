@@ -57,6 +57,9 @@ describe('buildCognitiveModel', () => {
       domain: expect.any(String),
       weight: expect.any(Number),
     });
+    for (const d of ROUTING_WEIGHT_KEYS) {
+      expect(m.routingScores[d]).toBeCloseTo(0.5, 5);
+    }
   });
 
   it('activation projections keep non-point spatial dispersion (field, not a blob)', () => {

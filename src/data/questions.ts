@@ -39,6 +39,8 @@ export interface QuestionBankJsonEntry {
    * IRT 2PL difficulty parameter (logit scale). Null until calibrated.
    */
   irt_b?: number | null;
+  /** Ghana-adapted English stem; mapped to {@link AssessmentQuestion.stemVariants} at load. */
+  gh_variant?: string;
 }
 
 export type AssessmentQuestionCategory =
@@ -100,6 +102,15 @@ export interface AssessmentQuestion {
 
 /** Map a schema-valid JSON row into the in-memory assessment shape. */
 export function jsonEntryToAssessmentQuestion(row: QuestionBankJsonEntry): AssessmentQuestion {
+  const gh = typeof row.gh_variant === 'string' ? row.gh_variant.trim() : '';
+  const stemVariants =
+    gh.length > 0
+      ? ({ global: row.text, ghana: gh, west_africa: gh } satisfies Record<
+          QuestionStemRegion,
+          string
+        >)
+      : undefined;
+
   return {
     id: row.id,
     text: row.text,
@@ -114,6 +125,7 @@ export function jsonEntryToAssessmentQuestion(row: QuestionBankJsonEntry): Asses
     culturalContext: row.culturalContext,
     reverseScored: row.reverseScored,
     responseScale: row.responseScale,
+    stemVariants,
   };
 }
 

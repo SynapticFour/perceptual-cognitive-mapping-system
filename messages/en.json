@@ -6,14 +6,15 @@
     "start_questionnaire": "Start questionnaire",
     "page_title": "Your cognitive profile",
     "page_subtitle": "Based on {count} responses · Completed {date}",
+    "public_map_disclaimer": "Research prototype: this map explores cognitive tendencies for self-understanding and open research. It maps everyday patterns on continuous dimensions and is not validated for individual clinical, legal, or placement decisions.",
     "retake": "Retake assessment",
     "share": "Share summary",
     "download": "Download data",
     "share_copied": "Summary link copied to clipboard.",
     "share_title": "Assessment summary",
-    "share_text": "Summary from the Perceptual & Cognitive Mapping System (non-clinical research tool).",
+    "share_text": "Summary from the Perceptual & Cognitive Mapping System — a research mapping tool for reflection.",
     "footer_line1": "Perceptual & Cognitive Mapping System · Research platform",
-    "footer_line2": "This is not a medical or diagnostic tool. For professional support, consult qualified healthcare providers.",
+    "footer_line2": "Built for reflection and open research. For health concerns, consult qualified healthcare providers.",
     "overview_heading": "What this session shows",
     "patterns_heading": "Patterns we noticed",
     "notes_heading": "Notes",
@@ -24,7 +25,7 @@
     "sms_code_copy": "Copy SMS profile code",
     "sms_code_copied": "Short code copied — coarse scores for SMS relay only.",
     "research_heading": "Research contribution",
-    "research_body": "Thank you for contributing to cognitive science research. Your anonymous session helps us study response patterns at a statistical level — not as a clinical or diagnostic measure.",
+    "research_body": "Thank you for contributing to cognitive science research. Your anonymous session helps us study response patterns at a statistical level for instrument development and aggregate reporting.",
     "research_questions_label": "Questions answered",
     "research_interpretation_confidence": "Interpretation confidence",
     "research_embedding_confidence": "Representation confidence",
@@ -47,7 +48,7 @@
     "print_summary": "Printable summary",
     "print_heading": "Your session summary",
     "print_meta": "{count} responses · {date}",
-    "print_footer": "Perceptual & Cognitive Mapping System — descriptive research summary, not a diagnosis or medical record.",
+    "print_footer": "Perceptual & Cognitive Mapping System — descriptive research summary for self-understanding and research records.",
     "print_popup_blocked": "Allow pop-ups for this site to print, or use your browser print on the results page.",
     "eight_constructs": {
       "heading": "Eight construct scales (this session)",
@@ -71,9 +72,9 @@
   },
   "cohortInsights": {
     "page_title": "Cohort Insights",
-    "meta_description": "Aggregate, probabilistic guidance for environments—no individual identification, not a diagnostic view.",
-    "guidance_tagline": "Insight → action · Guidance for human environments—not a clinical report or scorecard.",
-    "page_intro": "This view turns pooled patterns into practical ideas for environments and facilitation. It is guidance—not a report card, score, or diagnosis.",
+    "meta_description": "Aggregate, probabilistic guidance for environments—group-level patterns only, for facilitation ideas.",
+    "guidance_tagline": "Insight → action · Guidance for human environments—reflection prompts, not a formal report.",
+    "page_intro": "This view turns pooled patterns into practical ideas for environments and facilitation—orientation for teams, not a scorecard or label.",
     "aggregate_only": "No individual results appear here; only group-level shapes and suggestions.",
     "section_landscape": "Cognitive landscape",
     "landscape_hint": "Regions show where pooled emphasis clusters in a shared map (not individual locations).",
@@ -88,12 +89,12 @@
     "confidence_tooltip": "These insights are probabilistic and based on observed patterns, not definitive conclusions.",
     "pattern_library_note": "Pattern library overlap",
     "pattern_library_body": "When present, anonymized co-activation patterns add context. They describe tendencies in the aggregate, not categories for people.",
-    "footer_uncertainty": "Use these notes to prompt conversation and small experiments. They do not replace professional judgment or clinical care."
+    "footer_uncertainty": "Use these notes to prompt conversation and small experiments alongside your own professional judgment."
   },
   "supportInsights": {
     "heading": "Support insights",
     "private_note": "Private to this session — not shown in group views.",
-    "intro": "Early, non-diagnostic hints based on your response field. They are suggestions you might explore—not instructions.",
+    "intro": "Early hints based on your response field—suggestions you might explore alongside your own judgment.",
     "observed": "What we notice",
     "may_help": "What may help",
     "signal_label": "Support note"
@@ -137,7 +138,7 @@
     "progress_answered": "{n} questions answered",
     "progress_remaining": "~{n} remaining",
     "progress_coverage_label": "Information coverage",
-    "progress_coverage_hint": "Coverage reflects how many prompts have touched each routing band (internal bookkeeping, not a clinical score).",
+    "progress_coverage_hint": "Coverage reflects how many prompts have touched each routing band (internal routing bookkeeping only).",
     "progress_bands_initial": "Per-band coverage",
     "progress_bands_refinement": "Target dimensions vs goal",
     "progress_encourage_low": "Keep going — we’re still gathering enough diverse responses for a stable summary.",
@@ -195,14 +196,16 @@
   },
   "bars": {
     "caption": "Each bar shows your score between the low and high plain-language labels. The pale tail shows how high the score could plausibly reach given current uncertainty.",
-    "aria": "Ten horizontal bars showing scores and uncertainty tails per dimension",
+    "aria": "Dimensional bars: six primary routing scores first; T–V in an expandable section (ADR-007).",
+    "research_routing_disclosure_summary": "T, I, A, V — expand for the same bar layout (research-facing; ADR-007).",
     "confidence_line": "Confidence: {pct}% · {n} items answered",
     "tail_explainer": "Striped segment: plausible upper range if confidence increased (not a statistical CI).",
     "progressbar_aria": "{title}: {raw} percent raw score; plausible upper near {upper} percent"
   },
   "insights": {
     "caption": "Short interpretations for each dimension. Cards with italic text are less certain — hover or focus the card for why.",
-    "aria": "Grid of insight cards for each cognitive dimension",
+    "aria": "Insight cards: six primary routing dimensions first; T–V in an expandable section (ADR-007).",
+    "research_routing_disclosure_summary": "T, I, A, V — same insight layout as the primary six; expand if you want these research-facing notes.",
     "confidence_note_generic": "We are not yet fully confident on this dimension — consider answering more questions that touch this area.",
     "confidence_note_sample": "We would need more high-loading answers to reach full research-grade confidence here.",
     "deemphasized_tooltip": "Lower confidence: this card is shown muted until more consistent responses are collected.",
@@ -292,14 +295,14 @@
       "low": "You often notice competing demands on your attention and may switch tasks or stimuli more readily."
     },
     "P": {
-      "high": "You are comfortable with abstract framing and often look for structure or rules beneath surface details.",
+      "high": "You may feel comfortable with abstract framing and often look for structure or rules beneath surface details.",
       "mid": "You mix concrete examples with occasional pattern-seeking, depending on the task at hand.",
       "low": "You prefer tangible steps and familiar procedures over open-ended abstraction."
     },
     "S": {
       "high": "Sensory inputs such as noise, light, or texture can strongly shape comfort and concentration.",
       "mid": "Some environments feel fine while others—especially busy or intense ones—wear on you faster.",
-      "low": "You are generally unbothered by typical sensory load in everyday settings."
+      "low": "Typical sensory load in everyday settings tends to bother you less than in busier profiles."
     },
     "E": {
       "high": "Social time tends to cost energy, and you recover best with quieter solo space afterwards.",
@@ -312,7 +315,7 @@
       "low": "You adapt quickly when agendas shift and rarely depend on a fixed rhythm to feel okay."
     },
     "C": {
-      "high": "You are relatively comfortable revising views or switching mental gears when new information appears.",
+      "high": "You may be relatively comfortable revising views or switching mental gears when new information appears.",
       "mid": "You can adjust when needed, though rapid ambiguity or reversals may feel tiring at times.",
       "low": "You prefer stable answers and clear expectations over prolonged uncertainty."
     },
@@ -338,8 +341,8 @@
     }
   },
   "landscape": {
-    "hero_title": "Not one label — many thinking tendencies at once",
-    "hero_body": "Your answers shape several thinking tendencies together. Each one appears as its own dot. Dots that sit close together are somewhat alike in the model we use. This picture is not a grade, rank, or health diagnosis.",
+    "hero_title": "Many thinking tendencies at once — patterns, not a single label",
+    "hero_body": "Your answers shape several thinking tendencies together. Each one appears as its own dot. Dots that sit close together are somewhat alike in the model we use. This picture is a pattern map for reflection—plain-language tendencies, not a grade or rank.",
     "map_heading": "Your cognitive constellation",
     "map_caption": "Each dot is one thinking tendency (size and clarity show how strong it is here). Faint lines link related tendencies; circles group nearby ones. The centre label is the balance point of your pattern—not a single “type”.",
     "map_aria": "Picture of several thinking tendencies at once, with simple reference examples",
@@ -393,6 +396,7 @@
     "export_png_error": "Could not export PNG (browser blocked image export). Try a screenshot instead.",
     "bars_heading": "Dimensional bars",
     "bars_caption": "Each bar uses colour for the dimension; opacity reflects routing confidence. Hover or long-press a row for the short scientific description.",
+    "research_routing_disclosure_summary": "T, I, A, V — extended routing dimensions (lower item coverage; research-facing per ADR-007). Expand to see the same bars.",
     "url_profile": {
       "summary": "This view was opened from a shared link. It shows dimension scores only — not a full saved session."
     }
@@ -440,7 +444,7 @@
     "narrative": "Readable summary",
     "friction": "Style contrasts",
     "environment": "Environment signals",
-    "disclaimer": "Aggregate, descriptive guidance only—not a diagnosis, grade, or hiring signal. Use only with appropriate consent when combining profiles.",
+    "disclaimer": "Aggregate, descriptive guidance for facilitation—patterns for conversation, not grades or hiring signals. Use only with appropriate consent when combining profiles.",
     "payload_label": "Payload",
     "demo_row_1_label": "Person 1",
     "demo_row_2_label": "Person 2",
@@ -476,12 +480,12 @@
       "limited": "Feature confidence is limited; interpret with caution.",
       "preliminary": "Limited response signal; treat any patterns as preliminary."
     },
-    "patterns_fallback": "No strong categorical patterns detected from this session.",
-    "notes_fallback": "This is a descriptive summary, not a diagnosis or clinical assessment."
+    "patterns_fallback": "No strong distinctive patterns stood out from this session’s statistics alone.",
+    "notes_fallback": "This is a descriptive summary for reflection and research—plain-language tendencies from your answers."
   },
   "welcome": {
     "title": "How does your mind work?",
-    "subtitle": "A research tool that maps your cognitive style as a continuous profile—plain-language patterns for reflection and research."
+    "subtitle": "A research tool that explores cognitive style as a continuous profile—plain-language patterns for reflection and research."
   },
   "consent": {
     "title": "Research Consent Form",
@@ -523,7 +527,7 @@
     "card_insights_body": "See plain-language ideas that may fit your style—suggestions only, not prescriptions",
     "diff_heading": "What Makes This Different",
     "diff_traditional_heading": "Traditional Approaches",
-    "diff_traditional_1": "Sorting people into fixed clinical-style boxes",
+    "diff_traditional_1": "Sorting people into fixed categorical boxes",
     "diff_traditional_2": "One-size-fits-all assessments",
     "diff_traditional_3": "Stigma and fixed mindsets",
     "diff_ours_heading": "Our Approach",
@@ -543,7 +547,7 @@
   },
   "sms_profile": {
     "title": "Profile from SMS code",
-    "intro": "Paste a compact code (e.g. F7P8S3…) produced on the results page. Deciles are approximate; this is not a clinical record.",
+    "intro": "Paste a compact code (e.g. F7P8S3…) produced on the results page. Deciles are approximate—coarse routing summaries for relay only.",
     "code_label": "Code",
     "invalid": "Could not read this code. Check all ten dimensions are present.",
     "dim_heading": "Approximate routing scores (%)",
@@ -568,7 +572,7 @@
     "footer_contact": "If you have questions, please contact: contact@synapticfour.com",
     "step1_title": "Understanding this research",
     "step1_p1": "This is a research tool designed to help understand how different people think and process information.",
-    "step1_p2": "The assessment measures ten dimensions of cognitive functioning using evidence-based questions.",
+    "step1_p2": "The assessment explores ten dimensions of cognitive style using evidence-informed questions.",
     "step1_p3": "Your participation contributes to scientific understanding of cognitive diversity.",
     "step1_k1": "Research-based assessment",
     "step1_k2": "Measures cognitive patterns",
@@ -595,7 +599,7 @@
     "step4_k2": "Voluntary participation",
     "step4_k3": "Right to withdraw data",
     "step5_title": "Important limitations",
-    "step5_p1": "This tool describes how you tend to think — it does not assess health or fitness for any purpose.",
+    "step5_p1": "This tool describes how you tend to think—for reflection and research questions about cognitive style.",
     "step5_p2": "Results represent tendencies, not definitive characteristics.",
     "step5_p3": "Individual variation is normal and expected.",
     "step5_p4": "If you have health concerns, please consult a qualified professional.",
@@ -605,7 +609,7 @@
   },
   "landing": {
     "lead": "About 10–15 minutes · No registration · Please read the short consent before you start.",
-    "diff_heading": "How this differs from clinical-style tools",
+    "diff_heading": "How this differs from label-based screeners",
     "diff_1": "Maps tendencies on a continuous spectrum—patterns, not categories.",
     "diff_2": "Plain-language profile: no labels, no scores, no pass/fail.",
     "diff_3": "For self-understanding and research—not for institutions to rank or screen people.",
@@ -621,7 +625,7 @@
     "para1": "Your profile shows how you weight focus, pattern processing, sensory sensitivity, social energy, structure preference, and cognitive flexibility. Everyone combines these dimensions in a unique way.",
     "para2": "In research literature, similar shapes often appear among broad themes of cognitive diversity and everyday processing styles—your snapshot here is only a dimensional description and is not interchangeable with any single research theme. For more on the research framing, read the <research>PCMS research note on Synaptic Four</research>.",
     "strengths_heading": "Strength correlates",
-    "strengths_sub": "Your three highest scores among the core six dimensions — descriptive strengths, not a verdict.",
+    "strengths_sub": "Your three highest scores among the core six dimensions — descriptive strengths for reflection.",
     "strength_F": "Deep concentration, detail precision",
     "strength_P": "Systems thinking, pattern recognition",
     "strength_S": "Fine-grained perception, aesthetic strengths",
@@ -631,6 +635,9 @@
   },
   "ethics_consent": {
     "page_intro_cal": "You're about to explore your cognitive profile. Please take a moment to read what we collect and why.",
+    "prototype_banner_title": "Research prototype",
+    "prototype_banner_body": "PCMS is a voluntary research questionnaire in active development. It maps self-reported tendencies on continuous dimensions for scientific learning about cognitive diversity. Scores are not yet validated for placement, screening, or eligibility decisions.",
+    "irb_status_body": "This tool has not yet received institutional research ethics approval as a finished study. Data you allow us to receive may be used for instrument development and aggregate research reporting only.",
     "progress": "Step {n} of {total}",
     "confirm_label": "I have read this section carefully and confirm my understanding.",
     "next": "Continue",
@@ -644,19 +651,19 @@
     "storage_notice_cloud_extra": "This deployment has optional cloud storage: if you continue, anonymous session summaries may sync to the configured research database (see Privacy). If cloud storage is not in use, nothing leaves this device except what you export or share.",
     "skip_redirect": "Skipping consent (test mode)…",
     "research_title": "What this system is",
-    "research_body": "This is a non-clinical research questionnaire. It measures self-reported tendencies on continuous dimensions for scientific understanding of cognitive diversity. It is not a clinical service and does not provide treatment or advice.",
+    "research_body": "PCMS is a voluntary research questionnaire. It explores self-reported tendencies on continuous dimensions to support scientific understanding of cognitive diversity. Use it for reflection and research participation; treatment planning and formal eligibility decisions belong with qualified professionals.",
     "measured_title": "What is measured",
     "measured_intro": "The assessment asks about preferences and typical behaviours. Ten dimensions summarise patterns (for example focus, sensory comfort, or planning style). Each score is a tendency on a scale—descriptive, not a ranking of overall ability.",
     "limits_title": "Scope of what is captured",
-    "limits_body": "The questionnaire records self-reported tendencies on the dimensions described above. It is not designed to measure IQ, overall ability, or suitability for school, work, or care. There are no pass/fail outcomes. If you have health concerns, contact a qualified professional.",
+    "limits_body": "The questionnaire records self-reported tendencies on the dimensions described above. It focuses on cognitive style patterns—IQ, global ability ratings, and pass/fail outcomes are out of scope. If you have health concerns, contact a qualified professional.",
     "privacy_title": "What we store",
     "privacy_body": "Synaptic Four (Stuttgart) stores an anonymous session identifier, timestamps, your answers, response times, and derived statistical summaries needed for research. We do not collect your name, email, or postal address in this flow unless you contact us separately (which is a separate processing context). Full privacy notice: “Privacy” in the footer or /privacy.",
-    "privacy_body_local": "Synaptic Four (Stuttgart) uses an anonymous session identifier, timestamps, your answers, response times, and derived statistical summaries for this tool. By default these stay in this browser for your session. We do not collect your name, email, or postal address in this flow unless you contact us separately (then it is a separate processing context).",
+    "privacy_body_local": "Synaptic Four (Stuttgart) uses an anonymous session identifier, timestamps, your answers, response times, and derived statistical summaries for this tool. By default these stay in this browser for your session; retention and deletion options are described on the Privacy page. We do not collect your name, email, or postal address in this flow unless you contact us separately (then it is a separate processing context).",
     "privacy_body_cloud_extra": "When optional cloud storage is enabled for this deployment, the same pseudonymous fields may be written to the configured research database if sync succeeds. Full privacy notice: “Privacy” in the footer or /privacy.",
     "rights_title": "Your rights",
     "rights_body": "You may stop at any time without penalty. You may request deletion of data linked to your session ID where technically possible (use “Delete my data” on the results page when enabled). Contact: contact@synapticfour.com for requests and GDPR rights; details are on the Privacy page.",
     "ghana_title": "Ghana / medical context",
-    "ghana_body": "This questionnaire does not replace a doctor, nurse, psychologist, or community health worker. It cannot detect or treat illness. In Ghana and elsewhere, use licensed professionals for medical decisions."
+    "ghana_body": "Voluntary self-report for research and reflection through Synaptic Four’s open mapping tool. For medical questions or care, speak with a licensed doctor, nurse, psychologist, community health worker, or trusted local practitioner. Your participation supports instrument development and stays in the research-and-reflection lane with the project team."
   },
   "ethics_assent": {
     "title": "Before you view your results",
@@ -670,17 +677,17 @@
     "use_research": "Participating in research",
     "use_education": "Education / teaching",
     "use_other": "Other",
-    "chk_nondiagnostic": "I understand these results describe tendencies for reflection and research—they do not assess my health or fitness for any purpose.",
-    "chk_research": "I understand this tool supports self-reflection and research participation, not treatment or placement decisions.",
+    "chk_nondiagnostic": "I understand these results describe tendencies for reflection and research questions about cognitive style.",
+    "chk_research": "I understand this tool supports self-reflection and research participation; treatment or placement decisions stay with qualified professionals.",
     "submit": "View results",
     "error_incomplete": "Please answer all fields and tick both confirmations."
   },
   "ethics_results": {
     "banner_title": "Important limitations",
     "non_medical": "Your profile summarizes self-reported tendencies on the questionnaire dimensions.",
-    "non_diagnosis": "Use these outputs for reflection and research questions—not to judge fitness for a role, school, or care.",
+    "non_diagnosis": "Best used for reflection and research questions about environment fit—decisions about roles, school, or care need broader evidence.",
     "non_judgement": "Your profile is neither good nor bad — it describes tendencies, not worth.",
-    "ghana_medical": "This assessment does not replace a doctor, nurse, counsellor, or traditional healer where you need professional care.",
+    "ghana_medical": "For medical questions or care, speak with a licensed doctor, nurse, counsellor, or traditional healer you trust—this mapping stays in the research-and-reflection lane.",
     "delete_label": "Delete my data",
     "delete_help": "Removes server-side rows for your session ID (where configured) and clears this browser."
   },
@@ -708,7 +715,7 @@
     "toggle_show": "Facilitator view",
     "toggle_hide": "Hide facilitator view",
     "section_title": "Facilitator observations",
-    "section_intro": "Practical, non-clinical ideas for teachers and parents based on this session’s dimension scores.",
+    "section_intro": "Practical ideas for teachers and parents, grounded in this session’s dimension scores (suggestions only).",
     "disclaimer": "These observations are based on self-reported tendencies and are not validated for individual educational decisions. Always combine with your direct knowledge of the child.",
     "low_confidence_note": "Overall session confidence was limited — treat these cards as tentative prompts, not a full picture of the learner.",
     "label_observation": "What you might notice",
@@ -797,10 +804,42 @@
       }
     }
   },
+  "selfNomination": {
+    "heading": "Do any of these resonate?",
+    "subheading": "These are descriptions of experiences some people have. Select any that feel true for you — or none. There's no right answer.",
+    "disclaimer": "Your selections are for your own reflection and optional research. They don't affect your map.",
+    "cta": "Continue to your map",
+    "skip": "Skip this step",
+    "selectedCount": "{count} selected",
+    "noneOfThese": "None of these",
+    "research_aria": "Research-only note about self-nomination selections",
+    "research_heading": "Research note (team / validation deployments)",
+    "research_skipped": "Participant skipped the self-nomination step — no descriptor selections stored.",
+    "research_explicit_none": "Participant chose “None of these” — zero descriptors selected (explicit).",
+    "research_count": "{count} descriptors selected for exploratory comparison.",
+    "research_traits_prefix": "Meta-themes (internal labels):",
+    "research_disclaimer": "Routing scores shown here are the same PCMS session outputs as elsewhere; they are not recomputed from descriptor picks. Descriptive only — selections are not scored (ADR-003)."
+  },
+  "docsPages": {
+    "back_home": "Home",
+    "ethics_meta_title": "Ethics & scope — PCMS",
+    "ethics_meta_description": "Ethics framework and appropriate use of the Perceptual & Cognitive Mapping System research prototype.",
+    "ethics_page_title": "Ethics & scope",
+    "ethics_intro": "Full project ethics document (same content as the open repository). For questions, use the contact in the footer.",
+    "validation_meta_title": "Validation protocol — PCMS",
+    "validation_meta_description": "What evidence exists today for PCMS scores and what the system cannot claim.",
+    "validation_page_title": "Validation protocol",
+    "validation_intro": "Plain-language validation status for reviewers and participants (same document as the open repository)."
+  },
   "site_footer": {
     "nav_label": "Legal and external links",
     "privacy": "Privacy",
     "imprint": "Imprint",
-    "github": "GitHub"
+    "github": "GitHub",
+    "ethics_doc": "Ethics & scope",
+    "validation_protocol": "Validation status",
+    "prototype_line": "Research prototype for reflection and open science — maps cognitive tendencies; open MIT-licensed project.",
+    "contact": "Questions or data requests: contact@synapticfour.com",
+    "license_mit": "MIT License — see repository."
   }
 }

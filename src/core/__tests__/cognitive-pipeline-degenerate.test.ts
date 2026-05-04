@@ -46,5 +46,8 @@ describe('buildCognitiveModel degenerate activations', () => {
     expect(m.projectedPoints.length).toBeGreaterThan(0);
     expect(m.cognitiveRegions).toHaveLength(0);
     expect(m.embedding.every((v) => v === 0)).toBe(true);
+    for (const d of ROUTING_WEIGHT_KEYS) {
+      expect(m.routingScores[d]).toBeCloseTo(0.5, 5);
+    }
   });
 });

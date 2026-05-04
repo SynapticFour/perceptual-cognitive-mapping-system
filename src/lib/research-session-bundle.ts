@@ -130,7 +130,7 @@ function buildRoCrateMinimal(manifest: ResearchBundleManifest, fileNames: string
         '@type': 'Dataset',
         name: 'PCMS research session export',
         description:
-          'Perceptual & Cognitive Mapping System — session data for research. Not a clinical record.',
+          'Perceptual & Cognitive Mapping System — session data for research and reflection (descriptive mapping).',
         datePublished: manifest.exportedAt,
         hasPart: parts,
       },

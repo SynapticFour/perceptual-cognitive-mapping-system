@@ -14,11 +14,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_DESCRIPTION =
+  "Explore your cognitive style through a research-based mapping tool. Culturally adaptive, private, and oriented toward reflection — a research prototype, not a validated instrument for individual decisions.";
+
 export const metadata: Metadata = {
-  title: "Perceptual & Cognitive Mapping System",
-  description:
-    "Anonymous research questionnaire for cognitive diversity — not a medical or diagnostic tool.",
+  title: "PCMS — Cognitive Mapping",
+  description: SITE_DESCRIPTION,
   manifest: "/manifest.json",
+  openGraph: {
+    title: "PCMS — Cognitive Mapping",
+    description: SITE_DESCRIPTION,
+    type: "website",
+  },
   appleWebApp: {
     capable: true,
     title: "PCMS",

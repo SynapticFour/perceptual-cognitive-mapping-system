@@ -21,7 +21,7 @@ export type { CognitiveRegion, CognitiveRegionValidation } from '@/lib/cognitive
 export { buildRegionValidation } from '@/lib/cognitive-regions';
 import { isPcmsDebugField } from '@/lib/pcms-debug';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
-import type { CognitiveDimension } from '@/model/cognitive-dimensions';
+import { DEFAULT_COGNITIVE_VECTOR, type CognitiveDimension, type CognitiveVector } from '@/model/cognitive-dimensions';
 import type { TraitDomain } from '@/core/traits/trait-domains';
 import type { CognitiveActivation } from '@/core/traits/types';
 import type { ConfidenceComponents } from '@/scoring';
@@ -237,6 +237,11 @@ export interface CognitiveModel {
   cognitiveRegions: CognitiveRegion[];
   /** Validation: counts, dominance, centroid spacing (see spec). */
   regionValidation: CognitiveRegionValidation;
+  /**
+   * Per-dimension routing scores on the unit interval (0–1), from {@link DimensionDisplayModel.rawPercent} ÷ 100.
+   * Used for facilitator copy and any consumer that needs the same scale as the adaptive routing posteriors.
+   */
+  routingScores: CognitiveVector;
   /** Optional clusters (each ≥2 points) in projection space. */
   activationClusters: number[][];
   /** Pairs of global indices for faint trait relation lines. */
@@ -261,6 +266,13 @@ export function buildCognitiveModel(input: BuildCognitiveModelInput): CognitiveM
     extraPoints = [],
     syntheticCount: syntheticCountIn,
   } = input;
+
+  const routingScores: CognitiveVector = { ...DEFAULT_COGNITIVE_VECTOR };
+  for (const d of ROUTING_WEIGHT_KEYS) {
+    const raw = display.rawPercent[d];
+    routingScores[d] =
+      typeof raw === 'number' && Number.isFinite(raw) ? Math.max(0, Math.min(1, raw / 100)) : 0.5;
+  }
 
   const hasSession = Boolean(embeddingVector && embeddingVector.length > 0);
   const dim = hasSession
@@ -426,6 +438,7 @@ export function buildCognitiveModel(input: BuildCognitiveModelInput): CognitiveM
     activationClusterHints,
     cognitiveRegions,
     regionValidation,
+    routingScores,
     centroid,
     activationIndices,
     activationDomains,

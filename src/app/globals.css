@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* ATLAS self-nomination selected card accent (see SelfNominationModule). */
+  --color-accent: #0d9488;
 }
 
 @theme inline {

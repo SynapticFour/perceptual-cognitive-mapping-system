@@ -1,4 +1,4 @@
-import { getSupabaseClient, DatabaseProfile, DatabaseQuestionResponse, DatabaseSession, generateSessionId, getUserAgent, isSupabaseConfigured } from './supabase';
+import { getSupabaseClient, DatabaseProfile, DatabaseQuestionResponse, DatabaseSession, generateSessionId, isSupabaseConfigured } from './supabase';
 import { assessmentDimensionWeightsToDbJson } from './supabase-mappers';
 import { QuestionResponse } from '@/data/questions';
 import { validateAssessmentVersion, AssessmentTracker } from './assessment-versioning';
@@ -80,8 +80,7 @@ export class DataCollectionService {
       id: this.sessionId,
       consent_timestamp: consentTimestamp,
       cultural_context: culturalContext,
-      user_agent: getUserAgent(),
-      completion_status: 'in_progress'
+      completion_status: 'in_progress',
     };
 
     if (!isSupabaseConfigured()) {

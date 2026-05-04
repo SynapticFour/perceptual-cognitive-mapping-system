@@ -23,8 +23,8 @@ export default async function ResearchDashboardPage() {
       <h1 className="text-2xl font-semibold text-white">Research overview</h1>
       <p className="mt-1 text-sm text-slate-400">
         Aggregates from <code className="text-slate-300">sessions</code> and{' '}
-        <code className="text-slate-300">profiles</code>. Dimension values are routing-confidence means (0–100), not
-        clinical scores.
+        <code className="text-slate-300">profiles</code>. Dimension values are routing-confidence means (0–100) for
+        research summaries — not labels for individual medical, educational, or placement decisions.
       </p>
       <div className="mt-8">
         <ResearchDashboardCharts data={data} />

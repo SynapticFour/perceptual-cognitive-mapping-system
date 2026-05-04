@@ -1,7 +1,12 @@
 {
-  "version": "1.0.0",
-  "released": "2026-04-12",
+  "version": "1.1.0",
+  "released": "2026-05-02",
   "revisionHistory": [
+    {
+      "version": "1.1.0",
+      "date": "2026-05-02",
+      "summary": "TIAV extension: universal/tiav-extension-v1.json (20 items each for T,I,A,V) + ghana/tiav-ghana-v1.json; optional gh_variant in schema; classic loader merges these files."
+    },
     {
       "version": "1.0.0",
       "date": "2026-04-12",

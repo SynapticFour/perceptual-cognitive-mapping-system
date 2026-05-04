@@ -48,7 +48,7 @@ export function shouldIncludeGhanaEthicsStep(locale: string): boolean {
   if (policy === 'off') return false;
   const region = readPublicEnv('NEXT_PUBLIC_PCMS_ETHICS_REGION')?.trim().toLowerCase();
   if (region === 'ghana' || region === 'west_africa') return true;
-  return locale === 'tw';
+  return locale === 'tw' || locale === 'wo';
 }
 
 export function buildConsentSteps(options: { mode: ConsentRuntimeMode; locale: string }): ConsentStepId[] {

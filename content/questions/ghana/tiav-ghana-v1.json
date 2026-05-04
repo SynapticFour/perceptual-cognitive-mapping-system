@@ -1,0 +1,178 @@
+[
+  {
+    "id": "GH-TIAV-T-101",
+    "text": "When the family calendar fills with funerals, weddings, and naming dates, I still know which week each one sits in.",
+    "dimension_weights": { "T": 0.85, "R": 0.09, "E": 0.06 },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": ["structure"],
+    "culturalContext": "ghana",
+    "informationGain": 0.76,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-T-102",
+    "text": "Market mornings and quiet afternoons feel like different kinds of time to me.",
+    "dimension_weights": { "T": 0.72, "E": 0.16, "S": 0.12 },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": ["structure"],
+    "culturalContext": "ghana",
+    "informationGain": 0.68,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-T-103",
+    "text": "I ride the day’s social rhythm and only pin exact clock times when someone texts or calls.",
+    "dimension_weights": { "T": 0.68, "R": 0.18, "E": 0.14 },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": ["structure"],
+    "culturalContext": "ghana",
+    "informationGain": 0.7,
+    "reverseScored": true
+  },
+  {
+    "id": "GH-TIAV-T-104",
+    "text": "Invitations blur together until I notice the cloth or food already being prepared.",
+    "dimension_weights": { "T": 0.74, "P": 0.14, "S": 0.12 },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": ["structure"],
+    "culturalContext": "ghana",
+    "informationGain": 0.67,
+    "reverseScored": true
+  },
+  {
+    "id": "GH-TIAV-I-101",
+    "text": "Heat, Harmattan dust, or sudden cool rain change how my body feels within minutes.",
+    "dimension_weights": { "I": 0.82, "S": 0.12, "T": 0.06 },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": ["sensory"],
+    "culturalContext": "ghana",
+    "informationGain": 0.74,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-I-102",
+    "text": "After spicy food or a long walk in sun, I notice belly or skin signals before they ruin my mood.",
+    "dimension_weights": { "I": 0.74, "S": 0.14, "E": 0.12 },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": ["sensory"],
+    "culturalContext": "ghana",
+    "informationGain": 0.67,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-I-103",
+    "text": "I notice tight shoulders or shallow breath before I can name why a room feels tense.",
+    "dimension_weights": { "I": 0.78, "E": 0.14, "T": 0.08 },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": ["sensory"],
+    "culturalContext": "ghana",
+    "informationGain": 0.71,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-I-104",
+    "text": "Loud market alleys sometimes hit as one buzz until I step into quieter shade.",
+    "dimension_weights": { "I": 0.66, "S": 0.22, "E": 0.12 },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": ["sensory"],
+    "culturalContext": "ghana",
+    "informationGain": 0.65,
+    "reverseScored": true
+  },
+  {
+    "id": "GH-TIAV-A-101",
+    "text": "When a proverb from home comes to mind, it links easily to a problem I see online or in class.",
+    "dimension_weights": { "A": 0.84, "V": 0.1, "E": 0.06 },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": ["pattern"],
+    "culturalContext": "ghana",
+    "informationGain": 0.77,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-A-102",
+    "text": "I see links between how a stall is arranged and how a lesson is structured.",
+    "dimension_weights": { "A": 0.71, "P": 0.17, "V": 0.12 },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": ["pattern"],
+    "culturalContext": "ghana",
+    "informationGain": 0.66,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-A-103",
+    "text": "A song chorus sends me to a childhood game, then back to the spreadsheet I was fixing.",
+    "dimension_weights": { "A": 0.72, "V": 0.16, "P": 0.12 },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": ["pattern"],
+    "culturalContext": "ghana",
+    "informationGain": 0.69,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-A-104",
+    "text": "Two different lectures spark the same analogy about flowing water and trade routes.",
+    "dimension_weights": { "A": 0.76, "P": 0.14, "E": 0.1 },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": ["pattern"],
+    "culturalContext": "ghana",
+    "informationGain": 0.73,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-V-101",
+    "text": "I give directions using big trees, chapels, and chop bars people know along the way.",
+    "dimension_weights": { "V": 0.83, "P": 0.11, "T": 0.06 },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": ["focus"],
+    "culturalContext": "ghana",
+    "informationGain": 0.75,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-V-102",
+    "text": "I sketch the football pitch or classroom layout to explain a play or seating plan.",
+    "dimension_weights": { "V": 0.76, "P": 0.14, "R": 0.1 },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": ["focus"],
+    "culturalContext": "ghana",
+    "informationGain": 0.69,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-V-103",
+    "text": "I remember a landmark turn by the colour of the wall paint and the smell of frying oil.",
+    "dimension_weights": { "V": 0.78, "S": 0.14, "A": 0.08 },
+    "type": "core",
+    "difficulty": "broad",
+    "tags": ["focus"],
+    "culturalContext": "ghana",
+    "informationGain": 0.72,
+    "reverseScored": false
+  },
+  {
+    "id": "GH-TIAV-V-104",
+    "text": "I picture reordering mats or chairs before people arrive for the evening gathering.",
+    "dimension_weights": { "V": 0.74, "R": 0.14, "T": 0.12 },
+    "type": "core",
+    "difficulty": "specific",
+    "tags": ["focus"],
+    "culturalContext": "ghana",
+    "informationGain": 0.68,
+    "reverseScored": false
+  }
+]
