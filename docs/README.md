@@ -1,6 +1,12 @@
 # PCMS Documentation Index
 ## Perceptual & Cognitive Mapping System v1.0 (Research-Grade)
 
+### Audience Guide
+
+- **Partners / institutions / interested stakeholders:** focus on Validation, Ethics, Deployment-Legal, and Diagnostics docs.
+- **Researchers:** use Validation Protocol, Research Action Plan, Study Design, and Methodology docs.
+- **Maintainers / contributors:** use Continuation, ADRs, prompts, and implementation-level technical docs.
+
 ### Core Documentation
 
 #### **Getting Started**
@@ -9,11 +15,11 @@
 - **[Data Model](./data-model.md)** - Database schema and data structure documentation
 
 #### **Research Documentation**
-- **[Research action plan](./RESEARCH_ACTION_PLAN.md)** — Phased path to evidence, IRB, pre-registration, publication (team + agents)
+- **[Research action plan](./RESEARCH_ACTION_PLAN.md)** — Phased path to evidence, IRB, pre-registration, publication
 - **[Validation protocol](./VALIDATION_PROTOCOL.md)** — Honest psychometric status and Phase 1 bar (funders / IRB)
 - **[Architectural decisions (ADR)](./DECISIONS.md)** — PCMS + ATLAS non-negotiables
 - **[ATLAS programme](./ATLAS.md)** — Companion high-dimensional roadmap ([`ATLAS_VISION.md`](./ATLAS_VISION.md) alias)
-- **[Cursor prompts](../cursor-prompts/README.md)** — Executable briefs (T/I/A/V items, site audit, self-nomination, ATLAS prep)
+- **[Cursor prompts](../cursor-prompts/README.md)** — Internal execution briefs for maintainers and automation
 - **[Research roadmap](./RESEARCH-ROADMAP.md)** - Epics/tickets: session reproducibility, dual confidence model, banks, offline exports
 - **[Whitepaper](./whitepaper.md)** - Complete technical and theoretical foundation
 - **[Research Study Design v1.0](../lib/research/study_v1.md)** - Complete research protocol and study design
@@ -27,12 +33,13 @@
 
 #### **Ethics and Compliance**
 - **[Ethics Framework v1.0](./ethics.md)** — Ethical guidelines (same source is served in-app at `/ethics` on the map deployment; locale prefix when not default, e.g. `/de/ethics`)
-- **[Site audit report (public readiness)](./SITE_AUDIT_REPORT.md)** — Periodic audit log; **[Continuation handoff](./CONTINUATION.md)** — resume-work index for agents and maintainers
+- **[Site audit report (public readiness)](./SITE_AUDIT_REPORT.md)** — Periodic audit log
+- **[Continuation handoff](./CONTINUATION.md)** — internal resume-work index for maintainers
 - The **[validation protocol](./VALIDATION_PROTOCOL.md)** (under Research above) is also served in-app at `/validation`
 - **GDPR tables** (after base schema): [`../supabase/migrations/20260413120000_ethics_gdpr.sql`](../supabase/migrations/20260413120000_ethics_gdpr.sql)
 - **Ethics audit events** (compliance / audit trail): [`../supabase/migrations/20260414200000_ethics_audit_events.sql`](../supabase/migrations/20260414200000_ethics_audit_events.sql)
 
-#### **Internationalization**
+#### **Internationalization & diagnostics**
 - **[I18N](./I18N.md)** - Locales, URLs, `messages/*.json`, and Twi review notes
 - **[Diagnostics](./DIAGNOSTICS.md)** - Health/readiness probes, operator sync diagnostics, and production debug workflow
 
@@ -208,6 +215,6 @@ npm run verify    # Alternative verification command
 
 ---
 
-**Last Updated**: May 2, 2026  
+**Last Updated**: May 5, 2026  
 **Version**: v1.0 (Research-Grade)  
 **Status**: Active development — run `npm test` (`npm run check` + unit tests) and `npm run build` before releases; use `npm run test:e2e` for Playwright smoke tests

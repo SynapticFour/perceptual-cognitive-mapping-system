@@ -4,8 +4,8 @@
 
 **Research-Grade Adaptive Assessment Platform for Cognitive Diversity**
 
-**GitHub “About” description (copy into repository settings):**  
-`Research-grade adaptive assessment platform for cognitive diversity. Continuous dimensional profiling — not diagnosis, not labels. Next.js 16 · TypeScript · MIT.`
+**Short project description:**  
+`Research-grade adaptive assessment platform for cognitive diversity. Continuous dimensional profiling — not diagnosis, not labels.`
 
 A scientifically grounded web-based system for mapping human cognition into continuous multi-dimensional space, replacing categorical thinking with dimensional modeling for **research and educational self-understanding** (not clinical diagnosis).
 
@@ -21,7 +21,17 @@ A scientifically grounded web-based system for mapping human cognition into cont
 
 ### Instrument validation status (researchers & funders)
 
-PCMS has **not** yet completed **publication-standard** psychometric validation (reliability from real data, convergent validity, local norms, cross-locale comparability). Scoring weights are literature- and design-based, not empirically calibrated on a dedicated normative corpus. For an explicit statement of current limits and a **Phase 1 validation roadmap**, see **[`docs/VALIDATION_PROTOCOL.md`](./docs/VALIDATION_PROTOCOL.md)** (also in-app at `/validation` on the map host). For a sequenced execution plan (IRB, OSF, pilots, publication), see **[`docs/RESEARCH_ACTION_PLAN.md`](./docs/RESEARCH_ACTION_PLAN.md)**. A complementary technical calibration roadmap (IRT/CFA, larger samples) is in [`docs/VALIDATION_ROADMAP.md`](./docs/VALIDATION_ROADMAP.md). To pick up multi-session work: **[`docs/CONTINUATION.md`](./docs/CONTINUATION.md)** and the latest **[`docs/SITE_AUDIT_REPORT.md`](./docs/SITE_AUDIT_REPORT.md)**.
+PCMS has **not** yet completed **publication-standard** psychometric validation (reliability from real data, convergent validity, local norms, cross-locale comparability). Scoring weights are literature- and design-based, not empirically calibrated on a dedicated normative corpus. For an explicit statement of current limits and a **Phase 1 validation roadmap**, see **[`docs/VALIDATION_PROTOCOL.md`](./docs/VALIDATION_PROTOCOL.md)** (also in-app at `/validation` on the map host). For a sequenced execution plan (IRB, OSF, pilots, publication), see **[`docs/RESEARCH_ACTION_PLAN.md`](./docs/RESEARCH_ACTION_PLAN.md)**. A complementary technical calibration roadmap (IRT/CFA, larger samples) is in [`docs/VALIDATION_ROADMAP.md`](./docs/VALIDATION_ROADMAP.md).
+
+### For partners and interested institutions
+
+Start with these documents:
+
+- **Validation status:** [`docs/VALIDATION_PROTOCOL.md`](./docs/VALIDATION_PROTOCOL.md)
+- **Ethics and consent model:** [`docs/ethics.md`](./docs/ethics.md)
+- **Legal/privacy deployment notes:** [`docs/DEPLOYMENT-LEGAL.md`](./docs/DEPLOYMENT-LEGAL.md)
+- **Deployment and operations:** [`docs/DEPLOYMENT.md`](./docs/DEPLOYMENT.md)
+- **Documentation index:** [`docs/README.md`](./docs/README.md)
 
 ---
 
@@ -82,7 +92,7 @@ If a user does want to understand how their PCMS profile relates to common neuro
 ### Research Infrastructure
 - **Publication-Ready Data**: Structured datasets for statistical analysis
 - **Study Management**: Complete research protocol implementation
-- **Ethical Compliance**: Informed consent, anonymity, and data protection
+- **Ethical Compliance**: Informed consent, explicit cloud opt-in, and pseudonymous data protection
 - **CLI Tools**: One-command setup and complete lifecycle management
 
 ## 🚀 Quick Start
@@ -248,14 +258,14 @@ After setup, you can immediately test the system:
 
 ### Data Structure
 
-- **Sessions**: Anonymous assessment tracking
+- **Sessions**: Pseudonymous assessment tracking
 - **Profiles**: Final cognitive vectors with confidence
 - **Responses**: Individual question answers with timing
 - **Analytics**: Aggregated research data
 
 ### Ethical Considerations
 
-- **Complete Anonymity**: No PII collected
+- **Pseudonymous by default**: No direct personal identifiers collected in the assessment flow
 - **Informed Consent**: Required before assessment
 - **Voluntary Participation**: Can withdraw at any time
 - **Research Purpose**: Clearly stated, not diagnostic
@@ -293,7 +303,7 @@ After setup, you can immediately test the system:
 ## 🔒 Privacy & Security
 
 - **Data Encryption**: All data encrypted in transit and at rest
-- **Anonymous Storage**: No personal identifiers collected
+- **Pseudonymous Storage**: No direct personal identifiers collected in the assessment flow
 - **Integrity metadata**: Optional hashed IP field in the database schema for future abuse controls (not enforced in the app layer yet)
 - **GDPR Compliant**: Right to deletion and data export
 
