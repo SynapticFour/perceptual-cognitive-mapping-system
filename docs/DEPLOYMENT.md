@@ -32,6 +32,15 @@ NODE_ENV=production
 LOG_LEVEL=warn
 ```
 
+### Supabase Public Env Resolution (Vercel)
+
+PCMS reads Supabase public env in this order:
+
+1. `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+2. Fallback to `SUPABASE_URL` / `SUPABASE_ANON_KEY` (useful with Vercel Supabase integration)
+
+This is mirrored into client bundles via `next.config.ts`, so cloud detection on `/consent` remains consistent between server and browser.
+
 #### Environment-Specific Settings
 
 **Development:**
@@ -124,6 +133,22 @@ vercel --prod
 # Deploy to preview
 vercel
 ```
+
+### Post-Deploy Diagnostics (Recommended)
+
+After production deploy, verify health endpoints:
+
+```bash
+curl -s https://map.synapticfour.com/api/health/live
+curl -s https://map.synapticfour.com/api/health/ready
+curl -s https://map.synapticfour.com/api/health/supabase-public
+```
+
+Expected:
+
+- `live.status = "pass"`
+- `ready.status = "pass"` or `"warn"` (warn means service is up but cloud env is incomplete)
+- `supabase-public.configured = true` for cloud-enabled deployments
 
 ### Docker Deployment
 

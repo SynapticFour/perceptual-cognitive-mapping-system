@@ -40,7 +40,7 @@ Any fork or derivative of PCMS that uses results to influence access to services
 ### Classroom, youth, and international deployment
 
 - **Default product consent** in this repository assumes **adult** participants unless your fork changes it. Use with **children or adolescents** (for example a middle-school class) requires **institutional ethical approval**, **parental/guardian consent and/or pupil assent** following local law and school policy, and usually a **separate build** (age text, data retention, teacher vs self-paced flow).
-- **Research (e.g. PhD) and cross-country use** are supported technically by anonymised storage and dimensional (non-label) reporting, but **each jurisdiction and institution** remains responsible for lawful basis, information sheets, and whether results may be shown in group settings.
+- **Research (e.g. PhD) and cross-country use** are supported technically by pseudonymous storage and dimensional (non-label) reporting, but **each jurisdiction and institution** remains responsible for lawful basis, information sheets, and whether results may be shown in group settings.
 - **Language and examples** in `messages/*.json` aim for plain, non-stigmatising wording; all translated strings should be checked by **fluent local reviewers** for cultural fit (including Wolof and Twi/Akan paths in `docs/I18N.md`).
 
 ## Core Ethical Principles
@@ -90,7 +90,7 @@ Any fork or derivative of PCMS that uses results to influence access to services
 ### 4. Privacy and Confidentiality
 
 **Data Protection**
-- Complete anonymity - no personally identifiable information
+- Pseudonymous session data (no direct personal identifiers in the assessment flow)
 - End-to-end encryption for all data transmission
 - Secure storage with access controls
 - Regular security audits and updates
@@ -155,13 +155,13 @@ These items map the principles above to routes and storage in this repository:
 
 - **Dedicated consent** — Users complete a **multi-step** flow at **`/consent`** with explicit checkboxes; questionnaire and results redirect here if consent is missing. Details are stored in browser storage (e.g. consent timestamp key used with Supabase session rows).
 - **Results assent** — Before showing scores, the results surface can require an additional **assent** acknowledgement (see results UI and `messages/*` keys).
-- **Delete my data** — **`POST /api/delete-session`** removes server-side session data when Supabase and server keys are configured (anonymous session id).
+- **Delete my data** — **`POST /api/delete-session`** removes server-side session data when Supabase and server keys are configured (pseudonymous session id).
 - **Ethics audit** — **`POST /api/ethics-audit`** records non-PII ethics events when the audit table migration has been applied; **`GET /api/ethics/compliance-report`** supports aggregated compliance review (protect with deployment auth as appropriate).
 - **Internationalization** — Consent and ethics copy are localized via **`messages/*.json`**; Twi strings remain draft for native-speaker review (see `docs/I18N.md`).
 
 ## Data Protection Framework
 
-### Anonymization Strategy
+### Pseudonymization Strategy
 
 **No PII Collection**
 - No names, emails, or personal identifiers
@@ -170,7 +170,7 @@ These items map the principles above to routes and storage in this repository:
 - No device fingerprinting
 
 **Session-Based Tracking**
-- Anonymous session IDs
+- Pseudonymous session IDs
 - Temporary data storage
 - Automatic data cleanup
 - No cross-session tracking
@@ -292,7 +292,7 @@ These items map the principles above to routes and storage in this repository:
 **Participant Protection**
 - No individual results in publications
 - Aggregated data only
-- Participant anonymity guaranteed
+- Participant pseudonymity guaranteed (no direct personal identifiers in the assessment flow)
 - Right to review publications
 
 ## Monitoring and Oversight

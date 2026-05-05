@@ -46,7 +46,7 @@ This is a **normal and acceptable** state for a prototype in pre-Phase 1. It is 
 ### 0.2 Ethics & IRB preparation
 
 **Who:** Lead researcher  
-**What:** Draft IRB protocol for Phase 1 data collection (N=150/locale, online convenience sample, anonymous). Identify target institution for submission (University affiliation needed for most IRB processes).  
+**What:** Draft IRB protocol for Phase 1 data collection (N=150/locale, online convenience sample, pseudonymous). Identify target institution for submission (University affiliation needed for most IRB processes).  
 **Why:** Without IRB approval, data collected cannot be used in peer-reviewed publications in most journals.  
 **Note:** Data already collected from the live site (`map.synapticfour.com`) before IRB approval can only be used as **pilot/informal** data — not as a primary study sample. This is standard research ethics.
 
@@ -71,7 +71,7 @@ This is a **normal and acceptable** state for a prototype in pre-Phase 1. It is 
 ### 1.1 Pilot data collection (N=150/locale)
 
 **Target locales:** English (UK/US), German (DE/AT/CH), Ghana (Twi/English)  
-**Method:** Online, anonymous, voluntary. Recruit through: university mailing lists, neurodiversity communities (with care — see consent design), social networks.  
+**Method:** Online, pseudonymous, voluntary. Recruit through: university mailing lists, neurodiversity communities (with care — see consent design), social networks.  
 **Instrument version:** Lock the question bank *before* data collection begins. Any changes reset the clock.  
 **Data storage:** Supabase with full session export. No PII collected.
 

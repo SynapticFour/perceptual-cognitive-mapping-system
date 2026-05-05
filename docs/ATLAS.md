@@ -105,7 +105,7 @@ ATLAS uses the same principle for cognitive traits:
 
 - Adaptive questionnaire engine (`src/adaptive/`)
 - 3D terrain visualisation (`src/ui/views/Terrain3DView.tsx`, `src/lib/cognitive-terrain-pipeline.ts`)
-- Database (Supabase) — separate tables, shared anonymous ID scheme
+- Database (Supabase) — separate tables, shared pseudonymous ID scheme
 - Cultural adaptation infrastructure (question bank schema, locale files)
 - Ethics framework and non-diagnostic principles
 

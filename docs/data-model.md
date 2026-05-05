@@ -3,7 +3,7 @@
 
 ### Overview
 
-The PCMS v1.0 data model is designed to support **research-grade adaptive assessment** with anonymous data collection while maintaining strict privacy standards. This document outlines the complete data structure, relationships, and implementation details for scientific studies.
+The PCMS v1.0 data model is designed to support **research-grade adaptive assessment** with pseudonymous data collection while maintaining strict privacy standards. This document outlines the complete data structure, relationships, and implementation details for scientific studies.
 
 ### Research-Grade Enhancements
 
@@ -16,7 +16,7 @@ The PCMS v1.0 data model is designed to support **research-grade adaptive assess
 
 #### 1. Sessions
 
-**Purpose**: Tracks individual assessment sessions with anonymous identifiers.
+**Purpose**: Tracks individual assessment sessions with pseudonymous identifiers.
 
 **Schema**:
 ```sql
@@ -582,7 +582,7 @@ Group-level **cohort** views are **not** a separate database table. They are **d
 
 ### Conclusion
 
-The PCMS data model provides a robust, privacy-preserving foundation for cognitive research while maintaining the flexibility needed for future enhancements. The anonymous, session-based approach ensures participant privacy while enabling sophisticated research analyses.
+The PCMS data model provides a robust, privacy-preserving foundation for cognitive research while maintaining the flexibility needed for future enhancements. The pseudonymous, session-based approach ensures participant privacy while enabling sophisticated research analyses.
 
 The modular design supports easy extension, cultural adaptation, and integration with research workflows while maintaining strict ethical and privacy standards.
 

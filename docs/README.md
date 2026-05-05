@@ -34,6 +34,7 @@
 
 #### **Internationalization**
 - **[I18N](./I18N.md)** - Locales, URLs, `messages/*.json`, and Twi review notes
+- **[Diagnostics](./DIAGNOSTICS.md)** - Health/readiness probes, operator sync diagnostics, and production debug workflow
 
 #### **Offline, export, and extended analysis**
 - **[Offline & paper-first architecture](./OFFLINE-AND-PAPER-ARCHITECTURE.md)** - Static question bank, service worker cache, IndexedDB, field workflows
@@ -203,7 +204,7 @@ npm run verify    # Alternative verification command
 - Version-controlled assessment (v1.0)
 - Complete audit trails with question paths
 - Non-diagnostic ethical framework
-- Anonymous data collection with privacy protection
+- Pseudonymous data collection with explicit cloud opt-in and privacy protections
 
 ---
 

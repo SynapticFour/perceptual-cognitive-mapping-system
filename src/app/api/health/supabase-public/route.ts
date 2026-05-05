@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { getBuildMeta, getPublicSupabaseEnvStatus } from '@/lib/health-checks';
 
 export const dynamic = 'force-dynamic';
 
@@ -7,25 +8,14 @@ export const dynamic = 'force-dynamic';
  * Uses bracket access so bundlers do not strip lookups when NEXT_PUBLIC vars were absent at compile time.
  */
 export async function GET() {
-  const url =
-    process.env['NEXT_PUBLIC_SUPABASE_URL']?.trim() ||
-    process.env['SUPABASE_URL']?.trim() ||
-    '';
-  const key =
-    process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY']?.trim() ||
-    process.env['SUPABASE_ANON_KEY']?.trim() ||
-    '';
-
-  let urlHost: string | null = null;
-  try {
-    urlHost = url ? new URL(url).host : null;
-  } catch {
-    urlHost = null;
-  }
+  const supabase = getPublicSupabaseEnvStatus();
+  const meta = getBuildMeta();
 
   return NextResponse.json({
-    configured: !!(url && key),
-    urlHost,
-    vercelEnv: process.env['VERCEL_ENV'] ?? null,
+    configured: supabase.configured,
+    urlHost: supabase.urlHost,
+    vercelEnv: meta.vercelEnv,
+    targetEnv: meta.targetEnv,
+    gitSha: meta.gitSha,
   });
 }

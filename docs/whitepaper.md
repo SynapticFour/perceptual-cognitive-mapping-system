@@ -118,7 +118,7 @@ No PCMS result should be used to deny, grant, or condition access to education, 
 #### 5.2 Consent and Data Rights
 
 - Informed consent is obtained before any data is collected (dedicated `/consent` route).
-- All data is anonymous by default; no personally identifiable information is required.
+- Data is pseudonymous by default; no directly identifying personal information is required in the assessment flow.
 - Users may delete their session at any time via the session deletion API.
 - Research data export requires explicit secondary consent.
 - GDPR-compliant audit logging is implemented for research contexts.
