@@ -712,95 +712,95 @@
     "pending": "Sitzungen in Upload-Warteschlange: {n}"
   },
   "facilitator": {
-    "toggle_show": "[DE] Facilitator view",
-    "toggle_hide": "[DE] Hide facilitator view",
-    "section_title": "[DE] Facilitator observations",
-    "section_intro": "[DE] Practical, non-clinical ideas for teachers and parents based on this session’s dimension scores.",
-    "disclaimer": "[DE] These observations are based on self-reported tendencies and are not validated for individual educational decisions. Always combine with your direct knowledge of the child.",
-    "low_confidence_note": "[DE] Overall session confidence was limited — treat these cards as tentative prompts, not a full picture of the learner.",
-    "label_observation": "[DE] What you might notice",
-    "label_suggestions": "[DE] Environmental ideas that may help",
-    "label_professional": "[DE] Talk with a professional if",
+    "toggle_show": "Moderationsansicht",
+    "toggle_hide": "Moderationsansicht ausblenden",
+    "section_title": "Beobachtungen für Moderation",
+    "section_intro": "Praktische, nicht-klinische Hinweise für Lehrkräfte und Eltern auf Basis der Dimensionswerte dieser Sitzung.",
+    "disclaimer": "Diese Beobachtungen basieren auf selbstberichteten Tendenzen und sind nicht für individuelle Bildungsentscheidungen validiert. Beziehen Sie immer Ihre direkte Kenntnis des Kindes ein.",
+    "low_confidence_note": "Das Gesamtvertrauen dieser Sitzung ist begrenzt — verstehen Sie diese Karten als vorsichtige Impulse, nicht als vollständiges Bild.",
+    "label_observation": "Was Ihnen auffallen könnte",
+    "label_suggestions": "Umfeld-Ideen, die helfen könnten",
+    "label_professional": "Mit Fachpersonen sprechen, wenn",
     "filler1": {
-      "observation": "[DE] Several dimensions sit in a middle range here, so day-to-day needs may shift with the task, sleep, and stress.",
-      "suggestion": "[DE] Offering a predictable routine with small choices built in may help many learners in this range feel steady without feeling boxed in.",
-      "professional": "[DE] If learning or wellbeing concerns persist across settings, a trusted educator or health professional can help you think through next steps together."
+      "observation": "Mehrere Dimensionen liegen im mittleren Bereich; Bedürfnisse können deshalb je nach Aufgabe, Schlaf und Stress im Alltag schwanken.",
+      "suggestion": "Eine verlässliche Grundstruktur mit kleinen Wahlmöglichkeiten kann vielen Lernenden in diesem Bereich Stabilität geben, ohne einzuengen.",
+      "professional": "Wenn Lern- oder Wohlbefindensprobleme über verschiedene Kontexte hinweg bestehen bleiben, können vertrauenswürdige pädagogische oder gesundheitliche Fachpersonen beim Einordnen der nächsten Schritte helfen."
     },
     "filler2": {
-      "observation": "[DE] Self-report tools capture a moment in time; behaviour in class can look different when interests, peers, or sensory load change.",
-      "suggestion": "[DE] Short check-ins after varied activities (quiet work, group talk, movement) may help you notice what supports engagement most often.",
-      "professional": "[DE] If you are unsure how to interpret patterns over time, a specialist who knows the child can offer perspective without labelling them."
+      "observation": "Selbstauskunftswerkzeuge erfassen immer nur einen Zeitpunkt; Verhalten im Unterricht kann sich verändern, wenn Interessen, Gruppe oder sensorische Belastung wechseln.",
+      "suggestion": "Kurze Check-ins nach unterschiedlichen Aktivitäten (ruhige Arbeit, Gruppengespräch, Bewegung) helfen oft zu erkennen, welche Bedingungen Beteiligung am zuverlässigsten unterstützen.",
+      "professional": "Wenn unklar ist, wie Muster über die Zeit zu deuten sind, kann eine Fachperson mit Kenntnis des Kindes Perspektive geben, ohne vorschnell zu etikettieren."
     },
     "F": {
       "high": {
-        "observation": "[DE] May stay absorbed in a task for a long stretch and lose track of transitions or class-wide announcements.",
-        "suggestion": "[DE] Gentle transition signals a minute ahead may help. A quiet corner for extended work may help when the room is lively.",
-        "professional": "[DE] If long stretches of solo focus get in the way of required group work or safety routines, a specialist conversation may help find balanced supports."
+        "observation": "Kann lange in einer Aufgabe aufgehen und dabei Übergänge oder klassenweite Ansagen aus dem Blick verlieren.",
+        "suggestion": "Sanfte Übergangssignale etwa eine Minute vorher können helfen. Eine ruhige Ecke für längere Arbeitsphasen kann in lebhaften Räumen entlasten.",
+        "professional": "Wenn lange Solo-Fokusphasen notwendige Gruppenarbeit oder Sicherheitsroutinen wiederholt behindern, kann ein Fachgespräch helfen, ausgewogene Unterstützung zu finden."
       },
       "low": {
-        "observation": "[DE] May notice side conversations, movement, or small visual changes in the room while working.",
-        "suggestion": "[DE] Seating with a simple visual barrier to the busiest part of the room may help. Breaking tasks into short visible steps may help more than long open-ended blocks.",
-        "professional": "[DE] If attention challenges clearly affect learning despite adjustments, an educational or developmental specialist may help explore what else could help."
+        "observation": "Nimmt während der Arbeit möglicherweise Nebengespräche, Bewegung oder kleine visuelle Veränderungen im Raum stark wahr.",
+        "suggestion": "Ein Sitzplatz mit einfacher visueller Abschirmung zum unruhigsten Bereich kann helfen. Aufgaben in kurze, sichtbare Schritte zu teilen wirkt oft besser als lange offene Blöcke.",
+        "professional": "Wenn Aufmerksamkeitsprobleme trotz Anpassungen das Lernen deutlich beeinträchtigen, kann eine pädagogische oder entwicklungsbezogene Fachperson zusätzliche Ansätze aufzeigen."
       }
     },
     "P": {
       "high": {
-        "observation": "[DE] May enjoy open-ended problems and spotting patterns before step-by-step instructions feel necessary.",
-        "suggestion": "[DE] Optional extension prompts or choice boards may help. Very rigid step lists without the “why” may feel constraining.",
-        "professional": "[DE] If frustration appears mainly when tasks stay purely concrete, a learning specialist may help match task design to strengths."
+        "observation": "Mag oft offene Problemstellungen und erkennt Muster, bevor Schritt-für-Schritt-Anleitungen nötig wirken.",
+        "suggestion": "Optionale Vertiefungsimpulse oder Wahlaufgaben können hilfreich sein. Sehr starre Schrittlisten ohne „Warum“ können als einengend erlebt werden.",
+        "professional": "Wenn Frust vor allem bei rein konkreten Aufgaben entsteht, kann eine Lernfachperson helfen, Aufgabendesign besser an Stärken anzupassen."
       },
       "low": {
-        "observation": "[DE] May follow clear examples best and feel more secure when instructions are concrete and ordered.",
-        "suggestion": "[DE] Worked examples, checklists, and labelled materials may help. Open-ended prompts without models may feel harder to start.",
-        "professional": "[DE] If anxiety or refusal shows up mostly on vague tasks, a professional may help design scaffolds that still build independence over time."
+        "observation": "Folgt klaren Beispielen oft am besten und fühlt sich sicherer, wenn Anweisungen konkret und geordnet sind.",
+        "suggestion": "Durchgearbeitete Beispiele, Checklisten und klar beschriftete Materialien helfen häufig. Offene Aufgaben ohne Modell sind oft schwerer zu beginnen.",
+        "professional": "Wenn Unsicherheit oder Verweigerung vor allem bei vagen Aufgaben auftritt, kann eine Fachperson tragfähige Hilfestrukturen entwickeln, die gleichzeitig Selbstständigkeit fördern."
       }
     },
     "S": {
       "high": {
-        "observation": "[DE] May be easily distracted by background noise or bright lighting.",
-        "suggestion": "[DE] Seating away from windows or high-traffic areas may help. Softer lighting or optional quiet headphones during independent work may help.",
-        "professional": "[DE] If sensory sensitivity clearly interferes with learning or wellbeing, a specialist assessment may help identify specific supports."
+        "observation": "Kann durch Hintergrundlärm oder helles Licht leicht abgelenkt werden.",
+        "suggestion": "Ein Platz entfernt von Fenstern oder stark frequentierten Bereichen kann helfen. Sanfteres Licht oder optionale ruhige Kopfhörer in Einzelarbeitsphasen können entlasten.",
+        "professional": "Wenn sensorische Sensibilität Lernen oder Wohlbefinden klar beeinträchtigt, kann eine fachliche Abklärung helfen, passgenaue Unterstützung zu finden."
       },
       "low": {
-        "observation": "[DE] May tolerate busy or varied sensory environments more comfortably than peers who need quieter conditions.",
-        "suggestion": "[DE] Front-row or central seating may still work well; just watch for fatigue on very long intense days.",
-        "professional": "[DE] If you ever worry about hearing or vision rather than comfort alone, a routine screening may help rule out basic sensory needs."
+        "observation": "Kommt mit belebten oder sensorisch vielfältigen Umgebungen oft besser zurecht als Gleichaltrige, die mehr Ruhe brauchen.",
+        "suggestion": "Sitzplätze in vorderen oder zentralen Bereichen können weiterhin gut funktionieren; bei sehr langen, intensiven Tagen dennoch auf Ermüdung achten.",
+        "professional": "Wenn statt Komfort eher Hören oder Sehen Anlass zur Sorge gibt, kann ein Routine-Screening grundlegende sensorische Bedarfe klären."
       }
     },
     "E": {
       "high": {
-        "observation": "[DE] May need recovery time after lively group work or whole-class discussions.",
-        "suggestion": "[DE] Pair or trio tasks before large groups may help. A brief quiet reset after noisy activities may help energy return.",
-        "professional": "[DE] If social exhaustion leads to frequent distress or withdrawal, a counsellor or trusted clinician may help explore coping strategies."
+        "observation": "Braucht nach lebhafter Gruppenarbeit oder Klassendiskussionen möglicherweise Erholungszeit.",
+        "suggestion": "Partner- oder Trio-Formate vor großen Gruppen können helfen. Eine kurze ruhige Erholung nach lauten Phasen unterstützt oft die Rückkehr der Energie.",
+        "professional": "Wenn soziale Erschöpfung häufig zu Belastung oder Rückzug führt, kann eine Beratungs- oder klinische Fachperson passende Bewältigungsstrategien mitentwickeln."
       },
       "low": {
-        "observation": "[DE] May perk up with discussion, collaboration, or movement between peers.",
-        "suggestion": "[DE] Rotating roles in group tasks and verbal rehearsal may help. Long silent independent blocks may feel draining.",
-        "professional": "[DE] If restlessness is paired with marked distress at home or school, a professional may help separate social energy from other stressors."
+        "observation": "Wird durch Austausch, Zusammenarbeit oder Bewegung zwischen Mitschüler:innen oft eher aktiviert.",
+        "suggestion": "Rotierende Rollen in Gruppenaufgaben und verbales Vorstrukturieren können helfen. Sehr lange stille Einzelarbeitsblöcke können eher auslaugen.",
+        "professional": "Wenn Unruhe mit deutlicher Belastung zu Hause oder in der Schule einhergeht, kann eine Fachperson soziale Energie von anderen Stressfaktoren differenzieren."
       }
     },
     "R": {
       "high": {
-        "observation": "[DE] May feel safer when schedules, steps, and expectations are spelled out in advance.",
-        "suggestion": "[DE] Visible timetables and advance warning of changes may help. Surprise rule shifts may feel harder to absorb in the moment.",
-        "professional": "[DE] If rigidity around routines causes intense upset, a specialist may help introduce flexibility skills gently."
+        "observation": "Fühlt sich oft sicherer, wenn Zeitpläne, Schritte und Erwartungen im Voraus klar sind.",
+        "suggestion": "Sichtbare Tagespläne und frühzeitige Hinweise auf Änderungen helfen häufig. Überraschende Regelwechsel können im Moment schwerer verarbeitet werden.",
+        "professional": "Wenn starke Routinenbindung zu intensiver Überforderung führt, kann fachliche Begleitung helfen, Flexibilität behutsam aufzubauen."
       },
       "low": {
-        "observation": "[DE] May adapt on the fly when plans change and tolerate loose timelines better than highly fixed routines.",
-        "suggestion": "[DE] Framing goals as outcomes rather than minute-by-minute scripts may help. Too many arbitrary rules may feel unnecessary.",
-        "professional": "[DE] If improvisation leads to missed deadlines across subjects, a learning coach may help build light structure without removing autonomy."
+        "observation": "Passt sich bei Planänderungen oft spontan an und toleriert lose Zeitrahmen meist besser als stark fixe Routinen.",
+        "suggestion": "Ziele als Ergebnis statt als minutengenaues Skript zu formulieren kann helfen. Zu viele willkürlich wirkende Regeln werden oft als unnötig erlebt.",
+        "professional": "Wenn Improvisation über Fächer hinweg zu verpassten Fristen führt, kann Lerncoaching helfen, leichte Struktur aufzubauen, ohne Autonomie zu verlieren."
       }
     },
     "C": {
       "high": {
-        "observation": "[DE] May hold multiple possible answers comfortably and revise ideas when new information appears.",
-        "suggestion": "[DE] Tasks that allow revising drafts or comparing strategies may help. Very black-and-white grading without room to explain may feel tight.",
-        "professional": "[DE] If uncertainty feels exciting at school but overwhelming at home (or the reverse), a brief conversation with a counsellor may help."
+        "observation": "Kann mehrere plausible Antworten gleichzeitig halten und Ideen bei neuer Information gut anpassen.",
+        "suggestion": "Aufgaben mit Überarbeitungsmöglichkeit oder Strategievergleich sind oft hilfreich. Sehr schwarz-weiße Bewertung ohne Erklärraum kann als eng erlebt werden.",
+        "professional": "Wenn Unsicherheit in einem Kontext anregend, im anderen aber stark belastend wirkt, kann ein kurzes Beratungsgespräch helfen, die Unterschiede zu verstehen."
       },
       "low": {
-        "observation": "[DE] May prefer clear right-or-wrong framing and notice discomfort when instructions or answers feel ambiguous.",
-        "suggestion": "[DE] Rubrics with examples, worked answers, and explicit “good enough” criteria may help. Open-ended problems may need a starting template.",
-        "professional": "[DE] If distress centres on small changes to familiar routines or wording, a professional may help build tolerance step by step."
+        "observation": "Bevorzugt häufig klare Richtig/Falsch-Rahmen und erlebt Unbehagen, wenn Anweisungen oder Antworten mehrdeutig wirken.",
+        "suggestion": "Rubriken mit Beispielen, Musterlösungen und klaren „ausreichend“-Kriterien können helfen. Für offene Aufgaben ist oft eine Startvorlage nützlich.",
+        "professional": "Wenn Belastung sich stark an kleine Änderungen vertrauter Abläufe oder Formulierungen knüpft, kann fachliche Begleitung helfen, Toleranz schrittweise aufzubauen."
       }
     }
   },

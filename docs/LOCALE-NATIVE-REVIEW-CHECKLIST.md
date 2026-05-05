@@ -62,7 +62,7 @@ Native review focus:
   - no accidental clinical wording drift
 
 Known DE follow-up:
-- Some facilitator strings are still English placeholders with `[DE]` markers under `facilitator.*` and need full German translation/review.
+- `facilitator.*` placeholders were replaced with German wording, but this section should still receive native pedagogical review (teacher/caregiver register, age appropriateness, and consistency with local school language).
 
 ## TW (Twi/Akan) — verification scope
 
