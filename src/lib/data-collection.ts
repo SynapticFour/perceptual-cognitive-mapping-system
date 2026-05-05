@@ -7,7 +7,7 @@ import type { Json } from '@/types/database.types';
 import { readAssessmentContextFromStorage } from '@/types/assessment-context';
 import { appendOfflineResponseRow, attachOfflineCompletion, questionResponsesToOfflineRows } from '@/lib/offline-storage';
 import { getQuestionBankSync } from '@/data/question-bank-state';
-import { recordCloudSyncAttempt } from '@/lib/cloud-sync-telemetry';
+import { extractCloudErrorDetails, recordCloudSyncAttempt } from '@/lib/cloud-sync-telemetry';
 import { toPipelineSessionRow } from '@/lib/pipeline-session-db';
 
 function logSupabaseFailure(context: string, err: unknown): void {
@@ -102,13 +102,13 @@ export class DataCollectionService {
 
       if (error) {
         logSupabaseFailure('createOrUpdateSession/upsert', error);
-        recordCloudSyncAttempt('session_upsert', false);
+        recordCloudSyncAttempt('session_upsert', false, extractCloudErrorDetails(error));
       } else {
         recordCloudSyncAttempt('session_upsert', true);
       }
     } catch (err) {
       logSupabaseFailure('createOrUpdateSession', err);
-      recordCloudSyncAttempt('session_upsert', false);
+      recordCloudSyncAttempt('session_upsert', false, extractCloudErrorDetails(err));
     }
   }
 
@@ -173,7 +173,7 @@ export class DataCollectionService {
 
       if (error) {
         logSupabaseFailure('recordQuestionResponse/insert', error);
-        recordCloudSyncAttempt('question_response', false);
+        recordCloudSyncAttempt('question_response', false, extractCloudErrorDetails(error));
         await appendOfflineResponseRow(
           this.sessionId,
           {
@@ -191,7 +191,7 @@ export class DataCollectionService {
       }
     } catch (err) {
       logSupabaseFailure('recordQuestionResponse', err);
-      recordCloudSyncAttempt('question_response', false);
+      recordCloudSyncAttempt('question_response', false, extractCloudErrorDetails(err));
       try {
         await appendOfflineResponseRow(
           this.sessionId,

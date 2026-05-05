@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { showOperatorSyncDiagnostic } from '@/config/env';
-import { readCloudSyncTelemetry } from '@/lib/cloud-sync-telemetry';
+import { readCloudSyncTelemetry, readCloudSyncTelemetryHistory } from '@/lib/cloud-sync-telemetry';
 import { getPendingSessions } from '@/lib/offline-storage';
 import { isSupabaseConfigured } from '@/lib/supabase';
 
@@ -46,7 +46,11 @@ export default function OperatorSyncDiagnosticBar() {
 
   const cloud = isSupabaseConfigured();
   const telemetry = readCloudSyncTelemetry();
+  const failCount = readCloudSyncTelemetryHistory().filter((row) => !row.ok).length;
   const timeStr = telemetry ? new Date(telemetry.at).toLocaleString(String(locale)) : '';
+  const errorHint = telemetry?.ok
+    ? ''
+    : [telemetry?.errorCode, telemetry?.errorMessage].filter(Boolean).join(': ').slice(0, 180);
 
   return (
     <div
@@ -65,10 +69,17 @@ export default function OperatorSyncDiagnosticBar() {
             context: telemetry.context,
             time: timeStr,
           })}
+          {!telemetry.ok && errorHint ? ` (${errorHint})` : ''}
         </span>
       ) : (
         <span>{t('last_never')}</span>
       )}
+      {failCount > 0 ? (
+        <>
+          {' · '}
+          <span>Failed attempts (browser history): {failCount}</span>
+        </>
+      ) : null}
       {cloud && pending !== null && pending > 0 ? (
         <>
           {' · '}
