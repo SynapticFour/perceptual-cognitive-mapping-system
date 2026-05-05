@@ -3,13 +3,14 @@
 import { useEffect, useState } from 'react';
 import { downloadAllPendingSessionFullExports, getPendingSessions } from '@/lib/offline-storage';
 import { isSupabaseConfigured } from '@/lib/supabase';
+import { isCloudResearchStorageEnabled } from '@/lib/research-cloud-consent';
 import type { UiStrings } from '@/lib/ui-strings';
 
 export default function PendingSyncBanner({ strings }: { strings: UiStrings }) {
   const [n, setN] = useState(0);
 
   useEffect(() => {
-    if (!isSupabaseConfigured()) return;
+    if (!isCloudResearchStorageEnabled()) return;
     const tick = () => {
       void getPendingSessions().then((s) => setN(s.length));
     };
@@ -22,7 +23,7 @@ export default function PendingSyncBanner({ strings }: { strings: UiStrings }) {
     };
   }, []);
 
-  if (!isSupabaseConfigured() || n === 0) return null;
+  if (!isSupabaseConfigured() || !isCloudResearchStorageEnabled() || n === 0) return null;
 
   return (
     <div

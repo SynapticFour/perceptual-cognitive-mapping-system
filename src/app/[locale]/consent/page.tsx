@@ -12,6 +12,7 @@ import {
   writePcmsConsentLocalStorage,
 } from '@/lib/ethics-flow-config';
 import { isSupabaseConfigured } from '@/lib/supabase';
+import { setCloudResearchConsent } from '@/lib/research-cloud-consent';
 
 export default function ConsentPage() {
   const router = useRouter();
@@ -27,6 +28,7 @@ export default function ConsentPage() {
 
   const [step, setStep] = useState(0);
   const [confirmed, setConfirmed] = useState(false);
+  const [cloudOptIn, setCloudOptIn] = useState(false);
 
   const total = steps.length;
   const stepId = steps[step] ?? steps[0];
@@ -39,7 +41,8 @@ export default function ConsentPage() {
       type: 'consent_flow_completed',
       meta: { consentVersion: '2.0', consentMode: 'skip', stepsConfirmed: steps },
     });
-    writePcmsConsentLocalStorage(steps, { consentMode: 'skip' });
+    setCloudResearchConsent(false);
+    writePcmsConsentLocalStorage(steps, { consentMode: 'skip', cloudDataStorageConsent: false });
     router.replace('/questionnaire');
   }, [runtimeMode, router, steps]);
 
@@ -65,9 +68,10 @@ export default function ConsentPage() {
   const finishConsent = (confirmedSteps: ConsentStepId[]) => {
     appendEthicsAuditEvent({
       type: 'consent_flow_completed',
-      meta: { stepsConfirmed: confirmedSteps, consentVersion: '2.0' },
+      meta: { stepsConfirmed: confirmedSteps, consentVersion: '2.0', cloudDataStorageConsent: cloudOptIn },
     });
-    writePcmsConsentLocalStorage(confirmedSteps);
+    setCloudResearchConsent(cloudOptIn);
+    writePcmsConsentLocalStorage(confirmedSteps, { cloudDataStorageConsent: cloudOptIn });
     router.push('/questionnaire');
   };
 
@@ -196,6 +200,24 @@ export default function ConsentPage() {
         <p className="mb-2 text-center text-sm font-medium text-slate-500">
           {t('progress', { n: step + 1, total })}
         </p>
+        {isSupabaseConfigured() ? (
+          <label className="mb-4 flex cursor-pointer items-start gap-3 rounded-lg border border-sky-200 bg-sky-50/80 p-4">
+            <input
+              type="checkbox"
+              className="mt-1 h-4 w-4"
+              checked={cloudOptIn}
+              onChange={(e) => setCloudOptIn(e.target.checked)}
+            />
+            <span className="text-sm text-slate-900">
+              <span className="font-semibold">{t('cloud_opt_in_label')}</span>
+              <span className="block text-slate-700">{t('cloud_opt_in_help')}</span>
+            </span>
+          </label>
+        ) : (
+          <p className="mb-4 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-center text-xs text-slate-700">
+            {t('cloud_opt_in_unavailable')}
+          </p>
+        )}
         <h1 className="mb-6 text-center text-2xl font-bold text-slate-900 sm:text-3xl">{titleForStep(stepId)}</h1>
 
         <div className="mb-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">{sectionBody(stepId)}</div>

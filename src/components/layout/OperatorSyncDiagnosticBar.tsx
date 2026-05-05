@@ -6,6 +6,7 @@ import { showOperatorSyncDiagnostic } from '@/config/env';
 import { readCloudSyncTelemetry, readCloudSyncTelemetryHistory } from '@/lib/cloud-sync-telemetry';
 import { getPendingSessions } from '@/lib/offline-storage';
 import { isSupabaseConfigured } from '@/lib/supabase';
+import { hasCloudResearchConsent, isCloudResearchStorageEnabled } from '@/lib/research-cloud-consent';
 
 export default function OperatorSyncDiagnosticBar() {
   const t = useTranslations('operatorSync');
@@ -30,7 +31,7 @@ export default function OperatorSyncDiagnosticBar() {
     if (!enabled) return;
     let cancelled = false;
     void (async () => {
-      if (!isSupabaseConfigured()) {
+      if (!isCloudResearchStorageEnabled()) {
         if (!cancelled) setPending(null);
         return;
       }
@@ -45,6 +46,8 @@ export default function OperatorSyncDiagnosticBar() {
   if (!enabled) return null;
 
   const cloud = isSupabaseConfigured();
+  const consent = hasCloudResearchConsent();
+  const cloudEnabled = isCloudResearchStorageEnabled();
   const telemetry = readCloudSyncTelemetry();
   const failCount = readCloudSyncTelemetryHistory().filter((row) => !row.ok).length;
   const timeStr = telemetry ? new Date(telemetry.at).toLocaleString(String(locale)) : '';
@@ -60,7 +63,10 @@ export default function OperatorSyncDiagnosticBar() {
     >
       <span className="font-semibold">{t('bar_title')}</span>
       {' · '}
-      <span>{cloud ? t('env_on') : t('env_off')}</span>
+      <span>
+        {cloud ? t('env_on') : t('env_off')}
+        {cloud ? (consent ? ` ${t('consent_on')}` : ` ${t('consent_off')}`) : ''}
+      </span>
       {' · '}
       {telemetry ? (
         <span>
@@ -80,7 +86,7 @@ export default function OperatorSyncDiagnosticBar() {
           <span>Failed attempts (browser history): {failCount}</span>
         </>
       ) : null}
-      {cloud && pending !== null && pending > 0 ? (
+      {cloudEnabled && pending !== null && pending > 0 ? (
         <>
           {' · '}
           <span>{t('pending', { n: pending })}</span>

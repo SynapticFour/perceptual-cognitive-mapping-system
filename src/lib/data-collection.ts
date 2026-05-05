@@ -9,6 +9,7 @@ import { appendOfflineResponseRow, attachOfflineCompletion, questionResponsesToO
 import { getQuestionBankSync } from '@/data/question-bank-state';
 import { extractCloudErrorDetails, recordCloudSyncAttempt } from '@/lib/cloud-sync-telemetry';
 import { toPipelineSessionRow } from '@/lib/pipeline-session-db';
+import { isCloudResearchStorageEnabled } from '@/lib/research-cloud-consent';
 
 function logSupabaseFailure(context: string, err: unknown): void {
   if (process.env.NODE_ENV !== 'development') return;
@@ -84,9 +85,9 @@ export class DataCollectionService {
       completion_status: 'in_progress',
     };
 
-    if (!isSupabaseConfigured()) {
+    if (!isCloudResearchStorageEnabled()) {
       if (process.env.NODE_ENV === 'development') {
-        console.warn('[PCMS data-collection] Supabase not configured, skipping session creation');
+        console.warn('[PCMS data-collection] Cloud storage not enabled by consent/environment, skipping session creation');
       }
       return;
     }
@@ -130,7 +131,7 @@ export class DataCollectionService {
       responseTime: response.responseTimeMs
     });
 
-    // Only attempt database operations if Supabase is configured
+    // Only attempt database operations if participant opted in and cloud env exists
     const client = getSupabaseClient();
     const offlineNow = typeof navigator !== 'undefined' && navigator.onLine === false;
     const culturalContext = readAssessmentContextFromStorage()?.culturalContext ?? 'universal';
@@ -261,7 +262,7 @@ export class DataCollectionService {
     let remoteOk = true;
 
     // Only attempt database operations if Supabase is configured
-    if (isSupabaseConfigured()) {
+    if (isCloudResearchStorageEnabled()) {
       if (!online) {
         remoteOk = false;
       } else {
@@ -371,13 +372,13 @@ export class DataCollectionService {
       }
     } else {
       if (process.env.NODE_ENV === 'development') {
-        console.warn('[PCMS data-collection] Supabase not configured, skipping database operations');
+        console.warn('[PCMS data-collection] Cloud storage not enabled by consent/environment, skipping database operations');
       }
       // Store research data locally as fallback
       localStorage.setItem(`pcms-research-${this.sessionId}`, JSON.stringify(researchData));
     }
 
-    if (isSupabaseConfigured()) {
+    if (isCloudResearchStorageEnabled()) {
       recordCloudSyncAttempt('assessment_complete', remoteOk);
     }
 
@@ -395,9 +396,9 @@ export class DataCollectionService {
   // RESEARCH-GRADE: Save structured research data
   /** @returns false when Supabase insert failed (caller should queue offline sync). */
   private async saveResearchData(researchData: ResearchAssessmentData): Promise<boolean> {
-    if (!isSupabaseConfigured()) {
+    if (!isCloudResearchStorageEnabled()) {
       if (process.env.NODE_ENV === 'development') {
-        console.warn('[PCMS data-collection] Supabase not configured, storing research data locally');
+        console.warn('[PCMS data-collection] Cloud storage not enabled by consent/environment, storing research data locally');
       }
       localStorage.setItem(`pcms-research-${this.sessionId}`, JSON.stringify(researchData));
       return true;
@@ -407,7 +408,7 @@ export class DataCollectionService {
       const client = getSupabaseClient();
       if (!client) {
         if (process.env.NODE_ENV === 'development') {
-          console.warn('[PCMS data-collection] Supabase not configured, storing research data locally');
+          console.warn('[PCMS data-collection] Cloud storage not enabled by consent/environment, storing research data locally');
         }
         localStorage.setItem(`pcms-research-${this.sessionId}`, JSON.stringify(researchData));
         return false;
@@ -430,6 +431,7 @@ export class DataCollectionService {
 
   async recordAbandonment() {
     if (!this.sessionId) return;
+    if (!isCloudResearchStorageEnabled()) return;
 
     const client = getSupabaseClient();
     if (!client) {
@@ -458,6 +460,13 @@ export class DataCollectionService {
   // For research analytics
   async getResearchStats() {
     try {
+      if (!isCloudResearchStorageEnabled()) {
+        return {
+          totalProfiles: 0,
+          averageCompletionTime: 0,
+          totalResponses: 0,
+        };
+      }
       const client = getSupabaseClient();
       if (!client) {
         if (process.env.NODE_ENV === 'development') {

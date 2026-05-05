@@ -12,6 +12,7 @@ import {
 } from '@/lib/offline-storage';
 import type { Json } from '@/types/database.types';
 import { toPipelineSessionRow } from '@/lib/pipeline-session-db';
+import { isCloudResearchStorageEnabled } from '@/lib/research-cloud-consent';
 
 async function pushOneSession(client: NonNullable<ReturnType<typeof getSupabaseClient>>, s: OfflineSession): Promise<void> {
   if (!s.research || !s.profile) throw new Error('incomplete_offline_session');
@@ -87,8 +88,8 @@ export async function syncPendingSessions(): Promise<SyncResult> {
   const errors: string[] = [];
   const syncedSessionIds: string[] = [];
 
-  if (!isSupabaseConfigured()) {
-    return { ok: true, syncedSessionIds, errors: ['supabase_not_configured'] };
+  if (!isSupabaseConfigured() || !isCloudResearchStorageEnabled()) {
+    return { ok: true, syncedSessionIds, errors: ['cloud_storage_not_enabled'] };
   }
 
   const client = getSupabaseClient();

@@ -68,7 +68,7 @@ export function buildConsentSteps(options: { mode: ConsentRuntimeMode; locale: s
 
 export function writePcmsConsentLocalStorage(
   stepsConfirmed: readonly string[],
-  extra?: { consentMode?: string }
+  extra?: { consentMode?: string; cloudDataStorageConsent?: boolean }
 ): void {
   if (typeof window === 'undefined') return;
   const ts = new Date().toISOString();
@@ -82,6 +82,7 @@ export function writePcmsConsentLocalStorage(
       ageConfirmation: true,
       voluntaryParticipation: true,
       dataUseAgreement: true,
+      cloudDataStorageConsent: extra?.cloudDataStorageConsent === true,
       ...extra,
     })
   );
