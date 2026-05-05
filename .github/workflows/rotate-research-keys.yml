@@ -1,0 +1,61 @@
+name: Rotate Research API Keys
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy_after_rotation:
+        description: "Trigger production deployment after key rotation"
+        required: true
+        default: true
+        type: boolean
+
+jobs:
+  rotate:
+    name: Rotate Production Research Keys
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate required secrets exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          for name in VERCEL_TOKEN VERCEL_ORG_ID VERCEL_PROJECT_ID; do
+            if [ -z "${!name:-}" ]; then
+              echo "Missing required GitHub secret: $name"
+              exit 1
+            fi
+          done
+
+      - name: Rotate Vercel env vars (production)
+        shell: bash
+        run: |
+          set -euo pipefail
+          RESEARCH_API_KEY="rex_prod_$(openssl rand -hex 24)"
+          RESEARCH_EXPORT_API_KEY="rsk_prod_$(openssl rand -hex 24)"
+
+          # Mask generated values in logs immediately.
+          echo "::add-mask::$RESEARCH_API_KEY"
+          echo "::add-mask::$RESEARCH_EXPORT_API_KEY"
+
+          # Delete old values if they exist.
+          npx --yes vercel@53.1.1 env rm RESEARCH_API_KEY production --yes --token "$VERCEL_TOKEN" || true
+          npx --yes vercel@53.1.1 env rm RESEARCH_EXPORT_API_KEY production --yes --token "$VERCEL_TOKEN" || true
+
+          # Add new values.
+          npx --yes vercel@53.1.1 env add RESEARCH_API_KEY production --value "$RESEARCH_API_KEY" --yes --token "$VERCEL_TOKEN"
+          npx --yes vercel@53.1.1 env add RESEARCH_EXPORT_API_KEY production --value "$RESEARCH_EXPORT_API_KEY" --yes --token "$VERCEL_TOKEN"
+
+      - name: Deploy production with fresh keys
+        if: ${{ inputs.deploy_after_rotation }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx --yes vercel@53.1.1 deploy --prod --yes --token "$VERCEL_TOKEN"

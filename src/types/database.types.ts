@@ -104,6 +104,48 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['question_responses']['Insert']>;
         Relationships: [];
       };
+      pipeline_sessions: {
+        Row: {
+          id: string;
+          session_id: string;
+          pipeline_storage_version: number;
+          assessment_version: string;
+          completed_at: string;
+          trait_vector: Json;
+          confidence: Json;
+          contradiction: Json | null;
+          question_bank_id: string | null;
+          bank_version: string | null;
+          adaptive_mode: string | null;
+          region_info: string | null;
+          response_count: number;
+          revision: number | null;
+          final_profile: Json;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          session_id: string;
+          pipeline_storage_version: number;
+          assessment_version: string;
+          completed_at: string;
+          trait_vector: Json;
+          confidence: Json;
+          contradiction?: Json | null;
+          question_bank_id?: string | null;
+          bank_version?: string | null;
+          adaptive_mode?: string | null;
+          region_info?: string | null;
+          response_count: number;
+          revision?: number | null;
+          final_profile: Json;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<Database['public']['Tables']['pipeline_sessions']['Insert']>;
+        Relationships: [];
+      };
       research_assessments: {
         Row: {
           id: string;
@@ -241,6 +283,19 @@ export interface Database {
     Views: {
       research_analytics: {
         Row: Record<string, Json | undefined>;
+        Relationships: [];
+      };
+      responses: {
+        Row: {
+          id: string;
+          session_id: string;
+          question_id: string;
+          response: number;
+          response_time_ms: number;
+          question_category: string;
+          dimension_weights: Json;
+          created_at: string;
+        };
         Relationships: [];
       };
     };

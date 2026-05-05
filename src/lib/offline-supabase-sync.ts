@@ -11,6 +11,7 @@ import {
   type SyncResult,
 } from '@/lib/offline-storage';
 import type { Json } from '@/types/database.types';
+import { toPipelineSessionRow } from '@/lib/pipeline-session-db';
 
 async function pushOneSession(client: NonNullable<ReturnType<typeof getSupabaseClient>>, s: OfflineSession): Promise<void> {
   if (!s.research || !s.profile) throw new Error('incomplete_offline_session');
@@ -62,6 +63,12 @@ async function pushOneSession(client: NonNullable<ReturnType<typeof getSupabaseC
 
   const { error: pErr } = await client.from('profiles').insert(profileData);
   if (pErr) throw pErr;
+
+  const pipelineRow = toPipelineSessionRow(s.sessionId, s.research.assessment_version, s.profile);
+  const { error: psErr } = await client
+    .from('pipeline_sessions')
+    .upsert(pipelineRow, { onConflict: 'session_id' });
+  if (psErr) throw psErr;
 
   const { error: upErr } = await client
     .from('sessions')

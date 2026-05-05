@@ -8,6 +8,7 @@ import { readAssessmentContextFromStorage } from '@/types/assessment-context';
 import { appendOfflineResponseRow, attachOfflineCompletion, questionResponsesToOfflineRows } from '@/lib/offline-storage';
 import { getQuestionBankSync } from '@/data/question-bank-state';
 import { recordCloudSyncAttempt } from '@/lib/cloud-sync-telemetry';
+import { toPipelineSessionRow } from '@/lib/pipeline-session-db';
 
 function logSupabaseFailure(context: string, err: unknown): void {
   if (process.env.NODE_ENV !== 'development') return;
@@ -298,6 +299,22 @@ export class DataCollectionService {
           } catch (err) {
             logSupabaseFailure('saveFinalPipeline/profiles.insert', err);
             remoteOk = false;
+          }
+
+          if (remoteOk) {
+            try {
+              const pipelineRow = toPipelineSessionRow(this.sessionId, this.assessmentVersion, stored);
+              const { error: pipelineError } = await client
+                .from('pipeline_sessions')
+                .upsert(pipelineRow, { onConflict: 'session_id' });
+              if (pipelineError) {
+                logSupabaseFailure('saveFinalPipeline/pipeline_sessions.upsert', pipelineError);
+                remoteOk = false;
+              }
+            } catch (err) {
+              logSupabaseFailure('saveFinalPipeline/pipeline_sessions.upsert', err);
+              remoteOk = false;
+            }
           }
         }
 
