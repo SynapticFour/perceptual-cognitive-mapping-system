@@ -27,6 +27,7 @@ import { readQuestionHistoryFromStorage } from '@/lib/question-history-storage';
 import { formatUiString, type UiStrings } from '@/lib/ui-strings';
 import { useUiStrings } from '@/lib/use-ui-strings';
 import { loadQuestions } from '@/data/question-loader-browser';
+import { questionLocaleFromUiLocale } from '@/data/question-locale-types';
 import type { ConfidenceComponents } from '@/scoring';
 import type { AssessmentContext } from '@/types/assessment-context';
 import { readAssessmentContextFromStorage } from '@/types/assessment-context';
@@ -126,7 +127,7 @@ export default function ResultsPage() {
             if (!cancelled) setLoading(false);
             return;
           }
-          await loadQuestions('universal');
+          await loadQuestions(questionLocaleFromUiLocale(locale));
           if (!cancelled) {
             setSession(parsed);
             setUrlShare(null);

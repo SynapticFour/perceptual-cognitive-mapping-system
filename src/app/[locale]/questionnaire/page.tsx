@@ -25,6 +25,7 @@ import {
   type LikertResponse,
 } from '@/data/questions';
 import { loadQuestions } from '@/data/question-loader-browser';
+import { questionLocaleFromUiLocale } from '@/data/question-locale-types';
 import {
   buildScoringResultFromHistory,
   buildSessionRawFromHistory,
@@ -94,7 +95,7 @@ function QuestionnairePageContent() {
     let cancelled = false;
     void (async () => {
       try {
-        await loadQuestions('universal');
+        await loadQuestions(questionLocaleFromUiLocale(locale));
         if (cancelled) return;
 
         const params = new URLSearchParams(

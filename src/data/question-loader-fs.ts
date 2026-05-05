@@ -24,8 +24,18 @@ const QUESTION_ROOT = path.join(process.cwd(), 'content', 'questions');
  * - `global_v2` — `global-behavioral-v2/bank.json`.
  * - `cultural_adaptive_v1` — `cultural-adaptive-v1/bank.json` (see `.env.example`).
  */
-function questionSourceMode(): 'classic' | 'global_v2' | 'cultural_adaptive_v1' {
+function questionSourceModeForLocale(locale: string): 'classic' | 'global_v2' | 'cultural_adaptive_v1' {
   const raw = process.env.NEXT_PUBLIC_PCMS_QUESTION_SOURCE?.trim().toLowerCase();
+  const l = locale.toLowerCase();
+  // German has curated stems only for classic IDs. Force classic to keep questionnaire language consistent.
+  if (l === 'de' && (raw === 'global_v2' || raw === 'cultural_adaptive_v1' || raw === 'cultural_adaptive')) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(
+        `[PCMS i18n] Forcing question source "classic" for locale="${locale}" because non-classic banks do not yet ship German stems.`
+      );
+    }
+    return 'classic';
+  }
   if (raw === 'global_v2') return 'global_v2';
   if (raw === 'cultural_adaptive_v1' || raw === 'cultural_adaptive') return 'cultural_adaptive_v1';
   return 'classic';
@@ -64,7 +74,8 @@ async function readValidatedJsonFile(filePath: string): Promise<AssessmentQuesti
  * `content/questions/ghana/*.json` when locale is `ghana` or `gh-en`.
  */
 export async function loadQuestionsFromDiskImpl(locale: string): Promise<AssessmentQuestion[]> {
-  if (questionSourceMode() === 'global_v2') {
+  const sourceMode = questionSourceModeForLocale(locale);
+  if (sourceMode === 'global_v2') {
     const filePath = path.join(QUESTION_ROOT, 'global-behavioral-v2', 'bank.json');
     let raw: string;
     try {
@@ -81,7 +92,7 @@ export async function loadQuestionsFromDiskImpl(locale: string): Promise<Assessm
     return validateGlobalBehavioralBankArray(parsed, filePath);
   }
 
-  if (questionSourceMode() === 'cultural_adaptive_v1') {
+  if (sourceMode === 'cultural_adaptive_v1') {
     const filePath = path.join(QUESTION_ROOT, 'cultural-adaptive-v1', 'bank.json');
     let raw: string;
     try {

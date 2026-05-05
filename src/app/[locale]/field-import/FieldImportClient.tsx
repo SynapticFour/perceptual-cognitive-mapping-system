@@ -1,14 +1,17 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import { useLocale } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { loadQuestions } from '@/data/question-loader-browser';
+import { questionLocaleFromUiLocale } from '@/data/question-locale-types';
 import { parsePaperResponsesCsv } from '@/lib/paper-response-csv';
 import { runPaperImportPipeline } from '@/lib/run-paper-import-pipeline';
 import type { UiStrings } from '@/lib/ui-strings';
 
 export default function FieldImportClient({ strings }: { strings: UiStrings }) {
   const router = useRouter();
+  const locale = useLocale();
   const [csvText, setCsvText] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
@@ -24,7 +27,7 @@ export default function FieldImportClient({ strings }: { strings: UiStrings }) {
     setError(null);
     setBusy(true);
     try {
-      await loadQuestions('universal');
+      await loadQuestions(questionLocaleFromUiLocale(locale));
       const history = parsePaperResponsesCsv(csvText);
       if (history.length === 0) {
         setError(strings['field.import_empty']);
@@ -53,7 +56,7 @@ export default function FieldImportClient({ strings }: { strings: UiStrings }) {
     } finally {
       setBusy(false);
     }
-  }, [csvText, router, strings]);
+  }, [csvText, locale, router, strings]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50/30">
