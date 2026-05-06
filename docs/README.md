@@ -73,7 +73,7 @@
 - **Scoring Model**: `src/scoring/scoring-model.ts` - Confidence calculation and profile generation
 - **Data Collection**: `src/lib/data-collection.ts` - Structured research data collection
 - **Versioning**: `src/lib/assessment-versioning.ts` - Assessment version control and validation
-- **Performance Monitoring**: `src/lib/monitoring.ts` - Real-time performance and user analytics
+- **Diagnostics**: `src/app/api/health/*` + `src/lib/health-checks.ts` - Liveness/readiness and deploy-time diagnostics
 - **Web Workers**: `src/lib/worker.ts` - CPU-intensive computational tasks
 - **Rate Limiting**: `src/lib/rate-limiter.ts` - API protection and abuse prevention
 
@@ -135,7 +135,7 @@ lib/research/                     # Research documentation
   methodology.md                  # Research methodology
   hypotheses.md                   # Research hypotheses
   related_work.md                  # Literature review
-supabase-schema.sql               # Database schema for research data collection
+supabase/migrations/              # Versioned schema + policy migrations
 setup.sh                         # One-command setup script
 Makefile                         # Development commands
 package.json                     # Dependencies and scripts

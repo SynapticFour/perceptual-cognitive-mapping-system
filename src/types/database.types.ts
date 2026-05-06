@@ -1,5 +1,5 @@
 /**
- * Supabase schema typing for the PCMS Postgres layout (see supabase-schema.sql).
+ * Supabase schema typing for the PCMS Postgres layout (see supabase/migrations/).
  * Regenerate from Supabase CLI when the schema evolves: `supabase gen types typescript`.
  */
 

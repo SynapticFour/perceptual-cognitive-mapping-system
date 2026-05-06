@@ -122,9 +122,9 @@ EOF
 setup_database() {
     print_status "Database setup instructions:"
     print_status "1. Open your Supabase project dashboard"
-    print_status "2. Go to the SQL Editor"
-    print_status "3. Copy and run the contents of supabase-schema.sql"
-    print_status "4. This will create the necessary tables for data collection"
+    print_status "2. Preferred: run 'supabase db push' in this repository"
+    print_status "3. Alternative: apply files in supabase/migrations/ in timestamp order"
+    print_status "4. This creates the necessary tables and policies for data collection"
     print_warning "Skip this step if you want to run the system without data collection"
 }
 

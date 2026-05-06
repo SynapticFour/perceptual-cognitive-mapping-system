@@ -119,9 +119,9 @@ For full functionality including research data collection:
    - Copy the anon public key
 
 4. **Set Up Database**:
-   - Go to the SQL Editor
-   - Copy the contents of `supabase-schema.sql` and run it
-   - Then run `supabase/migrations/20260413120000_ethics_gdpr.sql` and `supabase/migrations/20260414200000_ethics_audit_events.sql` if you use ethics / audit features
+   - Preferred: use Supabase CLI and run `supabase db push` from this repository.
+   - Alternative: apply SQL files in `supabase/migrations/` in timestamp order (base schema first).
+   - Include ethics migrations if you use ethics/audit features.
 
 5. **Update Environment**:
    - Edit `.env.local`
@@ -270,7 +270,7 @@ The system is optimized for Apple Silicon Macs:
 - No external data collection without Supabase setup
 - All data stored locally in browser
 - No network requests for core functionality
-- Anonymous assessment by default
+- Pseudonymous assessment by default
 
 #### Production Deployment
 
@@ -285,7 +285,7 @@ The system is optimized for Apple Silicon Macs:
 
 - **README.md**: Main project documentation
 - **docs/**: Detailed documentation
-- **supabase-schema.sql**: Database structure
+- **supabase/migrations/**: Database structure and policy migrations
 - **setup.sh**: Automated setup script
 
 #### Common Commands

@@ -165,7 +165,7 @@ User Input (Presentation)
 - Resource utilization
 
 ### 3. Research Analytics
-- Aggregated, anonymized data
+- Aggregated, pseudonymous data
 - Statistical quality metrics
 - Model performance tracking
 

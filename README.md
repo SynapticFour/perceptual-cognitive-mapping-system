@@ -166,9 +166,10 @@ npm run test:edge   # Optional edge-case suites (stricter/experimental)
 ### Research pipeline & GDPR schema
 
 - **Layered research stack** (raw → features → latent space projection (pilot) → public interpretation): see [`PIPELINE_ARCHITECTURE.md`](./PIPELINE_ARCHITECTURE.md). **Orchestration** lives in `src/lib/cognitive-pipeline.ts` (questionnaire → stored session). **Results 2D projection** for the landscape is built separately in `src/core/cognitive-pipeline.ts` (`buildCognitiveModel`) so UI views do not duplicate PCA.
-- **GDPR / ethics tables** used by `src/lib/ethics-service.ts`: after applying `supabase-schema.sql`, run in order in the Supabase SQL editor (or your migration workflow):
-  - [`supabase/migrations/20260413120000_ethics_gdpr.sql`](./supabase/migrations/20260413120000_ethics_gdpr.sql)
-  - [`supabase/migrations/20260414200000_ethics_audit_events.sql`](./supabase/migrations/20260414200000_ethics_audit_events.sql) (audit events for compliance reporting)
+- **GDPR / ethics tables** used by `src/lib/ethics-service.ts`: apply migrations in order (recommended: `supabase db push`):
+  - Base schema: [`supabase/migrations/20260401090000_base_pcms_schema.sql`](./supabase/migrations/20260401090000_base_pcms_schema.sql)
+  - Ethics/GDPR: [`supabase/migrations/20260413120000_ethics_gdpr.sql`](./supabase/migrations/20260413120000_ethics_gdpr.sql)
+  - Ethics audit trail: [`supabase/migrations/20260414200000_ethics_audit_events.sql`](./supabase/migrations/20260414200000_ethics_audit_events.sql)
 
 ### Manual Setup
 
@@ -182,7 +183,7 @@ npm run test:edge   # Optional edge-case suites (stricter/experimental)
 2. **Set up Supabase** (optional for testing)
    - Create a new project at [supabase.com](https://supabase.com)
    - Go to Settings > API to get your URL and anon key
-   - Run the SQL schema from `supabase-schema.sql` in Supabase SQL editor
+   - Apply migrations from `supabase/migrations/` (recommended: `supabase db push`)
 
 3. **Configure environment variables**
    Copy `.env.example` to `.env.local` and adjust:
@@ -290,7 +291,7 @@ After setup, you can immediately test the system:
 │   └── lib/                # Questionnaire pipeline, data collection, ethics
 ├── docs/                   # Documentation
 ├── lib/research/           # Research materials
-└── supabase-schema.sql     # Database schema
+└── supabase/migrations/    # Versioned database schema and policy migrations
 ```
 
 ### Key Technologies
