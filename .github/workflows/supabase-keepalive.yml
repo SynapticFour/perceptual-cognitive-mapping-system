@@ -1,0 +1,36 @@
+name: Supabase keep-alive
+
+# Free-tier Supabase projects pause after ~7 days without API activity.
+# This workflow pings production PCMS, which performs a minimal REST probe when Supabase is configured.
+on:
+  schedule:
+    # Every 3 days at 08:00 UTC (well inside the 7-day inactivity window).
+    - cron: '0 8 */3 * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    name: Ping production Supabase via PCMS
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Probe /api/health/supabase
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="${PCMS_KEEPALIVE_URL:-https://map.synapticfour.com/api/health/supabase}"
+          echo "Probing $URL"
+          body="$(mktemp)"
+          code="$(curl -sS -m 90 -o "$body" -w '%{http_code}' "$URL")"
+          cat "$body"
+          echo
+          if [ "$code" != "200" ]; then
+            echo "Keep-alive probe failed with HTTP $code"
+            exit 1
+          fi
+          if ! grep -q '"reachable":true' "$body"; then
+            echo "Supabase not reachable according to probe payload"
+            exit 1
+          fi
+          echo "Supabase keep-alive OK"

@@ -5,6 +5,7 @@ PCMS now follows a common production pattern for service diagnostics:
 - **Liveness probe**: `/api/health/live`
 - **Readiness probe**: `/api/health/ready`
 - **Public Supabase env diagnostics**: `/api/health/supabase-public`
+- **Supabase reachability probe** (REST + DB path): `/api/health/supabase`
 - **Compatibility endpoint**: `/api/health` (same readiness payload shape)
 
 These endpoints are safe for production use and never return secrets.
@@ -48,6 +49,17 @@ Deployment diagnostics for public Supabase env resolution:
 - `vercelEnv`, `targetEnv`, `gitSha`
 
 Use this endpoint to debug "cloud not configured" behavior on `/consent` without exposing credentials.
+
+### `GET /api/health/supabase`
+
+When Supabase public env is configured, performs a minimal `sessions` REST read (`limit=1`) against the live project. Use for:
+
+- Confirming the database is awake (not only that env vars exist)
+- Scheduled keep-alive on the Supabase free tier (~7-day inactivity pause)
+
+Returns `reachable: true` on success. Never returns API keys. Responds with HTTP 503 when configured but unreachable.
+
+**Free-tier keep-alive:** GitHub Actions workflow `.github/workflows/supabase-keepalive.yml` calls this endpoint every 3 days in production. One lightweight request every few days stays within Supabase free limits (unlimited API requests; paused projects incur no compute charges).
 
 ## Operator UI Diagnostics
 
