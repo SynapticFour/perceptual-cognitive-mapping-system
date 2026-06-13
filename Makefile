@@ -2,16 +2,21 @@
 # Perceptual & Cognitive Mapping System
 # For convenient local development and deployment
 
-.PHONY: help setup dev start stop restart build start-prod install clean update reset remove status verify test test-coverage test-edge lint type-check
+.PHONY: help up down destroy setup dev start stop restart build start-prod install clean update reset remove status verify test test-coverage test-edge lint type-check
+
+# Synaptic Four unified lifecycle aliases
+up: start
+down: stop
+destroy: remove
 
 # Default target
 help:
-	@echo "PCMS - Perceptual & Cognitive Mapping System"
+	@echo "PCMS — Perceptual & Cognitive Mapping System (Synaptic Four)"
 	@echo ""
-	@echo "Available commands:"
-	@echo "  setup      - Run the automated setup script"
-	@echo "  start      - Start development server"
-	@echo "  stop       - Stop development server"
+	@echo "  make up / setup   First-time setup + start dev server"
+	@echo "  make start        Start development server"
+	@echo "  make down / stop  Stop development server"
+	@echo "  make destroy      Full project removal (make remove)"
 	@echo "  restart    - Restart development server"
 	@echo "  dev        - Start development server (alias for start)"
 	@echo "  build      - Build for production"
