@@ -1,7 +1,15 @@
 name: Supabase keep-alive
 
 # Free-tier Supabase projects pause after ~7 days without API activity.
-# This workflow pings production PCMS, which performs a minimal REST probe when Supabase is configured.
+#
+# IMPORTANT: Ping Supabase directly from GitHub Actions — not via the Vercel app.
+# When a project is paused, Vercel cannot reach it (503), the workflow fails, and
+# Supabase never receives activity to wake up. Direct REST probes register activity
+# with Supabase and can restore a paused project (first request may take ~1–2 min).
+#
+# Required repository secrets (Settings → Secrets → Actions):
+#   SUPABASE_URL       — e.g. https://xxxx.supabase.co
+#   SUPABASE_ANON_KEY  — project anon/public key (Settings → API)
 on:
   schedule:
     # Every 3 days at 08:00 UTC (well inside the 7-day inactivity window).
@@ -10,27 +18,49 @@ on:
 
 jobs:
   ping:
-    name: Ping production Supabase via PCMS
+    name: Ping Supabase REST API directly
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
-      - name: Probe /api/health/supabase
+      - name: Probe Supabase (direct REST keep-alive)
         shell: bash
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
           set -euo pipefail
-          URL="${PCMS_KEEPALIVE_URL:-https://map.synapticfour.com/api/health/supabase}"
-          echo "Probing $URL"
+          if [[ -z "${SUPABASE_URL:-}" || -z "${SUPABASE_ANON_KEY:-}" ]]; then
+            echo "::error::Set SUPABASE_URL and SUPABASE_ANON_KEY repository secrets (see workflow header)."
+            exit 1
+          fi
+
+          base="${SUPABASE_URL%/}"
+          probe_url="${base}/rest/v1/sessions?select=id&limit=1"
           body="$(mktemp)"
-          code="$(curl -sS -m 90 -o "$body" -w '%{http_code}' "$URL")"
-          cat "$body"
-          echo
-          if [ "$code" != "200" ]; then
-            echo "Keep-alive probe failed with HTTP $code"
-            exit 1
-          fi
-          if ! grep -q '"reachable":true' "$body"; then
-            echo "Supabase not reachable according to probe payload"
-            exit 1
-          fi
-          echo "Supabase keep-alive OK"
+          max_attempts=6
+          wait_secs=30
+
+          for attempt in $(seq 1 "$max_attempts"); do
+            echo "Attempt ${attempt}/${max_attempts}: ${base}"
+            code="$(curl -sS -m 120 -o "$body" -w '%{http_code}' \
+              -H "apikey: ${SUPABASE_ANON_KEY}" \
+              -H "Authorization: Bearer ${SUPABASE_ANON_KEY}" \
+              "$probe_url" 2>/dev/null || echo "000")"
+            echo "HTTP ${code}"
+            head -c 400 "$body" || true
+            echo
+
+            if [[ "$code" =~ ^2[0-9][0-9]$ ]]; then
+              echo "Supabase keep-alive OK (direct REST probe registered API activity)"
+              exit 0
+            fi
+
+            if [[ "$attempt" -lt "$max_attempts" ]]; then
+              echo "Waiting ${wait_secs}s (paused projects can take 1–2 min to wake)..."
+              sleep "$wait_secs"
+            fi
+          done
+
+          echo "Keep-alive failed after ${max_attempts} attempts"
+          exit 1
