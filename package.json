@@ -40,13 +40,13 @@
     "audit-readability": "node ./node_modules/ts-node/dist/bin.js --compiler-options '{\"module\":\"CommonJS\",\"moduleResolution\":\"node\"}' scripts/readability-audit.ts"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.103.0",
-    "fflate": "^0.8.2",
+    "@supabase/supabase-js": "^2.108.2",
+    "fflate": "^0.8.3",
     "next": "16.2.9",
     "next-intl": "4.13.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "recharts": "^3.8.1",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "recharts": "^3.9.0",
     "three": "^0.184.0",
     "umap-js": "^1.4.0"
   },
