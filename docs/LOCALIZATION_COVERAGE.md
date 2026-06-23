@@ -8,12 +8,12 @@ Honest status for partners, reviewers, and deploy checks. **UI language** and **
 |--------|------------------|--------------------------------------|----------------------------------------|
 | `en` | **Yes** (~691 keys) | English (canonical) | `global` / regional English |
 | `de` | **Yes** (~689 keys + DE privacy bundle) | ~130 classic + TIAV overrides | Forced to classic (no DE stems for ca-v1) |
-| `fr` | **No** — ~45 keys; **~94% UI falls back to English** | 50 classic draft stems; **200/200** francophone | **200/200** `francophone_west_africa` (machine draft) |
-| `sw` | **No** — ~45 keys; **~94% UI falls back to English** | 50 classic draft stems; **200/200** Kiswahili | **200/200** `east_africa` (machine draft) |
+| `fr` | **Tier 1 yes** (~365/378 keys); **~49% full site** | 50 classic draft stems; **200/200** francophone | **200/200** `francophone_west_africa` (machine draft) |
+| `sw` | **Tier 1 yes** (~374/378 keys); **~51% full site** | 50 classic draft stems; **200/200** Kiswahili | **200/200** `east_africa` (machine draft) |
 | `tw` | **Partial** — ~126 keys merged over English | English (Ghana stems when `ghana`/`tw` region) | English via `ghana` stem region |
 | `wo` | **Partial** — ~485 keys merged over English | English; maps to `francophone_west_africa` for ca-v1 | French ca-v1 stems when using cultural bank |
 
-**Conclusion:** The live site is **not** fully localized in French or Swahili. Questionnaire **item text** can be fully localized for `cultural_adaptive_v1` in `fr` and `sw`; navigation, consent body, results copy, dimensions T–V, privacy pages, and most chrome remain **English** until `messages/fr.json` and `messages/sw.json` are expanded.
+**Conclusion:** `fr` and `sw` now have **Tier 1 UI** (welcome → results core journey, consent, questionnaire chrome, Likert labels, all 10 dimensions). **Landscape maps, interpretation cards, privacy pages, cohort/group tools** remain English until Tier 2–3. Only `en` and `de` are fully localized end-to-end.
 
 ---
 
@@ -23,12 +23,12 @@ Honest status for partners, reviewers, and deploy checks. **UI language** and **
 |--------|---------------------|----------------|-------------|
 | `en` | 691 | Canonical | — |
 | `de` | 689 | Standalone + `messages/de/privacy.json` | Production UI |
-| `fr` | 45 | `deepMergeMessages(en, fr)` | `_localeReview: PENDING_NATIVE_REVIEW` |
-| `sw` | 45 | `deepMergeMessages(en, sw)` | `_localeReview: PENDING_NATIVE_REVIEW` |
+| `fr` | 378 (Tier 1 only in locale file) | `deepMergeMessages(en, fr)` | Tier 1 done; Tier 2+ via EN fallback |
+| `sw` | 378 (Tier 1 only in locale file) | `deepMergeMessages(en, sw)` | Tier 1 done; Tier 2+ via EN fallback |
 | `tw` | 126 | Merge over English | `_localeReview: PENDING_NATIVE_REVIEW` |
 | `wo` | 485 | Merge over English | `_localeReview: PENDING_NATIVE_REVIEW` |
 
-French/Swahili draft bundles cover: welcome, consent headline, Likert anchors, partial results/dims (F/E/S only), ethics prototype banner, language switcher labels.
+French/Swahili Tier 1 bundles cover the full assessment journey (June 2026): welcome through banner namespaces; Likert uses `likert5_*` / `likert3_*` keys.
 
 ---
 
