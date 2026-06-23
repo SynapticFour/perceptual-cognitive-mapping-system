@@ -27,10 +27,18 @@ export default getRequestConfig(async ({ requestLocale }) => {
     messages = deepMergeMessages(en as Record<string, unknown>, wo as Record<string, unknown>) as unknown as AbstractIntlMessages;
   } else if (locale === 'fr') {
     const fr = (await import('../../messages/fr.json')).default;
-    messages = deepMergeMessages(en as Record<string, unknown>, fr as Record<string, unknown>) as unknown as AbstractIntlMessages;
+    const frPrivacy = (await import('../../messages/fr/privacy.json')).default as AbstractIntlMessages;
+    messages = {
+      ...deepMergeMessages(en as Record<string, unknown>, fr as Record<string, unknown>),
+      ...frPrivacy,
+    } as unknown as AbstractIntlMessages;
   } else if (locale === 'sw') {
     const sw = (await import('../../messages/sw.json')).default;
-    messages = deepMergeMessages(en as Record<string, unknown>, sw as Record<string, unknown>) as unknown as AbstractIntlMessages;
+    const swPrivacy = (await import('../../messages/sw/privacy.json')).default as AbstractIntlMessages;
+    messages = {
+      ...deepMergeMessages(en as Record<string, unknown>, sw as Record<string, unknown>),
+      ...swPrivacy,
+    } as unknown as AbstractIntlMessages;
   }
 
   return { locale, messages };

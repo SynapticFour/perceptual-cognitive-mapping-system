@@ -4,9 +4,9 @@
     "lastReviewed": "never",
     "checklistDoc": "docs/CULTURAL_REVIEW_CHECKLIST.md",
     "outstandingItems": [
-      "1. Tier1 UI (welcome→banner) translated and key-matched to en.json; final native Francophone review still pending.",
-      "2. Tier2 privacy/legal pages and extended docs remain pending outside this locale tier.",
-      "3. Native review still required for ethics/consent tone for Francophone West Africa clinical-referral wording.",
+      "1. Tier1 UI + Tier2 privacyPage (messages/fr/privacy.json) done; native Francophone legal review still pending.",
+      "2. Tier3 landscape/interpretation UI remains English via merge fallback.",
+      "3. Native review for ethics/consent tone and Francophone West Africa clinical-referral wording.",
       "4. Machine-draft note: question stems still require human review (question-stems-fr.ts, adaptive banks)."
     ]
   },
