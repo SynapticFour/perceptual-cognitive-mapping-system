@@ -356,7 +356,10 @@
   "offline": {
     "pending_sync_banner": "{n} séans yu mat ngir yeb soo jot online.",
     "pending_sync_export": "Yeb séans yu xaar (JSON)",
-    "pending_sync_export_aria": "Benn JSON ci benn séans bu xaar (pipeline ak tontu yi)"
+    "pending_sync_export_aria": "Benn JSON ci benn séans bu xaar (pipeline ak tontu yi)",
+    "pending_sync_discard": "Fay séans yu xaar",
+    "pending_sync_discard_aria": "Dindi séans yu xaar ci browser bi rekk, amul upload",
+    "pending_sync_discard_confirm": "Fay {n} séans yu xaar? Dinañu dindi ci browser bi rekk. Yeb JSON bu baax nga bëgg kopi."
   },
   "field": {
     "offline_tools_heading": "Offline / gox",

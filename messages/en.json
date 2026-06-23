@@ -405,7 +405,10 @@
   "offline": {
     "pending_sync_banner": "{n} completed session(s) waiting to upload when online (optional cloud sync).",
     "pending_sync_export": "Download queued sessions (JSON)",
-    "pending_sync_export_aria": "Save one full-session JSON file per queued offline session"
+    "pending_sync_export_aria": "Save one full-session JSON file per queued offline session",
+    "pending_sync_discard": "Discard queue",
+    "pending_sync_discard_aria": "Remove queued sessions from this browser without uploading",
+    "pending_sync_discard_confirm": "Discard {n} queued session(s)? They will be removed from this browser only. Download JSON first if you need a copy."
   },
   "field": {
     "offline_tools_heading": "Offline / field setup",

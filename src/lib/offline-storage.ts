@@ -15,6 +15,17 @@ const STORE_SESSIONS = 'offlineSessions';
 /** ATLAS self-nomination selections per PCMS session (ADR-003; not scored). */
 const STORE_ATLAS_SELF_NOMINATION = 'atlasSelfNomination' as const;
 
+export const OFFLINE_QUEUE_CHANGED_EVENT = 'pcms-offline-queue-changed';
+
+export function notifyOfflineQueueChanged(): void {
+  if (typeof window === 'undefined') return;
+  window.dispatchEvent(new CustomEvent(OFFLINE_QUEUE_CHANGED_EVENT));
+}
+
+function isPendingOfflineSession(s: OfflineSession): boolean {
+  return !s.synced && !!s.profile && !!s.research;
+}
+
 export interface OfflineResponseRow {
   questionId: string;
   response: number;
@@ -188,9 +199,65 @@ export async function getPendingSessions(): Promise<OfflineSession[]> {
       req.onerror = () => reject(req.error);
     });
     db.close();
-    return all.filter((s) => !s.synced && s.profile && s.research);
+    return all.filter(isPendingOfflineSession);
   } catch {
     return [];
+  }
+}
+
+/** Remove completed sessions queued for cloud upload (browser-only). */
+export async function clearPendingOfflineSessions(): Promise<number> {
+  try {
+    const pending = await getPendingSessions();
+    if (pending.length === 0) return 0;
+    const db = await openDb();
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction(STORE_SESSIONS, 'readwrite');
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+      const store = tx.objectStore(STORE_SESSIONS);
+      for (const s of pending) {
+        store.delete(s.sessionId);
+      }
+    });
+    db.close();
+    notifyOfflineQueueChanged();
+    return pending.length;
+  } catch {
+    return 0;
+  }
+}
+
+/** Wipe all offline session rows (e.g. ethics “delete my data”). */
+export async function clearAllOfflineSessions(): Promise<void> {
+  try {
+    const db = await openDb();
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction(STORE_SESSIONS, 'readwrite');
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+      tx.objectStore(STORE_SESSIONS).clear();
+    });
+    db.close();
+    notifyOfflineQueueChanged();
+  } catch {
+    /* ignore */
+  }
+}
+
+export async function removeOfflineSession(sessionId: string): Promise<void> {
+  try {
+    const db = await openDb();
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction(STORE_SESSIONS, 'readwrite');
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+      tx.objectStore(STORE_SESSIONS).delete(sessionId);
+    });
+    db.close();
+    notifyOfflineQueueChanged();
+  } catch {
+    /* ignore */
   }
 }
 

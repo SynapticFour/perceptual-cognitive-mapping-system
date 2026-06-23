@@ -7,6 +7,7 @@ import { assessmentDimensionWeightsToDbJson } from '@/lib/supabase-mappers';
 import {
   getPendingSessions,
   markSessionSynced,
+  notifyOfflineQueueChanged,
   type OfflineSession,
   type SyncResult,
 } from '@/lib/offline-storage';
@@ -103,6 +104,7 @@ export async function syncPendingSessions(): Promise<SyncResult> {
       await pushOneSession(client, s);
       await markSessionSynced(s.sessionId);
       syncedSessionIds.push(s.sessionId);
+      notifyOfflineQueueChanged();
     } catch (e) {
       errors.push(`${s.sessionId}: ${e instanceof Error ? e.message : String(e)}`);
     }

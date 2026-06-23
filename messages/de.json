@@ -405,7 +405,10 @@
   "offline": {
     "pending_sync_banner": "{n} abgeschlossene Sitzung(en) warten auf Upload, sobald online (optional Cloud-Sync).",
     "pending_sync_export": "Warteschlange als JSON herunterladen",
-    "pending_sync_export_aria": "Pro wartender Offline-Sitzung eine JSON-Datei (Pipeline + Antworten) speichern"
+    "pending_sync_export_aria": "Pro wartender Offline-Sitzung eine JSON-Datei (Pipeline + Antworten) speichern",
+    "pending_sync_discard": "Warteschlange verwerfen",
+    "pending_sync_discard_aria": "Warteschlange nur in diesem Browser entfernen, ohne Upload",
+    "pending_sync_discard_confirm": "{n} Sitzung(en) in der Warteschlange verwerfen? Sie werden nur in diesem Browser gelöscht. Laden Sie zuerst JSON herunter, wenn Sie eine Kopie brauchen."
   },
   "field": {
     "offline_tools_heading": "Offline / Feld",

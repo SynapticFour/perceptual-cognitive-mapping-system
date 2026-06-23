@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { appendEthicsAuditEvent } from '@/lib/ethics-audit';
+import { clearAllOfflineSessions } from '@/lib/offline-storage';
 
 const PIPELINE_KEY = 'pcms-pipeline-result';
 
@@ -83,6 +84,7 @@ export default function DeleteMyDataButton({ sessionId: sessionIdProp, variant =
     }
 
     clearLocalParticipantData();
+    await clearAllOfflineSessions();
     appendEthicsAuditEvent({
       type: 'data_deletion_completed',
       sessionId: sessionId ?? undefined,

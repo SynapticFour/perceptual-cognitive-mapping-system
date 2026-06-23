@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { showOperatorSyncDiagnostic } from '@/config/env';
 import { readCloudSyncTelemetry, readCloudSyncTelemetryHistory } from '@/lib/cloud-sync-telemetry';
-import { getPendingSessions } from '@/lib/offline-storage';
+import { getPendingSessions, OFFLINE_QUEUE_CHANGED_EVENT } from '@/lib/offline-storage';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { hasCloudResearchConsent, isCloudResearchStorageEnabled } from '@/lib/research-cloud-consent';
 
@@ -21,9 +21,11 @@ export default function OperatorSyncDiagnosticBar() {
     const bump = () => setTick((n) => n + 1);
     const id = window.setInterval(bump, 10000);
     window.addEventListener('pcms-cloud-sync-telemetry', bump);
+    window.addEventListener(OFFLINE_QUEUE_CHANGED_EVENT, bump);
     return () => {
       window.clearInterval(id);
       window.removeEventListener('pcms-cloud-sync-telemetry', bump);
+      window.removeEventListener(OFFLINE_QUEUE_CHANGED_EVENT, bump);
     };
   }, [enabled]);
 
