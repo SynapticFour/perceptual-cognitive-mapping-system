@@ -7,6 +7,7 @@ import { TRAIT_DOMAIN_HEX } from '@/core/traits/trait-domains';
 import { buildCognitiveFieldGrid } from '@/lib/cognitive-field';
 import { regionBoundaryPoints } from '@/lib/cognitive-regions';
 import type { UiStrings } from '@/lib/ui-strings';
+import { isPcmsDebugField } from '@/lib/pcms-debug';
 import { toPlotPx, VIEW_BOX, VIEW_INNER, VIEW_PAD } from '@/ui/views/map-layout';
 
 export interface CognitiveFieldViewProps {
@@ -132,8 +133,8 @@ export default function CognitiveFieldView({ model, strings }: CognitiveFieldVie
   }, [draw]);
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'development') return;
-    console.log('[PCMS field view]', {
+    if (!isPcmsDebugField()) return;
+    console.log('[PCMS_DEBUG_FIELD] CognitiveFieldView', {
       localMaxima: field.metrics.localMaxima,
       maxPeakShare: field.metrics.maxPeakShare,
       coverage: field.metrics.coverage,

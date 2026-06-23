@@ -13,6 +13,14 @@ async function main(): Promise<void> {
   const outFile = path.join(outDir, 'question-bank-universal-all.json');
   fs.writeFileSync(outFile, JSON.stringify(merged), 'utf8');
   console.log(`Wrote ${outFile} (${merged.length} questions)`);
+
+  const caPath = path.join(process.cwd(), 'content', 'questions', 'cultural-adaptive-v1', 'bank.json');
+  if (fs.existsSync(caPath)) {
+    const ca = fs.readFileSync(caPath, 'utf8');
+    const caOut = path.join(outDir, 'question-bank-cultural-adaptive-v1.json');
+    fs.writeFileSync(caOut, ca, 'utf8');
+    console.log(`Wrote ${caOut}`);
+  }
 }
 
 main().catch((e) => {

@@ -54,7 +54,7 @@ export class EthicsService {
     try {
       const client = getSupabaseClient();
       if (!client) {
-        console.warn('Database not available, storing consent locally');
+        console.warn('[PCMS ethics] Database not available, storing consent locally');
         localStorage.setItem('pcms-consent-record', JSON.stringify(consentData));
         return { success: true };
       }

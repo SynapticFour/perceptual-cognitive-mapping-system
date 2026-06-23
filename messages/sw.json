@@ -1,0 +1,81 @@
+{
+  "_localeReview": {
+    "reviewStatus": "PENDING_NATIVE_REVIEW",
+    "lastReviewed": "never",
+    "checklistDoc": "docs/CULTURAL_REVIEW_CHECKLIST.md",
+    "outstandingItems": [
+      "1. Full Swahili ethics/consent for Kenya, Tanzania, Uganda deployments.",
+      "2. Likert anchors: validate agreement phrasing in Kiswahili sanifu vs regional variants.",
+      "3. east_africa question stems in cultural-adaptive bank still fallback to global English.",
+      "4. Regional ethics step copy for East African health referral pathways.",
+      "5. Confirm non-stigmatising tendency language with native reviewers."
+    ]
+  },
+  "welcome": {
+    "title": "Jifunze kujijua",
+    "subtitle": "Eneo la utafiti la kuchunguza jinsi unavyofikiri na kuhisi — bila lebo wala utambuzi wa kliniki."
+  },
+  "consent": {
+    "title": "Idhini ya kushiriki utafiti",
+    "agree": "Nakubali kushiriki"
+  },
+  "questionnaire": {
+    "question": "Swali",
+    "likert_strongly_disagree": "Sikubaliani kabisa",
+    "likert_disagree": "Sikubaliani",
+    "likert_neutral": "Sina upande",
+    "likert_agree": "Nakubaliana",
+    "likert_strongly_agree": "Nakubaliana kabisa"
+  },
+  "results": {
+    "title": "Wasifu wako wa utambuzi",
+    "page_title": "Ramani yako ya utambuzi",
+    "loading": "Inapakia matokeo yako…",
+    "no_results_title": "Hakuna matokeo",
+    "no_results_body": "Kamilisha dodoso kwanza.",
+    "start_questionnaire": "Anza dodoso",
+    "profile_adaptive_footnote": "Kumbuka ya utafiti: utulivu katika kipindi hiki {sessionConfidence}% · mgongano wa wastani {meanContradiction}% — viashiria vya ndani ya kipindi, tofauti na uhakika wa vipimo juu.",
+    "public_map_disclaimer": "Mfano wa utafiti: chombo hiki huchunguza mielekeo ya utambuzi kwa tafakuri binafsi na utafiti. Haijathibitishwa kwa maamuzi ya kliniki, kisheria, au uwekaji wa mtu binafsi."
+  },
+  "language": {
+    "label": "Lugha",
+    "sw": "Kiswahili",
+    "en": "English",
+    "de": "Deutsch",
+    "fr": "Français",
+    "tw": "Twi",
+    "wo": "Wolof"
+  },
+  "dims": {
+    "F": {
+      "title": "Umakini",
+      "short_label": "Umakini",
+      "low_label": "Huangukiwa kirahisi",
+      "high_label": "Umakini imara",
+      "description": "Uwezo wa kushikilia umakini na kupinga usumbufu."
+    },
+    "E": {
+      "title": "Nishati ya kijamii",
+      "short_label": "Kijamii",
+      "low_label": "Nishati katika vikundi vidogo",
+      "high_label": "Nishati katika makundi",
+      "description": "Jinsi mwingiliano na wengine unavyoathiri nishati yako — maelezo, si lebo."
+    },
+    "S": {
+      "title": "Hisia za hisia (sensori)",
+      "short_label": "Sensori",
+      "low_label": "Hauathiriwi sana na vichocheo",
+      "high_label": "Mwathirika kwa vichocheo",
+      "description": "Starehe na msukumo kutoka kelele, mwanga, muundo na msongamano."
+    }
+  },
+  "ethics_consent": {
+    "prototype_banner_title": "Mfano wa utafiti",
+    "prototype_banner_body": "Unashiriki katika ukuzaji wa chombo cha ramani ya utambuzi. Matokeo ni kwa tafakuri na utafiti — si utambuzi wala maamuzi ya taasisi.",
+    "irb_status_body": "Chombo hiki bado hakijaidhinishwa na kamati rasmi ya maadili kwa utafiti kamili.",
+    "ghana_body": "Ikiwa una wasiwasi wa kiafya, zungumza na mtaalamu unayemwamini katika jamii yako. Ushiriki huu unabaki katika utafiti na tafakuri binafsi."
+  },
+  "site_footer": {
+    "prototype_line": "PCMS — mfano wa utafiti wa mielekeo ya utambuzi."
+  }
+}

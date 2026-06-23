@@ -46,7 +46,7 @@ describe('landscape-share-codec', () => {
   it('rejects malformed or invalid payload data', () => {
     expect(decodeLandscapeSharePayload('not-base64')).toBeNull();
     const bad = encodeLandscapeSharePayload({
-      v: 999 as 1,
+      v: 999 as 1 | 2,
       rp: {} as Record<(typeof COGNITIVE_DIMENSION_KEYS)[number], number>,
       wp: {} as Record<(typeof COGNITIVE_DIMENSION_KEYS)[number], number>,
       fc: {} as Record<(typeof COGNITIVE_DIMENSION_KEYS)[number], number>,

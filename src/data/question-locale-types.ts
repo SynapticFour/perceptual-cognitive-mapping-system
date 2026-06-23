@@ -14,6 +14,6 @@ export function questionLocaleFromUiLocale(uiLocale: string): SupportedLocale {
   if (l === 'de') return 'de';
   if (l === 'ghana' || l === 'gh-en') return 'gh-en';
   if (l === 'en' || l === 'universal') return 'en';
-  if (l === 'tw' || l === 'wo') return 'en';
+  if (l === 'fr' || l === 'sw' || l === 'tw' || l === 'wo') return 'en';
   return 'en';
 }

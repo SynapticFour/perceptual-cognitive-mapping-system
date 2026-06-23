@@ -27,6 +27,7 @@ import {
 } from '@/adaptive/profile-adaptive';
 import { ScoringModel, type CognitiveDimension } from '@/scoring';
 import { resolveAdaptiveModeResolution } from '@/lib/adaptive-mode-resolution';
+import { profileAdaptiveConfigFromEnv } from '@/lib/profile-adaptive-config-from-env';
 
 /** Research-defined maximum number of answered questions per assessment (including refinement). */
 export const ENGINE_HARD_CAP_TOTAL_QUESTIONS = 30;
@@ -124,6 +125,10 @@ export class AdaptiveQuestionnaireEngine {
       ...config,
       adaptiveMode: resolved.adaptiveMode,
       researchMode: resolved.researchMode,
+      profileAdaptive: {
+        ...profileAdaptiveConfigFromEnv(),
+        ...config?.profileAdaptive,
+      },
     };
     
     // Initialize supporting models
@@ -145,6 +150,15 @@ export class AdaptiveQuestionnaireEngine {
 
   getResearchMode(): boolean {
     return this.config.researchMode === true;
+  }
+
+  /** Exposed for field-study telemetry exports. */
+  getProfileAdaptiveConfig(): ProfileAdaptiveConfig {
+    return this.mergedProfileConfig();
+  }
+
+  getProfileConfidenceTrace(): number[] {
+    return [...this.profileConfidenceTrace];
   }
 
   private get totalQuestionHardCap(): number {

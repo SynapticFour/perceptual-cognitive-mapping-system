@@ -2,7 +2,9 @@ import { COGNITIVE_DIMENSION_KEYS, type CognitiveDimension } from '@/model/cogni
 import type { ConfidenceComponents } from '@/scoring';
 import type { DimensionDisplayModel } from '@/lib/dimension-display';
 
-const VERSION = 1 as const;
+const VERSION_V1 = 1 as const;
+const VERSION_V2 = 2 as const;
+const LATEST_VERSION = VERSION_V2;
 
 /**
  * **URL / SMS share payloads are not a scientific record.**
@@ -54,9 +56,9 @@ export function readShareEncodedPayloadFromWindow(search: string, hash: string):
 }
 
 export type LandscapeSharePayload = {
-  v: typeof VERSION;
+  v: typeof VERSION_V1 | typeof VERSION_V2;
   /**
-   * Present on payloads from `buildSharePayload` (v1). When true, marks a **lossy compressed excerpt**
+   * Present on payloads from `buildSharePayload` (v1+). When true, marks a **lossy compressed excerpt**
    * for UX sharing only — not interchangeable with a stored research session.
    */
   isCompressed?: true;
@@ -67,12 +69,17 @@ export type LandscapeSharePayload = {
   /** Final routing confidence 0–1 per dimension only (other confidence fields dropped). */
   fc: Record<CognitiveDimension, number>;
   completedAt?: string;
+  /** v2: question bank id when known (e.g. `universal`). */
+  bk?: string;
+  /** v2: stem region when known. */
+  sr?: string;
 };
 
 export function buildSharePayload(
   display: DimensionDisplayModel,
   confidenceComponents: ConfidenceComponents,
-  completedAt?: string
+  completedAt?: string,
+  meta?: { questionBankId?: string; stemRegionUsed?: string }
 ): LandscapeSharePayload {
   const rp = {} as Record<CognitiveDimension, number>;
   const wp = {} as Record<CognitiveDimension, number>;
@@ -82,7 +89,17 @@ export function buildSharePayload(
     wp[d] = display.weightedPercent[d];
     fc[d] = confidenceComponents[d].finalConfidence;
   }
-  return { v: VERSION, isCompressed: true, rp, wp, fc, completedAt };
+  const payload: LandscapeSharePayload = {
+    v: LATEST_VERSION,
+    isCompressed: true,
+    rp,
+    wp,
+    fc,
+    completedAt,
+  };
+  if (meta?.questionBankId) payload.bk = meta.questionBankId;
+  if (meta?.stemRegionUsed) payload.sr = meta.stemRegionUsed;
+  return payload;
 }
 
 export function encodeLandscapeSharePayload(payload: LandscapeSharePayload): string {
@@ -96,7 +113,8 @@ export function decodeLandscapeSharePayload(encoded: string): LandscapeSharePayl
     const raw = JSON.parse(json) as unknown;
     if (!raw || typeof raw !== 'object') return null;
     const o = raw as Record<string, unknown>;
-    if (o.v !== VERSION || typeof o.rp !== 'object' || typeof o.wp !== 'object' || typeof o.fc !== 'object') {
+    if (o.v !== VERSION_V1 && o.v !== VERSION_V2) return null;
+    if (typeof o.rp !== 'object' || typeof o.wp !== 'object' || typeof o.fc !== 'object') {
       return null;
     }
     const rp = o.rp as Record<string, number>;
@@ -106,12 +124,14 @@ export function decodeLandscapeSharePayload(encoded: string): LandscapeSharePayl
       if (typeof rp[d] !== 'number' || typeof wp[d] !== 'number' || typeof fc[d] !== 'number') return null;
     }
     return {
-      v: VERSION,
+      v: o.v as typeof VERSION_V1 | typeof VERSION_V2,
       isCompressed: true,
       rp: rp as Record<CognitiveDimension, number>,
       wp: wp as Record<CognitiveDimension, number>,
       fc: fc as Record<CognitiveDimension, number>,
       completedAt: typeof o.completedAt === 'string' ? o.completedAt : undefined,
+      bk: typeof o.bk === 'string' ? o.bk : undefined,
+      sr: typeof o.sr === 'string' ? o.sr : undefined,
     };
   } catch {
     return null;

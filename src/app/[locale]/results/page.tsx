@@ -10,6 +10,7 @@ import { ENGINE_HARD_CAP_TOTAL_QUESTIONS } from '@/adaptive';
 import CognitiveLandscapeGate from '@/components/results/CognitiveLandscapeGate';
 import ResultsInterpretationSection from '@/components/results/ResultsInterpretationSection';
 import ConfidenceSummaryBanner from '@/components/results/confidence-summary-banner';
+import ProfileAdaptiveFootnote from '@/components/results/ProfileAdaptiveFootnote';
 import InsightCards from '@/components/results/insight-cards';
 import {
   buildSharePayload,
@@ -334,7 +335,10 @@ export default function ResultsPage() {
     if (isResearchModeActive(session)) return;
     if (!session || !display || !confidenceComponents) return;
 
-    const payload = buildSharePayload(display, confidenceComponents, session.completedAt);
+    const payload = buildSharePayload(display, confidenceComponents, session.completedAt, {
+      questionBankId: session.questionBankId,
+      stemRegionUsed: session.stemRegionUsed,
+    });
     const encoded = encodeLandscapeSharePayload(payload);
     const href = typeof window !== 'undefined' ? window.location.href : 'http://localhost/results';
     const built = buildShareableResultsUrl(href, encoded);
@@ -600,6 +604,9 @@ export default function ResultsPage() {
             strings={ui}
             onContinueAssessment={session ? handleContinueAssessment : undefined}
           />
+          {session?.profileAdaptiveSummary ? (
+            <ProfileAdaptiveFootnote summary={session.profileAdaptiveSummary} strings={ui} />
+          ) : null}
         </div>
 
         {groupInsightsAvailable ? (

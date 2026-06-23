@@ -397,34 +397,32 @@ export function buildCognitiveModel(input: BuildCognitiveModelInput): CognitiveM
 
   const fingerprint = `${dim}-act${k}-${centroid.x.toFixed(3)}-${centroid.y.toFixed(3)}-${synthCount}`;
 
-  if (process.env.NODE_ENV === 'development') {
+  if (isPcmsDebugField()) {
     console.log(
-      '[PCMS activation field] buildCognitiveModel:',
+      '[PCMS_DEBUG_FIELD] buildCognitiveModel:',
       k,
       'activation(s) in model (full catalog); rendered points match this count in views'
     );
-  }
-
-  if (isPcmsDebugField() && k > 0) {
-    const disp = activationSpatialDispersion(projectedPoints, k);
-    console.log('[PCMS_DEBUG_FIELD] activation spatial dispersion', {
-      ...disp,
-      spanSum: Number((disp.spanX + disp.spanY).toFixed(4)),
-      count: k,
-    });
-  }
-
-  if (process.env.NODE_ENV === 'development' && k >= 2) {
-    console.log({
-      regions: cognitiveRegions.length,
-      maxRegionWeightShare: regionValidation.maxRegionWeightShare,
-      maxRegionPointShare: regionValidation.maxRegionPointShare,
-      centroidDistances: regionValidation.centroidDistances,
-      minCentroidDistance: regionValidation.minCentroidDistance,
-      separationThreshold: regionValidation.separationThreshold,
-      heavyOverlap: regionValidation.heavyOverlap,
-      passedAllChecks: regionValidation.passedAllChecks,
-    });
+    if (k > 0) {
+      const disp = activationSpatialDispersion(projectedPoints, k);
+      console.log('[PCMS_DEBUG_FIELD] activation spatial dispersion', {
+        ...disp,
+        spanSum: Number((disp.spanX + disp.spanY).toFixed(4)),
+        count: k,
+      });
+    }
+    if (k >= 2) {
+      console.log('[PCMS_DEBUG_FIELD] region validation', {
+        regions: cognitiveRegions.length,
+        maxRegionWeightShare: regionValidation.maxRegionWeightShare,
+        maxRegionPointShare: regionValidation.maxRegionPointShare,
+        centroidDistances: regionValidation.centroidDistances,
+        minCentroidDistance: regionValidation.minCentroidDistance,
+        separationThreshold: regionValidation.separationThreshold,
+        heavyOverlap: regionValidation.heavyOverlap,
+        passedAllChecks: regionValidation.passedAllChecks,
+      });
+    }
   }
 
   return {

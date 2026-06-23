@@ -1,9 +1,11 @@
-import type { ProfileAdaptiveSessionSummary } from '@/adaptive/profile-adaptive';
 import type { ResolvedAdaptiveMode } from '@/lib/adaptive-mode-resolution';
 import type { QuestionStemRegion } from '@/data/questions';
 import type { CognitiveProfilePublic } from '@/types/profile-public';
 import type { ScoringResult } from '@/scoring';
 import type { EightConstructOutcome } from '@/types/eight-construct-outcome';
+import type { ProfileAdaptiveSessionSummary } from '@/adaptive/profile-adaptive';
+import type { AdaptiveStopTelemetry } from '@/types/adaptive-stop-telemetry';
+import type { ContradictoryItemPairFlag } from '@/lib/adaptive-contradiction-pairs';
 
 export const PIPELINE_STORAGE_VERSION = 3 as const;
 
@@ -27,6 +29,10 @@ export type SessionPersistenceMeta = {
   adaptiveMode?: ResolvedAdaptiveMode;
   /** When true, deployment required `profile_diagnostic` and lossy share flows should have been disabled. */
   researchMode?: boolean;
+  /** Adaptive engine stop reason and profile trace (research exports). */
+  adaptiveStopTelemetry?: AdaptiveStopTelemetry;
+  /** Within-session item pairs with large reverse/non-reverse divergence (research only). */
+  contradictoryItemPairs?: ContradictoryItemPairFlag[];
 };
 
 /**
@@ -69,4 +75,6 @@ export interface StoredPipelineSession {
   bankVersion?: string;
   adaptiveMode?: ResolvedAdaptiveMode;
   researchMode?: boolean;
+  adaptiveStopTelemetry?: AdaptiveStopTelemetry;
+  contradictoryItemPairs?: ContradictoryItemPairFlag[];
 }

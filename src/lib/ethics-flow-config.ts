@@ -39,7 +39,7 @@ export function getGhanaStepPolicy(): GhanaStepPolicy {
 }
 
 /**
- * `auto`: on for Twi (`tw`) or explicit `NEXT_PUBLIC_PCMS_ETHICS_REGION=ghana|west_africa`; otherwise off
+ * `auto`: on for Twi (`tw`), Wolof (`wo`), French (`fr`), Swahili (`sw`), or explicit regional env; otherwise off
  * (e.g. Norway/EU deploys without an extra regional screen).
  */
 export function shouldIncludeGhanaEthicsStep(locale: string): boolean {
@@ -47,8 +47,8 @@ export function shouldIncludeGhanaEthicsStep(locale: string): boolean {
   if (policy === 'on') return true;
   if (policy === 'off') return false;
   const region = readPublicEnv('NEXT_PUBLIC_PCMS_ETHICS_REGION')?.trim().toLowerCase();
-  if (region === 'ghana' || region === 'west_africa') return true;
-  return locale === 'tw' || locale === 'wo';
+  if (region === 'ghana' || region === 'west_africa' || region === 'east_africa') return true;
+  return locale === 'tw' || locale === 'wo' || locale === 'fr' || locale === 'sw';
 }
 
 export function buildConsentSteps(options: { mode: ConsentRuntimeMode; locale: string }): ConsentStepId[] {

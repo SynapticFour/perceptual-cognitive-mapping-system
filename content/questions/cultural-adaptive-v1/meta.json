@@ -1,0 +1,28 @@
+{
+  "bankId": "cultural-adaptive-v1",
+  "contentVersion": "1",
+  "released": "2026-06-23",
+  "itemCount": 200,
+  "dimensions": 8,
+  "stemRegions": {
+    "required": ["global", "ghana", "west_africa"],
+    "optional": ["francophone_west_africa", "east_africa"]
+  },
+  "revisionHistory": [
+    {
+      "version": "1",
+      "date": "2026-04-12",
+      "summary": "Initial 200-item bank with global / ghana / west_africa stems."
+    },
+    {
+      "version": "1.1",
+      "date": "2026-06-23",
+      "summary": "Documented optional francophone_west_africa and east_africa stem slots with runtime fallback."
+    },
+    {
+      "version": "1.2",
+      "date": "2026-06-23",
+      "summary": "Added francophone_west_africa stems for sensory_regulation items 001–025 (pilot batch for Francophone West Africa)."
+    }
+  ]
+}

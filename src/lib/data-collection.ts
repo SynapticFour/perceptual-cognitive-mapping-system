@@ -1,4 +1,4 @@
-import { getSupabaseClient, DatabaseProfile, DatabaseQuestionResponse, DatabaseSession, generateSessionId, isSupabaseConfigured } from './supabase';
+import { getSupabaseClient, DatabaseProfile, DatabaseQuestionResponse, DatabaseSession, generateSessionId } from './supabase';
 import { assessmentDimensionWeightsToDbJson } from './supabase-mappers';
 import { QuestionResponse } from '@/data/questions';
 import { validateAssessmentVersion, AssessmentTracker } from './assessment-versioning';

@@ -54,8 +54,29 @@ describe('regional-stem-resolution', () => {
     expect(resolveStemForRegion(q, 'west_africa')).toBe('Ghana backup');
   });
 
-  it('without stemVariants uses question.text', () => {
-    const q = baseQ({ text: 'Plain' });
-    expect(resolveStemForRegion(q, 'global')).toBe('Plain');
+  it('francophone_west_africa falls back to west_africa then global', () => {
+    const q = baseQ({
+      stemVariants: {
+        global: 'Global wording',
+        ghana: 'Ghana wording',
+        west_africa: 'WA wording',
+        francophone_west_africa: '',
+        east_africa: '',
+      },
+    });
+    expect(resolveStemForRegion(q, 'francophone_west_africa')).toBe('WA wording');
+  });
+
+  it('east_africa falls back to global when empty', () => {
+    const q = baseQ({
+      stemVariants: {
+        global: 'Global wording',
+        ghana: 'Gh',
+        west_africa: 'WA',
+        francophone_west_africa: '',
+        east_africa: '',
+      },
+    });
+    expect(resolveStemForRegion(q, 'east_africa')).toBe('Global wording');
   });
 });

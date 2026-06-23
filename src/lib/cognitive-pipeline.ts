@@ -151,5 +151,11 @@ export function toStoredPipelineSession(
   if (sessionMeta?.researchMode !== undefined) {
     out.researchMode = sessionMeta.researchMode;
   }
+  if (sessionMeta?.adaptiveStopTelemetry) {
+    out.adaptiveStopTelemetry = sessionMeta.adaptiveStopTelemetry;
+  }
+  if (sessionMeta?.contradictoryItemPairs?.length) {
+    out.contradictoryItemPairs = sessionMeta.contradictoryItemPairs;
+  }
   return out;
 }

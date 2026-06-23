@@ -1,6 +1,8 @@
 import { COGNITIVE_DIMENSION_KEYS, type CognitiveDimension } from '../model/cognitive-dimensions';
 import { primaryRoutingDimension } from './question-validator';
 import type { AssessmentQuestion, AssessmentQuestionCategory, QuestionStemRegion } from '../data/questions';
+import { resolveStemForRegion } from './regional-stem-resolution';
+import { culturalAdaptiveStemKey } from './stem-region-fallback';
 
 /** Stable id for persistence / exports when this bank supplied the items. */
 export const CULTURAL_ADAPTIVE_BANK_ID = 'cultural-adaptive-v1' as const;
@@ -26,6 +28,9 @@ export const CULTURAL_ADAPTIVE_DIMENSIONS = [
 export type CulturalAdaptiveDimension = (typeof CULTURAL_ADAPTIVE_DIMENSIONS)[number];
 
 export type CulturalAdaptiveStemKey = QuestionStemRegion;
+
+// Re-export for backward compatibility
+export { culturalAdaptiveStemKey } from './stem-region-fallback';
 
 const DIMENSION_SET = new Set<string>(CULTURAL_ADAPTIVE_DIMENSIONS);
 
@@ -77,17 +82,6 @@ function isRecord(v: unknown): v is Record<string, unknown> {
   return typeof v === 'object' && v !== null && !Array.isArray(v);
 }
 
-/** Resolve which regional stem bundle to use (JSON `variants.*`). */
-export function culturalAdaptiveStemKey(locale: string): CulturalAdaptiveStemKey {
-  const raw = process.env.NEXT_PUBLIC_PCMS_CULTURAL_STEM?.trim().toLowerCase();
-  if (raw === 'global' || raw === 'ghana' || raw === 'west_africa') {
-    return raw;
-  }
-  const l = locale.toLowerCase();
-  if (l === 'ghana' || l === 'gh-en') return 'ghana';
-  return 'global';
-}
-
 function assertMaxRoutingWeight(
   weights: Partial<Record<CognitiveDimension, number>>,
   id: string,
@@ -108,18 +102,32 @@ export function culturalAdaptiveRowToAssessmentQuestion(
     throw new Error(`${label} [${row.id}]: unknown dimension "${row.dimension}"`);
   }
   const dim = row.dimension as CulturalAdaptiveDimension;
-  const text = row.variants[stemKey];
-  if (typeof text !== 'string' || !text.trim()) {
-    throw new Error(`${label} [${row.id}]: missing variants.${stemKey}`);
-  }
   const partial = CULTURAL_ADAPTIVE_ROUTING_WEIGHTS[dim];
   assertMaxRoutingWeight(partial, row.id, label);
 
-  const stemVariants: Record<QuestionStemRegion, string> = {
+  const stemVariants = {
     global: String(row.variants.global ?? '').trim(),
     ghana: String(row.variants.ghana ?? '').trim(),
     west_africa: String(row.variants.west_africa ?? '').trim(),
+    francophone_west_africa: String(row.variants.francophone_west_africa ?? '').trim(),
+    east_africa: String(row.variants.east_africa ?? '').trim(),
+  } satisfies Partial<Record<QuestionStemRegion, string>>;
+
+  const probe: AssessmentQuestion = {
+    id: row.id,
+    text: '',
+    category: 'focus',
+    dimensionWeights: {},
+    informationGain: 0,
+    type: 'core',
+    difficulty: 'broad',
+    tags: [],
+    stemVariants,
   };
+  const text = resolveStemForRegion(probe, stemKey);
+  if (!text.trim()) {
+    throw new Error(`${label} [${row.id}]: no stem text for region "${stemKey}" or fallbacks`);
+  }
 
   const dimensionWeights = Object.fromEntries(
     COGNITIVE_DIMENSION_KEYS.map((k) => [k, partial[k] ?? 0])
@@ -129,7 +137,15 @@ export function culturalAdaptiveRowToAssessmentQuestion(
     ...row.tags,
     `dim:${dim}`,
     CULTURAL_ADAPTIVE_BANK_TAG,
-    stemKey === 'ghana' ? 'stem:ghana' : stemKey === 'west_africa' ? 'stem:west_africa' : 'stem:global',
+    stemKey === 'ghana'
+      ? 'stem:ghana'
+      : stemKey === 'west_africa'
+        ? 'stem:west_africa'
+        : stemKey === 'francophone_west_africa'
+          ? 'stem:francophone_west_africa'
+          : stemKey === 'east_africa'
+            ? 'stem:east_africa'
+            : 'stem:global',
   ];
 
   return {

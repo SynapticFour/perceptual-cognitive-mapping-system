@@ -5,7 +5,6 @@ import {
   type ProfileAdaptiveSessionSummary,
 } from '@/adaptive/profile-adaptive';
 import { ROUTING_WEIGHT_KEYS } from '@/adaptive/routing-tags';
-import type { QuestionStemRegion } from '@/data/questions';
 import type { ResolvedAdaptiveMode } from '@/lib/adaptive-mode-resolution';
 import { PIPELINE_STORAGE_VERSION, type StoredPipelineSession } from '@/types/pipeline-session';
 import type { ScoringResult } from '@/scoring';
@@ -61,9 +60,7 @@ function isEightConstructScaleScore(value: unknown, construct: EightConstructId)
   return true;
 }
 
-function isQuestionStemRegion(value: unknown): value is QuestionStemRegion {
-  return value === 'global' || value === 'ghana' || value === 'west_africa';
-}
+import { isQuestionStemRegion } from '@/lib/stem-region-fallback';
 
 function isProfileDimensionStats(value: unknown): boolean {
   if (!isRecord(value)) return false;
@@ -173,6 +170,15 @@ export function parseStoredPipelineSession(raw: unknown): StoredPipelineSession 
   }
   if (raw.researchMode === true || raw.researchMode === false) {
     out.researchMode = raw.researchMode;
+  }
+  if (raw.adaptiveStopTelemetry !== undefined && isRecord(raw.adaptiveStopTelemetry)) {
+    const t = raw.adaptiveStopTelemetry;
+    if (t.schemaVersion === 1 && typeof t.completionReason === 'string') {
+      out.adaptiveStopTelemetry = t as StoredPipelineSession['adaptiveStopTelemetry'];
+    }
+  }
+  if (Array.isArray(raw.contradictoryItemPairs)) {
+    out.contradictoryItemPairs = raw.contradictoryItemPairs as StoredPipelineSession['contradictoryItemPairs'];
   }
 
   return out;

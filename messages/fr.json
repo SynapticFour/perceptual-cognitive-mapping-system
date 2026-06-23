@@ -1,0 +1,81 @@
+{
+  "_localeReview": {
+    "reviewStatus": "PENDING_NATIVE_REVIEW",
+    "lastReviewed": "never",
+    "checklistDoc": "docs/CULTURAL_REVIEW_CHECKLIST.md",
+    "outstandingItems": [
+      "1. Full ethics/consent French copy for Francophone West Africa (Senegal, Côte d'Ivoire, Mali).",
+      "2. Likert scales: confirm communicative norms for agreement strength in French.",
+      "3. Question stems: classic bank has FR overrides; cultural-adaptive francophone_west_africa stems still fallback to west_africa English.",
+      "4. Regional ethics step: ghana_body copy should be adapted for Francophone medical referral context.",
+      "5. Avoid deficit framing; confirm tendency-only wording with community reviewers."
+    ]
+  },
+  "welcome": {
+    "title": "Apprendre à se connaître",
+    "subtitle": "Un espace de recherche pour explorer comment vous pensez et ressentez — sans étiquettes ni diagnostic."
+  },
+  "consent": {
+    "title": "Participation à la recherche",
+    "agree": "J'accepte de participer"
+  },
+  "questionnaire": {
+    "question": "Question",
+    "likert_strongly_disagree": "Pas du tout d'accord",
+    "likert_disagree": "Plutôt pas d'accord",
+    "likert_neutral": "Ni l'un ni l'autre",
+    "likert_agree": "Plutôt d'accord",
+    "likert_strongly_agree": "Tout à fait d'accord"
+  },
+  "results": {
+    "title": "Votre profil cognitif",
+    "page_title": "Votre paysage cognitif",
+    "loading": "Chargement de vos résultats…",
+    "no_results_title": "Aucun résultat trouvé",
+    "no_results_body": "Complétez d'abord le questionnaire.",
+    "start_questionnaire": "Commencer le questionnaire",
+    "profile_adaptive_footnote": "Note de recherche : stabilité dans cette séance {sessionConfidence} % · contradiction moyenne {meanContradiction} % — indicateurs internes à la séance, distincts de la confiance par dimension affichée ci-dessus.",
+    "public_map_disclaimer": "Prototype de recherche : cet outil explore des tendances cognitives pour la réflexion personnelle et l'étude scientifique. Il n'est pas validé pour des décisions cliniques, juridiques ou d'orientation individuelle."
+  },
+  "language": {
+    "label": "Langue",
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "sw": "Kiswahili",
+    "tw": "Twi",
+    "wo": "Wolof"
+  },
+  "dims": {
+    "F": {
+      "title": "Attention et focus",
+      "short_label": "Focus",
+      "low_label": "Facilement distrait·e",
+      "high_label": "Attention soutenue",
+      "description": "Capacité à maintenir l'attention et à résister aux distractions."
+    },
+    "E": {
+      "title": "Énergie sociale",
+      "short_label": "Social",
+      "low_label": "Énergie en petit groupe ou seul·e",
+      "high_label": "Énergie en groupe",
+      "description": "Comment l'interaction avec les autres affecte votre énergie — dans une optique descriptive, pas de personnalité fixe."
+    },
+    "S": {
+      "title": "Sensibilité sensorielle",
+      "short_label": "Sensoriel",
+      "low_label": "Peu sensible aux stimuli",
+      "high_label": "Réactif·ve aux stimuli",
+      "description": "Confort et réactivité face aux sons, lumières, textures et foule."
+    }
+  },
+  "ethics_consent": {
+    "prototype_banner_title": "Prototype de recherche",
+    "prototype_banner_body": "Vous participez au développement d'un outil de cartographie cognitive. Les résultats servent à la réflexion et à la recherche — pas au diagnostic ni aux décisions institutionnelles.",
+    "irb_status_body": "Cet outil n'a pas encore reçu l'approbation formelle d'un comité d'éthique pour une étude aboutie.",
+    "ghana_body": "Si vous avez des inquiétudes de santé, parlez-en à un professionnel de confiance dans votre communauté. Cette participation reste dans le cadre de la recherche et de la réflexion personnelle."
+  },
+  "site_footer": {
+    "prototype_line": "PCMS — prototype de recherche pour explorer des tendances cognitives."
+  }
+}

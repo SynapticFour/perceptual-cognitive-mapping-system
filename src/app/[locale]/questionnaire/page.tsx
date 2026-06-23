@@ -36,6 +36,8 @@ import {
 import { computeEightConstructScores } from '@/scoring/eight-construct-scores';
 import { parseStoredPipelineSession } from '@/lib/parse-pipeline-session';
 import { displayStemRegionForUiLocale } from '@/lib/regional-stem-resolution';
+import { buildAdaptiveStopTelemetry } from '@/lib/build-adaptive-stop-telemetry';
+import { findContradictoryItemPairs } from '@/lib/adaptive-contradiction-pairs';
 import { inferQuestionBankMeta } from '@/lib/session-bank-meta';
 import { readQuestionHistoryFromStorage } from '@/lib/question-history-storage';
 import { dimensionsBelowConfidenceThreshold } from '@/lib/below-threshold-dimensions';
@@ -253,6 +255,17 @@ function QuestionnairePageContent() {
       const profileAdaptiveSummary = toProfileAdaptiveSessionSummary(profileSnap);
       const stemRegionUsed = displayStemRegionForUiLocale(locale);
       const { questionBankId, bankVersion } = inferQuestionBankMeta(finalState.questionHistory, questionsById);
+      const completionReasonTyped =
+        completionReason === 'confidence_met' ||
+        completionReason === 'max_questions' ||
+        completionReason === 'diminishing_returns'
+          ? completionReason
+          : 'user_exit';
+      const adaptiveStopTelemetry = buildAdaptiveStopTelemetry(eng, completionReasonTyped);
+      const contradictoryItemPairs = findContradictoryItemPairs(
+        finalState.questionHistory,
+        questionsById
+      );
       const stored = toStoredPipelineSession(
         pipeline,
         finalState.questionHistory.length,
@@ -268,6 +281,9 @@ function QuestionnairePageContent() {
           bankVersion,
           adaptiveMode: eng.getAdaptiveMode(),
           researchMode: eng.getResearchMode(),
+          adaptiveStopTelemetry,
+          contradictoryItemPairs:
+            contradictoryItemPairs.length > 0 ? contradictoryItemPairs : undefined,
         }
       );
 

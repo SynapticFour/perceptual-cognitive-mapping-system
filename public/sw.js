@@ -1,6 +1,10 @@
-/* PCMS — cache static question bank + manifest for offline field use. Bump CACHE when precache list changes. */
-const CACHE = 'pcms-static-v2';
-const PRECACHE = ['/manifest.json', '/data/question-bank-universal-all.json'];
+/* PCMS — cache static question banks for offline field use. Bump CACHE when precache list changes. */
+const CACHE = 'pcms-static-v3';
+const PRECACHE = [
+  '/manifest.json',
+  '/data/question-bank-universal-all.json',
+  '/data/question-bank-cultural-adaptive-v1.json',
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

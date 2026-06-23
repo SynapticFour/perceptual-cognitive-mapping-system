@@ -34,6 +34,7 @@
     "revision_notice": "This is revision {n} of your assessment.",
     "max_length_notice": "Maximum assessment length reached. Results are based on all answers provided.",
     "sufficient_confidence_banner": "Sufficient confidence was reached on all routing dimensions before the usual number of core questions — your profile is based on the answers you gave.",
+    "profile_adaptive_footnote": "Research note: within-session stability {sessionConfidence}% · mean contradiction {meanContradiction}% — session-internal indicators, separate from per-dimension routing confidence above.",
     "share_url_too_long": "This share link would exceed a safe URL length. Use “Download data” or a shorter results path, or share the JSON export instead.",
     "title": "Your cognitive profile",
     "group_insights_link": "View group insights",
@@ -557,6 +558,8 @@
     "label": "Language",
     "en": "English",
     "de": "Deutsch",
+    "fr": "Français",
+    "sw": "Kiswahili",
     "tw": "Twi",
     "wo": "Wolof"
   },

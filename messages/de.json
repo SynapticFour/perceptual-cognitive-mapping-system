@@ -34,6 +34,7 @@
     "revision_notice": "Dies ist Revision {n} Ihrer Bewertung.",
     "max_length_notice": "Maximale Bewertungslänge erreicht. Die Ergebnisse basieren auf allen gegebenen Antworten.",
     "sufficient_confidence_banner": "Ausreichendes Vertrauen wurde auf allen Routing-Dimensionen erreicht, bevor die übliche Anzahl Kernfragen beantwortet war — Ihr Profil basiert auf den gegebenen Antworten.",
+    "profile_adaptive_footnote": "Hinweis zur Forschung: Stabilität in dieser Sitzung {sessionConfidence} % · mittlere Widersprüchlichkeit {meanContradiction} % — sitzungsinterne Indikatoren, getrennt von der Routing-Konfidenz pro Dimension oben.",
     "share_url_too_long": "Dieser Teilen-Link würde eine sichere URL-Länge überschreiten. Nutzen Sie „Daten herunterladen“ oder einen kürzeren Ergebnispfad, oder teilen Sie stattdessen den JSON-Export.",
     "title": "Ihr kognitives Profil",
     "group_insights_link": "Gruppeneinblicke",

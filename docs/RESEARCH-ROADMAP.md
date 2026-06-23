@@ -17,7 +17,7 @@ This document tracks epics and concrete tickets for a **globally usable, cultura
 | A1 | Persist **`profileAdaptiveSummary`** (per-dim `n`, mean, variance, contradiction, profile confidence + session aggregates) on `StoredPipelineSession` | **Done** (this wave) |
 | A2 | Persist **`stemRegionUsed`** (`global` \| `ghana` \| `west_africa`) from `displayStemRegionForUiLocale(locale)` + env override | **Done** (this wave) |
 | A3 | Persist **`questionBankId`** + **`bankVersion`** via `inferQuestionBankMeta` from answered items | **Done** (this wave) |
-| A4 | Bump share / export codecs if compact payloads must carry A1–A3 (backward-compatible version field) | **Backlog** |
+| A4 | Bump share / export codecs if compact payloads must carry A1–A3 (backward-compatible version field) | **Done** |
 | A5 | Mirror new fields in **IndexedDB** `OfflineSession.profile` sync path; **ZIP + full-session JSON + pending-queue download** | **Done** |
 
 ---
@@ -32,7 +32,7 @@ Two complementary signals exist in code:
 | ID | Ticket | Status |
 |----|--------|--------|
 | B1 | Methods appendix / researcher one-pager explaining when to cite (1) vs (2) | **Done** (this doc §Epic B) |
-| B2 | Optional results footnote when `profileAdaptiveSummary` present | **Backlog** |
+| B2 | Optional results footnote when `profileAdaptiveSummary` present | **Done** |
 | B3 | Correlation / calibration study (offline analysis repo, not app) | **Backlog** |
 
 ---
@@ -41,10 +41,10 @@ Two complementary signals exist in code:
 
 | ID | Ticket | Status |
 |----|--------|--------|
-| C1 | CI validation: 200 × 8 dims × 3 stems (`cultural-adaptive-v1`) | **Partial** (loader asserts; add CI script hook) |
-| C2 | Readability audit: simple language, concrete behaviours | **Backlog** |
-| C3 | `cultural-adaptive-v2` versioning when stems change materially | **Backlog** |
-| C4 | Optional new `QuestionStemRegion` bundles (same `stemVariants` shape) | **Backlog** |
+| C1 | CI validation: 200 × 8 dims × 3 stems (`cultural-adaptive-v1`) | **Done** (`audit-cultural-stems` in `npm run check`) |
+| C2 | Readability audit: simple language, concrete behaviours | **Done** (`npm run audit-readability`) |
+| C3 | `cultural-adaptive-v2` versioning when stems change materially | **Partial** (`cultural-adaptive-v1/meta.json`; bump on material change) |
+| C4 | Optional new `QuestionStemRegion` bundles (same `stemVariants` shape) | **Done** (`francophone_west_africa`, `east_africa` + fallbacks) |
 
 ---
 
@@ -52,9 +52,9 @@ Two complementary signals exist in code:
 
 | ID | Ticket | Status |
 |----|--------|--------|
-| D1 | Item-pair contradiction flags (research-only, same construct) | **Backlog** |
-| D2 | Env-tunable `ProfileAdaptiveConfig` for field studies | **Backlog** |
-| D3 | Diminishing-returns / stop rules telemetry in exports | **Backlog** |
+| D1 | Item-pair contradiction flags (research-only, same construct) | **Done** |
+| D2 | Env-tunable `ProfileAdaptiveConfig` for field studies | **Done** |
+| D3 | Diminishing-returns / stop rules telemetry in exports | **Done** |
 
 ---
 
@@ -63,7 +63,7 @@ Two complementary signals exist in code:
 | ID | Ticket | Status |
 |----|--------|--------|
 | E1 | Foundation: `group-cognitive-analysis` clusters + diversity + Step 4 env mismatch | **Done** |
-| E2 | Privacy-tier API (aggregate-only server path) | **Backlog** |
+| E2 | Privacy-tier API (aggregate-only server path) | **Done** (`POST /api/cohort/aggregate`) |
 
 ---
 
@@ -73,7 +73,7 @@ Two complementary signals exist in code:
 |----|--------|--------|
 | F1 | IndexedDB bank cache + offline sessions | **Done** (existing) |
 | F2 | “Export full session JSON” including A1–A3 fields (results button + ZIP `full-session.json` + offline queue) | **Done** |
-| F3 | Service worker / first-visit bundled bank guarantee | **Backlog** |
+| F3 | Service worker / first-visit bundled bank guarantee | **Done** (`sw.js` v3 + cultural-adaptive precache) |
 
 ---
 

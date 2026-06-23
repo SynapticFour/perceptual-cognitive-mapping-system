@@ -4,12 +4,12 @@
  */
 
 import type { AssessmentQuestion, QuestionStemRegion } from '@/data/questions';
-import { culturalAdaptiveStemKey } from '@/lib/cultural-adaptive-bank';
+import { culturalAdaptiveStemKey, STEM_REGION_FALLBACK_CHAIN } from './stem-region-fallback';
 
 export type { QuestionStemRegion } from '@/data/questions';
 
 /** Re-export locale/env → region mapping used when loading banks and when resolving display text. */
-export { culturalAdaptiveStemKey as stemRegionFromLocale } from '@/lib/cultural-adaptive-bank';
+export { culturalAdaptiveStemKey as stemRegionFromLocale } from './stem-region-fallback';
 
 function trimmed(s: string | undefined): string | undefined {
   if (typeof s !== 'string') return undefined;
@@ -18,20 +18,26 @@ function trimmed(s: string | undefined): string | undefined {
 }
 
 /**
- * Pick the stem for `region`, then fall back to `global`, then to `question.text`.
- * Preserves measurement intent: all variants are authored as paraphrases of the same construct.
+ * Pick the stem for `region`, walking {@link STEM_REGION_FALLBACK_CHAIN}, then `question.text`.
+ * Preserves measurement intent: all variants are paraphrases of the same construct.
  */
 export function resolveStemForRegion(question: AssessmentQuestion, region: QuestionStemRegion): string {
   const sv = question.stemVariants;
   if (!sv) {
     return trimmed(question.text) ?? question.id;
   }
-  const primary = trimmed(sv[region]);
-  if (primary) return primary;
-  const globalFb = trimmed(sv.global);
-  if (globalFb) return globalFb;
+  const chain: QuestionStemRegion[] = [region, ...STEM_REGION_FALLBACK_CHAIN[region]];
+  for (const key of chain) {
+    const t = trimmed(sv[key]);
+    if (t) return t;
+  }
   const any =
-    trimmed(sv.ghana) ?? trimmed(sv.west_africa) ?? trimmed(sv.global) ?? trimmed(question.text);
+    trimmed(sv.francophone_west_africa) ??
+    trimmed(sv.east_africa) ??
+    trimmed(sv.ghana) ??
+    trimmed(sv.west_africa) ??
+    trimmed(sv.global) ??
+    trimmed(question.text);
   return any ?? question.id;
 }
 

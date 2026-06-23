@@ -5,6 +5,7 @@ import type { CognitiveModel } from '@/core/cognitive-pipeline';
 import { formatTraitLabel } from '@/core/traits/trait-mapping';
 import { TRAIT_DOMAIN_HEX, formatTraitDomainLabel, type TraitDomain } from '@/core/traits/trait-domains';
 import type { UiStrings } from '@/lib/ui-strings';
+import { isPcmsDebugField } from '@/lib/pcms-debug';
 
 export interface VectorViewProps {
   model: CognitiveModel;
@@ -15,11 +16,11 @@ export interface VectorViewProps {
 
 export default function VectorView({ model, strings, topN = 14 }: VectorViewProps) {
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'development') return;
+    if (!isPcmsDebugField()) return;
     console.log(
-      '[PCMS constellation] VectorView: rendering',
+      '[PCMS_DEBUG_FIELD] VectorView:',
       model.activations.length,
-      'activation row(s) (expected many, not 1)'
+      'activation row(s)'
     );
   }, [model.fingerprint, model.activations.length]);
 

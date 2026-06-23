@@ -51,8 +51,13 @@ export type AssessmentQuestionCategory =
   | 'structure'
   | 'flexibility';
 
-/** Regional English stem bundle for the same measurement intent (e.g. cultural-adaptive bank). */
-export type QuestionStemRegion = 'global' | 'ghana' | 'west_africa';
+/** Regional stem bundle for the same measurement intent (e.g. cultural-adaptive bank). */
+export type QuestionStemRegion =
+  | 'global'
+  | 'ghana'
+  | 'west_africa'
+  | 'francophone_west_africa'
+  | 'east_africa';
 
 const QUESTION_CATEGORY_VALUES: AssessmentQuestionCategory[] = [
   'focus',
@@ -97,7 +102,7 @@ export interface AssessmentQuestion {
    * When present, display text can be chosen per {@link QuestionStemRegion} at runtime
    * (see `resolveQuestionDisplayText` / `resolveStemForRegion`); `text` remains the load-time default.
    */
-  stemVariants?: Record<QuestionStemRegion, string>;
+  stemVariants?: Partial<Record<QuestionStemRegion, string>>;
 }
 
 /** Map a schema-valid JSON row into the in-memory assessment shape. */
@@ -105,9 +110,8 @@ export function jsonEntryToAssessmentQuestion(row: QuestionBankJsonEntry): Asses
   const gh = typeof row.gh_variant === 'string' ? row.gh_variant.trim() : '';
   const stemVariants =
     gh.length > 0
-      ? ({ global: row.text, ghana: gh, west_africa: gh } satisfies Record<
-          QuestionStemRegion,
-          string
+      ? ({ global: row.text, ghana: gh, west_africa: gh } satisfies Partial<
+          Record<QuestionStemRegion, string>
         >)
       : undefined;
 

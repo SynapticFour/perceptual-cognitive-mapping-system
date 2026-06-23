@@ -112,11 +112,11 @@ export default function MapView({ model, strings, userAccentColor, patternHighli
   })();
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'development') return;
+    if (!isPcmsDebugField()) return;
     console.log(
-      '[PCMS constellation] MapView: rendering',
+      '[PCMS_DEBUG_FIELD] MapView:',
       model.activations.length,
-      'activation point(s) (expected many, not 1)'
+      'activation point(s)'
     );
   }, [model.fingerprint, model.activations.length]);
 

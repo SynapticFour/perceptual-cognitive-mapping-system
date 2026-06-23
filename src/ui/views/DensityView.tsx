@@ -108,11 +108,11 @@ export default function DensityView({
   );
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'development') return;
+    if (!isPcmsDebugField()) return;
     console.log(
-      '[PCMS constellation] DensityView: rendering',
+      '[PCMS_DEBUG_FIELD] DensityView:',
       model.activations.length,
-      'activation point(s) (expected many, not 1)'
+      'activation point(s)'
     );
   }, [model.fingerprint, model.activations.length]);
 

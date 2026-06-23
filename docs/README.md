@@ -15,6 +15,8 @@
 - **[Data Model](./data-model.md)** - Database schema and data structure documentation
 
 #### **Research Documentation**
+- **[Academic validation & adaptation programme](./ACADEMIC_VALIDATION_AND_ADAPTATION_PROGRAMME.md)** — IRB-ready validation vs localization workstreams; regional profiles (Francophone WA, East Africa)
+- **[Technical implementation backlog](./TECHNICAL_IMPLEMENTATION_BACKLOG.md)** — Engineering priorities without expert gate
 - **[Research action plan](./RESEARCH_ACTION_PLAN.md)** — Phased path to evidence, IRB, pre-registration, publication
 - **[Validation protocol](./VALIDATION_PROTOCOL.md)** — Honest psychometric status and Phase 1 bar (funders / IRB)
 - **[Architectural decisions (ADR)](./DECISIONS.md)** — PCMS + ATLAS non-negotiables

@@ -46,4 +46,11 @@ describe('ethics-flow-config', () => {
     set('NEXT_PUBLIC_PCMS_ETHICS_REGION', 'ghana');
     expect(shouldIncludeGhanaEthicsStep('tw')).toBe(false);
   });
+
+  it('includes regional ethics for fr and sw locales in auto mode', () => {
+    set('NEXT_PUBLIC_PCMS_ETHICS_GHANA_STEP', 'auto');
+    set('NEXT_PUBLIC_PCMS_ETHICS_REGION', undefined);
+    expect(shouldIncludeGhanaEthicsStep('fr')).toBe(true);
+    expect(shouldIncludeGhanaEthicsStep('sw')).toBe(true);
+  });
 });
