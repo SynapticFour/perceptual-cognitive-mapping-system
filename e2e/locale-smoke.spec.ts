@@ -24,9 +24,13 @@ test.describe('Locale smoke — French (fr)', () => {
   test('draft locale banner visible when review warnings enabled', async ({ page }) => {
     await page.goto('/fr');
     const banner = page.getByRole('alert');
-    const count = await banner.count();
-    if (count > 0) {
+    if (process.env.PW_BASE_URL) {
       await expect(banner.first()).toContainText(/brouillon|revue native/i);
+    } else {
+      const count = await banner.count();
+      if (count > 0) {
+        await expect(banner.first()).toContainText(/brouillon|revue native/i);
+      }
     }
   });
 });

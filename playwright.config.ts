@@ -3,9 +3,11 @@ import { defineConfig, devices } from '@playwright/test';
 const useDevServer = process.env.PW_DEV === '1';
 /** CI runs `npm run build` first; skip the duplicate build inside Playwright. */
 const reuseBuild = process.env.PW_REUSE_BUILD === '1';
+/** When set (e.g. https://map.synapticfour.com), run e2e against live deployment — no local webServer. */
+const externalBase = process.env.PW_BASE_URL?.replace(/\/$/, '');
 /** Dedicated port so e2e does not collide with a developer `next dev` on :3000. */
 const port = process.env.PLAYWRIGHT_PORT ?? '3040';
-const baseURL = `http://127.0.0.1:${port}`;
+const baseURL = externalBase ?? `http://127.0.0.1:${port}`;
 
 export default defineConfig({
   testDir: 'e2e',
@@ -21,17 +23,23 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
-  webServer: useDevServer
-    ? {
-        command: `npx next dev -p ${port}`,
-        url: baseURL,
-        reuseExistingServer: !process.env.CI,
-        timeout: 120_000,
-      }
+  ...(externalBase
+    ? {}
     : {
-        command: reuseBuild ? `npx next start -p ${port}` : `npm run build && npx next start -p ${port}`,
-        url: baseURL,
-        reuseExistingServer: false,
-        timeout: reuseBuild ? 60_000 : 300_000,
-      },
+        webServer: useDevServer
+          ? {
+              command: `npx next dev -p ${port}`,
+              url: baseURL,
+              reuseExistingServer: !process.env.CI,
+              timeout: 120_000,
+            }
+          : {
+              command: reuseBuild
+                ? `npx next start -p ${port}`
+                : `npm run build && npx next start -p ${port}`,
+              url: baseURL,
+              reuseExistingServer: false,
+              timeout: reuseBuild ? 60_000 : 300_000,
+            },
+      }),
 });
