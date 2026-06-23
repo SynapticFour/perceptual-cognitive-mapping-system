@@ -385,7 +385,8 @@
     "variants": {
       "global": "When I mean to finish one task, unrelated sounds often pull my mind away.",
       "ghana": "While I am trying to finish one piece of work, background sounds often steal my thoughts.",
-      "west_africa": "If I plan to stick to a single job, side noises still snatch my attention."
+      "west_africa": "If I plan to stick to a single job, side noises still snatch my attention.",
+      "francophone_west_africa": "Quand je compte finir une seule tâche, les bruits autour — marché, radio, appels — arrachent encore mon attention."
     }
   },
   {
@@ -399,7 +400,8 @@
     "variants": {
       "global": "I jump between small tasks many times before the main one is done.",
       "ghana": "I hop among minor jobs again and again before the big task reaches the end.",
-      "west_africa": "Little side errands split my time before the chief task is closed."
+      "west_africa": "Little side errands split my time before the chief task is closed.",
+      "francophone_west_africa": "De petites courses annexes morcellent mon temps avant que la tâche principale soit terminée."
     }
   },
   {
@@ -413,7 +415,8 @@
     "variants": {
       "global": "I can read or listen to instructions for a long stretch without losing the thread.",
       "ghana": "I hold the line of a long explanation in my head while reading or listening.",
-      "west_africa": "Long guidance stays clear in my mind while I take it in."
+      "west_africa": "Long guidance stays clear in my mind while I take it in.",
+      "francophone_west_africa": "Une longue consigne reste claire dans ma tête pendant que je la reçois."
     }
   },
   {
@@ -427,7 +430,8 @@
     "variants": {
       "global": "Small mistakes in a form or list jump out at me while I check it.",
       "ghana": "When I scan a list or form, little errors show up to me quickly.",
-      "west_africa": "Typos or missing lines catch my eye during review."
+      "west_africa": "Typos or missing lines catch my eye during review.",
+      "francophone_west_africa": "Les fautes de frappe ou les lignes manquantes me sautent aux yeux quand je relis."
     }
   },
   {
@@ -441,7 +445,8 @@
     "variants": {
       "global": "A new message alert often interrupts me even when I planned to wait.",
       "ghana": "Ping from a device often breaks my plan to stay off it for a while.",
-      "west_africa": "Notifications cut in when I meant to stay focused elsewhere."
+      "west_africa": "Notifications cut in when I meant to stay focused elsewhere.",
+      "francophone_west_africa": "Les notifications m'interrompent alors que je voulais rester concentré ailleurs."
     }
   },
   {
@@ -455,7 +460,8 @@
     "variants": {
       "global": "I return to the same task after a short break and pick up where I left off.",
       "ghana": "After stepping away briefly, I slide back into the same task smoothly.",
-      "west_africa": "A pause does not erase my place in the work I was doing."
+      "west_africa": "A pause does not erase my place in the work I was doing.",
+      "francophone_west_africa": "Une pause n'efface pas ma place dans le travail que je faisais."
     }
   },
   {
@@ -469,7 +475,8 @@
     "variants": {
       "global": "Doing two simple chores at once, like stirring and watching a pot, feels natural.",
       "ghana": "Pairing two easy physical routines at the same time feels fine to me.",
-      "west_africa": "Light dual tasks side by side do not confuse me."
+      "west_africa": "Light dual tasks side by side do not confuse me.",
+      "francophone_west_africa": "Deux petites tâches en parallèle ne me déroutent pas."
     }
   },
   {
@@ -483,7 +490,8 @@
     "variants": {
       "global": "I rely on a written note or mark so I do not forget the next step.",
       "ghana": "I leave myself a short written cue for the next action so it is not lost.",
-      "west_africa": "A scrap of paper or phone note guards the next step in my mind."
+      "west_africa": "A scrap of paper or phone note guards the next step in my mind.",
+      "francophone_west_africa": "Un bout de papier ou une note sur le téléphone me rappelle la prochaine étape."
     }
   },
   {
@@ -497,7 +505,8 @@
     "variants": {
       "global": "Background chatter fades for me when I decide to lock onto one speaker.",
       "ghana": "When I choose one voice to follow, other voices drop in importance in my ears.",
-      "west_africa": "I can narrow listening to one person amid side talk."
+      "west_africa": "I can narrow listening to one person amid side talk.",
+      "francophone_west_africa": "Je peux écouter une seule personne malgré les conversations autour."
     }
   },
   {
@@ -511,7 +520,8 @@
     "variants": {
       "global": "I lose track of time when I am deeply into a hands-on task I enjoy.",
       "ghana": "Hours can pass unnoticed when I am absorbed in a satisfying manual task.",
-      "west_africa": "A hands-on project I like can swallow my sense of clock time."
+      "west_africa": "A hands-on project I like can swallow my sense of clock time.",
+      "francophone_west_africa": "Un travail manuel qui me plaît peut faire oublier le temps qui passe."
     }
   },
   {
@@ -525,7 +535,8 @@
     "variants": {
       "global": "Switching tools mid-task costs me a moment to remember what comes next.",
       "ghana": "Changing tools in the middle of a job creates a short blank in my sequence memory.",
-      "west_africa": "Each tool swap needs a beat before the next move is clear."
+      "west_africa": "Each tool swap needs a beat before the next move is clear.",
+      "francophone_west_africa": "Chaque changement d'outil demande un moment avant que le geste suivant soit clair."
     }
   },
   {
@@ -539,7 +550,8 @@
     "variants": {
       "global": "I skim a page and miss a line that was clearly printed there.",
       "ghana": "Quick reading makes me skip a printed line that was present.",
-      "west_africa": "Fast scanning lets a visible line slip past me."
+      "west_africa": "Fast scanning lets a visible line slip past me.",
+      "francophone_west_africa": "En parcourant vite un texte, une ligne visible peut m'échapper."
     }
   },
   {
@@ -553,7 +565,8 @@
     "variants": {
       "global": "Unrelated sounds rarely pull me off a task I meant to finish.",
       "ghana": "Side noise seldom steals me from a job I chose to complete.",
-      "west_africa": "Background sound hardly breaks the task I locked onto."
+      "west_africa": "Background sound hardly breaks the task I locked onto.",
+      "francophone_west_africa": "Le bruit de fond casse rarement la tâche sur laquelle je me suis concentré."
     }
   },
   {
@@ -567,7 +580,8 @@
     "variants": {
       "global": "I stay on one task until it is done before opening side tasks.",
       "ghana": "I close the main job before I open smaller ones.",
-      "west_africa": "Side errands wait until the chief task is finished."
+      "west_africa": "Side errands wait until the chief task is finished.",
+      "francophone_west_africa": "Les courses annexes attendent que la tâche principale soit finie."
     }
   },
   {
@@ -581,7 +595,8 @@
     "variants": {
       "global": "Long stretches of reading or listening often lose me halfway.",
       "ghana": "Extended explanations often drift out of my grasp midway.",
-      "west_africa": "Long guidance tends to blur before the end."
+      "west_africa": "Long guidance tends to blur before the end.",
+      "francophone_west_africa": "Une longue consigne a tendance à s'estomper avant la fin."
     }
   },
   {
@@ -595,7 +610,8 @@
     "variants": {
       "global": "Small errors in a list are easy for me to miss on first pass.",
       "ghana": "Little mistakes hide from me during a quick check.",
-      "west_africa": "First scan of a form often leaves errors unseen."
+      "west_africa": "First scan of a form often leaves errors unseen.",
+      "francophone_west_africa": "Un premier passage sur un formulaire laisse souvent des erreurs non vues."
     }
   },
   {
@@ -609,7 +625,8 @@
     "variants": {
       "global": "I can ignore new message alerts when I planned a focus block.",
       "ghana": "Planned focus time usually holds even when the device pings.",
-      "west_africa": "I keep alerts from breaking a focus block I set."
+      "west_africa": "I keep alerts from breaking a focus block I set.",
+      "francophone_west_africa": "Je parviens à empêcher les alertes de rompre un bloc de concentration que j'ai fixé."
     }
   },
   {
@@ -623,7 +640,8 @@
     "variants": {
       "global": "After a break I often need to rebuild the whole picture of the task.",
       "ghana": "Returning from pause, I rebuild the task picture slowly.",
-      "west_africa": "Post-break restart feels like starting near the beginning."
+      "west_africa": "Post-break restart feels like starting near the beginning.",
+      "francophone_west_africa": "Après une pause, reprendre ressemble souvent à recommencer presque depuis le début."
     }
   },
   {
@@ -637,7 +655,8 @@
     "variants": {
       "global": "Even two simple chores at once feel tangled for me.",
       "ghana": "Pairing two easy routines at once confuses my hands or thoughts.",
-      "west_africa": "Dual light tasks feel knotted rather than smooth."
+      "west_africa": "Dual light tasks feel knotted rather than smooth.",
+      "francophone_west_africa": "Deux petites tâches en parallèle me semblent enchevêtrées plutôt que fluides."
     }
   },
   {
@@ -651,7 +670,8 @@
     "variants": {
       "global": "I remember the next step without needing a written cue most of the time.",
       "ghana": "Next steps stay in mind without paper or phone reminders.",
-      "west_africa": "I seldom need a note for what comes next."
+      "west_africa": "I seldom need a note for what comes next.",
+      "francophone_west_africa": "J'ai rarement besoin d'une note pour savoir quelle est la prochaine étape."
     }
   },
   {
@@ -665,7 +685,8 @@
     "variants": {
       "global": "Side chatter stays loud in my mind even when I try to focus on one speaker.",
       "ghana": "Other voices stay prominent even when I pick one person to hear.",
-      "west_africa": "Background talk keeps competing when I aim at one voice."
+      "west_africa": "Background talk keeps competing when I aim at one voice.",
+      "francophone_west_africa": "Les conversations de fond continuent de rivaliser quand je vise une seule voix."
     }
   },
   {
@@ -679,7 +700,8 @@
     "variants": {
       "global": "I rarely lose track of clock time during hands-on work.",
       "ghana": "Hands-on tasks keep my sense of passing hours steady.",
-      "west_africa": "Clock awareness stays sharp even in absorbing manual work."
+      "west_africa": "Clock awareness stays sharp even in absorbing manual work.",
+      "francophone_west_africa": "Ma conscience du temps reste vive même dans un travail manuel absorbant."
     }
   },
   {
@@ -693,7 +715,8 @@
     "variants": {
       "global": "Switching tools mid-task feels seamless with almost no pause.",
       "ghana": "Tool changes mid-job flow without a hitch.",
-      "west_africa": "Moving from one implement to another is instant for me."
+      "west_africa": "Moving from one implement to another is instant for me.",
+      "francophone_west_africa": "Passer d'un outil à l'autre est presque instantané pour moi."
     }
   },
   {
@@ -707,7 +730,8 @@
     "variants": {
       "global": "A careful read usually catches every printed line.",
       "ghana": "Slow read picks up each line that is on the page.",
-      "west_africa": "Line-by-line review rarely skips visible text."
+      "west_africa": "Line-by-line review rarely skips visible text.",
+      "francophone_west_africa": "Une relecture ligne par ligne saute rarement du texte visible."
     }
   },
   {
@@ -721,7 +745,8 @@
     "variants": {
       "global": "I can keep mental focus on one topic through long waiting periods.",
       "ghana": "Waiting a long time in a queue does not scatter my thoughts from the topic I chose.",
-      "west_africa": "Long waits leave my chosen topic stable in mind."
+      "west_africa": "Long waits leave my chosen topic stable in mind.",
+      "francophone_west_africa": "Une longue attente — file au bureau, car rapide — laisse mon sujet stable en tête."
     }
   },
   {
@@ -735,7 +760,8 @@
     "variants": {
       "global": "When plans shift at short notice, I adjust what I do next without much fuss.",
       "ghana": "If the time or place of a meeting changes late, I rearrange my next steps calmly.",
-      "west_africa": "Sudden plan changes lead me to update my next moves without long upset."
+      "west_africa": "Sudden plan changes lead me to update my next moves without long upset.",
+      "francophone_west_africa": "Un changement soudain de programme me pousse à ajuster mes prochains gestes sans longtemps perdre pied."
     }
   },
   {
@@ -749,7 +775,8 @@
     "variants": {
       "global": "Long waits in a queue feel harder if I have nothing useful in hand to do.",
       "ghana": "Standing in line for a long stretch drags more when my hands and mind are idle.",
-      "west_africa": "Empty-handed waiting in a long line wears on me."
+      "west_africa": "Empty-handed waiting in a long line wears on me.",
+      "francophone_west_africa": "Attendre les mains vides dans une longue file au marché ou au guichet m'épuise."
     }
   },
   {
@@ -763,7 +790,8 @@
     "variants": {
       "global": "I arrive within the window others expect when the time was agreed in advance.",
       "ghana": "When a time was fixed ahead, I show up inside the range people expect.",
-      "west_africa": "Agreed meeting times see me there in the expected span."
+      "west_africa": "Agreed meeting times see me there in the expected span.",
+      "francophone_west_africa": "Aux heures convenues, j'arrive dans le créneau attendu."
     }
   },
   {
@@ -777,7 +805,8 @@
     "variants": {
       "global": "If a task takes longer than guessed, I extend the time I give it without panic.",
       "ghana": "When work runs past the first guess, I widen the slot instead of rushing wildly.",
-      "west_africa": "Underestimated duration gets more room rather than panic."
+      "west_africa": "Underestimated duration gets more room rather than panic.",
+      "francophone_west_africa": "Quand la durée est sous-estimée, j'élargis le créneau plutôt que de paniquer."
     }
   },
   {
@@ -791,7 +820,8 @@
     "variants": {
       "global": "I break a big job into timed chunks with short rests in between.",
       "ghana": "Large work gets split into blocks with brief rests between.",
-      "west_africa": "Chunk-and-rest pacing is how I tackle long jobs."
+      "west_africa": "Chunk-and-rest pacing is how I tackle long jobs.",
+      "francophone_west_africa": "Découper en morceaux avec des pauses, c'est ma façon d'aborder les longues tâches."
     }
   },
   {
@@ -805,7 +835,8 @@
     "variants": {
       "global": "A clear deadline helps me finish rather than stalls me.",
       "ghana": "Knowing the end time pushes me forward instead of freezing me.",
-      "west_africa": "Fixed end dates spur completion rather than block starts."
+      "west_africa": "Fixed end dates spur completion rather than block starts.",
+      "francophone_west_africa": "Une date butoir fixe pousse à terminer plutôt qu'à bloquer le départ."
     }
   },
   {
@@ -819,7 +850,8 @@
     "variants": {
       "global": "I forget upcoming appointments unless I put them on a list or phone.",
       "ghana": "Future times slip unless I record them on paper or device.",
-      "west_africa": "Dates ahead vanish from mind without a written or digital reminder."
+      "west_africa": "Dates ahead vanish from mind without a written or digital reminder.",
+      "francophone_west_africa": "Les dates à venir disparaissent de ma tête sans rappel écrit ou sur le téléphone."
     }
   },
   {
@@ -833,7 +865,8 @@
     "variants": {
       "global": "Switching from rest to work mode takes me several minutes.",
       "ghana": "Moving from rest into active work needs a few minutes of ramp-up.",
-      "west_africa": "Cold start from break to labor is not instant for me."
+      "west_africa": "Cold start from break to labor is not instant for me.",
+      "francophone_west_africa": "Reprendre le travail après une pause n'est pas instantané pour moi."
     }
   },
   {
@@ -847,7 +880,8 @@
     "variants": {
       "global": "Group work moves faster than I expected when everyone knows their part.",
       "ghana": "Team tasks finish sooner than I thought when roles are clear.",
-      "west_africa": "Clear division of labor speeds group jobs beyond my first guess."
+      "west_africa": "Clear division of labor speeds group jobs beyond my first guess.",
+      "francophone_west_africa": "Un partage clair des rôles accélère le travail de groupe au-delà de ma première estimation."
     }
   },
   {
@@ -861,7 +895,8 @@
     "variants": {
       "global": "I underestimate how long travel will take when roads are busy.",
       "ghana": "Busy routes make my travel guess too short.",
-      "west_africa": "Traffic-heavy trips run longer than my first estimate."
+      "west_africa": "Traffic-heavy trips run longer than my first estimate.",
+      "francophone_west_africa": "Un trajet en car rapide ou en taxi dans le trafic dépasse souvent ma première estimation."
     }
   },
   {
@@ -875,7 +910,8 @@
     "variants": {
       "global": "Repeating the same morning steps in the same order settles me.",
       "ghana": "Same order of morning actions steadies my start.",
-      "west_africa": "Fixed morning sequence calms my entry into the day."
+      "west_africa": "Fixed morning sequence calms my entry into the day.",
+      "francophone_west_africa": "Une routine du matin fixe calme mon entrée dans la journée."
     }
   },
   {
@@ -889,7 +925,8 @@
     "variants": {
       "global": "If someone arrives late, I use the gap for a small useful task.",
       "ghana": "Late arrival by others becomes a slot for a tiny useful chore.",
-      "west_africa": "Unexpected gaps become pockets for small wins."
+      "west_africa": "Unexpected gaps become pockets for small wins.",
+      "francophone_west_africa": "Les trous imprévus deviennent des moments pour de petites victoires."
     }
   },
   {
@@ -903,7 +940,8 @@
     "variants": {
       "global": "Short-notice plan changes leave me rattled for a while.",
       "ghana": "Late changes to time or place unsettle me before I can move on.",
-      "west_africa": "Sudden shifts in schedule throw me off first, then I adapt."
+      "west_africa": "Sudden shifts in schedule throw me off first, then I adapt.",
+      "francophone_west_africa": "Les changements soudains d'emploi du temps me déstabilisent d'abord, puis je m'adapte."
     }
   },
   {
@@ -917,7 +955,8 @@
     "variants": {
       "global": "Long queues feel fine even with nothing in hand to occupy me.",
       "ghana": "Waiting in line a long time without activity does not bother me.",
-      "west_africa": "Idle long waits are easy on my mood."
+      "west_africa": "Idle long waits are easy on my mood.",
+      "francophone_west_africa": "Une longue attente inactive est facile à supporter pour mon humeur."
     }
   },
   {
@@ -931,7 +970,8 @@
     "variants": {
       "global": "Agreed times are hard for me to hit even when I try.",
       "ghana": "Expected arrival windows slip for me despite effort.",
-      "west_africa": "People sometimes wait for me even when I intend to be prompt."
+      "west_africa": "People sometimes wait for me even when I intend to be prompt.",
+      "francophone_west_africa": "Les gens attendent parfois pour moi même quand je compte être ponctuel."
     }
   },
   {
@@ -945,7 +985,8 @@
     "variants": {
       "global": "When a task runs long, I feel rushed rather than widening the slot.",
       "ghana": "Past-guess duration makes me hurry instead of calmly extending time.",
-      "west_africa": "Overrun tasks trigger rush feelings."
+      "west_africa": "Overrun tasks trigger rush feelings.",
+      "francophone_west_africa": "Les tâches qui dépassent le temps prévu déclenchent un sentiment de précipitation."
     }
   },
   {
@@ -959,7 +1000,8 @@
     "variants": {
       "global": "I prefer to push through a big job in one stretch without timed breaks.",
       "ghana": "Large jobs feel better in one long push than in timed chunks.",
-      "west_africa": "I avoid chunk timers on long work."
+      "west_africa": "I avoid chunk timers on long work.",
+      "francophone_west_africa": "J'évite les minuteurs par morceaux sur le travail de longue durée."
     }
   },
   {
@@ -973,7 +1015,8 @@
     "variants": {
       "global": "A firm deadline makes me freeze or delay starting.",
       "ghana": "End dates make starting harder rather than easier.",
-      "west_africa": "Deadlines stall my opening move."
+      "west_africa": "Deadlines stall my opening move.",
+      "francophone_west_africa": "Les échéances bloquent mon premier geste."
     }
   },
   {
@@ -987,7 +1030,8 @@
     "variants": {
       "global": "I keep upcoming times in mind without lists or phone reminders.",
       "ghana": "Future appointments stay in memory without writing them down.",
-      "west_africa": "I rarely miss a time I only heard spoken once."
+      "west_africa": "I rarely miss a time I only heard spoken once.",
+      "francophone_west_africa": "Je rate rarement une heure entendue une seule fois à l'oral."
     }
   },
   {
@@ -1001,7 +1045,8 @@
     "variants": {
       "global": "I snap from rest to full work speed almost immediately.",
       "ghana": "Break to labor shift happens in seconds.",
-      "west_africa": "Rest ends and work speed peaks at once."
+      "west_africa": "Rest ends and work speed peaks at once.",
+      "francophone_west_africa": "La fin du repos et le pic de vitesse au travail arrivent d'un coup pour moi."
     }
   },
   {
@@ -1015,7 +1060,8 @@
     "variants": {
       "global": "Group work often runs longer than I first guessed.",
       "ghana": "Team tasks drag past my opening estimate.",
-      "west_africa": "Shared jobs expand in clock time versus my plan."
+      "west_africa": "Shared jobs expand in clock time versus my plan.",
+      "francophone_west_africa": "Les travaux partagés s'allongent en temps par rapport à mon plan."
     }
   },
   {
@@ -1029,7 +1075,8 @@
     "variants": {
       "global": "I overguess travel time even when roads are clear.",
       "ghana": "I pad travel time more than traffic needs.",
-      "west_africa": "Clear roads still get a long time buffer from me."
+      "west_africa": "Clear roads still get a long time buffer from me.",
+      "francophone_west_africa": "Même avec les routes dégagées, je garde une longue marge de temps."
     }
   },
   {
@@ -1043,7 +1090,8 @@
     "variants": {
       "global": "Changing the order of morning steps does not unsettle me.",
       "ghana": "Shuffled morning order leaves me fine.",
-      "west_africa": "Morning sequence can vary without cost."
+      "west_africa": "Morning sequence can vary without cost.",
+      "francophone_west_africa": "La routine du matin peut varier sans me coûter grand-chose."
     }
   },
   {
@@ -1057,7 +1105,8 @@
     "variants": {
       "global": "Late arrival by others frustrates me and I struggle to use the gap.",
       "ghana": "When others are late, the open minutes feel wasted and irritating.",
-      "west_africa": "Waiting on latecomers drains me without productive use."
+      "west_africa": "Waiting on latecomers drains me without productive use.",
+      "francophone_west_africa": "Attendre des retardataires me vide sans usage productif."
     }
   },
   {
@@ -1071,7 +1120,8 @@
     "variants": {
       "global": "I expect solo tasks and group tasks to take about the same clock time.",
       "ghana": "I budget equal minutes for alone work and shared work.",
-      "west_africa": "Team versus solo duration feels similar in my planning."
+      "west_africa": "Team versus solo duration feels similar in my planning.",
+      "francophone_west_africa": "La durée en équipe et en solo me semble similaire quand je planifie."
     }
   },
   {
@@ -1085,7 +1135,8 @@
     "variants": {
       "global": "In a group talk, I wait for a clear pause before I add my point.",
       "ghana": "When many voices overlap, I hold my words until a calm opening appears.",
-      "west_africa": "In overlapping speech, I wait for a settled gap before speaking."
+      "west_africa": "In overlapping speech, I wait for a settled gap before speaking.",
+      "francophone_west_africa": "Quand plusieurs personnes parlent en même temps, j'attends un silence net avant de prendre la parole."
     }
   },
   {
@@ -1099,7 +1150,8 @@
     "variants": {
       "global": "I speak up as soon as I have something to add, even if others are still talking.",
       "ghana": "If I have a thought, I offer it even while side talk continues.",
-      "west_africa": "I insert my point when ready rather than waiting for full quiet."
+      "west_africa": "I insert my point when ready rather than waiting for full quiet.",
+      "francophone_west_africa": "J'insère mon propos quand je suis prêt plutôt que d'attendre le silence complet."
     }
   },
   {
@@ -1113,7 +1165,8 @@
     "variants": {
       "global": "I yield the floor when someone else has been waiting with a raised hand.",
       "ghana": "If another person has waited visibly, I pass the turn.",
-      "west_africa": "Visible wait gets my silence so they can speak."
+      "west_africa": "Visible wait gets my silence so they can speak.",
+      "francophone_west_africa": "Quand quelqu'un attend visiblement, je me tais pour le laisser parler."
     }
   },
   {
@@ -1127,7 +1180,8 @@
     "variants": {
       "global": "I finish my full thought even if another person is ready to speak.",
       "ghana": "I close my thought before yielding even when someone is poised.",
-      "west_africa": "I complete my line before opening space."
+      "west_africa": "I complete my line before opening space.",
+      "francophone_west_africa": "Je termine ma phrase avant d'ouvrir l'espace aux autres."
     }
   },
   {
@@ -1141,7 +1195,8 @@
     "variants": {
       "global": "I slow my speech when the other person looks confused.",
       "ghana": "Confusion on the other face leads me to ease my pace.",
-      "west_africa": "I stretch words slower when understanding seems low."
+      "west_africa": "I stretch words slower when understanding seems low.",
+      "francophone_west_africa": "J'articule plus lentement quand la compréhension semble faible."
     }
   },
   {
@@ -1155,7 +1210,8 @@
     "variants": {
       "global": "I keep the same speech speed even when the listener looks lost.",
       "ghana": "Listener confusion does not change my talking speed much.",
-      "west_africa": "My pace stays steady regardless of puzzled looks."
+      "west_africa": "My pace stays steady regardless of puzzled looks.",
+      "francophone_west_africa": "Mon débit reste stable malgré des regards perplexes."
     }
   },
   {
@@ -1169,7 +1225,8 @@
     "variants": {
       "global": "I check whether the other person understood by asking a short question.",
       "ghana": "I use a brief check question after giving instructions.",
-      "west_africa": "After directions, I ask a tiny confirmation question."
+      "west_africa": "After directions, I ask a tiny confirmation question.",
+      "francophone_west_africa": "Après des consignes, je pose une petite question de confirmation."
     }
   },
   {
@@ -1183,7 +1240,8 @@
     "variants": {
       "global": "I move on after instructions without checking if they were clear.",
       "ghana": "I leave instructions and assume all is clear unless someone stops me.",
-      "west_africa": "I rarely ask a quick check after I explain steps."
+      "west_africa": "I rarely ask a quick check after I explain steps.",
+      "francophone_west_africa": "Je demande rarement une vérification rapide après avoir expliqué les étapes."
     }
   },
   {
@@ -1197,7 +1255,8 @@
     "variants": {
       "global": "If someone did not hear me, I repeat the same point in simpler shorter words.",
       "ghana": "When my line was missed, I say it again shorter and plainer.",
-      "west_africa": "Missed hearing gets a brief second version from me."
+      "west_africa": "Missed hearing gets a brief second version from me.",
+      "francophone_west_africa": "Si je n'ai pas bien entendu, je reformule brièvement."
     }
   },
   {
@@ -1211,7 +1270,8 @@
     "variants": {
       "global": "If someone did not hear me, I repeat the same long wording again.",
       "ghana": "After a miss, I say the same long line a second time.",
-      "west_africa": "My second try uses the same long phrasing as the first."
+      "west_africa": "My second try uses the same long phrasing as the first.",
+      "francophone_west_africa": "Ma deuxième tentative reprend la même formulation longue que la première."
     }
   },
   {
@@ -1225,7 +1285,8 @@
     "variants": {
       "global": "I notice hand signals or nods that mean wait or go ahead.",
       "ghana": "Small hand or head cues that mean pause or continue are visible to me.",
-      "west_africa": "Silent turn cues read clearly for me."
+      "west_africa": "Silent turn cues read clearly for me.",
+      "francophone_west_africa": "Les signaux silencieux de tour de parole me sont clairs."
     }
   },
   {
@@ -1239,7 +1300,8 @@
     "variants": {
       "global": "Small wait-or-go cues from hands or head often pass me by.",
       "ghana": "Tiny silent cues about turn-taking slip past me.",
-      "west_africa": "Hand and nod signals about pausing are easy to miss for me."
+      "west_africa": "Hand and nod signals about pausing are easy to miss for me.",
+      "francophone_west_africa": "Les gestes ou hochements indiquant une pause m'échappent facilement."
     }
   },
   {
@@ -1253,7 +1315,8 @@
     "variants": {
       "global": "I can follow one quiet speaker even when side chatter continues.",
       "ghana": "One low voice stays clear to me amid background talk.",
-      "west_africa": "Soft main speaker plus side noise still works for my listening."
+      "west_africa": "Soft main speaker plus side noise still works for my listening.",
+      "francophone_west_africa": "Une voix principale douce avec du bruit latéral fonctionne encore pour mon écoute."
     }
   },
   {
@@ -1267,7 +1330,8 @@
     "variants": {
       "global": "Side chatter makes one quiet speaker hard for me to track.",
       "ghana": "Background talk drowns a soft main voice for me.",
-      "west_africa": "Low lead voice plus chatter loses me."
+      "west_africa": "Low lead voice plus chatter loses me.",
+      "francophone_west_africa": "Une voix principale basse plus le bavardage autour me perdent."
     }
   },
   {
@@ -1281,7 +1345,8 @@
     "variants": {
       "global": "I leave a short quiet gap so someone else can join.",
       "ghana": "I leave a small open space in the talk so another person can enter.",
-      "west_africa": "I pause briefly so another voice can enter the talk."
+      "west_africa": "I pause briefly so another voice can enter the talk.",
+      "francophone_west_africa": "Je marque une courte pause pour qu'une autre voix entre dans l'échange."
     }
   },
   {
@@ -1295,7 +1360,8 @@
     "variants": {
       "global": "I jump in during short gaps before others have finished their line.",
       "ghana": "I enter the gap early, before the other line feels fully closed.",
-      "west_africa": "I start speaking in small openings even if the line may not be done."
+      "west_africa": "I start speaking in small openings even if the line may not be done.",
+      "francophone_west_africa": "Je commence à parler dans de petites ouvertures même si la phrase n'est peut-être pas finie."
     }
   },
   {
@@ -1309,7 +1375,8 @@
     "variants": {
       "global": "After a noisy spell, I repeat a key word slowly before I go on.",
       "ghana": "When noise just dropped, I say a key word again, slowly, then continue.",
-      "west_africa": "After loud noise, I restate one key word at a slower pace."
+      "west_africa": "After loud noise, I restate one key word at a slower pace.",
+      "francophone_west_africa": "Après un bruit fort — moto, haut-parleur — je répète un mot clé plus lentement."
     }
   },
   {
@@ -1323,7 +1390,8 @@
     "variants": {
       "global": "After a noisy spell, I continue without repeating a key word.",
       "ghana": "When noise ends, I move on without restating a key word.",
-      "west_africa": "I do not restate a key word after the room was loud."
+      "west_africa": "I do not restate a key word after the room was loud.",
+      "francophone_west_africa": "Je ne répète pas un mot clé après que la pièce a été bruyante."
     }
   },
   {
@@ -1337,7 +1405,8 @@
     "variants": {
       "global": "When several people speak at once, I lower my volume so one line can come through.",
       "ghana": "If many voices clash, I soften my voice so one line can surface.",
-      "west_africa": "During overlap, I speak more softly so one thread can win through."
+      "west_africa": "During overlap, I speak more softly so one thread can win through.",
+      "francophone_west_africa": "Pendant le chevauchement, je parle plus doucement pour qu'un fil puisse passer."
     }
   },
   {
@@ -1351,7 +1420,8 @@
     "variants": {
       "global": "When several people speak at once, I raise my volume so I am heard.",
       "ghana": "If many voices clash, I push my voice louder to break through.",
-      "west_africa": "During overlap, I speak up louder to cut through."
+      "west_africa": "During overlap, I speak up louder to cut through.",
+      "francophone_west_africa": "Pendant le chevauchement, je hausse la voix pour percer."
     }
   },
   {
@@ -1365,7 +1435,8 @@
     "variants": {
       "global": "I point to what I mean when words alone might be unclear.",
       "ghana": "If words might confuse, I point at the object or place I mean.",
-      "west_africa": "I use a pointing gesture when plain words might miss."
+      "west_africa": "I use a pointing gesture when plain words might miss.",
+      "francophone_west_africa": "J'utilise un geste de la main quand les mots simples risquent de ne pas suffire."
     }
   },
   {
@@ -1379,7 +1450,8 @@
     "variants": {
       "global": "I rely on words only even when pointing would make the meaning clearer.",
       "ghana": "Even when a gesture would help, I stick to words alone.",
-      "west_africa": "I avoid pointing even when it would clear things up."
+      "west_africa": "I avoid pointing even when it would clear things up.",
+      "francophone_west_africa": "J'évite de montrer du doigt même quand cela clarifierait les choses."
     }
   },
   {
@@ -1393,7 +1465,8 @@
     "variants": {
       "global": "I lose thread of a story if several people jump in without order.",
       "ghana": "A tale told out of turn by many speakers confuses my tracking.",
-      "west_africa": "Unordered jump-ins make me lose the narrative line."
+      "west_africa": "Unordered jump-ins make me lose the narrative line.",
+      "francophone_west_africa": "Les interventions désordonnées me font perdre le fil du récit."
     }
   },
   {
@@ -1407,7 +1480,8 @@
     "variants": {
       "global": "Many unordered speakers do not confuse me; I rebuild the story.",
       "ghana": "Jumping speakers still leave me with a clear story picture.",
-      "west_africa": "Chaotic turn order does not lose me."
+      "west_africa": "Chaotic turn order does not lose me.",
+      "francophone_west_africa": "L'ordre chaotique des tours de parole ne me perd pas."
     }
   },
   {
@@ -1421,7 +1495,8 @@
     "variants": {
       "global": "I step half a step back when someone steps forward to speak.",
       "ghana": "If a person moves forward to speak, I make a small space with my feet.",
-      "west_africa": "When someone advances to talk, I ease back a little."
+      "west_africa": "When someone advances to talk, I ease back a little.",
+      "francophone_west_africa": "Quand quelqu'un s'avance pour parler, je cède un peu."
     }
   },
   {
@@ -1435,7 +1510,8 @@
     "variants": {
       "global": "I write numbered steps before starting a new multi-step chore.",
       "ghana": "Fresh many-step tasks get a numbered list from me first.",
-      "west_africa": "New complex chores start with ordered notes."
+      "west_africa": "New complex chores start with ordered notes.",
+      "francophone_west_africa": "Une nouvelle tâche complexe commence par des notes ordonnées."
     }
   },
   {
@@ -1449,7 +1525,8 @@
     "variants": {
       "global": "I like open-ended days where tasks can reshuffle freely.",
       "ghana": "Flexible days with reshuffle room feel better than rigid slots.",
-      "west_africa": "Open schedules please me more than fixed minute maps."
+      "west_africa": "Open schedules please me more than fixed minute maps.",
+      "francophone_west_africa": "Des emplois du temps ouverts me plaisent plus que des plannings à la minute."
     }
   },
   {
@@ -1463,7 +1540,8 @@
     "variants": {
       "global": "Clear written rules lower my stress in shared spaces.",
       "ghana": "Posted plain rules calm me in shared work or living areas.",
-      "west_africa": "Visible simple rules ease me in common spaces."
+      "west_africa": "Visible simple rules ease me in common spaces.",
+      "francophone_west_africa": "Des règles simples visibles m'apaisent dans les espaces partagés."
     }
   },
   {
@@ -1477,7 +1555,8 @@
     "variants": {
       "global": "If materials are missing, I improvise with what is nearby.",
       "ghana": "Absent tools lead me to nearby substitutes.",
-      "west_africa": "Gaps in supplies spark on-the-spot swaps."
+      "west_africa": "Gaps in supplies spark on-the-spot swaps.",
+      "francophone_west_africa": "Les manques de fournitures déclenchent des remplacements sur le moment."
     }
   },
   {
@@ -1491,7 +1570,8 @@
     "variants": {
       "global": "I pack bags the night before a morning trip.",
       "ghana": "Evening-before packing is my habit for early travel.",
-      "west_africa": "Morning trips get bags ready the prior night."
+      "west_africa": "Morning trips get bags ready the prior night.",
+      "francophone_west_africa": "Pour les sorties du matin, je prépare les sacs la veille au soir."
     }
   },
   {
@@ -1505,7 +1585,8 @@
     "variants": {
       "global": "Surprise visits feel disruptive when I had a fixed task list.",
       "ghana": "Unplanned guests clash with a tight written list day.",
-      "west_africa": "Pop-in visits jar me on list-heavy days."
+      "west_africa": "Pop-in visits jar me on list-heavy days.",
+      "francophone_west_africa": "Les visites surprises me dérangent les jours chargés de listes."
     }
   },
   {
@@ -1519,7 +1600,8 @@
     "variants": {
       "global": "I reset objects to the same spots so I can find them again.",
       "ghana": "Things return to fixed homes so search is short.",
-      "west_africa": "Stable object homes speed finding."
+      "west_africa": "Stable object homes speed finding.",
+      "francophone_west_africa": "Des places stables pour les objets accélèrent la recherche."
     }
   },
   {
@@ -1533,7 +1615,8 @@
     "variants": {
       "global": "I question a rule that blocks safety or fairness even if it is written.",
       "ghana": "Written rules that risk harm or unfairness get a spoken question from me.",
-      "west_africa": "I raise concerns about bad posted rules."
+      "west_africa": "I raise concerns about bad posted rules.",
+      "francophone_west_africa": "Je soulève des inquiétudes quand des règles affichées me semblent mauvaises."
     }
   },
   {
@@ -1547,7 +1630,8 @@
     "variants": {
       "global": "Doing steps out of order on purpose feels uncomfortable if order matters for quality.",
       "ghana": "Wrong order on purpose feels off when order affects outcome.",
-      "west_africa": "Sequence jumps unsettle me when sequence affects results."
+      "west_africa": "Sequence jumps unsettle me when sequence affects results.",
+      "francophone_west_africa": "Sauter des étapes me déstabilise quand l'ordre influence le résultat."
     }
   },
   {
@@ -1561,7 +1645,8 @@
     "variants": {
       "global": "I prefer a recipe or pattern the first time I try a new craft.",
       "ghana": "First attempt at a craft wants a pattern in hand.",
-      "west_africa": "New craft starts with a model to copy."
+      "west_africa": "New craft starts with a model to copy.",
+      "francophone_west_africa": "Un nouvel artisanat commence par un modèle à copier."
     }
   },
   {
@@ -1575,7 +1660,8 @@
     "variants": {
       "global": "I estimate time for each subtask before I begin.",
       "ghana": "Subtask minutes get guessed before start.",
-      "west_africa": "I slice total time across parts ahead of work."
+      "west_africa": "I slice total time across parts ahead of work.",
+      "francophone_west_africa": "Je répartis le temps total entre les parties avant de travailler."
     }
   },
   {
@@ -1589,7 +1675,8 @@
     "variants": {
       "global": "I enjoy discovering the path while moving rather than mapping everything first.",
       "ghana": "Forward motion with partial map feels fun.",
-      "west_africa": "Full pre-map is less fun than discover-as-I-go."
+      "west_africa": "Full pre-map is less fun than discover-as-I-go.",
+      "francophone_west_africa": "Tout pré-planifier est moins plaisant pour moi que découvrir en avançant."
     }
   },
   {
@@ -1603,7 +1690,8 @@
     "variants": {
       "global": "I start multi-step chores without writing steps first.",
       "ghana": "Many-step jobs begin straight from the head without lists.",
-      "west_africa": "I launch complex tasks without numbered prep."
+      "west_africa": "I launch complex tasks without numbered prep.",
+      "francophone_west_africa": "Je lance des tâches complexes sans préparation numérotée."
     }
   },
   {
@@ -1617,7 +1705,8 @@
     "variants": {
       "global": "Tight schedules with little reshuffle room feel better to me than loose days.",
       "ghana": "Minute-tight plans beat fully open days for my comfort.",
-      "west_africa": "I prefer heavy structure over floating tasks."
+      "west_africa": "I prefer heavy structure over floating tasks.",
+      "francophone_west_africa": "Je préfère une forte structure aux tâches flottantes."
     }
   },
   {
@@ -1631,7 +1720,8 @@
     "variants": {
       "global": "Posted rules feel neutral or slightly stressful rather than calming.",
       "ghana": "Wall rules neither calm nor excite me; slight stress.",
-      "west_africa": "Written shared rules add little comfort."
+      "west_africa": "Written shared rules add little comfort.",
+      "francophone_west_africa": "Des règles partagées écrites ajoutent peu de confort pour moi."
     }
   },
   {
@@ -1645,7 +1735,8 @@
     "variants": {
       "global": "Missing materials stall me until the right tool appears.",
       "ghana": "Without exact supplies I pause rather than swap.",
-      "west_africa": "Wrong-tool work is hard to start."
+      "west_africa": "Wrong-tool work is hard to start.",
+      "francophone_west_africa": "Commencer sans le bon outil me est difficile."
     }
   },
   {
@@ -1659,7 +1750,8 @@
     "variants": {
       "global": "I pack on the morning of travel rather than the night before.",
       "ghana": "Travel bags get packed at wake time.",
-      "west_africa": "Same-day morning pack is my norm."
+      "west_africa": "Same-day morning pack is my norm.",
+      "francophone_west_africa": "Préparer le sac le matin même est ma norme."
     }
   },
   {
@@ -1673,7 +1765,8 @@
     "variants": {
       "global": "Surprise visits feel welcome even on a fixed task day.",
       "ghana": "Unplanned guests fit fine beside a list.",
-      "west_africa": "Drop-in visitors sit well with planned chores."
+      "west_africa": "Drop-in visitors sit well with planned chores.",
+      "francophone_west_africa": "Les visiteurs de passage s'accordent bien avec les corvées planifiées."
     }
   },
   {
@@ -1687,7 +1780,8 @@
     "variants": {
       "global": "I leave tools where I last used them and search later.",
       "ghana": "Objects rest where dropped until needed again.",
-      "west_africa": "Floating placement is my habit."
+      "west_africa": "Floating placement is my habit.",
+      "francophone_west_africa": "Laisser les choses où elles tombent est mon habitude."
     }
   },
   {
@@ -1701,7 +1795,8 @@
     "variants": {
       "global": "I keep the same tool layout between sessions so I can grab fast.",
       "ghana": "Tools return to the same layout each time so my hand finds them fast.",
-      "west_africa": "I reset my workspace layout the same way between sessions."
+      "west_africa": "I reset my workspace layout the same way between sessions.",
+      "francophone_west_africa": "Je réorganise mon espace de travail de la même façon entre les sessions."
     }
   },
   {
@@ -1715,7 +1810,8 @@
     "variants": {
       "global": "Order of steps rarely matters to me if the end result looks fine.",
       "ghana": "End quality OK means order felt flexible to me.",
-      "west_africa": "Step sequence is loose in my mind."
+      "west_africa": "Step sequence is loose in my mind.",
+      "francophone_west_africa": "La séquence des étapes est lâche dans ma tête."
     }
   },
   {
@@ -1729,7 +1825,8 @@
     "variants": {
       "global": "I try a new craft first by experimenting without a pattern.",
       "ghana": "Pattern-free first trial is my craft style.",
-      "west_africa": "New making starts with free play."
+      "west_africa": "New making starts with free play.",
+      "francophone_west_africa": "Une nouvelle fabrication commence par le jeu libre."
     }
   },
   {
@@ -1743,7 +1840,8 @@
     "variants": {
       "global": "I begin work and discover time needs as I go.",
       "ghana": "Clock needs reveal during the job.",
-      "west_africa": "No upfront subtask time guesses."
+      "west_africa": "No upfront subtask time guesses.",
+      "francophone_west_africa": "Je ne devine pas le temps par sous-tâche à l'avance."
     }
   },
   {
@@ -1757,7 +1855,8 @@
     "variants": {
       "global": "I want the full map before any first step.",
       "ghana": "Complete preview before motion feels required.",
-      "west_africa": "All-at-once planning precedes action."
+      "west_africa": "All-at-once planning precedes action.",
+      "francophone_west_africa": "Tout planifier d'un bloc précède l'action."
     }
   },
   {
@@ -1771,7 +1870,8 @@
     "variants": {
       "global": "Shared tidy zones matter less to me than finishing the job.",
       "ghana": "End finish beats mid-way neat placement for me.",
-      "west_africa": "Completion tops strict tidiness."
+      "west_africa": "Completion tops strict tidiness.",
+      "francophone_west_africa": "Terminer prime sur un rangement strict."
     }
   },
   {
@@ -1785,7 +1885,8 @@
     "variants": {
       "global": "When the method must change mid-task, I switch without long complaint.",
       "ghana": "A required method swap mid-job gets a quick shift from me.",
-      "west_africa": "Forced path change mid-task draws little grumble time."
+      "west_africa": "Forced path change mid-task draws little grumble time.",
+      "francophone_west_africa": "Un changement de cap forcé en pleine tâche m'accorde peu de temps de rouspétance."
     }
   },
   {
@@ -1799,7 +1900,8 @@
     "variants": {
       "global": "Trying a new route to a familiar place feels refreshing.",
       "ghana": "A different path to the same end feels like a treat.",
-      "west_africa": "Unfamiliar roads to known places please me."
+      "west_africa": "Unfamiliar roads to known places please me.",
+      "francophone_west_africa": "Des chemins inconnus vers des lieux connus me plaisent."
     }
   },
   {
@@ -1813,7 +1915,8 @@
     "variants": {
       "global": "I feel uneasy the first day a daily routine is interrupted.",
       "ghana": "Day one of a broken routine feels off in my body.",
-      "west_africa": "Routine break day one unsettles me."
+      "west_africa": "Routine break day one unsettles me.",
+      "francophone_west_africa": "Casser la routine le premier jour me déstabilise."
     }
   },
   {
@@ -1827,7 +1930,8 @@
     "variants": {
       "global": "If a tool breaks, I look for another object that can do the job.",
       "ghana": "Tool failure sends me hunting for a stand-in object.",
-      "west_africa": "Broken gear triggers substitute search."
+      "west_africa": "Broken gear triggers substitute search.",
+      "francophone_west_africa": "Un outil en panne déclenche la recherche d'un substitut."
     }
   },
   {
@@ -1841,7 +1945,8 @@
     "variants": {
       "global": "New faces in a steady work group take me a meeting or two to adjust to.",
       "ghana": "Fresh members in a fixed team need a couple meets from me.",
-      "west_africa": "Steady crew changes need warm-up meets."
+      "west_africa": "Steady crew changes need warm-up meets.",
+      "francophone_west_africa": "Des changements d'équipe réguliers demandent des mises en route chaleureuses."
     }
   },
   {
@@ -1855,7 +1960,8 @@
     "variants": {
       "global": "Weather shifts my outdoor plan and I rebuild the plan fast.",
       "ghana": "Rain or wind reshapes outdoor work with quick replan.",
-      "west_africa": "Sky change gets a fast alternate plan."
+      "west_africa": "Sky change gets a fast alternate plan.",
+      "francophone_west_africa": "Un changement de ciel — pluie soudaine, harmattan — pousse vite un plan de repli."
     }
   },
   {
@@ -1869,7 +1975,8 @@
     "variants": {
       "global": "I revisit old habits even when a new habit would work better.",
       "ghana": "Better new habit still loses to old groove sometimes.",
-      "west_africa": "Comfort habit wins over improved new pattern at times."
+      "west_africa": "Comfort habit wins over improved new pattern at times.",
+      "francophone_west_africa": "L'habitude confortable l'emporte parfois sur une nouvelle façon améliorée."
     }
   },
   {
@@ -1883,7 +1990,8 @@
     "variants": {
       "global": "I need the reason for a rule change before I accept the new rule.",
       "ghana": "Rule swaps want a clear why from me.",
-      "west_africa": "New rules need rationale to stick."
+      "west_africa": "New rules need rationale to stick.",
+      "francophone_west_africa": "Les nouvelles règles ont besoin d'une justification pour tenir."
     }
   },
   {
@@ -1897,7 +2005,8 @@
     "variants": {
       "global": "Updated software layout slows me down until I explore every corner.",
       "ghana": "Fresh app layout needs a full click tour before speed returns.",
-      "west_africa": "UI redesign needs exploration time."
+      "west_africa": "UI redesign needs exploration time.",
+      "francophone_west_africa": "Un changement d'interface demande du temps d'exploration."
     }
   },
   {
@@ -1911,7 +2020,8 @@
     "variants": {
       "global": "Canceled plans free me to do something else useful quickly.",
       "ghana": "Plan drops become quick slots for other useful acts.",
-      "west_africa": "Cancelation redirects me fast to next useful thing."
+      "west_africa": "Cancelation redirects me fast to next useful thing.",
+      "francophone_west_africa": "Une annulation me redirige vite vers la prochaine chose utile."
     }
   },
   {
@@ -1925,7 +2035,8 @@
     "variants": {
       "global": "I sample unfamiliar food willingly when ingredients are named.",
       "ghana": "Named parts make unknown dishes OK to taste.",
-      "west_africa": "Ingredient labels open me to new plates."
+      "west_africa": "Ingredient labels open me to new plates.",
+      "francophone_west_africa": "Des ingrédients inconnus m'ouvrent à de nouveaux plats."
     }
   },
   {
@@ -1939,7 +2050,8 @@
     "variants": {
       "global": "I return smoothly to a routine after a holiday break.",
       "ghana": "Post-holiday rhythm snaps back for me.",
-      "west_africa": "After time off, old daily pattern returns easily."
+      "west_africa": "After time off, old daily pattern returns easily.",
+      "francophone_west_africa": "Après un congé, l'ancien rythme quotidien revient facilement."
     }
   },
   {
@@ -1953,7 +2065,8 @@
     "variants": {
       "global": "Method change mid-task frustrates me for a noticeable stretch.",
       "ghana": "Mid-job method swap costs me mood time.",
-      "west_africa": "Path change mid-task irritates before I move on."
+      "west_africa": "Path change mid-task irritates before I move on.",
+      "francophone_west_africa": "Un changement de chemin en pleine tâche m'irrite avant de passer à la suite."
     }
   },
   {
@@ -1967,7 +2080,8 @@
     "variants": {
       "global": "A new route to a familiar place feels like unnecessary risk.",
       "ghana": "Different roads to the same place feel risky not fun.",
-      "west_africa": "Alternate paths feel needless."
+      "west_africa": "Alternate paths feel needless.",
+      "francophone_west_africa": "Les chemins alternatifs me semblent superflus."
     }
   },
   {
@@ -1981,7 +2095,8 @@
     "variants": {
       "global": "First interrupted routine day feels fine to me.",
       "ghana": "Routine break day one feels normal.",
-      "west_africa": "Day-one routine gap does not shake me."
+      "west_africa": "Day-one routine gap does not shake me.",
+      "francophone_west_africa": "Un trou dans la routine du premier jour ne me secoue pas."
     }
   },
   {
@@ -1995,7 +2110,8 @@
     "variants": {
       "global": "Tool break stops the job until the exact tool is fixed or replaced.",
       "ghana": "Without the right tool I halt rather than substitute.",
-      "west_africa": "Exact-tool dependence on failure."
+      "west_africa": "Exact-tool dependence on failure.",
+      "francophone_west_africa": "Sans l'outil exact, j'ai du mal à avancer quand quelque chose casse."
     }
   },
   {
@@ -2009,7 +2125,8 @@
     "variants": {
       "global": "New people in a steady group feel instantly normal to me.",
       "ghana": "Fresh faces slot in immediately for me.",
-      "west_africa": "Instant comfort with new team members."
+      "west_africa": "Instant comfort with new team members.",
+      "francophone_west_africa": "Je suis à l'aise tout de suite avec de nouveaux membres d'équipe."
     }
   },
   {
@@ -2023,7 +2140,8 @@
     "variants": {
       "global": "Weather change leaves me stuck without a new plan for a while.",
       "ghana": "Sky shift freezes my planning for a bit.",
-      "west_africa": "Weather turns create plan blanks."
+      "west_africa": "Weather turns create plan blanks.",
+      "francophone_west_africa": "Les retournements de météo créent des blancs dans mon plan."
     }
   },
   {
@@ -2037,7 +2155,8 @@
     "variants": {
       "global": "I adopt a better new habit quickly when I see it works.",
       "ghana": "Shown better habit swaps in fast for me.",
-      "west_africa": "Evidence of improvement drives fast habit swap."
+      "west_africa": "Evidence of improvement drives fast habit swap.",
+      "francophone_west_africa": "Une preuve d'amélioration me pousse à changer d'habitude vite."
     }
   },
   {
@@ -2051,7 +2170,8 @@
     "variants": {
       "global": "I accept a rule change on brief notice without needing a long reason.",
       "ghana": "Short notice rule change sits fine without deep why.",
-      "west_africa": "New rule on brief word works for me."
+      "west_africa": "New rule on brief word works for me.",
+      "francophone_west_africa": "Une nouvelle règle annoncée en peu de mots me suffit."
     }
   },
   {
@@ -2065,7 +2185,8 @@
     "variants": {
       "global": "Updated software feels intuitive right away.",
       "ghana": "New layout clicks immediately.",
-      "west_africa": "Redesign speeds me up from day one."
+      "west_africa": "Redesign speeds me up from day one.",
+      "francophone_west_africa": "Un redesign me rend plus rapide dès le premier jour."
     }
   },
   {
@@ -2079,7 +2200,8 @@
     "variants": {
       "global": "Canceled plans leave me drifting unsure what to do next.",
       "ghana": "Dropped plans create empty unsure minutes.",
-      "west_africa": "Cancelation empties my next move."
+      "west_africa": "Cancelation empties my next move.",
+      "francophone_west_africa": "Une annulation vide ma prochaine action."
     }
   },
   {
@@ -2093,7 +2215,8 @@
     "variants": {
       "global": "Unfamiliar food makes me refuse even when ingredients are named.",
       "ghana": "Unknown dishes get a no even with parts listed.",
-      "west_africa": "Named unfamiliar plates still get declined."
+      "west_africa": "Named unfamiliar plates still get declined.",
+      "francophone_west_africa": "Des plats inconnus nommés sont encore refusés par moi."
     }
   },
   {
@@ -2107,7 +2230,8 @@
     "variants": {
       "global": "After a long break, rebuilding routine takes many days.",
       "ghana": "Holiday return stretches routine rebuild across days.",
-      "west_africa": "Slow return to rhythm after time away."
+      "west_africa": "Slow return to rhythm after time away.",
+      "francophone_west_africa": "Le retour au rythme après une absence est lent pour moi."
     }
   },
   {
@@ -2121,7 +2245,8 @@
     "variants": {
       "global": "I combine odd objects creatively when standard tools are gone.",
       "ghana": "No standard tool sparks creative mashups from me.",
-      "west_africa": "Odd combos finish jobs without proper gear."
+      "west_africa": "Odd combos finish jobs without proper gear.",
+      "francophone_west_africa": "Des combinaisons bizarres finissent le travail sans le bon matériel."
     }
   },
   {
@@ -2135,7 +2260,8 @@
     "variants": {
       "global": "I return to a hard task after a short walk instead of abandoning it.",
       "ghana": "Tough task plus brief walk brings me back to try again.",
-      "west_africa": "Hard job gets another round after a stroll."
+      "west_africa": "Hard job gets another round after a stroll.",
+      "francophone_west_africa": "Après une tâche dure, une autre manche est possible après une promenade."
     }
   },
   {
@@ -2149,7 +2275,8 @@
     "variants": {
       "global": "Heavy physical work leads me to drink water and sit before the next chore.",
       "ghana": "Big exertion gets water plus sit before round two.",
-      "west_africa": "After hard labor I hydrate and rest briefly."
+      "west_africa": "After hard labor I hydrate and rest briefly.",
+      "francophone_west_africa": "Après un travail pénible sous le soleil, je m'hydrate et me repose brièvement."
     }
   },
   {
@@ -2163,7 +2290,8 @@
     "variants": {
       "global": "I push to finish a boring but important task the same day I started.",
       "ghana": "Dull-but-needed work closes same day it opens.",
-      "west_africa": "Important boring jobs do not cross midnight idle."
+      "west_africa": "Important boring jobs do not cross midnight idle.",
+      "francophone_west_africa": "Les corvées importantes mais ennuyeuses ne restent pas inachevées jusqu'à minuit."
     }
   },
   {
@@ -2177,7 +2305,8 @@
     "variants": {
       "global": "I notice muscle soreness and lighten the next task on purpose.",
       "ghana": "Sore muscles trigger a lighter next load by choice.",
-      "west_africa": "Body ache steers next task size down."
+      "west_africa": "Body ache steers next task size down.",
+      "francophone_west_africa": "Une douleur corporelle me pousse à réduire la taille de la tâche suivante."
     }
   },
   {
@@ -2191,7 +2320,8 @@
     "variants": {
       "global": "Mental fatigue makes me switch to a simple hands task for a while.",
       "ghana": "Brain tired sends me to easy hand work awhile.",
-      "west_africa": "Thinking drain moves me to plain manual chores."
+      "west_africa": "Thinking drain moves me to plain manual chores.",
+      "francophone_west_africa": "La fatigue de réflexion me pousse vers des tâches manuelles simples."
     }
   },
   {
@@ -2205,7 +2335,8 @@
     "variants": {
       "global": "I split a huge cleaning job across several days on purpose.",
       "ghana": "Massive cleaning spreads across planned days.",
-      "west_africa": "Big clean gets day-sliced plan."
+      "west_africa": "Big clean gets day-sliced plan.",
+      "francophone_west_africa": "Un grand nettoyage se découpe en plan sur la journée."
     }
   },
   {
@@ -2219,7 +2350,8 @@
     "variants": {
       "global": "I sleep longer after an unusually demanding day.",
       "ghana": "Extra-hard day extends my sleep the night after.",
-      "west_africa": "Big demand day lengthens next sleep."
+      "west_africa": "Big demand day lengthens next sleep.",
+      "francophone_west_africa": "Une journée très exigeante allonge mon sommeil du lendemain."
     }
   },
   {
@@ -2233,7 +2365,8 @@
     "variants": {
       "global": "I take notes during long talks so my mind can rest between points.",
       "ghana": "Long speech gets note fragments so my mind breathes.",
-      "west_africa": "Extended talk pairs with jotting breaks for me."
+      "west_africa": "Extended talk pairs with jotting breaks for me.",
+      "francophone_west_africa": "Une longue conversation s'accompagne de pauses pour noter."
     }
   },
   {
@@ -2247,7 +2380,8 @@
     "variants": {
       "global": "I set a visible timer to work in focused bursts on dull tasks.",
       "ghana": "Boring work runs in timed visible bursts.",
-      "west_africa": "Timer chunks carry dull work."
+      "west_africa": "Timer chunks carry dull work.",
+      "francophone_west_africa": "Des morceaux minutés portent le travail ennuyeux."
     }
   },
   {
@@ -2261,7 +2395,8 @@
     "variants": {
       "global": "I stop work for food before I feel shaky.",
       "ghana": "Meal breaks come before shaky hunger.",
-      "west_africa": "Food pause precedes shakiness."
+      "west_africa": "Food pause precedes shakiness.",
+      "francophone_west_africa": "Une pause repas précède les tremblements ou vertiges."
     }
   },
   {
@@ -2275,7 +2410,8 @@
     "variants": {
       "global": "I celebrate small finished pieces of a long project aloud or in text to someone.",
       "ghana": "Tiny milestones get a spoken or text cheer to another person.",
-      "west_africa": "Micro wins get shared praise."
+      "west_africa": "Micro wins get shared praise.",
+      "francophone_west_africa": "Les petites victoires méritent d'être partagées à voix haute."
     }
   },
   {
@@ -2289,7 +2425,8 @@
     "variants": {
       "global": "After conflict talk, I need quiet alone time before the next social task.",
       "ghana": "Hot words exchange needs solo quiet before next people task.",
-      "west_africa": "Argument aftermath needs alone buffer."
+      "west_africa": "Argument aftermath needs alone buffer.",
+      "francophone_west_africa": "Après une dispute, j'ai besoin d'un temps seul pour me remettre."
     }
   },
   {
@@ -2303,7 +2440,8 @@
     "variants": {
       "global": "A hard failed attempt makes me shelve the task for days.",
       "ghana": "Tough fail shelves the job many days.",
-      "west_africa": "Failure sends long shelf time."
+      "west_africa": "Failure sends long shelf time.",
+      "francophone_west_africa": "Un échec envoie la tâche au placard longtemps."
     }
   },
   {
@@ -2317,7 +2455,8 @@
     "variants": {
       "global": "I jump straight into the next heavy chore without water or sit.",
       "ghana": "Back-to-back heavy chores without pause is my pattern.",
-      "west_africa": "No sit or sip between hard rounds."
+      "west_africa": "No sit or sip between hard rounds.",
+      "francophone_west_africa": "Je ne m'assois ni ne bois entre les manches d'effort intense."
     }
   },
   {
@@ -2331,7 +2470,8 @@
     "variants": {
       "global": "Boring important tasks often spill to another day unfinished.",
       "ghana": "Dull needed work crosses days open.",
-      "west_africa": "Important drudge lingers unfinished."
+      "west_africa": "Important drudge lingers unfinished.",
+      "francophone_west_africa": "Les corvées importantes traînent inachevées."
     }
   },
   {
@@ -2345,7 +2485,8 @@
     "variants": {
       "global": "I ignore early muscle soreness and repeat the same heavy load.",
       "ghana": "Early soreness ignored; same load repeated.",
-      "west_africa": "Soreness does not shrink next task."
+      "west_africa": "Soreness does not shrink next task.",
+      "francophone_west_africa": "La douleur ne réduit pas la tâche suivante pour moi."
     }
   },
   {
@@ -2359,7 +2500,8 @@
     "variants": {
       "global": "Mental fatigue makes me stop all work rather than switch task type.",
       "ghana": "Brain tired halts everything.",
-      "west_africa": "Think-tired ends the work block fully."
+      "west_africa": "Think-tired ends the work block fully.",
+      "francophone_west_africa": "La fatigue mentale met fin au bloc de travail complètement."
     }
   },
   {
@@ -2373,7 +2515,8 @@
     "variants": {
       "global": "I try to finish huge cleaning in one long push.",
       "ghana": "Whole clean in one marathon session is my pull.",
-      "west_africa": "One-shot giant clean attempts."
+      "west_africa": "One-shot giant clean attempts.",
+      "francophone_west_africa": "J'attaque les grands nettoyages d'un seul coup."
     }
   },
   {
@@ -2387,7 +2530,8 @@
     "variants": {
       "global": "Demanding day rarely changes how long I sleep.",
       "ghana": "Hard day does not stretch night sleep.",
-      "west_africa": "Sleep length stable after strain."
+      "west_africa": "Sleep length stable after strain.",
+      "francophone_west_africa": "La durée de mon sommeil reste stable après un effort intense."
     }
   },
   {
@@ -2401,7 +2545,8 @@
     "variants": {
       "global": "I rely on memory alone through long talks without jotting.",
       "ghana": "Long talks need no notes from me.",
-      "west_africa": "Memory holds long talks solo."
+      "west_africa": "Memory holds long talks solo.",
+      "francophone_west_africa": "Je retiens seul les longues conversations sans notes."
     }
   },
   {
@@ -2415,7 +2560,8 @@
     "variants": {
       "global": "Dull tasks run without timers until something interrupts.",
       "ghana": "No burst timers on boring work.",
-      "west_africa": "Open-ended grind on dull jobs."
+      "west_africa": "Open-ended grind on dull jobs.",
+      "francophone_west_africa": "Je reste sur des corvées ennuyeuses sans limite de temps."
     }
   },
   {
@@ -2429,7 +2575,8 @@
     "variants": {
       "global": "I work through hunger until shaking or headache appears.",
       "ghana": "Hunger ignored until body signals hard.",
-      "west_africa": "Food waits for strong body complaint."
+      "west_africa": "Food waits for strong body complaint.",
+      "francophone_west_africa": "Je repousse le repas jusqu'à une plainte corporelle forte."
     }
   },
   {
@@ -2443,7 +2590,8 @@
     "variants": {
       "global": "I move on to the next task without noting what I finished.",
       "ghana": "Finished slices pass without acknowledgment.",
-      "west_africa": "No micro-celebration between chunks."
+      "west_africa": "No micro-celebration between chunks.",
+      "francophone_west_africa": "Je ne célèbre pas les petites étapes entre les morceaux."
     }
   },
   {
@@ -2457,7 +2605,8 @@
     "variants": {
       "global": "After conflict talk I go straight into the next crowded task.",
       "ghana": "Argument then immediate crowd task is fine for me.",
-      "west_africa": "No solo buffer needed after tense talk."
+      "west_africa": "No solo buffer needed after tense talk.",
+      "francophone_west_africa": "Je n'ai pas besoin d'un temps seul après un échange tendu."
     }
   },
   {
@@ -2471,7 +2620,8 @@
     "variants": {
       "global": "A few minutes with my eyes closed rarely changes how tired I feel.",
       "ghana": "Short quiet with my eyes shut seldom shifts my tired level.",
-      "west_africa": "A brief eye rest rarely lifts my energy."
+      "west_africa": "A brief eye rest rarely lifts my energy.",
+      "francophone_west_africa": "Une courte pause des yeux relève rarement mon énergie."
     }
   },
   {
@@ -2485,7 +2635,8 @@
     "variants": {
       "global": "I understand a new physical skill faster when someone shows me once.",
       "ghana": "Seeing a move once beats hearing many words for my body learning.",
-      "west_africa": "Demo-first beats long verbal-only coaching for my hands."
+      "west_africa": "Demo-first beats long verbal-only coaching for my hands.",
+      "francophone_west_africa": "Une démonstration avant de longs discours seuls convient mieux à mes mains."
     }
   },
   {
@@ -2499,7 +2650,8 @@
     "variants": {
       "global": "Spoken steps alone are enough for me to copy a simple new routine.",
       "ghana": "Voice-only instructions carry simple new routines for me.",
-      "west_africa": "Hearing the order is enough without pictures."
+      "west_africa": "Hearing the order is enough without pictures.",
+      "francophone_west_africa": "Entendre l'ordre des étapes suffit sans images."
     }
   },
   {
@@ -2513,7 +2665,8 @@
     "variants": {
       "global": "I repeat a new phrase aloud several times to lock it in.",
       "ghana": "Fresh phrases get loud repeats to stick.",
-      "west_africa": "New wording needs spoken loops."
+      "west_africa": "New wording needs spoken loops.",
+      "francophone_west_africa": "Un nouveau motage demande des répétitions à voix haute."
     }
   },
   {
@@ -2527,7 +2680,8 @@
     "variants": {
       "global": "I draw a quick map or diagram to explain where something is.",
       "ghana": "Place explanation gets a fast sketch from me.",
-      "west_africa": "Location questions get doodle answers."
+      "west_africa": "Location questions get doodle answers.",
+      "francophone_west_africa": "Les questions de lieu reçoivent des croquis en réponse."
     }
   },
   {
@@ -2541,7 +2695,8 @@
     "variants": {
       "global": "I learn from a mistake if the wrong outcome is shown clearly.",
       "ghana": "Clear wrong result teaches me fast.",
-      "west_africa": "Visible error outcome educates me."
+      "west_africa": "Visible error outcome educates me.",
+      "francophone_west_africa": "Voir le résultat d'une erreur m'enseigne."
     }
   },
   {
@@ -2555,7 +2710,8 @@
     "variants": {
       "global": "I ask the teacher or guide to slow down when hands and words move too fast together.",
       "ghana": "Hands plus words too fast triggers a slow request from me.",
-      "west_africa": "I request slower combo demo when rushed."
+      "west_africa": "I request slower combo demo when rushed.",
+      "francophone_west_africa": "Je demande une démo plus lente quand on va trop vite."
     }
   },
   {
@@ -2569,7 +2725,8 @@
     "variants": {
       "global": "I tie a new name to a face feature so I recall it next time.",
       "ghana": "Face detail anchors new names for me.",
-      "west_africa": "Feature hook holds names."
+      "west_africa": "Feature hook holds names.",
+      "francophone_west_africa": "Un détail saillant fixe les noms dans ma mémoire."
     }
   },
   {
@@ -2583,7 +2740,8 @@
     "variants": {
       "global": "I use objects around me as props when telling a story.",
       "ghana": "Storytelling grabs nearby objects as examples.",
-      "west_africa": "Tales include prop pointing."
+      "west_africa": "Tales include prop pointing.",
+      "francophone_west_africa": "Mes récits incluent montrer un objet du doigt."
     }
   },
   {
@@ -2597,7 +2755,8 @@
     "variants": {
       "global": "Long written instructions tire me; short bullet lists work better.",
       "ghana": "Paragraph manuals drain me; bullets help.",
-      "west_africa": "Wall-of-text rules lose me; lists win."
+      "west_africa": "Wall-of-text rules lose me; lists win.",
+      "francophone_west_africa": "Un mur de texte me perd ; les listes gagnent."
     }
   },
   {
@@ -2611,7 +2770,8 @@
     "variants": {
       "global": "I practice a new dance or sport move in slow motion first.",
       "ghana": "Fresh moves start in slow motion.",
-      "west_africa": "New motor pattern begins slow."
+      "west_africa": "New motor pattern begins slow.",
+      "francophone_west_africa": "Un nouveau geste moteur commence lentement pour moi."
     }
   },
   {
@@ -2625,7 +2785,8 @@
     "variants": {
       "global": "I learn a group game faster after one practice round than after only rules talk.",
       "ghana": "One trial round beats rules lecture for group games.",
-      "west_africa": "Play round teaches group rules faster for me."
+      "west_africa": "Play round teaches group rules faster for me.",
+      "francophone_west_africa": "Un tour d'essai enseigne les règles de groupe plus vite."
     }
   },
   {
@@ -2639,7 +2800,8 @@
     "variants": {
       "global": "Charts with colors help me compare amounts at a glance.",
       "ghana": "Color bars make amount gaps obvious to my eyes.",
-      "west_africa": "Hue-coded charts speed compare."
+      "west_africa": "Hue-coded charts speed compare.",
+      "francophone_west_africa": "Des tableaux en couleur accélèrent la comparaison."
     }
   },
   {
@@ -2653,7 +2815,8 @@
     "variants": {
       "global": "Watching once is not enough; I need several repeats before my body copies.",
       "ghana": "Single demo is too thin; repeats needed for my body.",
-      "west_africa": "Multi-repeat watch before motor copy."
+      "west_africa": "Multi-repeat watch before motor copy.",
+      "francophone_west_africa": "J'ai besoin de plusieurs reprises avant de copier le geste."
     }
   },
   {
@@ -2667,7 +2830,8 @@
     "variants": {
       "global": "Spoken steps alone are not enough; I need a picture or gesture.",
       "ghana": "Voice-only is thin; picture or hand cue needed.",
-      "west_africa": "Words alone miss for new routines."
+      "west_africa": "Words alone miss for new routines.",
+      "francophone_west_africa": "Les mots seuls ne suffisent pas pour les nouvelles routines."
     }
   },
   {
@@ -2681,7 +2845,8 @@
     "variants": {
       "global": "I lock new phrases silently in my head without saying them aloud.",
       "ghana": "Silent mental loop stores new wording.",
-      "west_africa": "No loud repeats needed for phrases."
+      "west_africa": "No loud repeats needed for phrases.",
+      "francophone_west_africa": "Je n'ai pas besoin de répéter fort les phrases nouvelles."
     }
   },
   {
@@ -2695,7 +2860,8 @@
     "variants": {
       "global": "I describe a place with words only and skip drawing.",
       "ghana": "Word picture without sketch is my habit.",
-      "west_africa": "No doodle for directions."
+      "west_africa": "No doodle for directions.",
+      "francophone_west_africa": "Je ne fais pas de croquis pour les directions."
     }
   },
   {
@@ -2709,7 +2875,8 @@
     "variants": {
       "global": "Mistakes confuse me unless someone walks through the right steps slowly.",
       "ghana": "Errors need slow correct walkthrough.",
-      "west_africa": "Wrong tries need guided redo."
+      "west_africa": "Wrong tries need guided redo.",
+      "francophone_west_africa": "Les essais ratés demandent une reprise guidée pour moi."
     }
   },
   {
@@ -2723,7 +2890,8 @@
     "variants": {
       "global": "Fast hands with fast talk during demo feels fine to me.",
       "ghana": "Rapid demo pace matches my learning.",
-      "west_africa": "Speedy combo demo fits me."
+      "west_africa": "Speedy combo demo fits me.",
+      "francophone_west_africa": "Une démo rapide enchaînée me convient."
     }
   },
   {
@@ -2737,7 +2905,8 @@
     "variants": {
       "global": "I recall new names without linking them to face details.",
       "ghana": "Names stick without feature tricks.",
-      "west_africa": "Face hooks unused."
+      "west_africa": "Face hooks unused.",
+      "francophone_west_africa": "Je n'utilise pas les visages comme ancres mnémotechniques."
     }
   },
   {
@@ -2751,7 +2920,8 @@
     "variants": {
       "global": "I tell stories with words only and rarely point to objects.",
       "ghana": "Object-free storytelling is my style.",
-      "west_africa": "Props seldom appear in my tales."
+      "west_africa": "Props seldom appear in my tales.",
+      "francophone_west_africa": "Les objets apparaissent rarement dans mes récits."
     }
   },
   {
@@ -2765,7 +2935,8 @@
     "variants": {
       "global": "Long written instructions feel clearer than very short bullets.",
       "ghana": "Full paragraphs beat ultra-short bullets for me.",
-      "west_africa": "Dense text guides me well."
+      "west_africa": "Dense text guides me well.",
+      "francophone_west_africa": "Un texte dense me guide bien."
     }
   },
   {
@@ -2779,7 +2950,8 @@
     "variants": {
       "global": "I practice new moves at full speed from the first try.",
       "ghana": "Day-one new moves run full tempo.",
-      "west_africa": "No slow-motion ramp."
+      "west_africa": "No slow-motion ramp.",
+      "francophone_west_africa": "Je n'ai pas besoin de commencer un geste au ralenti."
     }
   },
   {
@@ -2793,7 +2965,8 @@
     "variants": {
       "global": "Rules talk alone is enough for me before a group game starts.",
       "ghana": "Pre-game lecture carries me without practice round.",
-      "west_africa": "Verbal rules pre-play suffice."
+      "west_africa": "Verbal rules pre-play suffice.",
+      "francophone_west_africa": "Les règles verbales avant le jeu me suffisent."
     }
   },
   {
@@ -2807,7 +2980,8 @@
     "variants": {
       "global": "Color charts feel optional; numbers alone are enough.",
       "ghana": "Numeric tables beat color bars for me.",
-      "west_africa": "Plain numbers compare fine."
+      "west_africa": "Plain numbers compare fine.",
+      "francophone_west_africa": "Les nombres simples comparent bien pour moi."
     }
   },
   {
@@ -2821,7 +2995,8 @@
     "variants": {
       "global": "Written checklist beats live demo for my learning style.",
       "ghana": "Paper checklist tops live show for me.",
-      "west_africa": "List beats watching."
+      "west_africa": "List beats watching.",
+      "francophone_west_africa": "Une liste écrite me convient mieux que regarder une démonstration."
     }
   }
 ]
