@@ -42,6 +42,7 @@
 - **Ethics audit events** (compliance / audit trail): [`../supabase/migrations/20260414200000_ethics_audit_events.sql`](../supabase/migrations/20260414200000_ethics_audit_events.sql)
 
 #### **Internationalization & diagnostics**
+- **[Localization coverage](./LOCALIZATION_COVERAGE.md)** - UI vs question-stem completeness per locale
 - **[I18N](./I18N.md)** - Locales, URLs, `messages/*.json`, and Twi review notes
 - **[Diagnostics](./DIAGNOSTICS.md)** - Health/readiness probes, operator sync diagnostics, and production debug workflow
 

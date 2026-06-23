@@ -205,7 +205,7 @@ npm run test:edge   # Optional edge-case suites (stricter/experimental)
    ```
 
 5. **Open your browser**
-   Default locale: [http://localhost:3000](http://localhost:3000) (English). Other locales: `/de`, `/fr`, `/sw`, `/wo`, `/tw` (draft where noted). Assessment: `/questionnaire`, consent: `/consent`, results: `/results`.
+   Default locale: [http://localhost:3000](http://localhost:3000) (English). Other locales: `/de` (full UI), `/fr`, `/sw`, `/wo`, `/tw` (partial UI — see [`docs/LOCALIZATION_COVERAGE.md`](./docs/LOCALIZATION_COVERAGE.md)). Assessment: `/questionnaire`, consent: `/consent`, results: `/results`.
 
 > **Note**: You can test the complete system without Supabase setup. Data collection features require Supabase configuration.
 

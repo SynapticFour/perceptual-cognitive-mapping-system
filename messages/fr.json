@@ -6,9 +6,10 @@
     "outstandingItems": [
       "1. Full ethics/consent French copy for Francophone West Africa (Senegal, Côte d'Ivoire, Mali).",
       "2. Likert scales: confirm communicative norms for agreement strength in French.",
-      "3. Question stems: classic bank has FR overrides; cultural-adaptive francophone_west_africa stems still fallback to west_africa English.",
-      "4. Regional ethics step: ghana_body copy should be adapted for Francophone medical referral context.",
-      "5. Avoid deficit framing; confirm tendency-only wording with community reviewers."
+      "3. Expand messages/fr.json beyond ~45 keys (~94% UI still English via merge fallback).",
+      "4. Classic bank: extend question-stems-fr.ts beyond 50 IDs if classic mode stays enabled.",
+      "5. Native review of 200/200 cultural-adaptive francophone_west_africa stems (machine draft v1.3).",
+      "6. Regional ethics step: adapt ghana_body copy for Francophone medical referral context."
     ]
   },
   "welcome": {

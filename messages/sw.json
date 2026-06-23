@@ -6,9 +6,10 @@
     "outstandingItems": [
       "1. Full Swahili ethics/consent for Kenya, Tanzania, Uganda deployments.",
       "2. Likert anchors: validate agreement phrasing in Kiswahili sanifu vs regional variants.",
-      "3. east_africa question stems in cultural-adaptive bank still fallback to global English.",
-      "4. Regional ethics step copy for East African health referral pathways.",
-      "5. Confirm non-stigmatising tendency language with native reviewers."
+      "3. Expand messages/sw.json beyond ~45 keys (~94% UI still English via merge fallback).",
+      "4. Classic bank: extend question-stems-sw.ts beyond 50 IDs if classic mode stays enabled.",
+      "5. Native review of 200/200 cultural-adaptive east_africa Kiswahili stems (machine draft v1.4).",
+      "6. Regional ethics step copy for East African health referral pathways."
     ]
   },
   "welcome": {
