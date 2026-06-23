@@ -34,6 +34,7 @@
 | I18N | Locales `fr`, `sw` | Draft UI; classic stem maps started |
 | I18N | German TIAV stems | `question-stems-de-tiav.ts` |
 | C4b-fr | Francophone cultural-adaptive stems (200/200) | Machine draft in bank v1.3; `scripts/patch-francophone-*.ts` |
+| C4b-ea | East Africa cultural-adaptive stems (200/200) | Machine draft Kiswahili in bank v1.4; `scripts/patch-east-africa-stems.ts` |
 | DOC | Academic programme doc | `ACADEMIC_VALIDATION_AND_ADAPTATION_PROGRAMME.md` |
 
 ---
@@ -44,8 +45,7 @@
 |----|------|---------|
 | B3 | Correlation study (confidence models) | Offline analysis + N |
 | C2b | Item rewriting from readability audit | SME / cognitive interviews |
-| C4b | East Africa cultural-adaptive stems (200) | Local authors / Kiswahili draft |
-| C4b-review | Francophone stem native review + cognitive interviews | First-language reviewers (draft stems shipped) |
+| C4b-review | Francophone + East Africa stem native review + cognitive interviews | First-language reviewers (draft stems shipped) |
 | I18N | Native review TW, WO, FR, SW | First-language reviewers |
 | PSY | IRT calibration | N ≥ 400 sessions |
 | PSY | IRB + OSF | PI / institution |

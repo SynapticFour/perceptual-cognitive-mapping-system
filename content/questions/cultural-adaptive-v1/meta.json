@@ -28,9 +28,19 @@
       "version": "1.3",
       "date": "2026-06-23",
       "summary": "Machine-draft francophone_west_africa stems for remaining seven dimensions (175 items). Pending native speaker review."
+    },
+    {
+      "version": "1.4",
+      "date": "2026-06-23",
+      "summary": "Machine-draft east_africa Kiswahili stems for all 200 items. Pending native speaker review."
     }
   ],
   "francophoneWestAfrica": {
+    "status": "machine_draft",
+    "coverage": "200/200",
+    "review": "pending_native_speaker"
+  },
+  "eastAfrica": {
     "status": "machine_draft",
     "coverage": "200/200",
     "review": "pending_native_speaker"

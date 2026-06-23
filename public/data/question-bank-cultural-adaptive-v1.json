@@ -11,7 +11,8 @@
       "global": "I notice everyday smells in a room before others mention them.",
       "ghana": "When I enter a room or hall, I often notice ordinary smells there before anyone else points them out.",
       "west_africa": "In the place where I sit or stand, I tend to notice common smells before people around me say anything.",
-      "francophone_west_africa": "Là où je me trouve, je remarque souvent les odeurs du quotidien avant que les autres n'en parlent."
+      "francophone_west_africa": "Là où je me trouve, je remarque souvent les odeurs du quotidien avant que les autres n'en parlent.",
+      "east_africa": "Nikiwa mahali nimekaa au nimesimama, mara nyingi nahisi harufu za kawaida kabla ya watu wa karibu kusema chochote."
     }
   },
   {
@@ -26,7 +27,8 @@
       "global": "Busy crowded places drain my energy faster than calm places.",
       "ghana": "When a place fills with many people and movement, I feel my energy drop sooner than in a calmer setting.",
       "west_africa": "In a packed market, vehicle, or gathering, I tire sooner than when the same task is done in a quiet spot.",
-      "francophone_west_africa": "Dans un marché animé, un car rapide plein ou une grande tabaski, je fatigue plus vite que dans un endroit calme."
+      "francophone_west_africa": "Dans un marché animé, un car rapide plein ou une grande tabaski, je fatigue plus vite que dans un endroit calme.",
+      "east_africa": "Nikiwa kwenye soko lenye msongamano, matatu iliyojaa, au mkusanyiko mkubwa, nachoka haraka kuliko nikifanya kazi hiyo hiyo mahali patulivu."
     }
   },
   {
@@ -41,7 +43,8 @@
       "global": "Bright overhead light starts to bother me if I stay under it a long time.",
       "ghana": "If I remain under strong ceiling light for a long stretch, my eyes or head begin to feel strained.",
       "west_africa": "Under bright fixed lighting for many hours, I start to feel uneasy or worn down.",
-      "francophone_west_africa": "Une lumière vive au plafond finit par me gêner si je reste longtemps dessous."
+      "francophone_west_africa": "Une lumière vive au plafond finit par me gêner si je reste longtemps dessous.",
+      "east_africa": "Nikikaa muda mrefu chini ya mwanga mkali wa kudumu, huanza kujisikia kutokuwa sawa au kuchoka."
     }
   },
   {
@@ -56,7 +59,8 @@
       "global": "When noise keeps rising, I move to a calmer spot if I can.",
       "ghana": "If the sound level keeps climbing, I look for a quieter corner or step outside when that is possible.",
       "west_africa": "As noise builds around me, I shift toward a calmer area when there is a way to do it.",
-      "francophone_west_africa": "Quand le bruit augmente, je cherche un coin plus calme si je le peux."
+      "francophone_west_africa": "Quand le bruit augmente, je cherche un coin plus calme si je le peux.",
+      "east_africa": "Kelele zikizidi kunizunguka, huhama na kutafuta sehemu tulivu nikipata nafasi."
     }
   },
   {
@@ -71,7 +75,8 @@
       "global": "Rough seams or tags on clothing pull my attention away from what I am doing.",
       "ghana": "Scratchy fabric edges or labels on my clothes distract me from the task in front of me.",
       "west_africa": "When cloth rubs roughly on my skin, I lose focus on what I meant to finish.",
-      "francophone_west_africa": "Les coutures rugueuses ou les étiquettes sur les vêtements me distraient de ce que je fais."
+      "francophone_west_africa": "Les coutures rugueuses ou les étiquettes sur les vêtements me distraient de ce que je fais.",
+      "east_africa": "Nguo zikinisugua ngozi kwa ukwaruzo, hupoteza mwelekeo wa kile nilichotaka kumaliza."
     }
   },
   {
@@ -86,7 +91,8 @@
       "global": "I notice small shifts in heat or cold in a room before others comment.",
       "ghana": "I feel slight changes in warmth or cool air in a space before someone else speaks about it.",
       "west_africa": "Temperature changes in the air around me reach my attention early compared with people nearby.",
-      "francophone_west_africa": "Je sens les changements de chaleur — saison sèche, pluie, courant d'air — avant que les autres n'en parlent."
+      "francophone_west_africa": "Je sens les changements de chaleur — saison sèche, pluie, courant d'air — avant que les autres n'en parlent.",
+      "east_africa": "Mabadiliko madogo ya joto au baridi hewani huyagundua mapema kuliko watu walio karibu."
     }
   },
   {
@@ -101,7 +107,8 @@
       "global": "Deep engine rumble or heavy machine vibration catches my attention quickly.",
       "ghana": "Low shaking from engines or big machines pulls my attention as soon as it starts.",
       "west_africa": "Strong steady vibration from motors or equipment stands out to me right away.",
-      "francophone_west_africa": "Le ronflement d'un groupe électrogène ou les vibrations d'une moto attirent vite mon attention."
+      "francophone_west_africa": "Le ronflement d'un groupe électrogène ou les vibrations d'une moto attirent vite mon attention.",
+      "east_africa": "Mtetemo mzito wa kudumu kutoka kwa injini, matatu, au mashine hunivutia haraka sana."
     }
   },
   {
@@ -116,7 +123,8 @@
       "global": "After someone shouts very close to me, I need a little time before I feel steady again.",
       "ghana": "When a person raises their voice right beside me, I take a short while before I feel settled.",
       "west_africa": "Loud speech pressed near my ear leaves me needing a brief pause before I feel normal.",
-      "francophone_west_africa": "Après qu'on m'a parlé très fort tout près, j'ai besoin d'un moment avant de me sentir à nouveau stable."
+      "francophone_west_africa": "Après qu'on m'a parlé très fort tout près, j'ai besoin d'un moment avant de me sentir à nouveau stable.",
+      "east_africa": "Mtu akiongea kwa sauti kubwa karibu na sikio langu, huhitaji mapumziko mafupi kabla sijarudi kawaida."
     }
   },
   {
@@ -131,7 +139,8 @@
       "global": "People can tell from my face or body when a place feels too loud for me.",
       "ghana": "Others around me can see signs that the noise level is too much for me.",
       "west_africa": "My expression or posture shows when sound in a place is overwhelming me.",
-      "francophone_west_africa": "Les autres peuvent lire sur mon visage ou mon corps qu'un endroit est trop bruyant pour moi."
+      "francophone_west_africa": "Les autres peuvent lire sur mon visage ou mon corps qu'un endroit est trop bruyant pour moi.",
+      "east_africa": "Uso au mkao wangu huonyesha pale kelele za mahali zinaponizidi."
     }
   },
   {
@@ -146,7 +155,8 @@
       "global": "After an overstimulating spell, I need a quiet break before I can focus well again.",
       "ghana": "When a spell feels overstimulating, I recover focus faster if I get a quiet pause.",
       "west_africa": "I work best again only after some calm time following a very stimulating stretch.",
-      "francophone_west_africa": "Après une période de forte stimulation, j'ai besoin d'une pause calme pour retrouver ma concentration."
+      "francophone_west_africa": "Après une période de forte stimulation, j'ai besoin d'une pause calme pour retrouver ma concentration.",
+      "east_africa": "Baada ya kipindi cha msisimko mwingi, nafanya vizuri tena baada ya muda wa utulivu."
     }
   },
   {
@@ -161,7 +171,8 @@
       "global": "If music or a speaker is very loud, I turn it down or step away when I am allowed.",
       "ghana": "When playback is far too loud, I lower the volume or leave the spot if that is acceptable.",
       "west_africa": "Very loud sound from a device or speaker leads me to reduce it or move off when I can.",
-      "francophone_west_africa": "Si la musique ou un haut-parleur est trop fort, je baisse le volume ou m'éloigne quand c'est possible."
+      "francophone_west_africa": "Si la musique ou un haut-parleur est trop fort, je baisse le volume ou m'éloigne quand c'est possible.",
+      "east_africa": "Sauti ikiwa kubwa kupita kiasi kutoka kwa kifaa au spika, hupunguza sauti au huondoka nikiruhusiwa."
     }
   },
   {
@@ -176,7 +187,8 @@
       "global": "Food textures that are very slimy or very rough are hard to ignore while I eat.",
       "ghana": "While eating, textures that are extremely slippery or coarse stay on my mind.",
       "west_africa": "Certain mouth-feels while chewing keep pulling my attention even if I want to think of something else.",
-      "francophone_west_africa": "Les textures très gluantes ou très rugueuses sont difficiles à ignorer pendant que je mange."
+      "francophone_west_africa": "Les textures très gluantes ou très rugueuses sont difficiles à ignorer pendant que je mange.",
+      "east_africa": "Muundo fulani wa chakula mdomoni hunivuta fikra wakati wa kula hata nikijaribu kuzingatia jambo jingine."
     }
   },
   {
@@ -191,7 +203,8 @@
       "global": "I choose a seat away from flashing or flickering lights when I have a choice.",
       "ghana": "Given a choice, I sit where lights do not flicker or flash in my eyes.",
       "west_africa": "If seats are open, I pick one that avoids strobe-like or broken-bulb flicker.",
-      "francophone_west_africa": "Quand j'ai le choix, je m'assois loin des lumières qui clignotent ou vacillent."
+      "francophone_west_africa": "Quand j'ai le choix, je m'assois loin des lumières qui clignotent ou vacillent.",
+      "east_africa": "Nikipewa uchaguzi wa kiti, huchagua mbali na taa zinazometa au kufifia."
     }
   },
   {
@@ -206,7 +219,8 @@
       "global": "Crowded busy places feel about the same to my energy as quiet places.",
       "ghana": "A full room and an empty room feel roughly equal in how much energy they take from me.",
       "west_africa": "Whether a place is packed or nearly empty barely changes how tired I feel.",
-      "francophone_west_africa": "Les endroits très animés et les endroits calmes demandent à peu près la même énergie de ma part."
+      "francophone_west_africa": "Les endroits très animés et les endroits calmes demandent à peu près la même énergie de ma part.",
+      "east_africa": "Sehemu yenye watu wengi au iliyo tulivu hubadilisha kidogo sana kiwango cha uchovu ninachohisi."
     }
   },
   {
@@ -221,7 +235,8 @@
       "global": "Strong overhead light rarely bothers me even after many hours.",
       "ghana": "Ceiling lights can stay bright for a long time without me feeling strained.",
       "west_africa": "I can stay under bright fixed lights a long while without discomfort.",
-      "francophone_west_africa": "Une forte lumière au plafond me gêne rarement, même après de longues heures."
+      "francophone_west_africa": "Une forte lumière au plafond me gêne rarement, même après de longues heures.",
+      "east_africa": "Naweza kukaa muda mrefu chini ya mwanga mkali wa kudumu bila usumbufu."
     }
   },
   {
@@ -236,7 +251,8 @@
       "global": "Rising noise rarely makes me look for a different spot.",
       "ghana": "Louder and louder sound around me seldom pushes me to relocate.",
       "west_africa": "I usually stay put even when the noise level climbs around me.",
-      "francophone_west_africa": "Un bruit qui monte me pousse rarement à changer de place."
+      "francophone_west_africa": "Un bruit qui monte me pousse rarement à changer de place.",
+      "east_africa": "Mara nyingi hubaki pale pale hata kelele zinapoongezeka karibu nami."
     }
   },
   {
@@ -251,7 +267,8 @@
       "global": "Rough clothing seams rarely distract me from my task.",
       "ghana": "Tags and coarse seams on clothes seldom pull me off track.",
       "west_africa": "Fabric rubbing roughly hardly breaks my concentration.",
-      "francophone_west_africa": "Les coutures rugueuses sur les vêtements me distraient rarement de ma tâche."
+      "francophone_west_africa": "Les coutures rugueuses sur les vêtements me distraient rarement de ma tâche.",
+      "east_africa": "Nguo zikinisugua kwa ukwaruzo, umakini wangu huvunjika kidogo sana."
     }
   },
   {
@@ -266,7 +283,8 @@
       "global": "I rarely notice small heat or cold shifts unless someone points them out.",
       "ghana": "Minor temperature changes in a room usually pass me by until another person mentions them.",
       "west_africa": "Slight warm or cool shifts in the air seldom reach my attention first.",
-      "francophone_west_africa": "Je remarque rarement les petits changements de chaleur ou de fraîcheur sans qu'on me le signale."
+      "francophone_west_africa": "Je remarque rarement les petits changements de chaleur ou de fraîcheur sans qu'on me le signale.",
+      "east_africa": "Mabadiliko madogo ya joto au baridi hewani huwa hayanifikii mapema."
     }
   },
   {
@@ -281,7 +299,8 @@
       "global": "Engine rumble or machine vibration blends into the background for me.",
       "ghana": "Heavy low vibration from equipment is easy for me to tune out.",
       "west_africa": "Motor rumble fades into the background without grabbing me.",
-      "francophone_west_africa": "Le ronflement d'un moteur se fond dans le fond pour moi."
+      "francophone_west_africa": "Le ronflement d'un moteur se fond dans le fond pour moi.",
+      "east_africa": "Mngurumo wa injini huingia nyuma ya mawazo na haukunivutii."
     }
   },
   {
@@ -296,7 +315,8 @@
       "global": "Loud speech near me rarely leaves me feeling off balance for more than a moment.",
       "ghana": "A shout close by unsettles me only briefly, if at all.",
       "west_africa": "Sharp loud words beside me hardly ripple my calm.",
-      "francophone_west_africa": "Une voix forte tout près me déséquilibre rarement plus qu'un instant."
+      "francophone_west_africa": "Une voix forte tout près me déséquilibre rarement plus qu'un instant.",
+      "east_africa": "Maneno makali kwa sauti karibu nami hayayumbishi utulivu wangu sana."
     }
   },
   {
@@ -311,7 +331,8 @@
       "global": "Others rarely read discomfort on my face about the noise level.",
       "ghana": "People seldom see from my look that sound is too much for me.",
       "west_africa": "My face does not often show that noise is overwhelming.",
-      "francophone_west_africa": "Les autres lisent rarement mon malaise sur mon visage à cause du bruit."
+      "francophone_west_africa": "Les autres lisent rarement mon malaise sur mon visage à cause du bruit.",
+      "east_africa": "Uso wangu hauonyeshi mara nyingi kwamba kelele zimenizidi."
     }
   },
   {
@@ -326,7 +347,8 @@
       "global": "I return to clear focus quickly right after a very stimulating stretch.",
       "ghana": "Right after heavy stimulation, I snap back to focus without needing much pause.",
       "west_africa": "I do not need a long quiet gap before thinking clearly again after intensity.",
-      "francophone_west_africa": "Je retrouve vite une concentration claire juste après une période très stimulante."
+      "francophone_west_africa": "Je retrouve vite une concentration claire juste après une période très stimulante.",
+      "east_africa": "Baada ya msongamano wa hisia, sihitaji ukimya mrefu kabla ya kufikiri vizuri tena."
     }
   },
   {
@@ -341,7 +363,8 @@
       "global": "Very loud music or announcements rarely make me lower the volume or leave.",
       "ghana": "Even when playback is extremely loud, I usually stay and accept it.",
       "west_africa": "Blaring sound seldom leads me to turn it down or walk away.",
-      "francophone_west_africa": "Une musique ou une annonce très forte me pousse rarement à baisser le volume ou à partir."
+      "francophone_west_africa": "Une musique ou une annonce très forte me pousse rarement à baisser le volume ou à partir.",
+      "east_africa": "Sauti kubwa sana mara chache hunifanya nipunguze sauti au niondoke."
     }
   },
   {
@@ -356,7 +379,8 @@
       "global": "Extreme slimy or rough food textures rarely bother me while eating.",
       "ghana": "Unusual mouth-feel during meals seldom distracts me.",
       "west_africa": "Texture surprises in food hardly pull my mind away.",
-      "francophone_west_africa": "Les textures très gluantes ou rugueuses me gênent rarement en mangeant."
+      "francophone_west_africa": "Les textures très gluantes ou rugueuses me gênent rarement en mangeant.",
+      "east_africa": "Mabadiliko ya muundo wa chakula hunivuta mawazo kidogo sana."
     }
   },
   {
@@ -371,7 +395,8 @@
       "global": "Flickering or flashing lights rarely change where I choose to sit.",
       "ghana": "Broken-bulb flicker or flashing signs seldom affect my seat choice.",
       "west_africa": "I pick seats without thinking about flicker risk.",
-      "francophone_west_africa": "Les lumières qui clignotent influencent rarement où je choisis de m'asseoir."
+      "francophone_west_africa": "Les lumières qui clignotent influencent rarement où je choisis de m'asseoir.",
+      "east_africa": "Huchagua kiti bila kufikiria sana hatari ya taa kumeta."
     }
   },
   {
@@ -386,7 +411,8 @@
       "global": "When I mean to finish one task, unrelated sounds often pull my mind away.",
       "ghana": "While I am trying to finish one piece of work, background sounds often steal my thoughts.",
       "west_africa": "If I plan to stick to a single job, side noises still snatch my attention.",
-      "francophone_west_africa": "Quand je compte finir une seule tâche, les bruits autour — marché, radio, appels — arrachent encore mon attention."
+      "francophone_west_africa": "Quand je compte finir une seule tâche, les bruits autour — marché, radio, appels — arrachent encore mon attention.",
+      "east_africa": "Nikikusudia kubaki kwenye kazi moja, kelele za pembeni bado huninyakua umakini."
     }
   },
   {
@@ -401,7 +427,8 @@
       "global": "I jump between small tasks many times before the main one is done.",
       "ghana": "I hop among minor jobs again and again before the big task reaches the end.",
       "west_africa": "Little side errands split my time before the chief task is closed.",
-      "francophone_west_africa": "De petites courses annexes morcellent mon temps avant que la tâche principale soit terminée."
+      "francophone_west_africa": "De petites courses annexes morcellent mon temps avant que la tâche principale soit terminée.",
+      "east_africa": "Shughuli ndogo za pembeni hugawanya muda wangu kabla ya kazi kuu kukamilika."
     }
   },
   {
@@ -416,7 +443,8 @@
       "global": "I can read or listen to instructions for a long stretch without losing the thread.",
       "ghana": "I hold the line of a long explanation in my head while reading or listening.",
       "west_africa": "Long guidance stays clear in my mind while I take it in.",
-      "francophone_west_africa": "Une longue consigne reste claire dans ma tête pendant que je la reçois."
+      "francophone_west_africa": "Une longue consigne reste claire dans ma tête pendant que je la reçois.",
+      "east_africa": "Maelekezo marefu hubaki wazi akilini mwangu ninapoyapokea."
     }
   },
   {
@@ -431,7 +459,8 @@
       "global": "Small mistakes in a form or list jump out at me while I check it.",
       "ghana": "When I scan a list or form, little errors show up to me quickly.",
       "west_africa": "Typos or missing lines catch my eye during review.",
-      "francophone_west_africa": "Les fautes de frappe ou les lignes manquantes me sautent aux yeux quand je relis."
+      "francophone_west_africa": "Les fautes de frappe ou les lignes manquantes me sautent aux yeux quand je relis.",
+      "east_africa": "Makosa ya kuandika au mistari iliyokosekana huonekana macho yangu yakikagua."
     }
   },
   {
@@ -446,7 +475,8 @@
       "global": "A new message alert often interrupts me even when I planned to wait.",
       "ghana": "Ping from a device often breaks my plan to stay off it for a while.",
       "west_africa": "Notifications cut in when I meant to stay focused elsewhere.",
-      "francophone_west_africa": "Les notifications m'interrompent alors que je voulais rester concentré ailleurs."
+      "francophone_west_africa": "Les notifications m'interrompent alors que je voulais rester concentré ailleurs.",
+      "east_africa": "Arifa za simu hukatiza nilipokusudia kubaki makini na jambo lingine."
     }
   },
   {
@@ -461,7 +491,8 @@
       "global": "I return to the same task after a short break and pick up where I left off.",
       "ghana": "After stepping away briefly, I slide back into the same task smoothly.",
       "west_africa": "A pause does not erase my place in the work I was doing.",
-      "francophone_west_africa": "Une pause n'efface pas ma place dans le travail que je faisais."
+      "francophone_west_africa": "Une pause n'efface pas ma place dans le travail que je faisais.",
+      "east_africa": "Mapumziko hayaondoi nafasi yangu kwenye kazi niliyokuwa nafanya."
     }
   },
   {
@@ -476,7 +507,8 @@
       "global": "Doing two simple chores at once, like stirring and watching a pot, feels natural.",
       "ghana": "Pairing two easy physical routines at the same time feels fine to me.",
       "west_africa": "Light dual tasks side by side do not confuse me.",
-      "francophone_west_africa": "Deux petites tâches en parallèle ne me déroutent pas."
+      "francophone_west_africa": "Deux petites tâches en parallèle ne me déroutent pas.",
+      "east_africa": "Kazi mbili nyepesi kwa wakati mmoja haziwezi kunichanganya."
     }
   },
   {
@@ -491,7 +523,8 @@
       "global": "I rely on a written note or mark so I do not forget the next step.",
       "ghana": "I leave myself a short written cue for the next action so it is not lost.",
       "west_africa": "A scrap of paper or phone note guards the next step in my mind.",
-      "francophone_west_africa": "Un bout de papier ou une note sur le téléphone me rappelle la prochaine étape."
+      "francophone_west_africa": "Un bout de papier ou une note sur le téléphone me rappelle la prochaine étape.",
+      "east_africa": "Karatasi ndogo au dokezo la simu hunisaidia kukumbuka hatua inayofuata."
     }
   },
   {
@@ -506,7 +539,8 @@
       "global": "Background chatter fades for me when I decide to lock onto one speaker.",
       "ghana": "When I choose one voice to follow, other voices drop in importance in my ears.",
       "west_africa": "I can narrow listening to one person amid side talk.",
-      "francophone_west_africa": "Je peux écouter une seule personne malgré les conversations autour."
+      "francophone_west_africa": "Je peux écouter une seule personne malgré les conversations autour.",
+      "east_africa": "Naweza kuelekeza usikivu kwa mtu mmoja hata kukiwa na mazungumzo ya pembeni."
     }
   },
   {
@@ -521,7 +555,8 @@
       "global": "I lose track of time when I am deeply into a hands-on task I enjoy.",
       "ghana": "Hours can pass unnoticed when I am absorbed in a satisfying manual task.",
       "west_africa": "A hands-on project I like can swallow my sense of clock time.",
-      "francophone_west_africa": "Un travail manuel qui me plaît peut faire oublier le temps qui passe."
+      "francophone_west_africa": "Un travail manuel qui me plaît peut faire oublier le temps qui passe.",
+      "east_africa": "Kazi ya mikono ninayoipenda inaweza kunifanya nisihisi muda unavyopita."
     }
   },
   {
@@ -536,7 +571,8 @@
       "global": "Switching tools mid-task costs me a moment to remember what comes next.",
       "ghana": "Changing tools in the middle of a job creates a short blank in my sequence memory.",
       "west_africa": "Each tool swap needs a beat before the next move is clear.",
-      "francophone_west_africa": "Chaque changement d'outil demande un moment avant que le geste suivant soit clair."
+      "francophone_west_africa": "Chaque changement d'outil demande un moment avant que le geste suivant soit clair.",
+      "east_africa": "Kila nikibadili kifaa au zana, nahitaji muda mfupi kabla hatua inayofuata iwe wazi."
     }
   },
   {
@@ -551,7 +587,8 @@
       "global": "I skim a page and miss a line that was clearly printed there.",
       "ghana": "Quick reading makes me skip a printed line that was present.",
       "west_africa": "Fast scanning lets a visible line slip past me.",
-      "francophone_west_africa": "En parcourant vite un texte, une ligne visible peut m'échapper."
+      "francophone_west_africa": "En parcourant vite un texte, une ligne visible peut m'échapper.",
+      "east_africa": "Nikichanganua maandishi kwa haraka, mstari ulio wazi unaweza kunipita."
     }
   },
   {
@@ -566,7 +603,8 @@
       "global": "Unrelated sounds rarely pull me off a task I meant to finish.",
       "ghana": "Side noise seldom steals me from a job I chose to complete.",
       "west_africa": "Background sound hardly breaks the task I locked onto.",
-      "francophone_west_africa": "Le bruit de fond casse rarement la tâche sur laquelle je me suis concentré."
+      "francophone_west_africa": "Le bruit de fond casse rarement la tâche sur laquelle je me suis concentré.",
+      "east_africa": "Sauti ya nyuma huvunja kidogo sana kazi niliyoiwekea umakini."
     }
   },
   {
@@ -581,7 +619,8 @@
       "global": "I stay on one task until it is done before opening side tasks.",
       "ghana": "I close the main job before I open smaller ones.",
       "west_africa": "Side errands wait until the chief task is finished.",
-      "francophone_west_africa": "Les courses annexes attendent que la tâche principale soit finie."
+      "francophone_west_africa": "Les courses annexes attendent que la tâche principale soit finie.",
+      "east_africa": "Shughuli za pembeni husubiri hadi kazi kuu iishe."
     }
   },
   {
@@ -596,7 +635,8 @@
       "global": "Long stretches of reading or listening often lose me halfway.",
       "ghana": "Extended explanations often drift out of my grasp midway.",
       "west_africa": "Long guidance tends to blur before the end.",
-      "francophone_west_africa": "Une longue consigne a tendance à s'estomper avant la fin."
+      "francophone_west_africa": "Une longue consigne a tendance à s'estomper avant la fin.",
+      "east_africa": "Maelekezo marefu hufifia akilini kabla hayajaisha."
     }
   },
   {
@@ -611,7 +651,8 @@
       "global": "Small errors in a list are easy for me to miss on first pass.",
       "ghana": "Little mistakes hide from me during a quick check.",
       "west_africa": "First scan of a form often leaves errors unseen.",
-      "francophone_west_africa": "Un premier passage sur un formulaire laisse souvent des erreurs non vues."
+      "francophone_west_africa": "Un premier passage sur un formulaire laisse souvent des erreurs non vues.",
+      "east_africa": "Ukaguzi wa kwanza wa fomu mara nyingi huacha makosa bila kuonekana."
     }
   },
   {
@@ -626,7 +667,8 @@
       "global": "I can ignore new message alerts when I planned a focus block.",
       "ghana": "Planned focus time usually holds even when the device pings.",
       "west_africa": "I keep alerts from breaking a focus block I set.",
-      "francophone_west_africa": "Je parviens à empêcher les alertes de rompre un bloc de concentration que j'ai fixé."
+      "francophone_west_africa": "Je parviens à empêcher les alertes de rompre un bloc de concentration que j'ai fixé.",
+      "east_africa": "Naweza kuzuia arifa zisivunje kipande cha umakini nilichojiwekea."
     }
   },
   {
@@ -641,7 +683,8 @@
       "global": "After a break I often need to rebuild the whole picture of the task.",
       "ghana": "Returning from pause, I rebuild the task picture slowly.",
       "west_africa": "Post-break restart feels like starting near the beginning.",
-      "francophone_west_africa": "Après une pause, reprendre ressemble souvent à recommencer presque depuis le début."
+      "francophone_west_africa": "Après une pause, reprendre ressemble souvent à recommencer presque depuis le début.",
+      "east_africa": "Baada ya mapumziko, kuanza tena huhisi kama kuanzia karibu mwanzo."
     }
   },
   {
@@ -656,7 +699,8 @@
       "global": "Even two simple chores at once feel tangled for me.",
       "ghana": "Pairing two easy routines at once confuses my hands or thoughts.",
       "west_africa": "Dual light tasks feel knotted rather than smooth.",
-      "francophone_west_africa": "Deux petites tâches en parallèle me semblent enchevêtrées plutôt que fluides."
+      "francophone_west_africa": "Deux petites tâches en parallèle me semblent enchevêtrées plutôt que fluides.",
+      "east_africa": "Kazi mbili nyepesi kwa pamoja huhisi zimejifunga badala ya kwenda laini."
     }
   },
   {
@@ -671,7 +715,8 @@
       "global": "I remember the next step without needing a written cue most of the time.",
       "ghana": "Next steps stay in mind without paper or phone reminders.",
       "west_africa": "I seldom need a note for what comes next.",
-      "francophone_west_africa": "J'ai rarement besoin d'une note pour savoir quelle est la prochaine étape."
+      "francophone_west_africa": "J'ai rarement besoin d'une note pour savoir quelle est la prochaine étape.",
+      "east_africa": "Mara chache huhitaji dokezo ili kujua kinachofuata."
     }
   },
   {
@@ -686,7 +731,8 @@
       "global": "Side chatter stays loud in my mind even when I try to focus on one speaker.",
       "ghana": "Other voices stay prominent even when I pick one person to hear.",
       "west_africa": "Background talk keeps competing when I aim at one voice.",
-      "francophone_west_africa": "Les conversations de fond continuent de rivaliser quand je vise une seule voix."
+      "francophone_west_africa": "Les conversations de fond continuent de rivaliser quand je vise une seule voix.",
+      "east_africa": "Mazungumzo ya nyuma huendelea kushindana nikijaribu kusikiliza sauti moja."
     }
   },
   {
@@ -701,7 +747,8 @@
       "global": "I rarely lose track of clock time during hands-on work.",
       "ghana": "Hands-on tasks keep my sense of passing hours steady.",
       "west_africa": "Clock awareness stays sharp even in absorbing manual work.",
-      "francophone_west_africa": "Ma conscience du temps reste vive même dans un travail manuel absorbant."
+      "francophone_west_africa": "Ma conscience du temps reste vive même dans un travail manuel absorbant.",
+      "east_africa": "Ufahamu wa saa hubaki mkali hata nikizama kwenye kazi ya mikono."
     }
   },
   {
@@ -716,7 +763,8 @@
       "global": "Switching tools mid-task feels seamless with almost no pause.",
       "ghana": "Tool changes mid-job flow without a hitch.",
       "west_africa": "Moving from one implement to another is instant for me.",
-      "francophone_west_africa": "Passer d'un outil à l'autre est presque instantané pour moi."
+      "francophone_west_africa": "Passer d'un outil à l'autre est presque instantané pour moi.",
+      "east_africa": "Kubadilisha kutoka zana moja kwenda nyingine ni ya papo hapo kwangu."
     }
   },
   {
@@ -731,7 +779,8 @@
       "global": "A careful read usually catches every printed line.",
       "ghana": "Slow read picks up each line that is on the page.",
       "west_africa": "Line-by-line review rarely skips visible text.",
-      "francophone_west_africa": "Une relecture ligne par ligne saute rarement du texte visible."
+      "francophone_west_africa": "Une relecture ligne par ligne saute rarement du texte visible.",
+      "east_africa": "Nikikagua mstari kwa mstari, mara chache siruki maandishi yanayoonekana."
     }
   },
   {
@@ -746,7 +795,8 @@
       "global": "I can keep mental focus on one topic through long waiting periods.",
       "ghana": "Waiting a long time in a queue does not scatter my thoughts from the topic I chose.",
       "west_africa": "Long waits leave my chosen topic stable in mind.",
-      "francophone_west_africa": "Une longue attente — file au bureau, car rapide — laisse mon sujet stable en tête."
+      "francophone_west_africa": "Une longue attente — file au bureau, car rapide — laisse mon sujet stable en tête.",
+      "east_africa": "Foleni ndefu huacha mada niliyochagua ikiwa thabiti akilini."
     }
   },
   {
@@ -761,7 +811,8 @@
       "global": "When plans shift at short notice, I adjust what I do next without much fuss.",
       "ghana": "If the time or place of a meeting changes late, I rearrange my next steps calmly.",
       "west_africa": "Sudden plan changes lead me to update my next moves without long upset.",
-      "francophone_west_africa": "Un changement soudain de programme me pousse à ajuster mes prochains gestes sans longtemps perdre pied."
+      "francophone_west_africa": "Un changement soudain de programme me pousse à ajuster mes prochains gestes sans longtemps perdre pied.",
+      "east_africa": "Ratiba ikibadilika ghafla, hurekebisha hatua zangu zinazofuata bila kuvurugika kwa muda mrefu."
     }
   },
   {
@@ -776,7 +827,8 @@
       "global": "Long waits in a queue feel harder if I have nothing useful in hand to do.",
       "ghana": "Standing in line for a long stretch drags more when my hands and mind are idle.",
       "west_africa": "Empty-handed waiting in a long line wears on me.",
-      "francophone_west_africa": "Attendre les mains vides dans une longue file au marché ou au guichet m'épuise."
+      "francophone_west_africa": "Attendre les mains vides dans une longue file au marché ou au guichet m'épuise.",
+      "east_africa": "Kusubiri foleni ndefu bila cha kufanya hunichosha."
     }
   },
   {
@@ -791,7 +843,8 @@
       "global": "I arrive within the window others expect when the time was agreed in advance.",
       "ghana": "When a time was fixed ahead, I show up inside the range people expect.",
       "west_africa": "Agreed meeting times see me there in the expected span.",
-      "francophone_west_africa": "Aux heures convenues, j'arrive dans le créneau attendu."
+      "francophone_west_africa": "Aux heures convenues, j'arrive dans le créneau attendu.",
+      "east_africa": "Kwa muda wa mkutano uliokubaliwa, hufika ndani ya dirisha lililotarajiwa."
     }
   },
   {
@@ -806,7 +859,8 @@
       "global": "If a task takes longer than guessed, I extend the time I give it without panic.",
       "ghana": "When work runs past the first guess, I widen the slot instead of rushing wildly.",
       "west_africa": "Underestimated duration gets more room rather than panic.",
-      "francophone_west_africa": "Quand la durée est sous-estimée, j'élargis le créneau plutôt que de paniquer."
+      "francophone_west_africa": "Quand la durée est sous-estimée, j'élargis le créneau plutôt que de paniquer.",
+      "east_africa": "Muda nikikadiria chini ya uhalisia, huongeza nafasi ya muda badala ya kupaniki."
     }
   },
   {
@@ -821,7 +875,8 @@
       "global": "I break a big job into timed chunks with short rests in between.",
       "ghana": "Large work gets split into blocks with brief rests between.",
       "west_africa": "Chunk-and-rest pacing is how I tackle long jobs.",
-      "francophone_west_africa": "Découper en morceaux avec des pauses, c'est ma façon d'aborder les longues tâches."
+      "francophone_west_africa": "Découper en morceaux avec des pauses, c'est ma façon d'aborder les longues tâches.",
+      "east_africa": "Kugawa kazi vipande na mapumziko ndio njia yangu ya kushughulikia kazi ndefu."
     }
   },
   {
@@ -836,7 +891,8 @@
       "global": "A clear deadline helps me finish rather than stalls me.",
       "ghana": "Knowing the end time pushes me forward instead of freezing me.",
       "west_africa": "Fixed end dates spur completion rather than block starts.",
-      "francophone_west_africa": "Une date butoir fixe pousse à terminer plutôt qu'à bloquer le départ."
+      "francophone_west_africa": "Une date butoir fixe pousse à terminer plutôt qu'à bloquer le départ.",
+      "east_africa": "Tarehe ya mwisho iliyo wazi hunisukuma kukamilisha badala ya kunizuia kuanza."
     }
   },
   {
@@ -851,7 +907,8 @@
       "global": "I forget upcoming appointments unless I put them on a list or phone.",
       "ghana": "Future times slip unless I record them on paper or device.",
       "west_africa": "Dates ahead vanish from mind without a written or digital reminder.",
-      "francophone_west_africa": "Les dates à venir disparaissent de ma tête sans rappel écrit ou sur le téléphone."
+      "francophone_west_africa": "Les dates à venir disparaissent de ma tête sans rappel écrit ou sur le téléphone.",
+      "east_africa": "Tarehe za mbele hupotea akilini bila kukumbushwa kwa maandishi au simu."
     }
   },
   {
@@ -866,7 +923,8 @@
       "global": "Switching from rest to work mode takes me several minutes.",
       "ghana": "Moving from rest into active work needs a few minutes of ramp-up.",
       "west_africa": "Cold start from break to labor is not instant for me.",
-      "francophone_west_africa": "Reprendre le travail après une pause n'est pas instantané pour moi."
+      "francophone_west_africa": "Reprendre le travail après une pause n'est pas instantané pour moi.",
+      "east_africa": "Kutoka mapumzikoni kurudi kazini si jambo la papo hapo kwangu."
     }
   },
   {
@@ -881,7 +939,8 @@
       "global": "Group work moves faster than I expected when everyone knows their part.",
       "ghana": "Team tasks finish sooner than I thought when roles are clear.",
       "west_africa": "Clear division of labor speeds group jobs beyond my first guess.",
-      "francophone_west_africa": "Un partage clair des rôles accélère le travail de groupe au-delà de ma première estimation."
+      "francophone_west_africa": "Un partage clair des rôles accélère le travail de groupe au-delà de ma première estimation.",
+      "east_africa": "Mgawanyo wazi wa majukumu huifanya kazi ya kikundi iwe haraka kuliko makadirio yangu ya kwanza."
     }
   },
   {
@@ -896,7 +955,8 @@
       "global": "I underestimate how long travel will take when roads are busy.",
       "ghana": "Busy routes make my travel guess too short.",
       "west_africa": "Traffic-heavy trips run longer than my first estimate.",
-      "francophone_west_africa": "Un trajet en car rapide ou en taxi dans le trafic dépasse souvent ma première estimation."
+      "francophone_west_africa": "Un trajet en car rapide ou en taxi dans le trafic dépasse souvent ma première estimation.",
+      "east_africa": "Safari zenye foleni ya magari mara nyingi huchukua muda mrefu kuliko nilivyokadiria awali."
     }
   },
   {
@@ -911,7 +971,8 @@
       "global": "Repeating the same morning steps in the same order settles me.",
       "ghana": "Same order of morning actions steadies my start.",
       "west_africa": "Fixed morning sequence calms my entry into the day.",
-      "francophone_west_africa": "Une routine du matin fixe calme mon entrée dans la journée."
+      "francophone_west_africa": "Une routine du matin fixe calme mon entrée dans la journée.",
+      "east_africa": "Mfuatano wa asubuhi usiobadilika hutuliza kuingia kwangu kwenye siku."
     }
   },
   {
@@ -926,7 +987,8 @@
       "global": "If someone arrives late, I use the gap for a small useful task.",
       "ghana": "Late arrival by others becomes a slot for a tiny useful chore.",
       "west_africa": "Unexpected gaps become pockets for small wins.",
-      "francophone_west_africa": "Les trous imprévus deviennent des moments pour de petites victoires."
+      "francophone_west_africa": "Les trous imprévus deviennent des moments pour de petites victoires.",
+      "east_africa": "Mapengo yasiyotarajiwa huyageuza kuwa nafasi za mafanikio madogo."
     }
   },
   {
@@ -941,7 +1003,8 @@
       "global": "Short-notice plan changes leave me rattled for a while.",
       "ghana": "Late changes to time or place unsettle me before I can move on.",
       "west_africa": "Sudden shifts in schedule throw me off first, then I adapt.",
-      "francophone_west_africa": "Les changements soudains d'emploi du temps me déstabilisent d'abord, puis je m'adapte."
+      "francophone_west_africa": "Les changements soudains d'emploi du temps me déstabilisent d'abord, puis je m'adapte.",
+      "east_africa": "Mabadiliko ya ghafla ya ratiba hunitoa mwelekeo kwanza, kisha ndipo nazoea."
     }
   },
   {
@@ -956,7 +1019,8 @@
       "global": "Long queues feel fine even with nothing in hand to occupy me.",
       "ghana": "Waiting in line a long time without activity does not bother me.",
       "west_africa": "Idle long waits are easy on my mood.",
-      "francophone_west_africa": "Une longue attente inactive est facile à supporter pour mon humeur."
+      "francophone_west_africa": "Une longue attente inactive est facile à supporter pour mon humeur.",
+      "east_africa": "Kusubiri muda mrefu bila shughuli ni rahisi kwa hali yangu ya moyo."
     }
   },
   {
@@ -971,7 +1035,8 @@
       "global": "Agreed times are hard for me to hit even when I try.",
       "ghana": "Expected arrival windows slip for me despite effort.",
       "west_africa": "People sometimes wait for me even when I intend to be prompt.",
-      "francophone_west_africa": "Les gens attendent parfois pour moi même quand je compte être ponctuel."
+      "francophone_west_africa": "Les gens attendent parfois pour moi même quand je compte être ponctuel.",
+      "east_africa": "Watu wakati mwingine hunisubiri hata ninapokusudia kuwahi."
     }
   },
   {
@@ -986,7 +1051,8 @@
       "global": "When a task runs long, I feel rushed rather than widening the slot.",
       "ghana": "Past-guess duration makes me hurry instead of calmly extending time.",
       "west_africa": "Overrun tasks trigger rush feelings.",
-      "francophone_west_africa": "Les tâches qui dépassent le temps prévu déclenchent un sentiment de précipitation."
+      "francophone_west_africa": "Les tâches qui dépassent le temps prévu déclenchent un sentiment de précipitation.",
+      "east_africa": "Kazi ikivuka muda uliopangwa, huanzisha hisia za kukimbizana na saa."
     }
   },
   {
@@ -1001,7 +1067,8 @@
       "global": "I prefer to push through a big job in one stretch without timed breaks.",
       "ghana": "Large jobs feel better in one long push than in timed chunks.",
       "west_africa": "I avoid chunk timers on long work.",
-      "francophone_west_africa": "J'évite les minuteurs par morceaux sur le travail de longue durée."
+      "francophone_west_africa": "J'évite les minuteurs par morceaux sur le travail de longue durée.",
+      "east_africa": "Huepuka kutumia vipima muda vya vipande kwenye kazi ndefu."
     }
   },
   {
@@ -1016,7 +1083,8 @@
       "global": "A firm deadline makes me freeze or delay starting.",
       "ghana": "End dates make starting harder rather than easier.",
       "west_africa": "Deadlines stall my opening move.",
-      "francophone_west_africa": "Les échéances bloquent mon premier geste."
+      "francophone_west_africa": "Les échéances bloquent mon premier geste.",
+      "east_africa": "Muda wa mwisho hunikwamisha kufanya hatua ya kwanza."
     }
   },
   {
@@ -1031,7 +1099,8 @@
       "global": "I keep upcoming times in mind without lists or phone reminders.",
       "ghana": "Future appointments stay in memory without writing them down.",
       "west_africa": "I rarely miss a time I only heard spoken once.",
-      "francophone_west_africa": "Je rate rarement une heure entendue une seule fois à l'oral."
+      "francophone_west_africa": "Je rate rarement une heure entendue une seule fois à l'oral.",
+      "east_africa": "Mara chache hukosa muda niliousikia kwa mdomo mara moja tu."
     }
   },
   {
@@ -1046,7 +1115,8 @@
       "global": "I snap from rest to full work speed almost immediately.",
       "ghana": "Break to labor shift happens in seconds.",
       "west_africa": "Rest ends and work speed peaks at once.",
-      "francophone_west_africa": "La fin du repos et le pic de vitesse au travail arrivent d'un coup pour moi."
+      "francophone_west_africa": "La fin du repos et le pic de vitesse au travail arrivent d'un coup pour moi.",
+      "east_africa": "Mapumziko kuisha na kasi ya kazi kupanda hutokea mara moja kwangu."
     }
   },
   {
@@ -1061,7 +1131,8 @@
       "global": "Group work often runs longer than I first guessed.",
       "ghana": "Team tasks drag past my opening estimate.",
       "west_africa": "Shared jobs expand in clock time versus my plan.",
-      "francophone_west_africa": "Les travaux partagés s'allongent en temps par rapport à mon plan."
+      "francophone_west_africa": "Les travaux partagés s'allongent en temps par rapport à mon plan.",
+      "east_africa": "Kazi za pamoja huongezeka muda wa saa kuliko mpango wangu."
     }
   },
   {
@@ -1076,7 +1147,8 @@
       "global": "I overguess travel time even when roads are clear.",
       "ghana": "I pad travel time more than traffic needs.",
       "west_africa": "Clear roads still get a long time buffer from me.",
-      "francophone_west_africa": "Même avec les routes dégagées, je garde une longue marge de temps."
+      "francophone_west_africa": "Même avec les routes dégagées, je garde une longue marge de temps.",
+      "east_africa": "Hata barabara zikiwa wazi, bado huweka akiba kubwa ya muda."
     }
   },
   {
@@ -1091,7 +1163,8 @@
       "global": "Changing the order of morning steps does not unsettle me.",
       "ghana": "Shuffled morning order leaves me fine.",
       "west_africa": "Morning sequence can vary without cost.",
-      "francophone_west_africa": "La routine du matin peut varier sans me coûter grand-chose."
+      "francophone_west_africa": "La routine du matin peut varier sans me coûter grand-chose.",
+      "east_africa": "Mfuatano wa asubuhi unaweza kubadilika bila gharama kubwa kwangu."
     }
   },
   {
@@ -1106,7 +1179,8 @@
       "global": "Late arrival by others frustrates me and I struggle to use the gap.",
       "ghana": "When others are late, the open minutes feel wasted and irritating.",
       "west_africa": "Waiting on latecomers drains me without productive use.",
-      "francophone_west_africa": "Attendre des retardataires me vide sans usage productif."
+      "francophone_west_africa": "Attendre des retardataires me vide sans usage productif.",
+      "east_africa": "Kusubiri waliochelewa hunimaliza nguvu bila matumizi yenye tija."
     }
   },
   {
@@ -1121,7 +1195,8 @@
       "global": "I expect solo tasks and group tasks to take about the same clock time.",
       "ghana": "I budget equal minutes for alone work and shared work.",
       "west_africa": "Team versus solo duration feels similar in my planning.",
-      "francophone_west_africa": "La durée en équipe et en solo me semble similaire quand je planifie."
+      "francophone_west_africa": "La durée en équipe et en solo me semble similaire quand je planifie.",
+      "east_africa": "Nikipanga, muda wa kazi ya timu na ya peke yangu huonekana karibu sawa."
     }
   },
   {
@@ -1136,7 +1211,8 @@
       "global": "In a group talk, I wait for a clear pause before I add my point.",
       "ghana": "When many voices overlap, I hold my words until a calm opening appears.",
       "west_africa": "In overlapping speech, I wait for a settled gap before speaking.",
-      "francophone_west_africa": "Quand plusieurs personnes parlent en même temps, j'attends un silence net avant de prendre la parole."
+      "francophone_west_africa": "Quand plusieurs personnes parlent en même temps, j'attends un silence net avant de prendre la parole.",
+      "east_africa": "Mazungumzo yakigongana, husubiri pengo lililotulia kabla ya kuongea."
     }
   },
   {
@@ -1151,7 +1227,8 @@
       "global": "I speak up as soon as I have something to add, even if others are still talking.",
       "ghana": "If I have a thought, I offer it even while side talk continues.",
       "west_africa": "I insert my point when ready rather than waiting for full quiet.",
-      "francophone_west_africa": "J'insère mon propos quand je suis prêt plutôt que d'attendre le silence complet."
+      "francophone_west_africa": "J'insère mon propos quand je suis prêt plutôt que d'attendre le silence complet.",
+      "east_africa": "Huingiza hoja yangu nikiwa tayari badala ya kusubiri ukimya kamili."
     }
   },
   {
@@ -1166,7 +1243,8 @@
       "global": "I yield the floor when someone else has been waiting with a raised hand.",
       "ghana": "If another person has waited visibly, I pass the turn.",
       "west_africa": "Visible wait gets my silence so they can speak.",
-      "francophone_west_africa": "Quand quelqu'un attend visiblement, je me tais pour le laisser parler."
+      "francophone_west_africa": "Quand quelqu'un attend visiblement, je me tais pour le laisser parler.",
+      "east_africa": "Nikiona mtu anasubiri kuongea, hutulia ili apewe nafasi."
     }
   },
   {
@@ -1181,7 +1259,8 @@
       "global": "I finish my full thought even if another person is ready to speak.",
       "ghana": "I close my thought before yielding even when someone is poised.",
       "west_africa": "I complete my line before opening space.",
-      "francophone_west_africa": "Je termine ma phrase avant d'ouvrir l'espace aux autres."
+      "francophone_west_africa": "Je termine ma phrase avant d'ouvrir l'espace aux autres.",
+      "east_africa": "Hukamilisha sentensi yangu kwanza kabla ya kufungua nafasi kwa wengine."
     }
   },
   {
@@ -1196,7 +1275,8 @@
       "global": "I slow my speech when the other person looks confused.",
       "ghana": "Confusion on the other face leads me to ease my pace.",
       "west_africa": "I stretch words slower when understanding seems low.",
-      "francophone_west_africa": "J'articule plus lentement quand la compréhension semble faible."
+      "francophone_west_africa": "J'articule plus lentement quand la compréhension semble faible.",
+      "east_africa": "Hupunguza kasi ya maneno nikiona uelewa ni mdogo."
     }
   },
   {
@@ -1211,7 +1291,8 @@
       "global": "I keep the same speech speed even when the listener looks lost.",
       "ghana": "Listener confusion does not change my talking speed much.",
       "west_africa": "My pace stays steady regardless of puzzled looks.",
-      "francophone_west_africa": "Mon débit reste stable malgré des regards perplexes."
+      "francophone_west_africa": "Mon débit reste stable malgré des regards perplexes.",
+      "east_africa": "Kasi yangu ya kuongea hubaki ile ile hata nikiona sura za kutokuelewa."
     }
   },
   {
@@ -1226,7 +1307,8 @@
       "global": "I check whether the other person understood by asking a short question.",
       "ghana": "I use a brief check question after giving instructions.",
       "west_africa": "After directions, I ask a tiny confirmation question.",
-      "francophone_west_africa": "Après des consignes, je pose une petite question de confirmation."
+      "francophone_west_africa": "Après des consignes, je pose une petite question de confirmation.",
+      "east_africa": "Baada ya kutoa maelekezo, huuliza swali dogo la kuthibitisha."
     }
   },
   {
@@ -1241,7 +1323,8 @@
       "global": "I move on after instructions without checking if they were clear.",
       "ghana": "I leave instructions and assume all is clear unless someone stops me.",
       "west_africa": "I rarely ask a quick check after I explain steps.",
-      "francophone_west_africa": "Je demande rarement une vérification rapide après avoir expliqué les étapes."
+      "francophone_west_africa": "Je demande rarement une vérification rapide après avoir expliqué les étapes.",
+      "east_africa": "Mara chache huomba ukaguzi wa haraka baada ya kueleza hatua."
     }
   },
   {
@@ -1256,7 +1339,8 @@
       "global": "If someone did not hear me, I repeat the same point in simpler shorter words.",
       "ghana": "When my line was missed, I say it again shorter and plainer.",
       "west_africa": "Missed hearing gets a brief second version from me.",
-      "francophone_west_africa": "Si je n'ai pas bien entendu, je reformule brièvement."
+      "francophone_west_africa": "Si je n'ai pas bien entendu, je reformule brièvement.",
+      "east_africa": "Nisiposikia vizuri, hutoa toleo fupi la pili kwa ufafanuzi."
     }
   },
   {
@@ -1271,7 +1355,8 @@
       "global": "If someone did not hear me, I repeat the same long wording again.",
       "ghana": "After a miss, I say the same long line a second time.",
       "west_africa": "My second try uses the same long phrasing as the first.",
-      "francophone_west_africa": "Ma deuxième tentative reprend la même formulation longue que la première."
+      "francophone_west_africa": "Ma deuxième tentative reprend la même formulation longue que la première.",
+      "east_africa": "Jaribio langu la pili hutumia maneno marefu yale yale ya kwanza."
     }
   },
   {
@@ -1286,7 +1371,8 @@
       "global": "I notice hand signals or nods that mean wait or go ahead.",
       "ghana": "Small hand or head cues that mean pause or continue are visible to me.",
       "west_africa": "Silent turn cues read clearly for me.",
-      "francophone_west_africa": "Les signaux silencieux de tour de parole me sont clairs."
+      "francophone_west_africa": "Les signaux silencieux de tour de parole me sont clairs.",
+      "east_africa": "Ishara za kimya za zamu ya kuongea huzielewa wazi."
     }
   },
   {
@@ -1301,7 +1387,8 @@
       "global": "Small wait-or-go cues from hands or head often pass me by.",
       "ghana": "Tiny silent cues about turn-taking slip past me.",
       "west_africa": "Hand and nod signals about pausing are easy to miss for me.",
-      "francophone_west_africa": "Les gestes ou hochements indiquant une pause m'échappent facilement."
+      "francophone_west_africa": "Les gestes ou hochements indiquant une pause m'échappent facilement.",
+      "east_africa": "Ishara za mkono au kichwa kuhusu kusimama huenda zikapita bila kugundua."
     }
   },
   {
@@ -1316,7 +1403,8 @@
       "global": "I can follow one quiet speaker even when side chatter continues.",
       "ghana": "One low voice stays clear to me amid background talk.",
       "west_africa": "Soft main speaker plus side noise still works for my listening.",
-      "francophone_west_africa": "Une voix principale douce avec du bruit latéral fonctionne encore pour mon écoute."
+      "francophone_west_africa": "Une voix principale douce avec du bruit latéral fonctionne encore pour mon écoute.",
+      "east_africa": "Sauti kuu ikiwa laini pamoja na kelele za pembeni bado naweza kusikiliza vizuri."
     }
   },
   {
@@ -1331,7 +1419,8 @@
       "global": "Side chatter makes one quiet speaker hard for me to track.",
       "ghana": "Background talk drowns a soft main voice for me.",
       "west_africa": "Low lead voice plus chatter loses me.",
-      "francophone_west_africa": "Une voix principale basse plus le bavardage autour me perdent."
+      "francophone_west_africa": "Une voix principale basse plus le bavardage autour me perdent.",
+      "east_africa": "Sauti kuu ikiwa ya chini huku kelele za pembeni zikiendelea, hupoteza mfuatano."
     }
   },
   {
@@ -1346,7 +1435,8 @@
       "global": "I leave a short quiet gap so someone else can join.",
       "ghana": "I leave a small open space in the talk so another person can enter.",
       "west_africa": "I pause briefly so another voice can enter the talk.",
-      "francophone_west_africa": "Je marque une courte pause pour qu'une autre voix entre dans l'échange."
+      "francophone_west_africa": "Je marque une courte pause pour qu'une autre voix entre dans l'échange.",
+      "east_africa": "Hutoa pauzi fupi ili sauti ya mwingine iingie kwenye mazungumzo."
     }
   },
   {
@@ -1361,7 +1451,8 @@
       "global": "I jump in during short gaps before others have finished their line.",
       "ghana": "I enter the gap early, before the other line feels fully closed.",
       "west_africa": "I start speaking in small openings even if the line may not be done.",
-      "francophone_west_africa": "Je commence à parler dans de petites ouvertures même si la phrase n'est peut-être pas finie."
+      "francophone_west_africa": "Je commence à parler dans de petites ouvertures même si la phrase n'est peut-être pas finie.",
+      "east_africa": "Huanzisha kuongea kwenye mianya midogo hata sentensi ya mwenzangu haijaisha kabisa."
     }
   },
   {
@@ -1376,7 +1467,8 @@
       "global": "After a noisy spell, I repeat a key word slowly before I go on.",
       "ghana": "When noise just dropped, I say a key word again, slowly, then continue.",
       "west_africa": "After loud noise, I restate one key word at a slower pace.",
-      "francophone_west_africa": "Après un bruit fort — moto, haut-parleur — je répète un mot clé plus lentement."
+      "francophone_west_africa": "Après un bruit fort — moto, haut-parleur — je répète un mot clé plus lentement.",
+      "east_africa": "Baada ya kelele kubwa kama bodaboda kupita, hurudia neno muhimu kwa kasi ndogo."
     }
   },
   {
@@ -1391,7 +1483,8 @@
       "global": "After a noisy spell, I continue without repeating a key word.",
       "ghana": "When noise ends, I move on without restating a key word.",
       "west_africa": "I do not restate a key word after the room was loud.",
-      "francophone_west_africa": "Je ne répète pas un mot clé après que la pièce a été bruyante."
+      "francophone_west_africa": "Je ne répète pas un mot clé après que la pièce a été bruyante.",
+      "east_africa": "Baada ya chumba kuwa na kelele, sirudii neno muhimu."
     }
   },
   {
@@ -1406,7 +1499,8 @@
       "global": "When several people speak at once, I lower my volume so one line can come through.",
       "ghana": "If many voices clash, I soften my voice so one line can surface.",
       "west_africa": "During overlap, I speak more softly so one thread can win through.",
-      "francophone_west_africa": "Pendant le chevauchement, je parle plus doucement pour qu'un fil puisse passer."
+      "francophone_west_africa": "Pendant le chevauchement, je parle plus doucement pour qu'un fil puisse passer.",
+      "east_africa": "Mazungumzo yakigongana, huongea kwa sauti ya chini ili mkondo mmoja usikike."
     }
   },
   {
@@ -1421,7 +1515,8 @@
       "global": "When several people speak at once, I raise my volume so I am heard.",
       "ghana": "If many voices clash, I push my voice louder to break through.",
       "west_africa": "During overlap, I speak up louder to cut through.",
-      "francophone_west_africa": "Pendant le chevauchement, je hausse la voix pour percer."
+      "francophone_west_africa": "Pendant le chevauchement, je hausse la voix pour percer.",
+      "east_africa": "Mazungumzo yakigongana, huongeza sauti ili nipenyeze ujumbe."
     }
   },
   {
@@ -1436,7 +1531,8 @@
       "global": "I point to what I mean when words alone might be unclear.",
       "ghana": "If words might confuse, I point at the object or place I mean.",
       "west_africa": "I use a pointing gesture when plain words might miss.",
-      "francophone_west_africa": "J'utilise un geste de la main quand les mots simples risquent de ne pas suffire."
+      "francophone_west_africa": "J'utilise un geste de la main quand les mots simples risquent de ne pas suffire.",
+      "east_africa": "Hutumia ishara ya kuonyesha ninapoona maneno ya kawaida yanaweza yasitoshe."
     }
   },
   {
@@ -1451,7 +1547,8 @@
       "global": "I rely on words only even when pointing would make the meaning clearer.",
       "ghana": "Even when a gesture would help, I stick to words alone.",
       "west_africa": "I avoid pointing even when it would clear things up.",
-      "francophone_west_africa": "J'évite de montrer du doigt même quand cela clarifierait les choses."
+      "francophone_west_africa": "J'évite de montrer du doigt même quand cela clarifierait les choses.",
+      "east_africa": "Huepuka kuonyesha kwa kidole hata pale ingetatua uelewa."
     }
   },
   {
@@ -1466,7 +1563,8 @@
       "global": "I lose thread of a story if several people jump in without order.",
       "ghana": "A tale told out of turn by many speakers confuses my tracking.",
       "west_africa": "Unordered jump-ins make me lose the narrative line.",
-      "francophone_west_africa": "Les interventions désordonnées me font perdre le fil du récit."
+      "francophone_west_africa": "Les interventions désordonnées me font perdre le fil du récit.",
+      "east_africa": "Watu wakirukiana kuongea bila mpangilio, hupoteza mfuatano wa simulizi."
     }
   },
   {
@@ -1481,7 +1579,8 @@
       "global": "Many unordered speakers do not confuse me; I rebuild the story.",
       "ghana": "Jumping speakers still leave me with a clear story picture.",
       "west_africa": "Chaotic turn order does not lose me.",
-      "francophone_west_africa": "L'ordre chaotique des tours de parole ne me perd pas."
+      "francophone_west_africa": "L'ordre chaotique des tours de parole ne me perd pas.",
+      "east_africa": "Mpangilio wa zamu ukiwa wa vurugu haupotezi mfuatano wangu."
     }
   },
   {
@@ -1496,7 +1595,8 @@
       "global": "I step half a step back when someone steps forward to speak.",
       "ghana": "If a person moves forward to speak, I make a small space with my feet.",
       "west_africa": "When someone advances to talk, I ease back a little.",
-      "francophone_west_africa": "Quand quelqu'un s'avance pour parler, je cède un peu."
+      "francophone_west_africa": "Quand quelqu'un s'avance pour parler, je cède un peu.",
+      "east_africa": "Mtu akijisogeza kuongea, hurudi nyuma kidogo kumpa nafasi."
     }
   },
   {
@@ -1511,7 +1611,8 @@
       "global": "I write numbered steps before starting a new multi-step chore.",
       "ghana": "Fresh many-step tasks get a numbered list from me first.",
       "west_africa": "New complex chores start with ordered notes.",
-      "francophone_west_africa": "Une nouvelle tâche complexe commence par des notes ordonnées."
+      "francophone_west_africa": "Une nouvelle tâche complexe commence par des notes ordonnées.",
+      "east_africa": "Kazi mpya ngumu huianza kwa maelezo yaliyopangwa."
     }
   },
   {
@@ -1526,7 +1627,8 @@
       "global": "I like open-ended days where tasks can reshuffle freely.",
       "ghana": "Flexible days with reshuffle room feel better than rigid slots.",
       "west_africa": "Open schedules please me more than fixed minute maps.",
-      "francophone_west_africa": "Des emplois du temps ouverts me plaisent plus que des plannings à la minute."
+      "francophone_west_africa": "Des emplois du temps ouverts me plaisent plus que des plannings à la minute.",
+      "east_africa": "Ratiba zilizo wazi hunifurahisha zaidi kuliko mipango ya dakika kwa dakika."
     }
   },
   {
@@ -1541,7 +1643,8 @@
       "global": "Clear written rules lower my stress in shared spaces.",
       "ghana": "Posted plain rules calm me in shared work or living areas.",
       "west_africa": "Visible simple rules ease me in common spaces.",
-      "francophone_west_africa": "Des règles simples visibles m'apaisent dans les espaces partagés."
+      "francophone_west_africa": "Des règles simples visibles m'apaisent dans les espaces partagés.",
+      "east_africa": "Kanuni rahisi zinazoonekana hunipa utulivu kwenye maeneo ya pamoja."
     }
   },
   {
@@ -1556,7 +1659,8 @@
       "global": "If materials are missing, I improvise with what is nearby.",
       "ghana": "Absent tools lead me to nearby substitutes.",
       "west_africa": "Gaps in supplies spark on-the-spot swaps.",
-      "francophone_west_africa": "Les manques de fournitures déclenchent des remplacements sur le moment."
+      "francophone_west_africa": "Les manques de fournitures déclenchent des remplacements sur le moment.",
+      "east_africa": "Vifaa vikikosekana, hupata mbadala papo hapo."
     }
   },
   {
@@ -1571,7 +1675,8 @@
       "global": "I pack bags the night before a morning trip.",
       "ghana": "Evening-before packing is my habit for early travel.",
       "west_africa": "Morning trips get bags ready the prior night.",
-      "francophone_west_africa": "Pour les sorties du matin, je prépare les sacs la veille au soir."
+      "francophone_west_africa": "Pour les sorties du matin, je prépare les sacs la veille au soir.",
+      "east_africa": "Kwa kutoka asubuhi, huandaa begi usiku wa kabla."
     }
   },
   {
@@ -1586,7 +1691,8 @@
       "global": "Surprise visits feel disruptive when I had a fixed task list.",
       "ghana": "Unplanned guests clash with a tight written list day.",
       "west_africa": "Pop-in visits jar me on list-heavy days.",
-      "francophone_west_africa": "Les visites surprises me dérangent les jours chargés de listes."
+      "francophone_west_africa": "Les visites surprises me dérangent les jours chargés de listes.",
+      "east_africa": "Wageni wa kushtukiza hunisumbua siku zenye orodha nyingi za kazi."
     }
   },
   {
@@ -1601,7 +1707,8 @@
       "global": "I reset objects to the same spots so I can find them again.",
       "ghana": "Things return to fixed homes so search is short.",
       "west_africa": "Stable object homes speed finding.",
-      "francophone_west_africa": "Des places stables pour les objets accélèrent la recherche."
+      "francophone_west_africa": "Des places stables pour les objets accélèrent la recherche.",
+      "east_africa": "Sehemu za kudumu za vitu hufanya utafutaji kuwa wa haraka."
     }
   },
   {
@@ -1616,7 +1723,8 @@
       "global": "I question a rule that blocks safety or fairness even if it is written.",
       "ghana": "Written rules that risk harm or unfairness get a spoken question from me.",
       "west_africa": "I raise concerns about bad posted rules.",
-      "francophone_west_africa": "Je soulève des inquiétudes quand des règles affichées me semblent mauvaises."
+      "francophone_west_africa": "Je soulève des inquiétudes quand des règles affichées me semblent mauvaises.",
+      "east_africa": "Huibua wasiwasi wangu ninapoona kanuni zilizoandikwa si sahihi."
     }
   },
   {
@@ -1631,7 +1739,8 @@
       "global": "Doing steps out of order on purpose feels uncomfortable if order matters for quality.",
       "ghana": "Wrong order on purpose feels off when order affects outcome.",
       "west_africa": "Sequence jumps unsettle me when sequence affects results.",
-      "francophone_west_africa": "Sauter des étapes me déstabilise quand l'ordre influence le résultat."
+      "francophone_west_africa": "Sauter des étapes me déstabilise quand l'ordre influence le résultat.",
+      "east_africa": "Kuruka hatua hunivuruga pale mpangilio wa hatua unaathiri matokeo."
     }
   },
   {
@@ -1646,7 +1755,8 @@
       "global": "I prefer a recipe or pattern the first time I try a new craft.",
       "ghana": "First attempt at a craft wants a pattern in hand.",
       "west_africa": "New craft starts with a model to copy.",
-      "francophone_west_africa": "Un nouvel artisanat commence par un modèle à copier."
+      "francophone_west_africa": "Un nouvel artisanat commence par un modèle à copier.",
+      "east_africa": "Kazi mpya ya ubunifu huanza na mfano wa kuiga."
     }
   },
   {
@@ -1661,7 +1771,8 @@
       "global": "I estimate time for each subtask before I begin.",
       "ghana": "Subtask minutes get guessed before start.",
       "west_africa": "I slice total time across parts ahead of work.",
-      "francophone_west_africa": "Je répartis le temps total entre les parties avant de travailler."
+      "francophone_west_africa": "Je répartis le temps total entre les parties avant de travailler.",
+      "east_africa": "Hugawa muda wa jumla kwa sehemu kabla ya kuanza kazi."
     }
   },
   {
@@ -1676,7 +1787,8 @@
       "global": "I enjoy discovering the path while moving rather than mapping everything first.",
       "ghana": "Forward motion with partial map feels fun.",
       "west_africa": "Full pre-map is less fun than discover-as-I-go.",
-      "francophone_west_africa": "Tout pré-planifier est moins plaisant pour moi que découvrir en avançant."
+      "francophone_west_africa": "Tout pré-planifier est moins plaisant pour moi que découvrir en avançant.",
+      "east_africa": "Kupanga kila kitu mapema ni raha ndogo kuliko kugundua ninapoendelea."
     }
   },
   {
@@ -1691,7 +1803,8 @@
       "global": "I start multi-step chores without writing steps first.",
       "ghana": "Many-step jobs begin straight from the head without lists.",
       "west_africa": "I launch complex tasks without numbered prep.",
-      "francophone_west_africa": "Je lance des tâches complexes sans préparation numérotée."
+      "francophone_west_africa": "Je lance des tâches complexes sans préparation numérotée.",
+      "east_africa": "Huanzisha kazi ngumu bila maandalizi ya hatua zenye namba."
     }
   },
   {
@@ -1706,7 +1819,8 @@
       "global": "Tight schedules with little reshuffle room feel better to me than loose days.",
       "ghana": "Minute-tight plans beat fully open days for my comfort.",
       "west_africa": "I prefer heavy structure over floating tasks.",
-      "francophone_west_africa": "Je préfère une forte structure aux tâches flottantes."
+      "francophone_west_africa": "Je préfère une forte structure aux tâches flottantes.",
+      "east_africa": "Hupendelea muundo thabiti kuliko kazi zinazoelea bila mpangilio."
     }
   },
   {
@@ -1721,7 +1835,8 @@
       "global": "Posted rules feel neutral or slightly stressful rather than calming.",
       "ghana": "Wall rules neither calm nor excite me; slight stress.",
       "west_africa": "Written shared rules add little comfort.",
-      "francophone_west_africa": "Des règles partagées écrites ajoutent peu de confort pour moi."
+      "francophone_west_africa": "Des règles partagées écrites ajoutent peu de confort pour moi.",
+      "east_africa": "Kanuni za pamoja zilizoandikwa hunipa faraja ndogo sana."
     }
   },
   {
@@ -1736,7 +1851,8 @@
       "global": "Missing materials stall me until the right tool appears.",
       "ghana": "Without exact supplies I pause rather than swap.",
       "west_africa": "Wrong-tool work is hard to start.",
-      "francophone_west_africa": "Commencer sans le bon outil me est difficile."
+      "francophone_west_africa": "Commencer sans le bon outil me est difficile.",
+      "east_africa": "Kuanza kazi bila zana sahihi huwa kugumu kwangu."
     }
   },
   {
@@ -1751,7 +1867,8 @@
       "global": "I pack on the morning of travel rather than the night before.",
       "ghana": "Travel bags get packed at wake time.",
       "west_africa": "Same-day morning pack is my norm.",
-      "francophone_west_africa": "Préparer le sac le matin même est ma norme."
+      "francophone_west_africa": "Préparer le sac le matin même est ma norme.",
+      "east_africa": "Kuandaa begi asubuhi hiyo hiyo ndio kawaida yangu."
     }
   },
   {
@@ -1766,7 +1883,8 @@
       "global": "Surprise visits feel welcome even on a fixed task day.",
       "ghana": "Unplanned guests fit fine beside a list.",
       "west_africa": "Drop-in visitors sit well with planned chores.",
-      "francophone_west_africa": "Les visiteurs de passage s'accordent bien avec les corvées planifiées."
+      "francophone_west_africa": "Les visiteurs de passage s'accordent bien avec les corvées planifiées.",
+      "east_africa": "Wageni wanaodondoka bila taarifa huendana vizuri na kazi nilizopanga."
     }
   },
   {
@@ -1781,7 +1899,8 @@
       "global": "I leave tools where I last used them and search later.",
       "ghana": "Objects rest where dropped until needed again.",
       "west_africa": "Floating placement is my habit.",
-      "francophone_west_africa": "Laisser les choses où elles tombent est mon habitude."
+      "francophone_west_africa": "Laisser les choses où elles tombent est mon habitude.",
+      "east_africa": "Kuacha vitu mahali popote ndio mazoea yangu."
     }
   },
   {
@@ -1796,7 +1915,8 @@
       "global": "I keep the same tool layout between sessions so I can grab fast.",
       "ghana": "Tools return to the same layout each time so my hand finds them fast.",
       "west_africa": "I reset my workspace layout the same way between sessions.",
-      "francophone_west_africa": "Je réorganise mon espace de travail de la même façon entre les sessions."
+      "francophone_west_africa": "Je réorganise mon espace de travail de la même façon entre les sessions.",
+      "east_africa": "Hurudisha mpangilio wa eneo langu la kazi kwa namna ile ile kati ya vipindi."
     }
   },
   {
@@ -1811,7 +1931,8 @@
       "global": "Order of steps rarely matters to me if the end result looks fine.",
       "ghana": "End quality OK means order felt flexible to me.",
       "west_africa": "Step sequence is loose in my mind.",
-      "francophone_west_africa": "La séquence des étapes est lâche dans ma tête."
+      "francophone_west_africa": "La séquence des étapes est lâche dans ma tête.",
+      "east_africa": "Mfuatano wa hatua huwa legevu akilini mwangu."
     }
   },
   {
@@ -1826,7 +1947,8 @@
       "global": "I try a new craft first by experimenting without a pattern.",
       "ghana": "Pattern-free first trial is my craft style.",
       "west_africa": "New making starts with free play.",
-      "francophone_west_africa": "Une nouvelle fabrication commence par le jeu libre."
+      "francophone_west_africa": "Une nouvelle fabrication commence par le jeu libre.",
+      "east_africa": "Nikijifunza kutengeneza kitu kipya, huanza na kujaribu huru kwanza."
     }
   },
   {
@@ -1841,7 +1963,8 @@
       "global": "I begin work and discover time needs as I go.",
       "ghana": "Clock needs reveal during the job.",
       "west_africa": "No upfront subtask time guesses.",
-      "francophone_west_africa": "Je ne devine pas le temps par sous-tâche à l'avance."
+      "francophone_west_africa": "Je ne devine pas le temps par sous-tâche à l'avance.",
+      "east_africa": "Sikadirii muda wa kila kipande cha kazi mapema."
     }
   },
   {
@@ -1856,7 +1979,8 @@
       "global": "I want the full map before any first step.",
       "ghana": "Complete preview before motion feels required.",
       "west_africa": "All-at-once planning precedes action.",
-      "francophone_west_africa": "Tout planifier d'un bloc précède l'action."
+      "francophone_west_africa": "Tout planifier d'un bloc précède l'action.",
+      "east_africa": "Hupanga kila kitu kwa mkupuo kabla ya kuchukua hatua."
     }
   },
   {
@@ -1871,7 +1995,8 @@
       "global": "Shared tidy zones matter less to me than finishing the job.",
       "ghana": "End finish beats mid-way neat placement for me.",
       "west_africa": "Completion tops strict tidiness.",
-      "francophone_west_africa": "Terminer prime sur un rangement strict."
+      "francophone_west_africa": "Terminer prime sur un rangement strict.",
+      "east_africa": "Kumaliza kazi kunatangulia usafi mkali wa mpangilio."
     }
   },
   {
@@ -1886,7 +2011,8 @@
       "global": "When the method must change mid-task, I switch without long complaint.",
       "ghana": "A required method swap mid-job gets a quick shift from me.",
       "west_africa": "Forced path change mid-task draws little grumble time.",
-      "francophone_west_africa": "Un changement de cap forcé en pleine tâche m'accorde peu de temps de rouspétance."
+      "francophone_west_africa": "Un changement de cap forcé en pleine tâche m'accorde peu de temps de rouspétance.",
+      "east_africa": "Njia ya kazi ikibadilika ghafla katikati, hulalamika kwa muda mfupi tu kabla ya kuendelea."
     }
   },
   {
@@ -1901,7 +2027,8 @@
       "global": "Trying a new route to a familiar place feels refreshing.",
       "ghana": "A different path to the same end feels like a treat.",
       "west_africa": "Unfamiliar roads to known places please me.",
-      "francophone_west_africa": "Des chemins inconnus vers des lieux connus me plaisent."
+      "francophone_west_africa": "Des chemins inconnus vers des lieux connus me plaisent.",
+      "east_africa": "Njia nisizozizoea kwenda sehemu ninazozijua hunipendeza."
     }
   },
   {
@@ -1916,7 +2043,8 @@
       "global": "I feel uneasy the first day a daily routine is interrupted.",
       "ghana": "Day one of a broken routine feels off in my body.",
       "west_africa": "Routine break day one unsettles me.",
-      "francophone_west_africa": "Casser la routine le premier jour me déstabilise."
+      "francophone_west_africa": "Casser la routine le premier jour me déstabilise.",
+      "east_africa": "Ratiba ikikatika siku ya kwanza, hunisumbua."
     }
   },
   {
@@ -1931,7 +2059,8 @@
       "global": "If a tool breaks, I look for another object that can do the job.",
       "ghana": "Tool failure sends me hunting for a stand-in object.",
       "west_africa": "Broken gear triggers substitute search.",
-      "francophone_west_africa": "Un outil en panne déclenche la recherche d'un substitut."
+      "francophone_west_africa": "Un outil en panne déclenche la recherche d'un substitut.",
+      "east_africa": "Zana ikiharibika, huanza kutafuta mbadala mara moja."
     }
   },
   {
@@ -1946,7 +2075,8 @@
       "global": "New faces in a steady work group take me a meeting or two to adjust to.",
       "ghana": "Fresh members in a fixed team need a couple meets from me.",
       "west_africa": "Steady crew changes need warm-up meets.",
-      "francophone_west_africa": "Des changements d'équipe réguliers demandent des mises en route chaleureuses."
+      "francophone_west_africa": "Des changements d'équipe réguliers demandent des mises en route chaleureuses.",
+      "east_africa": "Mabadiliko ya mara kwa mara ya timu huhitaji vikao vya kuzoeana kwanza."
     }
   },
   {
@@ -1961,7 +2091,8 @@
       "global": "Weather shifts my outdoor plan and I rebuild the plan fast.",
       "ghana": "Rain or wind reshapes outdoor work with quick replan.",
       "west_africa": "Sky change gets a fast alternate plan.",
-      "francophone_west_africa": "Un changement de ciel — pluie soudaine, harmattan — pousse vite un plan de repli."
+      "francophone_west_africa": "Un changement de ciel — pluie soudaine, harmattan — pousse vite un plan de repli.",
+      "east_africa": "Mvua au mabadiliko ya ghafla ya hali ya hewa hunisukuma kuweka mpango mbadala haraka."
     }
   },
   {
@@ -1976,7 +2107,8 @@
       "global": "I revisit old habits even when a new habit would work better.",
       "ghana": "Better new habit still loses to old groove sometimes.",
       "west_africa": "Comfort habit wins over improved new pattern at times.",
-      "francophone_west_africa": "L'habitude confortable l'emporte parfois sur une nouvelle façon améliorée."
+      "francophone_west_africa": "L'habitude confortable l'emporte parfois sur une nouvelle façon améliorée.",
+      "east_africa": "Wakati mwingine mazoea niliyozoea hushinda njia mpya iliyo bora."
     }
   },
   {
@@ -1991,7 +2123,8 @@
       "global": "I need the reason for a rule change before I accept the new rule.",
       "ghana": "Rule swaps want a clear why from me.",
       "west_africa": "New rules need rationale to stick.",
-      "francophone_west_africa": "Les nouvelles règles ont besoin d'une justification pour tenir."
+      "francophone_west_africa": "Les nouvelles règles ont besoin d'une justification pour tenir.",
+      "east_africa": "Kanuni mpya huhitaji sababu inayoeleweka ili nizifuate kwa uthabiti."
     }
   },
   {
@@ -2006,7 +2139,8 @@
       "global": "Updated software layout slows me down until I explore every corner.",
       "ghana": "Fresh app layout needs a full click tour before speed returns.",
       "west_africa": "UI redesign needs exploration time.",
-      "francophone_west_africa": "Un changement d'interface demande du temps d'exploration."
+      "francophone_west_africa": "Un changement d'interface demande du temps d'exploration.",
+      "east_africa": "Muonekano mpya wa mfumo au app hunihitaji muda wa kuuchunguza kwanza."
     }
   },
   {
@@ -2021,7 +2155,8 @@
       "global": "Canceled plans free me to do something else useful quickly.",
       "ghana": "Plan drops become quick slots for other useful acts.",
       "west_africa": "Cancelation redirects me fast to next useful thing.",
-      "francophone_west_africa": "Une annulation me redirige vite vers la prochaine chose utile."
+      "francophone_west_africa": "Une annulation me redirige vite vers la prochaine chose utile.",
+      "east_africa": "Mpango ukifutwa, hubadili haraka na kuhamia jambo linalofuata lenye manufaa."
     }
   },
   {
@@ -2036,7 +2171,8 @@
       "global": "I sample unfamiliar food willingly when ingredients are named.",
       "ghana": "Named parts make unknown dishes OK to taste.",
       "west_africa": "Ingredient labels open me to new plates.",
-      "francophone_west_africa": "Des ingrédients inconnus m'ouvrent à de nouveaux plats."
+      "francophone_west_africa": "Des ingrédients inconnus m'ouvrent à de nouveaux plats.",
+      "east_africa": "Nikiona viungo nisivyozoea, huwa tayari kujaribu vyakula vipya."
     }
   },
   {
@@ -2051,7 +2187,8 @@
       "global": "I return smoothly to a routine after a holiday break.",
       "ghana": "Post-holiday rhythm snaps back for me.",
       "west_africa": "After time off, old daily pattern returns easily.",
-      "francophone_west_africa": "Après un congé, l'ancien rythme quotidien revient facilement."
+      "francophone_west_africa": "Après un congé, l'ancien rythme quotidien revient facilement.",
+      "east_africa": "Baada ya mapumziko, mdundo wangu wa kila siku hurudi kwa urahisi."
     }
   },
   {
@@ -2066,7 +2203,8 @@
       "global": "Method change mid-task frustrates me for a noticeable stretch.",
       "ghana": "Mid-job method swap costs me mood time.",
       "west_africa": "Path change mid-task irritates before I move on.",
-      "francophone_west_africa": "Un changement de chemin en pleine tâche m'irrite avant de passer à la suite."
+      "francophone_west_africa": "Un changement de chemin en pleine tâche m'irrite avant de passer à la suite.",
+      "east_africa": "Mabadiliko ya njia katikati ya kazi hunikera kabla sijasonga mbele."
     }
   },
   {
@@ -2081,7 +2219,8 @@
       "global": "A new route to a familiar place feels like unnecessary risk.",
       "ghana": "Different roads to the same place feel risky not fun.",
       "west_africa": "Alternate paths feel needless.",
-      "francophone_west_africa": "Les chemins alternatifs me semblent superflus."
+      "francophone_west_africa": "Les chemins alternatifs me semblent superflus.",
+      "east_africa": "Njia mbadala huonekana hazina ulazima kwangu."
     }
   },
   {
@@ -2096,7 +2235,8 @@
       "global": "First interrupted routine day feels fine to me.",
       "ghana": "Routine break day one feels normal.",
       "west_africa": "Day-one routine gap does not shake me.",
-      "francophone_west_africa": "Un trou dans la routine du premier jour ne me secoue pas."
+      "francophone_west_africa": "Un trou dans la routine du premier jour ne me secoue pas.",
+      "east_africa": "Pengo la ratiba siku ya kwanza halinitikisi."
     }
   },
   {
@@ -2111,7 +2251,8 @@
       "global": "Tool break stops the job until the exact tool is fixed or replaced.",
       "ghana": "Without the right tool I halt rather than substitute.",
       "west_africa": "Exact-tool dependence on failure.",
-      "francophone_west_africa": "Sans l'outil exact, j'ai du mal à avancer quand quelque chose casse."
+      "francophone_west_africa": "Sans l'outil exact, j'ai du mal à avancer quand quelque chose casse.",
+      "east_africa": "Kifaa kikiharibika, hukwama bila zana ile ile halisi."
     }
   },
   {
@@ -2126,7 +2267,8 @@
       "global": "New people in a steady group feel instantly normal to me.",
       "ghana": "Fresh faces slot in immediately for me.",
       "west_africa": "Instant comfort with new team members.",
-      "francophone_west_africa": "Je suis à l'aise tout de suite avec de nouveaux membres d'équipe."
+      "francophone_west_africa": "Je suis à l'aise tout de suite avec de nouveaux membres d'équipe.",
+      "east_africa": "Hujisikia huru mara moja nikiwa na washiriki wapya wa timu au chama."
     }
   },
   {
@@ -2141,7 +2283,8 @@
       "global": "Weather change leaves me stuck without a new plan for a while.",
       "ghana": "Sky shift freezes my planning for a bit.",
       "west_africa": "Weather turns create plan blanks.",
-      "francophone_west_africa": "Les retournements de météo créent des blancs dans mon plan."
+      "francophone_west_africa": "Les retournements de météo créent des blancs dans mon plan.",
+      "east_africa": "Mabadiliko ya hali ya hewa huacha mapengo kwenye mpango wangu."
     }
   },
   {
@@ -2156,7 +2299,8 @@
       "global": "I adopt a better new habit quickly when I see it works.",
       "ghana": "Shown better habit swaps in fast for me.",
       "west_africa": "Evidence of improvement drives fast habit swap.",
-      "francophone_west_africa": "Une preuve d'amélioration me pousse à changer d'habitude vite."
+      "francophone_west_africa": "Une preuve d'amélioration me pousse à changer d'habitude vite.",
+      "east_africa": "Nikipata ushahidi wa kuboreka, hubadili tabia haraka."
     }
   },
   {
@@ -2171,7 +2315,8 @@
       "global": "I accept a rule change on brief notice without needing a long reason.",
       "ghana": "Short notice rule change sits fine without deep why.",
       "west_africa": "New rule on brief word works for me.",
-      "francophone_west_africa": "Une nouvelle règle annoncée en peu de mots me suffit."
+      "francophone_west_africa": "Une nouvelle règle annoncée en peu de mots me suffit.",
+      "east_africa": "Kanuni mpya ikielezwa kwa maneno machache, hunitosha kuifuata."
     }
   },
   {
@@ -2186,7 +2331,8 @@
       "global": "Updated software feels intuitive right away.",
       "ghana": "New layout clicks immediately.",
       "west_africa": "Redesign speeds me up from day one.",
-      "francophone_west_africa": "Un redesign me rend plus rapide dès le premier jour."
+      "francophone_west_africa": "Un redesign me rend plus rapide dès le premier jour.",
+      "east_africa": "Muundo mpya wa mfumo hunifanya niwe mwepesi tangu siku ya kwanza."
     }
   },
   {
@@ -2201,7 +2347,8 @@
       "global": "Canceled plans leave me drifting unsure what to do next.",
       "ghana": "Dropped plans create empty unsure minutes.",
       "west_africa": "Cancelation empties my next move.",
-      "francophone_west_africa": "Une annulation vide ma prochaine action."
+      "francophone_west_africa": "Une annulation vide ma prochaine action.",
+      "east_africa": "Mpango ukifutwa, hatua yangu inayofuata hubaki tupu."
     }
   },
   {
@@ -2216,7 +2363,8 @@
       "global": "Unfamiliar food makes me refuse even when ingredients are named.",
       "ghana": "Unknown dishes get a no even with parts listed.",
       "west_africa": "Named unfamiliar plates still get declined.",
-      "francophone_west_africa": "Des plats inconnus nommés sont encore refusés par moi."
+      "francophone_west_africa": "Des plats inconnus nommés sont encore refusés par moi.",
+      "east_africa": "Hata nikielezewa jina, bado hukataa vyakula visivyozoeleka."
     }
   },
   {
@@ -2231,7 +2379,8 @@
       "global": "After a long break, rebuilding routine takes many days.",
       "ghana": "Holiday return stretches routine rebuild across days.",
       "west_africa": "Slow return to rhythm after time away.",
-      "francophone_west_africa": "Le retour au rythme après une absence est lent pour moi."
+      "francophone_west_africa": "Le retour au rythme après une absence est lent pour moi.",
+      "east_africa": "Baada ya muda mbali, hurudi taratibu kwenye mdundo wa kawaida."
     }
   },
   {
@@ -2246,7 +2395,8 @@
       "global": "I combine odd objects creatively when standard tools are gone.",
       "ghana": "No standard tool sparks creative mashups from me.",
       "west_africa": "Odd combos finish jobs without proper gear.",
-      "francophone_west_africa": "Des combinaisons bizarres finissent le travail sans le bon matériel."
+      "francophone_west_africa": "Des combinaisons bizarres finissent le travail sans le bon matériel.",
+      "east_africa": "Mchanganyiko usio wa kawaida unaweza kunisaidia kumaliza kazi hata bila vifaa sahihi."
     }
   },
   {
@@ -2261,7 +2411,8 @@
       "global": "I return to a hard task after a short walk instead of abandoning it.",
       "ghana": "Tough task plus brief walk brings me back to try again.",
       "west_africa": "Hard job gets another round after a stroll.",
-      "francophone_west_africa": "Après une tâche dure, une autre manche est possible après une promenade."
+      "francophone_west_africa": "Après une tâche dure, une autre manche est possible après une promenade.",
+      "east_africa": "Baada ya kazi ngumu, naweza kuendelea raundi nyingine baada ya kutembea kidogo."
     }
   },
   {
@@ -2276,7 +2427,8 @@
       "global": "Heavy physical work leads me to drink water and sit before the next chore.",
       "ghana": "Big exertion gets water plus sit before round two.",
       "west_africa": "After hard labor I hydrate and rest briefly.",
-      "francophone_west_africa": "Après un travail pénible sous le soleil, je m'hydrate et me repose brièvement."
+      "francophone_west_africa": "Après un travail pénible sous le soleil, je m'hydrate et me repose brièvement.",
+      "east_africa": "Baada ya kazi nzito hasa jua kali, hunywa maji na kupumzika kwa muda mfupi."
     }
   },
   {
@@ -2291,7 +2443,8 @@
       "global": "I push to finish a boring but important task the same day I started.",
       "ghana": "Dull-but-needed work closes same day it opens.",
       "west_africa": "Important boring jobs do not cross midnight idle.",
-      "francophone_west_africa": "Les corvées importantes mais ennuyeuses ne restent pas inachevées jusqu'à minuit."
+      "francophone_west_africa": "Les corvées importantes mais ennuyeuses ne restent pas inachevées jusqu'à minuit.",
+      "east_africa": "Kazi muhimu lakini ya kuchosha haiwi kawaida kubaki bila kumalizika hadi usiku wa manane."
     }
   },
   {
@@ -2306,7 +2459,8 @@
       "global": "I notice muscle soreness and lighten the next task on purpose.",
       "ghana": "Sore muscles trigger a lighter next load by choice.",
       "west_africa": "Body ache steers next task size down.",
-      "francophone_west_africa": "Une douleur corporelle me pousse à réduire la taille de la tâche suivante."
+      "francophone_west_africa": "Une douleur corporelle me pousse à réduire la taille de la tâche suivante.",
+      "east_africa": "Maumivu ya mwili hunifanya nipunguze ukubwa wa kazi inayofuata."
     }
   },
   {
@@ -2321,7 +2475,8 @@
       "global": "Mental fatigue makes me switch to a simple hands task for a while.",
       "ghana": "Brain tired sends me to easy hand work awhile.",
       "west_africa": "Thinking drain moves me to plain manual chores.",
-      "francophone_west_africa": "La fatigue de réflexion me pousse vers des tâches manuelles simples."
+      "francophone_west_africa": "La fatigue de réflexion me pousse vers des tâches manuelles simples.",
+      "east_africa": "Akili ikichoka, huhamia kazi rahisi za mikono."
     }
   },
   {
@@ -2336,7 +2491,8 @@
       "global": "I split a huge cleaning job across several days on purpose.",
       "ghana": "Massive cleaning spreads across planned days.",
       "west_africa": "Big clean gets day-sliced plan.",
-      "francophone_west_africa": "Un grand nettoyage se découpe en plan sur la journée."
+      "francophone_west_africa": "Un grand nettoyage se découpe en plan sur la journée.",
+      "east_africa": "Usafi mkubwa huupanga kwa vipande ndani ya siku."
     }
   },
   {
@@ -2351,7 +2507,8 @@
       "global": "I sleep longer after an unusually demanding day.",
       "ghana": "Extra-hard day extends my sleep the night after.",
       "west_africa": "Big demand day lengthens next sleep.",
-      "francophone_west_africa": "Une journée très exigeante allonge mon sommeil du lendemain."
+      "francophone_west_africa": "Une journée très exigeante allonge mon sommeil du lendemain.",
+      "east_africa": "Siku yenye mahitaji makubwa hunifanya nilale zaidi siku inayofuata."
     }
   },
   {
@@ -2366,7 +2523,8 @@
       "global": "I take notes during long talks so my mind can rest between points.",
       "ghana": "Long speech gets note fragments so my mind breathes.",
       "west_africa": "Extended talk pairs with jotting breaks for me.",
-      "francophone_west_africa": "Une longue conversation s'accompagne de pauses pour noter."
+      "francophone_west_africa": "Une longue conversation s'accompagne de pauses pour noter.",
+      "east_africa": "Mazungumzo marefu huyaendesha kwa mapumziko mafupi ya kuandika madokezo."
     }
   },
   {
@@ -2381,7 +2539,8 @@
       "global": "I set a visible timer to work in focused bursts on dull tasks.",
       "ghana": "Boring work runs in timed visible bursts.",
       "west_africa": "Timer chunks carry dull work.",
-      "francophone_west_africa": "Des morceaux minutés portent le travail ennuyeux."
+      "francophone_west_africa": "Des morceaux minutés portent le travail ennuyeux.",
+      "east_africa": "Vipande vya muda vilivyowekwa hunibeba kwenye kazi za kuchosha."
     }
   },
   {
@@ -2396,7 +2555,8 @@
       "global": "I stop work for food before I feel shaky.",
       "ghana": "Meal breaks come before shaky hunger.",
       "west_africa": "Food pause precedes shakiness.",
-      "francophone_west_africa": "Une pause repas précède les tremblements ou vertiges."
+      "francophone_west_africa": "Une pause repas précède les tremblements ou vertiges.",
+      "east_africa": "Hupumzika kula kabla ya dalili kama kutetemeka au kizunguzungu."
     }
   },
   {
@@ -2411,7 +2571,8 @@
       "global": "I celebrate small finished pieces of a long project aloud or in text to someone.",
       "ghana": "Tiny milestones get a spoken or text cheer to another person.",
       "west_africa": "Micro wins get shared praise.",
-      "francophone_west_africa": "Les petites victoires méritent d'être partagées à voix haute."
+      "francophone_west_africa": "Les petites victoires méritent d'être partagées à voix haute.",
+      "east_africa": "Mafanikio madogo hustahili kushirikiwa kwa pongezi."
     }
   },
   {
@@ -2426,7 +2587,8 @@
       "global": "After conflict talk, I need quiet alone time before the next social task.",
       "ghana": "Hot words exchange needs solo quiet before next people task.",
       "west_africa": "Argument aftermath needs alone buffer.",
-      "francophone_west_africa": "Après une dispute, j'ai besoin d'un temps seul pour me remettre."
+      "francophone_west_africa": "Après une dispute, j'ai besoin d'un temps seul pour me remettre.",
+      "east_africa": "Baada ya mabishano, huhitaji muda wa kuwa peke yangu ili kurejea sawa."
     }
   },
   {
@@ -2441,7 +2603,8 @@
       "global": "A hard failed attempt makes me shelve the task for days.",
       "ghana": "Tough fail shelves the job many days.",
       "west_africa": "Failure sends long shelf time.",
-      "francophone_west_africa": "Un échec envoie la tâche au placard longtemps."
+      "francophone_west_africa": "Un échec envoie la tâche au placard longtemps.",
+      "east_africa": "Nikifeli, kazi hiyo huwekwa pembeni kwa muda mrefu."
     }
   },
   {
@@ -2456,7 +2619,8 @@
       "global": "I jump straight into the next heavy chore without water or sit.",
       "ghana": "Back-to-back heavy chores without pause is my pattern.",
       "west_africa": "No sit or sip between hard rounds.",
-      "francophone_west_africa": "Je ne m'assois ni ne bois entre les manches d'effort intense."
+      "francophone_west_africa": "Je ne m'assois ni ne bois entre les manches d'effort intense.",
+      "east_africa": "Sikai wala sinywi kati ya vipindi vya juhudi nzito."
     }
   },
   {
@@ -2471,7 +2635,8 @@
       "global": "Boring important tasks often spill to another day unfinished.",
       "ghana": "Dull needed work crosses days open.",
       "west_africa": "Important drudge lingers unfinished.",
-      "francophone_west_africa": "Les corvées importantes traînent inachevées."
+      "francophone_west_africa": "Les corvées importantes traînent inachevées.",
+      "east_africa": "Kazi muhimu za kuchosha hubaki bila kukamilika kwa muda."
     }
   },
   {
@@ -2486,7 +2651,8 @@
       "global": "I ignore early muscle soreness and repeat the same heavy load.",
       "ghana": "Early soreness ignored; same load repeated.",
       "west_africa": "Soreness does not shrink next task.",
-      "francophone_west_africa": "La douleur ne réduit pas la tâche suivante pour moi."
+      "francophone_west_africa": "La douleur ne réduit pas la tâche suivante pour moi.",
+      "east_africa": "Hata nikiumia, sipunguzi ukubwa wa kazi inayofuata."
     }
   },
   {
@@ -2501,7 +2667,8 @@
       "global": "Mental fatigue makes me stop all work rather than switch task type.",
       "ghana": "Brain tired halts everything.",
       "west_africa": "Think-tired ends the work block fully.",
-      "francophone_west_africa": "La fatigue mentale met fin au bloc de travail complètement."
+      "francophone_west_africa": "La fatigue mentale met fin au bloc de travail complètement.",
+      "east_africa": "Uchovu wa akili hunikatisha kabisa kipande cha kazi."
     }
   },
   {
@@ -2516,7 +2683,8 @@
       "global": "I try to finish huge cleaning in one long push.",
       "ghana": "Whole clean in one marathon session is my pull.",
       "west_africa": "One-shot giant clean attempts.",
-      "francophone_west_africa": "J'attaque les grands nettoyages d'un seul coup."
+      "francophone_west_africa": "J'attaque les grands nettoyages d'un seul coup.",
+      "east_africa": "Usafi mkubwa hujaribu kuufanya kwa mkupuo mmoja."
     }
   },
   {
@@ -2531,7 +2699,8 @@
       "global": "Demanding day rarely changes how long I sleep.",
       "ghana": "Hard day does not stretch night sleep.",
       "west_africa": "Sleep length stable after strain.",
-      "francophone_west_africa": "La durée de mon sommeil reste stable après un effort intense."
+      "francophone_west_africa": "La durée de mon sommeil reste stable après un effort intense.",
+      "east_africa": "Muda wa usingizi hubaki ule ule hata baada ya siku ngumu."
     }
   },
   {
@@ -2546,7 +2715,8 @@
       "global": "I rely on memory alone through long talks without jotting.",
       "ghana": "Long talks need no notes from me.",
       "west_africa": "Memory holds long talks solo.",
-      "francophone_west_africa": "Je retiens seul les longues conversations sans notes."
+      "francophone_west_africa": "Je retiens seul les longues conversations sans notes.",
+      "east_africa": "Ninaweza kukumbuka mazungumzo marefu bila kuandika chochote."
     }
   },
   {
@@ -2561,7 +2731,8 @@
       "global": "Dull tasks run without timers until something interrupts.",
       "ghana": "No burst timers on boring work.",
       "west_africa": "Open-ended grind on dull jobs.",
-      "francophone_west_africa": "Je reste sur des corvées ennuyeuses sans limite de temps."
+      "francophone_west_africa": "Je reste sur des corvées ennuyeuses sans limite de temps.",
+      "east_africa": "Hubaki kwenye kazi za kuchosha bila kikomo cha muda."
     }
   },
   {
@@ -2576,7 +2747,8 @@
       "global": "I work through hunger until shaking or headache appears.",
       "ghana": "Hunger ignored until body signals hard.",
       "west_africa": "Food waits for strong body complaint.",
-      "francophone_west_africa": "Je repousse le repas jusqu'à une plainte corporelle forte."
+      "francophone_west_africa": "Je repousse le repas jusqu'à une plainte corporelle forte.",
+      "east_africa": "Huchelewesha kula hadi mwili ulalamike sana."
     }
   },
   {
@@ -2591,7 +2763,8 @@
       "global": "I move on to the next task without noting what I finished.",
       "ghana": "Finished slices pass without acknowledgment.",
       "west_africa": "No micro-celebration between chunks.",
-      "francophone_west_africa": "Je ne célèbre pas les petites étapes entre les morceaux."
+      "francophone_west_africa": "Je ne célèbre pas les petites étapes entre les morceaux.",
+      "east_africa": "Sherehe ndogo kati ya vipande vya kazi sizifanyi."
     }
   },
   {
@@ -2606,7 +2779,8 @@
       "global": "After conflict talk I go straight into the next crowded task.",
       "ghana": "Argument then immediate crowd task is fine for me.",
       "west_africa": "No solo buffer needed after tense talk.",
-      "francophone_west_africa": "Je n'ai pas besoin d'un temps seul après un échange tendu."
+      "francophone_west_africa": "Je n'ai pas besoin d'un temps seul après un échange tendu.",
+      "east_africa": "Baada ya mazungumzo yenye mvutano, sihitaji muda wa kuwa peke yangu."
     }
   },
   {
@@ -2621,7 +2795,8 @@
       "global": "A few minutes with my eyes closed rarely changes how tired I feel.",
       "ghana": "Short quiet with my eyes shut seldom shifts my tired level.",
       "west_africa": "A brief eye rest rarely lifts my energy.",
-      "francophone_west_africa": "Une courte pause des yeux relève rarement mon énergie."
+      "francophone_west_africa": "Une courte pause des yeux relève rarement mon énergie.",
+      "east_africa": "Mapumziko mafupi ya macho mara chache hurudisha nguvu yangu."
     }
   },
   {
@@ -2636,7 +2811,8 @@
       "global": "I understand a new physical skill faster when someone shows me once.",
       "ghana": "Seeing a move once beats hearing many words for my body learning.",
       "west_africa": "Demo-first beats long verbal-only coaching for my hands.",
-      "francophone_west_africa": "Une démonstration avant de longs discours seuls convient mieux à mes mains."
+      "francophone_west_africa": "Une démonstration avant de longs discours seuls convient mieux à mes mains.",
+      "east_africa": "Nikipewa onyesho la vitendo kwanza, hunielewa vizuri zaidi kuliko maelezo marefu ya maneno pekee."
     }
   },
   {
@@ -2651,7 +2827,8 @@
       "global": "Spoken steps alone are enough for me to copy a simple new routine.",
       "ghana": "Voice-only instructions carry simple new routines for me.",
       "west_africa": "Hearing the order is enough without pictures.",
-      "francophone_west_africa": "Entendre l'ordre des étapes suffit sans images."
+      "francophone_west_africa": "Entendre l'ordre des étapes suffit sans images.",
+      "east_africa": "Kusikia mpangilio wa hatua hunitosha hata bila picha."
     }
   },
   {
@@ -2666,7 +2843,8 @@
       "global": "I repeat a new phrase aloud several times to lock it in.",
       "ghana": "Fresh phrases get loud repeats to stick.",
       "west_africa": "New wording needs spoken loops.",
-      "francophone_west_africa": "Un nouveau motage demande des répétitions à voix haute."
+      "francophone_west_africa": "Un nouveau motage demande des répétitions à voix haute.",
+      "east_africa": "Nikijifunza maneno mapya, huhitaji kuyarudia kwa sauti mara kadhaa."
     }
   },
   {
@@ -2681,7 +2859,8 @@
       "global": "I draw a quick map or diagram to explain where something is.",
       "ghana": "Place explanation gets a fast sketch from me.",
       "west_africa": "Location questions get doodle answers.",
-      "francophone_west_africa": "Les questions de lieu reçoivent des croquis en réponse."
+      "francophone_west_africa": "Les questions de lieu reçoivent des croquis en réponse.",
+      "east_africa": "Maswali ya mahali huyajibu kwa mchoro mdogo."
     }
   },
   {
@@ -2696,7 +2875,8 @@
       "global": "I learn from a mistake if the wrong outcome is shown clearly.",
       "ghana": "Clear wrong result teaches me fast.",
       "west_africa": "Visible error outcome educates me.",
-      "francophone_west_africa": "Voir le résultat d'une erreur m'enseigne."
+      "francophone_west_africa": "Voir le résultat d'une erreur m'enseigne.",
+      "east_africa": "Nikiyaona matokeo ya kosa moja kwa moja, hujifunza vizuri."
     }
   },
   {
@@ -2711,7 +2891,8 @@
       "global": "I ask the teacher or guide to slow down when hands and words move too fast together.",
       "ghana": "Hands plus words too fast triggers a slow request from me.",
       "west_africa": "I request slower combo demo when rushed.",
-      "francophone_west_africa": "Je demande une démo plus lente quand on va trop vite."
+      "francophone_west_africa": "Je demande une démo plus lente quand on va trop vite.",
+      "east_africa": "Onyesho likienda haraka sana, huomba lirudiwe polepole."
     }
   },
   {
@@ -2726,7 +2907,8 @@
       "global": "I tie a new name to a face feature so I recall it next time.",
       "ghana": "Face detail anchors new names for me.",
       "west_africa": "Feature hook holds names.",
-      "francophone_west_africa": "Un détail saillant fixe les noms dans ma mémoire."
+      "francophone_west_africa": "Un détail saillant fixe les noms dans ma mémoire.",
+      "east_africa": "Kipengele kinachojitokeza hunisaidia kukumbuka majina."
     }
   },
   {
@@ -2741,7 +2923,8 @@
       "global": "I use objects around me as props when telling a story.",
       "ghana": "Storytelling grabs nearby objects as examples.",
       "west_africa": "Tales include prop pointing.",
-      "francophone_west_africa": "Mes récits incluent montrer un objet du doigt."
+      "francophone_west_africa": "Mes récits incluent montrer un objet du doigt.",
+      "east_africa": "Kwenye simulizi zangu, mara nyingi huonyesha kitu kwa kidole."
     }
   },
   {
@@ -2756,7 +2939,8 @@
       "global": "Long written instructions tire me; short bullet lists work better.",
       "ghana": "Paragraph manuals drain me; bullets help.",
       "west_africa": "Wall-of-text rules lose me; lists win.",
-      "francophone_west_africa": "Un mur de texte me perd ; les listes gagnent."
+      "francophone_west_africa": "Un mur de texte me perd ; les listes gagnent.",
+      "east_africa": "Ukuta wa maandishi hunipoteza; orodha hunisaidia zaidi."
     }
   },
   {
@@ -2771,7 +2955,8 @@
       "global": "I practice a new dance or sport move in slow motion first.",
       "ghana": "Fresh moves start in slow motion.",
       "west_africa": "New motor pattern begins slow.",
-      "francophone_west_africa": "Un nouveau geste moteur commence lentement pour moi."
+      "francophone_west_africa": "Un nouveau geste moteur commence lentement pour moi.",
+      "east_africa": "Nikijifunza mwendo mpya wa mwili, huanza kwa taratibu."
     }
   },
   {
@@ -2786,7 +2971,8 @@
       "global": "I learn a group game faster after one practice round than after only rules talk.",
       "ghana": "One trial round beats rules lecture for group games.",
       "west_africa": "Play round teaches group rules faster for me.",
-      "francophone_west_africa": "Un tour d'essai enseigne les règles de groupe plus vite."
+      "francophone_west_africa": "Un tour d'essai enseigne les règles de groupe plus vite.",
+      "east_africa": "Duru ya majaribio hunifundisha kanuni za kikundi haraka zaidi."
     }
   },
   {
@@ -2801,7 +2987,8 @@
       "global": "Charts with colors help me compare amounts at a glance.",
       "ghana": "Color bars make amount gaps obvious to my eyes.",
       "west_africa": "Hue-coded charts speed compare.",
-      "francophone_west_africa": "Des tableaux en couleur accélèrent la comparaison."
+      "francophone_west_africa": "Des tableaux en couleur accélèrent la comparaison.",
+      "east_africa": "Jedwali au mchoro wenye rangi hunifanya nilinganishe haraka."
     }
   },
   {
@@ -2816,7 +3003,8 @@
       "global": "Watching once is not enough; I need several repeats before my body copies.",
       "ghana": "Single demo is too thin; repeats needed for my body.",
       "west_africa": "Multi-repeat watch before motor copy.",
-      "francophone_west_africa": "J'ai besoin de plusieurs reprises avant de copier le geste."
+      "francophone_west_africa": "J'ai besoin de plusieurs reprises avant de copier le geste.",
+      "east_africa": "Huhitaji kuangalia mara nyingi kabla ya kunakili mwendo wa mwili."
     }
   },
   {
@@ -2831,7 +3019,8 @@
       "global": "Spoken steps alone are not enough; I need a picture or gesture.",
       "ghana": "Voice-only is thin; picture or hand cue needed.",
       "west_africa": "Words alone miss for new routines.",
-      "francophone_west_africa": "Les mots seuls ne suffisent pas pour les nouvelles routines."
+      "francophone_west_africa": "Les mots seuls ne suffisent pas pour les nouvelles routines.",
+      "east_africa": "Maneno pekee hayatoshi kwangu nikijifunza utaratibu mpya."
     }
   },
   {
@@ -2846,7 +3035,8 @@
       "global": "I lock new phrases silently in my head without saying them aloud.",
       "ghana": "Silent mental loop stores new wording.",
       "west_africa": "No loud repeats needed for phrases.",
-      "francophone_west_africa": "Je n'ai pas besoin de répéter fort les phrases nouvelles."
+      "francophone_west_africa": "Je n'ai pas besoin de répéter fort les phrases nouvelles.",
+      "east_africa": "Sihitaji kurudia kwa sauti maneno mapya ili niyakumbuke."
     }
   },
   {
@@ -2861,7 +3051,8 @@
       "global": "I describe a place with words only and skip drawing.",
       "ghana": "Word picture without sketch is my habit.",
       "west_africa": "No doodle for directions.",
-      "francophone_west_africa": "Je ne fais pas de croquis pour les directions."
+      "francophone_west_africa": "Je ne fais pas de croquis pour les directions.",
+      "east_africa": "Sichori mchoro wa njia ninapoelekeza mahali."
     }
   },
   {
@@ -2876,7 +3067,8 @@
       "global": "Mistakes confuse me unless someone walks through the right steps slowly.",
       "ghana": "Errors need slow correct walkthrough.",
       "west_africa": "Wrong tries need guided redo.",
-      "francophone_west_africa": "Les essais ratés demandent une reprise guidée pour moi."
+      "francophone_west_africa": "Les essais ratés demandent une reprise guidée pour moi.",
+      "east_africa": "Nikikosea majaribio, huhitaji kuongozwa tena ili kurekebisha."
     }
   },
   {
@@ -2891,7 +3083,8 @@
       "global": "Fast hands with fast talk during demo feels fine to me.",
       "ghana": "Rapid demo pace matches my learning.",
       "west_africa": "Speedy combo demo fits me.",
-      "francophone_west_africa": "Une démo rapide enchaînée me convient."
+      "francophone_west_africa": "Une démo rapide enchaînée me convient.",
+      "east_africa": "Onyesho la kasi linalounganisha hatua hunifaa vizuri."
     }
   },
   {
@@ -2906,7 +3099,8 @@
       "global": "I recall new names without linking them to face details.",
       "ghana": "Names stick without feature tricks.",
       "west_africa": "Face hooks unused.",
-      "francophone_west_africa": "Je n'utilise pas les visages comme ancres mnémotechniques."
+      "francophone_west_africa": "Je n'utilise pas les visages comme ancres mnémotechniques.",
+      "east_africa": "Situmii sana sura za watu kama ndoano za kumbukumbu."
     }
   },
   {
@@ -2921,7 +3115,8 @@
       "global": "I tell stories with words only and rarely point to objects.",
       "ghana": "Object-free storytelling is my style.",
       "west_africa": "Props seldom appear in my tales.",
-      "francophone_west_africa": "Les objets apparaissent rarement dans mes récits."
+      "francophone_west_africa": "Les objets apparaissent rarement dans mes récits.",
+      "east_africa": "Kwenye simulizi zangu, vitu halisi hujitokeza mara chache."
     }
   },
   {
@@ -2936,7 +3131,8 @@
       "global": "Long written instructions feel clearer than very short bullets.",
       "ghana": "Full paragraphs beat ultra-short bullets for me.",
       "west_africa": "Dense text guides me well.",
-      "francophone_west_africa": "Un texte dense me guide bien."
+      "francophone_west_africa": "Un texte dense me guide bien.",
+      "east_africa": "Maandishi mazito bila vipengele huniongoza vizuri."
     }
   },
   {
@@ -2951,7 +3147,8 @@
       "global": "I practice new moves at full speed from the first try.",
       "ghana": "Day-one new moves run full tempo.",
       "west_africa": "No slow-motion ramp.",
-      "francophone_west_africa": "Je n'ai pas besoin de commencer un geste au ralenti."
+      "francophone_west_africa": "Je n'ai pas besoin de commencer un geste au ralenti.",
+      "east_africa": "Sihitaji kuanza mwendo mpya kwa polepole."
     }
   },
   {
@@ -2966,7 +3163,8 @@
       "global": "Rules talk alone is enough for me before a group game starts.",
       "ghana": "Pre-game lecture carries me without practice round.",
       "west_africa": "Verbal rules pre-play suffice.",
-      "francophone_west_africa": "Les règles verbales avant le jeu me suffisent."
+      "francophone_west_africa": "Les règles verbales avant le jeu me suffisent.",
+      "east_africa": "Kanuni za maneno kabla ya majaribio hunitosha."
     }
   },
   {
@@ -2981,7 +3179,8 @@
       "global": "Color charts feel optional; numbers alone are enough.",
       "ghana": "Numeric tables beat color bars for me.",
       "west_africa": "Plain numbers compare fine.",
-      "francophone_west_africa": "Les nombres simples comparent bien pour moi."
+      "francophone_west_africa": "Les nombres simples comparent bien pour moi.",
+      "east_africa": "Namba za kawaida hunitosha kulinganisha vitu."
     }
   },
   {
@@ -2996,7 +3195,8 @@
       "global": "Written checklist beats live demo for my learning style.",
       "ghana": "Paper checklist tops live show for me.",
       "west_africa": "List beats watching.",
-      "francophone_west_africa": "Une liste écrite me convient mieux que regarder une démonstration."
+      "francophone_west_africa": "Une liste écrite me convient mieux que regarder une démonstration.",
+      "east_africa": "Orodha ya maandishi hunifaa zaidi kuliko kutazama onyesho."
     }
   }
 ]
