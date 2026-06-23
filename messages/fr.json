@@ -5,7 +5,7 @@
     "checklistDoc": "docs/CULTURAL_REVIEW_CHECKLIST.md",
     "outstandingItems": [
       "1. Tier1 UI + Tier2 privacyPage (messages/fr/privacy.json) done; native Francophone legal review still pending.",
-      "2. Tier3 landscape/interpretation UI remains English via merge fallback.",
+      "2. Tier3 results-landscape/interpretation UI done; Tier4 research tools still remain English via merge fallback.",
       "3. Native review for ethics/consent tone and Francophone West Africa clinical-referral wording.",
       "4. Machine-draft note: question stems still require human review (question-stems-fr.ts, adaptive banks)."
     ]
@@ -443,5 +443,196 @@
     "low_met": "L’évaluation n’est qu’indicative. Nous vous recommandons de poursuivre le questionnaire pour obtenir des scores dimensionnels plus fiables.",
     "continue_cta": "Poursuivre l'évaluation",
     "continue_hint": "Vous renvoie au questionnaire pour ajouter plus de réponses."
+  },
+  "landscape": {
+    "hero_title": "Plusieurs tendances cognitives à la fois — des motifs, pas une étiquette unique",
+    "hero_body": "Vos réponses façonnent plusieurs tendances cognitives ensemble. Chacune apparaît comme son propre point. Les points proches sont relativement similaires dans le modèle que nous utilisons. Cette image est une carte de motifs pour la réflexion — des tendances en langage simple, pas une note ni un classement.",
+    "map_heading": "Votre constellation cognitive",
+    "map_caption": "Chaque point représente une tendance cognitive (la taille et la clarté indiquent sa force ici). De fines lignes relient des tendances proches ; des cercles regroupent celles qui sont voisines. L’étiquette centrale est le point d’équilibre de votre motif — pas un « type » unique.",
+    "map_aria": "Image de plusieurs tendances cognitives à la fois, avec des exemples de repère simples",
+    "constellation_centroid": "Point d’équilibre de votre motif",
+    "constellation_weight": "Force relative ici",
+    "cluster_pattern": "{domain} · {count} tendances",
+    "pattern_banner": "Combinaison fréquente (cet appareil) : {traits} · observée ensemble après {support} passations ici (~{pct}% des résumés stockés dans ce navigateur) · recouvrement avec vous : {score}%",
+    "map_you": "Vous",
+    "map_top_signals": "Signaux de routage les plus forts",
+    "map_density_hint": "Le dégradé coloré doux montre où les tendances se regroupent dans l’image ; ce n’est ni un tableau de scores ni un classement.",
+    "map_density_on": "Afficher la densité",
+    "map_density_off": "Masquer la densité",
+    "view_map": "Carte",
+    "view_density": "Densité",
+    "view_field": "Champ cognitif",
+    "view_terrain3d": "Paysage 3D",
+    "view_vector": "Traits et nombres",
+    "view_switcher_aria": "Choisissez une autre manière de voir la même image",
+    "view_vector_activation_heading": "Activations des traits",
+    "view_vector_activation_caption": "Chaque ligne correspond à une tendance de votre constellation. La barre montre sa force dans cette session — pas une note scolaire ni un rang.",
+    "view_vector_blend_heading": "Résumé fusionné (technique)",
+    "view_vector_blend_caption": "Un vecteur unique dérivé de vos activations pour l’export et les outils de recherche. Ces coordonnées ne sont pas les mêmes que les barres dimensionnelles colorées.",
+    "view_vector_caption": "Activations des traits d’abord ; vecteur fusionné optionnel en dessous pour usage technique.",
+    "view_vector_aria": "Liste des activations de traits et coordonnées d’intégration fusionnée optionnelles",
+    "field_caption": "Un champ cognitif continu construit à partir de toutes les activations. Les pics indiquent plusieurs régions actives ; les gradients montrent les transitions entre elles.",
+    "view_terrain3d_caption": "Même disposition que Carte et Densité, affichée en relief : la hauteur suit la même densité lissée des traits (plus haut = davantage d’accent combiné ici — pas un score séparé).",
+    "view_terrain3d_legend_title": "Comment lire cette vue",
+    "view_terrain3d_legend_peak": "L’élévation reflète la densité relative. Les pics sont les zones où plusieurs tendances se superposent dans cette projection — pas une note ni un classement.",
+    "view_terrain3d_legend_you": "La sphère lumineuse est votre point d’équilibre sur la surface : le centre pondéré de vos activations dans cette disposition 2D.",
+    "view_terrain3d_legend_rings": "Les anneaux colorés marquent des groupes — des ensembles de points de traits proches (mêmes regroupements que sur la carte plane).",
+    "view_terrain3d_legend_layout": "Carte, Densité et 3D partagent un même système de coordonnées. UMAP ou PCA organise seulement le plan — gauche/droite n’a pas de sens fixe ; comparez les formes, pas la direction.",
+    "view_terrain3d_mode_label": "Vue",
+    "view_terrain3d_2d": "Vue du dessus",
+    "view_terrain3d_3d": "Perspective",
+    "view_terrain3d_source_umap": "Disposition : UMAP",
+    "view_terrain3d_source_pca": "Disposition : PCA (secours)",
+    "view_terrain3d_loading": "Construction du paysage…",
+    "view_terrain3d_aria": "Terrain cognitif en trois dimensions : l’élévation montre la densité relative ; vous êtes le repère accentué ; les anneaux montrent les groupes",
+    "view_terrain3d_hint": "Faites glisser pour orbiter (3D) ou tourner dans le plan (vue du dessus). Faites défiler ou pincez pour zoomer. Couleurs volontairement atténuées — c’est exploratoire, pas un score.",
+    "constellation_note": "La lueur douce marque le point d’équilibre de l’ensemble de vos points de tendance — pas un score séparé ni un type de personne.",
+    "map_zoom_hint": "Faites défiler ou pincez pour zoomer ; utilisez les boutons pour réinitialiser.",
+    "map_zoom_in": "Agrandir",
+    "map_zoom_out": "Réduire",
+    "map_zoom_reset": "Réinitialiser la vue",
+    "map_proxy_note": "Ce lien n’incluait pas un résumé complet enregistré ; l’image utilise une estimation prudente basée uniquement sur les scores partagés.",
+    "export_png": "Télécharger le graphique (PNG)",
+    "export_json": "Télécharger le profil (JSON)",
+    "copy_share_url": "Copier le lien partageable",
+    "share_url_too_long": "Ce lien dépasserait une longueur d’URL sûre (2000 caractères). Exportez le JSON ou utilisez une URL de page plus courte.",
+    "share_copied": "Lien partageable copié dans le presse-papiers.",
+    "export_png_error": "Impossible d’exporter le PNG (export d’image bloqué par le navigateur). Essayez plutôt une capture d’écran.",
+    "bars_heading": "Barres dimensionnelles",
+    "bars_caption": "Chaque barre utilise la couleur de la dimension ; l’opacité reflète la confiance de routage. Survolez ou appuyez longuement sur une ligne pour la courte description scientifique.",
+    "research_routing_disclosure_summary": "T, I, A, V — dimensions de routage étendues (couverture d’items plus faible ; orienté recherche selon ADR-007). Développez pour voir les mêmes barres.",
+    "url_profile": {
+      "summary": "Cette vue a été ouverte depuis un lien partagé. Elle affiche uniquement les scores dimensionnels — pas une session complète enregistrée."
+    }
+  },
+  "field": {
+    "offline_tools_heading": "Configuration hors ligne / terrain",
+    "offline_tools_body": "Si vous n’avez pas de réseau : importez le même JSON de banque de questions livré avec cette version, ou chargez la copie intégrée, puis poursuivez l’évaluation.",
+    "import_bank_file": "Importer la banque de questions (JSON)",
+    "load_bundled_bank": "Charger la banque intégrée",
+    "bank_ready_reload": "Banque chargée — rechargement…",
+    "paper_csv_link": "Saisir des réponses papier (CSV)",
+    "import_page_title": "Import papier / CSV",
+    "import_page_lead": "Collez un CSV avec les colonnes questionId, response (1–5 ou 1–3), responseTimeMs (facultatif) et timestamp (ISO). Le même pipeline de score est appliqué comme dans l’application.",
+    "import_disclaimer": "À utiliser uniquement avec consentement et validation éthique. Vérifiez que les questionId correspondent à votre formulaire imprimé.",
+    "import_csv_label": "CSV",
+    "import_csv_hint": "Ligne d’en-tête requise. Exemple : questionId,response,responseTimeMs,timestamp",
+    "import_run": "Calculer et aller aux résultats",
+    "import_empty": "Aucune ligne valide trouvée.",
+    "bank_error_hint": "Si vous êtes hors ligne sans visite préalable : importez le JSON de banque de questions, utilisez « Charger la banque intégrée » ou ouvrez /data/question-bank-universal-all.json depuis ce déploiement.",
+    "import_csv_placeholder": "questionId,response,responseTimeMs,timestamp",
+    "import_busy_ellipsis": "…"
+  },
+  "pipeline": {
+    "pattern": {
+      "answer_consistency_high": "Forte cohérence des réponses entre des items similaires",
+      "answer_consistency_low": "Variabilité plus élevée entre des items similaires"
+    },
+    "note": {
+      "response_time_variance": "Les temps de réponse varient fortement d’un item à l’autre.",
+      "entropy_high": "La séquence des réponses montre une exploration plus élevée des positions de l’échelle."
+    },
+    "summary": {
+      "confident": "Cette session soutient un résumé des traits avec une confiance modérément élevée.",
+      "limited": "La confiance sur les traits est limitée ; interprétez avec prudence.",
+      "preliminary": "Signal de réponse limité ; considérez ces motifs comme préliminaires."
+    },
+    "patterns_fallback": "Aucun motif fortement distinctif ne ressort des seules statistiques de cette session.",
+    "notes_fallback": "Il s’agit d’un résumé descriptif pour la réflexion et la recherche — tendances en langage simple issues de vos réponses."
+  },
+  "interp": {
+    "F": {
+      "high": "Vous avez tendance à maintenir votre attention lorsqu’un sujet vous mobilise, et les distractions sont relativement faciles à écarter.",
+      "mid": "Votre concentration varie selon le contexte — parfois profonde, parfois plus facilement attirée par l’environnement.",
+      "low": "Vous remarquez souvent des sollicitations concurrentes de votre attention et vous pouvez changer de tâche ou de stimulus plus facilement."
+    },
+    "P": {
+      "high": "Vous pouvez vous sentir à l’aise avec l’abstraction et rechercher souvent des structures ou des règles sous les détails visibles.",
+      "mid": "Vous alternez entre des exemples concrets et une recherche de motifs, selon la tâche.",
+      "low": "Vous préférez des étapes tangibles et des procédures familières plutôt qu’une abstraction ouverte."
+    },
+    "S": {
+      "high": "Les entrées sensorielles, comme le bruit, la lumière ou les textures, peuvent fortement influencer votre confort et votre concentration.",
+      "mid": "Certains environnements conviennent bien, tandis que d’autres — surtout les plus chargés ou intenses — vous fatiguent plus vite.",
+      "low": "La charge sensorielle ordinaire des contextes quotidiens vous gêne généralement moins que des profils plus sensibles."
+    },
+    "E": {
+      "high": "Le temps social tend à coûter de l’énergie, et vous récupérez mieux avec des moments calmes en solo.",
+      "mid": "Vous appréciez certains échanges sociaux, mais plutôt en doses mesurées qu’en stimulation continue.",
+      "low": "Vous tirez de l’énergie des personnes et des activités autour de vous, et vous supportez bien des périodes sociales prolongées."
+    },
+    "R": {
+      "high": "Des routines prévisibles et des plans clairs vous aident généralement à vous sentir stable et efficace.",
+      "mid": "Vous appréciez une certaine structure, mais vous pouvez vous adapter lorsque les plans changent rapidement.",
+      "low": "Vous vous adaptez vite quand les agendas changent et dépendez rarement d’un rythme fixe pour vous sentir bien."
+    },
+    "C": {
+      "high": "Vous pouvez être relativement à l’aise pour réviser vos points de vue ou changer de cadre mental quand de nouvelles informations apparaissent.",
+      "mid": "Vous savez vous ajuster lorsque nécessaire, même si l’ambiguïté rapide ou les revirements peuvent parfois fatiguer.",
+      "low": "Vous préférez des réponses stables et des attentes claires plutôt qu’une incertitude prolongée."
+    },
+    "T": {
+      "high": "Vous remarquez généralement plus nettement le rythme, les intervalles et les échéances, plutôt que de perdre la notion du temps.",
+      "mid": "Votre perception du temps change selon le contexte — parfois précise, parfois davantage ancrée dans le présent.",
+      "low": "Les heures peuvent se comprimer ou s’étirer sans que vous le remarquiez ; vous vivez souvent davantage dans le présent que selon l’horloge."
+    },
+    "I": {
+      "high": "Les signaux internes comme la faim, la fatigue ou la tension sont généralement perçus clairement.",
+      "mid": "Certains signaux corporels sont clairs, tandis que d’autres n’apparaissent qu’une fois assez intenses.",
+      "low": "Les états physiques peuvent vous surprendre avant que vous ne les remarquiez consciemment."
+    },
+    "A": {
+      "high": "Les idées déclenchent souvent des liens étendus — métaphores, analogies ou digressions viennent facilement.",
+      "mid": "Vous combinez des chemins directs avec des sauts ponctuels lorsque la situation invite à la créativité.",
+      "low": "Vous restez généralement sur des enchaînements directs et progressifs plutôt que sur de larges associations."
+    },
+    "V": {
+      "high": "Les organisations spatiales, schémas ou images mentales ont souvent plus de poids que de longues chaînes verbales.",
+      "mid": "Vous passez des mots aux images selon ce que la tâche favorise.",
+      "low": "Le langage et les étapes ordonnées constituent généralement votre point d’appui principal pour de nouvelles informations."
+    }
+  },
+  "results_interpretation": {
+    "heading": "Que signifie cela ?",
+    "para1": "Votre profil montre comment vous pondérez la concentration, le traitement des motifs, la sensibilité sensorielle, l’énergie sociale, la préférence de structure et la flexibilité cognitive. Chaque personne combine ces dimensions de manière unique.",
+    "para2": "Dans la littérature scientifique, des formes similaires apparaissent souvent dans de grands thèmes de diversité cognitive et de styles de traitement du quotidien — votre aperçu ici reste uniquement une description dimensionnelle et n’est pas interchangeable avec un thème de recherche unique. Pour en savoir plus sur ce cadre de recherche, consultez la <research>note de recherche PCMS sur Synaptic Four</research>.",
+    "strengths_heading": "Corrélats de points forts",
+    "strengths_sub": "Vos trois scores les plus élevés parmi les six dimensions principales — forces descriptives pour la réflexion.",
+    "strength_F": "Concentration profonde, précision du détail",
+    "strength_P": "Pensée systémique, reconnaissance de motifs",
+    "strength_S": "Perception fine, atouts esthétiques",
+    "strength_E": "Empathie, collaboration en groupe",
+    "strength_R": "Fiabilité, planification solide",
+    "strength_C": "Adaptabilité, résolution créative de problèmes"
+  },
+  "radar": {
+    "caption": "Le graphique radar compare vos scores bruts (anneau externe) à vos scores ajustés par la confiance (anneau interne). Un écart important sur un axe signifie que la certitude est plus faible sur cette dimension.",
+    "caption_high": "Un point proche de l’extérieur indique une adhésion plus forte au pôle élevé de cette dimension.",
+    "caption_low": "Un point plus près du centre indique que les réponses penchent vers le pôle faible de cette dimension.",
+    "aria": "Graphique radar des dix dimensions de routage cognitif avec scores bruts et ajustés par la confiance",
+    "tooltip_raw": "Score brut",
+    "tooltip_weighted": "Score ajusté par la confiance",
+    "tooltip_confidence": "Confiance de la dimension",
+    "tooltip_items": "Items contributifs",
+    "legend_raw": "Score brut (0–100)",
+    "legend_inner": "Ajusté pour l’incertitude (interne)",
+    "label_pair": "{low} ↔ {high}"
+  },
+  "bars": {
+    "caption": "Chaque barre montre votre score entre les libellés de bas et de haut en langage simple. La partie pâle indique jusqu’où le score pourrait plausiblement monter avec l’incertitude actuelle.",
+    "aria": "Barres dimensionnelles : six scores de routage principaux d’abord ; T–V dans une section dépliable (ADR-007).",
+    "research_routing_disclosure_summary": "T, I, A, V — développez pour la même présentation en barres (orienté recherche ; ADR-007).",
+    "confidence_line": "Confiance : {pct}% · {n} items répondus",
+    "tail_explainer": "Segment hachuré : plage haute plausible si la confiance augmente (pas un IC statistique).",
+    "progressbar_aria": "{title} : {raw} pour cent de score brut ; borne haute plausible proche de {upper} pour cent"
+  },
+  "insights": {
+    "caption": "Interprétations courtes pour chaque dimension. Les cartes en italique sont moins certaines — survolez ou focalisez la carte pour savoir pourquoi.",
+    "aria": "Cartes d’insight : six dimensions de routage principales d’abord ; T–V dans une section dépliable (ADR-007).",
+    "research_routing_disclosure_summary": "T, I, A, V — même présentation d’insights que les six principales ; développez si vous souhaitez ces notes orientées recherche.",
+    "confidence_note_generic": "Nous ne sommes pas encore pleinement confiants sur cette dimension — vous pouvez répondre à davantage de questions liées à cette zone.",
+    "confidence_note_sample": "Nous aurions besoin de plus de réponses à forte charge pour atteindre ici une pleine confiance de niveau recherche.",
+    "deemphasized_tooltip": "Confiance plus faible : cette carte est affichée en atténué jusqu’à collecte de réponses plus cohérentes.",
+    "confidence_compact": "{pct}% de confiance"
   }
 }

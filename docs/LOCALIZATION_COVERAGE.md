@@ -8,12 +8,12 @@ Honest status for partners, reviewers, and deploy checks. **UI language** and **
 |--------|------------------|--------------------------------------|----------------------------------------|
 | `en` | **Yes** (~691 keys) | English (canonical) | `global` / regional English |
 | `de` | **Yes** (~689 keys + DE privacy bundle) | ~130 classic + TIAV overrides | Forced to classic (no DE stems for ca-v1) |
-| `fr` | **Tier 1+2 yes** (~407/733 keys); **~56% full site** | 50 classic draft stems; **200/200** francophone | **200/200** `francophone_west_africa` (machine draft) |
-| `sw` | **Tier 1+2 yes** (~416/733 keys); **~57% full site** | 50 classic draft stems; **200/200** Kiswahili | **200/200** `east_africa` (machine draft) |
+| `fr` | **Tier 1–3 yes** (~554/733 keys); **~76% full site** | 50 classic draft stems; **200/200** francophone | **200/200** `francophone_west_africa` (machine draft) |
+| `sw` | **Tier 1–3 yes** (~563/733 keys); **~77% full site** | 50 classic draft stems; **200/200** Kiswahili | **200/200** `east_africa` (machine draft) |
 | `tw` | **Partial** — ~126 keys merged over English | English (Ghana stems when `ghana`/`tw` region) | English via `ghana` stem region |
 | `wo` | **Partial** — ~485 keys merged over English | English; maps to `francophone_west_africa` for ca-v1 | French ca-v1 stems when using cultural bank |
 
-**Conclusion:** `fr` and `sw` have **Tier 1 UI** plus **Tier 2 privacy** (`/privacy` page). **Landscape maps, interpretation cards, cohort/group tools** remain English until Tier 3–4. Only `en` and `de` are fully localized end-to-end.
+**Conclusion:** `fr` and `sw` have **Tier 1–3** (assessment journey, privacy, results landscape/interpretation). **Cohort, group analysis, facilitator, offline import tools** (Tier 4) remain English. Only `en` and `de` are fully localized end-to-end.
 
 ---
 
@@ -53,10 +53,9 @@ All six locales are registered in `src/i18n/routing.ts` and appear in `LanguageS
 
 ## Known gaps (action items)
 
-1. ~~Expand `messages/fr.json` and `messages/sw.json` toward parity with `en.json` (consent body, privacy, all dimension labels, questionnaire chrome, nav).~~ Tier 1 + privacy done (June 2026).
+1. ~~Tier 1 UI + privacy.~~ ~~Tier 3 landscape/interpretation.~~ Done (June 2026).
 2. Native speaker / legal review for machine-draft stems, UI copy, and privacy bundles.
-3. Classic bank: extend `question-stems-fr.ts` / `question-stems-sw.ts` beyond 50 IDs if classic mode stays enabled for those locales.
-4. Wolof/Twi: unchanged partial UI; no dedicated ca-v1 stem regions.
+3. Tier 4 research/team tools — optional; can remain English for field pilots.
 
 ---
 

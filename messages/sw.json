@@ -443,5 +443,196 @@
     "low_met": "Tathmini ni dalili tu. Tunapendekeza uendelee dodoso kwa alama za vipimo vya kuaminika zaidi.",
     "continue_cta": "Endelea tathmini",
     "continue_hint": "Hukurudisha kwenye dodoso ili kuongeza majibu zaidi."
+  },
+  "landscape": {
+    "hero_title": "Mielekeo mingi ya fikra kwa pamoja — mifumo, si lebo moja",
+    "hero_body": "Majibu yako huunda mielekeo kadhaa ya fikra kwa pamoja. Kila mmoja huonekana kama nukta yake. Nukta zilizo karibu zinafanana kwa kiasi fulani katika modeli tunayotumia. Picha hii ni ramani ya mifumo kwa tafakari — mielekeo kwa lugha rahisi, si alama wala cheo.",
+    "map_heading": "Konstelesheni yako ya utambuzi",
+    "map_caption": "Kila nukta ni mwelekeo mmoja wa fikra (ukubwa na uwazi huonyesha nguvu yake hapa). Mistari hafifu huunganisha mielekeo inayohusiana; duara huweka makundi ya yaliyo karibu. Lebo ya katikati ni sehemu ya mizani ya mfumo wako — si “aina” moja.",
+    "map_aria": "Picha ya mielekeo mingi ya fikra kwa pamoja, yenye mifano rahisi ya marejeo",
+    "constellation_centroid": "Sehemu ya mizani ya mfumo wako",
+    "constellation_weight": "Nguvu ya kulinganisha hapa",
+    "cluster_pattern": "{domain} · mielekeo {count}",
+    "pattern_banner": "Mchanganyiko wa kawaida (kifaa hiki): {traits} · umeonekana pamoja baada ya ukamilishaji {support} hapa (~{pct}% ya muhtasari ulihifadhiwa kwenye kivinjari hiki) · mfanano wako: {score}%",
+    "map_you": "Wewe",
+    "map_top_signals": "Ishara kuu za uelekezaji",
+    "map_density_hint": "Rangi laini ya usuli huonyesha mahali mielekeo inapokusanyika kwenye picha; si chati ya alama wala jedwali la nafasi.",
+    "map_density_on": "Onyesha msongamano",
+    "map_density_off": "Ficha msongamano",
+    "view_map": "Ramani",
+    "view_density": "Msongamano",
+    "view_field": "Uga wa Utambuzi",
+    "view_terrain3d": "Mandhari ya 3D",
+    "view_vector": "Sifa na nambari",
+    "view_switcher_aria": "Chagua namna nyingine ya kutazama picha hiyo hiyo",
+    "view_vector_activation_heading": "Uamilishaji wa sifa",
+    "view_vector_activation_caption": "Kila mstari ni mwelekeo mmoja katika konstelesheni yako. Upau huonyesha nguvu yake katika kipindi hiki — si alama ya shule wala cheo.",
+    "view_vector_blend_heading": "Muhtasari wa mchanganyiko (kiufundi)",
+    "view_vector_blend_caption": "Vekta moja inayotokana na uamilishaji wako kwa ajili ya uhamishaji na zana za utafiti. Viwianishi hivi si sawa na pau za vipimo zenye rangi.",
+    "view_vector_caption": "Kwanza uamilishaji wa sifa; chini yake vekta ya mchanganyiko ya hiari kwa matumizi ya kiufundi.",
+    "view_vector_aria": "Orodha ya uamilishaji wa sifa na viwianishi vya embedding ya mchanganyiko vya hiari",
+    "field_caption": "Uga endelevu wa utambuzi uliojengwa kutoka uamilishaji wote. Vilele huonyesha maeneo mengi amilifu, na miteremko huonyesha mabadiliko kati yake.",
+    "view_terrain3d_caption": "Mpangilio ule ule kama Ramani na Msongamano, lakini kama mandhari: urefu hufuata msongamano ule ule uliolainishwa wa sifa (juu zaidi = msisitizo wa pamoja zaidi hapo — si alama tofauti).",
+    "view_terrain3d_legend_title": "Jinsi ya kusoma mwonekano huu",
+    "view_terrain3d_legend_peak": "Urefu unaonyesha msongamano wa kulinganisha. Vilele ni mahali ambapo mielekeo kadhaa inajikusanya katika projekseni hii — si alama wala nafasi.",
+    "view_terrain3d_legend_you": "Duara angavu ni sehemu yako ya mizani juu ya uso: kitovu chenye uzito wa uamilishaji wako katika mpangilio huu wa 2D.",
+    "view_terrain3d_legend_rings": "Pete zenye rangi huonyesha makundi — makundi ya nukta za sifa zilizo karibu (makundi yale yale ya ramani tambarare).",
+    "view_terrain3d_legend_layout": "Ramani, Msongamano na 3D hushiriki mfumo mmoja wa viwianishi. UMAP au PCA hupanga tu eneo la tambarare — kushoto/kulia hakuna maana ya kudumu; linganisha maumbo, si mwelekeo wa dira.",
+    "view_terrain3d_mode_label": "Mwonekano",
+    "view_terrain3d_2d": "Kutoka juu",
+    "view_terrain3d_3d": "Mtazamo wa kina",
+    "view_terrain3d_source_umap": "Mpangilio: UMAP",
+    "view_terrain3d_source_pca": "Mpangilio: PCA (mbadala)",
+    "view_terrain3d_loading": "Inatengeneza mandhari…",
+    "view_terrain3d_aria": "Mandhari ya utambuzi ya vipimo vitatu: urefu unaonyesha msongamano wa kulinganisha; wewe ni alama kuu; pete zinaonyesha makundi",
+    "view_terrain3d_hint": "Buruta kuzunguka (3D) au kuzungusha kwenye uso (kutoka juu). Sukuma au kubana kwa vidole kukuza. Rangi zimetulizwa kimakusudi — huu ni uchunguzi, si alama.",
+    "constellation_note": "Mwangaza laini unaonyesha sehemu ya mizani ya nukta zako zote za mwelekeo pamoja — si alama tofauti wala aina ya mtu.",
+    "map_zoom_hint": "Sukuma au bana kukuza; tumia vitufe kuweka upya.",
+    "map_zoom_in": "Kuza ndani",
+    "map_zoom_out": "Punguza",
+    "map_zoom_reset": "Weka mwonekano upya",
+    "map_proxy_note": "Kiungo hiki hakikuwa na muhtasari kamili uliohifadhiwa; picha inatumia makadirio ya tahadhari kutokana na alama zilizoshirikiwa pekee.",
+    "export_png": "Pakua chati (PNG)",
+    "export_json": "Pakua wasifu (JSON)",
+    "copy_share_url": "Nakili kiungo cha kushiriki",
+    "share_url_too_long": "Kiungo hiki kitazidi urefu salama wa URL (herufi 2000). Hamisha JSON au tumia URL fupi ya ukurasa.",
+    "share_copied": "Kiungo cha kushiriki kimenakiliwa kwenye ubao wa kunakili.",
+    "export_png_error": "Haikuwezekana kuhamisha PNG (kivinjari kimezuia uhamishaji wa picha). Jaribu picha ya skrini badala yake.",
+    "bars_heading": "Pau za vipimo",
+    "bars_caption": "Kila upau hutumia rangi ya kipimo; uwazi wake huonyesha kujiamini kwa uelekezaji. Elekeza kishale au bonyeza kwa muda mstari ili kuona maelezo mafupi ya kisayansi.",
+    "research_routing_disclosure_summary": "T, I, A, V — vipimo vya ziada vya uelekezaji (ufunikaji mdogo wa vipengee; kwa utafiti kulingana na ADR-007). Panua kuona pau hizo hizo.",
+    "url_profile": {
+      "summary": "Mwonekano huu umefunguliwa kutoka kiungo cha kushiriki. Unaonyesha alama za vipimo pekee — si kipindi kamili kilichohifadhiwa."
+    }
+  },
+  "field": {
+    "offline_tools_heading": "Mipangilio ya nje ya mtandao / uwanjani",
+    "offline_tools_body": "Kama huna mtandao: ingiza JSON ile ile ya benki ya maswali inayokuja na toleo hili, au pakia nakala iliyojumuishwa, kisha endelea na tathmini.",
+    "import_bank_file": "Ingiza benki ya maswali (JSON)",
+    "load_bundled_bank": "Pakia benki iliyojumuishwa",
+    "bank_ready_reload": "Benki imepakiwa — inapakia upya…",
+    "paper_csv_link": "Ingiza majibu ya karatasi (CSV)",
+    "import_page_title": "Uingizaji wa karatasi / CSV",
+    "import_page_lead": "Bandika CSV yenye safu questionId, response (1–5 au 1–3), responseTimeMs ya hiari na timestamp (ISO). Mlolongo wa alama ule ule wa programu utatumika.",
+    "import_disclaimer": "Tumia tu kwa idhini na kibali cha maadili. Hakikisha questionId zinaendana na fomu yako iliyochapishwa.",
+    "import_csv_label": "CSV",
+    "import_csv_hint": "Safu ya kichwa inahitajika. Mfano: questionId,response,responseTimeMs,timestamp",
+    "import_run": "Piga alama na uende matokeo",
+    "import_empty": "Hakuna mistari halali iliyopatikana.",
+    "bank_error_hint": "Kama uko nje ya mtandao bila ziara ya awali: ingiza JSON ya benki ya maswali, tumia “Pakia benki iliyojumuishwa”, au fungua /data/question-bank-universal-all.json kutoka deployment hii.",
+    "import_csv_placeholder": "questionId,response,responseTimeMs,timestamp",
+    "import_busy_ellipsis": "…"
+  },
+  "pipeline": {
+    "pattern": {
+      "answer_consistency_high": "Uthabiti wa juu wa majibu kati ya vidokezo vinavyofanana",
+      "answer_consistency_low": "Tofauti kubwa zaidi kati ya vidokezo vinavyofanana"
+    },
+    "note": {
+      "response_time_variance": "Muda wa majibu unatofautiana sana kati ya vipengee.",
+      "entropy_high": "Mfuatano wa majibu unaonyesha uchunguzi mpana zaidi wa nafasi za skeli."
+    },
+    "summary": {
+      "confident": "Kipindi hiki kinaunga mkono muhtasari wa vipengele wenye kujiamini wa kiwango cha kati.",
+      "limited": "Kujiamini kwa vipengele ni kidogo; tafsiri kwa tahadhari.",
+      "preliminary": "Ishara za majibu ni chache; chukulia mifumo yoyote kuwa ya awali."
+    },
+    "patterns_fallback": "Hakuna mifumo imara ya kipekee iliyojitokeza kutokana na takwimu za kipindi hiki pekee.",
+    "notes_fallback": "Huu ni muhtasari wa maelezo kwa tafakari na utafiti — mielekeo kwa lugha rahisi kutoka majibu yako."
+  },
+  "interp": {
+    "F": {
+      "high": "Kwa kawaida unaweza kudumisha umakini jambo likikuvutia, na vikengeushi huwa rahisi zaidi kuviweka pembeni.",
+      "mid": "Umakini wako hubadilika kulingana na muktadha — wakati mwingine wa kina, wakati mwingine huvutwa haraka na yaliyo karibu.",
+      "low": "Mara nyingi unatambua mahitaji yanayoshindana ya umakini wako, na unaweza kubadili kazi au kichocheo kwa urahisi zaidi."
+    },
+    "P": {
+      "high": "Unaweza kuwa huru na uundaji wa kimfumo wa juu na mara nyingi hutafuta muundo au kanuni chini ya maelezo ya juu juu.",
+      "mid": "Unachanganya mifano halisi na kutafuta mifumo mara kwa mara, kutegemea kazi iliyopo.",
+      "low": "Unapendelea hatua zinazoonekana na taratibu ulizozoea kuliko ufafanuzi wa wazi usio na mipaka."
+    },
+    "S": {
+      "high": "Vichocheo vya hisia kama kelele, mwanga au mguso vinaweza kuathiri sana faraja na umakini wako.",
+      "mid": "Mazingira mengine hukaa sawa, lakini mengine — hasa yenye shughuli nyingi au makali — hukuchosha haraka.",
+      "low": "Mzigo wa kawaida wa hisia katika mazingira ya kila siku kwa kawaida hukusumbua kidogo ukilinganishwa na wasifu wenye unyeti mkubwa zaidi."
+    },
+    "E": {
+      "high": "Muda wa kijamii mara nyingi hutumia nguvu, na hupona vizuri zaidi ukiwa katika nafasi tulivu ya peke yako baadaye.",
+      "mid": "Unafurahia mwingiliano wa kijamii kwa kiasi, lakini unapendelea dozi zilizopimwa badala ya msisimko wa kudumu.",
+      "low": "Unapata nguvu kutoka kwa watu na shughuli zinazokuzunguka, na unaweza kustahimili vipindi virefu vya kijamii vizuri."
+    },
+    "R": {
+      "high": "Ratiba zinazotabirika na mipango iliyo wazi kwa kawaida hukusaidia kujisikia imara na kufanya kazi vizuri.",
+      "mid": "Unapenda muundo kwa kiasi, lakini unaweza kubadilika pale mipango inapobadilika ghafla.",
+      "low": "Unabadilika haraka ajenda zinapohama na mara chache hutegemea mdundo wa kudumu ili ujisikie sawa."
+    },
+    "C": {
+      "high": "Unaweza kuwa huru zaidi kurekebisha mtazamo au kubadili namna ya kufikiri taarifa mpya zinapojitokeza.",
+      "mid": "Unaweza kujirekebisha inapohitajika, ingawa utata wa haraka au mabadiliko ya ghafla yanaweza kuchosha nyakati fulani.",
+      "low": "Unapendelea majibu thabiti na matarajio yaliyo wazi kuliko hali ya kutojulikana ya muda mrefu."
+    },
+    "T": {
+      "high": "Kwa kawaida unatambua mdundo, vipindi na tarehe za mwisho kwa ukali zaidi kuliko kupoteza hisia ya muda.",
+      "mid": "Hisia yako ya muda hubadilika kulingana na muktadha — wakati mwingine sahihi, wakati mwingine ukizingatia zaidi sasa.",
+      "low": "Masaa yanaweza kupita au kurefuka bila kugundua; mara nyingi unaishi zaidi katika wakati wa sasa kuliko kwa saa."
+    },
+    "I": {
+      "high": "Ishara za ndani kama njaa, uchovu au mvutano kwa kawaida hujitokeza wazi katika ufahamu wako.",
+      "mid": "Baadhi ya ishara za mwili huwa wazi, ilhali nyingine huonekana pale zinapokuwa kali zaidi.",
+      "low": "Hali za kimwili zinaweza kukukuta ghafla kabla hujazitambua kwa ufahamu."
+    },
+    "A": {
+      "high": "Mawazo mara nyingi huchochea miunganiko ya mbali — sitiari, mlinganisho au matawi ya mawazo huja kwa urahisi.",
+      "mid": "Unachanganya njia za moja kwa moja na miruko ya mara kwa mara pale kichocheo kinapoalika ubunifu.",
+      "low": "Kwa kawaida unashikilia miunganiko ya moja kwa moja ya hatua kwa hatua kuliko kuruka kwa ushirikishaji mpana."
+    },
+    "V": {
+      "high": "Mipangilio ya anga, michoro au picha za akili mara nyingi huwa na uzito kuliko minyororo mirefu ya maneno.",
+      "mid": "Unabadili kati ya maneno na picha kulingana na kile kazi husika inachopendelea.",
+      "low": "Lugha na hatua zilizopangwa huwa njia yako ya msingi ya kushughulikia taarifa mpya."
+    }
+  },
+  "results_interpretation": {
+    "heading": "Hii ina maana gani?",
+    "para1": "Wasifu wako unaonyesha jinsi unavyopima uzito wa umakini, usindikaji wa mifumo, unyeti wa hisia, nguvu za kijamii, upendeleo wa muundo na unyumbufu wa utambuzi. Kila mtu huunganisha vipimo hivi kwa namna ya kipekee.",
+    "para2": "Katika maandiko ya utafiti, maumbo yanayofanana mara nyingi huonekana ndani ya mada pana za utofauti wa utambuzi na mitindo ya uchakataji wa kila siku — picha yako hapa ni maelezo ya kipimo tu na haiwezi kubadilishana na mada moja ya utafiti. Kwa maelezo ya fremu ya utafiti, soma <research>dokezo la utafiti la PCMS kwenye Synaptic Four</research>.",
+    "strengths_heading": "Viambatanisho vya nguvu",
+    "strengths_sub": "Alama zako tatu za juu kati ya vipimo sita vya msingi — nguvu za maelezo kwa tafakari.",
+    "strength_F": "Umakini wa kina, usahihi wa maelezo",
+    "strength_P": "Fikra za mifumo, utambuzi wa mifumo",
+    "strength_S": "Utambuzi wa kina wa hisia, nguvu za urembo",
+    "strength_E": "Uelewa wa hisia za wengine, ushirikiano wa kikundi",
+    "strength_R": "Utegemezi, upangaji imara",
+    "strength_C": "Ubadilikaji, utatuzi bunifu wa matatizo"
+  },
+  "radar": {
+    "caption": "Chati ya rada inalinganisha alama zako ghafi (duara la nje) na alama zilizorekebishwa kwa kujiamini (duara la ndani). Tofauti kubwa kwenye mhimili huonyesha kuwa tuna uhakika mdogo kwenye kipimo hicho.",
+    "caption_high": "Nukta iliyo karibu na nje inaonyesha mwelekeo mkubwa zaidi kuelekea upande wa juu wa kipimo hicho.",
+    "caption_low": "Nukta iliyo karibu zaidi na katikati inaonyesha majibu yalielekea upande wa chini wa kipimo hicho.",
+    "aria": "Chati ya rada ya vipimo kumi vya uelekezaji wa utambuzi yenye alama ghafi na zilizorekebishwa kwa kujiamini",
+    "tooltip_raw": "Alama ghafi",
+    "tooltip_weighted": "Alama iliyorekebishwa kwa kujiamini",
+    "tooltip_confidence": "Kujiamini kwa kipimo",
+    "tooltip_items": "Vipengee vilivyochangia",
+    "legend_raw": "Alama ghafi (0–100)",
+    "legend_inner": "Imerekebishwa kwa kutokuwa na uhakika (ndani)",
+    "label_pair": "{low} ↔ {high}"
+  },
+  "bars": {
+    "caption": "Kila upau unaonyesha alama yako kati ya lebo za lugha rahisi za chini na juu. Sehemu ya rangi hafifu huonyesha kiwango ambacho alama inaweza kufikia kwa uwezekano chini ya kutokuwa na uhakika wa sasa.",
+    "aria": "Pau za vipimo: alama sita kuu za uelekezaji kwanza; T–V katika sehemu inayopanuka (ADR-007).",
+    "research_routing_disclosure_summary": "T, I, A, V — panua kwa mpangilio huo huo wa pau (kwa utafiti; ADR-007).",
+    "confidence_line": "Kujiamini: {pct}% · vipengee {n} vimejibiwa",
+    "tail_explainer": "Sehemu yenye mistari: kiwango cha juu kinachowezekana kama kujiamini kiongezeka (si CI ya takwimu).",
+    "progressbar_aria": "{title}: asilimia {raw} ya alama ghafi; kiwango cha juu kinachowezekana karibu na asilimia {upper}"
+  },
+  "insights": {
+    "caption": "Tafsiri fupi kwa kila kipimo. Kadi zenye maandishi ya italiki zina uhakika mdogo — elekeza kishale au weka umakini kwenye kadi kuona sababu.",
+    "aria": "Kadi za maarifa: vipimo sita vya msingi vya uelekezaji kwanza; T–V katika sehemu inayopanuka (ADR-007).",
+    "research_routing_disclosure_summary": "T, I, A, V — mpangilio wa maarifa sawa na sita za msingi; panua kama unataka madokezo haya ya utafiti.",
+    "confidence_note_generic": "Bado hatuna uhakika kamili kwenye kipimo hiki — fikiria kujibu maswali zaidi yanayogusa eneo hili.",
+    "confidence_note_sample": "Tungehitaji majibu zaidi yenye mzigo mkubwa kufikia kujiamini kamili wa kiwango cha utafiti hapa.",
+    "deemphasized_tooltip": "Kujiamini kwa chini: kadi hii imeoneshwa kwa rangi hafifu hadi majibu thabiti zaidi yakusanywe.",
+    "confidence_compact": "{pct}% kujiamini"
   }
 }
