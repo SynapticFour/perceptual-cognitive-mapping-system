@@ -12,8 +12,8 @@ name: Supabase keep-alive
 #   SUPABASE_ANON_KEY  — project anon/public key (Settings → API)
 on:
   schedule:
-    # Every 3 days at 08:00 UTC (well inside the 7-day inactivity window).
-    - cron: '0 8 */3 * *'
+    # Daily at 08:00 UTC — margin inside the 7-day window if GitHub delays a run.
+    - cron: '0 8 * * *'
   workflow_dispatch:
 
 jobs:

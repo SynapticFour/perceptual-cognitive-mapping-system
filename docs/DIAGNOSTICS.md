@@ -59,7 +59,7 @@ When Supabase public env is configured, performs a minimal `sessions` REST read 
 
 Returns `reachable: true` on success. Never returns API keys. Responds with HTTP 503 when configured but unreachable.
 
-**Free-tier keep-alive:** GitHub Actions workflow `.github/workflows/supabase-keepalive.yml` pings the Supabase REST API **directly** every 3 days (repository secrets `SUPABASE_URL`, `SUPABASE_ANON_KEY`). Do not rely on curling the Vercel app alone — when Supabase is paused, Vercel returns 503 and Supabase never receives activity to wake up. The production `/api/health/supabase` endpoint remains useful for operators; the scheduled job must hit Supabase itself.
+**Free-tier keep-alive:** GitHub Actions workflow `.github/workflows/supabase-keepalive.yml` pings the Supabase REST API **directly** every day (repository secrets `SUPABASE_URL`, `SUPABASE_ANON_KEY`). Do not rely on curling the Vercel app alone — when Supabase is paused, Vercel returns 503 and Supabase never receives activity to wake up. The production `/api/health/supabase` endpoint remains useful for operators; the scheduled job must hit Supabase itself.
 
 ## Operator UI Diagnostics
 
