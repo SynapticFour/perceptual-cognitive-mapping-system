@@ -23,14 +23,15 @@ test.describe('Locale smoke — French (fr)', () => {
 
   test('draft locale banner visible when review warnings enabled', async ({ page }) => {
     await page.goto('/fr');
-    const banner = page.getByRole('alert');
+    const banner = page.getByTestId('locale-review-banner');
     if (process.env.PW_BASE_URL) {
-      await expect(banner.first()).toContainText(/brouillon|revue native/i);
-    } else {
-      const count = await banner.count();
-      if (count > 0) {
-        await expect(banner.first()).toContainText(/brouillon|revue native/i);
-      }
+      await expect(
+        banner,
+        'Set NEXT_PUBLIC_LOCALE_REVIEW_WARNINGS=true for Production on Vercel and redeploy',
+      ).toBeVisible();
+      await expect(banner).toContainText(/brouillon|revue native/i);
+    } else if (await banner.count()) {
+      await expect(banner).toContainText(/brouillon|revue native/i);
     }
   });
 });

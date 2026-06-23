@@ -59,6 +59,7 @@ export default function UnreviewedLocaleWarner() {
   return (
     <div
       role="alert"
+      data-testid="locale-review-banner"
       className="border-b border-amber-300 bg-amber-50 px-4 py-3 text-left text-sm text-amber-950 shadow-sm"
     >
       <div className="mx-auto flex max-w-4xl flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
