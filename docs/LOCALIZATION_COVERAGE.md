@@ -23,8 +23,8 @@ Honest status for partners, reviewers, and deploy checks. **UI language** and **
 |--------|---------------------|----------------|-------------|
 | `en` | 691 | Canonical | — |
 | `de` | 689 | Standalone + `messages/de/privacy.json` | Production UI |
-| `fr` | 378 Tier 1 + 42 privacy | merge + `messages/fr/privacy.json` | Tier 1–2 done; Tier 3+ EN fallback |
-| `sw` | 378 Tier 1 + 42 privacy | merge + `messages/sw/privacy.json` | Tier 1–2 done; Tier 3+ EN fallback |
+| `fr` | 378 Tier 1 + 147 Tier 3 + 42 privacy (~554) | merge + `messages/fr/privacy.json` | `_localeReview: PENDING_NATIVE_REVIEW` |
+| `sw` | 378 Tier 1 + 147 Tier 3 + 42 privacy (~563) | merge + `messages/sw/privacy.json` | `_localeReview: PENDING_NATIVE_REVIEW` |
 | `tw` | 126 | Merge over English | `_localeReview: PENDING_NATIVE_REVIEW` |
 | `wo` | 485 | Merge over English | `_localeReview: PENDING_NATIVE_REVIEW` |
 
@@ -41,7 +41,26 @@ Resolution order: `resolveQuestionDisplayText()` → locale stem map (`QUESTION_
 | `universal` classic (~130) | 50 in `question-stems-fr.ts` | 50 in `question-stems-sw.ts` | Full in `question-stems-de.ts` + TIAV |
 | `cultural-adaptive-v1` (200) | 200 `francophone_west_africa` in `bank.json` v1.3+ | 200 `east_africa` in `bank.json` v1.4+ | Not available (loader forces classic for `de`) |
 
-Set `NEXT_PUBLIC_PCMS_QUESTION_SOURCE=cultural_adaptive_v1` on Vercel for French/Swahili field pilots to use regional stems.
+Set `NEXT_PUBLIC_PCMS_QUESTION_SOURCE=cultural_adaptive_v1` on Vercel for French/Swahili field pilots to use regional stems. Full deploy checklist: [FIELD_PILOT_FR_SW.md](./FIELD_PILOT_FR_SW.md).
+
+---
+
+## Tier 4 policy
+
+**Decision (June 2026):** Research-operator UI stays **English** for `fr` and `sw` until a partner institution needs localized facilitator/cohort workflows.
+
+| Tier | Namespaces | FR / SW status |
+|------|------------|----------------|
+| 1 | welcome → banner, questionnaire, Likert, dims, results core | ✅ Localized |
+| 2 | `privacyPage` | ✅ Localized |
+| 3 | landscape, field, pipeline, interp, radar, bars, insights | ✅ Localized |
+| 4 | cohort, group_analysis, facilitator, offline import, operator tools | ⚠️ English (merge fallback) |
+
+**Rationale:** Field sessions route participants through Tiers 1–3 only; Tier 4 is low-traffic and high legal/research translation cost.
+
+**When to translate Tier 4:** Signed partner request + native reviewer for research terminology. Track in backlog / partner MOU.
+
+**Env:** No toggle — intentional product default for pilots. See [FIELD_PILOT_FR_SW.md](./FIELD_PILOT_FR_SW.md#tier-4-policy-english-until-requested).
 
 ---
 
@@ -54,8 +73,9 @@ All six locales are registered in `src/i18n/routing.ts` and appear in `LanguageS
 ## Known gaps (action items)
 
 1. ~~Tier 1 UI + privacy.~~ ~~Tier 3 landscape/interpretation.~~ Done (June 2026).
-2. Native speaker / legal review for machine-draft stems, UI copy, and privacy bundles.
-3. Tier 4 research/team tools — optional; can remain English for field pilots.
+2. Native speaker / legal review for machine-draft stems, UI copy, and privacy bundles — [LOCALE-NATIVE-REVIEW-CHECKLIST.md](./LOCALE-NATIVE-REVIEW-CHECKLIST.md) §7–8.
+3. ~~Tier 4 research/team tools — optional; can remain English for field pilots.~~ **Policy set:** Tier 4 stays EN until requested (see above).
+4. E2E smoke: `npm run test:locale-smoke` for `/fr` and `/sw`.
 
 ---
 
@@ -63,6 +83,7 @@ All six locales are registered in `src/i18n/routing.ts` and appear in `LanguageS
 
 ```bash
 npm run check
+npm run test:locale-smoke
 PCMS_VALIDATE_LOCALE=fr npm run validate-cultural-bank
 PCMS_VALIDATE_LOCALE=sw npm run validate-cultural-bank
 ```

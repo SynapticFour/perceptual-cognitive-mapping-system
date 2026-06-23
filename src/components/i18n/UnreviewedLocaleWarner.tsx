@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { useLocale, useMessages } from 'next-intl';
+import { useLocale, useMessages, useTranslations } from 'next-intl';
 import { FEATURE_FLAGS } from '@/config/feature-flags';
 
 const STORAGE_PREFIX = 'pcms-locale-review-banner-dismissed:';
@@ -21,6 +21,7 @@ function showReviewWarnings(): boolean {
 
 export default function UnreviewedLocaleWarner() {
   const locale = useLocale();
+  const t = useTranslations('localeReviewBanner');
   const messages = useMessages() as Record<string, unknown>;
   const meta = messages._localeReview as LocaleReviewMeta | undefined;
 
@@ -44,6 +45,7 @@ export default function UnreviewedLocaleWarner() {
   }
 
   const items = Array.isArray(meta.outstandingItems) ? meta.outstandingItems : [];
+  const checklistDoc = meta.checklistDoc ?? 'docs/LOCALE-NATIVE-REVIEW-CHECKLIST.md';
 
   const dismiss = () => {
     try {
@@ -56,23 +58,22 @@ export default function UnreviewedLocaleWarner() {
 
   return (
     <div
-      role="status"
+      role="alert"
       className="border-b border-amber-300 bg-amber-50 px-4 py-3 text-left text-sm text-amber-950 shadow-sm"
     >
       <div className="mx-auto flex max-w-4xl flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="font-semibold">
-            Locale copy: native cultural review pending ({locale})
-          </p>
-          <p className="mt-1 text-amber-900/90">
-            Last reviewed: {meta.lastReviewed ?? 'unknown'}. See{' '}
-            {meta.checklistDoc ? (
-              <span className="font-mono text-xs">{meta.checklistDoc}</span>
-            ) : (
-              'docs/CULTURAL_REVIEW_CHECKLIST.md'
-            )}{' '}
-            for the checklist. This banner only appears in non-production builds or when{' '}
-            <span className="font-mono">NEXT_PUBLIC_LOCALE_REVIEW_WARNINGS=true</span>.
+          <p className="font-semibold">{t('title')}</p>
+          <p className="mt-1 text-amber-900/90">{t('body')}</p>
+          <p className="mt-1 text-xs text-amber-900/80">
+            {t('checklistLink')}:{' '}
+            <span className="font-mono">{checklistDoc}</span>
+            {meta.lastReviewed ? (
+              <>
+                {' '}
+                · Last reviewed: {meta.lastReviewed}
+              </>
+            ) : null}
           </p>
           {items.length > 0 ? (
             <ul className="mt-2 list-inside list-disc space-y-1 text-xs sm:text-sm">
@@ -87,7 +88,7 @@ export default function UnreviewedLocaleWarner() {
           onClick={dismiss}
           className="shrink-0 rounded-md border border-amber-400 bg-white px-3 py-1.5 text-xs font-medium text-amber-950 hover:bg-amber-100"
         >
-          Dismiss for this browser
+          {t('dismiss')}
         </button>
       </div>
     </div>

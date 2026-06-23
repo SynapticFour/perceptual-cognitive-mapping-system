@@ -2,12 +2,12 @@
   "_localeReview": {
     "reviewStatus": "PENDING_NATIVE_REVIEW",
     "lastReviewed": "never",
-    "checklistDoc": "docs/CULTURAL_REVIEW_CHECKLIST.md",
+    "checklistDoc": "docs/LOCALE-NATIVE-REVIEW-CHECKLIST.md",
     "outstandingItems": [
-      "1. Tier1 UI + Tier2 privacyPage (messages/fr/privacy.json) done; native Francophone legal review still pending.",
-      "2. Tier3 results-landscape/interpretation UI done; Tier4 research tools still remain English via merge fallback.",
-      "3. Native review for ethics/consent tone and Francophone West Africa clinical-referral wording.",
-      "4. Machine-draft note: question stems still require human review (question-stems-fr.ts, adaptive banks)."
+      "1. Tier 1–3 UI + privacy overlay done; native Francophone legal/ethics review still pending.",
+      "2. Tier 4 research tools intentionally English — see docs/FIELD_PILOT_FR_SW.md.",
+      "3. Question stems (francophone_west_africa) require native review per checklist §7.",
+      "4. Sign-off template in docs/LOCALE-NATIVE-REVIEW-CHECKLIST.md §7.5."
     ]
   },
   "welcome": {
@@ -634,5 +634,11 @@
     "confidence_note_sample": "Nous aurions besoin de plus de réponses à forte charge pour atteindre ici une pleine confiance de niveau recherche.",
     "deemphasized_tooltip": "Confiance plus faible : cette carte est affichée en atténué jusqu’à collecte de réponses plus cohérentes.",
     "confidence_compact": "{pct}% de confiance"
+  },
+  "localeReviewBanner": {
+    "title": "Version brouillon — revue native en attente",
+    "body": "Cette traduction est une ébauche assistée par machine. Le ton éthique et le texte juridique peuvent évoluer après revue. Ne pas utiliser pour des décisions cliniques ou à enjeu sans validation.",
+    "checklistLink": "Liste de contrôle des relecteurs",
+    "dismiss": "Masquer pour cette session"
   }
 }

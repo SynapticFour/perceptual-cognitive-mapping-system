@@ -849,5 +849,11 @@
     "prototype_line": "Research prototype for reflection and open science — maps cognitive tendencies; open MIT-licensed project.",
     "contact": "Questions or data requests: contact@synapticfour.com",
     "license_mit": "MIT License — see repository."
+  },
+  "localeReviewBanner": {
+    "title": "Draft locale — pending native review",
+    "body": "This language version is a machine-assisted draft. Wording, ethics tone, and legal text may change after review. Do not use for clinical or high-stakes decisions without sign-off.",
+    "checklistLink": "Reviewer checklist",
+    "dismiss": "Dismiss for this session"
   }
 }

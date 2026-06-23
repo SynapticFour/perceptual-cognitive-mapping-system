@@ -67,6 +67,13 @@ MONITORING_ENABLED=true
 SECURITY_HEADERS_ENABLED=true
 ```
 
+**Field pilot (French / Kiswahili):**
+```bash
+NEXT_PUBLIC_PCMS_QUESTION_SOURCE=cultural_adaptive_v1
+NEXT_PUBLIC_LOCALE_REVIEW_WARNINGS=true
+```
+See [FIELD_PILOT_FR_SW.md](./FIELD_PILOT_FR_SW.md) for URLs, facilitator briefing, and native-review sign-off.
+
 ### Vercel Deployment (Recommended)
 
 #### 1. Repository Setup

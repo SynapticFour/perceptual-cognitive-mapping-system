@@ -2,12 +2,12 @@
   "_localeReview": {
     "reviewStatus": "PENDING_NATIVE_REVIEW",
     "lastReviewed": "never",
-    "checklistDoc": "docs/CULTURAL_REVIEW_CHECKLIST.md",
+    "checklistDoc": "docs/LOCALE-NATIVE-REVIEW-CHECKLIST.md",
     "outstandingItems": [
-      "1. Tier1 UI + Tier2 privacyPage (messages/sw/privacy.json) done; native East Africa legal review still pending.",
-      "2. Tier3 landscape/interpretation UI remains English via merge fallback.",
-      "3. Native review for ethics/consent wording and local health-referral phrasing.",
-      "4. Machine-draft note: question stems still require human review (question-stems-sw.ts, adaptive banks)."
+      "1. Tier 1–3 UI + privacy overlay done; native East Africa legal/ethics review still pending.",
+      "2. Tier 4 research tools intentionally English — see docs/FIELD_PILOT_FR_SW.md.",
+      "3. Question stems (east_africa) require native review per checklist §8.",
+      "4. Sign-off template in docs/LOCALE-NATIVE-REVIEW-CHECKLIST.md §8.5."
     ]
   },
   "welcome": {
@@ -634,5 +634,11 @@
     "confidence_note_sample": "Tungehitaji majibu zaidi yenye mzigo mkubwa kufikia kujiamini kamili wa kiwango cha utafiti hapa.",
     "deemphasized_tooltip": "Kujiamini kwa chini: kadi hii imeoneshwa kwa rangi hafifu hadi majibu thabiti zaidi yakusanywe.",
     "confidence_compact": "{pct}% kujiamini"
+  },
+  "localeReviewBanner": {
+    "title": "Lugha rasimu — ukaguzi wa wenyeji unasubiri",
+    "body": "Toleo hili ni rasimu iliyotolewa na mashine. Maneno, maadili, na maandishi ya kisheria yanaweza kubadilika baada ya ukaguzi. Usitumie kwa maamuzi ya kimatibabu au ya hatari bila idhini.",
+    "checklistLink": "Orodha ya ukaguzi",
+    "dismiss": "Ficha kwa kipindi hiki"
   }
 }

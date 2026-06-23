@@ -28,6 +28,7 @@
     "test:coverage": "node ./node_modules/vitest/vitest.mjs run --coverage",
     "test:edge": "node ./node_modules/vitest/vitest.mjs run --config vitest.edge.config.ts",
     "test:e2e": "node ./node_modules/@playwright/test/cli.js test",
+    "test:locale-smoke": "node ./node_modules/@playwright/test/cli.js test e2e/locale-smoke.spec.ts",
     "test": "npm run check && npm run test:unit",
     "analyze": "ANALYZE=true node ./node_modules/next/dist/bin/next build --webpack",
     "validate-questions": "node ./node_modules/ts-node/dist/bin.js --compiler-options '{\"module\":\"CommonJS\",\"moduleResolution\":\"node\"}' scripts/validate-question-bank.ts",
