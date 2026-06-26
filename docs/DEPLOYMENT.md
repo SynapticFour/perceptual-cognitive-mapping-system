@@ -1,9 +1,11 @@
 # Deployment Guide
 ## Perceptual & Cognitive Mapping System
 
+> **Phase 2 production path (SynapticFour SaaS):** Vercel + Supabase only. See **[deployment-runbook.md](./deployment-runbook.md)** for tag deploy, rollback, and manual Supabase migrations. No Docker/Compose release in this repo.
+
 ### Overview
 
-This guide covers deployment options for PCMS v1.0, including Vercel, Docker, and self-hosted configurations.
+This guide covers environment configuration and legacy self-host templates. **Recommended production:** Vercel (see runbook).
 
 ### Prerequisites
 

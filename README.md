@@ -211,9 +211,11 @@ npm run test:edge   # Optional edge-case suites (stricter/experimental)
 
 ### Production deployment (Vercel)
 
+- **Tag release:** push `v*.*.*` → [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) → `vercel deploy --prod`. See **[`docs/deployment-runbook.md`](./docs/deployment-runbook.md)** (deploy, rollback, Supabase migrations, backups).
 - **Project:** connect this repo; Next.js is auto-detected. **`vercel.json`** sets `buildCommand` (`npm run build`), security headers, and caching for `/_next/static/*` vs HTML—no locale rewrites (next-intl keeps `/de`, `/fr`, `/sw`, `/wo`, `/tw` as normal routes).
-- **Environment:** copy variables from **`.env.example`** into the Vercel project (Production + Preview as needed). Set **`NEXT_PUBLIC_APP_URL`** to your canonical URL (e.g. `https://map.synapticfour.com`). Supabase keys remain optional: without them the app uses browser storage only.
+- **Environment:** copy variables from **`.env.example`** into the Vercel project (Production + Preview as needed). Set **`NEXT_PUBLIC_APP_URL`** to your canonical URL (e.g. `https://map.synapticfour.com`). Supabase keys remain optional: without them the app uses browser storage only (IndexedDB + localStorage).
 - **Domain:** attach **`map.synapticfour.com`** in Vercel → Domains (DNS at your registrar).
+- **Supabase migrations:** manual via Supabase CLI before deploy when schema changes — not in CI (runbook).
 
 ### Quick Test
 

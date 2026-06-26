@@ -12,6 +12,7 @@
 #### **Getting Started**
 - **[Main README](../README.md)** - Complete overview and quick start guide
 - **[Local Setup Guide](./LOCAL_SETUP.md)** - Detailed setup instructions for local development
+- **[Deployment runbook (production SaaS)](./deployment-runbook.md)** - Tag deploy, Vercel rollback, Supabase migrations, backups
 - **[Data Model](./data-model.md)** - Database schema and data structure documentation
 
 #### **Research Documentation**
