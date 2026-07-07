@@ -3,6 +3,7 @@
  * RO-Crate improves FAIR repository ingest; plain JSON+CSV remain the most portable interchange.
  */
 import { strToU8, zipSync } from 'fflate';
+import type { QuestionResponse } from '@/data/questions';
 import { CLRP_REFERENCE, type ClrpExportReference } from '@/lib/clrp-reference';
 import type { StoredPipelineSession } from '@/types/pipeline-session';
 import { PIPELINE_STORAGE_VERSION } from '@/types/pipeline-session';
