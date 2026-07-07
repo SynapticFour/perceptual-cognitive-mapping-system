@@ -3,12 +3,12 @@
  * RO-Crate improves FAIR repository ingest; plain JSON+CSV remain the most portable interchange.
  */
 import { strToU8, zipSync } from 'fflate';
-import type { QuestionResponse } from '@/data/questions';
+import { CLRP_REFERENCE, type ClrpExportReference } from '@/lib/clrp-reference';
 import type { StoredPipelineSession } from '@/types/pipeline-session';
 import { PIPELINE_STORAGE_VERSION } from '@/types/pipeline-session';
 
 /** Bump when bundle layout or manifest semantics change materially. */
-const PCM_EXPORT_VERSION = 2 as const;
+const PCM_EXPORT_VERSION = 3 as const;
 
 export type ResearchBundleManifest = {
   pcmsExportVersion: typeof PCM_EXPORT_VERSION;
@@ -19,6 +19,8 @@ export type ResearchBundleManifest = {
   completedAt: string;
   responseCount: number;
   consentTimestamp?: string | null;
+  /** CLRP programme pin for reproducible research (CLRP-009). */
+  programme: ClrpExportReference;
   questionBank: {
     label: string;
     itemCount: number;
@@ -177,6 +179,7 @@ export async function buildResearchSessionZip(input: BuildResearchBundleInput): 
     completedAt: input.stored.completedAt,
     responseCount: input.stored.responseCount,
     consentTimestamp: input.consentTimestamp ?? null,
+    programme: { ...CLRP_REFERENCE },
     questionBank: {
       label: input.bankLabel ?? 'universal-all',
       itemCount: input.bankItemCount,

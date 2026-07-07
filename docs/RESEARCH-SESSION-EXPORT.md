@@ -15,7 +15,7 @@ The **Research bundle (ZIP)** download includes:
 
 | File | Role |
 |------|------|
-| `manifest.json` | Export version (v2+), session ids, consent timestamp, optional **`reproducibility`** (bank id, stem region, profile-adaptive aggregates), **SHA-256** of pipeline, history, and **full-session** JSON |
+| `manifest.json` | Export version (v3+), **`programme`** (CLRP release + DOIs + document pins), session ids, consent timestamp, optional **`reproducibility`** (bank id, stem region, profile-adaptive aggregates), **SHA-256** of pipeline, history, and **full-session** JSON |
 | `pipeline-session.json` | Full `StoredPipelineSession` (includes `profileAdaptiveSummary`, `stemRegionUsed`, `questionBankId` when saved) |
 | `question-history.json` | Serialised `QuestionResponse[]` |
 | `full-session.json` | One file: `{ schemaVersion: 1, exportedAt, pipelineSession, questionHistory }` (offline handoff / scripting) |
@@ -23,6 +23,27 @@ The **Research bundle (ZIP)** download includes:
 | `ro-crate-metadata.json` | **Minimal RO-Crate 1.1** `Dataset` describing the bundle |
 
 **Recommendation:** Use **CSV + JSON** for everyday analysis; use the **full ZIP** (with RO-Crate) when submitting to a repository that supports FAIR packaging or when you want checksums and a single archive.
+
+### `manifest.json` — `programme` block (v3+)
+
+Research bundles include a CLRP conformance pin (see [CLRP-009](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-009-implementations-and-conformance.md)):
+
+```json
+{
+  "programme": "CLRP",
+  "clrpRelease": "clrp-v2026.1",
+  "clrpDoi": "10.5281/zenodo.21236100",
+  "clrpConceptDoi": "10.5281/zenodo.21236099",
+  "clrpRepository": "https://github.com/SynapticFour/cognitive-landscape-research-programme",
+  "clrpDocuments": [
+    { "id": "CLRP-003", "version": "0.1.0", "status": "Draft" },
+    { "id": "CLRP-005", "version": "0.1.0", "status": "Draft" },
+    { "id": "CLRP-007", "version": "0.1.0", "status": "Proposed" }
+  ]
+}
+```
+
+Source of truth: `src/lib/clrp-reference.ts` — update when pinning a new CLRP release.
 
 ## Related code
 

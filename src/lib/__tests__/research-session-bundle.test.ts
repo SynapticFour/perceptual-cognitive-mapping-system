@@ -25,6 +25,13 @@ describe('research-session-bundle', () => {
     expect(names).toContain('full-session.json');
     const manifest = JSON.parse(new TextDecoder().decode(files['manifest.json']!));
     expect(manifest.integrity.fullSessionSha256).toMatch(/^[a-f0-9]{64}$/);
+    expect(manifest.pcmsExportVersion).toBe(3);
+    expect(manifest.programme).toMatchObject({
+      programme: 'CLRP',
+      clrpRelease: 'clrp-v2026.1',
+      clrpDoi: '10.5281/zenodo.21236100',
+      clrpConceptDoi: '10.5281/zenodo.21236099',
+    });
     const full = JSON.parse(new TextDecoder().decode(files['full-session.json']!));
     expect(full.schemaVersion).toBe(1);
     expect(full.pipelineSession.responseCount).toBe(sampleStoredSession.responseCount);
