@@ -1,9 +1,11 @@
 # PCMS Documentation Index
 ## Perceptual & Cognitive Mapping System v1.0 (Research-Grade)
 
+> **Programme foundation:** Normative principles live in the [Cognitive Landscape Research Programme (CLRP)](https://github.com/SynapticFour/cognitive-landscape-research-programme). This index covers **PCMS implementation** documentation only.
+
 ### Audience Guide
 
-- **Partners / institutions / interested stakeholders:** focus on Validation, Ethics, Deployment-Legal, and Diagnostics docs.
+- **Partners / institutions / interested stakeholders:** start with [CLRP](https://github.com/SynapticFour/cognitive-landscape-research-programme), then Validation, Ethics, Deployment-Legal, and Diagnostics docs.
 - **Researchers:** use Validation Protocol, Research Action Plan, Study Design, and Methodology docs.
 - **Maintainers / contributors:** use Continuation, ADRs, prompts, and implementation-level technical docs.
 

@@ -1,6 +1,8 @@
 # Ethics Framework v1.0
 ## Perceptual & Cognitive Mapping System (Research-Grade)
 
+> **Normative programme commitment:** [CLRP-007: Non-Diagnostic Commitment](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-007-non-diagnostic-commitment.md) in the [Cognitive Landscape Research Programme (CLRP)](https://github.com/SynapticFour/cognitive-landscape-research-programme). This document adds **PCMS-specific** consent, deployment, and UI requirements.
+
 ## Overview
 
 The Perceptual & Cognitive Mapping System (PCMS) v1.0 is designed as a **research-grade adaptive assessment platform** for understanding cognitive diversity while maintaining the highest ethical standards. This document outlines our comprehensive ethical framework, addressing privacy, consent, data protection, and responsible use.
@@ -382,6 +384,12 @@ These items map the principles above to routes and storage in this repository:
 The PCMS ethical framework ensures that the system operates with the highest standards of research integrity, participant protection, and social responsibility. By embedding ethical considerations into every aspect of system design and operation, we create a platform that advances scientific knowledge while respecting the dignity and rights of all participants.
 
 This framework is a living document that evolves with emerging ethical standards, technological capabilities, and community needs. Regular review and updates ensure ongoing alignment with best practices in research ethics and data protection.
+
+## Related documents
+
+- [CLRP-007 Non-Diagnostic Commitment](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-007-non-diagnostic-commitment.md) — normative programme commitment
+- [`VALIDATION_PROTOCOL.md`](./VALIDATION_PROTOCOL.md) — pointer to [CLRP-VR-2026-001](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/validation/CLRP-VR-2026-001-pcms-instrument-status.md)
+- CLM [`ethics.md`](../../cognitive-landscape-model/docs/ethics.md) — library integrator notes
 
 ---
 

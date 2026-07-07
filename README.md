@@ -17,6 +17,19 @@ A scientifically grounded web-based system for mapping human cognition into cont
 >
 > [Why no labels? →](#design-philosophy)
 
+### Programme foundation
+
+PCMS is an **instrument implementation** within the [Cognitive Landscape Research Programme (CLRP)](https://github.com/SynapticFour/cognitive-landscape-research-programme) — the implementation-independent home of programme principles, vocabulary, and evidence standards.
+
+| | CLRP | PCMS (this repo) |
+|---|------|------------------|
+| **Role** | Programme constitution | Adaptive web assessment |
+| **Documents** | [CLRP-000–009](https://github.com/SynapticFour/cognitive-landscape-research-programme/tree/main/clrp) | Question banks, UI, scoring pipeline |
+
+**Conformance target:** `clrp-v2026.1` — [CLRP-003](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-003-measurement-principles.md), [CLRP-005](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-005-layer-separation.md), [CLRP-007](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-007-non-diagnostic-commitment.md) (partial — instrument layer).
+
+Normative ethics and validation framing: **CLRP**. Instrument detail: **this repository**.
+
 ---
 
 ### Instrument validation status (researchers & funders)
@@ -28,7 +41,8 @@ PCMS has **not** yet completed **publication-standard** psychometric validation 
 Start with these documents:
 
 - **Validation status:** [`docs/VALIDATION_PROTOCOL.md`](./docs/VALIDATION_PROTOCOL.md)
-- **Ethics and consent model:** [`docs/ethics.md`](./docs/ethics.md)
+- **Programme principles (CLRP):** [Cognitive Landscape Research Programme](https://github.com/SynapticFour/cognitive-landscape-research-programme)
+- **Ethics and consent model:** [`docs/ethics.md`](./docs/ethics.md) (PCMS deployment notes; normative: [CLRP-007](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-007-non-diagnostic-commitment.md))
 - **Legal/privacy deployment notes:** [`docs/DEPLOYMENT-LEGAL.md`](./docs/DEPLOYMENT-LEGAL.md)
 - **Deployment and operations:** [`docs/DEPLOYMENT.md`](./docs/DEPLOYMENT.md)
 - **Documentation index:** [`docs/README.md`](./docs/README.md)
