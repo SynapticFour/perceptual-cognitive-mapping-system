@@ -40,10 +40,10 @@
     "audit-readability": "node ./node_modules/ts-node/dist/bin.js --compiler-options '{\"module\":\"CommonJS\",\"moduleResolution\":\"node\"}' scripts/readability-audit.ts"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.110.0",
+    "@supabase/supabase-js": "^2.110.3",
     "fflate": "^0.8.3",
     "next": "16.2.10",
-    "next-intl": "4.13.1",
+    "next-intl": "4.13.2",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "recharts": "^3.9.2",
