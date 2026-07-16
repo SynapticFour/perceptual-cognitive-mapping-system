@@ -193,3 +193,4 @@ pnpm-lock.yaml
 # Local development scripts that might contain sensitive data
 setup-local.sh
 local-setup.*
+node_modules/
