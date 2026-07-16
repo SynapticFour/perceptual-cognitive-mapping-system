@@ -112,7 +112,7 @@ Legacy one-shot scripts (`supabase-schema*.sql` at repo root) are reference only
   ```bash
   pg_dump "$DATABASE_URL" -Fc -f pcms-backup-$(date +%Y%m%d).dump
   ```
-- Free-tier projects pause after inactivity — use `.github/workflows/supabase-keepalive.yml` and/or `GET /health/db` monitoring.
+- Free-tier projects pause after inactivity — use `.github/workflows/supabase-keepalive.yml` (covers PCMS + SynaptiSec from this public repo) and/or production health probes.
 
 ---
 
@@ -148,5 +148,5 @@ See also: [`OFFLINE-AND-PAPER-ARCHITECTURE.md`](./OFFLINE-AND-PAPER-ARCHITECTURE
 |----------|---------|---------|
 | `ci.yml` | push/PR `main` | Full verify + e2e |
 | `deploy.yml` | tag `v*.*.*` | Production Vercel |
-| `supabase-keepalive.yml` | daily cron | Prevent free-tier pause |
+| `supabase-keepalive.yml` | daily cron | Prevent free-tier pause (PCMS + SynaptiSec) |
 | `rotate-research-keys.yml` | manual | Rotate research API keys + optional deploy |

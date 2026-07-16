@@ -1,15 +1,20 @@
 name: Supabase keep-alive
 
-# Free-tier Supabase projects pause after ~7 days without API activity.
+# Free-tier Supabase projects pause after ~7 days without API/DB activity.
 #
-# IMPORTANT: Ping Supabase directly from GitHub Actions — not via the Vercel app.
-# When a project is paused, Vercel cannot reach it (503), the workflow fails, and
-# Supabase never receives activity to wake up. Direct REST probes register activity
-# with Supabase and can restore a paused project (first request may take ~1–2 min).
+# This workflow runs on the PUBLIC PCMS repo so it does not consume private
+# GitHub Actions minutes (private-repo keep-alives fail when billing/minutes
+# are exhausted — that is what paused SynaptiSec before).
+#
+# IMPORTANT: Ping Supabase directly — not via the Vercel apps. When a project
+# is paused, Vercel returns 503 and Supabase never receives activity to wake up.
 #
 # Required repository secrets (Settings → Secrets → Actions):
-#   SUPABASE_URL       — e.g. https://xxxx.supabase.co
-#   SUPABASE_ANON_KEY  — project anon/public key (Settings → API)
+#   SUPABASE_URL / SUPABASE_ANON_KEY           — PCMS project (REST)
+#   SYNAPTISEC_SUPABASE_URL / SYNAPTISEC_SUPABASE_ANON_KEY — SynaptiSec (REST)
+#
+# Optional fallback for SynaptiSec if REST RLS blocks reads:
+#   SYNAPTISEC_DATABASE_URL — transaction pooler URI (port 6543)
 on:
   schedule:
     # Daily at 08:00 UTC — margin inside the 7-day window if GitHub delays a run.
@@ -17,13 +22,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  ping:
-    name: Ping Supabase REST API directly
+  ping-pcms:
+    name: Ping PCMS Supabase (REST)
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
-      - name: Probe Supabase (direct REST keep-alive)
+      - name: Probe PCMS Supabase
         shell: bash
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
@@ -52,7 +57,7 @@ jobs:
             echo
 
             if [[ "$code" =~ ^2[0-9][0-9]$ ]]; then
-              echo "Supabase keep-alive OK (direct REST probe registered API activity)"
+              echo "PCMS keep-alive OK (direct REST probe registered API activity)"
               exit 0
             fi
 
@@ -62,5 +67,103 @@ jobs:
             fi
           done
 
-          echo "Keep-alive failed after ${max_attempts} attempts"
+          echo "PCMS keep-alive failed after ${max_attempts} attempts"
+          exit 1
+
+  ping-synaptisec:
+    name: Ping SynaptiSec Supabase (REST)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Probe SynaptiSec Supabase
+        shell: bash
+        env:
+          SYNAPTISEC_SUPABASE_URL: ${{ secrets.SYNAPTISEC_SUPABASE_URL }}
+          SYNAPTISEC_SUPABASE_ANON_KEY: ${{ secrets.SYNAPTISEC_SUPABASE_ANON_KEY }}
+          SYNAPTISEC_DATABASE_URL: ${{ secrets.SYNAPTISEC_DATABASE_URL }}
+        run: |
+          set -euo pipefail
+
+          # Prefer REST (no psql install). Fall back to Postgres if DATABASE_URL is set
+          # and REST secrets are missing or RLS blocks the probe table.
+          if [[ -n "${SYNAPTISEC_SUPABASE_URL:-}" && -n "${SYNAPTISEC_SUPABASE_ANON_KEY:-}" ]]; then
+            base="${SYNAPTISEC_SUPABASE_URL%/}"
+            # Hit a real relation so PostgREST performs a DB round-trip (free-tier
+            # inactivity is about database activity, not bare gateway pings).
+            # Empty [] / RLS denial as 200/401/403 still means the DB answered.
+            body="$(mktemp)"
+            max_attempts=6
+            wait_secs=30
+            probe_url="${base}/rest/v1/tenants?select=id&limit=1"
+
+            for attempt in $(seq 1 "$max_attempts"); do
+              echo "Attempt ${attempt}/${max_attempts}: ${probe_url}"
+              code="$(curl -sS -m 120 -o "$body" -w '%{http_code}' \
+                -H "apikey: ${SYNAPTISEC_SUPABASE_ANON_KEY}" \
+                -H "Authorization: Bearer ${SYNAPTISEC_SUPABASE_ANON_KEY}" \
+                -H "Accept: application/json" \
+                "$probe_url" 2>/dev/null || echo "000")"
+              echo "HTTP ${code}"
+              head -c 400 "$body" || true
+              echo
+
+              # 2xx = query ran. 401/403 = Auth/RLS reached DB. 404 = relation missing
+              # but API+DB are up. 540 = paused.
+              if [[ "$code" =~ ^2[0-9][0-9]$ || "$code" == "401" || "$code" == "403" || "$code" == "404" ]]; then
+                echo "SynaptiSec keep-alive OK (direct REST probe registered API/DB activity)"
+                exit 0
+              fi
+              if [[ "$code" == "540" ]]; then
+                echo "Project appears paused (HTTP 540); retrying to allow restore..."
+              fi
+              if [[ "$attempt" -lt "$max_attempts" ]]; then
+                echo "Waiting ${wait_secs}s..."
+                sleep "$wait_secs"
+              fi
+            done
+
+            if [[ -z "${SYNAPTISEC_DATABASE_URL:-}" ]]; then
+              echo "SynaptiSec REST keep-alive failed and SYNAPTISEC_DATABASE_URL is not set"
+              exit 1
+            fi
+            echo "REST probe unsuccessful; falling back to Postgres DATABASE_URL"
+          fi
+
+          if [[ -z "${SYNAPTISEC_DATABASE_URL:-}" ]]; then
+            echo "::error::Set SYNAPTISEC_SUPABASE_URL + SYNAPTISEC_SUPABASE_ANON_KEY (preferred) or SYNAPTISEC_DATABASE_URL on this public repo."
+            exit 1
+          fi
+
+          if ! command -v psql >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq postgresql-client
+          fi
+
+          probe_url="$(SYNAPTISEC_DATABASE_URL="$SYNAPTISEC_DATABASE_URL" python3 -c "
+          import os
+          from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
+          raw = os.environ['SYNAPTISEC_DATABASE_URL']
+          u = urlparse(raw.replace('postgres://', 'postgresql://', 1))
+          qs = parse_qs(u.query, keep_blank_values=True)
+          qs.pop('pgbouncer', None)
+          flat = {k: (v[0] if len(v) == 1 else v) for k, v in qs.items()}
+          out = urlunparse(u._replace(query=urlencode(flat, doseq=True)))
+          print(out.replace('postgresql://', 'postgres://', 1) if raw.startswith('postgres://') else out)
+          ")"
+
+          max_attempts=6
+          wait_secs=30
+          for attempt in $(seq 1 "$max_attempts"); do
+            echo "Attempt ${attempt}/${max_attempts}: SELECT 1 via SynaptiSec DATABASE_URL"
+            if psql "$probe_url" -v ON_ERROR_STOP=1 -Atqc "SELECT 1"; then
+              echo "SynaptiSec keep-alive OK (Postgres probe registered database activity)"
+              exit 0
+            fi
+            if [[ "$attempt" -lt "$max_attempts" ]]; then
+              echo "Waiting ${wait_secs}s..."
+              sleep "$wait_secs"
+            fi
+          done
+          echo "SynaptiSec keep-alive failed after ${max_attempts} attempts"
           exit 1
