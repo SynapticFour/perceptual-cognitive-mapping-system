@@ -9,7 +9,7 @@
     "prebuild": "npm run export-public-bank",
     "build": "node ./node_modules/next/dist/bin/next build --webpack",
     "start": "node ./node_modules/next/dist/bin/next start",
-    "lint": "eslint .",
+    "lint": "node ./node_modules/eslint/bin/eslint.js .",
     "setup": "./setup.sh",
     "setup:dev": "./setup.sh && npm run dev",
     "start:dev": "./setup.sh start",
@@ -58,7 +58,6 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.1",
-    "@eslint/js": "^9.39.5",
     "@next/bundle-analyzer": "16.2.9",
     "@playwright/test": "^1.59.1",
     "@tailwindcss/postcss": "^4",
@@ -82,8 +81,11 @@
     "vitest": "^3.2.4"
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,mjs,cjs,ts,tsx}": [
       "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml,css}": [
       "prettier --write"
     ]
   }
