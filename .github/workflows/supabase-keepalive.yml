@@ -11,14 +11,15 @@ name: Supabase keep-alive
 #
 # Required repository secrets (Settings → Secrets → Actions):
 #   SUPABASE_URL / SUPABASE_ANON_KEY           — PCMS project (REST)
-#   SYNAPTISEC_SUPABASE_URL / SYNAPTISEC_SUPABASE_ANON_KEY — SynaptiSec (REST)
 #
-# Optional fallback for SynaptiSec if REST RLS blocks reads:
-#   SYNAPTISEC_DATABASE_URL — transaction pooler URI (port 6543)
+# SynaptiSec keep-alive is intentionally disabled (project paused / resources
+# freed). Re-enable the ping-synaptisec job and restore secrets when resuming:
+#   SYNAPTISEC_SUPABASE_URL / SYNAPTISEC_SUPABASE_ANON_KEY — SynaptiSec (REST)
+#   SYNAPTISEC_DATABASE_URL — optional pooler fallback (port 6543)
 on:
   schedule:
     # Daily at 08:00 UTC — margin inside the 7-day window if GitHub delays a run.
-    - cron: '0 8 * * *'
+    - cron: "0 8 * * *"
   workflow_dispatch:
 
 jobs:
@@ -70,7 +71,9 @@ jobs:
           echo "PCMS keep-alive failed after ${max_attempts} attempts"
           exit 1
 
+  # Disabled 2026-07-22: SynaptiSec paused to free resources. Restore this job when resuming.
   ping-synaptisec:
+    if: false
     name: Ping SynaptiSec Supabase (REST)
     runs-on: ubuntu-latest
     permissions:
