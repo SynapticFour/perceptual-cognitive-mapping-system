@@ -8,11 +8,11 @@ Reference: [`docs/DEPLOYMENT.md`](./DEPLOYMENT.md) (env vars), [`docs/DEPLOYMENT
 
 ## Architecture
 
-| Layer | Service | Notes |
-|-------|---------|-------|
-| App | Vercel | Next.js; `vercel.json` + project env |
-| Database | Supabase (EU Frankfurt) | SQL in `supabase/migrations/` |
-| Offline / local dev | Browser only | IndexedDB + localStorage — no Supabase required |
+| Layer               | Service                 | Notes                                           |
+| ------------------- | ----------------------- | ----------------------------------------------- |
+| App                 | Vercel                  | Next.js; `vercel.json` + project env            |
+| Database            | Supabase (EU Frankfurt) | SQL in `supabase/migrations/`                   |
+| Offline / local dev | Browser only            | IndexedDB + localStorage — no Supabase required |
 
 ---
 
@@ -69,14 +69,14 @@ supabase db push
 
 Migration files (source of truth):
 
-| File | Purpose |
-|------|---------|
-| `20260401090000_base_pcms_schema.sql` | Core PCMS tables |
-| `20260413120000_ethics_gdpr.sql` | GDPR / consent tables |
-| `20260414200000_ethics_audit_events.sql` | Ethics audit trail |
-| `20260502120000_atlas_tables_rls.sql` | ATLAS tables + RLS |
-| `20260505163000_research_storage_hardening.sql` | Research storage |
-| `20260505164000_advisor_security_fixes.sql` | Security advisor fixes |
+| File                                            | Purpose                |
+| ----------------------------------------------- | ---------------------- |
+| `20260401090000_base_pcms_schema.sql`           | Core PCMS tables       |
+| `20260413120000_ethics_gdpr.sql`                | GDPR / consent tables  |
+| `20260414200000_ethics_audit_events.sql`        | Ethics audit trail     |
+| `20260502120000_atlas_tables_rls.sql`           | ATLAS tables + RLS     |
+| `20260505163000_research_storage_hardening.sql` | Research storage       |
+| `20260505164000_advisor_security_fixes.sql`     | Security advisor fixes |
 
 **Order:** always migrate **before** Vercel deploy when SQL changes ship in the tag.
 
@@ -112,7 +112,7 @@ Legacy one-shot scripts (`supabase-schema*.sql` at repo root) are reference only
   ```bash
   pg_dump "$DATABASE_URL" -Fc -f pcms-backup-$(date +%Y%m%d).dump
   ```
-- Free-tier projects pause after inactivity — use `.github/workflows/supabase-keepalive.yml` (covers PCMS + SynaptiSec from this public repo) and/or production health probes.
+- Free-tier projects pause after inactivity — use `.github/workflows/supabase-keepalive.yml` (PCMS active; SynaptiSec job temporarily disabled while its Supabase slot is reused elsewhere) and/or production health probes.
 
 ---
 
@@ -120,9 +120,9 @@ Legacy one-shot scripts (`supabase-schema*.sql` at repo root) are reference only
 
 PCMS runs **without** cloud Postgres. If `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` are unset, the app uses **browser storage only** — no crash.
 
-| Storage | Module | Contents |
-|---------|--------|----------|
-| **localStorage** | session, pipeline, consent | In-progress / completed assessment state |
+| Storage                       | Module                       | Contents                                   |
+| ----------------------------- | ---------------------------- | ------------------------------------------ |
+| **localStorage**              | session, pipeline, consent   | In-progress / completed assessment state   |
 | **IndexedDB** (`PCMSOffline`) | `src/lib/offline-storage.ts` | Question bank cache, offline session queue |
 
 Cloud sync (`src/lib/offline-supabase-sync.ts`) runs only when Supabase is configured and online.
@@ -144,9 +144,9 @@ See also: [`OFFLINE-AND-PAPER-ARCHITECTURE.md`](./OFFLINE-AND-PAPER-ARCHITECTURE
 
 ## Related workflows
 
-| Workflow | Trigger | Purpose |
-|----------|---------|---------|
-| `ci.yml` | push/PR `main` | Full verify + e2e |
-| `deploy.yml` | tag `v*.*.*` | Production Vercel |
-| `supabase-keepalive.yml` | daily cron | Prevent free-tier pause (PCMS + SynaptiSec) |
-| `rotate-research-keys.yml` | manual | Rotate research API keys + optional deploy |
+| Workflow                   | Trigger        | Purpose                                                       |
+| -------------------------- | -------------- | ------------------------------------------------------------- |
+| `ci.yml`                   | push/PR `main` | Full verify + e2e                                             |
+| `deploy.yml`               | tag `v*.*.*`   | Production Vercel                                             |
+| `supabase-keepalive.yml`   | daily cron     | Prevent free-tier pause (PCMS; SynaptiSec paused temporarily) |
+| `rotate-research-keys.yml` | manual         | Rotate research API keys + optional deploy                    |

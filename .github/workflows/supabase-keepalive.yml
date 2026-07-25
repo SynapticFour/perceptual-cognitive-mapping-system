@@ -12,8 +12,9 @@ name: Supabase keep-alive
 # Required repository secrets (Settings → Secrets → Actions):
 #   SUPABASE_URL / SUPABASE_ANON_KEY           — PCMS project (REST)
 #
-# SynaptiSec keep-alive is intentionally disabled (project paused / resources
-# freed). Re-enable the ping-synaptisec job and restore secrets when resuming:
+# SynaptiSec keep-alive is intentionally disabled: the SynaptiSec Supabase
+# free-tier slot was needed elsewhere. This is a TEMPORARY pause, not a
+# cancellation. Re-enable ping-synaptisec and restore secrets when resuming:
 #   SYNAPTISEC_SUPABASE_URL / SYNAPTISEC_SUPABASE_ANON_KEY — SynaptiSec (REST)
 #   SYNAPTISEC_DATABASE_URL — optional pooler fallback (port 6543)
 on:
@@ -71,7 +72,7 @@ jobs:
           echo "PCMS keep-alive failed after ${max_attempts} attempts"
           exit 1
 
-  # Disabled 2026-07-22: SynaptiSec paused to free resources. Restore this job when resuming.
+  # Disabled 2026-07-22: SynaptiSec free-tier Supabase slot reused elsewhere (temporary). Restore when resuming.
   ping-synaptisec:
     if: false
     name: Ping SynaptiSec Supabase (REST)

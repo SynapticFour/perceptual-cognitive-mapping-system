@@ -59,12 +59,12 @@ When Supabase public env is configured, performs a minimal `sessions` REST read 
 
 Returns `reachable: true` on success. Never returns API keys. Responds with HTTP 503 when configured but unreachable.
 
-**Free-tier keep-alive:** GitHub Actions workflow `.github/workflows/supabase-keepalive.yml` pings **both** free-tier Supabase projects **directly** every day from this public repo (so private CI minutes are not required):
+**Free-tier keep-alive:** GitHub Actions workflow `.github/workflows/supabase-keepalive.yml` pings free-tier Supabase projects **directly** every day from this public repo (so private CI minutes are not required). **PCMS is active.** SynaptiSec’s job is **temporarily disabled** (Supabase free-tier slot reused elsewhere; not cancelled):
 
-| Job | Project | Secrets |
-| --- | --- | --- |
-| `ping-pcms` | PCMS (`siohqkkrjpfpfncdzudt`) | `SUPABASE_URL`, `SUPABASE_ANON_KEY` |
-| `ping-synaptisec` | SynaptiSec (`fzqxqxhvotrlmuequntr`) | `SYNAPTISEC_SUPABASE_URL`, `SYNAPTISEC_SUPABASE_ANON_KEY` (optional `SYNAPTISEC_DATABASE_URL` fallback) |
+| Job               | Project                                                        | Secrets                                                                                                                |
+| ----------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ping-pcms`       | PCMS (`siohqkkrjpfpfncdzudt`)                                  | `SUPABASE_URL`, `SUPABASE_ANON_KEY`                                                                                    |
+| `ping-synaptisec` | SynaptiSec (`fzqxqxhvotrlmuequntr`) — **paused** (`if: false`) | Re-enable with `SYNAPTISEC_SUPABASE_URL`, `SYNAPTISEC_SUPABASE_ANON_KEY` (optional `SYNAPTISEC_DATABASE_URL` fallback) |
 
 Do not rely on curling the Vercel apps alone — when Supabase is paused, Vercel returns 503 and Supabase never receives activity to wake up. The production `/api/health/supabase` endpoint remains useful for operators; the scheduled job must hit Supabase itself.
 
