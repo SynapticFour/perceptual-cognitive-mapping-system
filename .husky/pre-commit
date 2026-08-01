@@ -1,1 +1,15 @@
+#!/usr/bin/env sh
+set -e
+cd "$(dirname "$0")/.." || exit 1
+
 npx lint-staged
+
+# Match .github/workflows/ci.yml (skip e2e — keep for CI/pre-push).
+echo "[husky] CI parity: lint + validate + tsc + unit + build"
+npm run lint
+npm run validate-questions
+npm run validate-global-bank
+npm run validate-cultural-bank
+npx tsc --noEmit
+npm run test:unit
+npm run build
