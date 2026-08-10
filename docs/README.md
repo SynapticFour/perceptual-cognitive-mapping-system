@@ -1,4 +1,5 @@
 # PCMS Documentation Index
+
 ## Perceptual & Cognitive Mapping System v1.0 (Research-Grade)
 
 > **Programme foundation:** Normative principles live in the [Cognitive Landscape Research Programme (CLRP)](https://github.com/SynapticFour/cognitive-landscape-research-programme). This index covers **PCMS implementation** documentation only.
@@ -7,24 +8,24 @@
 
 - **Partners / institutions / interested stakeholders:** start with [CLRP](https://github.com/SynapticFour/cognitive-landscape-research-programme), then Validation, Ethics, Deployment-Legal, and Diagnostics docs.
 - **Researchers:** use Validation Protocol, Research Action Plan, Study Design, and Methodology docs.
-- **Maintainers / contributors:** use Continuation, ADRs, prompts, and implementation-level technical docs.
+- **Contributors:** use ADRs, research roadmap, and implementation-level technical docs.
 
 ### Core Documentation
 
 #### **Getting Started**
+
 - **[Main README](../README.md)** - Complete overview and quick start guide
 - **[Local Setup Guide](./LOCAL_SETUP.md)** - Detailed setup instructions for local development
 - **[Deployment runbook (production SaaS)](./deployment-runbook.md)** - Tag deploy, Vercel rollback, Supabase migrations, backups
 - **[Data Model](./data-model.md)** - Database schema and data structure documentation
 
 #### **Research Documentation**
+
 - **[Academic validation & adaptation programme](./ACADEMIC_VALIDATION_AND_ADAPTATION_PROGRAMME.md)** — IRB-ready validation vs localization workstreams; regional profiles (Francophone WA, East Africa)
-- **[Technical implementation backlog](./TECHNICAL_IMPLEMENTATION_BACKLOG.md)** — Engineering priorities without expert gate
 - **[Research action plan](./RESEARCH_ACTION_PLAN.md)** — Phased path to evidence, IRB, pre-registration, publication
 - **[Validation protocol](./VALIDATION_PROTOCOL.md)** — Honest psychometric status and Phase 1 bar (funders / IRB)
 - **[Architectural decisions (ADR)](./DECISIONS.md)** — PCMS + ATLAS non-negotiables
 - **[ATLAS programme](./ATLAS.md)** — Companion high-dimensional roadmap ([`ATLAS_VISION.md`](./ATLAS_VISION.md) alias)
-- **[Cursor prompts](../cursor-prompts/README.md)** — Internal execution briefs for maintainers and automation
 - **[Research roadmap](./RESEARCH-ROADMAP.md)** - Epics/tickets: session reproducibility, dual confidence model, banks, offline exports
 - **[Whitepaper](./whitepaper.md)** - Complete technical and theoretical foundation
 - **[Research Study Design v1.0](../lib/research/study_v1.md)** - Complete research protocol and study design
@@ -33,23 +34,25 @@
 - **[Related Work](../lib/research/related_work.md)** - Literature review and theoretical background
 
 #### **Cohort intelligence (aggregate groups)**
+
 - **[Cohort Intelligence Layer](./COHORT-INTELLIGENCE.md)** - Cohort map, environment insights, interaction dynamics, global pattern library, private early-support signals, validation, non-goals
 - **[Designing for support without labels](./DESIGNING-SUPPORT-WITHOUT-LABELS.md)** - Guidance copy and why cohort views stay aggregate-only
 
 #### **Ethics and Compliance**
+
 - **[Ethics Framework v1.0](./ethics.md)** — Ethical guidelines (same source is served in-app at `/ethics` on the map deployment; locale prefix when not default, e.g. `/de/ethics`)
-- **[Site audit report (public readiness)](./SITE_AUDIT_REPORT.md)** — Periodic audit log
-- **[Continuation handoff](./CONTINUATION.md)** — internal resume-work index for maintainers
 - The **[validation protocol](./VALIDATION_PROTOCOL.md)** (under Research above) is also served in-app at `/validation`
 - **GDPR tables** (after base schema): [`../supabase/migrations/20260413120000_ethics_gdpr.sql`](../supabase/migrations/20260413120000_ethics_gdpr.sql)
 - **Ethics audit events** (compliance / audit trail): [`../supabase/migrations/20260414200000_ethics_audit_events.sql`](../supabase/migrations/20260414200000_ethics_audit_events.sql)
 
 #### **Internationalization & diagnostics**
+
 - **[Localization coverage](./LOCALIZATION_COVERAGE.md)** - UI vs question-stem completeness per locale
 - **[I18N](./I18N.md)** - Locales, URLs, `messages/*.json`, and Twi review notes
 - **[Diagnostics](./DIAGNOSTICS.md)** - Health/readiness probes, operator sync diagnostics, and production debug workflow
 
 #### **Offline, export, and extended analysis**
+
 - **[Offline & paper-first architecture](./OFFLINE-AND-PAPER-ARCHITECTURE.md)** - Static question bank, service worker cache, IndexedDB, field workflows
 - **[Research session export (ZIP)](./RESEARCH-SESSION-EXPORT.md)** - Manifest, CSV, optional RO-Crate metadata in the downloadable bundle
 - **[Group cognitive analysis](./GROUP-COGNITIVE-ANALYSIS.md)** - Optional multi-profile aggregate view (not a replacement for cohort or personal results)
@@ -58,6 +61,7 @@
 ### Quick Navigation
 
 #### **User Journey** (locale prefix `as-needed`: English has no `/en`; `de`, `wo`, and `tw` prefix routes)
+
 1. **Landing**: `/` — introduction; links to consent and questionnaire
 2. **Consent**: `/consent` — multi-step informed consent (required before questionnaire/results)
 3. **Questionnaire**: `/questionnaire` — adaptive assessment (15 core + targeted refinements)
@@ -68,6 +72,7 @@
 8. **Validation protocol (full text):** `/validation` — renders `docs/VALIDATION_PROTOCOL.md`
 
 #### **Developer Resources**
+
 - **Setup Script**: `./setup.sh` - One-command setup for macOS
 - **Makefile**: `./Makefile` - Development commands and lifecycle management
 - **Package Scripts**: `npm run` commands for development and deployment
@@ -75,6 +80,7 @@
 - **Component docs in source + tests** - UI guidance lives alongside components and in this docs set
 
 #### **Research Infrastructure**
+
 - **Adaptive Engine**: `src/adaptive/questionnaire-engine.ts` - Research-grade adaptive logic
 - **Scoring Model**: `src/scoring/scoring-model.ts` - Confidence calculation and profile generation
 - **Data Collection**: `src/lib/data-collection.ts` - Structured research data collection
@@ -86,18 +92,21 @@
 ### Key Features v1.0
 
 #### **Research-Grade Assessment Engine**
+
 - **10-dimensional routing model**: F, P, S, E, R, C, T, I, A, V (see `src/model/cognitive-dimensions.ts` and [`PIPELINE_ARCHITECTURE.md`](../PIPELINE_ARCHITECTURE.md))
 - **Adaptive Logic**: Core questions (15) + targeted refinements (up to 10)
 - **Confidence Model**: [Routing confidence specification](./confidence-model.md) (CTT-style evidence + shrinkage + consistency); 0.75 threshold
 - **Phase-Based Progression**: Balanced coverage, then targeted refinement
 
 #### **Data Collection & Integrity**
+
 - **Structured Logging**: Complete assessment tracking with question paths and timing
 - **Version Control**: Assessment versioning (v1.0) for research reproducibility
 - **Quality Assurance**: Data validation and fallback mechanisms
 - **Publication-Ready**: Structured datasets for statistical analysis
 
 #### **User Experience**
+
 - **Dynamic Insights**: Personalized recommendations based on cognitive profile
 - **Potential Stressors**: Identification of challenging situations
 - **Interactive visualization**: Results cognitive landscape (map / density / vector switcher over one PCA projection); research UI still uses charts where noted
@@ -150,6 +159,7 @@ package.json                     # Dependencies and scripts
 ### URL Structure
 
 #### **Development URLs** (English default)
+
 - **Landing**: `http://localhost:3000/`
 - **Consent**: `http://localhost:3000/consent`
 - **Questionnaire**: `http://localhost:3000/questionnaire`
@@ -157,6 +167,7 @@ package.json                     # Dependencies and scripts
 - **German**: `http://localhost:3000/de/...` (same paths under `/de`)
 
 #### **External Resources**
+
 - **Node.js**: https://nodejs.org
 - **Supabase**: https://supabase.com
 - **Next.js Documentation**: https://nextjs.org/docs
@@ -164,6 +175,7 @@ package.json                     # Dependencies and scripts
 ### CLI Commands
 
 #### **Setup and Management**
+
 ```bash
 # One-command setup (macOS)
 ./setup.sh
@@ -180,6 +192,7 @@ npm run verify    # Alternative verification command
 ```
 
 #### **Complete Lifecycle**
+
 ```bash
 ./setup.sh start      # Start development server
 ./setup.sh stop       # Stop development server
@@ -204,16 +217,19 @@ npm run verify    # Alternative verification command
 ### Quality Assurance
 
 #### **Data Validation**
+
 - Assessment version validation before saving
 - Structured data format validation
 - Fallback mechanisms for data collection failures
 
 #### **Code Quality**
+
 - TypeScript strict mode enabled
 - ESLint configuration for code quality
 - Comprehensive error handling and user feedback
 
 #### **Research Integrity**
+
 - Version-controlled assessment (v1.0)
 - Complete audit trails with question paths
 - Non-diagnostic ethical framework

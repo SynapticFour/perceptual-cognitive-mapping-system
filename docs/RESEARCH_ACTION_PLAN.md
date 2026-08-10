@@ -39,8 +39,6 @@ This is a **normal and acceptable** state for a prototype in pre-Phase 1. It is 
 **Who:** Research team + domain expert review  
 **What:** Write 20 items per dimension for T (Temporal), I (Interoceptive), A (Associative), V (Verbal-Spatial). Use the existing question schema. Add `gh_variant` for Ghana cultural context.  
 **Why:** Until these exist, PCMS effectively measures 6 dimensions. The 10D architecture is wasted.  
-**Cursor prompt:** [`cursor-prompts/PROMPT-TIAV-QUESTIONS.md`](../cursor-prompts/PROMPT-TIAV-QUESTIONS.md)
-
 **TODO (Ghana TIAV bank):** `content/questions/ghana/tiav-ghana-v1.json` was raised from **8 → 16** items (2026-05-02); still expand toward **~20 items per T/I/A/V** (or match the universal TIAV depth) before a Ghana field pilot, with expert item review.
 
 ### 0.2 Ethics & IRB preparation
@@ -60,9 +58,7 @@ This is a **normal and acceptable** state for a prototype in pre-Phase 1. It is 
 
 **Who:** Developer  
 **What:** Verify that the live site (`map.synapticfour.com`) has: (1) no diagnostic language, (2) clear research consent explaining data use, (3) a visible link to the validity statement, (4) no claims of clinical or educational utility.  
-**Why:** The site is live and public. Any overclaiming right now creates liability.  
-**Cursor prompt:** [`cursor-prompts/PROMPT-SITE-AUDIT.md`](../cursor-prompts/PROMPT-SITE-AUDIT.md)  
-**Record:** [`SITE_AUDIT_REPORT.md`](./SITE_AUDIT_REPORT.md) (2026-05-02 pass).
+**Why:** The site is live and public. Any overclaiming right now creates liability.
 
 ---
 
@@ -72,7 +68,7 @@ This is a **normal and acceptable** state for a prototype in pre-Phase 1. It is 
 
 **Target locales:** English (UK/US), German (DE/AT/CH), Ghana (Twi/English)  
 **Method:** Online, pseudonymous, voluntary. Recruit through: university mailing lists, neurodiversity communities (with care — see consent design), social networks.  
-**Instrument version:** Lock the question bank *before* data collection begins. Any changes reset the clock.  
+**Instrument version:** Lock the question bank _before_ data collection begins. Any changes reset the clock.  
 **Data storage:** Supabase with full session export. No PII collected.
 
 ### 1.2 Reliability analysis
@@ -119,7 +115,7 @@ Secondary: **Psychological Assessment** (APA), **Journal of Cross-Cultural Psych
 
 ### 2.2 Paper structure (first publication)
 
-Title: *"PCMS: A culturally adaptive, non-diagnostic dimensional instrument for cognitive profiling across WEIRD and non-WEIRD populations"*
+Title: _"PCMS: A culturally adaptive, non-diagnostic dimensional instrument for cognitive profiling across WEIRD and non-WEIRD populations"_
 
 Sections:
 
@@ -158,10 +154,10 @@ Key milestones:
 
 The following are implementation priorities that unblock the research programme. In order:
 
-1. **T/I/A/V question bank** — [`cursor-prompts/PROMPT-TIAV-QUESTIONS.md`](../cursor-prompts/PROMPT-TIAV-QUESTIONS.md)
-2. **Self-nomination module** — [`ATLAS.md`](./ATLAS.md) §3 and [`cursor-prompts/PROMPT-SELF-NOMINATION.md`](../cursor-prompts/PROMPT-SELF-NOMINATION.md)
-3. **PCMS architecture prep for ATLAS** — [`cursor-prompts/PROMPT-ATLAS-ARCHITECTURE.md`](../cursor-prompts/PROMPT-ATLAS-ARCHITECTURE.md)
-4. **Site audit for live deployment** — [`cursor-prompts/PROMPT-SITE-AUDIT.md`](../cursor-prompts/PROMPT-SITE-AUDIT.md)
+1. **T/I/A/V question bank** — maintainer notes (removed from public tree)
+2. **Self-nomination module** — [`ATLAS.md`](./ATLAS.md) §3 and maintainer notes (removed from public tree)
+3. **PCMS architecture prep for ATLAS** — maintainer notes (removed from public tree)
+4. **Site audit for live deployment** — maintainer notes (removed from public tree)
 5. **Research data export enhancements** — ensure all session data needed for Phase 1 analysis is captured and exportable; see [`RESEARCH-SESSION-EXPORT.md`](./RESEARCH-SESSION-EXPORT.md) and full-session JSON.
 
 Do not begin ATLAS micro-trait integration into the scoring pipeline until the covariance prior exists. Build the structure, leave the data empty. See **ADR-002–004** in [`DECISIONS.md`](./DECISIONS.md).

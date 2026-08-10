@@ -14,10 +14,10 @@ PCMS is a **non-diagnostic**, **dimensional** self-report instrument for mapping
 
 This programme document separates two workstreams that are often conflated but must remain distinct in publications and ethics applications:
 
-| Workstream | Question it answers | Primary outputs |
-|------------|---------------------|-----------------|
-| **A — Psychometric validation** | Does the instrument measure stable, interpretable constructs with acceptable reliability and validity? | Pre-registration, pilot data, CFA/IRT, norms, peer-reviewed paper |
-| **B — Cultural adaptation & localization** | Are items and UI **meaningful, acceptable, and ecologically valid** in a target community? | Adapted stems, translated UI, cognitive interviews, local expert review, regional ethics copy |
+| Workstream                                 | Question it answers                                                                                    | Primary outputs                                                                               |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| **A — Psychometric validation**            | Does the instrument measure stable, interpretable constructs with acceptable reliability and validity? | Pre-registration, pilot data, CFA/IRT, norms, peer-reviewed paper                             |
+| **B — Cultural adaptation & localization** | Are items and UI **meaningful, acceptable, and ecologically valid** in a target community?             | Adapted stems, translated UI, cognitive interviews, local expert review, regional ethics copy |
 
 **Workstream A can proceed in English and German** with convenience samples while **Workstream B runs in parallel** for Ghana, Francophone West Africa, and East Africa. Neither stream replaces the other.
 
@@ -33,12 +33,12 @@ PCMS uses **ten routing dimensions** (F Focus, P Pattern, S Sensory, E Social en
 
 ### 2.2 Question banks (versioned)
 
-| Bank ID | Items | Role in validation |
-|---------|-------|-------------------|
-| `universal` classic (core + refinement + TIAV) | ~130 | Primary F–V adaptive instrument |
-| `ghana` extension | +25 classic, +16 TIAV (expanding) | Culturally adapted stems |
-| `global-behavioral-v2` | 200 (8 constructs, Likert-3) | Separate CFA/IRT track |
-| `cultural-adaptive-v1` | 200 × regional English stems | Cross-site behavioural validation |
+| Bank ID                                        | Items                             | Role in validation                |
+| ---------------------------------------------- | --------------------------------- | --------------------------------- |
+| `universal` classic (core + refinement + TIAV) | ~130                              | Primary F–V adaptive instrument   |
+| `ghana` extension                              | +25 classic, +16 TIAV (expanding) | Culturally adapted stems          |
+| `global-behavioral-v2`                         | 200 (8 constructs, Likert-3)      | Separate CFA/IRT track            |
+| `cultural-adaptive-v1`                         | 200 × regional English stems      | Cross-site behavioural validation |
 
 All banks record **`questionBankId`**, **`bankVersion`**, and **`stemRegionUsed`** on completed sessions for reproducibility.
 
@@ -76,39 +76,39 @@ These are the **primary scientific questions** for Phase 1–2. They should appe
 
 ### A.2 Governance and roles
 
-| Step | Who | Context | Deliverable |
-|------|-----|---------|-------------|
-| Pre-registration | Lead PI | OSF / AsPredicted | Hypotheses, N, analysis plan, instruments |
-| IRB / REC | PI + institution | University or partner hospital | Approved protocol, consent templates |
-| Bank freeze | PI + methodologist | Before any primary data | Tagged Git release, `meta.json` version |
-| Data collection | Research assistants | Online or field, pseudonymous | Session exports (JSON/ZIP) |
-| Psychometrics | Statistician (offline) | R (`psych`, `mirt`) or Python | CFA, IRT, DIF, reliability tables |
-| Publication | PI + co-authors | Open science package | Paper + OSF materials |
+| Step             | Who                    | Context                        | Deliverable                               |
+| ---------------- | ---------------------- | ------------------------------ | ----------------------------------------- |
+| Pre-registration | Lead PI                | OSF / AsPredicted              | Hypotheses, N, analysis plan, instruments |
+| IRB / REC        | PI + institution       | University or partner hospital | Approved protocol, consent templates      |
+| Bank freeze      | PI + methodologist     | Before any primary data        | Tagged Git release, `meta.json` version   |
+| Data collection  | Research assistants    | Online or field, pseudonymous  | Session exports (JSON/ZIP)                |
+| Psychometrics    | Statistician (offline) | R (`psych`, `mirt`) or Python  | CFA, IRT, DIF, reliability tables         |
+| Publication      | PI + co-authors        | Open science package           | Paper + OSF materials                     |
 
 ### A.3 Phase 1 — Minimum credible evidence (months 0–12)
 
 **Sample:** N = **150 adults per locale** (convenience; document inclusion/exclusion).  
 **Locales (initial):** English (UK/US/online), German (DE/AT/CH), Ghana-oriented deployment (Twi/English).
 
-| Step | Method | Acceptance criterion |
-|------|--------|----------------------|
-| 1.1 | Lock question bank | No item changes during collection |
-| 1.2 | Internal consistency | α and ω per dimension; flag items with item–total r < 0.20 |
-| 1.3 | Test–retest | N = 40/locale, 2-week interval; ICC ≥ 0.70 |
-| 1.4 | Convergent validity | Pre-registered correlations with HSPS, BIS/BAS, ACS, MAIA-short where available |
-| 1.5 | Local norms | Mean, SD per dimension per locale; no cross-locale mean claims without invariance |
+| Step | Method               | Acceptance criterion                                                              |
+| ---- | -------------------- | --------------------------------------------------------------------------------- |
+| 1.1  | Lock question bank   | No item changes during collection                                                 |
+| 1.2  | Internal consistency | α and ω per dimension; flag items with item–total r < 0.20                        |
+| 1.3  | Test–retest          | N = 40/locale, 2-week interval; ICC ≥ 0.70                                        |
+| 1.4  | Convergent validity  | Pre-registered correlations with HSPS, BIS/BAS, ACS, MAIA-short where available   |
+| 1.5  | Local norms          | Mean, SD per dimension per locale; no cross-locale mean claims without invariance |
 
 **Analysis is offline** — not embedded in the production app. Session exports must include `profileAdaptiveSummary`, `stemRegionUsed`, `adaptiveStopTelemetry`, and bank metadata.
 
 ### A.4 Phase 2 — Calibration and invariance (months 12–24)
 
-| Step | Method | Notes |
-|------|--------|-------|
-| 2.1 | CFA | Eight-factor (`global_v2`) and/or 10-factor classic model |
-| 2.2 | IRT (GRM / 2PL) | Populate `irt_a`, `irt_b` in `schema.json` |
-| 2.3 | DIF | Mantel–Haenszel; flag |ETS D| > 1.0 for cultural review |
-| 2.4 | Multi-group CFA | Configural → metric → scalar; document non-invariant items |
-| 2.5 | Publication | Target: *Assessment*, *Journal of Cross-Cultural Psychology*, or *Frontiers in Psychology* |
+| Step | Method          | Notes                                                                                      |
+| ---- | --------------- | ------------------------------------------------------------------------------------------ |
+| 2.1  | CFA             | Eight-factor (`global_v2`) and/or 10-factor classic model                                  |
+| 2.2  | IRT (GRM / 2PL) | Populate `irt_a`, `irt_b` in `schema.json`                                                 |
+| 2.3  | DIF             | Mantel–Haenszel; flag                                                                      | ETS D | > 1.0 for cultural review |
+| 2.4  | Multi-group CFA | Configural → metric → scalar; document non-invariant items                                 |
+| 2.5  | Publication     | Target: _Assessment_, _Journal of Cross-Cultural Psychology_, or _Frontiers in Psychology_ |
 
 ### A.5 Phase 3 — ATLAS (separate programme)
 
@@ -141,23 +141,23 @@ Follow COSMIN-inspired content validity practice and Beaton-style translation wh
 
 ### B.3 Current locale status
 
-| UI locale | Language | Question stems | Ethics / review |
-|-----------|----------|----------------|-----------------|
-| `en` | English | Canonical | Production |
-| `de` | German | Classic + TIAV (DE) | Production |
-| `tw` | Twi / Akan | English (stems pending) | Native review pending |
-| `wo` | Wolof | English (stems pending) | Native review pending |
-| `fr` | French | Classic FR draft; regional stems fallback | Native review pending |
-| `sw` | Swahili | Classic SW draft; regional stems fallback | Native review pending |
+| UI locale | Language   | Question stems                            | Ethics / review       |
+| --------- | ---------- | ----------------------------------------- | --------------------- |
+| `en`      | English    | Canonical                                 | Production            |
+| `de`      | German     | Classic + TIAV (DE)                       | Production            |
+| `tw`      | Twi / Akan | English (stems pending)                   | Native review pending |
+| `wo`      | Wolof      | English (stems pending)                   | Native review pending |
+| `fr`      | French     | Classic FR draft; regional stems fallback | Native review pending |
+| `sw`      | Swahili    | Classic SW draft; regional stems fallback | Native review pending |
 
 ### B.4 Regional stem bundles (`cultural-adaptive-v1`)
 
 English regional paraphrases exist for `global`, `ghana`, and `west_africa`. Extended bundles:
 
-| Stem region | Intended deployment | Fallback chain |
-|-------------|---------------------|----------------|
+| Stem region               | Intended deployment                                                        | Fallback chain             |
+| ------------------------- | -------------------------------------------------------------------------- | -------------------------- |
 | `francophone_west_africa` | Senegal, Côte d'Ivoire, Mali, Burkina Faso, Benin, Togo, Niger (French UI) | → `west_africa` → `global` |
-| `east_africa` | Kenya, Tanzania, Uganda, Rwanda (Swahili UI) | → `global` |
+| `east_africa`             | Kenya, Tanzania, Uganda, Rwanda (Swahili UI)                               | → `global`                 |
 
 Dedicated stems for these regions are **drafted incrementally**; fallback ensures the instrument remains usable while adaptation proceeds.
 
@@ -169,13 +169,13 @@ Dedicated stems for these regions are **drafted incrementally**; fallback ensure
 
 **Recommended primary UI languages:** **French (`fr`)** and **Wolof (`wo`)**.
 
-| Factor | Implication for PCMS |
-|--------|----------------------|
-| French is the language of education, administration, and health communication in much of Francophone WA | **French UI is the highest-leverage single addition** for institutional adoption |
-| Wolof is the largest first language in Senegal (~5–7M); Wolof UI already exists as draft | Pair **fr + wo** for Senegal-first pilots; Bambara (`bm`) as future extension for Mali |
-| Stigma around psychiatric labels is high | PCMS non-label dimensional framing is a **feature**, not a limitation — must remain explicit in ethics copy |
-| Oral culture & communal time | Items should reference **tontines, marchés, famille élargie, saison des pluies** — not only office scenarios |
-| Existing psychometric work | World Bank ESTEEM scales validated in Hausa, Yoruba, Swahili, French across SSA — precedent for multi-language adult self-report |
+| Factor                                                                                                  | Implication for PCMS                                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| French is the language of education, administration, and health communication in much of Francophone WA | **French UI is the highest-leverage single addition** for institutional adoption                                                 |
+| Wolof is the largest first language in Senegal (~5–7M); Wolof UI already exists as draft                | Pair **fr + wo** for Senegal-first pilots; Bambara (`bm`) as future extension for Mali                                           |
+| Stigma around psychiatric labels is high                                                                | PCMS non-label dimensional framing is a **feature**, not a limitation — must remain explicit in ethics copy                      |
+| Oral culture & communal time                                                                            | Items should reference **tontines, marchés, famille élargie, saison des pluies** — not only office scenarios                     |
+| Existing psychometric work                                                                              | World Bank ESTEEM scales validated in Hausa, Yoruba, Swahili, French across SSA — precedent for multi-language adult self-report |
 
 **Adoption enablers already in PCMS:** offline mode, Likert-3 bank, aggregate cohort view (no individual ranking), GDPR-style consent ladder, `west_africa` English stems as interim.
 
@@ -185,12 +185,12 @@ Dedicated stems for these regions are **drafted incrementally**; fallback ensure
 
 **Recommended primary UI language:** **Swahili (`sw`)**. English (`en`) remains co-official for universities and H3Africa-style research.
 
-| Factor | Implication for PCMS |
-|--------|----------------------|
-| Swahili (~100M+ L2 speakers) is the regional lingua franca | **Swahili UI unlocks Kenya, Tanzania, Uganda** for community-facing deployment |
-| Strong validation culture for translated screens (e.g. K6 in Swahili, GHQ-12) | Follow established forward–back translation + CFA pattern |
-| Urban–rural literacy variation | Offer **audio Likert-3** and facilitator-led (`field-import`) workflows |
-| Communal identity ("Ubuntu" parallels in Swahili: *ubuntu* / *umoja* framing) | Social energy (E) items should reference **harambee, chama, ujamaa** contexts cautiously — expert review required |
+| Factor                                                                        | Implication for PCMS                                                                                              |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Swahili (~100M+ L2 speakers) is the regional lingua franca                    | **Swahili UI unlocks Kenya, Tanzania, Uganda** for community-facing deployment                                    |
+| Strong validation culture for translated screens (e.g. K6 in Swahili, GHQ-12) | Follow established forward–back translation + CFA pattern                                                         |
+| Urban–rural literacy variation                                                | Offer **audio Likert-3** and facilitator-led (`field-import`) workflows                                           |
+| Communal identity ("Ubuntu" parallels in Swahili: _ubuntu_ / _umoja_ framing) | Social energy (E) items should reference **harambee, chama, ujamaa** contexts cautiously — expert review required |
 
 **Adoption enablers:** same offline/export stack; `east_africa` stem region with global fallback; research ZIP for university analysis.
 
@@ -230,7 +230,7 @@ Continue expanding `ghana/tiav-ghana-v1.json` toward **~20 items per T/I/A/V**; 
 
 ## Part E — Technical enablers (maintainer reference)
 
-Implementation priorities that **do not** require expert panels are tracked in [`TECHNICAL_IMPLEMENTATION_BACKLOG.md`](./TECHNICAL_IMPLEMENTATION_BACKLOG.md) and [`RESEARCH-ROADMAP.md`](./RESEARCH-ROADMAP.md).
+Implementation priorities that **do not** require expert panels are tracked in [`RESEARCH-ROADMAP.md`](./RESEARCH-ROADMAP.md).
 
 Psychometric calibration itself remains **offline** (R/Python on exported sessions).
 
@@ -238,14 +238,14 @@ Psychometric calibration itself remains **offline** (R/Python on exported sessio
 
 ## References (indicative)
 
-- American Educational Research Association et al. (2014). *Standards for Educational and Psychological Testing.*
-- Beaton, D. E. et al. (2000). Guidelines for the process of cross-cultural adaptation of self-report measures. *Spine.*
-- Clark, L. A. & Watson, D. (2019). Constructing validity: New developments in creating objective measuring instruments. *Psychological Assessment.*
-- Kotov, R. et al. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP). *Journal of Abnormal Psychology.*
-- Mehling, W. E. et al. (2018). MAIA-2. *PLOS ONE.*
+- American Educational Research Association et al. (2014). _Standards for Educational and Psychological Testing._
+- Beaton, D. E. et al. (2000). Guidelines for the process of cross-cultural adaptation of self-report measures. _Spine._
+- Clark, L. A. & Watson, D. (2019). Constructing validity: New developments in creating objective measuring instruments. _Psychological Assessment._
+- Kotov, R. et al. (2017). The Hierarchical Taxonomy of Psychopathology (HiTOP). _Journal of Abnormal Psychology._
+- Mehling, W. E. et al. (2018). MAIA-2. _PLOS ONE._
 - Muthén, B. & Muthén, L. (2018). Mplus user’s guide (measurement invariance).
-- Terwee, C. B. et al. (2018). COSMIN methodology for content validity. *Quality of Life Research.*
-- Wakschlag, L. S. et al. (2019). Dimensional approaches to autism and ADHD. *Journal of the American Academy of Child & Adolescent Psychiatry.*
+- Terwee, C. B. et al. (2018). COSMIN methodology for content validity. _Quality of Life Research._
+- Wakschlag, L. S. et al. (2019). Dimensional approaches to autism and ADHD. _Journal of the American Academy of Child & Adolescent Psychiatry._
 
 ---
 
