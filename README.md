@@ -9,6 +9,8 @@
 
 A scientifically grounded web-based system for mapping human cognition into continuous multi-dimensional space, replacing categorical thinking with dimensional modeling for **research and educational self-understanding** (not clinical diagnosis).
 
+> **Development paused (2026-09).** Live demo at map.synapticfour.com may stay up.
+>
 > **Research Prototype | MIT License | Not a diagnostic instrument**
 >
 > PCMS maps cognitive tendencies as continuous dimensional profiles — not labels, not diagnoses.
