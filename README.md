@@ -1,5 +1,7 @@
 # Perceptual & Cognitive Mapping System (PCMS) v1.0
 
+Freeze status (2026-09): [STATUS.md](STATUS.md).
+
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-map.synapticfour.com-6366f1)](https://map.synapticfour.com)
 
 **Research-Grade Adaptive Assessment Platform for Cognitive Diversity**
