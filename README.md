@@ -13,7 +13,10 @@ A scientifically grounded web-based system for mapping human cognition into cont
 >
 > PCMS maps cognitive tendencies as continuous dimensional profiles — not labels, not diagnoses.
 > It is designed for self-understanding and open research. Results should never be used for
-> institutional decisions about individuals.
+> institutional decisions about individuals. It is a research instrument in the
+> [Cognitive Landscape Research Programme](https://github.com/SynapticFour/cognitive-landscape-research-programme):
+> not Ferrum, not a hospital product, not an HR screening tool, not a Synaptic Four commercial SKU,
+> and not a GDPR certification.
 >
 > [Why no labels? →](#design-philosophy)
 
@@ -21,9 +24,9 @@ A scientifically grounded web-based system for mapping human cognition into cont
 
 PCMS is an **instrument implementation** within the [Cognitive Landscape Research Programme (CLRP)](https://github.com/SynapticFour/cognitive-landscape-research-programme) — the implementation-independent home of programme principles, vocabulary, and evidence standards.
 
-| | CLRP | PCMS (this repo) |
-|---|------|------------------|
-| **Role** | Programme constitution | Adaptive web assessment |
+|               | CLRP                                                                                                  | PCMS (this repo)                     |
+| ------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| **Role**      | Programme constitution                                                                                | Adaptive web assessment              |
 | **Documents** | [CLRP-000–009](https://github.com/SynapticFour/cognitive-landscape-research-programme/tree/main/clrp) | Question banks, UI, scoring pipeline |
 
 **Conformance target:** `clrp-v2026.1` — [CLRP-003](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-003-measurement-principles.md), [CLRP-005](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-005-layer-separation.md), [CLRP-007](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-007-non-diagnostic-commitment.md) (partial — instrument layer).
@@ -68,6 +71,7 @@ PCMS deliberately avoids assigning diagnostic labels. This is a considered scien
 ### What PCMS is not a replacement for
 
 PCMS does not replace:
+
 - Clinical diagnostic assessment
 - Neuropsychological testing
 - Accommodation or service eligibility assessments
@@ -79,12 +83,14 @@ If a user does want to understand how their PCMS profile relates to common neuro
 ## Research-Grade Features
 
 ### Scientific Assessment Engine
+
 - **10-dimensional routing model** (`src/model/cognitive-dimensions.ts`): **F** Focus, **P** Pattern processing, **S** Sensory sensitivity, **E** Social energy, **R** Structure preference, **C** Cognitive flexibility, plus **T, I, A, V** (extended routing axes; research-facing, non-diagnostic)
 - **Adaptive Questionnaire**: 15 core questions + 12 targeted refinements with confidence-based stopping
 - **Research Confidence Model**: CTT-style weighted evidence, shrinkage reliability, and consistency penalty ([specification](docs/confidence-model.md)); 0.75 threshold for routing decisions
 - **Phase-Based Logic**: Core coverage dimension balancing, then targeted refinement
 
 ### Data Collection & Integrity
+
 - **Structured Logging**: Complete assessment tracking with question paths and timing
 - **Version Control**: Assessment versioning (v1.0) for research reproducibility
 - **Quality Assurance**: Data validation and fallback mechanisms
@@ -92,6 +98,7 @@ If a user does want to understand how their PCMS profile relates to common neuro
 - **ATLAS (companion programme, design phase):** Adaptive Trait Landscape Architecture System — separate bank and publication track from PCMS; shares infrastructure only. See [`docs/ATLAS.md`](./docs/ATLAS.md) and decision log [`docs/DECISIONS.md`](./docs/DECISIONS.md). Placeholders: `src/atlas/`, `content/questions/atlas-v1/`.
 
 ### User Experience
+
 - **Internationalization**: English (default URL), German (`/de/...`), Wolof (`/wo/...`), Twi/Akan draft (`/tw/...`, merges over English for missing keys); see [`docs/I18N.md`](./docs/I18N.md)
 - **Dedicated consent flow**: `/consent` (multi-step checkboxes) before questionnaire/results — **institutions using this with minors or in classrooms must supply local ethics approval, assent/consent wording, and any age rules** (see [`docs/ethics.md`](./docs/ethics.md))
 - **Dynamic Insights**: Descriptive summaries based on response patterns (non-diagnostic)
@@ -104,6 +111,7 @@ If a user does want to understand how their PCMS profile relates to common neuro
 - **Optional multi-profile analysis**: `/group-cognitive-analysis` (paste several share payloads) — [`docs/GROUP-COGNITIVE-ANALYSIS.md`](./docs/GROUP-COGNITIVE-ANALYSIS.md)
 
 ### Research Infrastructure
+
 - **Publication-Ready Data**: Structured datasets for statistical analysis
 - **Study Management**: Complete research protocol implementation
 - **Ethical Compliance**: Informed consent, explicit cloud opt-in, and pseudonymous data protection
@@ -113,7 +121,7 @@ If a user does want to understand how their PCMS profile relates to common neuro
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 - Supabase account (for data collection)
 
@@ -157,6 +165,7 @@ The setup script provides complete lifecycle management for local testing:
 Canonical command reference: [`docs/COMMANDS.md`](./docs/COMMANDS.md)
 
 **Makefile commands:**
+
 ```bash
 make setup      # Run setup
 make start      # Start server
@@ -167,6 +176,7 @@ make verify     # Verify no artifacts committed
 ```
 
 **npm scripts:**
+
 ```bash
 npm run setup      # Run setup
 npm run start:dev   # Start server
@@ -188,6 +198,7 @@ npm run test:edge   # Optional edge-case suites (stricter/experimental)
 ### Manual Setup
 
 1. **Clone and install dependencies**
+
    ```bash
    git clone <repository-url>
    cd perceptual-cognitive-mapping-system
@@ -201,6 +212,7 @@ npm run test:edge   # Optional edge-case suites (stricter/experimental)
 
 3. **Configure environment variables**
    Copy `.env.example` to `.env.local` and adjust:
+
    ```bash
    # Supabase (optional for local-only testing)
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
@@ -214,6 +226,7 @@ npm run test:edge   # Optional edge-case suites (stricter/experimental)
    ```
 
 4. **Run the development server**
+
    ```bash
    npm run dev
    ```
@@ -234,6 +247,7 @@ npm run test:edge   # Optional edge-case suites (stricter/experimental)
 ### Quick Test
 
 After setup, you can immediately test the system:
+
 1. Open `/consent` and complete the multi-step consent
 2. Take the adaptive questionnaire (about 10–15 minutes)
 3. Confirm results assent when prompted, then view the cognitive landscape (map / density / vector views + share link)
@@ -256,7 +270,7 @@ After setup, you can immediately test the system:
 
 ### Key Algorithms
 
-1. **Adaptive Question Selection**: 
+1. **Adaptive Question Selection**:
    - Targets lowest confidence dimensions
    - Maximizes expected information gain
    - Avoids question redundancy
@@ -317,16 +331,19 @@ After setup, you can immediately test the system:
 - **Backend**: Supabase (PostgreSQL)
 - **Deployment**: Vercel-ready
 
-## 🔒 Privacy & Security
+## Privacy & Security
 
-- **Data Encryption**: All data encrypted in transit and at rest
-- **Pseudonymous Storage**: No direct personal identifiers collected in the assessment flow
-- **Integrity metadata**: Optional hashed IP field in the database schema for future abuse controls (not enforced in the app layer yet)
-- **GDPR Compliant**: Right to deletion and data export
+Not a GDPR certification. Not a medical device. Encryption in transit and at rest is whatever the host (Vercel / Supabase) is configured for on a given deployment — this repository does not claim those controls as a verified product property.
+
+- **Pseudonymous storage:** the assessment flow does not collect direct personal identifiers.
+- **Integrity metadata:** optional hashed IP field in the database schema for future abuse controls (not enforced in the app layer yet).
+- **Session deletion:** the assessment UI can request deletion of the current session. That is not a formal data-subject-request process.
+- **Export:** research session export exists as an operator/research path, not as a GDPR portability process.
 
 ## 📈 Analytics & Monitoring
 
 ### Research Analytics
+
 - Completion rates by cultural context
 - Average response times
 - Dimension confidence distributions
@@ -335,11 +352,13 @@ After setup, you can immediately test the system:
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
+
 1. Connect GitHub repository to Vercel
 2. Add environment variables in Vercel dashboard
 3. Deploy automatically on push to main
 
 ### Manual Deployment
+
 ```bash
 npm run build
 npm start
@@ -348,16 +367,19 @@ npm start
 ## 🤝 Support
 
 ### For Researchers
+
 - Data export capabilities
 - Custom question set integration
 - Collaborative research opportunities
 
 ### For Users
+
 - Complete assessment documentation
 - Profile interpretation guides
 - Support resources (non-clinical)
 
 ### Contact
+
 - Questions or security concerns: [contact@synapticfour.com](mailto:contact@synapticfour.com)
 
 ## 📚 Governance
