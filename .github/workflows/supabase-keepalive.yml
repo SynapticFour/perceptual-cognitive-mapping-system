@@ -15,12 +15,9 @@ name: Supabase keep-alive
 # SynaptiSec: the old standalone free-tier project keep-alive was removed
 # (migration Sprint 3). Canonical SynaptiSec lives in SynapticProducts on the
 # shared Products Supabase project — no separate ping-synaptisec job.
-# Kept during the 2026-09 development freeze: live demo stays up on purpose.
-# This is not a CodeQL exception; it is the PCMS keepalive exception.
 on:
   schedule:
     # Daily at 08:00 UTC — margin inside the 7-day window if GitHub delays a run.
-    # Intentional during freeze (live demo). Not paused.
     - cron: "0 8 * * *"
   workflow_dispatch:
 

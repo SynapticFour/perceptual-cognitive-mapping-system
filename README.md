@@ -1,6 +1,6 @@
 # Perceptual & Cognitive Mapping System (PCMS) v1.0
 
-Freeze status (2026-09): [STATUS.md](STATUS.md).
+Status: [STATUS.md](STATUS.md).
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-map.synapticfour.com-6366f1)](https://map.synapticfour.com)
 
@@ -11,8 +11,6 @@ Freeze status (2026-09): [STATUS.md](STATUS.md).
 
 A scientifically grounded web-based system for mapping human cognition into continuous multi-dimensional space, replacing categorical thinking with dimensional modeling for **research and educational self-understanding** (not clinical diagnosis).
 
-> **Development paused (2026-09).** Live demo at map.synapticfour.com may stay up.
->
 > **Research Prototype | MIT License | Not a diagnostic instrument**
 >
 > PCMS maps cognitive tendencies as continuous dimensional profiles — not labels, not diagnoses.
