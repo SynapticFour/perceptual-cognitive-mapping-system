@@ -9,14 +9,12 @@
 
 A scientifically grounded web-based system for mapping human cognition into continuous multi-dimensional space, replacing categorical thinking with dimensional modeling for **research and educational self-understanding** (not clinical diagnosis).
 
-> **Research Prototype | MIT License | Not a diagnostic instrument**
+> **Research prototype | MIT License | Not a diagnostic instrument**
 >
 > PCMS maps cognitive tendencies as continuous dimensional profiles — not labels, not diagnoses.
 > It is designed for self-understanding and open research. Results should never be used for
-> institutional decisions about individuals. It is a research instrument in the
-> [Cognitive Landscape Research Programme](https://github.com/SynapticFour/cognitive-landscape-research-programme):
-> not Ferrum, not a hospital product, not an HR screening tool, not a Synaptic Four commercial SKU,
-> and not a GDPR certification.
+> institutional decisions about individuals. It is an instrument in the
+> [Cognitive Landscape Research Programme](https://github.com/SynapticFour/cognitive-landscape-research-programme).
 >
 > [Why no labels? →](#design-philosophy)
 
