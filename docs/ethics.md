@@ -1,4 +1,5 @@
 # Ethics Framework v1.0
+
 ## Perceptual & Cognitive Mapping System (Research-Grade)
 
 > **Normative programme commitment:** [CLRP-007: Non-Diagnostic Commitment](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-007-non-diagnostic-commitment.md) in the [Cognitive Landscape Research Programme (CLRP)](https://github.com/SynapticFour/cognitive-landscape-research-programme). This document adds **PCMS-specific** consent, deployment, and UI requirements.
@@ -10,18 +11,21 @@ The Perceptual & Cognitive Mapping System (PCMS) v1.0 is designed as a **researc
 ## Critical Non-Diagnostic Clarification
 
 ### NOT A MEDICAL OR CLINICAL TOOL
+
 - **Research Purpose Only**: PCMS is designed for scientific research and self-understanding
 - **No Diagnostic Claims**: The system does not diagnose, treat, or assess medical conditions
 - **No Clinical Recommendations**: Results are not medical advice and should not replace professional healthcare
 - **Label-Free Approach**: Uses dimensional modeling rather than categorical labels or diagnoses
 
 ### Appropriate Use Cases
+
 - **Self-Understanding**: Personal insight into cognitive patterns and preferences
 - **Research**: Scientific study of cognitive diversity and dimensional approaches
 - **Educational**: Understanding different cognitive styles and approaches
 - **Personal Development**: Identifying optimal environments and strategies
 
 ### Inappropriate Use Cases
+
 - **Medical Diagnosis**: Cannot be used for diagnosing ADHD, autism, or other conditions
 - **Clinical Decision Making**: Not suitable for treatment planning or medical decisions
 - **Employment Screening**: Not designed for hiring or employment decisions
@@ -30,12 +34,13 @@ The Perceptual & Cognitive Mapping System (PCMS) v1.0 is designed as a **researc
 ## Non-Gatekeeping Guarantee
 
 PCMS results:
+
 - **Do not** affect eligibility for any formal diagnostic assessment
 - **Do not** serve as evidence for or against any clinical determination
 - **Do not** replace any occupational, educational, or healthcare assessment
 - **Are not** designed to be shown to institutions as evidence of cognitive traits
 
-If any deployment of PCMS is found to be used as a gatekeeper to clinical assessment, that deployment violates the terms of this project's ethical guidelines and (if research data is collected) must be reported to the relevant IRB/ethics board.
+If any deployment of PCMS is found to be used as a gatekeeper to clinical assessment, that deployment violates the terms of this project's ethical guidelines. If research data is collected, the operator of that deployment is responsible for reporting it through whatever ethics review process that institution actually has. This repository does not name such a board.
 
 Any fork or derivative of PCMS that uses results to influence access to services must remove PCMS branding and clearly distinguish its use case.
 
@@ -50,12 +55,14 @@ Any fork or derivative of PCMS that uses results to influence access to services
 ### 1. Respect for Persons
 
 **Autonomy and Informed Consent**
+
 - All participation is fully voluntary
 - Comprehensive consent process with clear information disclosure
 - Right to withdraw at any time without penalty
 - Ongoing consent throughout the assessment process
 
 **Dignity and Respect**
+
 - No stigmatizing language or labels
 - Emphasis on cognitive diversity as natural variation
 - Respect for individual differences and cultural backgrounds
@@ -64,12 +71,14 @@ Any fork or derivative of PCMS that uses results to influence access to services
 ### 2. Beneficence
 
 **Maximizing Benefits**
+
 - Designed for self-understanding and personal growth
 - Provides actionable insights for cognitive optimization
 - Contributes to scientific knowledge about cognitive diversity
 - Free and accessible to all users
 
 **Minimizing Risks**
+
 - No medical or diagnostic claims
 - Clear boundaries about system capabilities
 - Protection against misinterpretation of results
@@ -78,12 +87,14 @@ Any fork or derivative of PCMS that uses results to influence access to services
 ### 3. Justice
 
 **Equitable Access**
+
 - Free of charge for all users
 - No socioeconomic barriers to participation
 - Culturally adaptive assessment approaches
 - Multiple language support (English, German, Wolof; Twi/Akan draft with English fallback — extend as needed)
 
 **Fair Distribution**
+
 - Research benefits shared with participants
 - Open-source tools for researchers
 - Community involvement in system development
@@ -92,12 +103,14 @@ Any fork or derivative of PCMS that uses results to influence access to services
 ### 4. Privacy and Confidentiality
 
 **Data Protection**
+
 - Pseudonymous session data (no direct personal identifiers in the assessment flow)
-- End-to-end encryption for all data transmission
-- Secure storage with access controls
-- Regular security audits and updates
+- Transport is HTTPS/TLS. The application does not encrypt answer payloads end-to-end before upload. When optional cloud storage is enabled, the database provider encrypts stored data at rest. Responsible: the operator of that deployment.
+- Access control beyond the provider defaults is not described as a completed audit in this repository.
+- A completed security audit is not recorded here. Responsible: the repository operator.
 
 **Data Usage**
+
 - Research use only, clearly disclosed
 - No commercial exploitation of personal data
 - Aggregated data for publications only
@@ -140,12 +153,14 @@ Any fork or derivative of PCMS that uses results to influence access to services
 ### Consent Implementation
 
 **Digital Consent Process**
+
 - Multi-step consent interface
 - Comprehension checks
 - Explicit agreement checkboxes
 - Timestamped consent records
 
 **Ongoing Consent**
+
 - Progress indicators throughout assessment
 - Option to withdraw at any point
 - Clear withdrawal mechanisms
@@ -166,18 +181,21 @@ These items map the principles above to routes and storage in this repository:
 ### Pseudonymization Strategy
 
 **No PII Collection**
+
 - No names, emails, or personal identifiers
 - No IP addresses stored in raw form
 - No geolocation data
 - No device fingerprinting
 
 **Session-Based Tracking**
+
 - Pseudonymous session IDs
 - Temporary data storage
 - Automatic data cleanup
 - No cross-session tracking
 
 **Data Minimization**
+
 - Only collect necessary research data
 - Question responses and timing only
 - No behavioral tracking beyond assessment
@@ -186,18 +204,21 @@ These items map the principles above to routes and storage in this repository:
 ### Security Measures
 
 **Technical Protection**
-- HTTPS/TLS encryption for all data
-- Database encryption at rest
-- Regular security updates
-- Access logging and monitoring
+
+- HTTPS/TLS for data in transit
+- Provider encryption at rest when a cloud database is used (not application-level end-to-end encryption)
+- Regular security updates are an operator duty. This repository does not record that they have been completed.
+- Access logging and monitoring are not recorded as a completed control here.
 
 **Administrative Controls**
+
 - Role-based access permissions
 - Data access audit trails
 - Regular security reviews
 - Incident response procedures
 
 **Data Retention**
+
 - Defined retention periods
 - Automatic data deletion
 - Research data archiving
@@ -208,18 +229,21 @@ These items map the principles above to routes and storage in this repository:
 ### Potential Risks
 
 **Psychological Risks**
+
 - Anxiety about cognitive profile results
 - Over-interpretation of dimensional scores
 - Unintended self-labeling
 - Comparison with others
 
 **Privacy Risks**
+
 - Data breach potential
 - Re-identification through pattern analysis
 - Unauthorized data access
 - Cross-platform data correlation
 
 **Social Risks**
+
 - Misunderstanding of research purpose
 - Inappropriate sharing of results
 - Stigma from cognitive profile
@@ -228,18 +252,21 @@ These items map the principles above to routes and storage in this repository:
 ### Mitigation Strategies
 
 **Psychological Mitigation**
+
 - Clear communication about system limitations
 - Emphasis on cognitive diversity and growth
 - Resources for professional support
 - Balanced presentation of strengths and challenges
 
 **Privacy Mitigation**
-- Strong encryption and security measures
-- Regular security audits
+
+- Encryption in this codebase is HTTPS/TLS in transit and provider encryption at rest. End-to-end encryption of payloads is not implemented. Responsible: the repository operator.
+- A completed security audit is not recorded in this repository.
 - Limited data collection scope
 - Transparency about data usage
 
 **Social Mitigation**
+
 - Educational materials about cognitive diversity
 - Clear non-diagnostic positioning
 - Guidelines for appropriate result sharing
@@ -250,18 +277,21 @@ These items map the principles above to routes and storage in this repository:
 ### Cross-Cultural Ethics
 
 **Cultural Adaptation**
+
 - Contextually appropriate question framing
 - Cultural validation of assessment items
 - Translation and localization processes
-- Cultural advisory board input
+- Cultural advisory board input: not recorded. No such board is listed in this repository.
 
 **Global Equity**
+
 - Free access regardless of location
 - Low-bandwidth optimization
 - Mobile-friendly interfaces
 - Multiple language support
 
 **Respect for Diversity**
+
 - Avoidance of Western-centric assumptions
 - Inclusive cognitive model development
 - Cultural sensitivity in result interpretation
@@ -272,26 +302,30 @@ These items map the principles above to routes and storage in this repository:
 ### Regulatory Framework
 
 **International Standards**
-- Declaration of Helsinki compliance
-- UNESCO Universal Declaration on Bioethics
-- International Conference on Harmonization guidelines
-- GDPR considerations for global participants — for the operator-facing processing summary (hosting, subprocessors, consent), see [`docs/DEPLOYMENT-LEGAL.md`](./DEPLOYMENT-LEGAL.md) and the in-app privacy route `/privacy` (`messages/*/privacy.json`).
+
+- Declaration of Helsinki compliance: not done for this deployment. No Helsinki review is recorded in this repository. Responsible: the lead researcher (`docs/RESEARCH_ACTION_PLAN.md`, section 0.2).
+- UNESCO Universal Declaration on Bioethics: not recorded as a completed review.
+- International Conference on Harmonization guidelines: not recorded as a completed review.
+- GDPR: the in-app privacy notice is the operator-facing processing summary. See [`docs/DEPLOYMENT-LEGAL.md`](./DEPLOYMENT-LEGAL.md) and `/privacy` (`messages/*/privacy.json`). This document does not claim that a supervisory authority has reviewed the deployment.
 
 **Institutional Review**
-- IRB/REC approval processes
-- Ongoing ethical review
-- Community advisory boards
-- Stakeholder engagement
+
+- IRB/REC approval: not done. `docs/RESEARCH_ACTION_PLAN.md` marks "IRB approval for human subjects research" as not done. A protocol is planned, not filed here. Responsible: the lead researcher.
+- Ongoing ethical review: not done. No completed review record is in this repository.
+- Community advisory boards: not established in this repository.
+- Stakeholder engagement: not recorded as a completed process.
 
 ### Publication Ethics
 
 **Responsible Dissemination**
+
 - Peer-reviewed publication process
 - Transparent methodology reporting
 - Limitations and biases disclosure
 - Open data sharing policies
 
 **Participant Protection**
+
 - No individual results in publications
 - Aggregated data only
 - Participant pseudonymity guaranteed (no direct personal identifiers in the assessment flow)
@@ -302,18 +336,23 @@ These items map the principles above to routes and storage in this repository:
 ### Ethical Review Processes
 
 **Regular Audits**
-- Annual ethical review
-- Security audit completion
-- Participant feedback collection
-- Compliance verification
+
+- Annual ethical review: not done. No review date is recorded.
+- Security audit: not recorded as completed.
+- Participant feedback collection: not recorded as a completed programme.
+- Compliance verification: not done.
 
 **Advisory Structures**
-- Ethics advisory board
-- Community representatives
-- Cultural consultants
-- Disability advocates
+
+- Ethics advisory board: not established. This repository has no membership list and no appointment.
+- Community representatives: not recorded as an appointed body.
+- Cultural consultants: not recorded as an appointed body.
+- Disability advocates: not recorded as an appointed body.
+
+Responsible for IRB preparation: the lead researcher in `docs/RESEARCH_ACTION_PLAN.md`. Responsible for what a running site stores: the operator of that deployment.
 
 **Continuous Improvement**
+
 - Participant feedback integration
 - Ethical framework updates
 - Best practice incorporation
@@ -324,12 +363,14 @@ These items map the principles above to routes and storage in this repository:
 ### Data Breach Protocol
 
 **Immediate Response**
+
 - System isolation and protection
 - Impact assessment initiation
 - Regulatory notification (if required)
 - Participant communication plan
 
 **Follow-up Actions**
+
 - Security enhancement implementation
 - Process review and improvement
 - Additional training if needed
@@ -338,12 +379,14 @@ These items map the principles above to routes and storage in this repository:
 ### Ethical Concerns Process
 
 **Reporting Mechanisms**
+
 - Clear contact information
 - Multiple reporting channels
 - Anonymous reporting options
 - Response time guarantees
 
 **Resolution Process**
+
 - Concern acknowledgment
 - Investigation procedures
 - Resolution communication
@@ -354,12 +397,14 @@ These items map the principles above to routes and storage in this repository:
 ### Emerging Technologies
 
 **AI and Machine Learning**
+
 - Algorithmic bias monitoring
 - Transparent AI decision-making
 - Human oversight requirements
 - Fairness and equity assessments
 
 **Advanced Analytics**
+
 - Privacy-preserving analytics
 - Differential privacy implementation
 - Secure multi-party computation
@@ -368,12 +413,14 @@ These items map the principles above to routes and storage in this repository:
 ### Expanding Scope
 
 **Clinical Integration**
+
 - Clear boundary maintenance
 - Professional collaboration guidelines
 - Referral protocol development
 - Ethical use frameworks
 
 **Global Expansion**
+
 - Cultural adaptation ethics
 - Regulatory compliance across jurisdictions
 - Equity in access and benefit
@@ -381,9 +428,9 @@ These items map the principles above to routes and storage in this repository:
 
 ## Conclusion
 
-The PCMS ethical framework ensures that the system operates with the highest standards of research integrity, participant protection, and social responsibility. By embedding ethical considerations into every aspect of system design and operation, we create a platform that advances scientific knowledge while respecting the dignity and rights of all participants.
+This document states the project's intended limits: non-diagnostic use, consent before the questionnaire, and pseudonymous assessment data. It is not a record that an ethics board has approved the deployment.
 
-This framework is a living document that evolves with emerging ethical standards, technological capabilities, and community needs. Regular review and updates ensure ongoing alignment with best practices in research ethics and data protection.
+This framework is a living document. A regular ethics review has not been completed. Updates belong with the lead researcher and the repository operator. They are not evidence that an oversight body has signed off.
 
 ## Related documents
 
@@ -393,8 +440,21 @@ This framework is a living document that evolves with emerging ethical standards
 
 ---
 
-**Contact**: For ethical concerns or questions, please contact the research ethics board through the project repository.
+**Contact**: For ethical concerns, use the contact address in the site footer. This repository does not name an ethics advisory board.
 
-**Review Schedule**: Annual ethical review with updates as needed.
+**Review schedule**: An annual ethical review is not done. No review date is recorded.
 
-**Version**: 1.0 - Current as of system initial release.
+**Version**: 1.0. The status lines above describe the repository as of the privacy and ethics correction. They are not a certificate.
+
+## Stand dieser Punkte (Deutsch)
+
+Die folgenden Sätze gelten für dieselbe Codebasis. Sie ersetzen keine abgeschlossene Prüfung.
+
+- Transport: HTTPS/TLS. Die Anwendung verschlüsselt Antwortinhalte nicht Ende-zu-Ende vor dem Upload. Wenn die optionale Cloud-Speicherung an ist, verschlüsselt der Datenbankbetreiber gespeicherte Daten im Ruhezustand. Verantwortlich: der Betreiber der jeweiligen Instanz.
+- Deklaration von Helsinki: nicht erfolgt. In diesem Repository ist keine Helsinki-Prüfung festgehalten. Verantwortlich: die in `docs/RESEARCH_ACTION_PLAN.md`, Abschnitt 0.2, genannte Forschungsleitung.
+- IRB/REC-Freigabe: nicht erfolgt. Der Aktionsplan markiert die Freigabe für Forschung mit Menschen als nicht erledigt. Ein Protokoll ist geplant, hier nicht eingereicht. Verantwortlich: die Forschungsleitung.
+- Ethikbeirat: nicht eingerichtet. Keine Mitgliederliste und keine Berufung in diesem Repository.
+- Jährliche Ethikprüfung: nicht erfolgt. Kein Prüfungsdatum ist festgehalten.
+- Eine abgeschlossene Sicherheitsprüfung ist hier nicht festgehalten.
+
+**Kontakt**: Anfragen an die Adresse in der Fußzeile der Website. Dieses Repository benennt keinen Ethikbeirat.
