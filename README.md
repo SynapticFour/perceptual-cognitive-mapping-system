@@ -83,7 +83,7 @@ If a user does want to understand how their PCMS profile relates to common neuro
 ### Scientific Assessment Engine
 
 - **10-dimensional routing model** (`src/model/cognitive-dimensions.ts`): **F** Focus, **P** Pattern processing, **S** Sensory sensitivity, **E** Social energy, **R** Structure preference, **C** Cognitive flexibility, plus **T, I, A, V** (extended routing axes; research-facing, non-diagnostic)
-- **Adaptive Questionnaire**: 15 core questions + 12 targeted refinements with confidence-based stopping
+- **Adaptive Questionnaire**: up to 15 core questions and up to 10 targeted refinements, with confidence-based stopping. The engine hard cap for one session is 30 questions (`ENGINE_HARD_CAP_TOTAL_QUESTIONS`).
 - **Research Confidence Model**: CTT-style weighted evidence, shrinkage reliability, and consistency penalty ([specification](docs/confidence-model.md)); 0.75 threshold for routing decisions
 - **Phase-Based Logic**: Core coverage dimension balancing, then targeted refinement
 

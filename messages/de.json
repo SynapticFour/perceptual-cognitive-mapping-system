@@ -836,11 +836,11 @@
     "ethics_meta_title": "Ethik & Rahmen — PCMS",
     "ethics_meta_description": "Ethikrahmen und sachgemäße Nutzung des PCMS-Forschungsprototyps.",
     "ethics_page_title": "Ethik & Rahmen",
-    "ethics_intro": "Vollständiges Projekt-Ethikdokument (gleicher Inhalt wie im öffentlichen Repository). Bei Fragen nutzen Sie die Kontaktzeile in der Fußzeile.",
+    "ethics_intro": "Vollständiges Projekt-Ethikdokument (gleicher Inhalt wie im öffentlichen Repository). Die Aufsichtspunkte sagen, was nicht erfolgt ist. Eine deutsche Fassung dieser Punkte steht am Ende des Dokuments. Bei Fragen nutzen Sie die Kontaktzeile in der Fußzeile.",
     "validation_meta_title": "Validierungsprotokoll — PCMS",
     "validation_meta_description": "Welche Evidenz es heute für PCMS-Werte gibt und welche Aussagen das System nicht treffen kann.",
     "validation_page_title": "Validierungsprotokoll",
-    "validation_intro": "Verständliche Validierungslage für Reviewerinnen und Teilnehmende (gleiches Dokument wie im öffentlichen Repository)."
+    "validation_intro": "Verständliche Validierungslage für Reviewerinnen und Teilnehmende (gleiches Dokument wie im öffentlichen Repository). Der Berichtslink nutzt den Tag clrp-v2026.2, auf dem die Datei liegt."
   },
   "site_footer": {
     "nav_label": "Rechtliches und externe Links",

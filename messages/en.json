@@ -836,11 +836,11 @@
     "ethics_meta_title": "Ethics & scope — PCMS",
     "ethics_meta_description": "Ethics framework and appropriate use of the Perceptual & Cognitive Mapping System research prototype.",
     "ethics_page_title": "Ethics & scope",
-    "ethics_intro": "Full project ethics document (same content as the open repository). For questions, use the contact in the footer.",
+    "ethics_intro": "Full project ethics document (same content as the open repository). Oversight bullets state what is not done. A German restatement is at the end of the document. For questions, use the contact in the footer.",
     "validation_meta_title": "Validation protocol — PCMS",
     "validation_meta_description": "What evidence exists today for PCMS scores and what the system cannot claim.",
     "validation_page_title": "Validation protocol",
-    "validation_intro": "Plain-language validation status for reviewers and participants (same document as the open repository)."
+    "validation_intro": "Plain-language validation status for reviewers and participants (same document as the open repository). The status report link uses tag clrp-v2026.2, where the file exists."
   },
   "site_footer": {
     "nav_label": "Legal and external links",
