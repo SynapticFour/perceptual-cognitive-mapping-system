@@ -840,7 +840,7 @@
     "validation_meta_title": "Validation protocol — PCMS",
     "validation_meta_description": "What evidence exists today for PCMS scores and what the system cannot claim.",
     "validation_page_title": "Validation protocol",
-    "validation_intro": "Plain-language validation status for reviewers and participants (same document as the open repository)."
+    "validation_intro": "Plain-language validation status for reviewers and participants (same document as the open repository). The status report link uses tag clrp-v2026.2, where the file exists."
   },
   "site_footer": {
     "nav_label": "Legal and external links",

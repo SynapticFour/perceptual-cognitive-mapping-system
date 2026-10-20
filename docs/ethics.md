@@ -435,7 +435,7 @@ This framework is a living document. A regular ethics review has not been comple
 ## Related documents
 
 - [CLRP-007 Non-Diagnostic Commitment](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-007-non-diagnostic-commitment.md) — normative programme commitment
-- [`VALIDATION_PROTOCOL.md`](./VALIDATION_PROTOCOL.md) — pointer to [CLRP-VR-2026-001](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/validation/CLRP-VR-2026-001-pcms-instrument-status.md)
+- [`VALIDATION_PROTOCOL.md`](./VALIDATION_PROTOCOL.md) — pointer to [CLRP-VR-2026-001](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.2/validation/CLRP-VR-2026-001-pcms-instrument-status.md)
 - CLM [`ethics.md`](../../cognitive-landscape-model/docs/ethics.md) — library integrator notes
 
 ---
