@@ -2,7 +2,7 @@
 
 PCMS is a public questionnaire. It asks how a person focuses, senses, and organises, and it shows the answers as positions on continuous scales rather than as a label.
 
-For someone who wants that description for their own understanding, and for a researcher or a teacher who needs the instrument's limits in the open.
+It is a questionnaire for self-reflection. The model comes from the open research programme linked below. Using the questionnaire does not contribute answers to that programme.
 
 **Status: No public status is recorded.** The claims registry has no maturity stage for this repository. Evidence status: the map's validation status is tier T0: there is no empirical sample yet (PCMS-VALIDATION-001). The stored assessment label in `src/lib/assessment-versioning.ts` is `v1.0`. The npm version in `package.json` is `0.1.0`. Neither number is a status.
 
@@ -22,8 +22,8 @@ The longer feature notes are in [docs/FEATURES.md](docs/FEATURES.md). The progra
 ## Limits
 
 - The map is not a diagnostic instrument and not a medical device (PCMS-NOT-001).
-- Validation tier T0: there is no empirical sample yet, and an ethics review is still outstanding (PCMS-VALIDATION-001). The report is a draft.
-- The validation programme is planned, and no primary data has been collected under it (PCMS-VALIDATION-PLAN-001). Before any primary data: a pre-registration and an ethics vote. Phase 1 plans 150 adults per language. German and English are the completed locales in the programme table. French, Swahili, Twi, and Wolof are drafts pending native review.
+- Validation tier T0: there is no empirical sample (PCMS-VALIDATION-001). The report is a draft.
+- No study is running on this questionnaire. Answers are not collected for research. A later study would need its own ethics review and a separate consent (PCMS-VALIDATION-PLAN-001). The programme table still lists German and English as completed locales and French, Swahili, Twi, and Wolof as drafts pending native review.
 - The ethics statement names what has not happened yet, including an ethics committee and a review under the Declaration of Helsinki (PCMS-ETHICS-001).
 - Scoring weights in the current instrument are literature- and design-based. They are not empirically calibrated on a normative sample. See [docs/VALIDATION_PROTOCOL.md](docs/VALIDATION_PROTOCOL.md).
 
@@ -31,7 +31,7 @@ The full boundary is [docs/SCOPE.md](docs/SCOPE.md). The design argument is [doc
 
 ## Quick start
 
-Prerequisites: Node.js 18 or newer, and npm. `./setup.sh` is the macOS path. It stops on any other operating system. Supabase is required only for cloud data collection.
+Prerequisites: Node.js 18 or newer, and npm. `./setup.sh` is the macOS path. It stops on any other operating system. Supabase is required only when a person chooses to save answers for themselves.
 
 ```bash
 npm install

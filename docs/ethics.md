@@ -1,18 +1,20 @@
-# Ethics Framework v1.0
+# Ethics statement
 
-## Perceptual & Cognitive Mapping System (Research-Grade)
+No study is running on this questionnaire. Answers are not evaluated for research, not aggregated across people, and not published. The questionnaire is a tool for self-reflection. A person may save their own answers only with explicit consent, so they can open them again later or on another device. A later study would need its own ethics review and its own, separate consent. That consent is not part of this questionnaire.
 
-> **Normative programme commitment:** [CLRP-007: Non-Diagnostic Commitment](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-007-non-diagnostic-commitment.md) in the [Cognitive Landscape Research Programme (CLRP)](https://github.com/SynapticFour/cognitive-landscape-research-programme). This document adds **PCMS-specific** consent, deployment, and UI requirements.
+The model comes from open research in the [Cognitive Landscape Research Programme (CLRP)](https://github.com/SynapticFour/cognitive-landscape-research-programme). Using the questionnaire does not enrol anyone in that programme and does not ask them to contribute data to it.
+
+> **Normative programme commitment:** [CLRP-007: Non-Diagnostic Commitment](https://github.com/SynapticFour/cognitive-landscape-research-programme/blob/clrp-v2026.1/clrp/CLRP-007-non-diagnostic-commitment.md). This document adds the questionnaire's own limits: consent, what is stored, and what the result is not.
 
 ## Overview
 
-The Perceptual & Cognitive Mapping System (PCMS) v1.0 is designed as a **research-grade adaptive assessment platform** for understanding cognitive diversity while maintaining the highest ethical standards. This document outlines our comprehensive ethical framework, addressing privacy, consent, data protection, and responsible use.
+The Perceptual & Cognitive Mapping System (PCMS) is a questionnaire for self-reflection. This document states the limits that apply to that use.
 
 ## Critical Non-Diagnostic Clarification
 
 ### NOT A MEDICAL OR CLINICAL TOOL
 
-- **Research Purpose Only**: PCMS is designed for scientific research and self-understanding
+- **Self-reflection**: PCMS shows a person their own answers. It is not a study.
 - **No Diagnostic Claims**: The system does not diagnose, treat, or assess medical conditions
 - **No Clinical Recommendations**: Results are not medical advice and should not replace professional healthcare
 - **Label-Free Approach**: Uses dimensional modeling rather than categorical labels or diagnoses
@@ -20,7 +22,7 @@ The Perceptual & Cognitive Mapping System (PCMS) v1.0 is designed as a **researc
 ### Appropriate Use Cases
 
 - **Self-Understanding**: Personal insight into cognitive patterns and preferences
-- **Research**: Scientific study of cognitive diversity and dimensional approaches
+- **Not a study**: A future study would need its own ethics review and a separate consent. This questionnaire is not that study.
 - **Educational**: Understanding different cognitive styles and approaches
 - **Personal Development**: Identifying optimal environments and strategies
 
@@ -74,7 +76,7 @@ Any fork or derivative of PCMS that uses results to influence access to services
 
 - Designed for self-understanding and personal growth
 - Provides actionable insights for cognitive optimization
-- Contributes to scientific knowledge about cognitive diversity
+- Does not collect answers for a study
 - Free and accessible to all users
 
 **Minimizing Risks**
@@ -95,8 +97,8 @@ Any fork or derivative of PCMS that uses results to influence access to services
 
 **Fair Distribution**
 
-- Research benefits shared with participants
-- Open-source tools for researchers
+- The questionnaire is free to use for self-reflection
+- Open-source tools for people who want to read the model
 - Community involvement in system development
 - Inclusive design processes
 
@@ -111,17 +113,16 @@ Any fork or derivative of PCMS that uses results to influence access to services
 
 **Data Usage**
 
-- Research use only, clearly disclosed
-- No commercial exploitation of personal data
-- Aggregated data for publications only
-- Right to data deletion and export
+- No study use. Saved answers are not evaluated for research, not aggregated across people, and not published.
+- A person may save their own answers, with consent, only to open them again.
+- Right to delete those answers, and to download their own export.
 
 ## Informed Consent Process
 
 ### Consent Components
 
 1. **Purpose Disclosure**
-   - Clear explanation of research goals
+   - Clear explanation of the self-reflection purpose
    - Description of cognitive mapping approach
    - Expected benefits and limitations
    - Time commitment and process overview
@@ -139,9 +140,9 @@ Any fork or derivative of PCMS that uses results to influence access to services
    - Alternative assessment options
 
 4. **Confidentiality Measures**
-   - Anonymity guarantees
+   - Pseudonymous storage when a person chooses to save; nothing is stored as anonymous once a session identifier exists
    - Data storage and protection
-   - Publication plans for aggregated data
+   - No publication of answers and no aggregation across people
    - Contact information for concerns
 
 5. **Voluntary Participation**
@@ -172,8 +173,8 @@ These items map the principles above to routes and storage in this repository:
 
 - **Dedicated consent** — Users complete a **multi-step** flow at **`/consent`** with explicit checkboxes; questionnaire and results redirect here if consent is missing. Details are stored in browser storage (e.g. consent timestamp key used with Supabase session rows).
 - **Results assent** — Before showing scores, the results surface can require an additional **assent** acknowledgement (see results UI and `messages/*` keys).
-- **Delete my data** — **`POST /api/delete-session`** removes server-side session data when Supabase and server keys are configured (pseudonymous session id).
-- **Ethics audit** — **`POST /api/ethics-audit`** records non-PII ethics events when the audit table migration has been applied; **`GET /api/ethics/compliance-report`** supports aggregated compliance review (protect with deployment auth as appropriate).
+- **Delete my data** — **`POST /api/delete-session`** removes that person's server-side rows when they present the restore secret and the server role is configured.
+- **Ethics audit** — **`POST /api/ethics-audit`** can record non-PII events for that person's own session. The production deployment does not serve **`GET /api/ethics/compliance-report`**.
 - **Internationalization** — Consent and ethics copy are localized via **`messages/*.json`**; Twi strings remain draft for native-speaker review (see `docs/I18N.md`).
 
 ## Data Protection Framework
@@ -196,7 +197,7 @@ These items map the principles above to routes and storage in this repository:
 
 **Data Minimization**
 
-- Only collect necessary research data
+- Only the answers needed to show the person's own result
 - Question responses and timing only
 - No behavioral tracking beyond assessment
 - No third-party analytics or tracking
@@ -221,7 +222,7 @@ These items map the principles above to routes and storage in this repository:
 
 - Defined retention periods
 - Automatic data deletion
-- Research data archiving
+- Deletion on request, and a scheduled deletion 12 months after saving when the cron secret is set
 - Compliance with regulations
 
 ## Risk Assessment and Mitigation
@@ -244,7 +245,7 @@ These items map the principles above to routes and storage in this repository:
 
 **Social Risks**
 
-- Misunderstanding of research purpose
+- Misunderstanding the result as a diagnosis or as a study
 - Inappropriate sharing of results
 - Stigma from cognitive profile
 - Discrimination concerns

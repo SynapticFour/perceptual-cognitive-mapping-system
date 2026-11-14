@@ -14,11 +14,11 @@
   },
   "welcome": {
     "title": "Wo nim wo ho",
-    "subtitle": "Ɛyɛ dwumadi a ɛboa yɛn ahu adwene ne akwan a nnipa foforo so dwen no mu yɛɛteɛne."
+    "subtitle": "A questionnaire for self-reflection. It describes cognitive style as a continuous profile."
   },
   "consent": {
-    "title": "Ɔmanfo dwumadi ho gyinae",
-    "agree": "Me de aba"
+    "title": "Before you start",
+    "agree": "Continue"
   },
   "questionnaire": {
     "question": "Asemmisa"
@@ -145,19 +145,22 @@
     "wo": "Wolof"
   },
   "ethics_consent": {
-    "storage_notice": "Ɛdwuma yi sie nhomasua wɔ wo browsers mu — na sɛ wo to mu a, wɔ ahokyere research server so (obiarɛ nnim). Ɛnhɔ nhomasua a ɛda wo ho adi pa ara wɔ nhwehwɛ yi mu.",
+    "storage_notice": "Answers stay in this browser unless you explicitly choose to save them. The questionnaire does not ask for your name, email, or postal address.",
     "storage_notice_local": "Session data are stored locally in this browser. The assessment flow does not collect your name, email, or postal address.",
-    "storage_notice_cloud_extra": "This deployment has optional cloud storage: if you continue, anonymous session summaries may sync to the configured research database (see Privacy). If cloud storage is not in use, nothing leaves this device except what you export or share.",
-    "privacy_body": "Synaptic Four (Stuttgart) sie ahokyere session ID, bere bere no, wo mmuaeɛ, bere a ɛfa mmuaeɛ ho, ne statistical summaries ma nhwehwɛ so. Yɛnnɔ wo din, email, anaa adrɛsi wɔ ɔhaw yi mu — gye sɛ wo ntɛm yɛn kwa (ɛno ara na ɛyɛ dwuma foforo). Nhomasua pa ara: hwɛ «Privacy» / ahodeɛ ho sɔkabɔ ho nhoma wɔ footer no mu anaa /privacy.",
+    "storage_notice_cloud_extra": "If you choose the save option below, your answers are stored pseudonymously on a server in the EU so you can open them again. See the privacy notice. If you do not choose it, nothing leaves this device except what you export or share.",
+    "privacy_body": "Synaptic Four (Stuttgart) uses a pseudonymous session identifier, timestamps, your answers, response times, and a short summary so you can see your own result. By default these stay in this browser. The questionnaire does not ask for your name, email, or postal address.",
     "privacy_body_local": "Synaptic Four (Stuttgart) uses an anonymous session identifier, timestamps, your answers, response times, and derived statistical summaries for this tool. By default these stay in this browser for your session. We do not collect your name, email, or postal address in this flow unless you contact us separately (then it is a separate processing context).",
-    "privacy_body_cloud_extra": "When optional cloud storage is enabled for this deployment, the same pseudonymous fields may be written to the configured research database if sync succeeds. Full privacy notice: “Privacy” in the footer or /privacy.",
-    "rights_body": "Wobɛtumi gyae bere biara a wopɛ a ɛnhɔ wo so. Wobɛtumi hwehwɛ sɛ epra nhomasua a ɛka wo session ID ho — fa «Delete my data» so wɔ nhomasua krataafa no so (sɛ wo de si mu). Ntɛm: contact@synapticfour.com. Ahodeɛ ho akwan — hwɛ Privacy nhoma no."
+    "privacy_body_cloud_extra": "If you explicitly choose to save, the same pseudonymous fields may be written to a server in the EU. The privacy notice explains the restore link and deletion.",
+    "rights_body": "Wobɛtumi gyae bere biara a wopɛ a ɛnhɔ wo so. Wobɛtumi hwehwɛ sɛ epra nhomasua a ɛka wo session ID ho — fa «Delete my data» so wɔ nhomasua krataafa no so (sɛ wo de si mu). Ntɛm: contact@synapticfour.com. Ahodeɛ ho akwan — hwɛ Privacy nhoma no.",
+    "cloud_opt_in_label": "I want to save my answers so I can open them again later or on another device. They are stored pseudonymously on a server in the EU. I can delete them at any time.",
+    "cloud_opt_in_help": "This choice is separate from the confirmation below and is not pre-selected. Withdrawing this consent deletes the saved answers.",
+    "cloud_opt_in_privacy_link": "Privacy notice"
   },
   "operatorSync": {
-    "bar_aria": "Research sync diagnostics for operators",
+    "bar_aria": "Save diagnostics for operators",
     "bar_title": "Sync diagnostics",
     "env_on": "Cloud env: variables set (writes can still fail at runtime).",
-    "env_off": "Cloud env: not set — no research database upload in this build.",
+    "env_off": "Cloud env: not set — answers are not uploaded in this build.",
     "last_never": "Last remote write: none logged in this browser yet.",
     "last_line": "Last remote write: {status} · {context} · {time}",
     "status_ok": "OK",
@@ -167,9 +170,9 @@
   "docsPages": {
     "back_home": "Home",
     "ethics_meta_title": "Ethics & scope — PCMS",
-    "ethics_meta_description": "Ethics framework for the PCMS research prototype.",
+    "ethics_meta_description": "Ethics statement for the questionnaire for self-reflection. No study is running.",
     "ethics_page_title": "Ethics & scope",
-    "ethics_intro": "Full ethics document (English; native Twi summary pending review).",
+    "ethics_intro": "The ethics statement below is the same text as in the repository. No study is running. A later study would need its own ethics review and a separate consent.",
     "validation_meta_title": "Validation protocol — PCMS",
     "validation_meta_description": "What PCMS scores can and cannot claim today.",
     "validation_page_title": "Validation protocol",
@@ -185,5 +188,18 @@
     "prototype_line": "Research prototype for reflection and open science — maps cognitive tendencies.",
     "contact": "Questions or data requests: contact@synapticfour.com",
     "license_mit": "MIT License — see repository."
+  },
+  "restore": {
+    "page_title": "Open saved answers",
+    "page_body": "Paste the restore link or the code. The code is sent only to open your own answers.",
+    "code_label": "Restore link or code",
+    "open": "Open my answers",
+    "invalid": "That code is too short.",
+    "rejected": "This code did not match a saved session.",
+    "no_profile": "The saved session has no result to show yet.",
+    "keep_safe": "Anyone with this link can open your answers. Keep it safe.",
+    "copy": "Copy link",
+    "copied": "Copied",
+    "download": "Download as a text file"
   }
 }
