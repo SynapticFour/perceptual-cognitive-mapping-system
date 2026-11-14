@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: Please cite this repository using these fields. Prefer this file over a hand-copied line.
+title: Perceptual & Cognitive Mapping System (PCMS)
+authors:
+  - name: Synaptic Four
+repository-code: https://github.com/SynapticFour/perceptual-cognitive-mapping-system
+url: https://synapticfour.com/en/offene-forschung/karte/
+license: MIT
+type: software
+keywords:
+  - questionnaire
+  - cognitive diversity
+  - non-diagnostic
