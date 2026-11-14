@@ -65,9 +65,9 @@ Returns `reachable: true` on success. Never returns API keys. Responds with HTTP
 | ----------- | ----------------------------- | ----------------------------------- |
 | `ping-pcms` | PCMS (`siohqkkrjpfpfncdzudt`) | `SUPABASE_URL`, `SUPABASE_ANON_KEY` |
 
-The former `ping-synaptisec` job was **removed** (2026-08 migration Sprint 3). Canonical SynaptiSec is `apps/synaptisec` in SynapticProducts on the shared Products Supabase project; the old standalone free-tier project is not kept alive here.
+The former `ping-synaptisec` job was **removed** (2026-08 migration Sprint 3). This workflow keeps the PCMS project awake. It does not keep a separate SynaptiSec project alive.
 
-Do not rely on curling the Vercel apps alone — when Supabase is paused, Vercel returns 503 and Supabase never receives activity to wake up. The production `/api/health/supabase` endpoint remains useful for operators; the scheduled job must hit Supabase itself.
+Do not rely on curling the Vercel apps alone — when Supabase is paused, Vercel returns 503 and Supabase never receives activity to wake up. The public site's `/api/health/supabase` endpoint remains useful for operators; the scheduled job must hit Supabase itself.
 
 ## Operator UI Diagnostics
 
