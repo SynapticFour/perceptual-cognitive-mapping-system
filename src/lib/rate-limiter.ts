@@ -3,8 +3,6 @@
  * Protects API endpoints from abuse with configurable limits
  */
 
-import { useState, useEffect } from 'react';
-
 export interface RateLimitConfig {
   windowMs: number; // Time window in milliseconds
   maxRequests: number; // Max requests per window
@@ -55,10 +53,10 @@ export class RateLimiter {
   check(request: Request): RateLimitResult {
     const key = this.getKey(request);
     const now = new Date();
-    
+
     // Clean up expired entries
     this.cleanup(now);
-    
+
     // Get or create entry
     let entry = this.store[key];
     if (!entry || entry.resetTime <= now) {
@@ -71,13 +69,15 @@ export class RateLimiter {
 
     // Check if limit exceeded
     const success = entry.count < this.config.maxRequests;
-    
+
     if (success) {
       entry.count++;
     }
 
     const remaining = Math.max(0, this.config.maxRequests - entry.count);
-    const retryAfter = success ? undefined : Math.ceil((entry.resetTime.getTime() - now.getTime()) / 1000);
+    const retryAfter = success
+      ? undefined
+      : Math.ceil((entry.resetTime.getTime() - now.getTime()) / 1000);
 
     return {
       success,
@@ -97,9 +97,9 @@ export class RateLimiter {
     }
 
     // Default: in-memory bucket keyed by hashed client IP (never written to Supabase session rows).
-    const forwarded = request.headers.get('x-forwarded-for');
-    const raw = forwarded ? forwarded.split(',')[0].trim() : '';
-    if (!raw) return 'ip:unknown';
+    const forwarded = request.headers.get("x-forwarded-for");
+    const raw = forwarded ? forwarded.split(",")[0].trim() : "";
+    if (!raw) return "ip:unknown";
     return `ip:${fingerprintClientIp(raw)}`;
   }
 
@@ -159,17 +159,23 @@ export const researchApiLimiter = new RateLimiter({
   windowMs: 60 * 1000, // 1 minute
   maxRequests: 1000, // 1000 requests per minute
   keyGenerator: (req) => {
-    const apiKey = req.headers.get('x-research-api-key') || req.headers.get('authorization');
-    return apiKey ? `api:${apiKey}` : `ip:${req.headers.get('x-forwarded-for') || 'unknown'}`;
+    const apiKey = req.headers.get("x-research-api-key") || req.headers.get("authorization");
+    return apiKey ? `api:${apiKey}` : `ip:${req.headers.get("x-forwarded-for") || "unknown"}`;
   },
+});
+
+/** Guessing a 256-bit restore secret is not practical. This limits scripted tries per IP. */
+export const restoreApiLimiter = new RateLimiter({
+  windowMs: 15 * 60 * 1000,
+  maxRequests: 30,
 });
 
 export const exportApiLimiter = new RateLimiter({
   windowMs: 60 * 60 * 1000, // 1 hour
   maxRequests: 10, // 10 requests per hour
   keyGenerator: (req) => {
-    const apiKey = req.headers.get('x-research-api-key') || req.headers.get('authorization');
-    return apiKey ? `api:${apiKey}` : `ip:${req.headers.get('x-forwarded-for') || 'unknown'}`;
+    const apiKey = req.headers.get("x-research-api-key") || req.headers.get("authorization");
+    return apiKey ? `api:${apiKey}` : `ip:${req.headers.get("x-forwarded-for") || "unknown"}`;
   },
 });
 
@@ -177,59 +183,35 @@ export const exportApiLimiter = new RateLimiter({
 export function createRateLimitMiddleware(limiter: RateLimiter) {
   return function rateLimitMiddleware(request: Request) {
     const result = limiter.check(request);
-    
+
     if (!result.success) {
       return Response.json(
         {
           error: {
-            code: 'RATE_LIMITED',
-            message: 'Too many requests',
+            code: "RATE_LIMITED",
+            message: "Too many requests",
             retryAfter: result.retryAfter,
           },
         },
         {
           status: 429,
           headers: {
-            'X-RateLimit-Limit': result.limit.toString(),
-            'X-RateLimit-Remaining': result.remaining.toString(),
-            'X-RateLimit-Reset': result.resetTime.toISOString(),
-            'Retry-After': result.retryAfter?.toString() || '',
+            "X-RateLimit-Limit": result.limit.toString(),
+            "X-RateLimit-Remaining": result.remaining.toString(),
+            "X-RateLimit-Reset": result.resetTime.toISOString(),
+            "Retry-After": result.retryAfter?.toString() || "",
           },
-        }
+        },
       );
     }
 
     // Add rate limit headers to successful responses
     return {
       headers: {
-        'X-RateLimit-Limit': result.limit.toString(),
-        'X-RateLimit-Remaining': result.remaining.toString(),
-        'X-RateLimit-Reset': result.resetTime.toISOString(),
+        "X-RateLimit-Limit": result.limit.toString(),
+        "X-RateLimit-Remaining": result.remaining.toString(),
+        "X-RateLimit-Reset": result.resetTime.toISOString(),
       },
     };
   };
-}
-
-// Rate limiting hook for React components
-export function useRateLimit(limiter: RateLimiter, key: string) {
-  const [status, setStatus] = useState<{
-    count: number;
-    limit: number;
-    remaining: number;
-    resetTime: Date;
-  } | null>(null);
-
-  useEffect(() => {
-    const updateStatus = () => {
-      const currentStatus = limiter.getStatus(key);
-      setStatus(currentStatus);
-    };
-
-    updateStatus();
-    const interval = setInterval(updateStatus, 1000); // Update every second
-
-    return () => clearInterval(interval);
-  }, [limiter, key]);
-
-  return status;
 }

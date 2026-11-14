@@ -1,17 +1,26 @@
-import { createClient } from '@supabase/supabase-js';
-import type { Database, Json } from '@/types/database.types';
-import { getSupabaseAnonKey, getSupabaseUrl } from '@/config/env';
-import { COGNITIVE_DIMENSION_KEYS, type CognitiveDimension } from '@/model/cognitive-dimensions';
+import { createClient } from "@supabase/supabase-js";
+import type { Database, Json } from "@/types/database.types";
+import { getSupabaseAnonKey, getSupabaseUrl } from "@/config/env";
+import { isProductionDeployment } from "@/lib/production-research-guard";
+import { COGNITIVE_DIMENSION_KEYS, type CognitiveDimension } from "@/model/cognitive-dimensions";
 import {
   extractDimensionConfidencesFromProfileJson,
   overallInterpretationConfidence,
   type DimensionConfidenceRow,
-} from '@/lib/research-pipeline-extract';
-import { cohenD, histogramBins, kdePoints, mean, pearson, welchTTest } from '@/lib/research-stats-math';
+} from "@/lib/research-pipeline-extract";
+import {
+  cohenD,
+  histogramBins,
+  kdePoints,
+  mean,
+  pearson,
+  welchTTest,
+} from "@/lib/research-stats-math";
 
 export type ResearchReadClient = ReturnType<typeof createResearchReadClient>;
 
 export function createResearchReadClient() {
+  if (isProductionDeployment()) return null;
   const url = getSupabaseUrl();
   const key = getSupabaseAnonKey();
   if (!url || !key) return null;
@@ -19,7 +28,7 @@ export function createResearchReadClient() {
 }
 
 function isFinishedSuccess(s: string): boolean {
-  return s === 'completed' || s === 'confidence_met' || s === 'max_questions' || s === 'user_exit';
+  return s === "completed" || s === "confidence_met" || s === "max_questions" || s === "user_exit";
 }
 
 function emptyDimRow(): DimensionConfidenceRow {
@@ -28,14 +37,14 @@ function emptyDimRow(): DimensionConfidenceRow {
   return o;
 }
 
-function emptyHistograms(): DashboardPayload['histograms'] {
-  const h = {} as DashboardPayload['histograms'];
+function emptyHistograms(): DashboardPayload["histograms"] {
+  const h = {} as DashboardPayload["histograms"];
   for (const d of COGNITIVE_DIMENSION_KEYS) h[d] = [];
   return h;
 }
 
-function emptyKde(): DashboardPayload['kdeByDimension'] {
-  const k = {} as DashboardPayload['kdeByDimension'];
+function emptyKde(): DashboardPayload["kdeByDimension"] {
+  const k = {} as DashboardPayload["kdeByDimension"];
   for (const d of COGNITIVE_DIMENSION_KEYS) k[d] = [];
   return k;
 }
@@ -75,7 +84,9 @@ export async function fetchDashboardPayload(): Promise<DashboardPayload> {
     };
   }
 
-  const { data: sessions, error: sErr } = await client.from('sessions').select('id,cultural_context,completion_status,created_at');
+  const { data: sessions, error: sErr } = await client
+    .from("sessions")
+    .select("id,cultural_context,completion_status,created_at");
   if (sErr || !sessions) {
     return {
       configured: true,
@@ -101,10 +112,10 @@ export async function fetchDashboardPayload(): Promise<DashboardPayload> {
 
   for (const row of sessions) {
     byContext[row.cultural_context] = (byContext[row.cultural_context] ?? 0) + 1;
-    if (row.completion_status === 'abandoned') abandoned += 1;
-    else if (row.completion_status === 'in_progress') inProgress += 1;
+    if (row.completion_status === "abandoned") abandoned += 1;
+    else if (row.completion_status === "in_progress") inProgress += 1;
     if (isFinishedSuccess(row.completion_status)) completedSessions += 1;
-    const day = row.created_at?.slice(0, 10) ?? '';
+    const day = row.created_at?.slice(0, 10) ?? "";
     if (day) dayMap.set(day, (dayMap.get(day) ?? 0) + 1);
   }
 
@@ -113,8 +124,10 @@ export async function fetchDashboardPayload(): Promise<DashboardPayload> {
     .map(([day, count]) => ({ day, count }));
 
   const { data: profiles, error: pErr } = await client
-    .from('profiles')
-    .select('id,session_id,cognitive_vector,response_count,completion_time_seconds,cultural_context,created_at');
+    .from("profiles")
+    .select(
+      "id,session_id,cognitive_vector,response_count,completion_time_seconds,cultural_context,created_at",
+    );
 
   const profilesCount = profiles?.length ?? 0;
   const sums = emptyDimRow();
@@ -152,8 +165,8 @@ export async function fetchDashboardPayload(): Promise<DashboardPayload> {
     }
   }
 
-  const histograms = {} as DashboardPayload['histograms'];
-  const kdeByDimension = {} as DashboardPayload['kdeByDimension'];
+  const histograms = {} as DashboardPayload["histograms"];
+  const kdeByDimension = {} as DashboardPayload["kdeByDimension"];
   for (const d of COGNITIVE_DIMENSION_KEYS) {
     const vals = dimSamples[d];
     histograms[d] = histogramBins(vals, 12, 0, 100);
@@ -194,8 +207,8 @@ export async function fetchProfileExplorer(params: {
   from?: string;
   to?: string;
   culture?: string;
-  completion?: 'all' | 'with_profile' | 'incomplete';
-  sort?: 'confidence' | 'time' | 'created';
+  completion?: "all" | "with_profile" | "incomplete";
+  sort?: "confidence" | "time" | "created";
   limit: number;
   offset: number;
 }): Promise<ProfileExplorerResult> {
@@ -203,9 +216,11 @@ export async function fetchProfileExplorer(params: {
   if (!client) return { rows: [], total: 0 };
 
   const { data, error } = await client
-    .from('profiles')
-    .select('id,session_id,cognitive_vector,response_count,completion_time_seconds,cultural_context,created_at')
-    .order('created_at', { ascending: false })
+    .from("profiles")
+    .select(
+      "id,session_id,cognitive_vector,response_count,completion_time_seconds,cultural_context,created_at",
+    )
+    .order("created_at", { ascending: false })
     .limit(2500);
 
   if (error || !data) return { rows: [], total: 0 };
@@ -221,15 +236,16 @@ export async function fetchProfileExplorer(params: {
 
   if (params.from) rows = rows.filter((r) => r.createdAt >= `${params.from}T00:00:00.000Z`);
   if (params.to) rows = rows.filter((r) => r.createdAt <= `${params.to}T23:59:59.999Z`);
-  if (params.culture && params.culture !== 'all') rows = rows.filter((r) => r.culturalContext === params.culture);
-  if (params.completion === 'incomplete') {
+  if (params.culture && params.culture !== "all")
+    rows = rows.filter((r) => r.culturalContext === params.culture);
+  if (params.completion === "incomplete") {
     rows = [];
   }
 
   const total = rows.length;
-  if (params.sort === 'confidence') {
+  if (params.sort === "confidence") {
     rows.sort((a, b) => (b.interpretationConfidence ?? 0) - (a.interpretationConfidence ?? 0));
-  } else if (params.sort === 'time') {
+  } else if (params.sort === "time") {
     rows.sort((a, b) => a.completionSeconds - b.completionSeconds);
   } else {
     rows.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
@@ -241,10 +257,16 @@ export async function fetchProfileExplorer(params: {
 
 export type DimensionAnalysisPayload = {
   configured: boolean;
-  histograms: DashboardPayload['histograms'];
-  kdeByDimension: DashboardPayload['kdeByDimension'];
+  histograms: DashboardPayload["histograms"];
+  kdeByDimension: DashboardPayload["kdeByDimension"];
   correlation: { x: CognitiveDimension; y: CognitiveDimension; r: number }[];
-  questionStats: { questionId: string; n: number; mean: number; sd: number; discrimination: number }[];
+  questionStats: {
+    questionId: string;
+    n: number;
+    mean: number;
+    sd: number;
+    discrimination: number;
+  }[];
   retestNote: string;
 };
 
@@ -257,11 +279,11 @@ export async function fetchDimensionAnalysisPayload(): Promise<DimensionAnalysis
       kdeByDimension: emptyKde(),
       correlation: [],
       questionStats: [],
-      retestNote: 'Supabase not configured.',
+      retestNote: "Supabase not configured.",
     };
   }
 
-  const { data: profiles } = await client.from('profiles').select('cognitive_vector');
+  const { data: profiles } = await client.from("profiles").select("cognitive_vector");
   const dimSamples: Record<CognitiveDimension, number[]> = {
     F: [],
     P: [],
@@ -282,15 +304,15 @@ export async function fetchDimensionAnalysisPayload(): Promise<DimensionAnalysis
     for (const d of COGNITIVE_DIMENSION_KEYS) dimSamples[d].push(row[d]);
   }
 
-  const histograms = {} as DashboardPayload['histograms'];
-  const kdeByDimension = {} as DashboardPayload['kdeByDimension'];
+  const histograms = {} as DashboardPayload["histograms"];
+  const kdeByDimension = {} as DashboardPayload["kdeByDimension"];
   for (const d of COGNITIVE_DIMENSION_KEYS) {
     const vals = dimSamples[d];
     histograms[d] = histogramBins(vals, 14, 0, 100);
     kdeByDimension[d] = vals.length >= 3 ? kdePoints(vals, 0, 100, 48) : [];
   }
 
-  const correlation: DimensionAnalysisPayload['correlation'] = [];
+  const correlation: DimensionAnalysisPayload["correlation"] = [];
   for (let i = 0; i < COGNITIVE_DIMENSION_KEYS.length; i++) {
     for (let j = i + 1; j < COGNITIVE_DIMENSION_KEYS.length; j++) {
       const a = COGNITIVE_DIMENSION_KEYS[i]!;
@@ -301,7 +323,9 @@ export async function fetchDimensionAnalysisPayload(): Promise<DimensionAnalysis
     }
   }
 
-  const { data: qr } = await client.from('question_responses').select('question_id,response,session_id');
+  const { data: qr } = await client
+    .from("question_responses")
+    .select("question_id,response,session_id");
   const byQ = new Map<string, number[]>();
   for (const row of qr ?? []) {
     const arr = byQ.get(row.question_id) ?? [];
@@ -319,7 +343,7 @@ export async function fetchDimensionAnalysisPayload(): Promise<DimensionAnalysis
     sessionMeans.set(sid, mean(vals));
   }
 
-  const questionStats: DimensionAnalysisPayload['questionStats'] = [];
+  const questionStats: DimensionAnalysisPayload["questionStats"] = [];
   for (const [questionId, vals] of byQ) {
     if (vals.length < 5) continue;
     const m = mean(vals);
@@ -345,7 +369,7 @@ export async function fetchDimensionAnalysisPayload(): Promise<DimensionAnalysis
     correlation,
     questionStats: questionStats.slice(0, 40),
     retestNote:
-      'Re-test pairs are not stored in the current schema; internal consistency (e.g. Cronbach α) would require split-session design.',
+      "Re-test pairs are not stored in the current schema; internal consistency (e.g. Cronbach α) would require split-session design.",
   };
 }
 
@@ -365,14 +389,16 @@ export async function fetchComparePayload(): Promise<ComparePayload> {
     return { configured: false, western: empty, ghana: empty, nWestern: 0, nGhana: 0, tests: [] };
   }
 
-  const { data: profiles } = await client.from('profiles').select('cognitive_vector,cultural_context');
+  const { data: profiles } = await client
+    .from("profiles")
+    .select("cognitive_vector,cultural_context");
   const w: DimensionConfidenceRow[] = [];
   const g: DimensionConfidenceRow[] = [];
   for (const p of profiles ?? []) {
     const row = extractDimensionConfidencesFromProfileJson(p.cognitive_vector as Json);
     if (!row) continue;
-    if (p.cultural_context === 'western') w.push(row);
-    if (p.cultural_context === 'ghana') g.push(row);
+    if (p.cultural_context === "western") w.push(row);
+    if (p.cultural_context === "ghana") g.push(row);
   }
 
   const western = emptyDimRow();
@@ -382,7 +408,7 @@ export async function fetchComparePayload(): Promise<ComparePayload> {
     ghana[d] = g.length ? Math.round(mean(g.map((v) => v[d])) * 10) / 10 : 0;
   }
 
-  const tests: ComparePayload['tests'] = [];
+  const tests: ComparePayload["tests"] = [];
   for (const d of COGNITIVE_DIMENSION_KEYS) {
     const a = w.map((v) => v[d]);
     const b = g.map((v) => v[d]);

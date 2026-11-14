@@ -52,8 +52,7 @@ jobs:
               -H "Authorization: Bearer ${SUPABASE_ANON_KEY}" \
               "$probe_url" 2>/dev/null || echo "000")"
             echo "HTTP ${code}"
-            head -c 400 "$body" || true
-            echo
+            # Do not print the body: a missing row-level policy would put session ids in the log.
 
             if [[ "$code" =~ ^2[0-9][0-9]$ ]]; then
               echo "PCMS keep-alive OK (direct REST probe registered API activity)"

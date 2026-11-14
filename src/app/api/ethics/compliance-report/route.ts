@@ -1,10 +1,11 @@
-import { NextResponse } from 'next/server';
-import { generateEthicsComplianceReport } from '@/lib/ethics-audit';
-import { getSupabaseAdminClient } from '@/lib/supabase-admin';
+import { NextResponse } from "next/server";
+import { productionResearchDisabledResponse } from "@/lib/production-research-guard";
+import { generateEthicsComplianceReport } from "@/lib/ethics-audit";
+import { getSupabaseAdminClient } from "@/lib/supabase-admin";
 
-export const runtime = 'nodejs';
+export const runtime = "nodejs";
 
-const HEADER_KEY = 'x-research-api-key';
+const HEADER_KEY = "x-research-api-key";
 
 /**
  * GET /api/ethics/compliance-report
@@ -12,17 +13,20 @@ const HEADER_KEY = 'x-research-api-key';
  * Returns aggregated ethics events from Supabase (when configured) plus browser-log summary shape.
  */
 export async function GET(request: Request) {
+  const blocked = productionResearchDisabledResponse();
+  if (blocked) return blocked;
+
   const expected = process.env.RESEARCH_EXPORT_API_KEY;
   if (!expected || expected.length < 16) {
     return NextResponse.json(
-      { error: 'Compliance reporting is not configured (set RESEARCH_EXPORT_API_KEY).' },
-      { status: 503 }
+      { error: "Compliance reporting is not configured (set RESEARCH_EXPORT_API_KEY)." },
+      { status: 503 },
     );
   }
 
   const key = request.headers.get(HEADER_KEY);
   if (key !== expected) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const localShape = generateEthicsComplianceReport({ windowDays: 365 });
@@ -31,16 +35,16 @@ export async function GET(request: Request) {
   if (!admin) {
     return NextResponse.json({
       generatedAt: new Date().toISOString(),
-      source: 'local_only',
+      source: "local_only",
       localBrowserLogTemplate: localShape,
       server: null,
     });
   }
 
   const { data, error } = await admin
-    .from('ethics_audit_events')
-    .select('event_type, created_at, session_id')
-    .gte('created_at', new Date(Date.now() - 365 * 864e5).toISOString());
+    .from("ethics_audit_events")
+    .select("event_type, created_at, session_id")
+    .gte("created_at", new Date(Date.now() - 365 * 864e5).toISOString());
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
@@ -55,7 +59,7 @@ export async function GET(request: Request) {
 
   return NextResponse.json({
     generatedAt: new Date().toISOString(),
-    source: 'supabase',
+    source: "supabase",
     windowDays: 365,
     serverEventCounts: counts,
     serverEventsSampled: rows.length,

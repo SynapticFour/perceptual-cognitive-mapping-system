@@ -19,6 +19,7 @@ import {
 import { getQuestionBankSync } from "@/data/question-bank-state";
 import { extractCloudErrorDetails, recordCloudSyncAttempt } from "@/lib/cloud-sync-telemetry";
 import { toPipelineSessionRow } from "@/lib/pipeline-session-db";
+import { bindRestoreSecretForSession } from "@/lib/bind-restore-client";
 import { isCloudResearchStorageEnabled } from "@/lib/research-cloud-consent";
 
 function logSupabaseFailure(context: string, err: unknown): void {
@@ -118,6 +119,7 @@ export class DataCollectionService {
         recordCloudSyncAttempt("session_upsert", false, extractCloudErrorDetails(error));
       } else {
         recordCloudSyncAttempt("session_upsert", true);
+        await bindRestoreSecretForSession(this.sessionId);
       }
     } catch (err) {
       logSupabaseFailure("createOrUpdateSession", err);
@@ -361,6 +363,8 @@ export class DataCollectionService {
               if (sessionError) {
                 logSupabaseFailure("saveFinalPipeline/sessions.update", sessionError);
                 remoteOk = false;
+              } else {
+                await bindRestoreSecretForSession(this.sessionId);
               }
             } catch (err) {
               logSupabaseFailure("saveFinalPipeline/sessions.update", err);
@@ -492,62 +496,15 @@ export class DataCollectionService {
     }
   }
 
-  // For research analytics
+  /**
+   * Cross-person counts are not available. Saved answers are not used for research.
+   */
   async getResearchStats() {
-    try {
-      if (!isCloudResearchStorageEnabled()) {
-        return {
-          totalProfiles: 0,
-          averageCompletionTime: 0,
-          totalResponses: 0,
-        };
-      }
-      const client = getSupabaseClient();
-      if (!client) {
-        if (process.env.NODE_ENV === "development") {
-          console.warn("[PCMS data-collection] Supabase not configured, returning mock stats");
-        }
-        return {
-          totalProfiles: 0,
-          averageCompletionTime: 0,
-          totalResponses: 0,
-        };
-      }
-
-      const { count: profileCount, error: countError } = await client
-        .from("profiles")
-        .select("id", { count: "exact", head: true });
-
-      const { count: responseCount, error: responseCountError } = await client
-        .from("question_responses")
-        .select("id", { count: "exact", head: true });
-
-      const { data: avgCompletionTime, error: timeError } = await client
-        .from("profiles")
-        .select("completion_time_seconds");
-
-      if (countError || timeError || responseCountError) {
-        logSupabaseFailure("getResearchStats/query", countError || timeError || responseCountError);
-        return null;
-      }
-
-      type ProfileTimeRow = { completion_time_seconds: number | null };
-
-      const rows = (avgCompletionTime ?? []) as ProfileTimeRow[];
-      const avgTime =
-        rows.length > 0
-          ? rows.reduce((sum, p) => sum + (p.completion_time_seconds ?? 0), 0) / rows.length
-          : 0;
-
-      return {
-        totalProfiles: profileCount ?? 0,
-        averageCompletionTime: Math.round(avgTime),
-        totalResponses: responseCount ?? 0,
-      };
-    } catch (err) {
-      logSupabaseFailure("getResearchStats", err);
-      return null;
-    }
+    return {
+      totalProfiles: 0,
+      averageCompletionTime: 0,
+      totalResponses: 0,
+    };
   }
 
   // RESEARCH-GRADE: Get current assessment data for research purposes
