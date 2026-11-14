@@ -13,8 +13,7 @@ name: Supabase keep-alive
 #   SUPABASE_URL / SUPABASE_ANON_KEY — PCMS project (REST)
 #
 # SynaptiSec: the old standalone free-tier project keep-alive was removed
-# (migration Sprint 3). Canonical SynaptiSec lives in SynapticProducts on the
-# shared Products Supabase project — no separate ping-synaptisec job.
+# (migration Sprint 3). This workflow does not ping a separate SynaptiSec project.
 on:
   schedule:
     # Daily at 08:00 UTC — margin inside the 7-day window if GitHub delays a run.

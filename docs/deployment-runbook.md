@@ -1,6 +1,8 @@
 # PCMS — Deployment Runbook
 
-Operator guide for **SynapticFour SaaS** production: **Vercel** (app) + **Supabase** (Postgres). No Docker/Compose release path — intentional for Category B.
+Operator guide for the public questionnaire at [https://map.synapticfour.com](https://map.synapticfour.com). Vercel serves the Next.js app. Supabase (Postgres) is optional storage. There is no Docker or Compose release path.
+
+The instrument is at validation tier T0: there is no empirical sample yet. See [`VALIDATION_PROTOCOL.md`](./VALIDATION_PROTOCOL.md). This runbook is how that public site is deployed. It is not a statement that the questionnaire is a validated product. The workflow command `vercel deploy --prod` is Vercel's name for the public target.
 
 Reference: [`docs/DEPLOYMENT.md`](./DEPLOYMENT.md) (env vars), [`docs/DEPLOYMENT-LEGAL.md`](./DEPLOYMENT-LEGAL.md) (legal checklist).
 
