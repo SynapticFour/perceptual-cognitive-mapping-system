@@ -27,11 +27,11 @@ function firstNonEmpty(...candidates: Array<string | undefined>): string | undef
 
 const resolvedSupabasePublicUrl = firstNonEmpty(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_URL
+  process.env.SUPABASE_URL,
 );
 const resolvedSupabaseAnonKey = firstNonEmpty(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-  process.env.SUPABASE_ANON_KEY
+  process.env.SUPABASE_ANON_KEY,
 );
 
 /**
@@ -54,7 +54,10 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["recharts"],
   },
-  ...(supabasePublicEnv ? { env: { ...supabasePublicEnv } } : {}),
+  env: {
+    ...(supabasePublicEnv ?? {}),
+    NEXT_PUBLIC_PCMS_PRODUCTION: process.env.VERCEL_ENV === "production" ? "1" : "0",
+  },
 };
 
 export default withBundleAnalyzer(withNextIntl(nextConfig));

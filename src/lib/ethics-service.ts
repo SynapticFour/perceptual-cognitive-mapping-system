@@ -1,5 +1,5 @@
-import { getSupabaseClient } from './supabase';
-import type { Json } from '@/types/database.types';
+import { getSupabaseClient } from "./supabase";
+import type { Json } from "@/types/database.types";
 
 function toJson(value: unknown): Json {
   return JSON.parse(JSON.stringify(value)) as Json;
@@ -17,7 +17,7 @@ export interface ConsentRecord {
 }
 
 export interface DataSubjectRequest {
-  type: 'access' | 'rectification' | 'erasure' | 'portability' | 'restriction';
+  type: "access" | "rectification" | "erasure" | "portability" | "restriction";
   sessionIdentifier?: string;
   contactEmail?: string;
   requestDetails: string;
@@ -38,58 +38,63 @@ export class EthicsService {
   constructor(config: Partial<EthicsConfig> = {}) {
     this.config = {
       minimumAge: 18,
-      consentVersion: 'v1.0',
-      dataRetentionMonths: 60, // 5 years for research data
+      consentVersion: "v1.0",
+      dataRetentionMonths: 12,
       automaticAnonymization: true,
       requireExplicitConsent: true,
       allowDataWithdrawal: true,
-      ...config
+      ...config,
     };
   }
 
   /**
    * Records informed consent with full audit trail
    */
-  async recordConsent(consentData: ConsentRecord): Promise<{ success: boolean; recordId?: string; error?: string }> {
+  async recordConsent(
+    consentData: ConsentRecord,
+  ): Promise<{ success: boolean; recordId?: string; error?: string }> {
     try {
       const client = getSupabaseClient();
       if (!client) {
-        console.warn('[PCMS ethics] Database not available, storing consent locally');
-        localStorage.setItem('pcms-consent-record', JSON.stringify(consentData));
+        console.warn("[PCMS ethics] Database not available, storing consent locally");
+        localStorage.setItem("pcms-consent-record", JSON.stringify(consentData));
         return { success: true };
       }
 
       // Hash IP for privacy but maintain verification capability
       const ipHash = await this.hashString(consentData.ipAddress);
-      
+
       const { data, error } = await client
-        .from('data_processing_records')
+        .from("data_processing_records")
         .insert({
-          session_id: localStorage.getItem('pcms-session-id'),
-          processing_purpose: 'cognitive_assessment',
-          legal_basis: 'consent',
-          data_categories: ['cognitive_profile', 'assessment_responses', 'timing_data'],
-          retention_period_months: this.config.dataRetentionMonths
+          session_id: localStorage.getItem("pcms-session-id"),
+          processing_purpose: "cognitive_assessment",
+          legal_basis: "consent",
+          data_categories: ["cognitive_profile", "assessment_responses", "timing_data"],
+          retention_period_months: this.config.dataRetentionMonths,
         })
-        .select('id')
+        .select("id")
         .single();
 
       if (error) {
-        console.error('Error recording consent:', error);
+        console.error("Error recording consent:", error);
         return { success: false, error: error.message };
       }
 
       // Store detailed consent record locally for backup
-      localStorage.setItem('pcms-consent-record', JSON.stringify({
-        ...consentData,
-        processingRecordId: data.id,
-        ipHash
-      }));
+      localStorage.setItem(
+        "pcms-consent-record",
+        JSON.stringify({
+          ...consentData,
+          processingRecordId: data.id,
+          ipHash,
+        }),
+      );
 
       return { success: true, recordId: data.id };
     } catch (error) {
-      console.error('Unexpected error recording consent:', error);
-      return { success: false, error: 'Unexpected error occurred' };
+      console.error("Unexpected error recording consent:", error);
+      return { success: false, error: "Unexpected error occurred" };
     }
   }
 
@@ -97,45 +102,45 @@ export class EthicsService {
    * Validates consent before proceeding with assessment
    */
   validateConsent(): { valid: boolean; issues: string[] } {
-    const consentRecord = localStorage.getItem('pcms-consent-record');
+    const consentRecord = localStorage.getItem("pcms-consent-record");
     const issues: string[] = [];
 
     if (!consentRecord) {
-      issues.push('No consent record found');
+      issues.push("No consent record found");
       return { valid: false, issues };
     }
 
     try {
       const consent = JSON.parse(consentRecord);
-      
+
       // Check consent version
       if (consent.version !== this.config.consentVersion) {
-        issues.push('Consent version mismatch');
+        issues.push("Consent version mismatch");
       }
 
       // Check required fields
       if (!consent.ageConfirmation) {
-        issues.push('Age confirmation missing');
+        issues.push("Age confirmation missing");
       }
 
       if (!consent.voluntaryParticipation) {
-        issues.push('Voluntary participation confirmation missing');
+        issues.push("Voluntary participation confirmation missing");
       }
 
       if (!consent.dataUseAgreement) {
-        issues.push('Data use agreement confirmation missing');
+        issues.push("Data use agreement confirmation missing");
       }
 
       // Check consent age (should be recent for validity)
       const consentAge = Date.now() - new Date(consent.timestamp).getTime();
       const maxConsentAge = 24 * 60 * 60 * 1000; // 24 hours
       if (consentAge > maxConsentAge) {
-        issues.push('Consent has expired');
+        issues.push("Consent has expired");
       }
 
       return { valid: issues.length === 0, issues };
     } catch {
-      issues.push('Invalid consent record format');
+      issues.push("Invalid consent record format");
       return { valid: false, issues };
     }
   }
@@ -143,23 +148,25 @@ export class EthicsService {
   /**
    * Handles data subject access requests (GDPR Article 15)
    */
-  async handleDataAccessRequest(request: DataSubjectRequest): Promise<{ success: boolean; data?: unknown; error?: string }> {
+  async handleDataAccessRequest(
+    request: DataSubjectRequest,
+  ): Promise<{ success: boolean; data?: unknown; error?: string }> {
     try {
       const client = getSupabaseClient();
       if (!client) {
-        return { success: false, error: 'Database not available' };
+        return { success: false, error: "Database not available" };
       }
 
       // Log the request
       const { data: requestRecord, error: requestError } = await client
-        .from('data_subject_requests')
+        .from("data_subject_requests")
         .insert({
           request_type: request.type,
           session_identifier: request.sessionIdentifier,
           request_data: toJson(request),
-          request_status: 'processing'
+          request_status: "processing",
         })
-        .select('id')
+        .select("id")
         .single();
 
       if (requestError) {
@@ -174,42 +181,44 @@ export class EthicsService {
 
       // Update request record
       await client
-        .from('data_subject_requests')
+        .from("data_subject_requests")
         .update({
-          request_status: 'completed',
+          request_status: "completed",
           response_data: userData ? toJson(userData) : null,
           processed_at: new Date().toISOString(),
-          processed_by: 'automated_system'
+          processed_by: "automated_system",
         })
-        .eq('id', requestRecord.id);
+        .eq("id", requestRecord.id);
 
       return { success: true, data: userData };
     } catch (error) {
-      console.error('Error handling data access request:', error);
-      return { success: false, error: 'Unexpected error occurred' };
+      console.error("Error handling data access request:", error);
+      return { success: false, error: "Unexpected error occurred" };
     }
   }
 
   /**
    * Handles data erasure requests (GDPR Article 17 - Right to be forgotten)
    */
-  async handleDataErasureRequest(request: DataSubjectRequest): Promise<{ success: boolean; error?: string }> {
+  async handleDataErasureRequest(
+    request: DataSubjectRequest,
+  ): Promise<{ success: boolean; error?: string }> {
     try {
       const client = getSupabaseClient();
       if (!client) {
-        return { success: false, error: 'Database not available' };
+        return { success: false, error: "Database not available" };
       }
 
       // Log the request
       const { data: requestRecord, error: requestError } = await client
-        .from('data_subject_requests')
+        .from("data_subject_requests")
         .insert({
           request_type: request.type,
           session_identifier: request.sessionIdentifier,
           request_data: toJson(request),
-          request_status: 'processing'
+          request_status: "processing",
         })
-        .select('id')
+        .select("id")
         .single();
 
       if (requestError) {
@@ -221,58 +230,60 @@ export class EthicsService {
         const sessionId = await this.findSessionByIdentifier(request.sessionIdentifier);
         if (sessionId) {
           // Delete in order of dependencies
-          await client.from('research_assessments').delete().eq('session_id', sessionId);
-          await client.from('question_responses').delete().eq('session_id', sessionId);
-          await client.from('profiles').delete().eq('session_id', sessionId);
-          await client.from('sessions').delete().eq('id', sessionId);
+          await client.from("research_assessments").delete().eq("session_id", sessionId);
+          await client.from("question_responses").delete().eq("session_id", sessionId);
+          await client.from("profiles").delete().eq("session_id", sessionId);
+          await client.from("sessions").delete().eq("id", sessionId);
         }
       }
 
       // Update request record
       await client
-        .from('data_subject_requests')
+        .from("data_subject_requests")
         .update({
-          request_status: 'completed',
+          request_status: "completed",
           processed_at: new Date().toISOString(),
-          processed_by: 'automated_system'
+          processed_by: "automated_system",
         })
-        .eq('id', requestRecord.id);
+        .eq("id", requestRecord.id);
 
       return { success: true };
     } catch (error) {
-      console.error('Error handling data erasure request:', error);
-      return { success: false, error: 'Unexpected error occurred' };
+      console.error("Error handling data erasure request:", error);
+      return { success: false, error: "Unexpected error occurred" };
     }
   }
 
   /**
    * Generates data portability package (GDPR Article 20)
    */
-  async generateDataPortabilityPackage(sessionIdentifier: string): Promise<{ success: boolean; package?: Record<string, unknown>; error?: string }> {
+  async generateDataPortabilityPackage(
+    sessionIdentifier: string,
+  ): Promise<{ success: boolean; package?: Record<string, unknown>; error?: string }> {
     try {
       const client = getSupabaseClient();
       if (!client) {
-        return { success: false, error: 'Database not available' };
+        return { success: false, error: "Database not available" };
       }
 
       const sessionId = await this.findSessionByIdentifier(sessionIdentifier);
       if (!sessionId) {
-        return { success: false, error: 'Session not found' };
+        return { success: false, error: "Session not found" };
       }
 
       // Collect all user data
       const [session, profile, responses, assessment] = await Promise.all([
-        client.from('sessions').select('*').eq('id', sessionId).single(),
-        client.from('profiles').select('*').eq('session_id', sessionId).single(),
-        client.from('question_responses').select('*').eq('session_id', sessionId),
-        client.from('research_assessments').select('*').eq('session_id', sessionId).single()
+        client.from("sessions").select("*").eq("id", sessionId).single(),
+        client.from("profiles").select("*").eq("session_id", sessionId).single(),
+        client.from("question_responses").select("*").eq("session_id", sessionId),
+        client.from("research_assessments").select("*").eq("session_id", sessionId).single(),
       ]);
 
       const portabilityPackage = {
         exportDate: new Date().toISOString(),
-        exportVersion: '1.0',
-        dataController: 'PCMS Research Team',
-        purpose: 'Data portability request under GDPR Article 20',
+        exportVersion: "1.0",
+        dataController: "PCMS Research Team",
+        purpose: "Data portability request under GDPR Article 20",
         sessionData: session.data,
         profileData: profile.data,
         responseData: responses.data,
@@ -281,14 +292,14 @@ export class EthicsService {
           totalResponses: responses.data?.length || 0,
           assessmentCompleted: !!profile.data,
           dataRetentionPeriod: this.config.dataRetentionMonths,
-          applicableRights: ['access', 'rectification', 'erasure', 'portability', 'restriction']
-        }
+          applicableRights: ["access", "rectification", "erasure", "portability", "restriction"],
+        },
       };
 
       return { success: true, package: portabilityPackage };
     } catch (error) {
-      console.error('Error generating portability package:', error);
-      return { success: false, error: 'Unexpected error occurred' };
+      console.error("Error generating portability package:", error);
+      return { success: false, error: "Unexpected error occurred" };
     }
   }
 
@@ -302,13 +313,13 @@ export class EthicsService {
 
     // Check if retention period has passed
     const retentionUntil = sessionData.data_retention_until;
-    if (typeof retentionUntil === 'string') {
+    if (typeof retentionUntil === "string") {
       return new Date() > new Date(retentionUntil);
     }
 
     // Check session age
     const createdAt = sessionData.created_at;
-    if (typeof createdAt !== 'string') return false;
+    if (typeof createdAt !== "string") return false;
     const sessionAge = Date.now() - new Date(createdAt).getTime();
     const retentionMs = this.config.dataRetentionMonths * 30 * 24 * 60 * 60 * 1000;
     return sessionAge > retentionMs;
@@ -321,7 +332,7 @@ export class EthicsService {
     try {
       const client = getSupabaseClient();
       if (!client) {
-        return { success: false, error: 'Database not available' };
+        return { success: false, error: "Database not available" };
       }
 
       // Replace identifying information with hashes
@@ -332,30 +343,25 @@ export class EthicsService {
         consent_ip_hash: null,
       };
 
-      const { error } = await client
-        .from('sessions')
-        .update(anonymizedData)
-        .eq('id', sessionId);
+      const { error } = await client.from("sessions").update(anonymizedData).eq("id", sessionId);
 
       if (error) {
         return { success: false, error: error.message };
       }
 
       // Log anonymization
-      await client
-        .from('audit_log')
-        .insert({
-          table_name: 'sessions',
-          operation: 'UPDATE',
-          record_id: sessionId,
-          new_values: toJson(anonymizedData),
-          change_reason: 'Automatic GDPR anonymization'
-        });
+      await client.from("audit_log").insert({
+        table_name: "sessions",
+        operation: "UPDATE",
+        record_id: sessionId,
+        new_values: toJson(anonymizedData),
+        change_reason: "Automatic GDPR anonymization",
+      });
 
       return { success: true };
     } catch (error) {
-      console.error('Error anonymizing session data:', error);
-      return { success: false, error: 'Unexpected error occurred' };
+      console.error("Error anonymizing session data:", error);
+      return { success: false, error: "Unexpected error occurred" };
     }
   }
 
@@ -364,49 +370,57 @@ export class EthicsService {
    */
   async generateComplianceReport(): Promise<Record<string, unknown>> {
     try {
+      const { isProductionDeployment } = await import("@/lib/production-research-guard");
+      if (isProductionDeployment()) {
+        return { disabled: true, reason: "no_research_use" };
+      }
       const client = getSupabaseClient();
       if (!client) {
-        return { error: 'Database not available' };
+        return { error: "Database not available" };
       }
 
-      const [
-        totalSessions,
-        pendingRequests,
-        expiredData,
-        recentConsents
-      ] = await Promise.all([
-        client.from('sessions').select('id', { count: 'exact' }),
-        client.from('data_subject_requests').select('id', { count: 'exact' }).eq('request_status', 'pending'),
-        client.from('sessions').select('id', { count: 'exact' }).lt('data_retention_until', new Date().toISOString()),
-        client.from('sessions').select('id', { count: 'exact' }).gt('consent_timestamp', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString())
+      const [totalSessions, pendingRequests, expiredData, recentConsents] = await Promise.all([
+        client.from("sessions").select("id", { count: "exact" }),
+        client
+          .from("data_subject_requests")
+          .select("id", { count: "exact" })
+          .eq("request_status", "pending"),
+        client
+          .from("sessions")
+          .select("id", { count: "exact" })
+          .lt("data_retention_until", new Date().toISOString()),
+        client
+          .from("sessions")
+          .select("id", { count: "exact" })
+          .gt("consent_timestamp", new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()),
       ]);
 
       return {
         reportDate: new Date().toISOString(),
-        complianceFramework: 'GDPR',
+        complianceFramework: "GDPR",
         dataRetention: {
           totalSessions: totalSessions.count || 0,
           expiredSessions: expiredData.count || 0,
-          retentionPeriodMonths: this.config.dataRetentionMonths
+          retentionPeriodMonths: this.config.dataRetentionMonths,
         },
         consent: {
           recentConsents24h: recentConsents.count || 0,
           consentVersion: this.config.consentVersion,
-          explicitConsentRequired: this.config.requireExplicitConsent
+          explicitConsentRequired: this.config.requireExplicitConsent,
         },
         dataSubjectRequests: {
           pendingRequests: pendingRequests.count || 0,
-          withdrawalAllowed: this.config.allowDataWithdrawal
+          withdrawalAllowed: this.config.allowDataWithdrawal,
         },
         automatedProcesses: {
           anonymizationEnabled: this.config.automaticAnonymization,
           auditLogging: true,
-          dataMinimization: true
-        }
+          dataMinimization: true,
+        },
       };
     } catch (error) {
-      console.error('Error generating compliance report:', error);
-      return { error: 'Unexpected error occurred' };
+      console.error("Error generating compliance report:", error);
+      return { error: "Unexpected error occurred" };
     }
   }
 
@@ -414,9 +428,9 @@ export class EthicsService {
   private async hashString(input: string): Promise<string> {
     const encoder = new TextEncoder();
     const data = encoder.encode(input);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
   }
 
   private async findSessionByIdentifier(identifier: string): Promise<string | null> {
@@ -425,19 +439,21 @@ export class EthicsService {
       if (!client) return null;
 
       const { data } = await client
-        .from('sessions')
-        .select('id')
-        .eq('session_identifier', identifier)
+        .from("sessions")
+        .select("id")
+        .eq("session_identifier", identifier)
         .single();
 
       return data?.id || null;
     } catch (error) {
-      console.error('Error finding session:', error);
+      console.error("Error finding session:", error);
       return null;
     }
   }
 
-  private async retrieveUserData(sessionIdentifier: string): Promise<Record<string, unknown> | null> {
+  private async retrieveUserData(
+    sessionIdentifier: string,
+  ): Promise<Record<string, unknown> | null> {
     try {
       const client = getSupabaseClient();
       if (!client) return null;
@@ -446,18 +462,18 @@ export class EthicsService {
       if (!sessionId) return null;
 
       const [session, profile, responses] = await Promise.all([
-        client.from('sessions').select('*').eq('id', sessionId).single(),
-        client.from('profiles').select('*').eq('session_id', sessionId).single(),
-        client.from('question_responses').select('*').eq('session_id', sessionId)
+        client.from("sessions").select("*").eq("id", sessionId).single(),
+        client.from("profiles").select("*").eq("session_id", sessionId).single(),
+        client.from("question_responses").select("*").eq("session_id", sessionId),
       ]);
 
       return {
         session: session.data,
         profile: profile.data,
-        responses: responses.data
+        responses: responses.data,
       };
     } catch (error) {
-      console.error('Error retrieving user data:', error);
+      console.error("Error retrieving user data:", error);
       return null;
     }
   }

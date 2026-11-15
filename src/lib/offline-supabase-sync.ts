@@ -2,33 +2,39 @@
  * Pushes queued IndexedDB sessions to Supabase when connectivity returns.
  */
 
-import { getSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
-import { assessmentDimensionWeightsToDbJson } from '@/lib/supabase-mappers';
+import { getSupabaseClient, isSupabaseConfigured } from "@/lib/supabase";
+import { assessmentDimensionWeightsToDbJson } from "@/lib/supabase-mappers";
 import {
   getPendingSessions,
   markSessionSynced,
   notifyOfflineQueueChanged,
   type OfflineSession,
   type SyncResult,
-} from '@/lib/offline-storage';
-import type { Json } from '@/types/database.types';
-import { toPipelineSessionRow } from '@/lib/pipeline-session-db';
-import { isCloudResearchStorageEnabled } from '@/lib/research-cloud-consent';
+} from "@/lib/offline-storage";
+import type { Json } from "@/types/database.types";
+import { toPipelineSessionRow } from "@/lib/pipeline-session-db";
+import { bindRestoreSecretForSession } from "@/lib/bind-restore-client";
+import { isCloudResearchStorageEnabled } from "@/lib/research-cloud-consent";
 
-async function pushOneSession(client: NonNullable<ReturnType<typeof getSupabaseClient>>, s: OfflineSession): Promise<void> {
-  if (!s.research || !s.profile) throw new Error('incomplete_offline_session');
+async function pushOneSession(
+  client: NonNullable<ReturnType<typeof getSupabaseClient>>,
+  s: OfflineSession,
+): Promise<void> {
+  if (!s.research || !s.profile) throw new Error("incomplete_offline_session");
 
-  const consentTs = s.consentTimestamp ?? '';
-  if (!consentTs) throw new Error('missing_consent_timestamp');
+  const consentTs = s.consentTimestamp ?? "";
+  if (!consentTs) throw new Error("missing_consent_timestamp");
 
   const sessionUpsert = {
     id: s.sessionId,
     consent_timestamp: consentTs,
     cultural_context: s.research.cultural_context,
-    completion_status: 'in_progress' as const,
+    completion_status: "in_progress" as const,
   };
 
-  const { error: sesErr } = await client.from('sessions').upsert(sessionUpsert, { onConflict: 'id' });
+  const { error: sesErr } = await client
+    .from("sessions")
+    .upsert(sessionUpsert, { onConflict: "id" });
   if (sesErr) throw sesErr;
 
   for (const row of s.responses) {
@@ -40,13 +46,13 @@ async function pushOneSession(client: NonNullable<ReturnType<typeof getSupabaseC
       question_category: row.questionCategory,
       dimension_weights: assessmentDimensionWeightsToDbJson(row.dimensionWeights),
     };
-    const { error: rErr } = await client.from('question_responses').insert(payload);
-    if (rErr && !String(rErr.message).includes('duplicate')) {
+    const { error: rErr } = await client.from("question_responses").insert(payload);
+    if (rErr && !String(rErr.message).includes("duplicate")) {
       throw rErr;
     }
   }
 
-  const { error: raErr } = await client.from('research_assessments').insert(s.research);
+  const { error: raErr } = await client.from("research_assessments").insert(s.research);
   if (raErr) throw raErr;
 
   const profileData = {
@@ -63,17 +69,17 @@ async function pushOneSession(client: NonNullable<ReturnType<typeof getSupabaseC
     consent_timestamp: consentTs,
   };
 
-  const { error: pErr } = await client.from('profiles').insert(profileData);
+  const { error: pErr } = await client.from("profiles").insert(profileData);
   if (pErr) throw pErr;
 
   const pipelineRow = toPipelineSessionRow(s.sessionId, s.research.assessment_version, s.profile);
   const { error: psErr } = await client
-    .from('pipeline_sessions')
-    .upsert(pipelineRow, { onConflict: 'session_id' });
+    .from("pipeline_sessions")
+    .upsert(pipelineRow, { onConflict: "session_id" });
   if (psErr) throw psErr;
 
   const { error: upErr } = await client
-    .from('sessions')
+    .from("sessions")
     .update({
       completed_at: new Date().toISOString(),
       completion_status: s.research.completion_status,
@@ -81,7 +87,7 @@ async function pushOneSession(client: NonNullable<ReturnType<typeof getSupabaseC
       question_path: s.research.question_path,
       duration_ms: s.research.duration_ms,
     })
-    .eq('id', s.sessionId);
+    .eq("id", s.sessionId);
   if (upErr) throw upErr;
 }
 
@@ -90,18 +96,19 @@ export async function syncPendingSessions(): Promise<SyncResult> {
   const syncedSessionIds: string[] = [];
 
   if (!isSupabaseConfigured() || !isCloudResearchStorageEnabled()) {
-    return { ok: true, syncedSessionIds, errors: ['cloud_storage_not_enabled'] };
+    return { ok: true, syncedSessionIds, errors: ["cloud_storage_not_enabled"] };
   }
 
   const client = getSupabaseClient();
   if (!client) {
-    return { ok: false, syncedSessionIds, errors: ['no_supabase_client'] };
+    return { ok: false, syncedSessionIds, errors: ["no_supabase_client"] };
   }
 
   const pending = await getPendingSessions();
   for (const s of pending) {
     try {
       await pushOneSession(client, s);
+      await bindRestoreSecretForSession(s.sessionId);
       await markSessionSynced(s.sessionId);
       syncedSessionIds.push(s.sessionId);
       notifyOfflineQueueChanged();

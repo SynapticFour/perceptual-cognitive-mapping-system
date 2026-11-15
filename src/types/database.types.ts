@@ -3,13 +3,7 @@
  * Regenerate from Supabase CLI when the schema evolves: `supabase gen types typescript`.
  */
 
-export type Json =
-  | string
-  | number
-  | boolean
-  | null
-  | { [key: string]: Json | undefined }
-  | Json[];
+export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[];
 
 export interface Database {
   public: {
@@ -32,6 +26,7 @@ export interface Database {
           session_identifier?: string | null;
           data_retention_until?: string | null;
           consent_ip_hash?: string | null;
+          restore_secret_hash?: string | null;
         };
         Insert: {
           id?: string;
@@ -50,8 +45,9 @@ export interface Database {
           session_identifier?: string | null;
           data_retention_until?: string | null;
           consent_ip_hash?: string | null;
+          restore_secret_hash?: string | null;
         };
-        Update: Partial<Database['public']['Tables']['sessions']['Insert']>;
+        Update: Partial<Database["public"]["Tables"]["sessions"]["Insert"]>;
         Relationships: [];
       };
       profiles: {
@@ -77,7 +73,7 @@ export interface Database {
           consent_timestamp: string;
           created_at?: string;
         };
-        Update: Partial<Database['public']['Tables']['profiles']['Insert']>;
+        Update: Partial<Database["public"]["Tables"]["profiles"]["Insert"]>;
         Relationships: [];
       };
       question_responses: {
@@ -101,7 +97,7 @@ export interface Database {
           dimension_weights: Json;
           created_at?: string;
         };
-        Update: Partial<Database['public']['Tables']['question_responses']['Insert']>;
+        Update: Partial<Database["public"]["Tables"]["question_responses"]["Insert"]>;
         Relationships: [];
       };
       pipeline_sessions: {
@@ -143,7 +139,7 @@ export interface Database {
           created_at?: string;
           updated_at?: string;
         };
-        Update: Partial<Database['public']['Tables']['pipeline_sessions']['Insert']>;
+        Update: Partial<Database["public"]["Tables"]["pipeline_sessions"]["Insert"]>;
         Relationships: [];
       };
       research_assessments: {
@@ -173,7 +169,7 @@ export interface Database {
           cultural_context?: string;
           created_at?: string;
         };
-        Update: Partial<Database['public']['Tables']['research_assessments']['Insert']>;
+        Update: Partial<Database["public"]["Tables"]["research_assessments"]["Insert"]>;
         Relationships: [];
       };
       data_processing_records: {
@@ -193,7 +189,7 @@ export interface Database {
           data_categories?: string[];
           retention_period_months?: number;
         };
-        Update: Partial<Database['public']['Tables']['data_processing_records']['Insert']>;
+        Update: Partial<Database["public"]["Tables"]["data_processing_records"]["Insert"]>;
         Relationships: [];
       };
       data_subject_requests: {
@@ -217,7 +213,7 @@ export interface Database {
           processed_at?: string | null;
           processed_by?: string | null;
         };
-        Update: Partial<Database['public']['Tables']['data_subject_requests']['Insert']>;
+        Update: Partial<Database["public"]["Tables"]["data_subject_requests"]["Insert"]>;
         Relationships: [];
       };
       audit_log: {
@@ -237,7 +233,7 @@ export interface Database {
           new_values?: Json;
           change_reason?: string;
         };
-        Update: Partial<Database['public']['Tables']['audit_log']['Insert']>;
+        Update: Partial<Database["public"]["Tables"]["audit_log"]["Insert"]>;
         Relationships: [];
       };
       ethics_audit_events: {
@@ -255,7 +251,7 @@ export interface Database {
           payload?: Json;
           created_at?: string;
         };
-        Update: Partial<Database['public']['Tables']['ethics_audit_events']['Insert']>;
+        Update: Partial<Database["public"]["Tables"]["ethics_audit_events"]["Insert"]>;
         Relationships: [];
       };
       atlas_self_nominations: {
@@ -276,7 +272,7 @@ export interface Database {
           linked_pcms_session_id?: string | null;
           linked_atlas_session_id?: string | null;
         };
-        Update: Partial<Database['public']['Tables']['atlas_self_nominations']['Insert']>;
+        Update: Partial<Database["public"]["Tables"]["atlas_self_nominations"]["Insert"]>;
         Relationships: [];
       };
     };
